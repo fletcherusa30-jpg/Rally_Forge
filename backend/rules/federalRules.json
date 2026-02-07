@@ -70,6 +70,54 @@
           "tags": ["benefits", "federal"]
         }
       ]
+    },
+    {
+      "id": "fed-vre",
+      "description": "Veteran Readiness and Employment (VR&E)",
+      "tags": ["employment"],
+      "conditions": [
+        { "field": "facts.servicePeriodCount", "operator": "gte", "value": 1 }
+      ],
+      "outcomes": [
+        {
+          "title": "VR&E career and training support",
+          "description": "Explore training, resume, and job placement support for veterans with service-connected conditions.",
+          "link": "https://www.va.gov/careers-employment/vocational-rehabilitation/",
+          "tags": ["employment", "federal"]
+        }
+      ]
+    },
+    {
+      "id": "fed-pension",
+      "description": "VA pension benefits",
+      "tags": ["income"],
+      "conditions": [
+        { "field": "facts.servicePeriodCount", "operator": "gte", "value": 1 }
+      ],
+      "outcomes": [
+        {
+          "title": "VA pension eligibility review",
+          "description": "Check income-based pension eligibility for wartime service and age/disability criteria.",
+          "link": "https://www.va.gov/pension/",
+          "tags": ["income", "federal"]
+        }
+      ]
+    },
+    {
+      "id": "fed-life-insurance",
+      "description": "VA life insurance options",
+      "tags": ["insurance"],
+      "conditions": [
+        { "field": "facts.servicePeriodCount", "operator": "gte", "value": 1 }
+      ],
+      "outcomes": [
+        {
+          "title": "VA life insurance programs",
+          "description": "Review coverage options including SGLI, VGLI, and other VA programs.",
+          "link": "https://www.va.gov/life-insurance/",
+          "tags": ["insurance", "federal"]
+        }
+      ]
     }
   ]
 }

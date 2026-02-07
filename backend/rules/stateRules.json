@@ -85,6 +85,70 @@
           "tags": ["education", "state"]
         }
       ]
+    },
+    {
+      "id": "state-wa-benefits",
+      "description": "Washington veterans benefits overview",
+      "tags": ["washington", "benefits"],
+      "conditions": [
+        { "field": "stateOfResidence", "operator": "eq", "value": "Washington" }
+      ],
+      "outcomes": [
+        {
+          "title": "Washington State DVA benefits",
+          "description": "Explore state benefits, housing support, and services for veterans.",
+          "link": "https://www.dva.wa.gov/benefits",
+          "tags": ["benefits", "state"]
+        }
+      ]
+    },
+    {
+      "id": "state-co-benefits",
+      "description": "Colorado veterans services",
+      "tags": ["colorado", "benefits"],
+      "conditions": [
+        { "field": "stateOfResidence", "operator": "eq", "value": "Colorado" }
+      ],
+      "outcomes": [
+        {
+          "title": "Colorado veterans and military services",
+          "description": "Review state benefits, training, and resources for Colorado veterans.",
+          "link": "https://cdhs.colorado.gov/veterans-and-military",
+          "tags": ["benefits", "state"]
+        }
+      ]
+    },
+    {
+      "id": "state-va-benefits",
+      "description": "Virginia veterans benefits overview",
+      "tags": ["virginia", "benefits"],
+      "conditions": [
+        { "field": "stateOfResidence", "operator": "eq", "value": "Virginia" }
+      ],
+      "outcomes": [
+        {
+          "title": "Virginia Department of Veterans Services",
+          "description": "Explore education, employment, and healthcare resources for Virginia veterans.",
+          "link": "https://www.dvs.virginia.gov/benefits",
+          "tags": ["benefits", "state"]
+        }
+      ]
+    },
+    {
+      "id": "state-oh-benefits",
+      "description": "Ohio veterans benefits overview",
+      "tags": ["ohio", "benefits"],
+      "conditions": [
+        { "field": "stateOfResidence", "operator": "eq", "value": "Ohio" }
+      ],
+      "outcomes": [
+        {
+          "title": "Ohio Department of Veterans Services",
+          "description": "Review Ohio benefits, education programs, and veteran resources.",
+          "link": "https://dvs.ohio.gov/benefits-services",
+          "tags": ["benefits", "state"]
+        }
+      ]
     }
   ]
 }

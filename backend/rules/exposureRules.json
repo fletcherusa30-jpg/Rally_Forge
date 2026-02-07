@@ -37,6 +37,22 @@
           "tags": ["registry", "exposure"]
         }
       ]
+    },
+    {
+      "id": "exposure-agent-orange",
+      "description": "Agent Orange exposure resources",
+      "tags": ["toxic", "agent-orange"],
+      "conditions": [
+        { "field": "facts.theaters", "operator": "contains", "value": "Pacific" }
+      ],
+      "outcomes": [
+        {
+          "title": "Agent Orange exposure guidance",
+          "description": "Review presumptive conditions and claims resources for Agent Orange exposure.",
+          "link": "https://www.va.gov/disability/eligibility/hazardous-materials-exposure/agent-orange/",
+          "tags": ["exposure", "healthcare"]
+        }
+      ]
     }
   ]
 }

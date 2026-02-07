@@ -38,6 +38,22 @@
           "tags": ["wellness", "combat"]
         }
       ]
+    },
+    {
+      "id": "combat-vet-centers",
+      "description": "Vet Center counseling resources",
+      "tags": ["counseling"],
+      "conditions": [
+        { "field": "combatSelfReported", "operator": "eq", "value": "yes" }
+      ],
+      "outcomes": [
+        {
+          "title": "Vet Center counseling services",
+          "description": "Access counseling, readjustment services, and community care through Vet Centers.",
+          "link": "https://www.vetcenter.va.gov/",
+          "tags": ["counseling", "combat"]
+        }
+      ]
     }
   ]
 }

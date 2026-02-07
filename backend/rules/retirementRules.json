@@ -37,6 +37,22 @@
           "tags": ["retirement"]
         }
       ]
+    },
+    {
+      "id": "retirement-reserve",
+      "description": "Reserve and Guard retirement points",
+      "tags": ["retirement"],
+      "conditions": [
+        { "field": "component", "operator": "in", "value": ["Reserve", "National Guard"] }
+      ],
+      "outcomes": [
+        {
+          "title": "Reserve retirement overview",
+          "description": "Review retirement points, eligibility, and pay timelines for reserve service.",
+          "link": "https://militarypay.defense.gov/Pay/Retirement/Reserve/",
+          "tags": ["retirement"]
+        }
+      ]
     }
   ]
 }

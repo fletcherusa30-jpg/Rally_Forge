@@ -39,6 +39,23 @@
           "tags": ["rating", "compensation"]
         }
       ]
+    },
+    {
+      "id": "rating-smc",
+      "description": "Special Monthly Compensation (SMC) review",
+      "tags": ["compensation"],
+      "conditions": [
+        { "field": "disabilityRatingKnown", "operator": "eq", "value": true },
+        { "field": "disabilityRatingPercent", "operator": "gte", "value": 80 }
+      ],
+      "outcomes": [
+        {
+          "title": "Special Monthly Compensation eligibility",
+          "description": "Review SMC eligibility for severe disabilities and additional needs.",
+          "link": "https://www.va.gov/disability/compensation-rates/special-monthly-compensation/",
+          "tags": ["rating", "compensation"]
+        }
+      ]
     }
   ]
 }
