@@ -149,6 +149,102 @@
           "tags": ["benefits", "state"]
         }
       ]
+    },
+    {
+      "id": "state-il-benefits",
+      "description": "Illinois veteran services",
+      "tags": ["illinois", "benefits"],
+      "conditions": [
+        { "field": "stateOfResidence", "operator": "eq", "value": "Illinois" }
+      ],
+      "outcomes": [
+        {
+          "title": "Illinois Department of Veterans' Affairs",
+          "description": "Explore Illinois benefits, homes, and veteran services.",
+          "link": "https://www2.illinois.gov/veterans/",
+          "tags": ["benefits", "state"]
+        }
+      ]
+    },
+    {
+      "id": "state-ga-benefits",
+      "description": "Georgia veteran services",
+      "tags": ["georgia", "benefits"],
+      "conditions": [
+        { "field": "stateOfResidence", "operator": "eq", "value": "Georgia" }
+      ],
+      "outcomes": [
+        {
+          "title": "Georgia Department of Veterans Service",
+          "description": "Review Georgia benefits and service offices.",
+          "link": "https://veterans.georgia.gov/",
+          "tags": ["benefits", "state"]
+        }
+      ]
+    },
+    {
+      "id": "state-nc-benefits",
+      "description": "North Carolina veteran benefits",
+      "tags": ["north-carolina", "benefits"],
+      "conditions": [
+        { "field": "stateOfResidence", "operator": "eq", "value": "North Carolina" }
+      ],
+      "outcomes": [
+        {
+          "title": "NC Department of Military and Veterans Affairs",
+          "description": "Explore North Carolina benefits, cemeteries, and services.",
+          "link": "https://www.milvets.nc.gov/benefits-services",
+          "tags": ["benefits", "state"]
+        }
+      ]
+    },
+    {
+      "id": "state-pa-benefits",
+      "description": "Pennsylvania veteran benefits",
+      "tags": ["pennsylvania", "benefits"],
+      "conditions": [
+        { "field": "stateOfResidence", "operator": "eq", "value": "Pennsylvania" }
+      ],
+      "outcomes": [
+        {
+          "title": "PA Department of Military and Veterans Affairs",
+          "description": "Review Pennsylvania veteran benefits and programs.",
+          "link": "https://www.dmva.pa.gov/veteransaffairs/Pages/default.aspx",
+          "tags": ["benefits", "state"]
+        }
+      ]
+    },
+    {
+      "id": "state-mi-benefits",
+      "description": "Michigan veteran services",
+      "tags": ["michigan", "benefits"],
+      "conditions": [
+        { "field": "stateOfResidence", "operator": "eq", "value": "Michigan" }
+      ],
+      "outcomes": [
+        {
+          "title": "Michigan Veterans Affairs Agency",
+          "description": "Explore Michigan veteran benefits, resources, and support.",
+          "link": "https://www.michigan.gov/mvaa/",
+          "tags": ["benefits", "state"]
+        }
+      ]
+    },
+    {
+      "id": "state-ma-benefits",
+      "description": "Massachusetts veterans services",
+      "tags": ["massachusetts", "benefits"],
+      "conditions": [
+        { "field": "stateOfResidence", "operator": "eq", "value": "Massachusetts" }
+      ],
+      "outcomes": [
+        {
+          "title": "Massachusetts Department of Veterans' Services",
+          "description": "Review Massachusetts benefits, grants, and veteran services.",
+          "link": "https://www.mass.gov/orgs/veterans-services",
+          "tags": ["benefits", "state"]
+        }
+      ]
     }
   ]
 }

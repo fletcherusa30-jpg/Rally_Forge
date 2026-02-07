@@ -118,6 +118,38 @@
           "tags": ["insurance", "federal"]
         }
       ]
+    },
+    {
+      "id": "fed-caregiver-support",
+      "description": "Caregiver support resources",
+      "tags": ["caregiver"],
+      "conditions": [
+        { "field": "facts.servicePeriodCount", "operator": "gte", "value": 1 }
+      ],
+      "outcomes": [
+        {
+          "title": "Caregiver support programs",
+          "description": "Explore caregiver assistance programs and training resources.",
+          "link": "https://www.va.gov/family-member-benefits/comprehensive-assistance-for-family-caregivers/",
+          "tags": ["caregiver", "federal"]
+        }
+      ]
+    },
+    {
+      "id": "fed-employment-center",
+      "description": "Veterans employment services",
+      "tags": ["employment"],
+      "conditions": [
+        { "field": "facts.servicePeriodCount", "operator": "gte", "value": 1 }
+      ],
+      "outcomes": [
+        {
+          "title": "Veteran employment resources",
+          "description": "Access job search tools, resume help, and training resources.",
+          "link": "https://www.va.gov/careers-employment/",
+          "tags": ["employment", "federal"]
+        }
+      ]
     }
   ]
 }
