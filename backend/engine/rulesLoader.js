@@ -35,6 +35,18 @@ export const validateRuleSet = (ruleSet) => {
     throw new Error("Rule set rules must be an array.");
   }
 
+  ruleSet.rules.forEach((rule, index) => {
+    if (!rule.id || !rule.description) {
+      throw new Error(`Rule at index ${index} must include id and description.`);
+    }
+    if (!Array.isArray(rule.conditions)) {
+      throw new Error(`Rule ${rule.id} must include a conditions array.`);
+    }
+    if (!Array.isArray(rule.outcomes) || rule.outcomes.length === 0) {
+      throw new Error(`Rule ${rule.id} must include at least one outcome.`);
+    }
+  });
+
   return true;
 };
 
@@ -45,7 +57,6 @@ export const loadRules = async (category) => {
   const data = JSON.parse(raw);
 
   validateRuleSet(data);
-  // TODO: Validate rule conditions/outcomes schema once semantics are finalized.
   cache.set(category, data);
 
   return data;

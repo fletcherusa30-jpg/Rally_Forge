@@ -1,9 +1,43 @@
 {
-  "version": "1.0.0",
-  "effectiveDate": "2026-01-01",
-  "source": "Rally Forge baseline",
+  "version": "1.1.0",
+  "effectiveDate": "2026-02-01",
+  "source": "Rally Forge curated baseline",
   "metadata": {
     "category": "federal"
   },
-  "rules": []
+  "rules": [
+    {
+      "id": "fed-gi-bill",
+      "description": "Post-9/11 GI Bill education guidance",
+      "tags": ["education"],
+      "conditions": [
+        { "field": "facts.servicePeriodCount", "operator": "gte", "value": 1 }
+      ],
+      "outcomes": [
+        {
+          "title": "Post-9/11 GI Bill eligibility review",
+          "description": "Confirm education benefits and transfer options based on service history.",
+          "link": "https://www.va.gov/education/about-gi-bill-benefits/post-9-11/",
+          "tags": ["education", "federal"]
+        }
+      ],
+      "notes": "Bring DD-214 and service dates when applying."
+    },
+    {
+      "id": "fed-va-healthcare",
+      "description": "VA healthcare enrollment prompt",
+      "tags": ["healthcare"],
+      "conditions": [
+        { "field": "combatSelfReported", "operator": "neq", "value": "" }
+      ],
+      "outcomes": [
+        {
+          "title": "VA healthcare enrollment",
+          "description": "Enroll or confirm eligibility for VA health care coverage.",
+          "link": "https://www.va.gov/health-care/how-to-apply/",
+          "tags": ["healthcare", "federal"]
+        }
+      ]
+    }
+  ]
 }

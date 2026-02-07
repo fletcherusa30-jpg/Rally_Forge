@@ -5,6 +5,7 @@ import { evaluateCombatBenefits } from "./combatBenefits.js";
 import { evaluateExposureBenefits } from "./exposureBenefits.js";
 import { evaluateRatingBenefits } from "./ratingBenefits.js";
 import { evaluateRetirementBenefits } from "./retirementBenefits.js";
+import { buildFacts } from "./ruleEvaluator.js";
 
 export const computeBenefits = async (onboardingResult, options = {}) => {
   const [federalRules, stateRules, combatRules, exposureRules, ratingRules, retirementRules] = await Promise.all([
@@ -19,7 +20,8 @@ export const computeBenefits = async (onboardingResult, options = {}) => {
   const context = {
     now: new Date(),
     logger: options.logger || console,
-    requestId: options.requestId || null
+    requestId: options.requestId || null,
+    facts: buildFacts(onboardingResult)
   };
 
   const federal = evaluateFederalBenefits(onboardingResult, federalRules, context);

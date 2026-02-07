@@ -1,9 +1,42 @@
 {
-  "version": "1.0.0",
-  "effectiveDate": "2026-01-01",
-  "source": "Rally Forge baseline",
+  "version": "1.1.0",
+  "effectiveDate": "2026-02-01",
+  "source": "Rally Forge curated baseline",
   "metadata": {
     "category": "retirement"
   },
-  "rules": []
+  "rules": [
+    {
+      "id": "retirement-tsp",
+      "description": "Thrift Savings Plan guidance",
+      "tags": ["retirement"],
+      "conditions": [
+        { "field": "facts.servicePeriodCount", "operator": "gte", "value": 1 }
+      ],
+      "outcomes": [
+        {
+          "title": "TSP rollover and withdrawal options",
+          "description": "Review rollover rules and withdrawal timing for your TSP account.",
+          "link": "https://www.tsp.gov/changes-in-your-career/leaving-the-federal-government/",
+          "tags": ["retirement"]
+        }
+      ]
+    },
+    {
+      "id": "retirement-survivor-benefits",
+      "description": "Survivor benefit plan overview",
+      "tags": ["retirement"],
+      "conditions": [
+        { "field": "facts.activeService", "operator": "eq", "value": true }
+      ],
+      "outcomes": [
+        {
+          "title": "Survivor Benefit Plan info",
+          "description": "Understand SBP coverage and enrollment options.",
+          "link": "https://militarypay.defense.gov/Benefits/Survivor-Benefit-Program/",
+          "tags": ["retirement"]
+        }
+      ]
+    }
+  ]
 }

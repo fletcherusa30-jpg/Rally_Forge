@@ -1,9 +1,13 @@
+import { evaluateRuleSet } from "./ruleEvaluator.js";
+
 export const evaluateFederalBenefits = (onboardingResult, rules, context) => {
-  // TODO: Implement federal benefit logic using rules and onboardingResult.
+  const data = { ...onboardingResult, facts: context.facts };
+  const results = rules ? evaluateRuleSet(rules, data) : { items: [], notes: [] };
+
   return {
     category: "federal",
     rulesVersion: rules?.version || "unknown",
-    items: [],
-    notes: []
+    items: results.items,
+    notes: results.notes
   };
 };

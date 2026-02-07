@@ -1,9 +1,42 @@
 {
-  "version": "1.0.0",
-  "effectiveDate": "2026-01-01",
-  "source": "Rally Forge baseline",
+  "version": "1.1.0",
+  "effectiveDate": "2026-02-01",
+  "source": "Rally Forge curated baseline",
   "metadata": {
     "category": "state"
   },
-  "rules": []
+  "rules": [
+    {
+      "id": "state-tx-hazlewood",
+      "description": "Texas Hazlewood Act education benefit",
+      "tags": ["education", "texas"],
+      "conditions": [
+        { "field": "stateOfResidence", "operator": "eq", "value": "Texas" }
+      ],
+      "outcomes": [
+        {
+          "title": "Hazlewood Act tuition exemption",
+          "description": "Texas veterans may qualify for up to 150 credit hours of tuition exemption.",
+          "link": "https://www.tvc.texas.gov/education/hazlewood/",
+          "tags": ["education", "state"]
+        }
+      ]
+    },
+    {
+      "id": "state-ca-vet-housing",
+      "description": "California CalVet home loan info",
+      "tags": ["housing", "california"],
+      "conditions": [
+        { "field": "stateOfResidence", "operator": "eq", "value": "California" }
+      ],
+      "outcomes": [
+        {
+          "title": "CalVet home loan programs",
+          "description": "Explore California CalVet home loan and housing support options.",
+          "link": "https://www.calvet.ca.gov/HomeLoans",
+          "tags": ["housing", "state"]
+        }
+      ]
+    }
+  ]
 }

@@ -1,9 +1,42 @@
 {
-  "version": "1.0.0",
-  "effectiveDate": "2026-01-01",
-  "source": "Rally Forge baseline",
+  "version": "1.1.0",
+  "effectiveDate": "2026-02-01",
+  "source": "Rally Forge curated baseline",
   "metadata": {
     "category": "exposure"
   },
-  "rules": []
+  "rules": [
+    {
+      "id": "exposure-pact-act",
+      "description": "PACT Act screening for toxic exposure",
+      "tags": ["toxic", "healthcare"],
+      "conditions": [
+        { "field": "facts.theaters", "operator": "contains", "value": "Middle East" }
+      ],
+      "outcomes": [
+        {
+          "title": "PACT Act screening",
+          "description": "Schedule a toxic exposure screening and review presumptive conditions.",
+          "link": "https://www.va.gov/PACT/",
+          "tags": ["healthcare", "exposure"]
+        }
+      ]
+    },
+    {
+      "id": "exposure-airborne-hazards",
+      "description": "Airborne hazards and burn pits registry",
+      "tags": ["registry"],
+      "conditions": [
+        { "field": "facts.theaters", "operator": "contains", "value": "Middle East" }
+      ],
+      "outcomes": [
+        {
+          "title": "Airborne Hazards and Open Burn Pit Registry",
+          "description": "Join the registry to document exposure and connect to care.",
+          "link": "https://veteran.mobilehealth.va.gov/AHBurnPitRegistry/",
+          "tags": ["registry", "exposure"]
+        }
+      ]
+    }
+  ]
 }

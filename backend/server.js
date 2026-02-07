@@ -1,5 +1,6 @@
 import express from "express";
 import path from "path";
+import crypto from "crypto";
 import { fileURLToPath } from "url";
 import onboardingRouter from "./api/onboarding.js";
 import benefitsRouter from "./api/benefits.js";
@@ -14,12 +15,40 @@ const sharedDir = path.resolve(__dirname, "../shared");
 
 const app = express();
 
+const validateConfig = () => {
+  const mongoUrl = process.env.MONGO_URL;
+  if (mongoUrl && !mongoUrl.startsWith("mongodb://") && !mongoUrl.startsWith("mongodb+srv://")) {
+    throw new Error("MONGO_URL must start with mongodb:// or mongodb+srv://");
+  }
+};
+
+app.use((req, res, next) => {
+  const requestId = req.headers["x-request-id"] || crypto.randomUUID();
+  req.requestId = requestId;
+  res.setHeader("x-request-id", requestId);
+  next();
+});
+
+app.use((req, res, next) => {
+  res.setHeader("x-content-type-options", "nosniff");
+  res.setHeader("x-frame-options", "DENY");
+  res.setHeader("referrer-policy", "no-referrer");
+  res.setHeader("permissions-policy", "geolocation=(), microphone=(), camera=()");
+  next();
+});
+
 app.use((req, res, next) => {
   const start = Date.now();
   res.on("finish", () => {
     const duration = Date.now() - start;
-    const line = `${req.method} ${req.originalUrl} ${res.statusCode} ${duration}ms`;
-    console.log(line);
+    const entry = {
+      requestId: req.requestId,
+      method: req.method,
+      path: req.originalUrl,
+      status: res.statusCode,
+      durationMs: duration
+    };
+    console.log(JSON.stringify(entry));
   });
   next();
 });
@@ -54,6 +83,7 @@ const port = Number(process.env.PORT || 4000);
 
 connectToMongo()
   .then(() => {
+    validateConfig();
     app.listen(port, () => {
       console.log(`Rally Forge API listening on port ${port}`);
     });
