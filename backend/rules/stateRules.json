@@ -37,6 +37,54 @@
           "tags": ["housing", "state"]
         }
       ]
+    },
+    {
+      "id": "state-fl-benefits",
+      "description": "Florida veteran benefits overview",
+      "tags": ["florida", "benefits"],
+      "conditions": [
+        { "field": "stateOfResidence", "operator": "eq", "value": "Florida" }
+      ],
+      "outcomes": [
+        {
+          "title": "Florida veteran benefits guide",
+          "description": "Review state education, housing, and tax benefits for Florida veterans.",
+          "link": "https://floridavets.org/benefits-services/",
+          "tags": ["benefits", "state"]
+        }
+      ]
+    },
+    {
+      "id": "state-ny-tax-exemption",
+      "description": "New York property tax exemptions for veterans",
+      "tags": ["new-york", "tax"],
+      "conditions": [
+        { "field": "stateOfResidence", "operator": "eq", "value": "New York" }
+      ],
+      "outcomes": [
+        {
+          "title": "NY veteran property tax exemptions",
+          "description": "Check eligibility for property tax exemptions based on service and disability rating.",
+          "link": "https://www.tax.ny.gov/pit/property/exemption/vetexemption.htm",
+          "tags": ["tax", "state"]
+        }
+      ]
+    },
+    {
+      "id": "state-az-education",
+      "description": "Arizona veterans education benefits",
+      "tags": ["arizona", "education"],
+      "conditions": [
+        { "field": "stateOfResidence", "operator": "eq", "value": "Arizona" }
+      ],
+      "outcomes": [
+        {
+          "title": "Arizona veteran education programs",
+          "description": "Review Arizona higher education benefits and tuition assistance for veterans.",
+          "link": "https://dvs.az.gov/services/education",
+          "tags": ["education", "state"]
+        }
+      ]
     }
   ]
 }

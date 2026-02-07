@@ -38,6 +38,38 @@
           "tags": ["healthcare", "federal"]
         }
       ]
+    },
+    {
+      "id": "fed-home-loan",
+      "description": "VA home loan guaranty overview",
+      "tags": ["housing"],
+      "conditions": [
+        { "field": "facts.servicePeriodCount", "operator": "gte", "value": 1 }
+      ],
+      "outcomes": [
+        {
+          "title": "VA home loan guaranty",
+          "description": "Review eligibility, certificates of eligibility, and lender steps.",
+          "link": "https://www.va.gov/housing-assistance/home-loans/",
+          "tags": ["housing", "federal"]
+        }
+      ]
+    },
+    {
+      "id": "fed-burial-benefits",
+      "description": "VA burial benefits overview",
+      "tags": ["benefits"],
+      "conditions": [
+        { "field": "facts.servicePeriodCount", "operator": "gte", "value": 1 }
+      ],
+      "outcomes": [
+        {
+          "title": "VA burial and memorial benefits",
+          "description": "Explore eligibility for burial in a VA national cemetery and memorial items.",
+          "link": "https://www.va.gov/burials-memorials/",
+          "tags": ["benefits", "federal"]
+        }
+      ]
     }
   ]
 }
