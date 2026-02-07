@@ -14,9 +14,28 @@ const sharedDir = path.resolve(__dirname, "../shared");
 
 const app = express();
 
+app.use((req, res, next) => {
+  const start = Date.now();
+  res.on("finish", () => {
+    const duration = Date.now() - start;
+    const line = `${req.method} ${req.originalUrl} ${res.statusCode} ${duration}ms`;
+    console.log(line);
+  });
+  next();
+});
+
 app.use(express.json({ limit: "1mb" }));
 app.use("/shared", express.static(sharedDir));
 app.use(express.static(frontendDir));
+
+app.get("/api/health", (req, res) => {
+  res.json({
+    success: true,
+    status: "ok",
+    time: new Date().toISOString()
+  });
+});
+
 app.use("/api", onboardingRouter);
 app.use("/api", benefitsRouter);
 app.use("/api", recalculateRouter);

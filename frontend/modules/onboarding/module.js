@@ -76,6 +76,24 @@ const setError = (form, field, message) => {
   if (el) {
     el.textContent = message || "";
   }
+
+  const input = form.querySelector(`[name='${field}']`);
+  if (input) {
+    input.setAttribute("aria-invalid", message ? "true" : "false");
+  }
+};
+
+const focusFirstError = (form) => {
+  const error = form.querySelector(".error:not(:empty)");
+  if (!error) {
+    return;
+  }
+
+  const field = error.getAttribute("data-error-for");
+  const input = form.querySelector(`[name='${field}']`);
+  if (input) {
+    input.focus();
+  }
 };
 
 const validateStep = (form, stepIndex) => {
@@ -179,13 +197,13 @@ const buildSummary = (root, payload) => {
     .join("\n");
 
   summary.innerHTML = `
-    <strong>Branch:</strong> ${payload.branch}<br />
-    <strong>Component:</strong> ${payload.component}<br />
-    <strong>Service periods:</strong><br />
+    <div class="summary-row"><strong>Branch:</strong> ${payload.branch}</div>
+    <div class="summary-row"><strong>Component:</strong> ${payload.component}</div>
+    <div class="summary-row"><strong>Service periods:</strong></div>
     <pre>${periods}</pre>
-    <strong>Combat self-report:</strong> ${payload.combatSelfReported}<br />
-    <strong>Disability rating:</strong> ${payload.disabilityRatingKnown ? payload.disabilityRatingPercent + "%" : "Not sure"}<br />
-    <strong>State of residence:</strong> ${payload.stateOfResidence}
+    <div class="summary-row"><strong>Combat self-report:</strong> ${payload.combatSelfReported}</div>
+    <div class="summary-row"><strong>Disability rating:</strong> ${payload.disabilityRatingKnown ? payload.disabilityRatingPercent + "%" : "Not sure"}</div>
+    <div class="summary-row"><strong>State of residence:</strong> ${payload.stateOfResidence}</div>
   `;
 };
 
@@ -248,6 +266,7 @@ export const init = () => {
 
   const periodsContainer = form.querySelector("#service-periods");
   const addPeriodButton = form.querySelector("[data-add-period]");
+  const ratingPercentInput = form.querySelector("input[name='disabilityRatingPercent']");
 
   const draft = getOnboardingResult();
   if (draft?.servicePeriods?.length) {
@@ -277,9 +296,22 @@ export const init = () => {
     showStep(root, currentStep, form, indicator);
   });
 
+  form.addEventListener("change", (event) => {
+    if (event.target.name === "disabilityRatingKnown") {
+      const isKnown = event.target.value === "yes";
+      ratingPercentInput.disabled = !isKnown;
+      if (!isKnown) {
+        ratingPercentInput.value = "";
+      }
+      persistDraft(form);
+      showStep(root, currentStep, form, indicator);
+    }
+  });
+
   form.querySelector("[data-next]").addEventListener("click", () => {
     if (!validateStep(form, currentStep)) {
       updateButtons(root, currentStep, false);
+      focusFirstError(form);
       return;
     }
 
@@ -293,7 +325,7 @@ export const init = () => {
 
   form.querySelector("[data-prev]").addEventListener("click", () => {
     currentStep = Math.max(0, currentStep - 1);
-    showStep(root, currentStep, form);
+    showStep(root, currentStep, form, indicator);
   });
 
   form.addEventListener("submit", async (event) => {

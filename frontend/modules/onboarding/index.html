@@ -14,18 +14,21 @@
       <h2>Branch & Component</h2>
       <label>
         Branch
-        <select name="branch" required></select>
+        <select name="branch" required aria-describedby="branch-hint"></select>
+        <span class="hint" id="branch-hint">Choose the branch you served under.</span>
         <span class="error" data-error-for="branch"></span>
       </label>
       <label>
         Component
-        <select name="component" required></select>
+        <select name="component" required aria-describedby="component-hint"></select>
+        <span class="hint" id="component-hint">Active duty, reserve, or guard.</span>
         <span class="error" data-error-for="component"></span>
       </label>
     </section>
 
     <section class="step" data-step="1">
       <h2>Service Periods</h2>
+      <p class="step-intro">List every continuous period of service. Add more if you had breaks.</p>
       <div id="service-periods"></div>
       <button type="button" class="ghost" data-add-period>Add another period</button>
       <span class="error" data-error-for="servicePeriods"></span>
@@ -33,23 +36,28 @@
 
     <section class="step" data-step="2">
       <h2>Combat Experience</h2>
-      <div class="radio-group">
+      <fieldset class="radio-group" aria-describedby="combat-hint">
+        <legend>Did you serve in combat operations?</legend>
         <label><input type="radio" name="combatSelfReported" value="yes" /> Yes</label>
         <label><input type="radio" name="combatSelfReported" value="no" /> No</label>
         <label><input type="radio" name="combatSelfReported" value="not_sure" /> Not sure</label>
-      </div>
+      </fieldset>
+      <span class="hint" id="combat-hint">Self-report is enough for now; details can be added later.</span>
       <span class="error" data-error-for="combatSelfReported"></span>
     </section>
 
     <section class="step" data-step="3">
       <h2>Disability Rating</h2>
-      <div class="radio-group">
+      <fieldset class="radio-group" aria-describedby="rating-hint">
+        <legend>Do you already have a VA disability rating?</legend>
         <label><input type="radio" name="disabilityRatingKnown" value="yes" /> I have a rating</label>
         <label><input type="radio" name="disabilityRatingKnown" value="no" /> Not sure yet</label>
-      </div>
+      </fieldset>
+      <span class="hint" id="rating-hint">If known, choose the closest 10% increment.</span>
       <label data-rating-field>
         Disability rating percent
-        <input type="number" name="disabilityRatingPercent" min="0" max="100" step="10" />
+        <input type="number" name="disabilityRatingPercent" min="0" max="100" step="10" aria-describedby="rating-percent-hint" />
+        <span class="hint" id="rating-percent-hint">Example: 30, 50, 70.</span>
         <span class="error" data-error-for="disabilityRatingPercent"></span>
       </label>
       <span class="error" data-error-for="disabilityRatingKnown"></span>
@@ -59,14 +67,15 @@
       <h2>State of Residence</h2>
       <label>
         State or territory
-        <select name="stateOfResidence" required></select>
+        <select name="stateOfResidence" required aria-describedby="state-hint"></select>
+        <span class="hint" id="state-hint">Used to match state-level benefits.</span>
         <span class="error" data-error-for="stateOfResidence"></span>
       </label>
     </section>
 
     <section class="step" data-step="5">
       <h2>Summary</h2>
-      <div class="summary" data-summary></div>
+      <div class="summary" data-summary role="region" aria-live="polite"></div>
     </section>
 
     <footer class="wizard-actions">
@@ -76,5 +85,5 @@
     </footer>
   </form>
 
-  <div class="status" data-status></div>
+  <div class="status" data-status role="status" aria-live="polite"></div>
 </section>
