@@ -1,0 +1,57 @@
+:root {
+  --rf-ink: #1d1f2b;
+  --rf-mint: #24c38e;
+  --rf-cream: #f6f2ef;
+  --rf-card: #ffffff;
+  --rf-border: #e6e0f0;
+}
+
+.rf-card {
+  background: var(--rf-card);
+  border-radius: 18px;
+  box-shadow: 0 12px 24px rgba(20, 23, 40, 0.08);
+  padding: 20px;
+}
+
+.rf-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 20px;
+  background: var(--rf-ink);
+  color: white;
+  font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.rf-button.secondary {
+  background: transparent;
+  color: var(--rf-ink);
+  border: 1px solid var(--rf-border);
+}
+
+.rf-step {
+  display: grid;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--rf-ink);
+}
+
+.rf-step-track {
+  height: 6px;
+  background: #efe9ff;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.rf-step-bar {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--rf-mint), #f2b93b);
+  transition: width 0.3s ease;
+}

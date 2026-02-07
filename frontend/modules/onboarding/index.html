@@ -1,0 +1,80 @@
+<section class="onboarding" data-onboarding>
+  <link rel="stylesheet" href="modules/common/module.css" />
+  <link rel="stylesheet" href="modules/onboarding/module.css" />
+  <header class="wizard-header">
+    <div>
+      <h1>Rally Forge Onboarding</h1>
+      <p>Build your profile in a few steps to unlock personalized benefits.</p>
+    </div>
+    <div class="progress" data-progress-container></div>
+  </header>
+
+  <form id="onboarding-form" novalidate>
+    <section class="step" data-step="0">
+      <h2>Branch & Component</h2>
+      <label>
+        Branch
+        <select name="branch" required></select>
+        <span class="error" data-error-for="branch"></span>
+      </label>
+      <label>
+        Component
+        <select name="component" required></select>
+        <span class="error" data-error-for="component"></span>
+      </label>
+    </section>
+
+    <section class="step" data-step="1">
+      <h2>Service Periods</h2>
+      <div id="service-periods"></div>
+      <button type="button" class="ghost" data-add-period>Add another period</button>
+      <span class="error" data-error-for="servicePeriods"></span>
+    </section>
+
+    <section class="step" data-step="2">
+      <h2>Combat Experience</h2>
+      <div class="radio-group">
+        <label><input type="radio" name="combatSelfReported" value="yes" /> Yes</label>
+        <label><input type="radio" name="combatSelfReported" value="no" /> No</label>
+        <label><input type="radio" name="combatSelfReported" value="not_sure" /> Not sure</label>
+      </div>
+      <span class="error" data-error-for="combatSelfReported"></span>
+    </section>
+
+    <section class="step" data-step="3">
+      <h2>Disability Rating</h2>
+      <div class="radio-group">
+        <label><input type="radio" name="disabilityRatingKnown" value="yes" /> I have a rating</label>
+        <label><input type="radio" name="disabilityRatingKnown" value="no" /> Not sure yet</label>
+      </div>
+      <label data-rating-field>
+        Disability rating percent
+        <input type="number" name="disabilityRatingPercent" min="0" max="100" step="10" />
+        <span class="error" data-error-for="disabilityRatingPercent"></span>
+      </label>
+      <span class="error" data-error-for="disabilityRatingKnown"></span>
+    </section>
+
+    <section class="step" data-step="4">
+      <h2>State of Residence</h2>
+      <label>
+        State or territory
+        <select name="stateOfResidence" required></select>
+        <span class="error" data-error-for="stateOfResidence"></span>
+      </label>
+    </section>
+
+    <section class="step" data-step="5">
+      <h2>Summary</h2>
+      <div class="summary" data-summary></div>
+    </section>
+
+    <footer class="wizard-actions">
+      <button type="button" class="ghost" data-prev>Back</button>
+      <button type="button" data-next>Next</button>
+      <button type="submit" class="primary" data-submit>Submit</button>
+    </footer>
+  </form>
+
+  <div class="status" data-status></div>
+</section>

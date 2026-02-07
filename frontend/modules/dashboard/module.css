@@ -1,0 +1,16 @@
+.dashboard {
+  max-width: 840px;
+  margin: 32px auto;
+  padding: 16px;
+}
+
+.dashboard-header h1 {
+  margin: 0 0 6px;
+}
+
+.dashboard-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}

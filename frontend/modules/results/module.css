@@ -1,0 +1,24 @@
+.results {
+  max-width: 960px;
+  margin: 32px auto;
+  padding: 16px;
+}
+
+.results-header {
+  margin-bottom: 16px;
+}
+
+.results-header h1 {
+  margin: 0 0 6px;
+}
+
+.results-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.results-item pre {
+  margin: 0;
+  white-space: pre-wrap;
+  font-size: 13px;
+}
