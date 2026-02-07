@@ -1,4 +1,5 @@
 const STORAGE_KEY = "rallyforge:onboardingResult";
+const VETERAN_KEY = "rallyforge:veteranId";
 
 const safeParse = (value) => {
   try {
@@ -19,4 +20,16 @@ export const setOnboardingResult = (result) => {
 
 export const clearOnboardingResult = () => {
   localStorage.removeItem(STORAGE_KEY);
+};
+
+export const getVeteranId = () => localStorage.getItem(VETERAN_KEY);
+
+export const setVeteranId = (veteranId) => {
+  if (veteranId) {
+    localStorage.setItem(VETERAN_KEY, veteranId);
+  }
+};
+
+export const clearVeteranId = () => {
+  localStorage.removeItem(VETERAN_KEY);
 };

@@ -1,7 +1,6 @@
-import { getOnboardingResult } from "../../js/state.js";
+import { getOnboardingResult, getVeteranId } from "../../js/state.js";
 import { getBenefits, recalcBenefits } from "../../js/api.js";
 
-const VETERAN_KEY = "rallyforge:veteranId";
 
 const normalizeCategory = (data) => {
   const items = Array.isArray(data?.items) ? data.items : [];
@@ -180,7 +179,7 @@ export const init = async () => {
   }
 
   const onboardingResult = getOnboardingResult();
-  const veteranId = localStorage.getItem(VETERAN_KEY);
+  const veteranId = getVeteranId();
 
   if (!onboardingResult || !veteranId) {
     window.location.hash = "#/onboarding";

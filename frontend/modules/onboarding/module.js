@@ -1,11 +1,10 @@
 import { BRANCHES, COMPONENTS, THEATERS } from "../../../shared/constants/branches.js";
 import { STATES } from "../../../shared/constants/states.js";
 import { postOnboarding } from "../../js/api.js";
-import { getOnboardingResult, setOnboardingResult } from "../../js/state.js";
+import { getOnboardingResult, setOnboardingResult, setVeteranId } from "../../js/state.js";
 import { createStepIndicator, updateStepIndicator } from "../common/module.js";
 
 const STEPS = 6;
-const VETERAN_KEY = "rallyforge:veteranId";
 
 const createPeriodRow = (period = {}) => {
   const wrapper = document.createElement("div");
@@ -307,7 +306,7 @@ export const init = () => {
 
     try {
       const response = await postOnboarding(payload);
-      localStorage.setItem(VETERAN_KEY, response.veteranId);
+      setVeteranId(response.veteranId);
       setOnboardingResult(payload);
       status.textContent = "Onboarding complete. Redirecting...";
       window.location.hash = "#/results";
