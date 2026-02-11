@@ -1,5 +1,6 @@
 import { BRANCHES, COMPONENTS, THEATERS } from "../constants/branches.js";
 import { STATES } from "../constants/states.js";
+import { AWARDS_LIST } from "../constants/awardsList.js";
 
 const ISO_DATE_REGEX = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -34,6 +35,7 @@ const validateServicePeriod = (period, index) => {
 
   return errors;
 };
+
 
 export const validateOnboarding = (payload) => {
   const errors = [];
@@ -76,6 +78,20 @@ export const validateOnboarding = (payload) => {
 
   if (!STATES.includes(payload.stateOfResidence)) {
     errors.push("stateOfResidence must be a valid state or territory");
+  }
+
+
+  if (payload.awards !== null && payload.awards !== undefined) {
+    if (!Array.isArray(payload.awards)) {
+      errors.push("awards must be an array of award IDs");
+    } else {
+      const validAwards = new Set(AWARDS_LIST.map((award) => award.id));
+      payload.awards.forEach((awardId) => {
+        if (!validAwards.has(awardId)) {
+          errors.push(`awards contains an invalid award: ${awardId}`);
+        }
+      });
+    }
   }
 
   return { valid: errors.length === 0, errors };

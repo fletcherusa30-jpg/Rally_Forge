@@ -29,8 +29,25 @@
     <section class="step" data-step="1">
       <h2>Service Periods</h2>
       <p class="step-intro">List every continuous period of service. Add more if you had breaks.</p>
-      <div id="service-periods"></div>
-      <button type="button" class="ghost" data-add-period>Add another period</button>
+      <div id="service-periods" class="service-periods"></div>
+      <div class="period-actions">
+        <button type="button" class="ghost add-period" data-add-period>+ Add another period</button>
+      </div>
+      <div class="awards-panel">
+        <div class="awards-header">
+          <div>
+            <div class="awards-label">Awards and decorations (DD-214 Block 13)</div>
+            <p class="helper">Why we ask: awards help match combat and exposure-related benefits.</p>
+          </div>
+          <div class="awards-search">
+            <input type="search" data-awards-search placeholder="Search awards" aria-label="Search awards" />
+            <div class="awards-status" data-awards-status>Showing all awards</div>
+          </div>
+        </div>
+        <select id="awards-select" name="awards" multiple size="8" aria-describedby="awards-hint" aria-label="Awards and decorations"></select>
+        <span class="hint" id="awards-hint">Select all that apply. Use Ctrl/Cmd to multi-select.</span>
+        <span class="error" data-error-for="awards"></span>
+      </div>
       <span class="error" data-error-for="servicePeriods"></span>
     </section>
 
@@ -87,3 +104,4 @@
 
   <div class="status" data-status role="status" aria-live="polite"></div>
 </section>
+

@@ -1,5 +1,6 @@
 const STORAGE_KEY = "rallyforge:onboardingResult";
 const VETERAN_KEY = "rallyforge:veteranId";
+const PLAN_KEY = "rallyforge:actionPlanState";
 
 const safeParse = (value) => {
   try {
@@ -32,4 +33,17 @@ export const setVeteranId = (veteranId) => {
 
 export const clearVeteranId = () => {
   localStorage.removeItem(VETERAN_KEY);
+};
+
+export const getActionPlanState = () => {
+  const raw = localStorage.getItem(PLAN_KEY);
+  return raw ? safeParse(raw) : null;
+};
+
+export const setActionPlanState = (state) => {
+  localStorage.setItem(PLAN_KEY, JSON.stringify(state));
+};
+
+export const clearActionPlanState = () => {
+  localStorage.removeItem(PLAN_KEY);
 };

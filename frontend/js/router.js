@@ -29,6 +29,7 @@ const loadTemplate = async (templatePath) => {
 
 const loadModule = async (modulePath) => {
   const moduleUrl = new URL(modulePath, window.location.href);
+  moduleUrl.searchParams.set("v", Date.now().toString());
   return import(moduleUrl.href);
 };
 

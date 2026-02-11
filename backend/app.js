@@ -5,6 +5,7 @@ import { fileURLToPath } from "url";
 import onboardingRouter from "./api/onboarding.js";
 import benefitsRouter from "./api/benefits.js";
 import recalculateRouter from "./api/recalculate.js";
+import intelligenceRouter from "./api/intelligence.js";
 import { AppError, errorHandler } from "./utils/errors.js";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -33,7 +34,9 @@ export const createApp = () => {
 
   app.use((req, res, next) => {
     res.setHeader("x-content-type-options", "nosniff");
-    res.setHeader("x-frame-options", "DENY");
+    if (!req.query?.vscodeBrowserReqId) {
+      res.setHeader("x-frame-options", "DENY");
+    }
     res.setHeader("referrer-policy", "no-referrer");
     res.setHeader("permissions-policy", "geolocation=(), microphone=(), camera=()");
     next();
@@ -70,6 +73,7 @@ export const createApp = () => {
   app.use("/api", onboardingRouter);
   app.use("/api", benefitsRouter);
   app.use("/api", recalculateRouter);
+  app.use("/api", intelligenceRouter);
 
   app.use("/api", (req, res, next) => {
     next(new AppError("API route not found", 404, "not_found"));

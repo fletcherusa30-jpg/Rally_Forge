@@ -14,6 +14,7 @@
  * @property {boolean} disabilityRatingKnown
  * @property {number|null} disabilityRatingPercent
  * @property {string} stateOfResidence
+ * @property {string[]} [awards]
  */
 
 export {};

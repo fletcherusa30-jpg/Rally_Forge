@@ -57,7 +57,10 @@ export const evaluateRuleSet = (ruleSet, data) => {
         description: outcome.description,
         link: outcome.link,
         tags: outcome.tags || [],
-        ruleId: rule.id
+        ruleId: rule.id,
+        ruleDescription: rule.description,
+        ruleTags: rule.tags || [],
+        ruleConditions: rule.conditions || []
       });
     });
 

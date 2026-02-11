@@ -1,5 +1,5 @@
 import { ObjectId } from "mongodb";
-import { validateOnboarding } from "../../shared/schemas/onboardingSchema.js";
+import { validateOnboarding } from "../../packages/shared-data/src/constants/onboardingSchema.js";
 import { saveOnboarding } from "../database/models/onboarding.js";
 import { createVeteran, findVeteranById } from "../database/models/veteran.js";
 import { AppError } from "../utils/errors.js";
