@@ -1,0 +1,77 @@
+[
+  {
+    "condition": "Agent Orange exposure",
+    "theaters": ["Vietnam"],
+    "cfr": "38 CFR § 3.307(a)(6)"
+  },
+  {
+    "condition": "Diabetes Type 2",
+    "theaters": ["Vietnam"],
+    "cfr": "38 CFR § 3.309(e)"
+  },
+  {
+    "condition": "Ischemic heart disease",
+    "theaters": ["Vietnam"],
+    "cfr": "38 CFR § 3.309(e)"
+  },
+  {
+    "condition": "Parkinson's disease",
+    "theaters": ["Vietnam"],
+    "cfr": "38 CFR § 3.309(e)"
+  },
+  {
+    "condition": "Prostate cancer",
+    "theaters": ["Vietnam"],
+    "cfr": "38 CFR § 3.309(e)"
+  },
+  {
+    "condition": "Respiratory cancers",
+    "theaters": ["Vietnam"],
+    "cfr": "38 CFR § 3.309(e)"
+  },
+  {
+    "condition": "Gulf War syndrome",
+    "theaters": ["Persian Gulf", "Southwest Asia"],
+    "cfr": "38 CFR § 3.317"
+  },
+  {
+    "condition": "Chronic fatigue syndrome",
+    "theaters": ["Persian Gulf", "Southwest Asia"],
+    "cfr": "38 CFR § 3.317"
+  },
+  {
+    "condition": "Fibromyalgia",
+    "theaters": ["Persian Gulf", "Southwest Asia"],
+    "cfr": "38 CFR § 3.317"
+  },
+  {
+    "condition": "Irritable bowel syndrome",
+    "theaters": ["Persian Gulf", "Southwest Asia"],
+    "cfr": "38 CFR § 3.317"
+  },
+  {
+    "condition": "Burn pit exposure",
+    "theaters": ["Iraq", "Afghanistan", "Southwest Asia"],
+    "cfr": "38 CFR § 3.320"
+  },
+  {
+    "condition": "Asthma",
+    "theaters": ["Iraq", "Afghanistan", "Southwest Asia"],
+    "cfr": "38 CFR § 3.320"
+  },
+  {
+    "condition": "Rhinitis",
+    "theaters": ["Iraq", "Afghanistan", "Southwest Asia"],
+    "cfr": "38 CFR § 3.320"
+  },
+  {
+    "condition": "Sinusitis",
+    "theaters": ["Iraq", "Afghanistan", "Southwest Asia"],
+    "cfr": "38 CFR § 3.320"
+  },
+  {
+    "condition": "PTSD",
+    "theaters": ["Vietnam", "Persian Gulf", "Iraq", "Afghanistan", "Korea"],
+    "cfr": "38 CFR § 3.304(f)"
+  }
+]

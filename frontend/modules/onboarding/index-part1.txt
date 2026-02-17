@@ -1,0 +1,41 @@
+<section class="onboarding is-rating-fullscreen min-h-screen bg-military-olive" data-onboarding>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="modules/common/module.css" />
+  <link rel="stylesheet" href="modules/onboarding/module.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Inter", "system-ui", "sans-serif"],
+            display: ["Montserrat", "system-ui", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+
+  <div class="px-4 sm:px-8 py-12 sm:py-16">
+    <div class="max-w-5xl mx-auto bg-white/95 backdrop-blur-sm shadow-2xl rounded-xl p-10 sm:p-14">
+      
+      <header class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-8 pb-10 border-b border-slate-300">
+        <div class="flex-1">
+          <h1 class="text-5xl sm:text-6xl font-display font-bold text-slate-900 tracking-tight">Rally Forge</h1>
+          <p class="text-slate-700 text-lg sm:text-xl mt-4 leading-relaxed font-sans font-normal">Build your profile to unlock personalized military benefits and insights.</p>
+        </div>
+
+        <div class="w-full sm:w-auto sm:min-w-[220px]">
+          <div class="flex gap-2.5" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" aria-label="Overall progress">
+            <div class="h-3 flex-1 sm:w-12 bg-emerald-600 rounded-full shadow-sm"></div>
+            <div class="h-3 flex-1 sm:w-12 bg-slate-300 rounded-full"></div>
+            <div class="h-3 flex-1 sm:w-12 bg-slate-300 rounded-full"></div>
+            <div class="h-3 flex-1 sm:w-12 bg-slate-300 rounded-full"></div>
+          </div>
+          <p class="text-slate-600 text-sm font-medium mt-4 text-right font-sans">Step 1 of 4</p>
+        </div>
+      </header>
+
+      <form id="onboarding-form" novalidate class="mt-10 space-y-10">

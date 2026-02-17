@@ -1,0 +1,30 @@
+/* Minimal CSS - Tailwind handles all styling */
+
+/* Step visibility */
+.step {
+  display: none;
+}
+
+.step.active {
+  display: block;
+}
+
+/* Rating tab panels */
+.rating-mode-panel {
+  display: none;
+}
+
+.rating-mode-panel.is-active {
+  display: block;
+}
+
+/* File input to hide */
+input[type="file"][data-rating-upload] {
+  display: none;
+}
+
+/* Utility classes */
+.hidden {
+  display: none !important;
+}
+

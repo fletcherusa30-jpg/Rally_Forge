@@ -1,107 +1,217 @@
-<section class="onboarding" data-onboarding>
+<section class="onboarding is-rating-fullscreen min-h-screen bg-military-olive" data-onboarding>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="modules/common/module.css" />
   <link rel="stylesheet" href="modules/onboarding/module.css" />
-  <header class="wizard-header">
-    <div>
-      <h1>Rally Forge Onboarding</h1>
-      <p>Build your profile in a few steps to unlock personalized benefits.</p>
-    </div>
-    <div class="progress" data-progress-container></div>
-  </header>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Montserrat', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
 
-  <form id="onboarding-form" novalidate>
-    <section class="step" data-step="0">
-      <h2>Branch & Component</h2>
-      <label>
-        Branch
-        <select name="branch" required aria-describedby="branch-hint"></select>
-        <span class="hint" id="branch-hint">Choose the branch you served under.</span>
-        <span class="error" data-error-for="branch"></span>
-      </label>
-      <label>
-        Component
-        <select name="component" required aria-describedby="component-hint"></select>
-        <span class="hint" id="component-hint">Active duty, reserve, or guard.</span>
-        <span class="error" data-error-for="component"></span>
-      </label>
-    </section>
+  <div class="px-4 sm:px-8 py-12 sm:py-16">
+    <div class="max-w-5xl mx-auto bg-white/95 backdrop-blur-sm shadow-2xl rounded-xl p-10 sm:p-14">
+      <header class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-8 pb-10 border-b border-slate-300">
+        <div class="flex-1">
+          <h1 class="text-5xl sm:text-6xl font-display font-bold text-slate-900 tracking-tight">Rally Forge</h1>
+          <p class="text-slate-700 text-lg sm:text-xl mt-4 leading-relaxed font-sans font-normal">Build your profile to unlock personalized military benefits and insights.</p>
+        </div>
 
-    <section class="step" data-step="1">
-      <h2>Service Periods</h2>
-      <p class="step-intro">List every continuous period of service. Add more if you had breaks.</p>
-      <div id="service-periods" class="service-periods"></div>
-      <div class="period-actions">
-        <button type="button" class="ghost add-period" data-add-period>+ Add another period</button>
-      </div>
-      <div class="awards-panel">
-        <div class="awards-header">
-          <div>
-            <div class="awards-label">Awards and decorations (DD-214 Block 13)</div>
-            <p class="helper">Why we ask: awards help match combat and exposure-related benefits.</p>
+        <div class="w-full sm:w-auto sm:min-w-[220px]">
+          <div class="flex gap-2.5" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" aria-label="Overall progress">
+            <div class="h-3 flex-1 sm:w-12 bg-emerald-600 rounded-full shadow-sm"></div>
+            <div class="h-3 flex-1 sm:w-12 bg-slate-300 rounded-full"></div>
+            <div class="h-3 flex-1 sm:w-12 bg-slate-300 rounded-full"></div>
+            <div class="h-3 flex-1 sm:w-12 bg-slate-300 rounded-full"></div>
           </div>
-          <div class="awards-search">
-            <input type="search" data-awards-search placeholder="Search awards" aria-label="Search awards" />
-            <div class="awards-status" data-awards-status>Showing all awards</div>
+          <p class="text-slate-600 text-sm font-medium mt-4 text-right font-sans">Step 1 of 4</p>
+        </div>
+      </header>
+
+      <form id="onboarding-form" novalidate class="mt-10 space-y-10">
+      <!-- Step 0: Branch, Service, and Combat -->
+      <section class="step active" data-step="0">
+        <div class="space-y-6">
+          <div class="pt-4">
+            <h2 class="text-3xl sm:text-4xl font-display font-bold text-slate-900">Military Service Information</h2>
+            <p class="text-slate-700 text-lg mt-3 font-sans">Provide details about your military service history.</p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="step-column space-y-6">
+              <div class="bg-slate-50 border border-slate-200 rounded-lg p-6">
+                <label class="block">
+                  <span class="block text-sm font-semibold text-slate-700 mb-3">Branch of Service</span>
+                  <select name="branch" required aria-describedby="branch-hint" class="w-full px-4 py-3 text-base bg-white text-slate-900 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"></select>
+                  <span class="hint text-slate-500 text-sm mt-2 block" id="branch-hint">Select your primary branch of military service.</span>
+                </label>
+              </div>
+
+              <div class="bg-slate-50 border border-slate-200 rounded-lg p-6">
+                <label class="block">
+                  <span class="block text-sm font-semibold text-slate-700 mb-3">Service Component</span>
+                  <select name="component" required aria-describedby="component-hint" class="w-full px-4 py-3 text-base bg-white text-slate-900 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"></select>
+                  <span class="hint text-slate-600 text-sm mt-3 block font-sans" id="component-hint">Active duty, reserve, or national guard</span>
+                </label>
+              </div>
+
+              <div class="bg-slate-50 border border-slate-300 rounded-xl p-7">
+                <fieldset class="space-y-5">
+                  <legend class="text-sm font-display font-semibold text-slate-800 mb-2 uppercase tracking-wide">Combat Service</legend>
+                  <p class="text-slate-700 text-base mb-4 font-sans">Did you serve in combat operations?</p>
+                  <div class="space-y-3">
+                    <label class="flex items-center gap-4 cursor-pointer bg-white px-5 py-4 rounded-lg border-2 border-slate-200 hover:border-emerald-500 hover:bg-emerald-50/30 transition-all">
+                      <input type="radio" name="combatSelfReported" value="yes" class="w-5 h-5 text-emerald-600 focus:ring-2 focus:ring-emerald-500" />
+                      <span class="text-base font-sans font-medium text-slate-800">Yes</span>
+                    </label>
+                    <label class="flex items-center gap-4 cursor-pointer bg-white px-5 py-4 rounded-lg border-2 border-slate-200 hover:border-emerald-500 hover:bg-emerald-50/30 transition-all">
+                      <input type="radio" name="combatSelfReported" value="no" class="w-5 h-5 text-emerald-600 focus:ring-2 focus:ring-emerald-500" />
+                      <span class="text-base font-sans font-medium text-slate-800">No</span>
+                    </label>
+                    <label class="flex items-center gap-4 cursor-pointer bg-white px-5 py-4 rounded-lg border-2 border-slate-200 hover:border-emerald-500 hover:bg-emerald-50/30 transition-all">
+                      <input type="radio" name="combatSelfReported" value="not_sure" class="w-5 h-5 text-emerald-600 focus:ring-2 focus:ring-emerald-500" />
+                      <span class="text-base font-sans font-medium text-slate-800">Not sure</span>
+                    </label>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+
+            <div class="step-column space-y-4">
+              <div class="bg-slate-50 border border-slate-300 rounded-xl p-7">
+                <h3 class="text-base font-display font-bold text-slate-900 mb-2 uppercase tracking-wide">Service Periods</h3>
+                <p class="text-slate-700 text-base mb-6 font-sans">List every continuous period of service. Add more if you had breaks.</p>
+                <div id="service-periods" class="service-periods space-y-5 mb-6"></div>
+                <button type="button" class="px-6 py-3 text-sm font-display font-semibold text-emerald-700 bg-emerald-50 border-2 border-emerald-300 rounded-lg hover:bg-emerald-100 hover:border-emerald-400 transition-all shadow-sm" data-add-period>+ Add Another Period</button>
+              </div>
+
+              <div class="bg-slate-50 border border-slate-300 rounded-xl p-7">
+                <div class="mb-5">
+                  <h3 class="text-base font-display font-bold text-slate-900 uppercase tracking-wide">Awards and Decorations</h3>
+                  <p class="text-slate-700 text-sm mt-2 font-sans">DD-214 Block 13 — Awards help match combat and exposure-related benefits</p>
+                </div>
+                <div class="flex gap-4">
+                  <select id="awards-select" name="awards" aria-describedby="awards-hint" aria-label="Awards and decorations" class="flex-1 px-4 py-3.5 text-base font-sans bg-white text-slate-900 border-2 border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all hover:border-slate-400"></select>
+                  <button type="button" class="px-6 py-3.5 text-sm font-display font-semibold text-white bg-emerald-600 rounded-lg hover:bg-emerald-700 active:bg-emerald-800 transition-all shadow-md hover:shadow-lg" data-awards-add>Add Award</button>
+                </div>
+                <div class="awards-selected mt-5 space-y-2" data-awards-selected aria-live="polite"></div>
+                <span class="hint text-slate-600 text-sm mt-4 block font-sans" id="awards-hint">Select an award from the list, then click Add Award</span>
+              </div>
+            </div>
           </div>
         </div>
-        <select id="awards-select" name="awards" multiple size="8" aria-describedby="awards-hint" aria-label="Awards and decorations"></select>
-        <span class="hint" id="awards-hint">Select all that apply. Use Ctrl/Cmd to multi-select.</span>
-        <span class="error" data-error-for="awards"></span>
-      </div>
-      <span class="error" data-error-for="servicePeriods"></span>
-    </section>
+      </section>
 
-    <section class="step" data-step="2">
-      <h2>Combat Experience</h2>
-      <fieldset class="radio-group" aria-describedby="combat-hint">
-        <legend>Did you serve in combat operations?</legend>
-        <label><input type="radio" name="combatSelfReported" value="yes" /> Yes</label>
-        <label><input type="radio" name="combatSelfReported" value="no" /> No</label>
-        <label><input type="radio" name="combatSelfReported" value="not_sure" /> Not sure</label>
-      </fieldset>
-      <span class="hint" id="combat-hint">Self-report is enough for now; details can be added later.</span>
-      <span class="error" data-error-for="combatSelfReported"></span>
-    </section>
+      <!-- Step 1: Disability Rating -->
+      <section class="step" data-step="1">
+        <div class="space-y-6">
+          <div class="pt-4">
+            <h2 class="text-3xl sm:text-4xl font-display font-bold text-slate-900">VA Disability Rating</h2>
+            <p class="text-slate-700 text-lg mt-3 font-sans">Upload your VA decision letter for automatic extraction or enter conditions manually</p>
+          </div>
 
-    <section class="step" data-step="3">
-      <h2>Disability Rating</h2>
-      <fieldset class="radio-group" aria-describedby="rating-hint">
-        <legend>Do you already have a VA disability rating?</legend>
-        <label><input type="radio" name="disabilityRatingKnown" value="yes" /> I have a rating</label>
-        <label><input type="radio" name="disabilityRatingKnown" value="no" /> Not sure yet</label>
-      </fieldset>
-      <span class="hint" id="rating-hint">If known, choose the closest 10% increment.</span>
-      <label data-rating-field>
-        Disability rating percent
-        <input type="number" name="disabilityRatingPercent" min="0" max="100" step="10" aria-describedby="rating-percent-hint" />
-        <span class="hint" id="rating-percent-hint">Example: 30, 50, 70.</span>
-        <span class="error" data-error-for="disabilityRatingPercent"></span>
-      </label>
-      <span class="error" data-error-for="disabilityRatingKnown"></span>
-    </section>
+          <div class="rating-tools" data-rating-tools>
+            <div class="rating-tools-header flex items-center justify-between mb-7">
+              <h3 class="text-xl font-display font-bold text-slate-900 uppercase tracking-wide">Rating Tools</h3>
+              <button type="button" class="px-5 py-2.5 text-sm font-display font-medium text-slate-700 bg-slate-100 border-2 border-slate-300 rounded-lg hover:bg-slate-200 hover:border-slate-400 transition-all" data-rating-toggle aria-expanded="true">Collapse</button>
+            </div>
 
-    <section class="step" data-step="4">
-      <h2>State of Residence</h2>
-      <label>
-        State or territory
-        <select name="stateOfResidence" required aria-describedby="state-hint"></select>
-        <span class="hint" id="state-hint">Used to match state-level benefits.</span>
-        <span class="error" data-error-for="stateOfResidence"></span>
-      </label>
-    </section>
+            <div class="rating-tools-content" data-rating-content>
+              <div class="rating-mode-tabs grid grid-cols-1 md:grid-cols-2 gap-5 mb-7" role="tablist">
+                <button type="button" class="rating-mode-tab is-active text-left px-7 py-6 border-3 border-emerald-600 rounded-xl bg-emerald-50 hover:bg-emerald-100 transition-all shadow-md" data-rating-mode="scanner" role="tab" aria-selected="true">
+                  <div class="text-lg font-display font-bold text-slate-900">Document Scanner</div>
+                  <p class="text-slate-700 text-sm mt-2 font-sans">Upload your VA decision letter for automatic extraction</p>
+                </button>
+                <button type="button" class="rating-mode-tab text-left px-7 py-6 border-3 border-slate-300 rounded-xl bg-white hover:bg-slate-50 hover:border-slate-400 transition-all shadow-sm" data-rating-mode="manual" role="tab" aria-selected="false">
+                  <div class="text-lg font-display font-bold text-slate-900">Manual Entry</div>
+                  <p class="text-slate-700 text-sm mt-2 font-sans">Enter each condition and rating percentage manually</p>
+                </button>
+              </div>
 
-    <section class="step" data-step="5">
-      <h2>Summary</h2>
-      <div class="summary" data-summary role="region" aria-live="polite"></div>
-    </section>
+              <div class="rating-mode-panels">
+                <div class="rating-mode-panel is-active bg-slate-50 border border-slate-300 rounded-xl p-8" data-rating-panel="scanner" role="tabpanel">
+                  <div class="rating-upload space-y-6">
+                    <h4 class="text-lg font-display font-bold text-slate-900 uppercase tracking-wide">Decision Letter Upload</h4>
+                    <input type="file" id="rating-upload-input" data-rating-upload aria-label="Upload rating decision letter" accept=".txt,.md,.rtf,.pdf" data-rf-scoped-scanner="true">
+                    <label for="rating-upload-input" class="rating-file block p-12 border-3 border-dashed border-slate-400 text-center cursor-pointer rounded-xl bg-white hover:bg-slate-50 hover:border-emerald-500 hover:shadow-md transition-all">
+                      <p class="text-lg font-display font-semibold text-slate-900">Drop your decision letter here or click to browse</p>
+                      <p class="text-slate-600 text-sm mt-3 font-sans">Supports PDF and text files up to 5 MB</p>
+                    </label>
+                    <div class="rating-disabilities hidden" data-rating-disabilities></div>
+                    <button type="button" class="px-6 py-3 text-sm font-display font-semibold text-red-700 bg-red-50 border-2 border-red-300 rounded-lg hover:bg-red-100 hover:border-red-400 transition-all shadow-sm" data-rating-remove>Remove Document</button>
+                  </div>
+                </div>
 
-    <footer class="wizard-actions">
-      <button type="button" class="ghost" data-prev>Back</button>
-      <button type="button" data-next>Next</button>
-      <button type="submit" class="primary" data-submit>Submit</button>
-    </footer>
-  </form>
+                <div class="rating-mode-panel bg-slate-50 border border-slate-300 rounded-xl p-8" data-rating-panel="manual" role="tabpanel">
+                  <div class="rating-calc space-y-6">
+                    <h4 class="text-lg font-display font-bold text-slate-900 uppercase tracking-wide">Combined Rating Calculator</h4>
+                    <p class="text-slate-700 text-base font-sans">Add each service-connected condition with its VA rating percentage</p>
+                    <button type="button" class="px-6 py-3 text-sm font-display font-semibold text-white bg-emerald-600 rounded-lg hover:bg-emerald-700 active:bg-emerald-800 transition-all shadow-md hover:shadow-lg" data-rating-add onclick="window.RFAddContention && window.RFAddContention()">
+                      Add Condition
+                    </button>
+                    <div class="rating-list space-y-4" data-rating-list></div>
+                    <div class="bg-gradient-to-br from-emerald-50 to-emerald-100 border-3 border-emerald-300 rounded-xl p-8 text-center shadow-md">
+                      <div class="text-slate-700 text-sm font-display font-semibold uppercase tracking-wide">Combined VA Rating</div>
+                      <div class="text-5xl font-display font-bold text-emerald-700 mt-3"><span data-rating-combined>0</span>%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <div class="status" data-status role="status" aria-live="polite"></div>
+      <!-- Step 2: State of Residence -->
+      <section class="step" data-step="2">
+        <div class="space-y-6">
+          <div class="pt-4">
+            <h2 class="text-3xl sm:text-4xl font-display font-bold text-slate-900">State of Residence</h2>
+            <p class="text-slate-700 text-lg mt-3 font-sans">This helps us identify state-specific benefits and programs available to you</p>
+          </div>
+          <div class="bg-slate-50 border border-slate-300 rounded-xl p-8">
+            <label class="block">
+              <span class="block text-sm font-display font-semibold text-slate-800 mb-4 uppercase tracking-wide">State or Territory</span>
+              <select name="stateOfResidence" required aria-describedby="state-hint" class="w-full px-4 py-3.5 text-base font-sans bg-white text-slate-900 border-2 border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all hover:border-slate-400"></select>
+              <span class="hint text-slate-600 text-sm mt-3 block font-sans" id="state-hint">Your current state of residence for benefits eligibility</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <!-- Step 3: Summary -->
+      <section class="step" data-step="3">
+        <div class="space-y-8">
+          <div class="pt-4">
+            <h2 class="text-3xl sm:text-4xl font-display font-bold text-slate-900">Review Your Information</h2>
+            <p class="text-slate-700 text-lg mt-3 font-sans">Please review your information before submitting</p>
+          </div>
+          <div class="summary bg-slate-50 border border-slate-300 rounded-xl p-8 font-sans" data-summary role="region" aria-live="polite"></div>
+        </div>
+      </section>
+      <footer class="flex items-center justify-between gap-5 pt-10 mt-8 border-t-2 border-slate-300">
+        <button type="button" class="px-8 py-4 text-base font-display font-semibold text-slate-700 bg-white border-2 border-slate-300 rounded-lg hover:bg-slate-50 hover:border-slate-400 active:bg-slate-100 transition-all shadow-sm hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed" data-prev onclick="window.RFOnboardingNav && window.RFOnboardingNav.prev && window.RFOnboardingNav.prev()">
+          ← Back
+        </button>
+        <button type="button" class="px-8 py-4 text-base font-display font-semibold text-white bg-emerald-600 rounded-lg hover:bg-emerald-700 active:bg-emerald-800 transition-all shadow-md hover:shadow-lg" data-next onclick="window.RFOnboardingNav && window.RFOnboardingNav.next && window.RFOnboardingNav.next()">
+          Next →
+        </button>
+        <button type="submit" class="hidden px-8 py-4 text-base font-display font-semibold text-white bg-green-700 rounded-lg hover:bg-green-800 active:bg-green-900 transition-all shadow-md hover:shadow-lg" data-submit>
+          Submit Profile
+        </button>
+      </footer>
+    </form>
+
+    <div class="status hidden text-center py-5 font-sans" data-status role="status" aria-live="polite"></div>
+    </div>
+  </div>
 </section>
-

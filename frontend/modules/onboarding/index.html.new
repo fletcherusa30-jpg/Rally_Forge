@@ -1,0 +1,304 @@
+<section class="onboarding is-rating-fullscreen relative min-h-screen bg-rf-charcoal overflow-hidden" data-onboarding>
+  <link rel="stylesheet" href="modules/common/module.css" />
+  <link rel="stylesheet" href="modules/onboarding/module.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'rf-navy': '#0A1A2F',
+            'rf-charcoal': '#1E1E1E',
+            'rf-gold': '#C9A86A',
+            'rf-gold-light': '#D4B578',
+            'rf-cream': '#F6F2EF',
+            'rf-olive': '#556B2F',
+            'rf-olive-dark': '#3D4620',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Military Digital Camo Background -->
+  <div class="absolute inset-0 opacity-15 pointer-events-none" style="
+    background: 
+      linear-gradient(45deg, #556B2F 25%, transparent 25%),
+      linear-gradient(-45deg, #556B2F 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, #556B2F 75%),
+      linear-gradient(-45deg, transparent 75%, #556B2F 75%);
+    background-size: 80px 80px;
+    background-position: 0 0, 40px 40px, 40px 0, 0 40px;
+  "></div>
+
+  <!-- Soft Vignette -->
+  <div class="absolute inset-0 pointer-events-none bg-gradient-to-b from-black/10 via-transparent to-black/20"></div>
+
+  <!-- Content -->
+  <div class="relative z-10">
+    <!-- Header -->
+    <header class="pt-8 pb-12 px-6 sm:px-12 border-b border-rf-gold/20">
+      <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
+        <div>
+          <h1 class="text-3xl sm:text-4xl font-bold text-rf-gold mb-2">Rally Forge</h1>
+          <p class="text-rf-cream/70 text-base sm:text-lg">Build your veteran profile in a few steps.</p>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="w-full sm:w-auto">
+          <div class="flex gap-1.5" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" aria-label="Overall progress">
+            <div class="h-1 flex-1 sm:w-12 bg-rf-gold rounded-full transition-all duration-500 shadow-md shadow-rf-gold/40"></div>
+            <div class="h-1 flex-1 sm:w-12 bg-rf-gold rounded-full transition-all duration-500 shadow-md shadow-rf-gold/40"></div>
+            <div class="h-1 flex-1 sm:w-12 bg-rf-navy/40 rounded-full transition-all duration-500"></div>
+            <div class="h-1 flex-1 sm:w-12 bg-rf-navy/40 rounded-full transition-all duration-500"></div>
+          </div>
+          <div class="mt-3 text-right">
+            <span class="text-rf-cream/60 text-xs sm:text-sm font-medium">Step 2 of 4</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <form id="onboarding-form" novalidate class="max-w-5xl mx-auto px-6 sm:px-12 py-12">
+      <!-- Step 0: Branch, Service, and Combat -->
+      <section class="step" data-step="0" class="mb-16">
+        <h2 class="text-2xl font-bold text-rf-cream mb-8 pb-4 border-b border-rf-gold/30">Branch, Service, and Combat</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div class="step-column space-y-6">
+            <div>
+              <h3 class="text-lg font-semibold text-rf-gold mb-4 flex items-center gap-2">
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25A2.25 2.25 0 0110.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v2.25A2.25 2.25 0 006 10.5z" /></svg>
+                Branch and Combat
+              </h3>
+              <label class="block mb-4">
+                <span class="block text-rf-cream text-sm font-medium mb-2">Branch</span>
+                <select name="branch" required aria-describedby="branch-hint" class="w-full px-4 py-2 rounded-lg bg-rf-navy/30 border border-rf-gold/30 text-rf-cream placeholder-rf-cream/50 focus:outline-none focus:ring-2 focus:ring-rf-gold focus:border-transparent transition-all"></select>
+                <span class="hint text-rf-cream/60 text-xs mt-1 block" id="branch-hint">Choose the branch you served under.</span>
+              </label>
+              <label class="block">
+                <span class="block text-rf-cream text-sm font-medium mb-2">Component</span>
+                <select name="component" required aria-describedby="component-hint" class="w-full px-4 py-2 rounded-lg bg-rf-navy/30 border border-rf-gold/30 text-rf-cream placeholder-rf-cream/50 focus:outline-none focus:ring-2 focus:ring-rf-gold focus:border-transparent transition-all"></select>
+                <span class="hint text-rf-cream/60 text-xs mt-1 block" id="component-hint">Active duty, reserve, or guard.</span>
+              </label>
+            </div>
+            <fieldset class="space-y-3">
+              <legend class="text-rf-cream font-semibold mb-3">Did you serve in combat operations?</legend>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="radio" name="combatSelfReported" value="yes" class="w-4 h-4 accent-rf-gold" />
+                <span class="text-rf-cream text-sm">Yes</span>
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="radio" name="combatSelfReported" value="no" class="w-4 h-4 accent-rf-gold" />
+                <span class="text-rf-cream text-sm">No</span>
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="radio" name="combatSelfReported" value="not_sure" class="w-4 h-4 accent-rf-gold" />
+                <span class="text-rf-cream text-sm">Not sure</span>
+              </label>
+            </fieldset>
+          </div>
+
+          <div class="step-column space-y-6">
+            <div>
+              <h3 class="text-lg font-semibold text-rf-gold mb-4 flex items-center gap-2">
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5-10.5a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                Service Periods
+              </h3>
+              <p class="text-rf-cream/70 text-sm mb-4">List every continuous period of service. Add more if you had breaks.</p>
+              <div id="service-periods" class="service-periods space-y-3"></div>
+              <button type="button" class="ghost mt-4 text-rf-gold hover:text-rf-gold-light text-sm font-medium" data-add-period="">+ Add another period</button>
+            </div>
+
+            <div class="mt-8 p-4 bg-rf-navy/30 border border-rf-gold/20 rounded-lg">
+              <div class="mb-4">
+                <h4 class="text-rf-gold font-semibold text-sm mb-1">Awards and decorations</h4>
+                <p class="text-rf-cream/60 text-xs">From DD-214 Block 13. This helps us match combat-related benefits.</p>
+              </div>
+              <div class="flex gap-2">
+                <select id="awards-select" name="awards" aria-describedby="awards-hint" class="flex-1 px-3 py-2 text-sm rounded-lg bg-rf-navy/50 border border-rf-gold/30 text-rf-cream focus:outline-none focus:ring-2 focus:ring-rf-gold"></select>
+                <button type="button" class="ghost px-3 py-2 text-sm bg-rf-gold/20 text-rf-gold hover:bg-rf-gold/30 rounded-lg transition-all" data-awards-add="">Add</button>
+              </div>
+              <div class="awards-selected mt-3 space-y-1" data-awards-selected=""></div>
+              <span class="hint text-rf-cream/50 text-xs mt-2 block" id="awards-hint">Select an award, then click Add. Repeat for multiple.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Step 1: Disability Rating -->
+      <section class="step active" data-step="1" class="mb-16">
+        <!-- Page Header -->
+        <div class="mb-8">
+          <div class="flex items-start gap-4 mb-4">
+            <svg class="w-8 h-8 text-rf-gold flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" /></svg>
+            <div class="flex-1">
+              <h2 class="text-3xl font-bold text-rf-cream mb-2">Disability Rating</h2>
+              <p class="text-rf-cream/70 text-base max-w-2xl">Your disability rating helps us tailor benefits and tools to your situation. Upload your rating narrative and we'll automatically extract your conditions and percentages.</p>
+            </div>
+          </div>
+          <div class="border-l-4 border-rf-gold pl-4 py-2">
+            <p class="text-rf-cream/80 text-sm">Takes about 2 minutes. You can update this anytime.</p>
+          </div>
+        </div>
+
+        <!-- Rating Tools Container -->
+        <div class="rating-tools bg-rf-navy/20 border border-rf-gold/20 rounded-lg p-6 mb-8 backdrop-blur-sm" data-rating-tools>
+          <div class="rating-tools-header mb-6 flex items-center justify-between">
+            <h3 class="text-xl font-semibold text-rf-cream">Rating Tools</h3>
+            <button type="button" class="text-rf-cream/60 hover:text-rf-cream text-sm px-3 py-1 rounded-lg hover:bg-rf-navy/30 transition-all" data-rating-toggle aria-expanded="true">
+              <span class="flex items-center gap-2">
+                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" /></svg>
+                Collapse
+              </span>
+            </button>
+          </div>
+
+          <div class="rating-tools-content" data-rating-content>
+            <!-- Tool Selection Tabs/Cards -->
+            <div class="rating-mode-tabs grid grid-cols-1 md:grid-cols-2 gap-4 mb-8" role="tablist">
+              <!-- Scanner Card -->
+              <button type="button" class="group rating-mode-tab is-active relative text-left p-4 rounded-lg border-2 border-rf-gold bg-rf-gold/5 hover:bg-rf-gold/10 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-rf-gold focus:ring-offset-2 focus:ring-offset-rf-navy/20" data-rating-mode="scanner" role="tab" aria-selected="true">
+                <div class="absolute top-3 right-3 w-5 h-5 border-2 border-rf-gold rounded-full flex items-center justify-center">
+                  <div class="w-2.5 h-2.5 bg-rf-gold rounded-full"></div>
+                </div>
+                <div class="flex items-start gap-3 mb-2">
+                  <div class="w-10 h-10 bg-gradient-to-br from-rf-navy to-rf-charcoal rounded-lg flex items-center justify-center flex-shrink-0 group-hover:shadow-lg transition-shadow">
+                    <svg class="w-6 h-6 text-rf-gold" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 013.75 9.375v-4.5zM3.75 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 01-1.125-1.125v-4.5zM13.5 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0113.5 9.375v-4.5z" /></svg>
+                  </div>
+                  <div>
+                    <h4 class="text-rf-cream font-semibold">Scanner</h4>
+                    <p class="text-rf-cream/60 text-xs">Upload and extract automatically</p>
+                  </div>
+                </div>
+              </button>
+
+              <!-- Manual Card -->
+              <button type="button" class="group rating-mode-tab relative text-left p-4 rounded-lg border-2 border-rf-navy/30 bg-transparent hover:border-rf-gold/50 hover:bg-rf-gold/5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-rf-gold focus:ring-offset-2 focus:ring-offset-rf-navy/20" data-rating-mode="manual" role="tab" aria-selected="false">
+                <div class="absolute top-3 right-3 w-5 h-5 border-2 border-rf-navy/30 rounded-full flex items-center justify-center group-hover:border-rf-gold transition-colors">
+                  <div class="w-2.5 h-2.5 bg-transparent rounded-full"></div>
+                </div>
+                <div class="flex items-start gap-3 mb-2">
+                  <div class="w-10 h-10 bg-gradient-to-br from-rf-charcoal to-rf-navy rounded-lg flex items-center justify-center flex-shrink-0 group-hover:shadow-lg transition-shadow">
+                    <svg class="w-6 h-6 text-rf-cream/70 group-hover:text-rf-gold transition-colors" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" /></svg>
+                  </div>
+                  <div>
+                    <h4 class="text-rf-cream font-semibold">Manual Entry</h4>
+                    <p class="text-rf-cream/60 text-xs">Enter conditions directly</p>
+                  </div>
+                </div>
+              </button>
+            </div>
+
+            <!-- Mode Panels -->
+            <div class="rating-mode-panels">
+              <!-- Scanner Panel -->
+              <div class="rating-mode-panel is-active" data-rating-panel="scanner" role="tabpanel">
+                <div class="rating-upload space-y-4">
+                  <h4 class="text-rf-cream font-semibold">Rating narrative</h4>
+                  
+                  <!-- Upload Area -->
+                  <div class="relative">
+                    <input type="file" id="rating-upload-input" data-rating-upload aria-label="Upload rating decision letter" accept=".txt,.md,.rtf,.pdf" />
+                    <label for="rating-upload-input" class="rating-file block p-8 border-2 border-dashed border-rf-gold/40 rounded-lg text-center bg-rf-navy/10 hover:bg-rf-navy/20 hover:border-rf-gold/60 cursor-pointer transition-all duration-300 group">
+                      <div class="flex justify-center mb-3">
+                        <svg class="w-8 h-8 text-rf-gold group-hover:scale-110 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0018 19.5H6.75z" /></svg>
+                      </div>
+                      <p class="text-rf-cream font-medium text-sm mb-1">Drop your narrative here</p>
+                      <p class="text-rf-cream/60 text-xs">or <span class="text-rf-gold underline">click to upload</span></p>
+                      <p class="text-rf-cream/50 text-xs mt-2">PDF, TXT, or RTF • Max 5 MB</p>
+                    </label>
+                  </div>
+
+                  <!-- Disabilities Display -->
+                  <div class="rating-disabilities hidden bg-rf-gold/10 border border-rf-gold/30 rounded-lg p-4" data-rating-disabilities></div>
+
+                  <!-- Remove Button -->
+                  <button type="button" class="hidden ghost text-sm px-3 py-2 text-rf-cream/60 hover:text-red-400 border border-rf-cream/20 hover:border-red-400/50 rounded-lg transition-all" data-rating-remove>Remove narrative</button>
+                </div>
+              </div>
+
+              <!-- Manual Panel -->
+              <div class="rating-mode-panel hidden" data-rating-panel="manual" role="tabpanel">
+                <div class="rating-calc space-y-4">
+                  <h4 class="text-rf-cream font-semibold">Combined rating calculator</h4>
+                  <p class="text-rf-cream/60 text-sm">Add each service-connected condition with its rating percentage.</p>
+
+                  <button type="button" class="px-3 py-2 text-sm bg-rf-gold text-rf-navy font-semibold rounded-lg hover:bg-rf-gold-light transition-all flex items-center gap-2" data-rating-add onclick="window.RFAddContention && window.RFAddContention()">
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+                    Add Condition
+                  </button>
+
+                  <div class="rating-list space-y-2" data-rating-list></div>
+
+                  <div class="bg-rf-navy/30 border border-rf-gold/20 rounded-lg p-4 text-center">
+                    <p class="text-rf-cream/70 text-xs mb-1">Combined rating:</p>
+                    <p class="text-3xl font-bold text-rf-gold"><span data-rating-combined>0</span>%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Help Section -->
+        <div class="bg-blue-900/20 border-l-4 border-blue-400/60 rounded-r-lg p-4 mb-8">
+          <div class="flex gap-3">
+            <svg class="w-5 h-5 text-blue-300 flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" /></svg>
+            <div>
+              <h5 class="text-blue-200 font-semibold text-sm mb-1">Need help finding your rating letter?</h5>
+              <p class="text-blue-200/80 text-xs leading-relaxed">
+                Your VA rating decision letter is mailed after a claim decision. Download it from 
+                <a href="https://www.va.gov/records/" target="_blank" class="underline hover:text-blue-100">VA.gov</a> 
+                or request it from your regional office.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Step 2: State of Residence -->
+      <section class="step" data-step="2" class="mb-16">
+        <h2 class="text-2xl font-bold text-rf-cream mb-8 pb-4 border-b border-rf-gold/30">State of Residence</h2>
+        <label class="block max-w-md">
+          <span class="block text-rf-cream font-semibold mb-3">State or territory</span>
+          <select name="stateOfResidence" required aria-describedby="state-hint" class="w-full px-4 py-3 rounded-lg bg-rf-navy/30 border border-rf-gold/30 text-rf-cream placeholder-rf-cream/50 focus:outline-none focus:ring-2 focus:ring-rf-gold focus:border-transparent transition-all"></select>
+          <span class="hint text-rf-cream/60 text-xs mt-2 block" id="state-hint">Used to match state-level benefits.</span>
+        </label>
+      </section>
+
+      <!-- Step 3: Summary -->
+      <section class="step" data-step="3" class="mb-16">
+        <h2 class="text-2xl font-bold text-rf-cream mb-8 pb-4 border-b border-rf-gold/30">Summary</h2>
+        <div class="summary bg-rf-navy/20 border border-rf-gold/20 rounded-lg p-6" data-summary role="region" aria-live="polite"></div>
+      </section>
+
+      <!-- Navigation Footer -->
+      <footer class="flex items-center justify-between gap-4 mt-12 pt-8 border-t border-rf-gold/20">
+        <!-- Back Button -->
+        <button type="button" class="px-4 py-2 text-sm font-medium text-rf-cream border border-rf-cream/30 rounded-lg hover:bg-rf-navy/30 hover:border-rf-gold/50 transition-all flex items-center gap-2 duration-200" data-prev onclick="window.RFOnboardingNav && window.RFOnboardingNav.prev && window.RFOnboardingNav.prev()">
+          <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg>
+          Back
+        </button>
+
+        <!-- Spacer -->
+        <div class="flex-1"></div>
+
+        <!-- Next Button -->
+        <button type="button" class="px-4 py-2 text-sm font-semibold text-rf-navy bg-rf-gold hover:bg-rf-gold-light transition-all rounded-lg flex items-center gap-2 duration-200 focus:outline-none focus:ring-2 focus:ring-rf-gold focus:ring-offset-2 focus:ring-offset-rf-charcoal" data-next onclick="window.RFOnboardingNav && window.RFOnboardingNav.next && window.RFOnboardingNav.next()" style="display: inline-flex;">
+          Continue
+          <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+        </button>
+
+        <!-- Submit Button -->
+        <button type="submit" class="hidden px-4 py-2 text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-700 transition-all rounded-lg flex items-center gap-2 duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-rf-charcoal" data-submit style="display: none;">
+          <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          Submit
+          <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+        </button>
+      </footer>
+    </form>
+
+    <!-- Status Message -->
+    <div class="status hidden fixed bottom-4 right-4 max-w-sm bg-rf-gold text-rf-navy px-4 py-3 rounded-lg shadow-lg" data-status role="status" aria-live="polite"></div>
+  </div>
+</section>

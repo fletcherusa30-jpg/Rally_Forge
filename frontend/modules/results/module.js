@@ -1,5 +1,5 @@
-import { getOnboardingResult, getVeteranId } from "../../js/state.js";
-import { getBenefits, recalcBenefits } from "../../js/api.js";
+import { getOnboardingResult, getVeteranId, setVeteranId } from "../../js/state.js";
+import { getBenefits, postOnboarding, recalcBenefits } from "../../js/api.js";
 import {
   buildActionPlan,
   computeReadiness,
@@ -17,6 +17,81 @@ const getCompactMode = () => {
 
 const setCompactMode = (value) => {
   localStorage.setItem(COMPACT_STORAGE_KEY, value ? "true" : "false");
+};
+
+const normalizePercent = (value) => {
+  const parsed = Number(value);
+  if (Number.isNaN(parsed)) {
+    return null;
+  }
+  return Math.min(100, Math.max(0, parsed));
+};
+
+const computeCombinedRating = (ratings) => {
+  const normalized = ratings
+    .map((rating) => normalizePercent(rating))
+    .filter((rating) => typeof rating === "number");
+  }
+
+  if (addButton) {
+    addButton.addEventListener("click", () => {
+      conditions = [...conditions, { name: "", percent: "" }];
+      renderConditions();
+      updateCombined();
+    });
+  }
+
+  renderConditions();
+  updateCombined();
+  hydrateNarrative();
+
+  if (toggleButton && content) {
+    toggleButton.addEventListener("click", () => {
+      const isCollapsed = content.classList.toggle("is-collapsed");
+      toggleButton.setAttribute("aria-expanded", isCollapsed ? "false" : "true");
+      toggleButton.textContent = isCollapsed ? "Expand" : "Collapse";
+    });
+  }
+
+  return wrapper;
+};
+
+const renderMissingVeteran = (body, onboardingResult) => {
+  body.innerHTML = `
+    <div class="rf-card">
+      <h3>Finish your submission</h3>
+      <p>We saved your profile locally, but it has not been sent to the server yet.</p>
+      <button type="button" class="rf-button" data-submit-onboarding>Submit profile</button>
+      <div data-results-status></div>
+    </div>
+  `;
+
+  const button = body.querySelector("[data-submit-onboarding]");
+  const status = body.querySelector("[data-results-status]");
+
+  if (!button) {
+    return;
+  }
+
+  button.addEventListener("click", async () => {
+    button.disabled = true;
+    button.textContent = "Submitting...";
+    if (status) {
+      status.textContent = "Submitting your profile...";
+    }
+
+    try {
+      const response = await postOnboarding(onboardingResult);
+      setVeteranId(response.veteranId);
+      window.location.hash = "#/results";
+    } catch (error) {
+      if (status) {
+        status.textContent = error.message || "Unable to submit onboarding.";
+      }
+      button.disabled = false;
+      button.textContent = "Submit profile";
+    }
+  });
 };
 
 const escapeHtml = (value) => {
@@ -988,7 +1063,7 @@ export const init = async () => {
   const onboardingResult = getOnboardingResult();
   const veteranId = getVeteranId();
 
-  if (!onboardingResult || !veteranId) {
+  if (!onboardingResult) {
     window.location.hash = "#/onboarding";
     return;
   }
@@ -997,6 +1072,11 @@ export const init = async () => {
   const recalcButton = root.querySelector("[data-recalc]");
   const printButton = root.querySelector("[data-print]");
   const compactButton = root.querySelector("[data-compact-toggle]");
+
+  if (!veteranId) {
+    renderMissingVeteran(body, onboardingResult);
+    return;
+  }
   body.textContent = "Loading benefits...";
 
   try {

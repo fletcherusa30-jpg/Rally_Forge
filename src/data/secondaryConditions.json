@@ -1,0 +1,77 @@
+[
+  {
+    "primary": "tinnitus",
+    "secondary": "hearing loss",
+    "cfr": "38 CFR § 4.85"
+  },
+  {
+    "primary": "hearing loss",
+    "secondary": "tinnitus",
+    "cfr": "38 CFR § 4.85"
+  },
+  {
+    "primary": "PTSD",
+    "secondary": "depression",
+    "cfr": "38 CFR § 4.130"
+  },
+  {
+    "primary": "PTSD",
+    "secondary": "anxiety",
+    "cfr": "38 CFR § 4.130"
+  },
+  {
+    "primary": "PTSD",
+    "secondary": "insomnia",
+    "cfr": "38 CFR § 4.130"
+  },
+  {
+    "primary": "diabetes",
+    "secondary": "neuropathy",
+    "cfr": "38 CFR § 4.124a"
+  },
+  {
+    "primary": "diabetes",
+    "secondary": "retinopathy",
+    "cfr": "38 CFR § 4.79"
+  },
+  {
+    "primary": "back injury",
+    "secondary": "radiculopathy",
+    "cfr": "38 CFR § 4.71a"
+  },
+  {
+    "primary": "knee injury",
+    "secondary": "hip pain",
+    "cfr": "38 CFR § 4.71a"
+  },
+  {
+    "primary": "TBI",
+    "secondary": "headaches",
+    "cfr": "38 CFR § 4.124a"
+  },
+  {
+    "primary": "TBI",
+    "secondary": "cognitive impairment",
+    "cfr": "38 CFR § 4.124a"
+  },
+  {
+    "primary": "sleep apnea",
+    "secondary": "PTSD",
+    "cfr": "38 CFR § 4.97"
+  },
+  {
+    "primary": "obesity",
+    "secondary": "sleep apnea",
+    "cfr": "38 CFR § 4.97"
+  },
+  {
+    "primary": "migraine",
+    "secondary": "vertigo",
+    "cfr": "38 CFR § 4.124a"
+  },
+  {
+    "primary": "chronic pain",
+    "secondary": "depression",
+    "cfr": "38 CFR § 4.130"
+  }
+]

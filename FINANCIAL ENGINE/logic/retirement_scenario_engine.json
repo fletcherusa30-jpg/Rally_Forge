@@ -1,0 +1,8 @@
+{
+  ""defaultSpread"": 0.03,
+  ""presets"": {
+    ""conservative"": 0.02,
+    ""standard"": 0.03,
+    ""aggressive"": 0.05
+  }
+}

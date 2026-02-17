@@ -1,0 +1,646 @@
+{
+  "schema": "cp",
+  "version": "1.0.0",
+  "dialect": "postgresql",
+  "idStrategy": "uuid_v4",
+  "enums": {
+    "claim_program": ["compensation", "pension", "survivor", "dependency"],
+    "claim_type": ["original", "increase", "supplemental", "higher_level_review", "board_appeal", "legacy_appeal", "dependency", "fiduciary", "other"],
+    "claim_status": ["draft", "received", "triage", "evidence_gathering", "exam_scheduling", "rating", "authorization", "decided", "closed", "cancelled"],
+    "contention_type": ["service_connection", "increase", "secondary", "aggravation", "presumptive", "special_monthly_compensation", "tDIU", "pension_issue", "dependency_issue", "other"],
+    "contention_disposition": ["granted", "denied", "deferred", "remanded", "withdrawn", "dismissed"],
+    "evidence_type": ["service_treatment_record", "private_medical_record", "va_medical_record", "lay_statement", "dbq", "c_and_p_exam", "medical_opinion", "form", "financial_document", "other"],
+    "exam_status": ["requested", "scheduled", "completed", "cancelled", "no_show", "clarification_requested"],
+    "decision_type": ["rating_decision", "hlr_decision", "board_decision", "supplemental_decision", "administrative_decision"],
+    "payment_type": ["compensation", "pension", "retroactive", "dependency_adjustment", "special_monthly_compensation", "withholding", "recoupment", "other"],
+    "appeal_lane": ["supplemental", "higher_level_review", "board_direct", "board_evidence", "board_hearing", "legacy"],
+    "appeal_status": ["received", "in_review", "duty_to_assist_error", "soc_issued", "ssoc_issued", "certified_to_board", "board_pending", "decided", "closed"],
+    "hearing_type": ["informal_conference", "dro_hearing", "board_virtual", "board_travel", "board_video", "none"],
+    "audit_actor_type": ["system", "user", "service", "job"],
+    "document_source": ["upload", "va_api", "scanner", "manual_entry", "migration"]
+  },
+  "entities": {
+    "veterans": {
+      "pk": ["veteran_id"],
+      "fields": {
+        "veteran_id": { "type": "uuid", "nullable": false },
+        "va_file_number": { "type": "string", "nullable": true, "unique": true },
+        "first_name": { "type": "string", "nullable": false },
+        "middle_name": { "type": "string", "nullable": true },
+        "last_name": { "type": "string", "nullable": false },
+        "suffix": { "type": "string", "nullable": true },
+        "date_of_birth": { "type": "date", "nullable": true },
+        "date_of_death": { "type": "date", "nullable": true },
+        "sex_at_birth": { "type": "string", "nullable": true },
+        "created_at": { "type": "timestamptz", "nullable": false },
+        "updated_at": { "type": "timestamptz", "nullable": false }
+      }
+    },
+    "veteran_identifiers": {
+      "pk": ["identifier_id"],
+      "fk": [{ "column": "veteran_id", "references": "veterans.veteran_id", "onDelete": "cascade" }],
+      "fields": {
+        "identifier_id": { "type": "uuid", "nullable": false },
+        "veteran_id": { "type": "uuid", "nullable": false },
+        "identifier_type": { "type": "string", "nullable": false },
+        "identifier_value": { "type": "string", "nullable": false },
+        "issuer": { "type": "string", "nullable": true },
+        "effective_from": { "type": "date", "nullable": true },
+        "effective_to": { "type": "date", "nullable": true },
+        "is_primary": { "type": "boolean", "nullable": false },
+        "created_at": { "type": "timestamptz", "nullable": false }
+      }
+    },
+    "service_periods": {
+      "pk": ["service_period_id"],
+      "fk": [{ "column": "veteran_id", "references": "veterans.veteran_id", "onDelete": "cascade" }],
+      "fields": {
+        "service_period_id": { "type": "uuid", "nullable": false },
+        "veteran_id": { "type": "uuid", "nullable": false },
+        "branch": { "type": "string", "nullable": false },
+        "service_component": { "type": "string", "nullable": true },
+        "start_date": { "type": "date", "nullable": false },
+        "end_date": { "type": "date", "nullable": true },
+        "characterization": { "type": "string", "nullable": true },
+        "pay_grade": { "type": "string", "nullable": true },
+        "theater": { "type": "string", "nullable": true },
+        "deployed": { "type": "boolean", "nullable": false },
+        "created_at": { "type": "timestamptz", "nullable": false }
+      }
+    },
+    "contacts": {
+      "pk": ["contact_id"],
+      "fk": [{ "column": "veteran_id", "references": "veterans.veteran_id", "onDelete": "cascade" }],
+      "fields": {
+        "contact_id": { "type": "uuid", "nullable": false },
+        "veteran_id": { "type": "uuid", "nullable": false },
+        "contact_type": { "type": "string", "nullable": false },
+        "value": { "type": "string", "nullable": false },
+        "is_primary": { "type": "boolean", "nullable": false },
+        "verified_at": { "type": "timestamptz", "nullable": true },
+        "created_at": { "type": "timestamptz", "nullable": false }
+      }
+    },
+    "addresses": {
+      "pk": ["address_id"],
+      "fk": [{ "column": "veteran_id", "references": "veterans.veteran_id", "onDelete": "cascade" }],
+      "fields": {
+        "address_id": { "type": "uuid", "nullable": false },
+        "veteran_id": { "type": "uuid", "nullable": false },
+        "address_type": { "type": "string", "nullable": false },
+        "line1": { "type": "string", "nullable": false },
+        "line2": { "type": "string", "nullable": true },
+        "city": { "type": "string", "nullable": false },
+        "state_province": { "type": "string", "nullable": true },
+        "postal_code": { "type": "string", "nullable": true },
+        "country_code": { "type": "string", "nullable": false },
+        "valid_from": { "type": "date", "nullable": true },
+        "valid_to": { "type": "date", "nullable": true },
+        "is_primary": { "type": "boolean", "nullable": false },
+        "created_at": { "type": "timestamptz", "nullable": false }
+      }
+    },
+    "representatives": {
+      "pk": ["representative_id"],
+      "fields": {
+        "representative_id": { "type": "uuid", "nullable": false },
+        "representative_type": { "type": "string", "nullable": false },
+        "organization_name": { "type": "string", "nullable": true },
+        "first_name": { "type": "string", "nullable": true },
+        "last_name": { "type": "string", "nullable": true },
+        "accreditation_number": { "type": "string", "nullable": true },
+        "phone": { "type": "string", "nullable": true },
+        "email": { "type": "string", "nullable": true },
+        "created_at": { "type": "timestamptz", "nullable": false }
+      }
+    },
+    "veteran_representatives": {
+      "pk": ["veteran_representative_id"],
+      "fk": [
+        { "column": "veteran_id", "references": "veterans.veteran_id", "onDelete": "cascade" },
+        { "column": "representative_id", "references": "representatives.representative_id", "onDelete": "restrict" }
+      ],
+      "fields": {
+        "veteran_representative_id": { "type": "uuid", "nullable": false },
+        "veteran_id": { "type": "uuid", "nullable": false },
+        "representative_id": { "type": "uuid", "nullable": false },
+        "poa_form_code": { "type": "string", "nullable": true },
+        "effective_from": { "type": "date", "nullable": false },
+        "effective_to": { "type": "date", "nullable": true },
+        "is_active": { "type": "boolean", "nullable": false },
+        "created_at": { "type": "timestamptz", "nullable": false }
+      }
+    },
+    "claims": {
+      "pk": ["claim_id"],
+      "fk": [{ "column": "veteran_id", "references": "veterans.veteran_id", "onDelete": "cascade" }],
+      "fields": {
+        "claim_id": { "type": "uuid", "nullable": false },
+        "veteran_id": { "type": "uuid", "nullable": false },
+        "claim_number": { "type": "string", "nullable": false, "unique": true },
+        "program": { "type": "enum:claim_program", "nullable": false },
+        "claim_type": { "type": "enum:claim_type", "nullable": false },
+        "source_channel": { "type": "string", "nullable": false },
+        "date_received": { "type": "date", "nullable": false },
+        "date_established": { "type": "date", "nullable": true },
+        "current_status": { "type": "enum:claim_status", "nullable": false },
+        "station_of_jurisdiction": { "type": "string", "nullable": true },
+        "end_product_code": { "type": "string", "nullable": true },
+        "suspense_date": { "type": "date", "nullable": true },
+        "created_at": { "type": "timestamptz", "nullable": false },
+        "updated_at": { "type": "timestamptz", "nullable": false }
+      }
+    },
+    "claim_status_history": {
+      "pk": ["claim_status_history_id"],
+      "fk": [{ "column": "claim_id", "references": "claims.claim_id", "onDelete": "cascade" }],
+      "fields": {
+        "claim_status_history_id": { "type": "uuid", "nullable": false },
+        "claim_id": { "type": "uuid", "nullable": false },
+        "status": { "type": "enum:claim_status", "nullable": false },
+        "started_at": { "type": "timestamptz", "nullable": false },
+        "ended_at": { "type": "timestamptz", "nullable": true },
+        "changed_by": { "type": "string", "nullable": true },
+        "reason": { "type": "string", "nullable": true },
+        "created_at": { "type": "timestamptz", "nullable": false }
+      }
+    },
+    "contentions": {
+      "pk": ["contention_id"],
+      "fk": [{ "column": "claim_id", "references": "claims.claim_id", "onDelete": "cascade" }],
+      "fields": {
+        "contention_id": { "type": "uuid", "nullable": false },
+        "claim_id": { "type": "uuid", "nullable": false },
+        "contention_code": { "type": "string", "nullable": true },
+        "contention_name": { "type": "string", "nullable": false },
+        "contention_type": { "type": "enum:contention_type", "nullable": false },
+        "body_system": { "type": "string", "nullable": true },
+        "is_bilateral": { "type": "boolean", "nullable": false },
+        "side": { "type": "string", "nullable": true },
+        "diagnostic_code": { "type": "string", "nullable": true },
+        "date_claimed": { "type": "date", "nullable": true },
+        "created_at": { "type": "timestamptz", "nullable": false },
+        "updated_at": { "type": "timestamptz", "nullable": false }
+      }
+    },
+    "evidence_items": {
+      "pk": ["evidence_id"],
+      "fk": [{ "column": "claim_id", "references": "claims.claim_id", "onDelete": "cascade" }],
+      "fields": {
+        "evidence_id": { "type": "uuid", "nullable": false },
+        "claim_id": { "type": "uuid", "nullable": false },
+        "evidence_type": { "type": "enum:evidence_type", "nullable": false },
+        "title": { "type": "string", "nullable": false },
+        "source": { "type": "string", "nullable": true },
+        "received_date": { "type": "date", "nullable": true },
+        "document_date": { "type": "date", "nullable": true },
+        "is_material": { "type": "boolean", "nullable": false },
+        "relevance_score": { "type": "number", "nullable": true },
+        "metadata": { "type": "jsonb", "nullable": false },
+        "created_at": { "type": "timestamptz", "nullable": false }
+      }
+    },
+    "contention_evidence": {
+      "pk": ["contention_evidence_id"],
+      "fk": [
+        { "column": "contention_id", "references": "contentions.contention_id", "onDelete": "cascade" },
+        { "column": "evidence_id", "references": "evidence_items.evidence_id", "onDelete": "cascade" }
+      ],
+      "fields": {
+        "contention_evidence_id": { "type": "uuid", "nullable": false },
+        "contention_id": { "type": "uuid", "nullable": false },
+        "evidence_id": { "type": "uuid", "nullable": false },
+        "relation_type": { "type": "string", "nullable": false },
+        "created_at": { "type": "timestamptz", "nullable": false }
+      }
+    },
+    "cp_exams": {
+      "pk": ["exam_id"],
+      "fk": [
+        { "column": "claim_id", "references": "claims.claim_id", "onDelete": "cascade" },
+        { "column": "contention_id", "references": "contentions.contention_id", "onDelete": "set null" }
+      ],
+      "fields": {
+        "exam_id": { "type": "uuid", "nullable": false },
+        "claim_id": { "type": "uuid", "nullable": false },
+        "contention_id": { "type": "uuid", "nullable": true },
+        "exam_type": { "type": "string", "nullable": false },
+        "vendor_name": { "type": "string", "nullable": true },
+        "facility_name": { "type": "string", "nullable": true },
+        "request_date": { "type": "date", "nullable": true },
+        "scheduled_date": { "type": "date", "nullable": true },
+        "completed_date": { "type": "date", "nullable": true },
+        "examiner_name": { "type": "string", "nullable": true },
+        "examiner_specialty": { "type": "string", "nullable": true },
+        "status": { "type": "enum:exam_status", "nullable": false },
+        "dbq_form_code": { "type": "string", "nullable": true },
+        "created_at": { "type": "timestamptz", "nullable": false },
+        "updated_at": { "type": "timestamptz", "nullable": false }
+      }
+    },
+    "exam_findings": {
+      "pk": ["exam_finding_id"],
+      "fk": [{ "column": "exam_id", "references": "cp_exams.exam_id", "onDelete": "cascade" }],
+      "fields": {
+        "exam_finding_id": { "type": "uuid", "nullable": false },
+        "exam_id": { "type": "uuid", "nullable": false },
+        "finding_code": { "type": "string", "nullable": true },
+        "finding_name": { "type": "string", "nullable": false },
+        "value_text": { "type": "string", "nullable": true },
+        "value_numeric": { "type": "number", "nullable": true },
+        "value_unit": { "type": "string", "nullable": true },
+        "is_positive": { "type": "boolean", "nullable": true },
+        "rationale": { "type": "string", "nullable": true },
+        "created_at": { "type": "timestamptz", "nullable": false }
+      }
+    },
+    "documents": {
+      "pk": ["document_id"],
+      "fk": [
+        { "column": "veteran_id", "references": "veterans.veteran_id", "onDelete": "set null" },
+        { "column": "claim_id", "references": "claims.claim_id", "onDelete": "set null" }
+      ],
+      "fields": {
+        "document_id": { "type": "uuid", "nullable": false },
+        "veteran_id": { "type": "uuid", "nullable": true },
+        "claim_id": { "type": "uuid", "nullable": true },
+        "document_type": { "type": "string", "nullable": false },
+        "source": { "type": "enum:document_source", "nullable": false },
+        "source_reference": { "type": "string", "nullable": true },
+        "checksum_sha256": { "type": "string", "nullable": true },
+        "storage_uri": { "type": "string", "nullable": true },
+        "mime_type": { "type": "string", "nullable": true },
+        "page_count": { "type": "integer", "nullable": true },
+        "received_at": { "type": "timestamptz", "nullable": true },
+        "indexed_at": { "type": "timestamptz", "nullable": true },
+        "metadata": { "type": "jsonb", "nullable": false },
+        "created_at": { "type": "timestamptz", "nullable": false }
+      }
+    },
+    "rating_decisions": {
+      "pk": ["rating_decision_id"],
+      "fk": [
+        { "column": "claim_id", "references": "claims.claim_id", "onDelete": "cascade" },
+        { "column": "narrative_document_id", "references": "documents.document_id", "onDelete": "set null" }
+      ],
+      "fields": {
+        "rating_decision_id": { "type": "uuid", "nullable": false },
+        "claim_id": { "type": "uuid", "nullable": false },
+        "decision_type": { "type": "enum:decision_type", "nullable": false },
+        "decision_date": { "type": "date", "nullable": false },
+        "notification_date": { "type": "date", "nullable": true },
+        "promulgation_date": { "type": "date", "nullable": true },
+        "signed_by": { "type": "string", "nullable": true },
+        "quality_review_flag": { "type": "boolean", "nullable": false },
+        "narrative_document_id": { "type": "uuid", "nullable": true },
+        "notes": { "type": "string", "nullable": true },
+        "created_at": { "type": "timestamptz", "nullable": false },
+        "updated_at": { "type": "timestamptz", "nullable": false }
+      }
+    },
+    "rating_issues": {
+      "pk": ["rating_issue_id"],
+      "fk": [
+        { "column": "rating_decision_id", "references": "rating_decisions.rating_decision_id", "onDelete": "cascade" },
+        { "column": "contention_id", "references": "contentions.contention_id", "onDelete": "set null" }
+      ],
+      "fields": {
+        "rating_issue_id": { "type": "uuid", "nullable": false },
+        "rating_decision_id": { "type": "uuid", "nullable": false },
+        "contention_id": { "type": "uuid", "nullable": true },
+        "issue_name": { "type": "string", "nullable": false },
+        "disposition": { "type": "enum:contention_disposition", "nullable": false },
+        "service_connected": { "type": "boolean", "nullable": true },
+        "diagnostic_code": { "type": "string", "nullable": true },
+        "percentage_assigned": { "type": "integer", "nullable": true },
+        "effective_date": { "type": "date", "nullable": true },
+        "bilateral_factor_applied": { "type": "boolean", "nullable": false },
+        "denial_reason_text": { "type": "string", "nullable": true },
+        "rationale_text": { "type": "string", "nullable": true },
+        "created_at": { "type": "timestamptz", "nullable": false }
+      }
+    },
+    "decision_citations": {
+      "pk": ["decision_citation_id"],
+      "fk": [{ "column": "rating_issue_id", "references": "rating_issues.rating_issue_id", "onDelete": "cascade" }],
+      "fields": {
+        "decision_citation_id": { "type": "uuid", "nullable": false },
+        "rating_issue_id": { "type": "uuid", "nullable": false },
+        "authority_type": { "type": "string", "nullable": false },
+        "citation": { "type": "string", "nullable": false },
+        "authority_title": { "type": "string", "nullable": true },
+        "excerpt": { "type": "string", "nullable": true },
+        "created_at": { "type": "timestamptz", "nullable": false }
+      }
+    },
+    "combined_ratings": {
+      "pk": ["combined_rating_id"],
+      "fk": [{ "column": "rating_decision_id", "references": "rating_decisions.rating_decision_id", "onDelete": "cascade" }],
+      "fields": {
+        "combined_rating_id": { "type": "uuid", "nullable": false },
+        "rating_decision_id": { "type": "uuid", "nullable": false, "unique": true },
+        "computed_combined_percent": { "type": "integer", "nullable": false },
+        "stated_combined_percent": { "type": "integer", "nullable": true },
+        "bilateral_factor_percent": { "type": "number", "nullable": false },
+        "smc_code": { "type": "string", "nullable": true },
+        "compensation_level": { "type": "string", "nullable": true },
+        "created_at": { "type": "timestamptz", "nullable": false }
+      }
+    },
+    "compensation_awards": {
+      "pk": ["compensation_award_id"],
+      "fk": [
+        { "column": "veteran_id", "references": "veterans.veteran_id", "onDelete": "cascade" },
+        { "column": "rating_decision_id", "references": "rating_decisions.rating_decision_id", "onDelete": "set null" }
+      ],
+      "fields": {
+        "compensation_award_id": { "type": "uuid", "nullable": false },
+        "veteran_id": { "type": "uuid", "nullable": false },
+        "rating_decision_id": { "type": "uuid", "nullable": true },
+        "start_date": { "type": "date", "nullable": false },
+        "end_date": { "type": "date", "nullable": true },
+        "monthly_amount": { "type": "number", "nullable": false },
+        "dependent_increment": { "type": "number", "nullable": false },
+        "smc_amount": { "type": "number", "nullable": false },
+        "withholding_amount": { "type": "number", "nullable": false },
+        "currency_code": { "type": "string", "nullable": false },
+        "created_at": { "type": "timestamptz", "nullable": false }
+      }
+    },
+    "pension_profiles": {
+      "pk": ["pension_profile_id"],
+      "fk": [{ "column": "veteran_id", "references": "veterans.veteran_id", "onDelete": "cascade" }],
+      "fields": {
+        "pension_profile_id": { "type": "uuid", "nullable": false },
+        "veteran_id": { "type": "uuid", "nullable": false },
+        "pension_type": { "type": "string", "nullable": false },
+        "mapr_category": { "type": "string", "nullable": true },
+        "aid_and_attendance": { "type": "boolean", "nullable": false },
+        "housebound": { "type": "boolean", "nullable": false },
+        "dependent_count": { "type": "integer", "nullable": false },
+        "effective_date": { "type": "date", "nullable": false },
+        "end_date": { "type": "date", "nullable": true },
+        "created_at": { "type": "timestamptz", "nullable": false },
+        "updated_at": { "type": "timestamptz", "nullable": false }
+      }
+    },
+    "pension_income_sources": {
+      "pk": ["pension_income_source_id"],
+      "fk": [{ "column": "pension_profile_id", "references": "pension_profiles.pension_profile_id", "onDelete": "cascade" }],
+      "fields": {
+        "pension_income_source_id": { "type": "uuid", "nullable": false },
+        "pension_profile_id": { "type": "uuid", "nullable": false },
+        "income_type": { "type": "string", "nullable": false },
+        "payer_name": { "type": "string", "nullable": true },
+        "frequency": { "type": "string", "nullable": false },
+        "gross_amount": { "type": "number", "nullable": false },
+        "countable_percent": { "type": "number", "nullable": false },
+        "effective_from": { "type": "date", "nullable": false },
+        "effective_to": { "type": "date", "nullable": true },
+        "created_at": { "type": "timestamptz", "nullable": false }
+      }
+    },
+    "pension_assets": {
+      "pk": ["pension_asset_id"],
+      "fk": [{ "column": "pension_profile_id", "references": "pension_profiles.pension_profile_id", "onDelete": "cascade" }],
+      "fields": {
+        "pension_asset_id": { "type": "uuid", "nullable": false },
+        "pension_profile_id": { "type": "uuid", "nullable": false },
+        "asset_type": { "type": "string", "nullable": false },
+        "description": { "type": "string", "nullable": true },
+        "fair_market_value": { "type": "number", "nullable": false },
+        "encumbrance_amount": { "type": "number", "nullable": false },
+        "ownership_percent": { "type": "number", "nullable": false },
+        "as_of_date": { "type": "date", "nullable": false },
+        "created_at": { "type": "timestamptz", "nullable": false }
+      }
+    },
+    "pension_deductions": {
+      "pk": ["pension_deduction_id"],
+      "fk": [{ "column": "pension_profile_id", "references": "pension_profiles.pension_profile_id", "onDelete": "cascade" }],
+      "fields": {
+        "pension_deduction_id": { "type": "uuid", "nullable": false },
+        "pension_profile_id": { "type": "uuid", "nullable": false },
+        "deduction_type": { "type": "string", "nullable": false },
+        "annual_amount": { "type": "number", "nullable": false },
+        "effective_from": { "type": "date", "nullable": false },
+        "effective_to": { "type": "date", "nullable": true },
+        "created_at": { "type": "timestamptz", "nullable": false }
+      }
+    },
+    "pension_awards": {
+      "pk": ["pension_award_id"],
+      "fk": [{ "column": "pension_profile_id", "references": "pension_profiles.pension_profile_id", "onDelete": "cascade" }],
+      "fields": {
+        "pension_award_id": { "type": "uuid", "nullable": false },
+        "pension_profile_id": { "type": "uuid", "nullable": false },
+        "decision_date": { "type": "date", "nullable": false },
+        "mapr_amount": { "type": "number", "nullable": false },
+        "countable_income": { "type": "number", "nullable": false },
+        "net_worth_amount": { "type": "number", "nullable": false },
+        "annual_pension_amount": { "type": "number", "nullable": false },
+        "monthly_pension_amount": { "type": "number", "nullable": false },
+        "created_at": { "type": "timestamptz", "nullable": false }
+      }
+    },
+    "payment_accounts": {
+      "pk": ["payment_account_id"],
+      "fk": [{ "column": "veteran_id", "references": "veterans.veteran_id", "onDelete": "cascade" }],
+      "fields": {
+        "payment_account_id": { "type": "uuid", "nullable": false },
+        "veteran_id": { "type": "uuid", "nullable": false },
+        "account_type": { "type": "string", "nullable": false },
+        "institution_name": { "type": "string", "nullable": true },
+        "routing_last4": { "type": "string", "nullable": true },
+        "account_last4": { "type": "string", "nullable": true },
+        "active": { "type": "boolean", "nullable": false },
+        "start_date": { "type": "date", "nullable": false },
+        "end_date": { "type": "date", "nullable": true },
+        "created_at": { "type": "timestamptz", "nullable": false }
+      }
+    },
+    "payment_transactions": {
+      "pk": ["payment_transaction_id"],
+      "fk": [
+        { "column": "veteran_id", "references": "veterans.veteran_id", "onDelete": "cascade" },
+        { "column": "claim_id", "references": "claims.claim_id", "onDelete": "set null" },
+        { "column": "payment_account_id", "references": "payment_accounts.payment_account_id", "onDelete": "set null" }
+      ],
+      "fields": {
+        "payment_transaction_id": { "type": "uuid", "nullable": false },
+        "veteran_id": { "type": "uuid", "nullable": false },
+        "claim_id": { "type": "uuid", "nullable": true },
+        "payment_account_id": { "type": "uuid", "nullable": true },
+        "payment_type": { "type": "enum:payment_type", "nullable": false },
+        "payment_date": { "type": "date", "nullable": false },
+        "posted_at": { "type": "timestamptz", "nullable": true },
+        "amount": { "type": "number", "nullable": false },
+        "currency_code": { "type": "string", "nullable": false },
+        "reference_number": { "type": "string", "nullable": true },
+        "treasury_trace": { "type": "string", "nullable": true },
+        "status": { "type": "string", "nullable": false },
+        "created_at": { "type": "timestamptz", "nullable": false }
+      }
+    },
+    "overpayment_debts": {
+      "pk": ["overpayment_debt_id"],
+      "fk": [
+        { "column": "veteran_id", "references": "veterans.veteran_id", "onDelete": "cascade" },
+        { "column": "originating_claim_id", "references": "claims.claim_id", "onDelete": "set null" }
+      ],
+      "fields": {
+        "overpayment_debt_id": { "type": "uuid", "nullable": false },
+        "veteran_id": { "type": "uuid", "nullable": false },
+        "originating_claim_id": { "type": "uuid", "nullable": true },
+        "debt_reason": { "type": "string", "nullable": false },
+        "principal_amount": { "type": "number", "nullable": false },
+        "interest_amount": { "type": "number", "nullable": false },
+        "balance_amount": { "type": "number", "nullable": false },
+        "established_date": { "type": "date", "nullable": false },
+        "waived": { "type": "boolean", "nullable": false },
+        "created_at": { "type": "timestamptz", "nullable": false }
+      }
+    },
+    "appeals": {
+      "pk": ["appeal_id"],
+      "fk": [
+        { "column": "claim_id", "references": "claims.claim_id", "onDelete": "cascade" },
+        { "column": "rating_decision_id", "references": "rating_decisions.rating_decision_id", "onDelete": "set null" }
+      ],
+      "fields": {
+        "appeal_id": { "type": "uuid", "nullable": false },
+        "claim_id": { "type": "uuid", "nullable": false },
+        "rating_decision_id": { "type": "uuid", "nullable": true },
+        "lane": { "type": "enum:appeal_lane", "nullable": false },
+        "docket_number": { "type": "string", "nullable": true },
+        "date_received": { "type": "date", "nullable": false },
+        "current_status": { "type": "enum:appeal_status", "nullable": false },
+        "disposition_date": { "type": "date", "nullable": true },
+        "disposition_summary": { "type": "string", "nullable": true },
+        "created_at": { "type": "timestamptz", "nullable": false },
+        "updated_at": { "type": "timestamptz", "nullable": false }
+      }
+    },
+    "appeal_issues": {
+      "pk": ["appeal_issue_id"],
+      "fk": [
+        { "column": "appeal_id", "references": "appeals.appeal_id", "onDelete": "cascade" },
+        { "column": "rating_issue_id", "references": "rating_issues.rating_issue_id", "onDelete": "set null" }
+      ],
+      "fields": {
+        "appeal_issue_id": { "type": "uuid", "nullable": false },
+        "appeal_id": { "type": "uuid", "nullable": false },
+        "rating_issue_id": { "type": "uuid", "nullable": true },
+        "issue_name": { "type": "string", "nullable": false },
+        "sought_outcome": { "type": "string", "nullable": true },
+        "board_disposition": { "type": "enum:contention_disposition", "nullable": true },
+        "remand_reason": { "type": "string", "nullable": true },
+        "created_at": { "type": "timestamptz", "nullable": false }
+      }
+    },
+    "hearings": {
+      "pk": ["hearing_id"],
+      "fk": [
+        { "column": "appeal_id", "references": "appeals.appeal_id", "onDelete": "cascade" },
+        { "column": "transcript_document_id", "references": "documents.document_id", "onDelete": "set null" }
+      ],
+      "fields": {
+        "hearing_id": { "type": "uuid", "nullable": false },
+        "appeal_id": { "type": "uuid", "nullable": false },
+        "hearing_type": { "type": "enum:hearing_type", "nullable": false },
+        "scheduled_at": { "type": "timestamptz", "nullable": true },
+        "held_at": { "type": "timestamptz", "nullable": true },
+        "location": { "type": "string", "nullable": true },
+        "presiding_official": { "type": "string", "nullable": true },
+        "transcript_document_id": { "type": "uuid", "nullable": true },
+        "outcome_notes": { "type": "string", "nullable": true },
+        "created_at": { "type": "timestamptz", "nullable": false }
+      }
+    },
+    "authority_citations": {
+      "pk": ["authority_citation_id"],
+      "fields": {
+        "authority_citation_id": { "type": "uuid", "nullable": false },
+        "citation": { "type": "string", "nullable": false, "unique": true },
+        "title": { "type": "string", "nullable": true },
+        "authority_system": { "type": "string", "nullable": false },
+        "part": { "type": "string", "nullable": true },
+        "section": { "type": "string", "nullable": true },
+        "subsection": { "type": "string", "nullable": true },
+        "canonical_url": { "type": "string", "nullable": true },
+        "metadata": { "type": "jsonb", "nullable": false },
+        "created_at": { "type": "timestamptz", "nullable": false }
+      }
+    },
+    "issue_authority_map": {
+      "pk": ["issue_authority_map_id"],
+      "fk": [
+        { "column": "rating_issue_id", "references": "rating_issues.rating_issue_id", "onDelete": "cascade" },
+        { "column": "authority_citation_id", "references": "authority_citations.authority_citation_id", "onDelete": "restrict" }
+      ],
+      "fields": {
+        "issue_authority_map_id": { "type": "uuid", "nullable": false },
+        "rating_issue_id": { "type": "uuid", "nullable": false },
+        "authority_citation_id": { "type": "uuid", "nullable": false },
+        "relation_strength": { "type": "number", "nullable": false },
+        "created_at": { "type": "timestamptz", "nullable": false }
+      }
+    },
+    "audit_events": {
+      "pk": ["audit_event_id"],
+      "fields": {
+        "audit_event_id": { "type": "uuid", "nullable": false },
+        "actor_type": { "type": "enum:audit_actor_type", "nullable": false },
+        "actor_id": { "type": "string", "nullable": true },
+        "event_name": { "type": "string", "nullable": false },
+        "entity_type": { "type": "string", "nullable": false },
+        "entity_id": { "type": "string", "nullable": false },
+        "request_id": { "type": "string", "nullable": true },
+        "source_ip": { "type": "inet", "nullable": true },
+        "occurred_at": { "type": "timestamptz", "nullable": false },
+        "before_state": { "type": "jsonb", "nullable": true },
+        "after_state": { "type": "jsonb", "nullable": true },
+        "metadata": { "type": "jsonb", "nullable": false }
+      }
+    },
+    "compliance_flags": {
+      "pk": ["compliance_flag_id"],
+      "fields": {
+        "compliance_flag_id": { "type": "uuid", "nullable": false },
+        "entity_type": { "type": "string", "nullable": false },
+        "entity_id": { "type": "string", "nullable": false },
+        "flag_code": { "type": "string", "nullable": false },
+        "severity": { "type": "string", "nullable": false },
+        "status": { "type": "string", "nullable": false },
+        "detected_at": { "type": "timestamptz", "nullable": false },
+        "resolved_at": { "type": "timestamptz", "nullable": true },
+        "resolution_notes": { "type": "string", "nullable": true },
+        "metadata": { "type": "jsonb", "nullable": false }
+      }
+    }
+  },
+  "relationships": [
+    { "from": "veterans", "to": "claims", "type": "one_to_many", "via": "claims.veteran_id" },
+    { "from": "claims", "to": "claim_status_history", "type": "one_to_many", "via": "claim_status_history.claim_id" },
+    { "from": "claims", "to": "contentions", "type": "one_to_many", "via": "contentions.claim_id" },
+    { "from": "claims", "to": "evidence_items", "type": "one_to_many", "via": "evidence_items.claim_id" },
+    { "from": "contentions", "to": "evidence_items", "type": "many_to_many", "via": "contention_evidence" },
+    { "from": "claims", "to": "cp_exams", "type": "one_to_many", "via": "cp_exams.claim_id" },
+    { "from": "cp_exams", "to": "exam_findings", "type": "one_to_many", "via": "exam_findings.exam_id" },
+    { "from": "claims", "to": "rating_decisions", "type": "one_to_many", "via": "rating_decisions.claim_id" },
+    { "from": "rating_decisions", "to": "rating_issues", "type": "one_to_many", "via": "rating_issues.rating_decision_id" },
+    { "from": "rating_issues", "to": "decision_citations", "type": "one_to_many", "via": "decision_citations.rating_issue_id" },
+    { "from": "rating_decisions", "to": "combined_ratings", "type": "one_to_one", "via": "combined_ratings.rating_decision_id" },
+    { "from": "veterans", "to": "compensation_awards", "type": "one_to_many", "via": "compensation_awards.veteran_id" },
+    { "from": "veterans", "to": "pension_profiles", "type": "one_to_many", "via": "pension_profiles.veteran_id" },
+    { "from": "pension_profiles", "to": "pension_income_sources", "type": "one_to_many", "via": "pension_income_sources.pension_profile_id" },
+    { "from": "pension_profiles", "to": "pension_assets", "type": "one_to_many", "via": "pension_assets.pension_profile_id" },
+    { "from": "pension_profiles", "to": "pension_deductions", "type": "one_to_many", "via": "pension_deductions.pension_profile_id" },
+    { "from": "pension_profiles", "to": "pension_awards", "type": "one_to_many", "via": "pension_awards.pension_profile_id" },
+    { "from": "veterans", "to": "payment_transactions", "type": "one_to_many", "via": "payment_transactions.veteran_id" },
+    { "from": "claims", "to": "appeals", "type": "one_to_many", "via": "appeals.claim_id" },
+    { "from": "appeals", "to": "appeal_issues", "type": "one_to_many", "via": "appeal_issues.appeal_id" },
+    { "from": "appeals", "to": "hearings", "type": "one_to_many", "via": "hearings.appeal_id" },
+    { "from": "rating_issues", "to": "authority_citations", "type": "many_to_many", "via": "issue_authority_map" }
+  ]
+}

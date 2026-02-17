@@ -1,0 +1,19 @@
+﻿{
+  "Scenarios": [
+    {
+      "Name": "Income Drop 10%",
+      "IncomeMultiplier": 0.9,
+      "ExpenseMultiplier": 1.0
+    },
+    {
+      "Name": "Expense Increase 10%",
+      "IncomeMultiplier": 1.0,
+      "ExpenseMultiplier": 1.1
+    },
+    {
+      "Name": "Aggressive Savings",
+      "IncomeMultiplier": 1.0,
+      "ExpenseMultiplier": 0.95
+    }
+  ]
+}

@@ -6,12 +6,15 @@ import onboardingRouter from "./api/onboarding.js";
 import benefitsRouter from "./api/benefits.js";
 import recalculateRouter from "./api/recalculate.js";
 import intelligenceRouter from "./api/intelligence.js";
+import scannerRouter from "./api/scanner.js";
+import authorityRouter from "./api/authority.js";
 import { AppError, errorHandler } from "./utils/errors.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const frontendDir = path.resolve(__dirname, "../frontend");
 const sharedDir = path.resolve(__dirname, "../shared");
+const sharedDataDir = path.resolve(__dirname, "../packages/shared-data/src");
 
 const validateConfig = () => {
   const mongoUrl = process.env.MONGO_URL;
@@ -60,6 +63,7 @@ export const createApp = () => {
 
   app.use(express.json({ limit: "1mb" }));
   app.use("/shared", express.static(sharedDir));
+  app.use("/shared-data", express.static(sharedDataDir));
   app.use(express.static(frontendDir));
 
   app.get("/api/health", (req, res) => {
@@ -74,6 +78,8 @@ export const createApp = () => {
   app.use("/api", benefitsRouter);
   app.use("/api", recalculateRouter);
   app.use("/api", intelligenceRouter);
+  app.use("/api", scannerRouter);
+  app.use("/api", authorityRouter);
 
   app.use("/api", (req, res, next) => {
     next(new AppError("API route not found", 404, "not_found"));

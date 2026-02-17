@@ -55,14 +55,34 @@ const renderRoute = async () => {
     return;
   }
 
-  const html = await loadTemplate(route.template);
-  appRoot.innerHTML = html;
+  try {
+    const html = await loadTemplate(route.template);
+    appRoot.innerHTML = html;
 
-  if (route.module) {
-    const module = await loadModule(route.module);
-    if (typeof module.init === "function") {
-      module.init();
+    if (route.module) {
+      const module = await loadModule(route.module);
+      if (typeof module.init === "function") {
+        await Promise.resolve(module.init());
+      }
     }
+  } catch (error) {
+    console.error(error);
+    const message = error instanceof Error ? error.message : "Unknown error";
+    window.RallyForgeLastError = error;
+    appRoot.innerHTML = `
+      <div class="app-fallback">
+        <div class="app-fallback-card">
+          <h1>Welcome to Rally Forge</h1>
+          <p>The onboarding flow could not load. Start the dev server and refresh this page.</p>
+          <p>If you are opening a file directly, use the dev server URL instead.</p>
+          <p><strong>Load error:</strong> ${message}</p>
+          <div class="app-fallback-actions">
+            <button class="primary" type="button" onclick="window.location.reload()">Retry load</button>
+            <button class="ghost" type="button" onclick="window.location.hash = '#/onboarding'">Open onboarding</button>
+          </div>
+        </div>
+      </div>
+    `;
   }
 };
 
