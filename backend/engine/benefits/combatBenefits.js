@@ -11,3 +11,4 @@ export const evaluateCombatBenefits = (onboardingResult, rules, context) => {
     notes: results.notes
   };
 };
+

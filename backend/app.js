@@ -1,95 +1,127 @@
-import express from "express";
-import path from "path";
-import crypto from "crypto";
-import { fileURLToPath } from "url";
-import onboardingRouter from "./api/onboarding.js";
-import benefitsRouter from "./api/benefits.js";
-import recalculateRouter from "./api/recalculate.js";
-import intelligenceRouter from "./api/intelligence.js";
-import scannerRouter from "./api/scanner.js";
-import authorityRouter from "./api/authority.js";
-import { AppError, errorHandler } from "./utils/errors.js";
+import express from 'express';
+import cors from 'cors';
+import RateLimit from 'express-rate-limit';
+import scannerRouter from './api/scanner.js';
+import compensationRouter from './api/compensation.js';
+import financialRouter from './api/financial.js';
+import healthRouter from './api/health.js';
+import strsRouter from './api/strs.js';
+import militaryRouter from './api/military.js';
+import knowledgeRouter from './api/knowledge.js';
+import casesRouter from './api/cases.js';
+import intelligenceRouter from './api/intelligence.js';
+import stateBenefitsRouter from './api/stateBenefits.js';
+import authRouter from './api/auth.js';
+import { generalRateLimiter } from './middleware/hardening.js';
+import { requestLogger, consoleLogger, errorLogger } from './middleware/logging.js';
+import { getConfig } from './config.js';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const frontendDir = path.resolve(__dirname, "../frontend");
-const sharedDir = path.resolve(__dirname, "../shared");
-const sharedDataDir = path.resolve(__dirname, "../packages/shared-data/src");
+const config = getConfig();
 
-const validateConfig = () => {
-  const mongoUrl = process.env.MONGO_URL;
-  if (mongoUrl && !mongoUrl.startsWith("mongodb://") && !mongoUrl.startsWith("mongodb+srv://")) {
-    throw new Error("MONGO_URL must start with mongodb:// or mongodb+srv://");
-  }
-};
+// Rate limiters for different endpoints
+const apiLimiter = RateLimit({
+  windowMs: config.rateLimit.windowMs,
+  max: config.rateLimit.maxRequests,
+  message: 'Too many requests, please try again later',
+  standardHeaders: true,
+  legacyHeaders: false
+});
 
-export const createApp = () => {
-  validateConfig();
+const authLimiter = RateLimit({
+  windowMs: 60 * 60 * 1000, // 1 hour
+  max: 5, // 5 failed attempts
+  skipSuccessfulRequests: true,
+  message: 'Too many login attempts, please try again later'
+});
 
+export function createApp() {
   const app = express();
 
-  app.use((req, res, next) => {
-    const requestId = req.headers["x-request-id"] || crypto.randomUUID();
-    req.requestId = requestId;
-    res.setHeader("x-request-id", requestId);
-    next();
-  });
+  // ═════════════════════════════════════════════════════════════
+  // LOGGING (First middleware - log everything)
+  // ═════════════════════════════════════════════════════════════
+  app.use(requestLogger);
+  if (config.isDevelopment) {
+    app.use(consoleLogger);
+  }
 
-  app.use((req, res, next) => {
-    res.setHeader("x-content-type-options", "nosniff");
-    if (!req.query?.vscodeBrowserReqId) {
-      res.setHeader("x-frame-options", "DENY");
-    }
-    res.setHeader("referrer-policy", "no-referrer");
-    res.setHeader("permissions-policy", "geolocation=(), microphone=(), camera=()");
-    next();
-  });
+  // ═════════════════════════════════════════════════════════════
+  // CORS Configuration
+  // ═════════════════════════════════════════════════════════════
+  app.use(cors({
+    origin: config.cors.origins,
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+  }));
 
-  app.use((req, res, next) => {
-    const start = Date.now();
-    res.on("finish", () => {
-      const duration = Date.now() - start;
-      const entry = {
-        requestId: req.requestId,
-        method: req.method,
-        path: req.originalUrl,
-        status: res.statusCode,
-        durationMs: duration
-      };
-      console.log(JSON.stringify(entry));
+  // ═════════════════════════════════════════════════════════════
+  // BODY PARSING & REQUEST HANDLING
+  // ═════════════════════════════════════════════════════════════
+  app.use(express.json({ limit: '10mb' }));
+  app.use(express.urlencoded({ limit: '10mb', extended: true }));
+
+  // ═════════════════════════════════════════════════════════════
+  // GENERAL RATE LIMITING (All endpoints)
+  // ═════════════════════════════════════════════════════════════
+  app.use('/api/', apiLimiter);
+
+  // ═════════════════════════════════════════════════════════════
+  // HEALTH CHECK (No auth required)
+  // ═════════════════════════════════════════════════════════════
+  app.use('/api/health', healthRouter);
+
+  // ═════════════════════════════════════════════════════════════
+  // AUTHENTICATION ROUTES (No auth required - entry point)
+  // ═════════════════════════════════════════════════════════════
+  app.use('/api/auth', authLimiter, authRouter);
+
+  // ═════════════════════════════════════════════════════════════
+  // PROTECTED ROUTES (Auth required)
+  // ═════════════════════════════════════════════════════════════
+  app.use('/api/scanner', scannerRouter);
+  app.use('/api/strs', strsRouter);
+  app.use('/api/compensation', compensationRouter);
+  app.use('/api/financial', financialRouter);
+  app.use('/api/military', militaryRouter);
+  app.use('/api/cases', casesRouter);
+  app.use('/api', intelligenceRouter);
+  app.use('/api/state-benefits', stateBenefitsRouter);
+  app.use('/api', knowledgeRouter);
+
+  // ═════════════════════════════════════════════════════════════
+  // ERROR HANDLING
+  // ═════════════════════════════════════════════════════════════
+  app.use(errorLogger);
+
+  // ═════════════════════════════════════════════════════════════
+  // 404 Handler (Last middleware)
+  // ═════════════════════════════════════════════════════════════
+  app.use((req, res) => {
+    res.status(404).json({
+      success: false,
+      error: 'Route not found',
+      path: req.path,
+      method: req.method
     });
-    next();
   });
 
-  app.use(express.json({ limit: "1mb" }));
-  app.use("/shared", express.static(sharedDir));
-  app.use("/shared-data", express.static(sharedDataDir));
-  app.use(express.static(frontendDir));
+  // ═════════════════════════════════════════════════════════════
+  // GLOBAL ERROR HANDLER (Must be last)
+  // ═════════════════════════════════════════════════════════════
+  app.use((err, req, res, next) => {
+    console.error('❌ Unhandled error:', err);
 
-  app.get("/api/health", (req, res) => {
-    res.json({
-      success: true,
-      status: "ok",
-      time: new Date().toISOString()
+    const statusCode = err.statusCode || err.status || 500;
+    const message = err.message || 'Internal server error';
+
+    res.status(statusCode).json({
+      success: false,
+      error: message,
+      ...(config.isDevelopment && { stack: err.stack })
     });
   });
-
-  app.use("/api", onboardingRouter);
-  app.use("/api", benefitsRouter);
-  app.use("/api", recalculateRouter);
-  app.use("/api", intelligenceRouter);
-  app.use("/api", scannerRouter);
-  app.use("/api", authorityRouter);
-
-  app.use("/api", (req, res, next) => {
-    next(new AppError("API route not found", 404, "not_found"));
-  });
-
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(frontendDir, "index.html"));
-  });
-
-  app.use(errorHandler);
 
   return app;
-};
+}
+

@@ -11,3 +11,4 @@ export const evaluateStateBenefits = (onboardingResult, rules, context) => {
     notes: results.notes
   };
 };
+

@@ -11,3 +11,4 @@ export const evaluateRatingBenefits = (onboardingResult, rules, context) => {
     notes: results.notes
   };
 };
+

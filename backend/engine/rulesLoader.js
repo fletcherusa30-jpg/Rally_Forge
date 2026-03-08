@@ -69,3 +69,4 @@ export const getRules = async (category) => {
 
   return loadRules(category);
 };
+

@@ -57,29 +57,6 @@ const isValidDenialReason = (text) => {
 };
 
 /**
- * Extract a single complete denial reason
- * Captures text from "denied because" to the end of the sentence
- */
-const extractDenialPhrase = (text, startIndex) => {
-  const slice = text.substring(startIndex);
-  
-  // Look for "denied because" followed by the reason
-  const match = slice.match(/denied\s+because\s+([^.!?]*[.!?])/i);
-  if (!match || !match[1]) return null;
-  
-  const reason = match[1].trim();
-  
-  if (!isValidDenialReason(reason)) {
-    return null;
-  }
-  
-  return {
-    reason: reason,
-    endIndex: startIndex + match[0].length
-  };
-};
-
-/**
  * Extract denial conditions from text
  * Supports multiple pattern types
  */
@@ -272,3 +249,4 @@ export {
   validateDenialReason,
   isValidDenialReason
 };
+

@@ -222,3 +222,4 @@ Return the results in the specified JSON format.`;
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = DenialReasonLLMTemplate;
 }
+

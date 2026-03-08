@@ -21,8 +21,8 @@ const uniqueByKey = (items, keyFn) => {
 };
 
 const SECTION_HEADER_PATTERNS = [
-  /^\s*§+\s*([0-9]+\.[0-9A-Za-z\-]+)\s+(.+)$/,
-  /^\s*Sec\.\s*([0-9]+\.[0-9A-Za-z\-]+)\s+(.+)$/i
+  /^\s*§+\s*([0-9]+\.[0-9A-Za-z-]+)\s+(.+)$/,
+  /^\s*Sec\.\s*([0-9]+\.[0-9A-Za-z-]+)\s+(.+)$/i
 ];
 
 const PART_HEADER_PATTERN = /^\s*PART\s+([0-9A-Za-z]+)\b(.+)?$/i;
@@ -34,7 +34,7 @@ const getSectionHeaderMatch = (line) => {
     if (match) {
       return {
         sectionId: String(match[1] || "").trim(),
-        title: String(match[2] || "").replace(/[\s\-–—:]+$/g, "").trim()
+        title: String(match[2] || "").replace(/[\s-–—:]+$/g, "").trim()
       };
     }
   }
@@ -144,17 +144,17 @@ const extractAuthorityCitations = (text) => {
   const patterns = [
     {
       type: "cfr",
-      regex: /\b38\s+C\.?F\.?R\.?\s*(?:§{1,2}\s*)?([0-9]+\.[0-9A-Za-z\-]+)\b/gi,
+      regex: /\b38\s+C\.?F\.?R\.?\s*(?:§{1,2}\s*)?([0-9]+\.[0-9A-Za-z-]+)\b/gi,
       formatter: (value) => `38 C.F.R. § ${value}`
     },
     {
       type: "usc",
-      regex: /\b38\s+U\.?S\.?C\.?\s*(?:§{1,2}\s*)?([0-9A-Za-z\-]+)\b/gi,
+      regex: /\b38\s+U\.?S\.?C\.?\s*(?:§{1,2}\s*)?([0-9A-Za-z-]+)\b/gi,
       formatter: (value) => `38 U.S.C. § ${value}`
     },
     {
       type: "section",
-      regex: /§{1,2}\s*([0-9]+\.[0-9A-Za-z\-]+)\b/g,
+      regex: /§{1,2}\s*([0-9]+\.[0-9A-Za-z-]+)\b/g,
       formatter: (value) => `§ ${value}`
     }
   ];
@@ -320,3 +320,4 @@ export const searchAuthorityText = (text, query, maxResults = 10) => {
     results
   };
 };
+
