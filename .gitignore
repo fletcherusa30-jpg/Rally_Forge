@@ -41,3 +41,18 @@ tmp/
 temp/
 uploads/
 backend/data/uploads/
+
+# Test artifacts and caches
+.ahlta-cache/
+.rf-*.log
+ahlta_*.txt
+ahlta_*.json
+cross_pdf_*.json
+cross_pdf_*.txt
+diagnosis_*.json
+diagnosis_*.txt
+neurology_*.txt
+ai_review_packet.json
+*.pdf
+!knowledge/**/*.pdf
+!source-documents/**/*.pdf

@@ -1,5 +1,5 @@
 import express from 'express';
-import { quickHealthCheck } from '../../Scanner/VA SCANNER/backend/scanner-diagnostic.js';
+import { quickHealthCheck } from '../va_scanner/backend/scanner-diagnostic.js';
 
 const router = express.Router();
 

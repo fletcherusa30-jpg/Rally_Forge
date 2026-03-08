@@ -61,7 +61,11 @@ export const NEGATION_PATTERNS = {
     /\blimitations\s+of\s+this\s+test\b/i,
     /\breference\s+range\b/i,
     /\bfor\s+reference\s+only\b/i,
-    /\blab(?:oratory)?\s+interpretation\b/i
+    /\blab(?:oratory)?\s+interpretation\b/i,
+    // Military/provider signature context can contain "MS" that is not Multiple Sclerosis.
+    /\b(?:COL|CPT|MAJ|LT|LTC|BG|MG|GEN|SGT|SSG|SFC|MSG|1SG)\s*,\s*MS\b/i,
+    /\bSigned\s+By\b/i,
+    /\bChief\s+Optometry\b/i
   ],
   
   // Resolved conditions (past, no longer active)

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { scanVaDecision } from '../../Scanner/VA SCANNER/engine/vaSuperScanner.js';
+import { scanVaDecision } from '../../backend/va_scanner/engine/vaSuperScanner.js';
 
 test('combined rating regression: scanner returns CFR-based rating metadata', () => {
   const text = [

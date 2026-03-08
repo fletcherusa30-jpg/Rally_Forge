@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { scanVaDecision } from '../../Scanner/VA SCANNER/engine/vaSuperScanner.js';
+import { scanVaDecision } from '../../backend/va_scanner/engine/vaSuperScanner.js';
 
 test('denial reason regression: scanner identifies at least one denial issue', () => {
   const text = [

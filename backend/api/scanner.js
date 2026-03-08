@@ -2,10 +2,10 @@ import express from 'express';
 import multer from 'multer';
 import path from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
-import { scanVaDecision, looksLikeRatingDecisionNarrative } from '../../Scanner/VA SCANNER/engine/vaSuperScanner.js';
-import { getSMCRate, getAncillaryRate } from '../../Scanner/VA SCANNER/engine/rateLoader.js';
-import { extractDependents } from '../../Scanner/VA SCANNER/frontend/utils/extractDependents.js';
-import { getDisabilityAmount, getDependentAmount, getRatesForYear } from '../../Scanner/VA SCANNER/engine/rateEscalator.js';
+import { scanVaDecision, looksLikeRatingDecisionNarrative } from '../va_scanner/engine/vaSuperScanner.js';
+import { getSMCRate, getAncillaryRate } from '../va_scanner/engine/rateLoader.js';
+import { extractDependents } from '../va_scanner/frontend/utils/extractDependents.js';
+import { getDisabilityAmount, getDependentAmount, getRatesForYear } from '../va_scanner/engine/rateEscalator.js';
 import { computeDependentCompensation } from '../services/dependentCompensationEngine.js';
 import { scannerRateLimiter } from '../middleware/hardening.js';
 

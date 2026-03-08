@@ -1,0 +1,55 @@
+﻿{
+    "year":  1994,
+    "ratings":  {
+                    "50":  {
+                               "veteran_child":  null,
+                               "veteran_spouse":  null,
+                               "veteran":  null
+                           },
+                    "90":  {
+                               "veteran_child":  null,
+                               "veteran_spouse":  null,
+                               "veteran":  null
+                           },
+                    "20":  {
+                               "veteran":  null
+                           },
+                    "40":  {
+                               "veteran_child":  null,
+                               "veteran_spouse":  null,
+                               "veteran":  null
+                           },
+                    "60":  {
+                               "veteran_child":  null,
+                               "veteran_spouse":  null,
+                               "veteran":  null
+                           },
+                    "30":  {
+                               "veteran_child":  null,
+                               "veteran_spouse":  null,
+                               "veteran":  null
+                           },
+                    "100":  {
+                                "additional_child":  null,
+                                "veteran":  null,
+                                "veteran_spouse":  null,
+                                "veteran_child":  null,
+                                "veteran_one_parent":  null,
+                                "veteran_spouse_child":  null,
+                                "veteran_two_parents":  null
+                            },
+                    "70":  {
+                               "veteran_child":  null,
+                               "veteran_spouse":  null,
+                               "veteran":  null
+                           },
+                    "10":  {
+                               "veteran":  null
+                           },
+                    "80":  {
+                               "veteran_child":  null,
+                               "veteran_spouse":  null,
+                               "veteran":  null
+                           }
+                }
+}

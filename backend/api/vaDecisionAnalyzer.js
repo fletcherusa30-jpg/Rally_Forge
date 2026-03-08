@@ -1,8 +1,8 @@
 import express from 'express';
-import { scanVaDecision } from '../../Scanner/VA SCANNER/engine/vaSuperScanner.js';
-import cfrParser from '../../Scanner/VA SCANNER/engine/cfr-rating-parser.js';
+import { scanVaDecision } from '../va_scanner/engine/vaSuperScanner.js';
+import cfrParser from '../va_scanner/engine/cfr-rating-parser.js';
 const { COMBINED_RATINGS_TABLE, BILATERAL_FACTOR } = cfrParser;
-import { enhanceWithPACTActFlags, generatePACTActSummary } from '../../Scanner/VA SCANNER/frontend/utils/pactActDetection.js';
+import { enhanceWithPACTActFlags, generatePACTActSummary } from '../va_scanner/frontend/utils/pactActDetection.js';
 
 const router = express.Router();
 

@@ -1,0 +1,57 @@
+Primary file: Fletcher 0772 20 MEB AHLTA.pdf
+Compared files: 9
+Total time (ms): 385
+
+File: backend\data\uploads\1772942403643-Fletcher 0772 20 MEB AHLTA.pdf
+- Text source: cache
+- Baseline diagnoses present: 91/91
+- Baseline diagnoses missing: 0
+- Multiple sclerosis term hits: 0
+
+File: backend\data\uploads\1772942873615-Fletcher 0772 20 MEB AHLTA.pdf
+- Text source: cache
+- Baseline diagnoses present: 91/91
+- Baseline diagnoses missing: 0
+- Multiple sclerosis term hits: 0
+
+File: backend\data\uploads\1772943500500-Fletcher 0772 20 MEB AHLTA.pdf
+- Text source: cache
+- Baseline diagnoses present: 91/91
+- Baseline diagnoses missing: 0
+- Multiple sclerosis term hits: 0
+
+File: backend\data\uploads\1772945481026-Fletcher 0772 20 MEB AHLTA.pdf
+- Text source: cache
+- Baseline diagnoses present: 91/91
+- Baseline diagnoses missing: 0
+- Multiple sclerosis term hits: 0
+
+File: backend\data\uploads\1772948414461-Fletcher 0772 20 MEB AHLTA.pdf
+- Text source: cache
+- Baseline diagnoses present: 91/91
+- Baseline diagnoses missing: 0
+- Multiple sclerosis term hits: 0
+
+File: backend\data\uploads\1772956356837-Fletcher 0772 20 MEB AHLTA.pdf
+- Text source: cache
+- Baseline diagnoses present: 91/91
+- Baseline diagnoses missing: 0
+- Multiple sclerosis term hits: 0
+
+File: backend\data\uploads\1772958541856-Fletcher 0772 20 MEB AHLTA.pdf
+- Text source: cache
+- Baseline diagnoses present: 91/91
+- Baseline diagnoses missing: 0
+- Multiple sclerosis term hits: 0
+
+File: backend\data\uploads\1772990067874-Fletcher 0772 20 MEB AHLTA.pdf
+- Text source: cache
+- Baseline diagnoses present: 91/91
+- Baseline diagnoses missing: 0
+- Multiple sclerosis term hits: 0
+
+File: backend\data\uploads\1772992495062-Fletcher 0772 20 MEB AHLTA.pdf
+- Text source: cache
+- Baseline diagnoses present: 91/91
+- Baseline diagnoses missing: 0
+- Multiple sclerosis term hits: 0

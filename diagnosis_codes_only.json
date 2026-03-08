@@ -1,0 +1,327 @@
+[
+  {
+    "diagnosis": "Plantar wart",
+    "code": "B07.0",
+    "line": 1245
+  },
+  {
+    "diagnosis": "Viral wart, unspecified",
+    "code": "B07.9",
+    "line": 1327
+  },
+  {
+    "diagnosis": "Anxiety disorder, unspecified",
+    "code": "F41.9",
+    "line": 777
+  },
+  {
+    "diagnosis": "Male erectile disorder",
+    "code": "F52.21",
+    "line": 1087
+  },
+  {
+    "diagnosis": "Insomnia, unspecified",
+    "code": "G47.00",
+    "line": 1005
+  },
+  {
+    "diagnosis": "Obstructive sleep apnea (adult) (pediatric)",
+    "code": "G47.33",
+    "line": 1136
+  },
+  {
+    "diagnosis": "Other sleep disorders",
+    "code": "G47.8",
+    "line": 1186
+  },
+  {
+    "diagnosis": "Otitis media, unspecified, left ear",
+    "code": "H66.92",
+    "line": 1197
+  },
+  {
+    "diagnosis": "Essential (primary) hypertension",
+    "code": "I10",
+    "line": 931
+  },
+  {
+    "diagnosis": "Hallux valgus (acquired), left foot",
+    "code": "M20.12",
+    "line": 967
+  },
+  {
+    "diagnosis": "Pain in right shoulder",
+    "code": "M25.511",
+    "line": 1220
+  },
+  {
+    "diagnosis": "Radiculopathy, lumbar region",
+    "code": "M54.16",
+    "line": 1271
+  },
+  {
+    "diagnosis": "Cervicalgia",
+    "code": "M54.2",
+    "line": 841
+  },
+  {
+    "diagnosis": "Low back pain",
+    "code": "M54.5",
+    "line": 1017
+  },
+  {
+    "diagnosis": "Other muscle spasm",
+    "code": "M62.838",
+    "line": 1144
+  },
+  {
+    "diagnosis": "Impingement syndrome of right shoulder",
+    "code": "M75.41",
+    "line": 991
+  },
+  {
+    "diagnosis": "Bursitis of unspecified shoulder",
+    "code": "M75.50",
+    "line": 818
+  },
+  {
+    "diagnosis": "Pain in right hand",
+    "code": "M79.641",
+    "line": 1217
+  },
+  {
+    "diagnosis": "Pain in left thigh",
+    "code": "M79.652",
+    "line": 1207
+  },
+  {
+    "diagnosis": "Male erectile dysfunction, unspecified",
+    "code": "N52.9",
+    "line": 1091
+  },
+  {
+    "diagnosis": "Nasal congestion",
+    "code": "R09.81",
+    "line": 1101
+  },
+  {
+    "diagnosis": "Fasciculation",
+    "code": "R25.3",
+    "line": 950
+  },
+  {
+    "diagnosis": "Frequency of micturition",
+    "code": "R35.0",
+    "line": 958
+  },
+  {
+    "diagnosis": "Other symptoms and signs involving the genitourinary system",
+    "code": "R39.89",
+    "line": 1189
+  },
+  {
+    "diagnosis": "Need For Vaccination Typhoid",
+    "code": "V03.1",
+    "line": 1113
+  },
+  {
+    "diagnosis": "Vaccines Prophylactic Need Against Bacterial Diseases",
+    "code": "V03.9",
+    "line": 1314
+  },
+  {
+    "diagnosis": "Need For Vaccination Yellow Fever",
+    "code": "V04.4",
+    "line": 1116
+  },
+  {
+    "diagnosis": "Need For Vaccination Rabies",
+    "code": "V04.5",
+    "line": 1110
+  },
+  {
+    "diagnosis": "Vaccines Prophylactic Need Against Influenza",
+    "code": "V04.81",
+    "line": 1324
+  },
+  {
+    "diagnosis": "Inquiry And Counseling: Contraceptive Practices",
+    "code": "V25.09",
+    "line": 995
+  },
+  {
+    "diagnosis": "Surgery Vas Deferens Vasectomy",
+    "code": "V25.2",
+    "line": 1306
+  },
+  {
+    "diagnosis": "CONDITIONS INFLUENCING HEALTH STATUS",
+    "code": "V49.9",
+    "line": 854
+  },
+  {
+    "diagnosis": "Other Physical Therapy",
+    "code": "V57.1",
+    "line": 1147
+  },
+  {
+    "diagnosis": "Aftercare Following Surgery Of Musculoskeletal System",
+    "code": "V58.78",
+    "line": 755
+  },
+  {
+    "diagnosis": "Patient Counseling",
+    "code": "V65.40",
+    "line": 1225
+  },
+  {
+    "diagnosis": "Patient Education - Injury Prevention",
+    "code": "V65.43",
+    "line": 1233
+  },
+  {
+    "diagnosis": "Anticipatory Guidance: Nutrition Supplements",
+    "code": "V65.49",
+    "line": 774
+  },
+  {
+    "diagnosis": "Inquiry And Counseling: Medication Admin And Compliance",
+    "code": "V65.49",
+    "line": 998
+  },
+  {
+    "diagnosis": "Patient Counseling: Inquiry & Counseling",
+    "code": "V65.49",
+    "line": 1229
+  },
+  {
+    "diagnosis": "Patient Education - Medication Adverse Reactions",
+    "code": "V65.49",
+    "line": 1238
+  },
+  {
+    "diagnosis": "Outpatient Physician Consultation",
+    "code": "V65.9",
+    "line": 1200
+  },
+  {
+    "diagnosis": "Visit for: issue medical certificate",
+    "code": "V68.09",
+    "line": 1360
+  },
+  {
+    "diagnosis": "Visit for: administrative purpose",
+    "code": "V68.9",
+    "line": 1335
+  },
+  {
+    "diagnosis": "Visit for: psychiatric exam requested by authority",
+    "code": "V70.1",
+    "line": 1410
+  },
+  {
+    "diagnosis": "ON DD2900",
+    "code": "V70.5",
+    "line": 793
+  },
+  {
+    "diagnosis": "Visit for: examination of subpopulation",
+    "code": "V70.5",
+    "line": 1355
+  },
+  {
+    "diagnosis": "Visit for: military physical medical evaluation board (MEB)",
+    "code": "V70.5",
+    "line": 1364
+  },
+  {
+    "diagnosis": "Visit for: military services flight physical",
+    "code": "V70.5",
+    "line": 1368
+  },
+  {
+    "diagnosis": "Visit for: military services physical",
+    "code": "V70.5",
+    "line": 1372
+  },
+  {
+    "diagnosis": "Visit for: occupational health / fitness exam",
+    "code": "V70.5",
+    "line": 1401
+  },
+  {
+    "diagnosis": "Visit for: routine eye exam",
+    "code": "V72.0",
+    "line": 1413
+  },
+  {
+    "diagnosis": "Visit for: ears / hearing exam",
+    "code": "V72.19",
+    "line": 1351
+  },
+  {
+    "diagnosis": "Visit for: screening exam pulmonary tuberculosis",
+    "code": "V74.1",
+    "line": 1416
+  },
+  {
+    "diagnosis": "Visit for: multiphasic screening exam",
+    "code": "V82.6",
+    "line": 1395
+  },
+  {
+    "diagnosis": "Encounter for hearing conservation and treatment",
+    "code": "Z01.12",
+    "line": 890
+  },
+  {
+    "diagnosis": "Encounter for issue of other medical certificate",
+    "code": "Z02.79",
+    "line": 897
+  },
+  {
+    "diagnosis": "Encounter for other administrative examinations",
+    "code": "Z02.89",
+    "line": 908
+  },
+  {
+    "diagnosis": "Encounter for administrative examinations, unspecified",
+    "code": "Z02.9",
+    "line": 862
+  },
+  {
+    "diagnosis": "Encounter for examination and observation for other specified reasons",
+    "code": "Z04.8",
+    "line": 878
+  },
+  {
+    "diagnosis": "Encounter for examination and observation for unspecified reason",
+    "code": "Z04.9",
+    "line": 881
+  },
+  {
+    "diagnosis": "Encounter for fitting and adjustment of unspecified device",
+    "code": "Z46.9",
+    "line": 887
+  },
+  {
+    "diagnosis": "Other problems related to employment",
+    "code": "Z56.89",
+    "line": 1183
+  },
+  {
+    "diagnosis": "Problems of adjustment to life-cycle transitions",
+    "code": "Z60.0",
+    "line": 1259
+  },
+  {
+    "diagnosis": "Person with feared health complaint in whom no diagnosis is made",
+    "code": "Z71.1",
+    "line": 1242
+  },
+  {
+    "diagnosis": "Encounter for issue of repeat prescription",
+    "code": "Z76.0",
+    "line": 901
+  }
+]

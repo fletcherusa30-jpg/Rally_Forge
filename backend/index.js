@@ -5,7 +5,7 @@ const port = process.env.PORT || 4000;
 
 app.use(express.json());
 
-import scannerRoute from "../Scanner/VA SCANNER/backend/scannerRoute.js";
+import scannerRoute from "./va_scanner/backend/scannerRoute.js";
 app.use("/api", scannerRoute);
 
 app.listen(port, () => {
