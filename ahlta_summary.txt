@@ -1,8 +1,0 @@
-File: Fletcher 0772 20 MEB AHLTA.pdf
-Source: index-cache
-Text length: 1840768
-Line count: 41153
-MS-like clinical hits: 0
-Diagnosis entries: 91
-Neurology lines captured: 492
-Timing total (ms): 17

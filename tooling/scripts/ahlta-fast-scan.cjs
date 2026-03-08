@@ -13,11 +13,21 @@ const fs = require('fs');
 const path = require('path');
 const pdf = require('pdf-parse');
 
-const args = new Set(process.argv.slice(2));
+const argv = process.argv.slice(2);
+const args = new Set(argv);
 const forceRebuild = args.has('--rebuild-index');
 const benchmarkMode = args.has('--benchmark');
 const comparePdfsMode = args.has('--compare-pdfs');
 const compareAllPdfsMode = args.has('--compare-all-pdfs');
+
+// Parse --focus-condition "condition name"
+let focusCondition = 'multiple_sclerosis'; // default
+for (let i = 0; i < argv.length; i++) {
+  if (argv[i] === '--focus-condition' && i + 1 < argv.length) {
+    focusCondition = argv[i + 1].toLowerCase().replace(/\s+/g, '_');
+    break;
+  }
+}
 
 const cwd = process.cwd();
 const pdfName = 'Fletcher 0772 20 MEB AHLTA.pdf';
@@ -38,24 +48,91 @@ const cacheDir = path.join(cwd, '.ahlta-cache');
 const indexPath = path.join(cacheDir, 'ahlta_index.json');
 const pdfTextCacheDir = path.join(cacheDir, 'pdf-texts');
 
-const INDEX_VERSION = 5;
+const INDEX_VERSION = 7; // Bumped to exclude knowledge base PDFs from medical record scans
 
-const termSpecs = [
-  { id: 'multiple_sclerosis', regex: /multiple\s+sclerosis/i },
-  { id: 'm_s', regex: /\bM\.S\./ },
-  { id: 'ms', regex: /\bMS\b/ },
-  { id: 'rrms', regex: /\bRRMS\b/i },
-  { id: 'ppms', regex: /\bPPMS\b/i },
-  { id: 'spms', regex: /\bSPMS\b/i },
-  { id: 'demyelination', regex: /demyelinating|demyelination/i },
-  { id: 'optic_neuritis', regex: /optic\s+neuritis/i },
-  { id: 'transverse_myelitis', regex: /transverse\s+myelitis/i },
-  { id: 'myelitis', regex: /\bmyelitis\b/i },
-  { id: 'oligoclonal', regex: /oligoclonal/i },
-  { id: 'white_matter_lesion', regex: /white\s+matter\s+lesion/i },
-  { id: 'mcdonald_criteria', regex: /mcdonald\s+criteria/i },
-  { id: 'cis', regex: /clinically\s+isolated\s+syndrome|\bCIS\b/i }
-];
+function getTermSpecsForCondition(condition) {
+  const specs = {
+    multiple_sclerosis: [
+      { id: 'multiple_sclerosis', regex: /multiple\s+sclerosis/i },
+      { id: 'm_s', regex: /\bM\.S\./ },
+      { id: 'ms', regex: /\bMS\b/ },
+      { id: 'rrms', regex: /\bRRMS\b/i },
+      { id: 'ppms', regex: /\bPPMS\b/i },
+      { id: 'spms', regex: /\bSPMS\b/i },
+      { id: 'demyelination', regex: /demyelinating|demyelination/i },
+      { id: 'optic_neuritis', regex: /optic\s+neuritis/i },
+      { id: 'transverse_myelitis', regex: /transverse\s+myelitis/i },
+      { id: 'myelitis', regex: /\bmyelitis\b/i },
+      { id: 'oligoclonal', regex: /oligoclonal/i },
+      { id: 'white_matter_lesion', regex: /white\s+matter\s+lesion/i },
+      { id: 'mcdonald_criteria', regex: /mcdonald\s+criteria/i },
+      { id: 'cis', regex: /clinically\s+isolated\s+syndrome|\bCIS\b/i }
+    ],
+    ptsd: [
+      { id: 'ptsd', regex: /\bPTSD\b/i },
+      { id: 'post_traumatic_stress', regex: /post[- ]traumatic\s+stress/i },
+      { id: 'combat_stress', regex: /combat\s+stress/i },
+      { id: 'trauma_related', regex: /trauma[- ]related/i },
+      { id: 'hypervigilance', regex: /hypervigilance|hypervigilant/i },
+      { id: 'flashbacks', regex: /flashback/i },
+      { id: 'nightmares', regex: /nightmare/i },
+      { id: 'avoidance', regex: /avoidance\s+behavior/i },
+      { id: 'intrusive_thoughts', regex: /intrusive\s+thought/i },
+      { id: 'anxiety_disorder', regex: /anxiety\s+disorder/i }
+    ],
+    migraine: [
+      { id: 'migraine', regex: /migraine/i },
+      { id: 'headache', regex: /headache/i },
+      { id: 'cephalgia', regex: /cephalgia/i },
+      { id: 'tension_headache', regex: /tension\s+headache/i },
+      { id: 'cluster_headache', regex: /cluster\s+headache/i },
+      { id: 'photophobia', regex: /photophobia/i },
+      { id: 'aura', regex: /\b(visual\s+)?aura\b/i },
+      { id: 'chronic_headache', regex: /chronic\s+headache/i }
+    ],
+    radiculopathy: [
+      { id: 'radiculopathy', regex: /radiculopathy/i },
+      { id: 'radicular', regex: /radicular\s+(pain|syndrome)/i },
+      { id: 'nerve_root', regex: /nerve\s+root\s+(compression|impingement)/i },
+      { id: 'sciatica', regex: /sciatica/i },
+      { id: 'herniated_disc', regex: /herniated\s+disc/i },
+      { id: 'bulging_disc', regex: /bulging\s+disc/i },
+      { id: 'cervical_radiculopathy', regex: /cervical\s+radiculopathy/i },
+      { id: 'lumbar_radiculopathy', regex: /lumbar\s+radiculopathy/i }
+    ],
+    tbi: [
+      { id: 'tbi', regex: /\bTBI\b/i },
+      { id: 'traumatic_brain_injury', regex: /traumatic\s+brain\s+injury/i },
+      { id: 'concussion', regex: /concussion/i },
+      { id: 'post_concussive', regex: /post[- ]concussive/i },
+      { id: 'blast_injury', regex: /blast\s+injury/i },
+      { id: 'head_trauma', regex: /head\s+trauma/i },
+      { id: 'closed_head_injury', regex: /closed\s+head\s+injury/i },
+      { id: 'cognitive_impairment', regex: /cognitive\s+impairment/i }
+    ],
+    tinnitus: [
+      { id: 'tinnitus', regex: /tinnitus/i },
+      { id: 'ringing_ears', regex: /ringing\s+(in\s+)?(the\s+)?ears?/i },
+      { id: 'auditory', regex: /auditory\s+(disorder|dysfunction)/i },
+      { id: 'hearing_loss', regex: /hearing\s+loss/i },
+      { id: 'acoustic_trauma', regex: /acoustic\s+trauma/i }
+    ]
+  };
+
+  return specs[condition] || specs.multiple_sclerosis;
+}
+
+function getConditionDisplayName(condition) {
+  const names = {
+    multiple_sclerosis: 'Multiple Sclerosis',
+    ptsd: 'PTSD',
+    migraine: 'Migraine/Headache',
+    radiculopathy: 'Radiculopathy',
+    tbi: 'Traumatic Brain Injury (TBI)',
+    tinnitus: 'Tinnitus'
+  };
+  return names[condition] || condition;
+}
 
 function nowMs() {
   return Number(process.hrtime.bigint() / 1000000n);
@@ -112,6 +189,21 @@ function listPdfFilesRecursive(rootDir) {
 
 function isLikelyMedicalRecordPdf(absPath) {
   const rel = path.relative(cwd, absPath).toLowerCase();
+  
+  // EXCLUDE knowledge base, reference docs, and training materials
+  if (rel.includes('knowledge/') ||
+      rel.includes('rates/') ||
+      rel.includes('scanner/va scanner/rates') ||
+      rel.includes('job aid') ||
+      rel.includes('suggested diagnostic') ||
+      rel.includes('rvsr') ||
+      rel.includes('source_documents') ||
+      rel.includes('rate database') ||
+      rel.includes('disability rates')) {
+    return false;
+  }
+  
+  // INCLUDE only actual medical records
   return (
     rel.includes('uploads') ||
     rel.includes('ahlta') ||
@@ -153,7 +245,7 @@ async function getCachedTextForPdf(absPath) {
   };
 }
 
-function countClinicalTermHitsInText(text) {
+function countClinicalTermHitsInText(text, termSpecs, condition) {
   const lines = text.split(/\r?\n/);
   const hits = [];
 
@@ -172,7 +264,7 @@ function countClinicalTermHitsInText(text) {
     }
   }
 
-  return summarizeHits(filterClinicalMsHits(hits));
+  return summarizeHits(applyConditionSpecificFilter(hits, condition), termSpecs);
 }
 
 function diagnosisCoverage(primaryDiagnoses, text) {
@@ -304,24 +396,42 @@ function dedupeByKey(items, keyFn) {
   return out;
 }
 
-function filterClinicalMsHits(msHits) {
-  const noisePattern = /\b(COL,\s*MS|CPT,\s*MS|Chief\s+Optometry|Optometry\s+EACH|Pulse\s+width\s+0\.5\s+ms|\bMs\.)\b/i;
-  return msHits.filter((hit) => {
-    if (hit.termId !== 'ms' && hit.termId !== 'm_s') {
-      return true;
-    }
-    const combined = `${hit.prev || ''} ${hit.lineText || ''} ${hit.next || ''}`;
-    return !noisePattern.test(combined);
-  });
+function applyConditionSpecificFilter(hits, condition) {
+  if (condition === 'multiple_sclerosis') {
+    // MS-specific noise: rank abbreviations (COL, MS; CPT, MS), milliseconds, optometry titles
+    const noisePattern = /\b(COL,\s*MS|CPT,\s*MS|Chief\s+Optometry|Optometry\s+EACH|Pulse\s+width\s+0\.5\s+ms|\bMs\.)\b/i;
+    return hits.filter((hit) => {
+      if (hit.termId !== 'ms' && hit.termId !== 'm_s') {
+        return true;
+      }
+      const combined = `${hit.prev || ''} ${hit.lineText || ''} ${hit.next || ''}`;
+      return !noisePattern.test(combined);
+    });
+  }
+
+  if (condition === 'tbi') {
+    // TBI noise: tactical ballistic inserts, etc.
+    const noisePattern = /\b(tactical\s+ballistic|test\s+battle\s+interface)\b/i;
+    return hits.filter((hit) => {
+      if (hit.termId !== 'tbi') {
+        return true;
+      }
+      const combined = `${hit.prev || ''} ${hit.lineText || ''} ${hit.next || ''}`;
+      return !noisePattern.test(combined);
+    });
+  }
+
+  // Default: no filtering for other conditions
+  return hits;
 }
 
-function buildIndex(text) {
+function buildIndex(text, termSpecs, condition) {
   const start = nowMs();
   const lines = text.split(/\r?\n/);
 
   const diagnosisLines = [];
   const neurologyLines = [];
-  const msHits = [];
+  const termHits = []; // renamed from msHits for generality
   const diagnosisEntries = [];
   const sections = [];
 
@@ -394,7 +504,7 @@ function buildIndex(text) {
       if (spec.regex.test(line)) {
         const prev = lines[i - 1] || '';
         const next = lines[i + 1] || '';
-        msHits.push({
+        termHits.push({
           line: i + 1,
           termId: spec.id,
           prev,
@@ -416,7 +526,7 @@ function buildIndex(text) {
     lineCount: lines.length,
     diagnosisLines,
     neurologyLines,
-    msHits,
+    termHits, // renamed from msHits
     diagnosisEntries: normalizedDiagnosis,
     sections,
     tokenToLines,
@@ -424,18 +534,18 @@ function buildIndex(text) {
   };
 }
 
-function summarizeHits(msHits) {
+function summarizeHits(hits, termSpecs) {
   const countsByTerm = {};
   for (const spec of termSpecs) {
     countsByTerm[spec.id] = 0;
   }
-  for (const hit of msHits) {
+  for (const hit of hits) {
     countsByTerm[hit.termId] = (countsByTerm[hit.termId] || 0) + 1;
   }
   return countsByTerm;
 }
 
-function computeQuality(indexData, msHits) {
+function computeQuality(indexData, termHits) {
   const hasDiagnosis = indexData.diagnosisLines.length > 0;
   const hasNeurology = indexData.neurologyLines.length > 0;
   const hasSections = indexData.sections.length > 0;
@@ -446,7 +556,7 @@ function computeQuality(indexData, msHits) {
   if (hasDiagnosis) score += 25;
   if (hasNeurology) score += 20;
   if (hasSections) score += 15;
-  if (msHits.length === 0) score += 10;
+  if (termHits.length === 0) score += 10;
 
   return {
     score,
@@ -457,33 +567,41 @@ function computeQuality(indexData, msHits) {
   };
 }
 
-function buildAiReviewPacket(indexData, msHits, countsByTerm, quality) {
-  const nonMsNeurology = indexData.neurologyLines
+function buildAiReviewPacket(indexData, termHits, countsByTerm, quality, condition) {
+  const nonConditionNeurology = indexData.neurologyLines
     .filter((line) => typeof line === 'string' && line.trim() && !line.startsWith('--- line'))
     .slice(0, 50);
 
   const diagnosisWithCodes = indexData.diagnosisEntries.filter((d) => d.code);
 
-  const verdict = msHits.length === 0 ? 'not_found' : 'possible_mentions_found';
-  const confidence = msHits.length === 0 ? 'high' : 'medium';
+  const verdict = termHits.length === 0 ? 'not_found' : 'possible_mentions_found';
+  const confidence = termHits.length === 0 ? 'high' : 'medium';
+
+  const conditionName = getConditionDisplayName(condition);
 
   return {
-    targetCondition: 'Multiple Sclerosis',
+    targetCondition: conditionName,
     verdict,
     confidence,
     evidence: {
-      msHitCount: msHits.length,
+      conditionHitCount: termHits.length,
       countsByTerm,
-      msHits: msHits.slice(0, 100),
-      neurologyContextSample: nonMsNeurology,
+      termHits: termHits.slice(0, 100),
+      neurologyContextSample: nonConditionNeurology,
       diagnosisCount: indexData.diagnosisEntries.length,
       diagnosisWithCodesCount: diagnosisWithCodes.length
     },
-    reviewNotes: [
-      'No explicit Multiple Sclerosis diagnosis string found in extracted text.',
-      'No RRMS/PPMS/SPMS/demyelination/optic neuritis markers found.',
-      'Neurology references exist but are not tied to MS terminology in this document.'
-    ],
+    reviewNotes:
+      termHits.length === 0
+        ? [
+            `No explicit ${conditionName} diagnosis string found in extracted text.`,
+            `No related terminology markers found.`,
+            'Neurology references exist but are not tied to this condition in this document.'
+          ]
+        : [
+            `Found ${termHits.length} potential ${conditionName} mentions.`,
+            'Manual review recommended to confirm clinical context.'
+          ],
     quality,
     outputFiles: {
       diagnosis: path.basename(diagnosisOut),
@@ -510,7 +628,7 @@ function isIndexValid(index) {
   );
 }
 
-function writeOutputsFromIndex(indexData, report) {
+function writeOutputsFromIndex(indexData, report, condition) {
   fs.writeFileSync(diagnosisOut, indexData.diagnosisLines.join('\n'), 'utf8');
   fs.writeFileSync(neurologyOut, indexData.neurologyLines.join('\n'), 'utf8');
 
@@ -523,8 +641,14 @@ function writeOutputsFromIndex(indexData, report) {
     .sort((a, b) => a.code.localeCompare(b.code));
   fs.writeFileSync(diagnosisCodesOut, JSON.stringify(diagnosisCodes, null, 2), 'utf8');
 
-  const quality = computeQuality(indexData, report.msSummary.hits || []);
-  const aiPacket = buildAiReviewPacket(indexData, report.msSummary.hits || [], report.msSummary.countsByTerm || {}, quality);
+  const quality = computeQuality(indexData, report.conditionSummary.hits || []);
+  const aiPacket = buildAiReviewPacket(
+    indexData,
+    report.conditionSummary.hits || [],
+    report.conditionSummary.countsByTerm || {},
+    quality,
+    condition
+  );
   fs.writeFileSync(aiReviewOut, JSON.stringify(aiPacket, null, 2), 'utf8');
 
   const summary = [
@@ -532,7 +656,8 @@ function writeOutputsFromIndex(indexData, report) {
     `Source: ${report.textSource}`,
     `Text length: ${report.textLength}`,
     `Line count: ${report.lineCount}`,
-    `MS-like clinical hits: ${report.msSummary.hitCount}`,
+    `Condition: ${getConditionDisplayName(condition)}`,
+    `Clinical hits: ${report.conditionSummary.hitCount}`,
     `Diagnosis entries: ${indexData.diagnosisEntries.length}`,
     `Neurology lines captured: ${indexData.neurologyLines.length}`,
     `Timing total (ms): ${report.timingsMs.total}`
@@ -542,21 +667,26 @@ function writeOutputsFromIndex(indexData, report) {
   fs.writeFileSync(reportOut, JSON.stringify(report, null, 2), 'utf8');
 }
 
-async function runScan(options = { forceRebuild: false }) {
+async function runScan(options = { forceRebuild: false, condition: 'multiple_sclerosis' }) {
   ensureDir(cacheDir);
   const t0 = nowMs();
 
+  const condition = options.condition || 'multiple_sclerosis';
+  const termSpecs = getTermSpecsForCondition(condition);
+
   const existingIndex = readJsonIfExists(indexPath);
 
-  if (!options.forceRebuild && isIndexValid(existingIndex)) {
-    const msHitsWarm = filterClinicalMsHits(existingIndex.msHits || []);
-    const countsByTermWarm = summarizeHits(msHitsWarm);
+  if (!options.forceRebuild && isIndexValid(existingIndex) && existingIndex.condition === condition) {
+    const termHitsWarm = applyConditionSpecificFilter(existingIndex.termHits || [], condition);
+    const countsByTermWarm = summarizeHits(termHitsWarm, termSpecs);
     const reportWarm = {
       file: pdfName,
       textSource: 'index-cache',
       pages: existingIndex.pages || null,
       textLength: existingIndex.textLength,
       lineCount: existingIndex.lineCount,
+      condition: condition,
+      conditionName: getConditionDisplayName(condition),
       timingsMs: {
         extraction: 0,
         scan: 0,
@@ -570,22 +700,22 @@ async function runScan(options = { forceRebuild: false }) {
         aiReview: path.basename(aiReviewOut),
         summary: path.basename(summaryOut)
       },
-      msSummary: {
-        hitCount: msHitsWarm.length,
+      conditionSummary: {
+        hitCount: termHitsWarm.length,
         countsByTerm: countsByTermWarm,
-        hits: msHitsWarm.slice(0, 200)
+        hits: termHitsWarm.slice(0, 200)
       }
     };
 
-    writeOutputsFromIndex(existingIndex, reportWarm);
+    writeOutputsFromIndex(existingIndex, reportWarm, condition);
     return reportWarm;
   }
 
   const extracted = await extractPdfTextIfNeeded();
-  const indexed = buildIndex(extracted.text);
+  const indexed = buildIndex(extracted.text, termSpecs, condition);
 
-  const msHits = filterClinicalMsHits(indexed.msHits);
-  const countsByTerm = summarizeHits(msHits);
+  const termHits = applyConditionSpecificFilter(indexed.termHits, condition);
+  const countsByTerm = summarizeHits(termHits, termSpecs);
 
   const indexData = {
     version: INDEX_VERSION,
@@ -598,7 +728,8 @@ async function runScan(options = { forceRebuild: false }) {
     diagnosisLines: indexed.diagnosisLines,
     neurologyLines: indexed.neurologyLines,
     diagnosisEntries: indexed.diagnosisEntries,
-    msHits,
+    termHits,
+    condition,
     sections: indexed.sections,
     tokenToLines: indexed.tokenToLines
   };
@@ -611,6 +742,8 @@ async function runScan(options = { forceRebuild: false }) {
     pages: extracted.pages || null,
     textLength: extracted.text.length,
     lineCount: indexed.lineCount,
+    condition: condition,
+    conditionName: getConditionDisplayName(condition),
     timingsMs: {
       extraction: extracted.ms,
       scan: indexed.buildMs,
@@ -624,20 +757,20 @@ async function runScan(options = { forceRebuild: false }) {
       aiReview: path.basename(aiReviewOut),
       summary: path.basename(summaryOut)
     },
-    msSummary: {
-      hitCount: msHits.length,
+    conditionSummary: {
+      hitCount: termHits.length,
       countsByTerm,
-      hits: msHits.slice(0, 200)
+      hits: termHits.slice(0, 200)
     }
   };
 
-  writeOutputsFromIndex(indexData, report);
+  writeOutputsFromIndex(indexData, report, condition);
   return report;
 }
 
-async function runBenchmark() {
-  const first = await runScan({ forceRebuild: true });
-  const second = await runScan({ forceRebuild: false });
+async function runBenchmark(condition) {
+  const first = await runScan({ forceRebuild: true, condition });
+  const second = await runScan({ forceRebuild: false, condition });
 
   const coldMs = first.timingsMs.total;
   const warmMs = Math.max(1, second.timingsMs.total);
@@ -649,12 +782,14 @@ async function runBenchmark() {
   console.log(`Warm speedup: ${speedup}x`);
 }
 
-async function runCrossPdfCompare() {
+async function runCrossPdfCompare(condition) {
   const t0 = nowMs();
   ensureDir(cacheDir);
 
+  const termSpecs = getTermSpecsForCondition(condition);
+
   // Ensure primary index exists for diagnosis baseline.
-  const primaryReport = await runScan({ forceRebuild: false });
+  const primaryReport = await runScan({ forceRebuild: false, condition });
   const index = readJsonIfExists(indexPath);
   if (!index || !Array.isArray(index.diagnosisEntries)) {
     throw new Error('Primary index missing diagnosis entries; run base scan first.');
@@ -675,14 +810,14 @@ async function runCrossPdfCompare() {
   const files = [];
   for (const file of compareTargets) {
     const extracted = await getCachedTextForPdf(file);
-    const countsByTerm = countClinicalTermHitsInText(extracted.text);
+    const countsByTerm = countClinicalTermHitsInText(extracted.text, termSpecs, condition);
     const coverage = diagnosisCoverage(index.diagnosisEntries, extracted.text);
 
     files.push({
       file: path.relative(cwd, file),
       textLength: extracted.text.length,
       textSource: extracted.source,
-      msTermCounts: countsByTerm,
+      conditionTermCounts: countsByTerm,
       diagnosisCoverage: {
         baselineDiagnosisCount: index.diagnosisEntries.length,
         presentCount: coverage.present.length,
@@ -696,6 +831,8 @@ async function runCrossPdfCompare() {
     generatedAt: new Date().toISOString(),
     primaryFile: pdfName,
     primaryScanSource: primaryReport.textSource,
+    condition: condition,
+    conditionName: getConditionDisplayName(condition),
     comparedFileCount: files.length,
     files,
     timingsMs: {
@@ -707,17 +844,20 @@ async function runCrossPdfCompare() {
 
   const summaryLines = [
     `Primary file: ${report.primaryFile}`,
+    `Target condition: ${report.conditionName}`,
     `Compared files: ${report.comparedFileCount}`,
     `Total time (ms): ${report.timingsMs.total}`,
     ''
   ];
+
+  const primaryTermKey = Object.keys(files[0]?.conditionTermCounts || {})[0] || 'condition';
 
   for (const f of files) {
     summaryLines.push(`File: ${f.file}`);
     summaryLines.push(`- Text source: ${f.textSource}`);
     summaryLines.push(`- Baseline diagnoses present: ${f.diagnosisCoverage.presentCount}/${f.diagnosisCoverage.baselineDiagnosisCount}`);
     summaryLines.push(`- Baseline diagnoses missing: ${f.diagnosisCoverage.missingCount}`);
-    summaryLines.push(`- Multiple sclerosis term hits: ${f.msTermCounts.multiple_sclerosis || 0}`);
+    summaryLines.push(`- ${getConditionDisplayName(condition)} term hits: ${f.conditionTermCounts[primaryTermKey] || 0}`);
     summaryLines.push('');
   }
 
@@ -732,25 +872,26 @@ async function runCrossPdfCompare() {
 (async function main() {
   try {
     if (comparePdfsMode) {
-      await runCrossPdfCompare();
+      await runCrossPdfCompare(focusCondition);
       return;
     }
 
     if (benchmarkMode) {
-      await runBenchmark();
+      await runBenchmark(focusCondition);
       return;
     }
 
-    const report = await runScan({ forceRebuild });
+    const report = await runScan({ forceRebuild, condition: focusCondition });
 
     console.log('AHLTA scan complete.');
+    console.log(`Target condition: ${report.conditionName}`);
     console.log(`Text source: ${report.textSource}`);
     console.log(`Diagnosis output: ${report.outputs.diagnosis}`);
     console.log(`Neurology output: ${report.outputs.neurology}`);
     console.log(`Diagnosis terms: ${report.outputs.diagnosisTerms}`);
     console.log(`Diagnosis codes: ${report.outputs.diagnosisCodes}`);
     console.log(`AI review packet: ${report.outputs.aiReview}`);
-    console.log(`MS-like hits: ${report.msSummary.hitCount}`);
+    console.log(`Condition hits: ${report.conditionSummary.hitCount}`);
     console.log(
       `Timing (ms): extraction=${report.timingsMs.extraction}, scan=${report.timingsMs.scan}, total=${report.timingsMs.total}`
     );
