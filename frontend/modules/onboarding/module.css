@@ -1,101 +1,325 @@
-/* Military-Modern Professional Design System */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Space+Grotesk:wght@400;600&display=swap");
 
-/* Typography System */
-* {
-  font-family: "Inter", system-ui, -apple-system, sans-serif;
+.onboarding {
+  max-width: 920px;
+  margin: 40px auto;
+  padding: 32px 40px 40px;
+  background: radial-gradient(circle at top, #ffffff 0%, #f8f3ef 55%, #f3f1ff 100%);
+  border-radius: 28px;
+  box-shadow: 0 20px 40px rgba(20, 23, 40, 0.12);
+  color: #1d1f2b;
+  font-family: "Merriweather", "Georgia", serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Montserrat", system-ui, -apple-system, sans-serif;
+.wizard-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 32px;
 }
 
-/* Step visibility */
+.wizard-header h1 {
+  margin: 0 0 8px;
+  font-size: 32px;
+}
+
+.wizard-header p {
+  margin: 0;
+  color: #3a3e53;
+}
+
+.progress {
+  min-width: 200px;
+  text-align: right;
+  font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+}
+
 .step {
   display: none;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 24px;
+  margin-bottom: 24px;
 }
 
 .step.active {
-  display: block;
+  display: grid;
 }
 
-/* Rating tab panels */
-.rating-mode-panel {
-  display: none;
+.step h2 {
+  grid-column: 1 / -1;
+  margin: 0 0 8px;
+  font-size: 22px;
+  color: #1d1f2b;
 }
 
-.rating-mode-panel.is-active {
-  display: block;
+.step-intro {
+  grid-column: 1 / -1;
+  margin: 0 0 12px;
+  color: #3a3e53;
+  font-size: 14px;
 }
 
-/* File input to hide */
-input[type="file"][data-rating-upload] {
-  display: none;
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
 }
 
-/* Utility classes */
-.hidden {
-  display: none !important;
+.helper {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: #6a6f86;
 }
 
-/* Professional tab styling */
-.rating-mode-tab.is-active {
-  border-color: #059669 !important;
-  background-color: #ecfdf5 !important;
-  border-width: 3px !important;
+.hint {
+  font-size: 12px;
+  color: #5a5f75;
 }
 
-.rating-mode-tab:not(.is-active) {
-  background-color: #ffffff !important;
-  border-color: #cbd5e1 !important;
-  border-width: 3px !important;
+select,
+input[type="number"],
+input[type="date"] {
+  border-radius: 12px;
+  border: 1px solid #d6d3f2;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
 }
 
-.rating-mode-tab:not(.is-active):hover {
-  background-color: #f8fafc !important;
-  border-color: #94a3b8 !important;
+select[name="awards"] {
+  min-height: 220px;
 }
 
-/* Military Olive Background */
-.bg-military-olive {
-  background: linear-gradient(135deg, #3d4a2c 0%, #4a5839 25%, #3d4a2c 50%, #2f3921 75%, #3d4a2c 100%);
-  background-size: 400% 400%;
-  position: relative;
+button {
+  border: none;
+  border-radius: 999px;
+  padding: 12px 24px;
+  font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  background: #1d1f2b;
+  color: white;
 }
 
-.bg-military-olive::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.02) 0%, transparent 50%),
-    radial-gradient(circle at 40% 20%, rgba(0, 0, 0, 0.05) 0%, transparent 30%);
-  pointer-events: none;
+button.ghost {
+  background: transparent;
+  color: #1d1f2b;
+  border: 1px solid #d6d3f2;
 }
 
-/* Interactive Feedback States */
-button:not(:disabled):active {
-  transform: scale(0.98);
+button.primary {
+  background: #24c38e;
+  color: #0b1d16;
 }
 
-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
+.wizard-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
 }
 
-input:focus, select:focus, textarea:focus {
-  outline: none;
+.error {
+  min-height: 16px;
+  font-size: 12px;
+  color: #ff6b5a;
 }
 
-/* Smooth transitions for all interactive elements */
-button, input, select, label {
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+.status {
+  margin-top: 16px;
+  font-size: 14px;
 }
 
-/* Hover lift effect for cards */
-.hover\:shadow-md:hover {
-  transform: translateY(-2px);
+.service-period {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid #e4def5;
+  background: #fff;
+  box-shadow: 0 10px 18px rgba(20, 23, 40, 0.06);
+}
+
+.service-period.is-invalid {
+  border-color: #ffb4a9;
+  box-shadow: 0 10px 18px rgba(255, 107, 90, 0.12);
+}
+
+.period-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.period-title {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.period-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.period-fields {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  align-items: end;
+}
+
+.present-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #3a3e53;
+}
+
+.period-actions button {
+  padding: 8px 12px;
+}
+
+.service-periods {
+  display: grid;
+  gap: 14px;
+}
+
+.period-actions {
+  grid-column: 1 / -1;
+}
+
+.add-period {
+  padding: 8px 16px;
+  font-size: 13px;
+  border-radius: 12px;
+}
+
+.awards-panel {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 18px;
+  border: 1px solid #efe4d7;
+  background: #fff9f3;
+}
+
+.awards-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.awards-label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.awards-search {
+  display: grid;
+  gap: 6px;
+  min-width: 180px;
+}
+
+.awards-search input[type="search"] {
+  border-radius: 12px;
+  border: 1px solid #d6d3f2;
+  padding: 10px 12px;
+  font-size: 13px;
+  font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+}
+
+.awards-status {
+  font-size: 11px;
+  color: #6a6f86;
+}
+
+
+.awards-reference-block {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.awards-reference {
+  max-height: 260px;
+  overflow: auto;
+  background: #f7fbff;
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid #d7e6ff;
+}
+
+.awards-reference-status {
+  font-size: 12px;
+  color: #5a5f75;
+  margin-bottom: 8px;
+}
+
+.awards-reference-text {
+  margin: 0;
+  font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+  font-size: 12px;
+  white-space: pre-wrap;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+  font-size: 14px;
+}
+
+.radio-group legend {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1d1f2b;
+}
+
+.summary {
+  background: white;
+  border-radius: 16px;
+  padding: 16px;
+  font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+  box-shadow: inset 0 0 0 1px #f0ecff;
+}
+
+.summary-row {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 720px) {
+  .onboarding {
+    margin: 16px;
+    padding: 28px;
+  }
+
+  .wizard-header {
+    flex-direction: column;
+  }
+
+  .step {
+    grid-template-columns: 1fr;
+  }
+
+  .service-period {
+    grid-template-columns: 1fr;
+  }
+
+  .period-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .awards-header {
+    flex-direction: column;
+  }
 }
