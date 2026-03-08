@@ -1,0 +1,21 @@
+{
+    "apiFile":  "C:\\Dev\\Rally Forge\\backend\\api\\knowledge.js",
+    "mockIndicators":  [
+                           "MOCK_CONDITIONS",
+                           "MOCK_PRESUMPTIVES",
+                           "mock: true"
+                       ],
+    "requiredSources":  [
+                            "38 CFR Part 3",
+                            "38 CFR Part 4",
+                            "M21-1 Adjudication Manual",
+                            "Full presumptive and non-presumptive condition corpus"
+                        ],
+    "requiredActions":  [
+                            "Replace mock data with authoritative corpora.",
+                            "Remove \u0027mock\u0027: true flags.",
+                            "Implement semantic search over real data."
+                        ],
+    "status":  "external-data-required",
+    "lastUpdatedUtc":  "2026-03-01T20:09:30.0408258Z"
+}

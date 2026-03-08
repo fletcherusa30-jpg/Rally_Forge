@@ -1,0 +1,89 @@
+{
+    "llm": {
+        "default_provider": "openai",
+        "openai": {
+            "model": "gpt-4-turbo-preview",
+            "temperature": 0.3,
+            "max_tokens": 4000,
+            "top_p": 0.9,
+            "frequency_penalty": 0.0,
+            "presence_penalty": 0.0,
+            "timeout": 60
+        },
+        "anthropic": {
+            "model": "claude-3-5-sonnet-20241022",
+            "temperature": 0.3,
+            "max_tokens": 4000,
+            "top_p": 0.9,
+            "timeout": 60
+        },
+        "azure_openai": {
+            "deployment_name": "gpt-4",
+            "api_version": "2024-02-15-preview",
+            "temperature": 0.3,
+            "max_tokens": 4000
+        },
+        "local": {
+            "endpoint": "http://localhost:11434",
+            "model": "llama2",
+            "temperature": 0.3,
+            "max_tokens": 2000
+        }
+    },
+    "embeddings": {
+        "provider": "openai",
+        "openai": {
+            "model": "text-embedding-ada-002",
+            "batch_size": 100
+        },
+        "sentence_transformers": {
+            "model": "all-MiniLM-L6-v2",
+            "device": "cpu"
+        }
+    },
+    "vector_store": {
+        "backend": "faiss",
+        "faiss": {
+            "index_type": "IndexFlatL2",
+            "save_path": "data/vector_db/faiss_index.bin"
+        },
+        "chromadb": {
+            "persist_directory": "data/vector_db/chromadb",
+            "collection_name": "va_claims_knowledge"
+        }
+    },
+    "ocr": {
+        "tesseract_cmd": "tesseract",
+        "confidence_threshold": 0.7,
+        "languages": [
+            "eng"
+        ],
+        "page_segmentation_mode": 3,
+        "output_format": "text"
+    },
+    "logging": {
+        "level": "INFO",
+        "log_file": "ai/logs/claims_engine.log",
+        "max_bytes": 10485760,
+        "backup_count": 5,
+        "log_prompts": true,
+        "log_responses": true,
+        "log_errors": true
+    },
+    "rate_limiting": {
+        "enabled": true,
+        "requests_per_minute": 60,
+        "retry_max_attempts": 3,
+        "retry_backoff_factor": 2
+    },
+    "caching": {
+        "enabled": true,
+        "cache_dir": "data/cache/ai",
+        "ttl_seconds": 3600
+    },
+    "performance": {
+        "parallel_processing": true,
+        "max_workers": 4,
+        "batch_size": 10
+    }
+}

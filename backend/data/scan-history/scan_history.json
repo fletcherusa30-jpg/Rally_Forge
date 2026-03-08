@@ -1,0 +1,60 @@
+{
+  "scans": [
+    {
+      "id": "scan_mlvyq949_nluij",
+      "timestamp": "2026-02-21T06:53:42.441Z",
+      "veteranName": "DALE A FLETCHER",
+      "fileNumber": "Unknown",
+      "decisionDate": "December 15, 2017",
+      "stats": {
+        "serviceConnected": 11,
+        "denied": 2,
+        "ancillaryBenefits": 1,
+        "smc": 0,
+        "dependents": 0,
+        "payments": 0,
+        "evidence": 0,
+        "totalItems": 14
+      },
+      "aiValidation": {
+        "enhanced": false,
+        "confidence": null,
+        "suggestionsCount": 0,
+        "model": null
+      },
+      "metrics": {
+        "textLength": 5000,
+        "executionTime": null,
+        "source": "benefitscan_engine"
+      }
+    },
+    {
+      "id": "scan_mlvytk5a_ieiz9",
+      "timestamp": "2026-02-21T06:56:16.702Z",
+      "veteranName": "DALE A FLETCHER",
+      "fileNumber": "540980772",
+      "decisionDate": "December 15, 2017",
+      "stats": {
+        "serviceConnected": 15,
+        "denied": 2,
+        "ancillaryBenefits": 2,
+        "smc": 0,
+        "dependents": 3,
+        "payments": 1,
+        "evidence": 1,
+        "totalItems": 24
+      },
+      "aiValidation": {
+        "enhanced": false,
+        "confidence": null,
+        "suggestionsCount": 0,
+        "model": null
+      },
+      "metrics": {
+        "textLength": 8000,
+        "executionTime": null,
+        "source": "benefitscan_engine"
+      }
+    }
+  ]
+}

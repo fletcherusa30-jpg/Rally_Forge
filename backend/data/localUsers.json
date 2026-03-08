@@ -1,0 +1,9 @@
+[
+  {
+    "id": "john",
+    "email": "john@veteran.example",
+    "role": "veteran",
+    "passwordHash": "$2b$10$KfGIch90VIN7RBU6g33z/er0hnE5K7.Ae6iFbcSEsr1uJHblfNeMu",
+    "active": true
+  }
+]

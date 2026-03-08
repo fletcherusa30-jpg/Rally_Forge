@@ -1,0 +1,26 @@
+{
+  "year": 2026,
+  "effectiveDate": "2025-12-01",
+  "colaIncrease": 2.5,
+  "ratings": {
+    "10": { "veteran": 171.23 },
+    "20": { "veteran": 338.49 },
+    "30": { "veteran": 524.31, "veteran_spouse": 586.31, "veteran_child": 563.31 },
+    "40": { "veteran": 755.28, "veteran_spouse": 838.28, "veteran_child": 806.28 },
+    "50": { "veteran": 1075.16, "veteran_spouse": 1179.16, "veteran_child": 1137.16 },
+    "60": { "veteran": 1361.88, "veteran_spouse": 1486.88, "veteran_child": 1434.88 },
+    "70": { "veteran": 1716.28, "veteran_spouse": 1861.28, "veteran_child": 1799.28 },
+    "80": { "veteran": 1995.01, "veteran_spouse": 2161.01, "veteran_child": 2089.01 },
+    "90": { "veteran": 2241.91, "veteran_spouse": 2428.91, "veteran_child": 2346.91 },
+    "100": { "veteran": 3737.85, "veteran_spouse": 3946.27, "veteran_one_parent": 3909.63, "veteran_two_parents": 4081.40, "veteran_child": 3881.48, "veteran_spouse_child": 4089.90, "additional_child": 143.63 }
+  },
+  "dependents": {
+    "spouse_aid_attendance": { "30": 62, "40": 83, "50": 104, "60": 125, "70": 145, "80": 166, "90": 181, "100": 208.42 },
+    "child_over_18_in_school": { "30": 39, "40": 52, "50": 65, "60": 77, "70": 90, "80": 103, "90": 116, "100": 143.63 }
+  },
+  "parents": {
+    "one_parent": { "30": 88, "40": 118, "50": 147, "60": 177, "70": 206, "80": 235, "90": 265, "100": 171.78 },
+    "two_parents": { "30": 138, "40": 184, "50": 230, "60": 276, "70": 322, "80": 368, "90": 414, "100": 343.55 }
+  },
+  "notes": "2026 VA disability compensation rates with 2.5% COLA increase effective December 1, 2025"
+}

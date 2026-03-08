@@ -1,0 +1,14 @@
+{
+  "part3": {
+    "totalSections": 752,
+    "totalCharacters": 1062366,
+    "totalWords": 173677
+  },
+  "part4": {
+    "totalSections": 256,
+    "totalDiagnosticCodes": 8312,
+    "totalCharacters": 521034,
+    "totalWords": 80848
+  },
+  "extractedDate": "2026-02-22T06:58:15.206Z"
+}

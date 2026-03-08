@@ -1,0 +1,164 @@
+{
+  "timestamp": "2026-03-06T05:26:14.539Z",
+  "summary": {
+    "existingKBFiles": 114,
+    "part3Checked": 22,
+    "part3Missing": 14,
+    "part3Coverage": "36.4%",
+    "part4Checked": 20,
+    "part4Missing": 20,
+    "part4Coverage": "0.0%",
+    "m21Checked": 17,
+    "m21Missing": 5,
+    "m21Coverage": "70.6%"
+  },
+  "missingContent": {
+    "part3Sections": [
+      {
+        "section": "3.102",
+        "topic": "Service Connection - General"
+      },
+      {
+        "section": "3.103",
+        "topic": "Chronological Age"
+      },
+      {
+        "section": "3.304",
+        "topic": "Direct Service Connection"
+      },
+      {
+        "section": "3.309",
+        "topic": "Disease Subject to Presumptive Service Connection"
+      },
+      {
+        "section": "3.317",
+        "topic": "Compensation for Certain Disabilities Occurring in Former POWs"
+      },
+      {
+        "section": "3.340",
+        "topic": "Total Disability Ratings"
+      },
+      {
+        "section": "3.350",
+        "topic": "Special Monthly Compensation"
+      },
+      {
+        "section": "3.800",
+        "topic": "Linked and Merged Accounts"
+      },
+      {
+        "section": "3.6",
+        "topic": "Active Service"
+      },
+      {
+        "section": "3.7",
+        "topic": "Wartime Periods"
+      },
+      {
+        "section": "3.155",
+        "topic": "Effective Dates for Increased Ratings"
+      },
+      {
+        "section": "3.156",
+        "topic": "Effective Dates for Disability Ratings"
+      },
+      {
+        "section": "3.157",
+        "topic": "Effective Dates for Dependency Status Changes"
+      },
+      {
+        "section": "3.102",
+        "topic": "Compensation for Service-Connected Disabilities"
+      }
+    ],
+    "part4Categories": [
+      {
+        "code": "5000-5003",
+        "system": "Musculoskeletal - General"
+      },
+      {
+        "code": "5200-5293",
+        "system": "Musculoskeletal - Arthritis"
+      },
+      {
+        "code": "5300-5323",
+        "system": "Musculoskeletal - Muscles"
+      },
+      {
+        "code": "6000-6099",
+        "system": "Digestive System"
+      },
+      {
+        "code": "6200-6299",
+        "system": "Genitourinary System"
+      },
+      {
+        "code": "6300-6399",
+        "system": "Gynecological Conditions"
+      },
+      {
+        "code": "6500-6599",
+        "system": "Respiratory System"
+      },
+      {
+        "code": "6600-6899",
+        "system": "Cardiovascular System"
+      },
+      {
+        "code": "7000-7099",
+        "system": "Dental and Oral Conditions"
+      },
+      {
+        "code": "7200-7299",
+        "system": "Eye Conditions"
+      },
+      {
+        "code": "7300-7399",
+        "system": "Ear Conditions"
+      },
+      {
+        "code": "7500-7599",
+        "system": "Skin Conditions"
+      },
+      {
+        "code": "7600-7699",
+        "system": "Endocrine System"
+      },
+      {
+        "code": "7700-7799",
+        "system": "Neurological Conditions"
+      },
+      {
+        "code": "7800-7899",
+        "system": "Hemic and Lymphatic Conditions"
+      },
+      {
+        "code": "8000-8099",
+        "system": "Mental Disorders - General"
+      },
+      {
+        "code": "8100-8199",
+        "system": "Mental Disorders - Psychotic"
+      },
+      {
+        "code": "8200-8299",
+        "system": "Mental Disorders - Neurotic"
+      },
+      {
+        "code": "8300-8399",
+        "system": "Mental Disorders - Organic"
+      },
+      {
+        "code": "9000-9099",
+        "system": "Infectious Diseases"
+      }
+    ],
+    "m21Topics": [
+      "Effective Date Assignments",
+      "Rating Claims",
+      "Dependency Claims",
+      "Aggravation of Preexisting Conditions",
+      "Combined Ratings Calculation"
+    ]
+  }
+}

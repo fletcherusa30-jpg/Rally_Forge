@@ -1,0 +1,138 @@
+{
+  "year": 2026,
+  "effective_date": "2025-12-01",
+  "version": "2.0.0",
+  "_notes": "Official VA Disability Compensation Rates - 2026 (Effective December 1, 2025) - Corrected to match official VA rate tables",
+  "baseCompensation": {
+    "10": 171.23,
+    "20": 338.49,
+    "30": 524.31,
+    "40": 755.28,
+    "50": 1075.16,
+    "60": 1361.88,
+    "70": 1716.28,
+    "80": 1995.01,
+    "90": 2241.91,
+    "100": 3737.85
+  },
+  "withSpouseRates": {
+    "30": 586.31,
+    "40": 838.28,
+    "50": 1179.16,
+    "60": 1486.88,
+    "70": 1861.28,
+    "80": 2161.01,
+    "90": 2428.91,
+    "100": 3946.27
+  },
+  "withSpouseAndOneChildRates": {
+    "30": 625.31,
+    "40": 890.28,
+    "50": 1241.16,
+    "60": 1559.88,
+    "70": 1944.28,
+    "80": 2254.01,
+    "90": 2544.91,
+    "100": 4089.90
+  },
+  "dependents": {
+    "spouse": {
+      "first_child": 83,
+      "each_additional_child": 83,
+      "first_parent": 125,
+      "each_additional_parent": 125
+    },
+    "no_spouse": {
+      "first_child": 62,
+      "each_additional_child": 62,
+      "first_parent": 125,
+      "each_additional_parent": 125
+    }
+  },
+  "smc": {
+    "K": {
+      "description": "Loss of use of one creative organ",
+      "amount": 256.00,
+      "cfr": "38 CFR 3.350(b)(3)"
+    },
+    "L": {
+      "description": "Loss of use of both creative organs",
+      "amount": 514.00,
+      "cfr": "38 CFR 3.350(b)(4)"
+    },
+    "L½": {
+      "description": "Loss of creative organ with amputation",
+      "amount": 739.00,
+      "cfr": "38 CFR 3.350(b)(4)"
+    },
+    "M": {
+      "description": "Bilateral loss of legs",
+      "amount": 985.00,
+      "cfr": "38 CFR 3.350(b)(6)"
+    },
+    "M½": {
+      "description": "Bilateral loss of legs with additional disability",
+      "amount": 1211.00,
+      "cfr": "38 CFR 3.350(b)(6)"
+    },
+    "N": {
+      "description": "Bilateral loss of arms",
+      "amount": 985.00,
+      "cfr": "38 CFR 3.350(b)(7)"
+    },
+    "N½": {
+      "description": "Bilateral loss of arms with additional disability",
+      "amount": 1211.00,
+      "cfr": "38 CFR 3.350(b)(7)"
+    },
+    "O": {
+      "description": "Loss of both legs and loss of use of both arms",
+      "amount": 2319.00,
+      "cfr": "38 CFR 3.350(b)(8)"
+    },
+    "R1": {
+      "description": "Loss of both arms and loss of both legs",
+      "amount": 2770.00,
+      "cfr": "38 CFR 3.350(b)(9)"
+    },
+    "R2": {
+      "description": "Loss of both eyes and loss of both arms",
+      "amount": 2770.00,
+      "cfr": "38 CFR 3.350(b)(9)"
+    },
+    "S": {
+      "description": "Aid & Attendance SMC",
+      "amount": 690.00,
+      "cfr": "38 CFR 3.352"
+    },
+    "T": {
+      "description": "Highest level SMC",
+      "amount": 890.00,
+      "cfr": "38 CFR 3.350(b)(12)"
+    }
+  },
+  "ancillary": {
+    "clothing_allowance": {
+      "description": "Annual clothing allowance for prosthetic/orthotic wear",
+      "monthly": 37.25,
+      "yearly": 447.00,
+      "cfr": "38 CFR 3.810"
+    },
+    "aid_and_attendance": {
+      "description": "Ad & Attendance allowance",
+      "monthly": 171.00,
+      "cfr": "38 CFR 3.352"
+    },
+    "housebound": {
+      "description": "Housebound allowance for 100% veterans",
+      "monthly": 107.00,
+      "cfr": "38 CFR 3.351"
+    }
+  },
+  "rules": {
+    "smc_combination": "Highest benefit wins (VA combines SMC codes per 38 CFR 3.350)",
+    "bilateral_factor": "Applied per 38 CFR 4.26 (bilateral compensation increase)",
+    "dependent_tier_application": "Base rate + dependent tiers per VA tables",
+    "effective_date_logic": "Use year of effective date to determine applicable rates"
+  }
+}

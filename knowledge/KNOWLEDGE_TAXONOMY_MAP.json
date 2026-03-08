@@ -1,0 +1,181 @@
+﻿{
+    "part3":  [
+
+              ],
+    "Service-connection":  [
+                               {
+                                   "file":  "README.md",
+                                   "path":  "C:\\Dev\\Rally Forge\\knowledge\\Service-connection\\README.md",
+                                   "headings":  "Placeholder for Service-connection\r"
+                               }
+                           ],
+    "Claims":  [
+                   {
+                       "file":  "README.md",
+                       "path":  "C:\\Dev\\Rally Forge\\knowledge\\Claims\\README.md",
+                       "headings":  "Placeholder for Claims\r"
+                   }
+               ],
+    "Legal":  [
+                  {
+                      "file":  "README.md",
+                      "path":  "C:\\Dev\\Rally Forge\\knowledge\\Legal\\README.md",
+                      "headings":  "Placeholder for Legal\r"
+                  }
+              ],
+    "Mental-health":  [
+                          {
+                              "file":  "README.md",
+                              "path":  "C:\\Dev\\Rally Forge\\knowledge\\Mental-health\\README.md",
+                              "headings":  "Placeholder for Mental-health\r"
+                          }
+                      ],
+    "Ratings":  [
+                    {
+                        "file":  "README.md",
+                        "path":  "C:\\Dev\\Rally Forge\\knowledge\\Ratings\\README.md",
+                        "headings":  "Placeholder for Ratings\r"
+                    }
+                ],
+    "C\u0026P":  [
+                     {
+                         "file":  "README.md",
+                         "path":  "C:\\Dev\\Rally Forge\\knowledge\\C\u0026P\\README.md",
+                         "headings":  "Placeholder for C\u0026P\r"
+                     }
+                 ],
+    "Survivor-benefits":  [
+                              {
+                                  "file":  "README.md",
+                                  "path":  "C:\\Dev\\Rally Forge\\knowledge\\Survivor-benefits\\README.md",
+                                  "headings":  "Placeholder for Survivor-benefits\r"
+                              }
+                          ],
+    "VAknow":  [
+
+               ],
+    "Overpayments":  [
+                         {
+                             "file":  "README.md",
+                             "path":  "C:\\Dev\\Rally Forge\\knowledge\\Overpayments\\README.md",
+                             "headings":  "Placeholder for Overpayments\r"
+                         }
+                     ],
+    "State-benefits":  [
+                           {
+                               "file":  "README.md",
+                               "path":  "C:\\Dev\\Rally Forge\\knowledge\\State-benefits\\README.md",
+                               "headings":  "Placeholder for State-benefits\r"
+                           }
+                       ],
+    "_raw_extraction":  [
+
+                        ],
+    "Toxic-exposure":  [
+                           {
+                               "file":  "README.md",
+                               "path":  "C:\\Dev\\Rally Forge\\knowledge\\Toxic-exposure\\README.md",
+                               "headings":  "Placeholder for Toxic-exposure\r"
+                           }
+                       ],
+    "Evidence":  [
+                     {
+                         "file":  "README.md",
+                         "path":  "C:\\Dev\\Rally Forge\\knowledge\\Evidence\\README.md",
+                         "headings":  "Placeholder for Evidence\r"
+                     }
+                 ],
+    "DBQs":  [
+                 {
+                     "file":  "README.md",
+                     "path":  "C:\\Dev\\Rally Forge\\knowledge\\DBQs\\README.md",
+                     "headings":  "Placeholder for DBQs\r"
+                 }
+             ],
+    "Benefits":  [
+                     {
+                         "file":  "README.md",
+                         "path":  "C:\\Dev\\Rally Forge\\knowledge\\Benefits\\README.md",
+                         "headings":  "Placeholder for Benefits\r"
+                     }
+                 ],
+    "STATE_BENEFITS":  [
+                           {
+                               "file":  "STATE_BENEFITS_DATABASE.md",
+                               "path":  "C:\\Dev\\Rally Forge\\knowledge\\STATE_BENEFITS\\STATE_BENEFITS_DATABASE.md",
+                               "headings":  "STATE BENEFITS DATABASE\r"
+                           },
+                           {
+                               "file":  "STATE_BENEFITS_DATABASE_BACKUP_20260302_212539.md",
+                               "path":  "C:\\Dev\\Rally Forge\\knowledge\\STATE_BENEFITS\\STATE_BENEFITS_DATABASE_BACKUP_20260302_212539.md",
+                               "headings":  "STATE BENEFITS DATABASE\r"
+                           },
+                           {
+                               "file":  "STATE_BENEFITS_DATABASE_BACKUP_20260302_212919.md",
+                               "path":  "C:\\Dev\\Rally Forge\\knowledge\\STATE_BENEFITS\\STATE_BENEFITS_DATABASE_BACKUP_20260302_212919.md",
+                               "headings":  "STATE BENEFITS DATABASE\r"
+                           }
+                       ],
+    "Medical":  [
+                    {
+                        "file":  "README.md",
+                        "path":  "C:\\Dev\\Rally Forge\\knowledge\\Medical\\README.md",
+                        "headings":  "Placeholder for Medical\r"
+                    }
+                ],
+    "RATE_DATABASE":  [
+
+                      ],
+    "Appeals":  [
+                    {
+                        "file":  "README.md",
+                        "path":  "C:\\Dev\\Rally Forge\\knowledge\\Appeals\\README.md",
+                        "headings":  "Placeholder for Appeals\r"
+                    }
+                ],
+    "TERA":  [
+                 {
+                     "file":  "README.md",
+                     "path":  "C:\\Dev\\Rally Forge\\knowledge\\TERA\\README.md",
+                     "headings":  "Placeholder for TERA\r"
+                 }
+             ],
+    "part4":  [
+
+              ],
+    "Presumptive_Conditions":  [
+                                   {
+                                       "file":  "README.md",
+                                       "path":  "C:\\Dev\\Rally Forge\\knowledge\\Presumptive_Conditions\\README.md",
+                                       "headings":  "Placeholder for Presumptive_Conditions\r"
+                                   }
+                               ],
+    "Glossary":  [
+                     {
+                         "file":  "README.md",
+                         "path":  "C:\\Dev\\Rally Forge\\knowledge\\Glossary\\README.md",
+                         "headings":  "Placeholder for Glossary\r"
+                     }
+                 ],
+    "Backpay":  [
+                    {
+                        "file":  "README.md",
+                        "path":  "C:\\Dev\\Rally Forge\\knowledge\\Backpay\\README.md",
+                        "headings":  "Placeholder for Backpay\r"
+                    }
+                ],
+    "Cases":  [
+                  {
+                      "file":  "README.md",
+                      "path":  "C:\\Dev\\Rally Forge\\knowledge\\Cases\\README.md",
+                      "headings":  "Placeholder for Cases\r"
+                  }
+              ],
+    "Effective-dates":  [
+                            {
+                                "file":  "README.md",
+                                "path":  "C:\\Dev\\Rally Forge\\knowledge\\Effective-dates\\README.md",
+                                "headings":  "Placeholder for Effective-dates\r"
+                            }
+                        ]
+}

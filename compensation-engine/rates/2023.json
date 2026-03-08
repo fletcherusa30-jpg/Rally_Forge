@@ -1,0 +1,57 @@
+{
+  "year": 2023,
+  "effective_date": "2023-01-01",
+  "version": "1.0.0",
+  "_notes": "Official VA Disability Compensation Rates - 2023",
+  "baseCompensation": {
+    "10": 166.00,
+    "20": 319.00,
+    "30": 492.00,
+    "40": 712.00,
+    "50": 1011.00,
+    "60": 1281.00,
+    "70": 1722.00,
+    "80": 2011.00,
+    "90": 2257.00,
+    "100": 3737.85
+  },
+  "dependents": {
+    "spouse": {
+      "first_child": 86.00,
+      "each_additional_child": 62.00,
+      "first_parent": 86.00,
+      "each_additional_parent": 62.00
+    },
+    "no_spouse": {
+      "first_child": 61.00,
+      "each_additional_child": 43.00,
+      "first_parent": 72.00,
+      "each_additional_parent": 46.00
+    }
+  },
+  "smc": {
+    "K": {"description": "Loss of use of one creative organ", "amount": 245.00, "cfr": "38 CFR 3.350(b)(3)"},
+    "L": {"description": "Loss of use of both creative organs", "amount": 492.00, "cfr": "38 CFR 3.350(b)(4)"},
+    "L½": {"description": "Loss of creative organ with amputation", "amount": 710.00, "cfr": "38 CFR 3.350(b)(4)"},
+    "M": {"description": "Bilateral loss of legs", "amount": 947.00, "cfr": "38 CFR 3.350(b)(6)"},
+    "M½": {"description": "Bilateral loss of legs with additional disability", "amount": 1165.00, "cfr": "38 CFR 3.350(b)(6)"},
+    "N": {"description": "Bilateral loss of arms", "amount": 947.00, "cfr": "38 CFR 3.350(b)(7)"},
+    "N½": {"description": "Bilateral loss of arms with additional disability", "amount": 1165.00, "cfr": "38 CFR 3.350(b)(7)"},
+    "O": {"description": "Loss of both legs and loss of use of both arms", "amount": 2230.00, "cfr": "38 CFR 3.350(b)(8)"},
+    "R1": {"description": "Loss of both arms and loss of both legs", "amount": 2669.00, "cfr": "38 CFR 3.350(b)(9)"},
+    "R2": {"description": "Loss of both eyes and loss of both arms", "amount": 2669.00, "cfr": "38 CFR 3.350(b)(9)"},
+    "S": {"description": "Aid & Attendance SMC", "amount": 663.00, "cfr": "38 CFR 3.352"},
+    "T": {"description": "Highest level SMC", "amount": 855.00, "cfr": "38 CFR 3.350(b)(12)"}
+  },
+  "ancillary": {
+    "clothing_allowance": {"description": "Annual clothing allowance for prosthetic/orthotic wear", "monthly": 35.40, "yearly": 425.00, "cfr": "38 CFR 3.810"},
+    "aid_and_attendance": {"description": "Aid & Attendance allowance", "monthly": 164.00, "cfr": "38 CFR 3.352"},
+    "housebound": {"description": "Housebound allowance for 100% veterans", "monthly": 102.00, "cfr": "38 CFR 3.351"}
+  },
+  "rules": {
+    "smc_combination": "Highest benefit wins (VA combines SMC codes per 38 CFR 3.350)",
+    "bilateral_factor": "Applied per 38 CFR 4.26 (bilateral compensation increase)",
+    "dependent_tier_application": "Base rate + dependent tiers per VA tables",
+    "effective_date_logic": "Use year of effective date to determine applicable rates"
+  }
+}

@@ -1,0 +1,239 @@
+{
+  "exposureType": "Burn Pits and Airborne Hazards",
+  "description": "Toxic exposure to burn pits in Southwest Asia, Afghanistan, and other locations under PACT Act",
+  "eligibleLocations": [
+    "Afghanistan",
+    "Djibouti",
+    "Egypt",
+    "Jordan",
+    "Lebanon",
+    "Syria",
+    "Yemen",
+    "Uzbekistan",
+    "Kuwait",
+    "Iraq",
+    "Saudi Arabia",
+    "Bahrain",
+    "Qatar",
+    "United Arab Emirates",
+    "Oman",
+    "Gulf of Aden",
+    "Gulf of Oman",
+    "Persian Gulf",
+    "Arabian Sea",
+    "Red Sea",
+    "Airspace above these locations"
+  ],
+  "servicePeriod": {
+    "gulfWar": "1990-08-02 to present",
+    "afghanistan": "2001-09-11 to present"
+  },
+  "presumptiveConditions": [
+    {
+      "condition": "Asthma (Diagnosed After Service)",
+      "diagnosticCode": "6602",
+      "effectiveDate": "2021-08-10",
+      "category": "Respiratory",
+      "description": "Chronic respiratory condition causing difficulty breathing"
+    },
+    {
+      "condition": "Chronic Rhinitis",
+      "diagnosticCode": "6522",
+      "effectiveDate": "2021-08-10",
+      "category": "Respiratory",
+      "description": "Chronic inflammation of the nasal passages"
+    },
+    {
+      "condition": "Chronic Sinusitis",
+      "diagnosticCode": "6513",
+      "effectiveDate": "2021-08-10",
+      "category": "Respiratory",
+      "description": "Chronic inflammation or swelling of the tissue lining the sinuses"
+    },
+    {
+      "condition": "Rhinitis",
+      "diagnosticCode": "6522",
+      "effectiveDate": "2021-08-10",
+      "category": "Respiratory",
+      "description": "Inflammation of the nasal passages"
+    },
+    {
+      "condition": "Sinusitis",
+      "diagnosticCode": "6513",
+      "effectiveDate": "2021-08-10",
+      "category": "Respiratory",
+      "description": "Inflammation or swelling of the tissue lining the sinuses"
+    },
+    {
+      "condition": "Chronic Bronchitis",
+      "diagnosticCode": "6600",
+      "effectiveDate": "2021-08-10",
+      "category": "Respiratory",
+      "description": "Long-term inflammation of the bronchial tubes"
+    },
+    {
+      "condition": "Constrictive Bronchiolitis or Obliterative Bronchiolitis",
+      "diagnosticCode": "6604",
+      "effectiveDate": "2021-08-10",
+      "category": "Respiratory",
+      "description": "Rare lung disease that causes scarring in the bronchioles"
+    },
+    {
+      "condition": "Emphysema",
+      "diagnosticCode": "6603",
+      "effectiveDate": "2021-08-10",
+      "category": "Respiratory",
+      "description": "Lung condition causing shortness of breath"
+    },
+    {
+      "condition": "Granulomatous Disease",
+      "diagnosticCode": "6834",
+      "effectiveDate": "2021-08-10",
+      "category": "Respiratory",
+      "description": "Chronic lung disease with granuloma formation"
+    },
+    {
+      "condition": "Interstitial Lung Disease (ILD)",
+      "diagnosticCode": "6825",
+      "effectiveDate": "2021-08-10",
+      "category": "Respiratory",
+      "description": "Group of lung disorders affecting the interstitium"
+    },
+    {
+      "condition": "Pleuritis",
+      "diagnosticCode": "6840",
+      "effectiveDate": "2021-08-10",
+      "category": "Respiratory",
+      "description": "Inflammation of the tissues that line the lungs and chest cavity"
+    },
+    {
+      "condition": "Pulmonary Fibrosis",
+      "diagnosticCode": "6825",
+      "effectiveDate": "2021-08-10",
+      "category": "Respiratory",
+      "description": "Lung disease that causes scarring of lung tissue"
+    },
+    {
+      "condition": "Sarcoidosis",
+      "diagnosticCode": "6846",
+      "effectiveDate": "2021-08-10",
+      "category": "Respiratory",
+      "description": "Growth of tiny collections of inflammatory cells in different parts of the body"
+    },
+    {
+      "condition": "Brain Cancer",
+      "diagnosticCode": "8910",
+      "effectiveDate": "2021-08-10",
+      "category": "Cancer",
+      "description": "Cancer originating in the brain"
+    },
+    {
+      "condition": "Glioblastoma",
+      "diagnosticCode": "8910",
+      "effectiveDate": "2021-08-10",
+      "category": "Cancer",
+      "description": "Aggressive type of brain cancer"
+    },
+    {
+      "condition": "Gastrointestinal Cancer",
+      "diagnosticCode": "7329",
+      "effectiveDate": "2021-08-10",
+      "category": "Cancer",
+      "description": "Cancer of the digestive system"
+    },
+    {
+      "condition": "Head Cancer (includes larynx, nasopharynx, oropharynx)",
+      "diagnosticCode": "6516",
+      "effectiveDate": "2021-08-10",
+      "category": "Cancer",
+      "description": "Cancer of the head and neck region"
+    },
+    {
+      "condition": "Kidney Cancer (Renal)",
+      "diagnosticCode": "7528",
+      "effectiveDate": "2021-08-10",
+      "category": "Cancer",
+      "description": "Cancer of the kidneys"
+    },
+    {
+      "condition": "Lymphoma",
+      "diagnosticCode": "7709",
+      "effectiveDate": "2021-08-10",
+      "category": "Cancer",
+      "description": "Cancer of the lymphatic system"
+    },
+    {
+      "condition": "Melanoma",
+      "diagnosticCode": "7829",
+      "effectiveDate": "2021-08-10",
+      "category": "Cancer",
+      "description": "Serious type of skin cancer"
+    },
+    {
+      "condition": "Neck Cancer",
+      "diagnosticCode": "6516",
+      "effectiveDate": "2021-08-10",
+      "category": "Cancer",
+      "description": "Cancer of the neck region"
+    },
+    {
+      "condition": "Pancreatic Cancer",
+      "diagnosticCode": "7346",
+      "effectiveDate": "2021-08-10",
+      "category": "Cancer",
+      "description": "Cancer of the pancreas"
+    },
+    {
+      "condition": "Reproductive Cancer (includes ovarian, cervical, endometrial, testicular)",
+      "diagnosticCode": "7629",
+      "effectiveDate": "2021-08-10",
+      "category": "Cancer",
+      "description": "Cancer of reproductive organs"
+    },
+    {
+      "condition": "Lymphomatic Cancer",
+      "diagnosticCode": "7715",
+      "effectiveDate": "2021-08-10",
+      "category": "Cancer",
+      "description": "Cancer affecting lymph nodes"
+    },
+    {
+      "condition": "Squamous Cell Carcinoma of the Larynx",
+      "diagnosticCode": "6516",
+      "effectiveDate": "2021-08-10",
+      "category": "Cancer",
+      "description": "Cancer of the voice box"
+    },
+    {
+      "condition": "Squamous Cell Carcinoma of the Trachea",
+      "diagnosticCode": "6599",
+      "effectiveDate": "2021-08-10",
+      "category": "Cancer",
+      "description": "Cancer of the windpipe"
+    },
+    {
+      "condition": "Urinary Bladder Cancer",
+      "diagnosticCode": "7504",
+      "effectiveDate": "2021-08-10",
+      "category": "Cancer",
+      "description": "Cancer of the bladder"
+    }
+  ],
+  "evidenceRequirements": {
+    "serviceConnection": "Presumptive - Requires service in eligible location during or after August 2, 1990",
+    "medicalEvidence": "Current diagnosis required",
+    "layEvidence": "Not required for presumptive service connection",
+    "timeLimit": "Many conditions must manifest within 10 years of last exposure"
+  },
+  "references": [
+    "PACT Act of 2022",
+    "38 CFR § 3.317",
+    "38 U.S.C. § 1116",
+    "M21-1, Part IV, Subpart ii, Chapter 2, Section D"
+  ],
+  "pactActExpansion": {
+    "effectiveDate": "2022-08-10",
+    "description": "PACT Act significantly expanded presumptive conditions for burn pit exposure",
+    "addedConditions": 23
+  }
+}

@@ -1,0 +1,328 @@
+{
+  "metadata": {
+    "program": "Temporary Early Retirement Authority (TERA)",
+    "version": "1.0.0",
+    "last_updated": "2026-03-02",
+    "description": "TERA eligibility criteria for military members retiring with 15-20 years of service"
+  },
+  "program_overview": {
+    "name": "Temporary Early Retirement Authority (TERA)",
+    "authority": "10 USC § 4403 (formerly 10 USC § 3914)",
+    "purpose": "Provides temporary authority for voluntary early retirement of eligible service members with 15-20 years of active service",
+    "active_periods": [
+      {
+        "start_date": "1992-10-23",
+        "end_date": "2001-12-31",
+        "note": "Initial TERA period during drawdown"
+      },
+      {
+        "start_date": "2012-01-01",
+        "end_date": "2025-12-31",
+        "note": "Extended TERA authority"
+      }
+    ],
+    "retirement_multiplier": 0.025,
+    "note": "TERA retirees receive 2.5% per year of service (same as normal retirement), but with fewer years results in lower monthly pension"
+  },
+  "eligibility": {
+    "basic_requirements": [
+      {
+        "requirement": "Active Duty Service",
+        "description": "Must be serving on active duty at time of retirement",
+        "mandatory": true
+      },
+      {
+        "requirement": "Years of Service",
+        "description": "Minimum 15 years, maximum less than 20 years of creditable active service",
+        "minimum_years": 15,
+        "maximum_years": 19.99,
+        "mandatory": true
+      },
+      {
+        "requirement": "Service Secretary Approval",
+        "description": "Requires approval from Secretary of the military department",
+        "mandatory": true
+      },
+      {
+        "requirement": "Voluntary Application",
+        "description": "Service member must voluntarily apply for TERA retirement",
+        "mandatory": true
+      },
+      {
+        "requirement": "Program Availability",
+        "description": "TERA program must be active and available for member's branch",
+        "mandatory": true,
+        "note": "TERA availability varies by service branch and force structure requirements"
+      }
+    ],
+    "branch_specific_criteria": {
+      "Army": {
+        "available": true,
+        "additional_requirements": [
+          "Must be in approved MOS/grade combination",
+          "Subject to Annual manning targets"
+        ],
+        "notes": "Army typically opens TERA windows annually based on force management needs"
+      },
+      "Navy": {
+        "available": true,
+        "additional_requirements": [
+          "Must be in approved rating/grade combination",
+          "Subject to community health requirements"
+        ],
+        "notes": "Navy TERA availability varies by rating and paygrade"
+      },
+      "Air Force": {
+        "available": true,
+        "additional_requirements": [
+          "Must be in approved AFSC/grade combination",
+          "Subject to Force Management priorities"
+        ],
+        "notes": "Air Force typically offers TERA during force reduction initiatives"
+      },
+      "Marine Corps": {
+        "available": true,
+        "additional_requirements": [
+          "Must be in approved MOS/grade combination",
+          "Subject to manpower requirements"
+        ],
+        "notes": "Marine Corps TERA windows are often limited and selective"
+      },
+      "Space Force": {
+        "available": false,
+        "notes": "TERA not currently available for Space Force members due to force building phase"
+      },
+      "Coast Guard": {
+        "available": false,
+        "notes": "Coast Guard typically does not offer TERA; uses other separation programs"
+      }
+    },
+    "disqualifying_factors": [
+      {
+        "factor": "Court-Martial Conviction",
+        "description": "General Court-Martial conviction typically disqualifies TERA eligibility",
+        "exceptions": "Case-by-case basis depending on nature of offense"
+      },
+      {
+        "factor": "Pending Disciplinary Action",
+        "description": "Member under investigation or pending court-martial",
+        "exceptions": "May be eligible after resolution if otherwise qualified"
+      },
+      {
+        "factor": "Service Commitment",
+        "description": "Outstanding Active Duty Service Commitment (ADSC)",
+        "exceptions": "Some commitments may be waived for TERA purposes"
+      },
+      {
+        "factor": "Medical Disability",
+        "description": "Members eligible for medical retirement typically processed under disability system instead",
+        "exceptions": "May elect TERA in lieu of disability retirement in some cases"
+      }
+    ]
+  },
+  "retirement_calculation": {
+    "formula": "monthly_retirement_pay = (years_of_service × 0.025) × high_36_average_pay",
+    "high_36_definition": "Average of highest 36 months of basic pay",
+    "minimum_percentage": "37.5% at 15 years",
+    "maximum_percentage": "50% at 20 years",
+    "examples": [
+      {
+        "years_of_service": 15,
+        "high_36_average": 5000,
+        "calculation": "15 × 0.025 = 0.375 (37.5%)",
+        "monthly_retirement": 1875,
+        "annual_retirement": 22500,
+        "note": "37.5% multiplier at 15 years"
+      },
+      {
+        "years_of_service": 17,
+        "high_36_average": 5500,
+        "calculation": "17 × 0.025 = 0.425 (42.5%)",
+        "monthly_retirement": 2337.50,
+        "annual_retirement": 28050,
+        "note": "42.5% multiplier at 17 years"
+      },
+      {
+        "years_of_service": 19,
+        "high_36_average": 6000,
+        "calculation": "19 × 0.025 = 0.475 (47.5%)",
+        "monthly_retirement": 2850,
+        "annual_retirement": 34200,
+        "note": "47.5% multiplier at 19 years"
+      }
+    ]
+  },
+  "benefits_and_limitations": {
+    "benefits": [
+      {
+        "benefit": "Immediate Retirement Pay",
+        "description": "Begin receiving retirement pay upon retirement",
+        "note": "No waiting period; payments start upon retirement date"
+      },
+      {
+        "benefit": "TRICARE Health Coverage",
+        "description": "Access to TRICARE health insurance for retiree and dependents",
+        "note": "Standard TRICARE retiree options available"
+      },
+      {
+        "benefit": "VA Benefits Eligibility",
+        "description": "Eligible for VA healthcare, disability compensation, and other VA programs",
+        "note": "Must apply separately through VA"
+      },
+      {
+        "benefit": "Military Exchange and Commissary",
+        "description": "Continued access to military shopping facilities",
+        "note": "Full privileges retained"
+      },
+      {
+        "benefit": "Space-A Travel",
+        "description": "Space-Available travel on military aircraft",
+        "note": "Retiree category for space-available boarding"
+      }
+    ],
+    "limitations": [
+      {
+        "limitation": "Reduced Retirement Pay",
+        "description": "TERA retirement results in significantly lower monthly pension compared to 20-year retirement",
+        "impact": "At 15 years: 37.5% vs 50% at 20 years (25% less income)",
+        "example": "Same $5,000 high-36: TERA 15yrs = $1,875/mo vs 20yrs = $2,500/mo"
+      },
+      {
+        "limitation": "SBP Deduction Impact",
+        "description": "Survivor Benefit Plan (SBP) deduction is higher percentage of smaller retirement pay",
+        "note": "SBP costs same % but applies to lower base amount"
+      },
+      {
+        "limitation": "Future COLA",
+        "description": "Annual Cost of Living Adjustments (COLA) apply to smaller base amount",
+        "impact": "Lower starting pension means lower cumulative COLA increases over lifetime"
+      },
+      {
+        "limitation": "Career Flexibility",
+        "description": "Once retired under TERA, cannot return to active duty to complete 20 years",
+        "note": "Decision is permanent; cannot reverse to complete full 20-year career"
+      },
+      {
+        "limitation": "Age 62 Recalculation",
+        "description": "TERA retirement pay NOT subject to Redux recalculation at age 62",
+        "note": "This is actually beneficial - no reduction at age 62 for TERA retirees"
+      }
+    ]
+  },
+  "application_process": {
+    "steps": [
+      {
+        "step": 1,
+        "action": "Monitor TERA Windows",
+        "description": "Watch for TERA application windows announced by service branch",
+        "timeline": "Varies by service; typically annual or as needed"
+      },
+      {
+        "step": 2,
+        "action": "Verify Eligibility",
+        "description": "Confirm years of service, grade, MOS/rating eligibility",
+        "timeline": "Before application window opens"
+      },
+      {
+        "step": 3,
+        "action": "Submit Application",
+        "description": "Complete and submit TERA retirement application through chain of command",
+        "timeline": "During open application window (typically 30-60 days)"
+      },
+      {
+        "step": 4,
+        "action": "Financial Planning",
+        "description": "Attend pre-separation counseling and financial planning sessions",
+        "timeline": "Upon application submission"
+      },
+      {
+        "step": 5,
+        "action": "Approval/Disapproval",
+        "description": "Service Secretary reviews and approves/disapproves applications",
+        "timeline": "30-90 days after application window closes"
+      },
+      {
+        "step": 6,
+        "action": "Retirement Orders",
+        "description": "If approved, receive retirement orders with effective date",
+        "timeline": "60-180 days prior to retirement date"
+      },
+      {
+        "step": 7,
+        "action": "TAP/SFL-TAP",
+        "description": "Complete Transition Assistance Program training",
+        "timeline": "Required within 12 months of separation"
+      },
+      {
+        "step": 8,
+        "action": "Out-Processing",
+        "description": "Complete all required out-processing actions",
+        "timeline": "Final 30-90 days of service"
+      },
+      {
+        "step": 9,
+        "action": "Retirement",
+        "description": "Final day of active service; retirement effective",
+        "timeline": "Retirement date on orders"
+      }
+    ]
+  },
+  "considerations": {
+    "financial": [
+      "Calculate lifetime retirement income difference (15-19 years vs 20 years)",
+      "Compare TERA retirement to civilian earning potential",
+      "Factor in healthcare costs (TRICARE vs civilian insurance)",
+      "Consider Survivor Benefit Plan (SBP) costs and coverage",
+      "Evaluate impact on TSP/401k savings timeline"
+    ],
+    "healthcare": [
+      "TRICARE coverage for retirees and dependents",
+      "VA healthcare eligibility and enrollment",
+      "Compare costs: TRICARE vs civilian employer insurance",
+      "Consider family healthcare needs"
+    ],
+    "career": [
+      "Civilian job market for your skills",
+      "Certifications and education needed for civilian career",
+      "Networking and job search timeline",
+      "Using  military skills translator tools"
+    ],
+    "personal": [
+      "Family preferences and location flexibility",
+      "Spouse employment opportunities",
+      "Children's education stability",
+      "Retirement location cost of living"
+    ]
+  },
+  "resources": {
+    "official": [
+      {
+        "name": "Defense Finance and Accounting Service (DFAS)",
+        "url": "https://www.dfas.mil/RetiredMilitary/",
+        "description": "Official retirement pay information and calculators"
+      },
+      {
+        "name": "Military OneSource",
+        "url": "https://www.militaryonesource.mil/",
+        "description": "Financial counseling and transition resources"
+      },
+      {
+        "name": "VA Benefits",
+        "url": "https://www.va.gov/",
+        "description": "VA healthcare and benefits information"
+      }
+    ],
+    "calculators": [
+      {
+        "name": "DFAS Retirement Calculator",
+        "url": "https://www.dfas.mil/retiredmilitary/plan/estimate-your-retirement-pay/",
+        "description": "Official military retirement pay calculator"
+      },
+      {
+        "name": "Military Pay Comparison",
+        "url": "https://militarypay.defense.gov/calculators/",
+        "description": "Compare active duty pay vs retirement scenarios"
+      }
+    ]
+  }
+}

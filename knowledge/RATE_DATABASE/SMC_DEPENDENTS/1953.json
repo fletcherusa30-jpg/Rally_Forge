@@ -1,0 +1,21 @@
+{
+  "rates": {
+    "S_with_spouse_and_child": {
+      "description": "SMC-S with spouse and one child",
+      "rate": 4815.89
+    },
+    "additional_child": {
+      "description": "Each additional child",
+      "rate": 143.63
+    },
+    "S_with_child": {
+      "description": "SMC-S with one child",
+      "rate": 4607.47
+    },
+    "S_with_spouse": {
+      "description": "SMC-S with spouse",
+      "rate": 4672.26
+    }
+  },
+  "year": 1953
+}

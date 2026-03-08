@@ -1,0 +1,22 @@
+﻿{
+    "id":  "",
+    "name":  null,
+    "category":  null,
+    "subcategory":  null,
+    "country":  null,
+    "state":  null,
+    "city":  null,
+    "coordinates":  {
+                        "lat":  null,
+                        "lng":  null
+                    },
+    "startDate":  null,
+    "endDate":  null,
+    "exposureTypes":  null,
+    "associatedUnits":  null,
+    "associatedBases":  null,
+    "associatedShips":  null,
+    "regulatoryReferences":  null,
+    "confidence":  null,
+    "notes":  null
+}

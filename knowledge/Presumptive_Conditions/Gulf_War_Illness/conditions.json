@@ -1,0 +1,225 @@
+{
+  "exposureType": "Gulf War Illness / Chronic Multisymptom Illness",
+  "description": "Medically unexplained chronic multisymptom illness affecting Gulf War veterans",
+  "eligibleLocations": [
+    "Iraq",
+    "Kuwait",
+    "Saudi Arabia",
+    "Neutral Zone between Iraq and Saudi Arabia",
+    "Bahrain",
+    "Qatar",
+    "United Arab Emirates",
+    "Oman",
+    "Gulf of Aden",
+    "Gulf of Oman",
+    "Persian Gulf",
+    "Arabian Sea",
+    "Red Sea",
+    "Airspace above these locations"
+  ],
+  "servicePeriod": {
+    "gulfWar": "1990-08-02 to present",
+    "description": "Ongoing as the Gulf War period never officially ended"
+  },
+  "qualifyingSymptoms": {
+    "description": "Must have one or more of these medically unexplained chronic symptoms that appeared during or after Gulf War service",
+    "chronicDuration": "6 months or more",
+    "symptoms": [
+      {
+        "category": "Fatigue",
+        "manifestations": [
+          "Chronic fatigue syndrome",
+          "Persistent fatigue",
+          "Extreme tiredness not improved by rest"
+        ]
+      },
+      {
+        "category": "Musculoskeletal",
+        "manifestations": [
+          "Joint pain",
+          "Muscle pain",
+          "Widespread pain",
+          "Fibromyalgia"
+        ]
+      },
+      {
+        "category": "Neurological/Cognitive",
+        "manifestations": [
+          "Headaches",
+          "Memory problems",
+          "Difficulty concentrating",
+          "Sleep disturbances",
+          "Dizziness",
+          "Balance problems"
+        ]
+      },
+      {
+        "category": "Gastrointestinal",
+        "manifestations": [
+          "Irritable bowel syndrome",
+          "Diarrhea",
+          "Constipation",
+          "Abdominal pain",
+          "Indigestion"
+        ]
+      },
+      {
+        "category": "Respiratory",
+        "manifestations": [
+          "Shortness of breath",
+          "Breathing difficulties"
+        ]
+      },
+      {
+        "category": "Skin",
+        "manifestations": [
+          "Skin rashes",
+          "Unexplained skin problems"
+        ]
+      },
+      {
+        "category": "Cardiovascular",
+        "manifestations": [
+          "Rapid heartbeat",
+          "Chest pain"
+        ]
+      },
+      {
+        "category": "Mood and Cognition",
+        "manifestations": [
+          "Depression",
+          "Anxiety",
+          "Mood swings",
+          "Difficulty with word finding"
+        ]
+      }
+    ]
+  },
+  "presumptiveConditions": [
+    {
+      "condition": "Chronic Fatigue Syndrome",
+      "diagnosticCode": "6354",
+      "effectiveDate": "1994-10-01",
+      "description": "Severe chronic fatigue lasting 6 months or more"
+    },
+    {
+      "condition": "Fibromyalgia",
+      "diagnosticCode": "5025",
+      "effectiveDate": "1999-12-16",
+      "description": "Widespread musculoskeletal pain with tenderness in localized areas"
+    },
+    {
+      "condition": "Functional Gastrointestinal Disorders",
+      "diagnosticCode": "7319",
+      "effectiveDate": "2001-05-31",
+      "description": "Chronic functional gastrointestinal disorders including IBS, functional dyspepsia, functional abdominal pain syndrome"
+    },
+    {
+      "condition": "Medically Unexplained Chronic Multisymptom Illness",
+      "diagnosticCode": "5099",
+      "effectiveDate": "2010-10-10",
+      "description": "Chronic multisymptom illness of unknown etiology presenting with multiple symptoms",
+      "note": "Must have multiple symptoms from at least two of the qualifying categories"
+    },
+    {
+      "condition": "Undiagnosed Illness",
+      "diagnosticCode": "5099",
+      "effectiveDate": "1994-10-01",
+      "description": "Medically unexplained symptoms that may include but are not limited to fatigue, musculoskeletal pain, cognitive problems",
+      "note": "Does not require a specific diagnosis - symptoms alone can qualify"
+    }
+  ],
+  "infectiousDiseases": [
+    {
+      "condition": "Brucellosis",
+      "diagnosticCode": "6301",
+      "effectiveDate": "1991-12-01",
+      "description": "Bacterial infection",
+      "timeLimit": "No time limit for manifestation"
+    },
+    {
+      "condition": "Campylobacter jejuni",
+      "diagnosticCode": "7319",
+      "effectiveDate": "2001-12-01",
+      "description": "Bacterial infection",
+      "timeLimit": "No time limit for manifestation"
+    },
+    {
+      "condition": "Coxiella burnetii (Q Fever)",
+      "diagnosticCode": "6329",
+      "effectiveDate": "2001-12-01",
+      "description": "Bacterial infection",
+      "timeLimit": "No time limit for manifestation"
+    },
+    {
+      "condition": "Malaria",
+      "diagnosticCode": "6304",
+      "effectiveDate": "2010-01-01",
+      "description": "Parasitic infection",
+      "timeLimit": "No time limit for manifestation"
+    },
+    {
+      "condition": "Mycobacterium tuberculosis",
+      "diagnosticCode": "6730",
+      "effectiveDate": "2008-07-13",
+      "description": "Tuberculosis",
+      "timeLimit": "Must manifest by December 31, 2021"
+    },
+    {
+      "condition": "Nontyphoid Salmonella",
+      "diagnosticCode": "7319",
+      "effectiveDate": "2001-12-01",
+      "description": "Bacterial infection",
+      "timeLimit": "No time limit for manifestation"
+    },
+    {
+      "condition": "Shigella",
+      "diagnosticCode": "7319",
+      "effectiveDate": "2001-12-01",
+      "description": "Bacterial infection causing dysentery",
+      "timeLimit": "No time limit for manifestation"
+    },
+    {
+      "condition": "Visceral Leishmaniasis",
+      "diagnosticCode": "6329",
+      "effectiveDate": "2011-01-01",
+      "description": "Parasitic infection",
+      "timeLimit": "No time limit for manifestation"
+    },
+    {
+      "condition": "West Nile Virus",
+      "diagnosticCode": "6329",
+      "effectiveDate": "2008-07-13",
+      "description": "Viral infection",
+      "timeLimit": "No time limit for manifestation"
+    }
+  ],
+  "evidenceRequirements": {
+    "serviceConnection": "Presumptive - Must have served in Southwest Asia theater during Gulf War period",
+    "medicalEvidence": "Current diagnosis or documented chronic symptoms (6+ months)",
+    "layEvidence": "Helpful but not required - buddy statements can support symptom onset",
+    "disabilityRating": "Must be at least 10% disabling to qualify for presumptive service connection"
+  },
+  "specialConsiderations": {
+    "multipleSymptoms": "Veterans often have multiple qualifying symptoms - each should be evaluated separately",
+    "chronicRequirement": "Symptoms must be chronic (6+ months) to qualify",
+    "noSpecificDiagnosis": "Undiagnosed illness provision allows service connection without specific medical diagnosis",
+    "timeLimit": "Most conditions have no time limit for manifestation - can appear years after service"
+  },
+  "references": [
+    "38 CFR § 3.317",
+    "38 U.S.C. § 1117",
+    "38 U.S.C. § 1118",
+    "M21-1, Part IV, Subpart ii, Chapter 2, Section D",
+    "VA Gulf War Veterans Illnesses Biomedical Research"
+  ],
+  "relatedExposures": [
+    "Chemical weapons",
+    "Depleted uranium",
+    "Pesticides",
+    "Pyridostigmine bromide (anti-nerve gas pills)",
+    "Smoke from oil well fires",
+    "Vaccines (anthrax, botulinum)",
+    "Sand and dust particulates"
+  ]
+}

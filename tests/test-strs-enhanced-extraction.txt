@@ -1,0 +1,60 @@
+Page 1
+
+Medical Examination Report
+Date: January 15, 2020
+
+Patient presents with chronic back pain affecting lumbar region. Reports pain began during military service in 2018 after training accident. Pain is persistent and limits daily activities.
+
+Assessment:
+- Back pain, chronic
+- Lumbar strain
+
+Treatment:
+- Physical therapy recommended
+- Ibuprofen 800mg prescribed
+
+Page 2
+
+Follow-up Visit
+Date: March 22, 2020
+
+Patient returns with ongoing back pain. States pain has worsened and now radiates to left leg. Also reports new onset knee pain following same incident.
+
+Assessment:  
+- Back pain, persistent (chronic condition)
+- Knee pain, patellofemoral syndrome
+- Radiculopathy, left lower extremity
+
+Medications:
+- Ibuprofen continued
+- Gabapentin 300mg added for neuropathic pain
+
+Page 3
+
+Follow-up Visit
+Date: July 10, 2020
+
+Back pain continues. Patient reports difficulty performing duties. Knee pain also persists. Line of duty event documented in service records from 2018 training accident.
+
+Assessment:
+- Chronic lumbar strain, ongoing
+- Knee joint degeneration
+- Duty limitation recommended: no heavy lifting
+
+Page 4
+
+Follow-up Visit  
+Date: November 5, 2020
+
+Patient presents with depression symptoms. Reports difficulty sleeping, anxiety, and loss of interest in activities. States symptoms began after 2018 injury and have worsened over time.
+
+Assessment:
+- Depression, major
+- Anxiety disorder
+- Insomnia
+
+Medications:
+- Sertraline 50mg prescribed for depression
+- Hydroxyzine 25mg for anxiety
+
+Nexus: Depression appears secondary to chronic pain condition from in-service injury.

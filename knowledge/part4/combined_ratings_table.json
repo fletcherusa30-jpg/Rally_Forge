@@ -1,0 +1,64 @@
+{
+  "sectionNumber": "§4.25",
+  "title": "Combined ratings table",
+  "method": "whole_person_efficiency",
+  "formula": "combined = 100 - product((100-rating)/100 for each rating)",
+  "rules": [
+    {
+      "rule": "Order disabilities by severity, descending",
+      "type": "mandatory",
+      "citation": "38 CFR §4.25(a)",
+      "rawText": "the disabilities will first be arranged in the exact order of their severity"
+    },
+    {
+      "rule": "Combine using Table I efficiency reduction method",
+      "type": "mandatory",
+      "citation": "38 CFR §4.25(a)",
+      "rawText": "Proceeding from this 40 percent efficiency, the effect of a further 30 percent disability is to leave only 70 percent of the efficiency remaining"
+    },
+    {
+      "rule": "Round to nearest 10, adjusting 5s upward",
+      "type": "mandatory",
+      "citation": "38 CFR §4.25(a)",
+      "rawText": "combined values ending in 5 will be adjusted upward"
+    },
+    {
+      "rule": "Convert to nearest 10 only once per decision",
+      "type": "mandatory",
+      "citation": "38 CFR §4.25(b)",
+      "rawText": "The conversion to the nearest degree divisible by 10 will be done only once per rating decision"
+    }
+  ],
+  "examples": [
+    {
+      "disabilities": [
+        60,
+        30
+      ],
+      "unrounded": 72,
+      "rounded": 70,
+      "citation": "38 CFR §4.25(a)"
+    },
+    {
+      "disabilities": [
+        40,
+        20
+      ],
+      "unrounded": 52,
+      "rounded": 50,
+      "citation": "38 CFR §4.25(a)"
+    },
+    {
+      "disabilities": [
+        60,
+        40,
+        20
+      ],
+      "step1": "60 + 40 = 76",
+      "step2": "76 + 20 = 81",
+      "rounded": 80,
+      "citation": "38 CFR §4.25(a)"
+    }
+  ],
+  "fullText": " "
+}

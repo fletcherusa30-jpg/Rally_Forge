@@ -1,0 +1,20 @@
+{
+  "model": "rally-forge-claims-strategy-v1",
+  "version": "1.0.0",
+  "description": "AI model configuration for VA claims strategy analysis",
+  "type": "heuristic-llm-hybrid",
+  "capabilities": [
+    "claim_analysis",
+    "evidence_evaluation",
+    "strategy_recommendation",
+    "timeline_prediction"
+  ],
+  "config": {
+    "confidence_threshold": 0.70,
+    "username_fallback_rules": true,
+    "max_recommendations": 10
+  },
+  "status": "active",
+  "last_updated": "2026-02-22"
+}
+

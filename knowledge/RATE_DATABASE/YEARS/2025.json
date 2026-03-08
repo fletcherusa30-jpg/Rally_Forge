@@ -1,0 +1,18 @@
+{
+  "year": 2025,
+  "effectiveDate": "2024-12-01",
+  "colaIncrease": 3.2,
+  "ratings": {
+    "10": { "veteran": 171.23 },
+    "20": { "veteran": 338.49 },
+    "30": { "veteran": 524.31, "veteran_spouse": 586.31, "veteran_child": 563.31 },
+    "40": { "veteran": 755.28, "veteran_spouse": 838.28, "veteran_child": 806.28 },
+    "50": { "veteran": 1075.16, "veteran_spouse": 1179.16, "veteran_child": 1137.16 },
+    "60": { "veteran": 1361.88, "veteran_spouse": 1486.88, "veteran_child": 1434.88 },
+    "70": { "veteran": 1716.28, "veteran_spouse": 1861.28, "veteran_child": 1799.28 },
+    "80": { "veteran": 1995.01, "veteran_spouse": 2161.01, "veteran_child": 2089.01 },
+    "90": { "veteran": 2241.91, "veteran_spouse": 2428.91, "veteran_child": 2346.91 },
+    "100": { "veteran": 3737.85, "veteran_spouse": 3946.27, "veteran_one_parent": 3909.63, "veteran_two_parents": 4081.40, "veteran_child": 3881.48, "veteran_spouse_child": 4089.90, "additional_child": 143.63 }
+  },
+  "notes": "2025 rates (3.2% COLA effective December 1, 2024)"
+}

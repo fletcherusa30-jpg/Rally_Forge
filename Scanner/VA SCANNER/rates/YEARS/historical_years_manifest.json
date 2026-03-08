@@ -1,0 +1,378 @@
+﻿{
+    "directory":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS",
+    "years":  [
+                  {
+                      "year":  1950,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1950.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1951,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1951.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1952,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1952.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1953,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1953.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1954,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1954.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1955,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1955.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1956,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1956.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1957,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1957.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1958,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1958.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1959,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1959.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1960,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1960.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1961,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1961.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1962,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1962.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1963,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1963.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1964,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1964.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1965,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1965.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1966,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1966.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1967,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1967.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1968,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1968.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1969,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1969.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1970,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1970.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1971,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1971.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1972,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1972.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1973,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1973.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1974,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1974.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1975,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1975.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1976,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1976.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1977,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1977.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1978,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1978.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1979,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1979.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1980,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1980.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1981,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1981.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1982,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1982.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1983,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1983.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1984,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1984.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1985,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1985.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1986,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1986.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1987,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1987.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1988,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1988.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1989,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1989.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1990,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1990.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1991,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1991.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1992,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1992.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1993,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1993.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1994,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1994.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1995,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1995.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1996,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1996.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1997,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1997.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1998,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1998.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  1999,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\1999.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  2000,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\2000.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  2001,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\2001.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  2002,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\2002.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  2003,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\2003.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  2004,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\2004.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  2005,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\2005.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  2006,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\2006.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  2007,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\2007.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  2008,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\2008.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  2009,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\2009.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  2010,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\2010.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  2011,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\2011.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  2012,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\2012.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  2013,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\2013.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  2014,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\2014.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  2015,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\2015.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  2016,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\2016.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  2017,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\2017.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  2018,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\2018.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  2019,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\2019.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  2020,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\2020.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  2021,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\2021.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  2022,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\2022.json",
+                      "status":  "template_needs_historical_rates"
+                  },
+                  {
+                      "year":  2023,
+                      "path":  "C:\\Dev\\Rally Forge\\VA SCANNER\\rates\\YEARS\\2023.json",
+                      "status":  "template_needs_historical_rates"
+                  }
+              ],
+    "requiredData":  "Historical VA disability rates (base, dependents, SMC, ancillary) for 1950–2023.",
+    "status":  "pending",
+    "lastUpdatedUtc":  "2026-03-01T20:09:31.0337055Z"
+}

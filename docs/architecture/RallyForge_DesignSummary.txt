@@ -1,0 +1,671 @@
+﻿Rally Forge – Ultra-Small Design Summary
+Generated: 02/26/2026 14:06:46
+=====================================================
+
+TOP-LEVEL FOLDERS:
+-----------------------------------------------------
+.vscode
+api
+app
+archives
+backend
+core
+design_extract
+dist
+engine
+frontend
+knowledge
+logs
+md_archive
+md_archive_root
+new_scanner
+node_modules
+packages
+PACT_Act
+Presumptive_Conditions
+public
+services
+source-documents
+src
+STATE BENEFITS
+STRS_SCANNER
+TERA
+tests
+tooling
+VA SCANNER
+_ScannerAudit
+
+=====================================================
+
+KEY SUBFOLDERS (ONE LEVEL DEEP):
+-----------------------------------------------------
+app/backend
+app/cli
+app/config
+app/data
+app/docs
+app/engine
+app/frontend
+app/knowledge
+app/logs
+app/packages
+app/scanners
+app/scripts
+app/security
+app/services
+app/utils
+archives/FINANCIAL_ENGINE_20260218
+archives/frontend_20260218
+backend/api
+backend/data
+backend/database
+backend/engine
+backend/middleware
+backend/rules
+backend/services
+backend/shared
+backend/tests
+backend/utils
+backend/va_scanner
+dist/assets
+frontend/modules
+frontend/scanner
+knowledge/part3
+knowledge/part4
+knowledge/_raw_extraction
+node_modules/.bin
+node_modules/.vite
+node_modules/.vite-temp
+node_modules/@anthropic-ai
+node_modules/@babel
+node_modules/@esbuild
+node_modules/@eslint
+node_modules/@eslint-community
+node_modules/@humanfs
+node_modules/@humanwhocodes
+node_modules/@jridgewell
+node_modules/@mongodb-js
+node_modules/@napi-rs
+node_modules/@rally
+node_modules/@rolldown
+node_modules/@rollup
+node_modules/@types
+node_modules/@vitejs
+node_modules/accepts
+node_modules/acorn
+node_modules/acorn-jsx
+node_modules/ajv
+node_modules/ansi-regex
+node_modules/ansi-styles
+node_modules/append-field
+node_modules/argparse
+node_modules/array-buffer-byte-length
+node_modules/array-flatten
+node_modules/array-includes
+node_modules/array.prototype.findlast
+node_modules/array.prototype.flat
+node_modules/array.prototype.flatmap
+node_modules/array.prototype.tosorted
+node_modules/arraybuffer.prototype.slice
+node_modules/async
+node_modules/async-function
+node_modules/available-typed-arrays
+node_modules/balanced-match
+node_modules/baseline-browser-mapping
+node_modules/basic-auth
+node_modules/bmp-js
+node_modules/body-parser
+node_modules/brace-expansion
+node_modules/browserslist
+node_modules/bson
+node_modules/buffer-from
+node_modules/busboy
+node_modules/bytes
+node_modules/call-bind
+node_modules/call-bind-apply-helpers
+node_modules/call-bound
+node_modules/callsites
+node_modules/caniuse-lite
+node_modules/chalk
+node_modules/cliui
+node_modules/color-convert
+node_modules/color-name
+node_modules/concat-map
+node_modules/concat-stream
+node_modules/concurrently
+node_modules/content-disposition
+node_modules/content-type
+node_modules/convert-source-map
+node_modules/cookie
+node_modules/cookie-signature
+node_modules/corser
+node_modules/cross-spawn
+node_modules/data-view-buffer
+node_modules/data-view-byte-length
+node_modules/data-view-byte-offset
+node_modules/date-fns
+node_modules/debug
+node_modules/deep-is
+node_modules/define-data-property
+node_modules/define-properties
+node_modules/depd
+node_modules/destroy
+node_modules/doctrine
+node_modules/dunder-proto
+node_modules/ee-first
+node_modules/electron-to-chromium
+node_modules/emoji-regex
+node_modules/encodeurl
+node_modules/es-abstract
+node_modules/es-define-property
+node_modules/es-errors
+node_modules/es-iterator-helpers
+node_modules/es-object-atoms
+node_modules/es-set-tostringtag
+node_modules/es-shim-unscopables
+node_modules/es-to-primitive
+node_modules/esbuild
+node_modules/escalade
+node_modules/escape-html
+node_modules/escape-string-regexp
+node_modules/eslint
+node_modules/eslint-plugin-react
+node_modules/eslint-plugin-react-hooks
+node_modules/eslint-scope
+node_modules/eslint-visitor-keys
+node_modules/espree
+node_modules/esquery
+node_modules/esrecurse
+node_modules/estraverse
+node_modules/esutils
+node_modules/etag
+node_modules/eventemitter3
+node_modules/express
+node_modules/fast-deep-equal
+node_modules/fast-json-stable-stringify
+node_modules/fast-levenshtein
+node_modules/fdir
+node_modules/file-entry-cache
+node_modules/finalhandler
+node_modules/find-up
+node_modules/flat-cache
+node_modules/flatted
+node_modules/follow-redirects
+node_modules/for-each
+node_modules/forwarded
+node_modules/fresh
+node_modules/function-bind
+node_modules/function.prototype.name
+node_modules/functions-have-names
+node_modules/generator-function
+node_modules/gensync
+node_modules/get-caller-file
+node_modules/get-intrinsic
+node_modules/get-proto
+node_modules/get-symbol-description
+node_modules/glob-parent
+node_modules/globals
+node_modules/globalthis
+node_modules/gopd
+node_modules/has-bigints
+node_modules/has-flag
+node_modules/has-property-descriptors
+node_modules/has-proto
+node_modules/has-symbols
+node_modules/has-tostringtag
+node_modules/hasown
+node_modules/he
+node_modules/hermes-estree
+node_modules/hermes-parser
+node_modules/html-encoding-sniffer
+node_modules/http-errors
+node_modules/http-proxy
+node_modules/http-server
+node_modules/iconv-lite
+node_modules/idb-keyval
+node_modules/ignore
+node_modules/import-fresh
+node_modules/imurmurhash
+node_modules/inherits
+node_modules/internal-slot
+node_modules/ipaddr.js
+node_modules/is-array-buffer
+node_modules/is-async-function
+node_modules/is-bigint
+node_modules/is-boolean-object
+node_modules/is-callable
+node_modules/is-core-module
+node_modules/is-data-view
+node_modules/is-date-object
+node_modules/is-extglob
+node_modules/is-finalizationregistry
+node_modules/is-fullwidth-code-point
+node_modules/is-generator-function
+node_modules/is-glob
+node_modules/is-map
+node_modules/is-negative-zero
+node_modules/is-number-object
+node_modules/is-regex
+node_modules/is-set
+node_modules/is-shared-array-buffer
+node_modules/is-string
+node_modules/is-symbol
+node_modules/is-typed-array
+node_modules/is-url
+node_modules/is-weakmap
+node_modules/is-weakref
+node_modules/is-weakset
+node_modules/isarray
+node_modules/isexe
+node_modules/iterator.prototype
+node_modules/js-tokens
+node_modules/js-yaml
+node_modules/jsesc
+node_modules/json-buffer
+node_modules/json-schema-to-ts
+node_modules/json-schema-traverse
+node_modules/json-stable-stringify-without-jsonify
+node_modules/json5
+node_modules/jsx-ast-utils
+node_modules/keyv
+node_modules/levn
+node_modules/locate-path
+node_modules/lodash
+node_modules/lodash.merge
+node_modules/loose-envify
+node_modules/lru-cache
+node_modules/math-intrinsics
+node_modules/media-typer
+node_modules/memory-pager
+node_modules/merge-descriptors
+node_modules/methods
+node_modules/mime
+node_modules/mime-db
+node_modules/mime-types
+node_modules/minimatch
+node_modules/minimist
+node_modules/mkdirp
+node_modules/mongodb
+node_modules/mongodb-connection-string-url
+node_modules/ms
+node_modules/multer
+node_modules/nanoid
+node_modules/natural-compare
+node_modules/negotiator
+node_modules/node-exports-info
+node_modules/node-fetch
+node_modules/node-releases
+node_modules/object-assign
+node_modules/object-inspect
+node_modules/object-keys
+node_modules/object.assign
+node_modules/object.entries
+node_modules/object.fromentries
+node_modules/object.values
+node_modules/on-finished
+node_modules/opencollective-postinstall
+node_modules/opener
+node_modules/optionator
+node_modules/own-keys
+node_modules/p-limit
+node_modules/p-locate
+node_modules/parent-module
+node_modules/parseurl
+node_modules/path-exists
+node_modules/path-key
+node_modules/path-parse
+node_modules/path-to-regexp
+node_modules/pdfjs-dist
+node_modules/picocolors
+node_modules/picomatch
+node_modules/portfinder
+node_modules/possible-typed-array-names
+node_modules/postcss
+node_modules/prelude-ls
+node_modules/prettier
+node_modules/prop-types
+node_modules/proxy-addr
+node_modules/punycode
+node_modules/qs
+node_modules/range-parser
+node_modules/raw-body
+node_modules/react
+node_modules/react-dom
+node_modules/react-is
+node_modules/react-refresh
+node_modules/readable-stream
+node_modules/reflect.getprototypeof
+node_modules/regenerator-runtime
+node_modules/regexp.prototype.flags
+node_modules/require-directory
+node_modules/requires-port
+node_modules/resolve
+node_modules/resolve-from
+node_modules/rollup
+node_modules/rxjs
+node_modules/safe-array-concat
+node_modules/safe-buffer
+node_modules/safe-push-apply
+node_modules/safe-regex-test
+node_modules/safer-buffer
+node_modules/scheduler
+node_modules/secure-compare
+node_modules/semver
+node_modules/send
+node_modules/serve-static
+node_modules/set-function-length
+node_modules/set-function-name
+node_modules/set-proto
+node_modules/setprototypeof
+node_modules/shebang-command
+node_modules/shebang-regex
+node_modules/shell-quote
+node_modules/side-channel
+node_modules/side-channel-list
+node_modules/side-channel-map
+node_modules/side-channel-weakmap
+node_modules/source-map-js
+node_modules/sparse-bitfield
+node_modules/spawn-command
+node_modules/statuses
+node_modules/stop-iteration-iterator
+node_modules/streamsearch
+node_modules/string-width
+node_modules/string.prototype.matchall
+node_modules/string.prototype.repeat
+node_modules/string.prototype.trim
+node_modules/string.prototype.trimend
+node_modules/string.prototype.trimstart
+node_modules/string_decoder
+node_modules/strip-ansi
+node_modules/strip-json-comments
+node_modules/supports-color
+node_modules/supports-preserve-symlinks-flag
+node_modules/tesseract.js
+node_modules/tesseract.js-core
+node_modules/tinyglobby
+node_modules/toidentifier
+node_modules/tr46
+node_modules/tree-kill
+node_modules/ts-algebra
+node_modules/tslib
+node_modules/type-check
+node_modules/type-is
+node_modules/typed-array-buffer
+node_modules/typed-array-byte-length
+node_modules/typed-array-byte-offset
+node_modules/typed-array-length
+node_modules/typedarray
+node_modules/typescript
+node_modules/unbox-primitive
+node_modules/union
+node_modules/unpipe
+node_modules/update-browserslist-db
+node_modules/uri-js
+node_modules/url-join
+node_modules/util-deprecate
+node_modules/utils-merge
+node_modules/vary
+node_modules/vite
+node_modules/wasm-feature-detect
+node_modules/webidl-conversions
+node_modules/whatwg-encoding
+node_modules/whatwg-url
+node_modules/which
+node_modules/which-boxed-primitive
+node_modules/which-builtin-type
+node_modules/which-collection
+node_modules/which-typed-array
+node_modules/word-wrap
+node_modules/wrap-ansi
+node_modules/xtend
+node_modules/y18n
+node_modules/yallist
+node_modules/yargs
+node_modules/yargs-parser
+node_modules/yocto-queue
+node_modules/zlibjs
+node_modules/zod
+node_modules/zod-validation-error
+packages/lighthouse
+packages/shared-data
+Presumptive_Conditions/Agent_Orange
+Presumptive_Conditions/Burn_Pits
+Presumptive_Conditions/Camp_Lejeune
+Presumptive_Conditions/Gulf_War_Illness
+Presumptive_Conditions/Radiation
+src/components
+src/config
+src/data
+src/engine
+src/extraction
+src/ingestion
+src/models
+src/rules
+src/segmentation
+src/services
+src/styles
+src/utils
+STRS_SCANNER/engine
+STRS_SCANNER/logs
+STRS_SCANNER/models
+STRS_SCANNER/tests
+tests/fixtures
+tooling/scripts
+VA SCANNER/backend
+VA SCANNER/data
+VA SCANNER/engine
+VA SCANNER/frontend
+VA SCANNER/logs
+
+=====================================================
+
+UI COMPONENTS / PAGES:
+-----------------------------------------------------
+app\frontend\src\api\client.js
+app\frontend\src\layout\Layout.jsx
+app\frontend\src\pages\AIPage.jsx
+app\frontend\src\pages\HealthPage.jsx
+app\frontend\src\pages\KnowledgePage.jsx
+app\frontend\src\pages\ScannerPage.jsx
+app\frontend\src\App.jsx
+app\frontend\src\index.jsx
+archives\frontend_20260218\js\api.js
+archives\frontend_20260218\js\plan.js
+archives\frontend_20260218\js\router.js
+archives\frontend_20260218\js\state.js
+archives\frontend_20260218\js\vaCombinedRating.js
+archives\frontend_20260218\modules\common\module.js
+archives\frontend_20260218\modules\dashboard\module.js
+archives\frontend_20260218\modules\onboarding\pathwayClassifier.js
+archives\frontend_20260218\modules\results\module.js
+node_modules\eslint-plugin-react\lib\rules\no-unstable-nested-components.d.ts
+node_modules\eslint-plugin-react\lib\rules\no-unstable-nested-components.js
+node_modules\eslint-plugin-react\lib\util\Components.d.ts
+node_modules\eslint-plugin-react\lib\util\Components.js
+node_modules\eslint-plugin-react\lib\util\linkComponents.d.ts
+node_modules\eslint-plugin-react\lib\util\linkComponents.js
+node_modules\hermes-parser\dist\estree\StripComponentSyntax.js
+src\components\scanner\AncillaryBenefitsTable.jsx
+src\components\scanner\ConditionsTable.jsx
+src\components\scanner\DeniedConditionsTable.jsx
+src\components\scanner\JsonViewer.jsx
+src\components\scanner\PactActSummary.jsx
+src\components\scanner\ResultsSummary.jsx
+src\components\scanner\SmcDetailsTable.jsx
+src\components\AlternateEntitlementTheoryWizard.jsx
+src\components\EntitlementWizard.jsx
+src\components\ErrorBoundary.jsx
+src\components\Header.jsx
+src\components\ManualConditionInput.jsx
+src\components\NotificationCenter.jsx
+src\components\Scanner.jsx
+src\components\ScannerButton.jsx
+src\components\ScannerInput.jsx
+src\components\ScannerResults.jsx
+src\components\StateBenefits.jsx
+src\components\Step1MilitaryService.jsx
+src\components\Step3STRSUpload.jsx
+src\components\Step4DisabilityReview.jsx
+src\components\Step5BenefitRecommendations.jsx
+src\components\UIBlock.jsx
+src\components\UIButton.jsx
+src\components\UIInput.jsx
+src\components\VaDecisionScanner.jsx
+src\components\VaRatingScanner.jsx
+VA SCANNER\frontend\utils\benefitScan.js
+VA SCANNER\frontend\utils\extractAncillary.js
+VA SCANNER\frontend\utils\extractDenied.js
+VA SCANNER\frontend\utils\extractDependents.js
+VA SCANNER\frontend\utils\extractEvidence.js
+VA SCANNER\frontend\utils\extractPayments.js
+VA SCANNER\frontend\utils\extractServiceConnected.js
+VA SCANNER\frontend\utils\extractSMC.js
+VA SCANNER\frontend\utils\pactActDetection.js
+VA SCANNER\frontend\utils\pdfExtractor.js
+VA SCANNER\frontend\utils\scannerEnhanced.js
+VA SCANNER\frontend\utils\textNormalizer.js
+VA SCANNER\frontend\ScannerPanel.jsx
+VA SCANNER\frontend\useScanner.js
+
+=====================================================
+
+SCANNER MODULES:
+-----------------------------------------------------
+app\scanners\Decision\engine\scanner_engine.ps1
+app\scanners\Decision\tests\scanner_smoke_test.ps1
+app\scanners\shared\error.ps1
+app\scanners\shared\extract.ps1
+app\scanners\shared\format.ps1
+app\scanners\shared\nlp.ps1
+app\scanners\shared\normalize.ps1
+app\scanners\STRS\engine\scanner_engine.ps1
+app\scanners\STRS\tests\scanner_smoke_test.ps1
+app\scanners\VA\engine\scanner_engine.ps1
+app\scanners\VA\tests\scanner_smoke_test.ps1
+app\scanners\scanner_registry.ps1
+backend\api\scannerDiagnostics.js
+STRS_SCANNER\engine\STRS.Analyzer.ps1
+STRS_SCANNER\engine\STRS.Extractor.ps1
+STRS_SCANNER\engine\STRS.NLP.ps1
+STRS_SCANNER\engine\STRS.Output.ps1
+STRS_SCANNER\engine\STRS.Parser.ps1
+STRS_SCANNER\engine\STRS.Utils.ps1
+STRS_SCANNER\tests\test_runner.ps1
+STRS_SCANNER\STRS.Scanner.ps1
+STRS_SCANNER\STRS.Scanner.Text.ps1
+tests\test-bilateral-scanner.js
+VA SCANNER\backend\services\aiScannerService.js
+VA SCANNER\backend\services\exportService.js
+VA SCANNER\backend\services\newScannerService.js
+VA SCANNER\backend\services\scanHistoryService.js
+VA SCANNER\backend\services\scannerDocumentClassifier.js
+VA SCANNER\backend\shared\scanner\dd214Scanner.js
+VA SCANNER\backend\shared\scanner\scannerMiddleware.js
+VA SCANNER\backend\shared\scanner\vaDecisionScanner.js
+VA SCANNER\backend\index.js
+VA SCANNER\backend\pdfConfig.js
+VA SCANNER\backend\scanner-diagnostic.js
+VA SCANNER\backend\scannerRoute.js
+VA SCANNER\engine\pdf\pdfExtractor.js
+VA SCANNER\engine\cfr-rating-parser.js
+VA SCANNER\engine\vaSuperScanner.js
+VA SCANNER\frontend\utils\benefitScan.js
+VA SCANNER\frontend\utils\extractAncillary.js
+VA SCANNER\frontend\utils\extractDenied.js
+VA SCANNER\frontend\utils\extractDependents.js
+VA SCANNER\frontend\utils\extractEvidence.js
+VA SCANNER\frontend\utils\extractPayments.js
+VA SCANNER\frontend\utils\extractServiceConnected.js
+VA SCANNER\frontend\utils\extractSMC.js
+VA SCANNER\frontend\utils\pactActDetection.js
+VA SCANNER\frontend\utils\pdfExtractor.js
+VA SCANNER\frontend\utils\scannerEnhanced.js
+VA SCANNER\frontend\utils\textNormalizer.js
+VA SCANNER\frontend\useScanner.js
+
+=====================================================
+
+BACKEND ROUTES:
+-----------------------------------------------------
+app\backend\api\ai.js
+app\backend\api\data.js
+app\backend\api\index.js
+app\backend\api\knowledge.js
+app\backend\api\scan.js
+app\backend\middleware\logging.js
+app\backend\middleware\security.js
+app\backend\index.js
+app\backend\server.js
+backend\api\aiAnalysisHandler.js
+backend\api\aiAnalysisRouter.js
+backend\api\aiTestRouter.js
+backend\api\authority.js
+backend\api\benefits.js
+backend\api\intelligence.js
+backend\api\onboarding.js
+backend\api\pathways.js
+backend\api\recalculate.js
+backend\api\scannerDiagnostics.js
+backend\api\strs.js
+backend\api\vaDecisionAnalyzer.js
+backend\database\cp_schema\migrations\apply.js
+backend\database\cp_schema\routes\appeals.js
+backend\database\cp_schema\routes\audit.js
+backend\database\cp_schema\routes\claims.js
+backend\database\cp_schema\routes\documents.js
+backend\database\cp_schema\routes\exams.js
+backend\database\cp_schema\routes\index.js
+backend\database\cp_schema\routes\payments.js
+backend\database\cp_schema\routes\pension.js
+backend\database\cp_schema\routes\ratings.js
+backend\database\cp_schema\routes\veterans.js
+backend\database\cp_schema\seeds\apply.js
+backend\database\cp_schema\db.js
+backend\database\models\benefitsCache.js
+backend\database\models\onboarding.js
+backend\database\models\veteran.js
+backend\database\mongo.js
+backend\engine\benefits\benefitsEngine.js
+backend\engine\benefits\combatBenefits.js
+backend\engine\benefits\exposureBenefits.js
+backend\engine\benefits\federalBenefits.js
+backend\engine\benefits\ratingBenefits.js
+backend\engine\benefits\retirementBenefits.js
+backend\engine\benefits\ruleEvaluator.js
+backend\engine\benefits\stateBenefits.js
+backend\engine\benefitsFlow.js
+backend\engine\DenialReasonLLMTemplate.js
+backend\engine\DenialReasonRegexExtractor.js
+backend\engine\rulesLoader.js
+backend\middleware\hardening.js
+backend\services\authorityService.js
+backend\services\benefitsService.js
+backend\services\combatService.js
+backend\services\exposureService.js
+backend\services\federalService.js
+backend\services\onboardingService.js
+backend\services\stateService.js
+backend\tests\api.test.js
+backend\tests\integration.test.js
+backend\tests\ruleEvaluator.test.js
+backend\utils\aiValidation.js
+backend\utils\errors.js
+backend\app.js
+backend\index.js
+backend\server.js
+VA SCANNER\backend\services\aiScannerService.js
+VA SCANNER\backend\services\exportService.js
+VA SCANNER\backend\services\newScannerService.js
+VA SCANNER\backend\services\scanHistoryService.js
+VA SCANNER\backend\services\scannerDocumentClassifier.js
+VA SCANNER\backend\shared\scanner\dd214Scanner.js
+VA SCANNER\backend\shared\scanner\scannerMiddleware.js
+VA SCANNER\backend\shared\scanner\vaDecisionScanner.js
+VA SCANNER\backend\index.js
+VA SCANNER\backend\pdfConfig.js
+VA SCANNER\backend\scanner-diagnostic.js
+VA SCANNER\backend\scannerRoute.js
+
+=====================================================
+END OF SUMMARY

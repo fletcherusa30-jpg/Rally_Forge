@@ -1,0 +1,281 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TERA Retirement Calculation Schema",
+  "description": "JSON schema for TERA retirement pay calculations",
+  "version": "1.0.0",
+  "type": "object",
+  "required": ["serviceMember", "serviceRecord", "calculation"],
+  "properties": {
+    "serviceMember": {
+      "type": "object",
+      "description": "Service member demographic information",
+      "required": ["id", "name", "branch", "rank"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique service member identifier (SSN or DOD ID)"
+        },
+        "name": {
+          "type": "object",
+          "properties": {
+            "first": {"type": "string"},
+            "middle": {"type": "string"},
+            "last": {"type": "string"}
+          },
+          "required": ["first", "last"]
+        },
+        "branch": {
+          "type": "string",
+          "enum": ["Army", "Navy", "Air Force", "Marine Corps", "Space Force", "Coast Guard"]
+        },
+        "rank": {
+          "type": "object",
+          "properties": {
+            "paygrade": {
+              "type": "string",
+              "pattern": "^(E-[1-9]|W-[1-5]|O-([1-9]|10))$"
+            },
+            "title": {"type": "string"}
+          },
+          "required": ["paygrade", "title"]
+        },
+        "dob": {
+          "type": "string",
+          "format": "date",
+          "description": "Date of birth"
+        }
+      }
+    },
+    "serviceRecord": {
+      "type": "object",
+      "description": "Military service history",
+      "required": ["entryDate", "retirementDate", "totalService"],
+      "properties": {
+        "entryDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Date entered active duty"
+        },
+        "retirementDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Planned or actual retirement date"
+        },
+        "totalService": {
+          "type": "object",
+          "required": ["years", "months", "days"],
+          "properties": {
+            "years": {
+              "type": "integer",
+              "minimum": 15,
+              "maximum": 19
+            },
+            "months": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 11
+            },
+            "days": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 30
+            },
+            "totalDays": {
+              "type": "integer",
+              "description": "Total creditable service in days"
+            },
+            "fractionalYears": {
+              "type": "number",
+              "minimum": 15.0,
+              "maximum": 19.999,
+              "description": "Service expressed as decimal years"
+            }
+          }
+        },
+        "high36": {
+          "type": "object",
+          "description": "Highest 36 months basic pay average",
+          "required": ["months", "average"],
+          "properties": {
+            "months": {
+              "type": "array",
+              "description": "36 months of basic pay used for calculation",
+              "minItems": 36,
+              "maxItems": 36,
+              "items": {
+                "type": "object",
+                "properties": {
+                  "month": {"type": "string", "format": "date"},
+                  "paygrade": {"type": "string"},
+                  "basicPay": {"type": "number", "minimum": 0}
+                }
+              }
+            },
+            "average": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Average monthly basic pay over 36 months"
+            }
+          }
+        }
+      }
+    },
+    "calculation": {
+      "type": "object",
+      "description": "TERA retirement pay calculation",
+      "required": ["multiplier", "monthlyPay", "annualPay"],
+      "properties": {
+        "multiplier": {
+          "type": "number",
+          "minimum": 0.375,
+          "maximum": 0.4975,
+          "description": "Retirement multiplier (years × 0.025)"
+        },
+        "high36Average": {
+          "type": "number",
+          "minimum": 0,
+          "description": "High-36 monthly average basic pay"
+        },
+        "monthlyPay": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Gross monthly retirement pay before deductions"
+        },
+        "annualPay": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Gross annual retirement pay (monthlyPay × 12)"
+        },
+        "effectiveDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Date retirement pay begins"
+        }
+      }
+    },
+    "deductions": {
+      "type": "object",
+      "description": "Optional deductions from retirement pay",
+      "properties": {
+        "sbp": {
+          "type": "object",
+          "description": "Survivor Benefit Plan deduction",
+          "properties": {
+            "elected": {"type": "boolean"},
+            "coverageLevel": {
+              "type": "string",
+              "enum": ["Spouse", "Spouse and Children", "Children Only", "Former Spouse", "None"]
+            },
+            "baseCoverage": {
+              "type": "number",
+              "description": "Coverage amount (typically full retired pay)"
+            },
+            "monthlyPremium": {
+              "type": "number",
+              "description": "Monthly SBP premium (typically 6.5% of base coverage)"
+            }
+          }
+        },
+        "federalTax": {
+          "type": "object",
+          "properties": {
+            "withholdingStatus": {"type": "string"},
+            "exemptions": {"type": "integer"},
+            "additionalWithholding": {"type": "number"}
+          }
+        },
+        "stateTax": {
+          "type": "object",
+          "properties": {
+            "state": {"type": "string"},
+            "withholdingAmount": {"type": "number"}
+          }
+        }
+      }
+    },
+    "netPay": {
+      "type": "object",
+      "description": "Net retirement pay after deductions",
+      "properties": {
+        "monthlyNet": {
+          "type": "number",
+          "description": "Monthly pay after all deductions"
+        },
+        "annualNet": {
+          "type": "number",
+          "description": "Annual pay after all deductions"
+        }
+      }
+    },
+    "cola": {
+      "type": "object",
+      "description": "Cost of Living Adjustments",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "TERA retirees receive full annual COLA"
+        },
+        "projections": {
+          "type": "array",
+          "description": "Projected retirement pay with estimated COLA increases",
+          "items": {
+            "type": "object",
+            "properties": {
+              "year": {"type": "integer"},
+              "colaRate": {"type": "number"},
+              "monthlyPay": {"type": "number"},
+              "annualPay": {"type": "number"}
+            }
+          }
+        }
+      }
+    },
+    "comparison": {
+      "type": "object",
+      "description": "Comparison to 20-year retirement",
+      "properties": {
+        "tera": {
+          "type": "object",
+          "properties": {
+            "years": {"type": "number"},
+            "monthlyPay": {"type": "number"},
+            "annualPay": {"type": "number"}
+          }
+        },
+        "fullRetirement": {
+          "type": "object",
+          "properties": {
+            "years": {"type": "integer", "const": 20},
+            "estimatedMonthlyPay": {"type": "number"},
+            "estimatedAnnualPay": {"type": "number"}
+          }
+        },
+        "difference": {
+          "type": "object",
+          "properties": {
+            "monthlyDifference": {"type": "number"},
+            "annualDifference": {"type": "number"},
+            "percentageReduction": {"type": "number"},
+            "lifetimeDifferenceEstimate": {
+              "type": "number",
+              "description": "Estimated lifetime difference assuming retirement to age 75"
+            }
+          }
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "calculationDate": {"type": "string", "format": "date-time"},
+        "calculatedBy": {"type": "string"},
+        "validationStatus": {
+          "type": "string",
+          "enum": ["validated", "pending", "error"]
+        },
+        "notes": {"type": "string"}
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+    "models": {
+        "gpt-4-turbo-preview": {
+            "provider": "openai",
+            "context_window": 128000,
+            "max_output_tokens": 4096,
+            "cost_per_1k_input": 0.01,
+            "cost_per_1k_output": 0.03,
+            "supports_json_mode": true,
+            "supports_function_calling": true,
+            "best_for": [
+                "complex_analysis",
+                "nexus_generation",
+                "strategy_planning"
+            ]
+        },
+        "gpt-3.5-turbo": {
+            "provider": "openai",
+            "context_window": 16385,
+            "max_output_tokens": 4096,
+            "cost_per_1k_input": 0.0005,
+            "cost_per_1k_output": 0.0015,
+            "supports_json_mode": true,
+            "supports_function_calling": true,
+            "best_for": [
+                "simple_queries",
+                "categorization",
+                "quick_analysis"
+            ]
+        },
+        "claude-3-5-sonnet-20241022": {
+            "provider": "anthropic",
+            "context_window": 200000,
+            "max_output_tokens": 8192,
+            "cost_per_1k_input": 0.003,
+            "cost_per_1k_output": 0.015,
+            "supports_json_mode": false,
+            "supports_function_calling": false,
+            "best_for": [
+                "document_analysis",
+                "medical_interpretation",
+                "evidence_review"
+            ]
+        },
+        "claude-3-opus-20240229": {
+            "provider": "anthropic",
+            "context_window": 200000,
+            "max_output_tokens": 4096,
+            "cost_per_1k_input": 0.015,
+            "cost_per_1k_output": 0.075,
+            "supports_json_mode": false,
+            "supports_function_calling": false,
+            "best_for": [
+                "complex_medical_analysis",
+                "advanced_strategy"
+            ]
+        },
+        "llama2": {
+            "provider": "local",
+            "context_window": 4096,
+            "max_output_tokens": 2048,
+            "cost_per_1k_input": 0.0,
+            "cost_per_1k_output": 0.0,
+            "supports_json_mode": false,
+            "supports_function_calling": false,
+            "best_for": [
+                "offline_processing",
+                "privacy_sensitive"
+            ]
+        }
+    },
+    "fallback_chain": [
+        "gpt-4-turbo-preview",
+        "claude-3-5-sonnet-20241022",
+        "gpt-3.5-turbo",
+        "llama2"
+    ],
+    "task_model_mapping": {
+        "claims_strategy": "gpt-4-turbo-preview",
+        "cfr_interpretation": "claude-3-5-sonnet-20241022",
+        "evidence_analysis": "gpt-4-turbo-preview",
+        "nexus_generation": "claude-3-5-sonnet-20241022",
+        "benefit_calculation": "gpt-3.5-turbo",
+        "document_ocr": "local",
+        "simple_categorization": "gpt-3.5-turbo"
+    },
+    "quality_thresholds": {
+        "min_confidence": 0.7,
+        "require_citations": true,
+        "require_reasoning": true,
+        "max_hallucination_score": 0.3
+    },
+    "optimization": {
+        "use_cache": true,
+        "cache_ttl": 3600,
+        "enable_streaming": false,
+        "compress_prompts": false
+    }
+}

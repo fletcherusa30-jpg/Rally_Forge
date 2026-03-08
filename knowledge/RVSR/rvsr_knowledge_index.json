@@ -1,0 +1,59 @@
+{
+  "name": "RVSR Knowledge Intake",
+  "migratedOn": "2026-03-04",
+  "sourcePath": "knowledge/RVSR/source_documents",
+  "counts": {
+    "pdf": 26,
+    "doc": 4,
+    "docx": 13,
+    "xlsx": 7,
+    "xlsm": 1,
+    "pptx": 4,
+    "other": 1,
+    "total": 56
+  },
+  "themes": [
+    {
+      "id": "quality_findings",
+      "label": "Rating Decision Quality & Findings",
+      "keywords": ["favorable findings", "cue", "narrative", "quality", "error"]
+    },
+    {
+      "id": "diagnostic_evaluation",
+      "label": "Diagnostic Code & Evaluation Guidance",
+      "keywords": ["bilateral", "analogous", "hyphenated", "amputation", "pyramiding", "dbq"]
+    },
+    {
+      "id": "claims_adjudication",
+      "label": "Claim Development & Adjudication",
+      "keywords": ["adt", "iadt", "ptsd", "pre-service", "convalescence", "ready to rate"]
+    },
+    {
+      "id": "program_updates",
+      "label": "Special Programs and Updates",
+      "keywords": ["pact", "ingram", "chapter 35", "dea"]
+    }
+  ],
+  "sampleFiles": {
+    "quality_findings": [
+      "pdf/Favorable Findings Job Aid.pdf",
+      "pptx/Favorable Finding and CUE guidance.pptx",
+      "xlsx/Favorable Findings Dropdown Final.xlsx"
+    ],
+    "diagnostic_evaluation": [
+      "pdf/Bilateral Factors.pdf",
+      "pdf/Analogous and Hyphenated Codes.pdf",
+      "pdf/Amputation Rule, Pyramiding, and Muscle Injury References.pdf"
+    ],
+    "claims_adjudication": [
+      "pdf/Adjudicating Claims Based on ADT and IADT (VA Form 21-6789).pdf",
+      "pdf/PTSD Ensure Proper Development (PEP-D) Checklist.pdf",
+      "pdf/Procedure for Verifying a Claim is Ready to Rate.pdf"
+    ],
+    "program_updates": [
+      "docx/PACT Act Favorable Finding Job Aid with Examples.docx",
+      "docx/20251031 - Ingram FAQ .docx",
+      "pdf/Chapter 35 helpful fragments.pdf"
+    ]
+  }
+}

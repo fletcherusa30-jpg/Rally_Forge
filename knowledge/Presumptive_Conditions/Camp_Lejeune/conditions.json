@@ -1,0 +1,163 @@
+{
+  "exposureType": "Camp Lejeune Water Contamination",
+  "description": "Exposure to contaminated water at U.S. Marine Corps Base Camp Lejeune, North Carolina",
+  "eligibleLocations": [
+    "Marine Corps Base Camp Lejeune, North Carolina",
+    "Marine Corps Air Station (MCAS) New River, North Carolina"
+  ],
+  "servicePeriod": {
+    "start": "1953-08-01",
+    "end": "1987-12-31",
+    "minimumExposure": "30 days cumulative"
+  },
+  "contaminants": [
+    "Trichloroethylene (TCE)",
+    "Perchloroethylene (PCE)",
+    "Benzene",
+    "Vinyl Chloride",
+    "Other volatile organic compounds"
+  ],
+  "presumptiveConditions": [
+    {
+      "condition": "Adult Leukemia",
+      "diagnosticCode": "7703",
+      "effectiveDate": "2017-03-14",
+      "description": "Cancer of blood-forming tissues, including bone marrow and lymphatic system"
+    },
+    {
+      "condition": "Aplastic Anemia and Other Myelodysplastic Syndromes",
+      "diagnosticCode": "7716",
+      "effectiveDate": "2017-03-14",
+      "description": "Bone marrow doesn't make enough new blood cells"
+    },
+    {
+      "condition": "Bladder Cancer",
+      "diagnosticCode": "7504",
+      "effectiveDate": "2017-03-14",
+      "description": "Cancer of the bladder"
+    },
+    {
+      "condition": "Kidney Cancer",
+      "diagnosticCode": "7528",
+      "effectiveDate": "2017-03-14",
+      "description": "Cancer of the kidneys"
+    },
+    {
+      "condition": "Liver Cancer",
+      "diagnosticCode": "7354",
+      "effectiveDate": "2017-03-14",
+      "description": "Cancer that begins in the cells of the liver"
+    },
+    {
+      "condition": "Multiple Myeloma",
+      "diagnosticCode": "7709",
+      "effectiveDate": "2017-03-14",
+      "description": "Cancer of plasma cells"
+    },
+    {
+      "condition": "Non-Hodgkin's Lymphoma",
+      "diagnosticCode": "7715",
+      "effectiveDate": "2017-03-14",
+      "description": "Cancer that originates in the lymphatic system"
+    },
+    {
+      "condition": "Parkinson's Disease",
+      "diagnosticCode": "8004",
+      "effectiveDate": "2017-03-14",
+      "description": "Progressive nervous system disorder affecting movement"
+    },
+    {
+      "condition": "Kidney Disease (End-Stage Renal Disease)",
+      "diagnosticCode": "7528",
+      "effectiveDate": "2021-08-10",
+      "description": "Permanent kidney failure requiring dialysis or transplant",
+      "pactActAddition": true
+    },
+    {
+      "condition": "Lung Cancer",
+      "diagnosticCode": "6819",
+      "effectiveDate": "2021-08-10",
+      "description": "Cancer that begins in the lungs",
+      "pactActAddition": true
+    },
+    {
+      "condition": "Breast Cancer",
+      "diagnosticCode": "7626",
+      "effectiveDate": "2021-08-10",
+      "description": "Cancer that forms in the cells of the breasts",
+      "pactActAddition": true
+    },
+    {
+      "condition": "Esophageal Cancer",
+      "diagnosticCode": "7204",
+      "effectiveDate": "2021-08-10",
+      "description": "Cancer of the esophagus",
+      "pactActAddition": true
+    },
+    {
+      "condition": "Female Infertility",
+      "diagnosticCode": "7629",
+      "effectiveDate": "2021-08-10",
+      "description": "Inability to conceive after one year of unprotected intercourse",
+      "pactActAddition": true
+    },
+    {
+      "condition": "Hepatic Steatosis (Fatty Liver Disease)",
+      "diagnosticCode": "7354",
+      "effectiveDate": "2021-08-10",
+      "description": "Buildup of fat in the liver",
+      "pactActAddition": true
+    },
+    {
+      "condition": "Miscarriage",
+      "diagnosticCode": "7629",
+      "effectiveDate": "2021-08-10",
+      "description": "Loss of pregnancy before 20 weeks",
+      "pactActAddition": true,
+      "note": "For women who were exposed while pregnant or who conceived within 10 years of last exposure"
+    },
+    {
+      "condition": "Neurobehavioral Effects",
+      "diagnosticCode": "8045",
+      "effectiveDate": "2021-08-10",
+      "description": "Changes in behavior, mood, or cognition",
+      "pactActAddition": true
+    },
+    {
+      "condition": "Renal Toxicity",
+      "diagnosticCode": "7528",
+      "effectiveDate": "2021-08-10",
+      "description": "Kidney damage from toxic substances",
+      "pactActAddition": true
+    },
+    {
+      "condition": "Scleroderma",
+      "diagnosticCode": "7809",
+      "effectiveDate": "2021-08-10",
+      "description": "Autoimmune disease causing hardening and tightening of skin and connective tissues",
+      "pactActAddition": true
+    }
+  ],
+  "evidenceRequirements": {
+    "serviceConnection": "Presumptive - Requires 30 cumulative days at Camp Lejeune between August 1, 1953 and December 31, 1987",
+    "medicalEvidence": "Current diagnosis required",
+    "layEvidence": "Not required for presumptive service connection",
+    "serviceRecords": "Orders or other documentation showing presence at Camp Lejeune"
+  },
+  "references": [
+    "38 CFR § 3.309(f)",
+    "Camp Lejeune Justice Act of 2022",
+    "PACT Act of 2022",
+    "M21-1, Part IV, Subpart ii, Chapter 2, Section E"
+  ],
+  "familyMembers": {
+    "eligible": true,
+    "description": "Family members who lived at Camp Lejeune during the contamination period may file claims under the Camp Lejeune Justice Act",
+    "legalAction": "Separate from VA disability benefits - civil claims through Department of Justice"
+  },
+  "pactActExpansion": {
+    "effectiveDate": "2021-08-10",
+    "addedConditions": 10,
+    "description": "PACT Act added 10 additional presumptive conditions related to Camp Lejeune water contamination"
+  }
+}

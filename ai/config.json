@@ -1,0 +1,4 @@
+{
+  "defaultModel": "llama3",
+  "models": ["llama3", "mistral", "phi3"]
+}

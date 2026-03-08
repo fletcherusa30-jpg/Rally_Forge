@@ -1,0 +1,46 @@
+{
+  "crawlerVersion": "1.0.0",
+  "lastCrawlDate": "2026-03-02T12:00:00Z",
+  "crawlStatus": "completed",
+  "totalPagesIndexed": 50,
+  "lastPageIndexed": {
+    "id": 50,
+    "url": "https://www.va.gov/disability/compensation-rates/veteran-rates/",
+    "title": "Compensation Rate Tables"
+  },
+  "indexingProgress": {
+    "completed": 50,
+    "inProgress": 0,
+    "queued": 0,
+    "failed": 0
+  },
+  "categories": {
+    "Compensation": 6,
+    "Healthcare": 7,
+    "Education": 4,
+    "Housing": 3,
+    "Employment": 4,
+    "Claims": 6,
+    "Dependents": 2,
+    "Military": 2,
+    "Survivors": 3,
+    "Mental Health": 2,
+    "Presumptive": 4,
+    "Support": 2,
+    "Special": 2,
+    "Pension": 2,
+    "Records": 2,
+    "Insurance": 1,
+    "Burial": 3,
+    "Transition": 1
+  },
+  "nextScheduledCrawl": "2026-03-09T12:00:00Z",
+  "crawlSettings": {
+    "maxPagesToIndex": 500,
+    "crawlDepth": 3,
+    "followExternalLinks": false,
+    "respectRobotsTxt": true,
+    "indexPDFs": true
+  },
+  "notes": "Initial comprehensive crawl of VA.gov benefits pages. 50 major benefits indexed with full metadata."
+}

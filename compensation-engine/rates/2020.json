@@ -1,0 +1,47 @@
+{
+  "year": 2020,
+  "effectiveDate": "2020-01-01",
+  "baseCompensation": {
+    "10": 154.19,
+    "20": 308.37,
+    "30": 475.38,
+    "40": 684.36,
+    "50": 971.21,
+    "60": 1230.18,
+    "70": 1525.38,
+    "80": 1785.83,
+    "90": 2076.28,
+    "100": 3377.30
+  },
+  "dependents": {
+    "spouse": {
+      "first_child": 91,
+      "each_additional_child": 85,
+      "first_parent": 92,
+      "each_additional_parent": 92
+    },
+    "no_spouse": {
+      "first_child": 52,
+      "each_additional_child": 39,
+      "first_parent": 92,
+      "each_additional_parent": 61
+    }
+  },
+  "smc": {
+    "K": {"amount": 211, "cfr": "38 CFR 3.350(i)(1)", "description": "Loss of use of one upper extremity"},
+    "L": {"amount": 422, "cfr": "38 CFR 3.350(i)(2)", "description": "Loss of use of both upper extremities"},
+    "M": {"amount": 211, "cfr": "38 CFR 3.350(i)(3)", "description": "Loss of use of one lower extremity"},
+    "N": {"amount": 422, "cfr": "38 CFR 3.350(i)(4)", "description": "Loss of use of both lower extremities"},
+    "O": {"amount": 238, "cfr": "38 CFR 3.350(i)(5)", "description": "Loss of use of one lower and one upper extremity"},
+    "P": {"amount": 238, "cfr": "38 CFR 3.350(i)(5)", "description": "Blindness in both eyes"},
+    "R": {"amount": 238, "cfr": "38 CFR 3.350(j)", "description": "Aid and attendance (intermediate)"},
+    "S": {"amount": 570, "cfr": "38 CFR 3.350(j)", "description": "Aid and attendance (higher level)"},
+    "T": {"amount": 238, "cfr": "38 CFR 3.350(k)", "description": "Housebound"}
+  },
+  "ancillary": {
+    "clothing_allowance": {"monthly": 29.00, "annual": 348.00},
+    "aid_and_attendance": {"monthly_r": 238.00, "monthly_s": 570.00},
+    "housebound": {"monthly": 238.00}
+  },
+  "notes": "2020 rates effective January 1, 2020"
+}
