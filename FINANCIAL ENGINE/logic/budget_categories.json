@@ -1,7 +1,0 @@
-﻿{
-  "Income": ["Salary", "VA", "Military Retirement", "Social Security", "Other"],
-  "FixedExpenses": ["Mortgage", "Insurance", "Utilities", "Phone", "Internet"],
-  "VariableExpenses": ["Food", "Gas", "Entertainment", "Misc"],
-  "AnnualExpenses": ["Car Registration", "Holidays", "Property Tax"],
-  "Savings": ["Emergency Fund", "Retirement", "Sinking Funds"]
-}
