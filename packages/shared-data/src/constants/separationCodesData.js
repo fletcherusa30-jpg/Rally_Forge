@@ -1,1 +1,2 @@
-export const SEPARATION_CODES_DATA = [];
+﻿export const SEPARATION_CODES_DATA = [];
+

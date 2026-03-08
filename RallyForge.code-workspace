@@ -1,0 +1,24 @@
+{
+  "folders": [
+    {
+      "path": ".",
+      "name": "Rally Forge"
+    },
+    {
+      "path": "FINANCIAL PLANNER",
+      "name": "Financial Planner"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/.git": true,
+      "**/node_modules": true,
+      "**/.DS_Store": true
+    },
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/dist": true,
+      "**/.git": true
+    }
+  }
+}

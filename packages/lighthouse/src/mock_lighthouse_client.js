@@ -1,4 +1,4 @@
-import { mockEndpoints, mockResponses } from "./mock_endpoints.js";
+﻿import { mockEndpoints, mockResponses } from "./mock_endpoints.js";
 import { requestMockToken } from "./mock_oauth_flow.js";
 
 export class MockLighthouseClient {
@@ -33,3 +33,4 @@ export class MockLighthouseClient {
     }
   }
 }
+

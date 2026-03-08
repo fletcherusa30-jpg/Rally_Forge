@@ -1,0 +1,16 @@
+﻿[
+    { "Label": "Lumbar spine imaging", "Pattern": "lumbar spine x-ray|MRI lumbar|CT lumbar|lumbar MRI|lumbar x-ray" },
+    { "Label": "Cervical spine imaging", "Pattern": "cervical spine x-ray|MRI cervical|CT cervical" },
+    { "Label": "Thoracic spine imaging", "Pattern": "thoracic spine x-ray|MRI thoracic|CT thoracic" },
+    { "Label": "Knee imaging", "Pattern": "knee x-ray|MRI knee|knee MRI" },
+    { "Label": "Hip imaging", "Pattern": "hip x-ray|MRI hip|pelvis x-ray" },
+    { "Label": "Shoulder imaging", "Pattern": "shoulder x-ray|MRI shoulder" },
+    { "Label": "Ankle imaging", "Pattern": "ankle x-ray|MRI ankle" },
+    { "Label": "Foot imaging", "Pattern": "foot x-ray|MRI foot" },
+    { "Label": "Hand/wrist imaging", "Pattern": "hand x-ray|wrist x-ray|MRI wrist" },
+    { "Label": "Chest x-ray", "Pattern": "chest x-ray|CXR|chest radiograph" },
+    { "Label": "Abdominal imaging", "Pattern": "abdominal x-ray|abdominal CT|abdomen ultrasound" },
+    { "Label": "Brain imaging", "Pattern": "head CT|head MRI|brain MRI|intracranial" },
+    { "Label": "Ultrasound", "Pattern": "ultrasound|sonography|doppler" },
+    { "Label": "Bone scan", "Pattern": "bone scan|nuclear medicine bone scan" }
+]

@@ -1,4 +1,4 @@
-const defaultClockSkewSeconds = 30;
+﻿const defaultClockSkewSeconds = 30;
 
 export class TokenManager {
   constructor() {
@@ -21,3 +21,4 @@ export class TokenManager {
     return this.token;
   }
 }
+

@@ -1,4 +1,4 @@
-Set-StrictMode -Version Latest
+﻿Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
 function Ensure-Directory([string]$Path) {
@@ -47,3 +47,4 @@ $sharedMoves = @(
 foreach ($sourcePath in $sharedMoves) {
     Move-IfPresent $sourcePath $sharedDest
 }
+

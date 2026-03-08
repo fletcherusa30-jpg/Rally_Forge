@@ -1,4 +1,4 @@
-export const BRANCHES = [
+﻿export const BRANCHES = [
   "Army",
   "Navy",
   "Air Force",
@@ -21,3 +21,4 @@ export const THEATERS = [
   "Africa",
   "Global"
 ];
+

@@ -28,3 +28,4 @@ export const findBenefitsCacheByVeteranId = async (veteranId) => {
 export const invalidateBenefitsCache = async (veteranId) => {
   await getBenefitsCacheCollection().deleteMany({ veteranId });
 };
+

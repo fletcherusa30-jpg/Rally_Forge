@@ -123,7 +123,7 @@ exports.addEvidence = async (req, res, next) => {
 
 exports.linkEvidence = async (req, res, next) => {
   try {
-    const { claimId, contentionId, evidenceId } = req.params;
+    const { contentionId, evidenceId } = req.params;
     const { relation_type } = req.body;
     const result = await query(
       `INSERT INTO cp.contention_evidence (contention_id, evidence_id, relation_type)
@@ -136,3 +136,4 @@ exports.linkEvidence = async (req, res, next) => {
     next(error);
   }
 };
+

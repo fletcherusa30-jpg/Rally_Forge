@@ -1,6 +1,6 @@
-const { query } = require('../db');
+import { query } from '../db.js';
 
-exports.createExam = async (req, res, next) => {
+export const createExam = async (req, res, next) => {
   try {
     const { claimId } = req.params;
     const { contention_id, exam_type, vendor_name, facility_name, request_date, scheduled_date, completed_date, examiner_name, examiner_specialty, status, dbq_form_code } = req.body;
@@ -16,7 +16,7 @@ exports.createExam = async (req, res, next) => {
   }
 };
 
-exports.updateExam = async (req, res, next) => {
+export const updateExam = async (req, res, next) => {
   try {
     const { examId } = req.params;
     const fields = req.body;
@@ -33,7 +33,7 @@ exports.updateExam = async (req, res, next) => {
   }
 };
 
-exports.addFinding = async (req, res, next) => {
+export const addFinding = async (req, res, next) => {
   try {
     const { examId } = req.params;
     const { finding_code, finding_name, value_text, value_numeric, value_unit, is_positive, rationale } = req.body;
@@ -49,7 +49,7 @@ exports.addFinding = async (req, res, next) => {
   }
 };
 
-exports.listExams = async (req, res, next) => {
+export const listExams = async (req, res, next) => {
   try {
     const { claimId } = req.params;
     const result = await query('SELECT * FROM cp.cp_exams WHERE claim_id = $1 ORDER BY request_date DESC', [claimId]);
@@ -58,3 +58,4 @@ exports.listExams = async (req, res, next) => {
     next(error);
   }
 };
+

@@ -1,0 +1,21 @@
+﻿{
+    "directory":  "C:\\Dev\\Rally Forge\\packages\\lighthouse\\src",
+    "mockFiles":  [
+                      "mock_oauth_flow.js",
+                      "mock_lighthouse_client.js",
+                      "mock_endpoints.js",
+                      "mock_scopes.js"
+                  ],
+    "requiredConfig":  [
+                           "Real VA Lighthouse client_id/client_secret",
+                           "Real redirect_uri",
+                           "Real OAuth scopes",
+                           "Production token/authorization endpoints"
+                       ],
+    "requiredActions":  [
+                            "Replace mock OAuth with real OAuth2/PKCE.",
+                            "Replace mock endpoints with real Lighthouse API calls."
+                        ],
+    "status":  "pending",
+    "lastUpdatedUtc":  "2026-03-01T20:09:30.5607055Z"
+}

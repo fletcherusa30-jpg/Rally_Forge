@@ -68,3 +68,4 @@ router.post('/compliance/flags', require('./audit').createFlag);
 router.patch('/compliance/flags/:complianceFlagId', require('./audit').resolveFlag);
 
 module.exports = router;
+

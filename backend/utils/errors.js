@@ -11,7 +11,7 @@ export const asyncHandler = (handler) => (req, res, next) => {
   Promise.resolve(handler(req, res, next)).catch(next);
 };
 
-export const errorHandler = (err, req, res, next) => {
+export const errorHandler = (err, req, res, _next) => {
   const statusCode = err.statusCode || 500;
   const code = err.code || "internal_error";
 
@@ -24,3 +24,4 @@ export const errorHandler = (err, req, res, next) => {
     }
   });
 };
+

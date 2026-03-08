@@ -21,3 +21,4 @@ export const createVeteran = async (doc) => {
 export const findVeteranById = async (veteranId) => {
   return getVeteransCollection().findOne({ _id: new ObjectId(veteranId) });
 };
+

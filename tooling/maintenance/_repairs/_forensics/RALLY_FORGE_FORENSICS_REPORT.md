@@ -1,0 +1,3879 @@
+﻿# Rally Forge – Forensic Diagnostics Report
+Workspace: C:\Dev\Rally Forge
+Generated: 2026-03-03T22:06:25.5092055-07:00
+
+---
+
+## Environment Summary
+- Drive Free Space: 722.63 GB
+- Drive Used Space: 230.20 GB
+- PowerShell Version: 5.1.26100.7920
+
+## Structure Audit
+- Total Directories: 4800
+- Empty Directories: 65
+
+### Empty Directories (Review / Populate / Remove Manually)
+- C:\Dev\Rally Forge\api
+- C:\Dev\Rally Forge\config
+- C:\Dev\Rally Forge\core
+- C:\Dev\Rally Forge\design_extract
+- C:\Dev\Rally Forge\logs
+- C:\Dev\Rally Forge\src
+- C:\Dev\Rally Forge\STATE BENEFITS
+- C:\Dev\Rally Forge\VAknow
+- C:\Dev\Rally Forge\.rf_backups\backup_20260301_131910_build_artifacts_cleanup
+- C:\Dev\Rally Forge\.rf_backups\backup_20260301_132257_logs_temp_purge
+- C:\Dev\Rally Forge\app\cli
+- C:\Dev\Rally Forge\app\docs
+- C:\Dev\Rally Forge\app\logs
+- C:\Dev\Rally Forge\app\packages
+- C:\Dev\Rally Forge\app\scripts
+- C:\Dev\Rally Forge\app\security
+- C:\Dev\Rally Forge\app\services
+- C:\Dev\Rally Forge\app\utils
+- C:\Dev\Rally Forge\app\backend\database
+- C:\Dev\Rally Forge\app\backend\engine
+- C:\Dev\Rally Forge\app\backend\services
+- C:\Dev\Rally Forge\app\backend\shared
+- C:\Dev\Rally Forge\app\backend\utils
+- C:\Dev\Rally Forge\app\data\backend
+- C:\Dev\Rally Forge\app\data\scanners
+- C:\Dev\Rally Forge\app\data\source-documents
+- C:\Dev\Rally Forge\app\frontend\src\components
+- C:\Dev\Rally Forge\app\frontend\src\config
+- C:\Dev\Rally Forge\app\frontend\src\data
+- C:\Dev\Rally Forge\app\frontend\src\hooks
+- C:\Dev\Rally Forge\app\frontend\src\utils
+- C:\Dev\Rally Forge\app\frontend-modern\src\hooks
+- C:\Dev\Rally Forge\app\frontend-modern\src\services
+- C:\Dev\Rally Forge\app\frontend-modern\src\utils
+- C:\Dev\Rally Forge\app\knowledge\indexes
+- C:\Dev\Rally Forge\app\knowledge\presumptives
+- C:\Dev\Rally Forge\app\scanners\Decision\models
+- C:\Dev\Rally Forge\app\scanners\Decision\nlp
+- C:\Dev\Rally Forge\app\scanners\Decision\output
+- C:\Dev\Rally Forge\app\scanners\STRS\models
+- C:\Dev\Rally Forge\app\scanners\STRS\nlp
+- C:\Dev\Rally Forge\app\scanners\STRS\output
+- C:\Dev\Rally Forge\app\scanners\VA\models
+- C:\Dev\Rally Forge\app\scanners\VA\nlp
+- C:\Dev\Rally Forge\app\scanners\VA\output
+- C:\Dev\Rally Forge\backend\va_scanner
+- C:\Dev\Rally Forge\FINANCIAL PLANNER\docs
+- C:\Dev\Rally Forge\frontend\scanner
+- C:\Dev\Rally Forge\node_modules\.vite-temp
+- C:\Dev\Rally Forge\node_modules\esbuild\node_modules\@esbuild
+- C:\Dev\Rally Forge\Scanner\STRS_SCANNER\design
+- C:\Dev\Rally Forge\Scanner\STRS_SCANNER\examples
+- C:\Dev\Rally Forge\Scanner\STRS_SCANNER\input
+- C:\Dev\Rally Forge\Scanner\STRS_SCANNER\logs
+- C:\Dev\Rally Forge\Scanner\STRS_SCANNER\modules
+- C:\Dev\Rally Forge\Scanner\STRS_SCANNER\regex
+- C:\Dev\Rally Forge\Scanner\STRS_SCANNER\tests
+- C:\Dev\Rally Forge\Scanner\VA SCANNER\data
+- C:\Dev\Rally Forge\Scanner\VA SCANNER\input
+- C:\Dev\Rally Forge\Scanner\VA SCANNER\logs
+- C:\Dev\Rally Forge\Scanner\VA SCANNER\modules
+- C:\Dev\Rally Forge\Scanner\VA SCANNER\regex
+- C:\Dev\Rally Forge\Scanner\VA SCANNER\tests
+- C:\Dev\Rally Forge\Scanner\VA SCANNER\ai\logs
+- C:\Dev\Rally Forge\services\financial-planner
+
+## File Health Audit
+- Total Files: 28111
+- Zero-byte Files: 75
+- Large Files (> 200 MB): 0
+- Suspicious Pattern Files: 21
+
+### Zero-byte Files (Potentially Corrupt or Incomplete)
+- C:\Dev\Rally Forge\.rf_backups\backup_20260301_132257_build_artifacts_cleanup\bin_5a75a489\.gitkeep
+- C:\Dev\Rally Forge\backend\node_modules\mime\.npmignore
+- C:\Dev\Rally Forge\docs\financial\FINANCIAL_PLANNER_INVENTORY.md
+- C:\Dev\Rally Forge\node_modules\mime\.npmignore
+- C:\Dev\Rally Forge\node_modules\node-fetch\node_modules\tr46\lib\.gitkeep
+- C:\Dev\Rally Forge\node_modules\postcss-import\node_modules\resolve\test\pathfilter\deep_ref\main.js
+- C:\Dev\Rally Forge\node_modules\postcss-import\node_modules\resolve\test\resolver\mug.coffee
+- C:\Dev\Rally Forge\node_modules\postcss-import\node_modules\resolve\test\resolver\mug.js
+- C:\Dev\Rally Forge\node_modules\postcss-import\node_modules\resolve\test\resolver\baz\doom.js
+- C:\Dev\Rally Forge\node_modules\postcss-import\node_modules\resolve\test\resolver\browser_field\a.js
+- C:\Dev\Rally Forge\node_modules\postcss-import\node_modules\resolve\test\resolver\browser_field\b.js
+- C:\Dev\Rally Forge\node_modules\postcss-import\node_modules\resolve\test\resolver\false_main\index.js
+- C:\Dev\Rally Forge\node_modules\postcss-import\node_modules\resolve\test\resolver\multirepo\packages\package-b\index.js
+- C:\Dev\Rally Forge\node_modules\postcss-import\node_modules\resolve\test\resolver\other_path\root.js
+- C:\Dev\Rally Forge\node_modules\postcss-import\node_modules\resolve\test\resolver\other_path\lib\other-lib.js
+- C:\Dev\Rally Forge\node_modules\postcss-import\node_modules\resolve\test\resolver\symlinked\_\node_modules\foo.js
+- C:\Dev\Rally Forge\node_modules\postcss-import\node_modules\resolve\test\resolver\symlinked\_\symlink_target\.gitkeep
+- C:\Dev\Rally Forge\node_modules\postcss-import\node_modules\resolve\test\shadowed_core\node_modules\util\index.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\dotdot\index.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\dotdot\abc\index.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\module_dir\xmodules\aaa\index.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\module_dir\ymodules\aaa\index.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\module_dir\zmodules\bbb\main.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\node_path\x\aaa\index.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\node_path\x\ccc\index.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\node_path\y\bbb\index.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\node_path\y\ccc\index.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\pathfilter\deep_ref\main.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\precedence\aaa.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\precedence\bbb.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\precedence\aaa\index.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\precedence\aaa\main.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\precedence\bbb\main.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\resolver\foo.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\resolver\mug.coffee
+- C:\Dev\Rally Forge\node_modules\resolve\test\resolver\mug.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\resolver\baz\doom.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\resolver\baz\quux.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\resolver\browser_field\a.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\resolver\browser_field\b.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\resolver\dot_main\index.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\resolver\dot_slash_main\index.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\resolver\empty_main\index.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\resolver\false_main\index.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\resolver\incorrect_main\index.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\resolver\missing_main\index.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\resolver\multirepo\packages\package-b\index.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\resolver\null_main\index.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\resolver\other_path\root.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\resolver\other_path\lib\other-lib.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\resolver\quux\foo\index.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\resolver\same_names\foo.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\resolver\same_names\foo\index.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\resolver\symlinked\package\bar.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\resolver\symlinked\_\node_modules\foo.js
+- C:\Dev\Rally Forge\node_modules\resolve\test\resolver\symlinked\_\symlink_target\.gitkeep
+- C:\Dev\Rally Forge\node_modules\resolve\test\shadowed_core\node_modules\util\index.js
+- C:\Dev\Rally Forge\node_modules\tailwindcss\node_modules\resolve\test\pathfilter\deep_ref\main.js
+- C:\Dev\Rally Forge\node_modules\tailwindcss\node_modules\resolve\test\resolver\mug.coffee
+- C:\Dev\Rally Forge\node_modules\tailwindcss\node_modules\resolve\test\resolver\mug.js
+- C:\Dev\Rally Forge\node_modules\tailwindcss\node_modules\resolve\test\resolver\baz\doom.js
+- C:\Dev\Rally Forge\node_modules\tailwindcss\node_modules\resolve\test\resolver\browser_field\a.js
+- C:\Dev\Rally Forge\node_modules\tailwindcss\node_modules\resolve\test\resolver\browser_field\b.js
+- C:\Dev\Rally Forge\node_modules\tailwindcss\node_modules\resolve\test\resolver\false_main\index.js
+- C:\Dev\Rally Forge\node_modules\tailwindcss\node_modules\resolve\test\resolver\multirepo\packages\package-b\index.js
+- C:\Dev\Rally Forge\node_modules\tailwindcss\node_modules\resolve\test\resolver\other_path\root.js
+- C:\Dev\Rally Forge\node_modules\tailwindcss\node_modules\resolve\test\resolver\other_path\lib\other-lib.js
+- C:\Dev\Rally Forge\node_modules\tailwindcss\node_modules\resolve\test\resolver\symlinked\_\node_modules\foo.js
+- C:\Dev\Rally Forge\node_modules\tailwindcss\node_modules\resolve\test\resolver\symlinked\_\symlink_target\.gitkeep
+- C:\Dev\Rally Forge\node_modules\tailwindcss\node_modules\resolve\test\shadowed_core\node_modules\util\index.js
+- C:\Dev\Rally Forge\node_modules\tailwindcss\types\generated\.gitkeep
+- C:\Dev\Rally Forge\node_modules\union\test\fixtures\index.js
+- C:\Dev\Rally Forge\node_modules\union\test\helpers\index.js
+- C:\Dev\Rally Forge\node_modules\zlibjs\bin\.gitkeep
+- C:\Dev\Rally Forge\Scanner\VA SCANNER\rates\2026_smc.meta.json
+
+### Suspicious / Temporary Files (Manual Review Recommended)
+- C:\Dev\Rally Forge\case_import.log
+- C:\Dev\Rally Forge\.rf_backups\backup_20260301_132639_logs_temp_purge\auto_repair.log
+- C:\Dev\Rally Forge\.rf_backups\backup_20260301_132639_logs_temp_purge\dev-server-restart.log
+- C:\Dev\Rally Forge\.rf_backups\backup_20260301_132639_logs_temp_purge\dev-server.log
+- C:\Dev\Rally Forge\.rf_backups\backup_20260301_132639_logs_temp_purge\rf_session_20260301_131910_1560179d-11a9-43c8-85a0-458e288b629f.log
+- C:\Dev\Rally Forge\.rf_backups\backup_20260301_132639_logs_temp_purge\rf_session_20260301_132257_6842013d-3186-49fb-ba58-04522d691f05.log
+- C:\Dev\Rally Forge\.rf_backups\backup_20260301_132639_logs_temp_purge\rf_session_20260301_132445_c1306fed-2dbf-43b5-8bcf-4e4b6a23e43f.log
+- C:\Dev\Rally Forge\.rf_backups\backup_20260301_132639_logs_temp_purge\rf_session_20260301_132639_dda09b10-0c61-41b5-8093-67c26d6303b5.log
+- C:\Dev\Rally Forge\.rf_diagnostics\rf_session_20260301_132639_dda09b10-0c61-41b5-8093-67c26d6303b5.log
+- C:\Dev\Rally Forge\knowledge\KNOWLEDGE_COMPLETION.log
+- C:\Dev\Rally Forge\knowledge\KNOWLEDGE_CONTENT_GENERATION.log
+- C:\Dev\Rally Forge\knowledge\KNOWLEDGE_CROSSLINK.log
+- C:\Dev\Rally Forge\knowledge\KNOWLEDGE_MISSING_SUBTOPICS.log
+- C:\Dev\Rally Forge\knowledge\KNOWLEDGE_ORGANIZATION.log
+- C:\Dev\Rally Forge\knowledge\KNOWLEDGE_SEARCH_INDEX.log
+- C:\Dev\Rally Forge\knowledge\KNOWLEDGE_SUBTOPIC_GENERATION.log
+- C:\Dev\Rally Forge\knowledge\VA_KNOWLEDGE_GAP_SCAN.log
+- C:\Dev\Rally Forge\knowledge\STATE_BENEFITS\STATE_BENEFITS_BUILD.log
+- C:\Dev\Rally Forge\knowledge\VAknow\vaknow_crawl.log
+- C:\Dev\Rally Forge\_forensics\RALLY_FORGE_FORENSICS.log
+- C:\Dev\Rally Forge\_forensics\RALLY_FORGE_FORENSICS_REPORT.tmp
+
+## JSON & Config Validation
+- JSON Files: 2584
+- Invalid JSON Files: 94
+
+### Invalid JSON Files (Require Manual Repair)
+- C:\Dev\Rally Forge\package-lock.json
+- C:\Dev\Rally Forge\backend\package-lock.json
+- C:\Dev\Rally Forge\backend\node_modules\call-bind-apply-helpers\tsconfig.json
+- C:\Dev\Rally Forge\backend\node_modules\call-bound\tsconfig.json
+- C:\Dev\Rally Forge\backend\node_modules\dunder-proto\tsconfig.json
+- C:\Dev\Rally Forge\backend\node_modules\es-define-property\tsconfig.json
+- C:\Dev\Rally Forge\backend\node_modules\es-errors\tsconfig.json
+- C:\Dev\Rally Forge\backend\node_modules\es-object-atoms\tsconfig.json
+- C:\Dev\Rally Forge\backend\node_modules\get-proto\tsconfig.json
+- C:\Dev\Rally Forge\backend\node_modules\gopd\tsconfig.json
+- C:\Dev\Rally Forge\backend\node_modules\has-symbols\tsconfig.json
+- C:\Dev\Rally Forge\backend\node_modules\hasown\tsconfig.json
+- C:\Dev\Rally Forge\backend\node_modules\math-intrinsics\tsconfig.json
+- C:\Dev\Rally Forge\backend\node_modules\side-channel\tsconfig.json
+- C:\Dev\Rally Forge\backend\node_modules\side-channel-list\tsconfig.json
+- C:\Dev\Rally Forge\backend\node_modules\side-channel-map\tsconfig.json
+- C:\Dev\Rally Forge\backend\node_modules\side-channel-weakmap\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\@anthropic-ai\sdk\src\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\@eslint\eslintrc\node_modules\globals\globals.json
+- C:\Dev\Rally Forge\node_modules\array-buffer-byte-length\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\async-function\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\available-typed-arrays\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\call-bind-apply-helpers\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\call-bound\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\data-view-buffer\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\data-view-byte-length\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\data-view-byte-offset\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\define-data-property\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\dunder-proto\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\es-define-property\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\es-errors\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\es-object-atoms\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\es-set-tostringtag\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\es-shim-unscopables\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\es-to-primitive\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\for-each\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\generator-function\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\get-proto\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\get-symbol-description\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\globals\globals.json
+- C:\Dev\Rally Forge\node_modules\gopd\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\has-bigints\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\has-proto\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\has-symbols\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\has-tostringtag\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\hasown\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\internal-slot\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\is-array-buffer\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\is-async-function\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\is-bigint\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\is-boolean-object\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\is-data-view\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\is-date-object\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\is-finalizationregistry\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\is-map\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\is-negative-zero\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\is-number-object\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\is-regex\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\is-set\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\is-shared-array-buffer\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\is-string\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\is-symbol\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\is-typed-array\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\is-weakmap\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\is-weakref\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\is-weakset\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\math-intrinsics\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\mongodb\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\node-exports-info\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\own-keys\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\possible-typed-array-names\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\rxjs\src\tsconfig.cjs.spec.json
+- C:\Dev\Rally Forge\node_modules\safe-array-concat\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\safe-push-apply\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\safe-regex-test\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\set-function-length\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\set-function-name\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\set-proto\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\side-channel\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\side-channel-list\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\side-channel-map\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\side-channel-weakmap\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\stop-iteration-iterator\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\typed-array-buffer\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\typed-array-byte-length\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\typed-array-byte-offset\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\typed-array-length\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\typescript\lib\typesMap.json
+- C:\Dev\Rally Forge\node_modules\unbox-primitive\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\which-boxed-primitive\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\which-builtin-type\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\which-collection\tsconfig.json
+- C:\Dev\Rally Forge\node_modules\which-typed-array\tsconfig.json
+- C:\Dev\Rally Forge\rules\stateRules.json
+
+## Node / NPM / Package Consistency
+- Found package.json at: C:\Dev\Rally Forge\package.json
+- Found package.json at: C:\Dev\Rally Forge\.rf_backups\backup_20260301_132257_build_artifacts_cleanup\build_4f00838c\query-codemods\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\.rf_backups\backup_20260301_132257_build_artifacts_cleanup\dist_92c89adc\es\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\app\frontend-modern\package.json
+- Found package.json at: C:\Dev\Rally Forge\app\frontend-modern\node_modules\.vite\deps\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\app\frontend-modern\node_modules\@esbuild\win32-x64\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\app\frontend-modern\node_modules\@rolldown\pluginutils\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\app\frontend-modern\node_modules\@vitejs\plugin-react\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\app\frontend-modern\node_modules\esbuild\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\app\frontend-modern\node_modules\react-refresh\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\app\frontend-modern\node_modules\vite\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\app\frontend-modern\node_modules\vite\types\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\package.json
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\accepts\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\array-flatten\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\body-parser\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\bytes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\call-bind-apply-helpers\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\call-bound\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\content-disposition\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\content-type\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\cookie\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\cookie-signature\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\debug\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\depd\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\destroy\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\dunder-proto\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\ee-first\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\encodeurl\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\es-define-property\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\es-errors\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\es-object-atoms\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\escape-html\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\etag\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\express\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\finalhandler\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\forwarded\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\fresh\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\function-bind\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\get-intrinsic\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\get-proto\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\gopd\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\has-symbols\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\hasown\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\http-errors\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\iconv-lite\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\inherits\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\ipaddr.js\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\math-intrinsics\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\media-typer\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\merge-descriptors\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\methods\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\mime\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\mime-db\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\mime-types\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\ms\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\negotiator\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\object-inspect\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\on-finished\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\parseurl\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\path-to-regexp\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\proxy-addr\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\qs\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\range-parser\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\raw-body\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\safe-buffer\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\safer-buffer\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\send\package.json
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\send\node_modules\ms\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\serve-static\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\setprototypeof\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\side-channel\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\side-channel-list\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\side-channel-map\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\side-channel-weakmap\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\statuses\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\toidentifier\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\type-is\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\unpipe\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\utils-merge\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\backend\node_modules\vary\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@alloc\quick-lru\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@anthropic-ai\sdk\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@babel\code-frame\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@babel\compat-data\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@babel\core\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@babel\generator\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@babel\helper-compilation-targets\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@babel\helper-globals\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@babel\helper-module-imports\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@babel\helper-module-transforms\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@babel\helper-plugin-utils\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@babel\helper-string-parser\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@babel\helper-validator-identifier\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@babel\helper-validator-option\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@babel\helpers\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@babel\parser\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@babel\plugin-transform-react-jsx-self\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@babel\plugin-transform-react-jsx-source\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@babel\runtime\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@babel\runtime\helpers\esm\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@babel\template\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@babel\traverse\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@babel\types\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@esbuild\win32-x64\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@eslint\config-array\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@eslint\config-helpers\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@eslint\core\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@eslint\eslintrc\package.json
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@eslint\eslintrc\node_modules\globals\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@eslint\js\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@eslint\object-schema\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@eslint\plugin-kit\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@eslint-community\eslint-utils\package.json
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@eslint-community\eslint-utils\node_modules\eslint-visitor-keys\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@eslint-community\regexpp\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@humanfs\core\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@humanfs\node\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@humanwhocodes\module-importer\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@humanwhocodes\retry\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@jridgewell\gen-mapping\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@jridgewell\remapping\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@jridgewell\resolve-uri\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@jridgewell\sourcemap-codec\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@jridgewell\trace-mapping\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@mongodb-js\saslprep\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@napi-rs\canvas\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@napi-rs\canvas-win32-x64-msvc\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@nodelib\fs.scandir\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@nodelib\fs.stat\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@nodelib\fs.walk\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@remix-run\router\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@rolldown\pluginutils\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@rollup\rollup-win32-x64-gnu\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@rollup\rollup-win32-x64-msvc\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@tanstack\query-core\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@tanstack\react-query\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@tanstack\react-query\build\query-codemods\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@types\babel__core\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@types\babel__generator\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@types\babel__template\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@types\babel__traverse\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@types\estree\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@types\json-schema\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@types\webidl-conversions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@types\whatwg-url\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\@vitejs\plugin-react\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\accepts\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\acorn\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\acorn-jsx\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\ajv\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\ansi-regex\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\ansi-styles\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\any-promise\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\anymatch\package.json
+- Found package.json at: C:\Dev\Rally Forge\node_modules\anymatch\node_modules\picomatch\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\append-field\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\arg\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\argparse\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\array-buffer-byte-length\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\array-flatten\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\array-includes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\array.prototype.findlast\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\array.prototype.flat\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\array.prototype.flatmap\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\array.prototype.tosorted\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\arraybuffer.prototype.slice\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\async\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\async-function\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\autoprefixer\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\available-typed-arrays\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\balanced-match\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\baseline-browser-mapping\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\basic-auth\package.json
+- Found package.json at: C:\Dev\Rally Forge\node_modules\basic-auth\node_modules\safe-buffer\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\binary-extensions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\bmp-js\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\body-parser\package.json
+- Found package.json at: C:\Dev\Rally Forge\node_modules\body-parser\node_modules\debug\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\body-parser\node_modules\ms\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\brace-expansion\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\braces\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\browserslist\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\bson\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\bson\vendor\base64\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\bson\vendor\text-encoding\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\buffer-from\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\busboy\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\bytes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\call-bind\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\call-bind-apply-helpers\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\call-bound\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\callsites\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\camelcase-css\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\caniuse-lite\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\chalk\package.json
+- Found package.json at: C:\Dev\Rally Forge\node_modules\chalk\node_modules\supports-color\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\chokidar\package.json
+- Found package.json at: C:\Dev\Rally Forge\node_modules\chokidar\node_modules\glob-parent\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\cliui\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\color-convert\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\color-name\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\commander\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\concat-map\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\concat-stream\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\concurrently\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\content-disposition\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\content-type\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\convert-source-map\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\cookie\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\cookie-signature\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\corser\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\cross-spawn\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\cssesc\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\data-view-buffer\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\data-view-byte-length\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\data-view-byte-offset\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\add\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\addBusinessDays\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\addDays\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\addHours\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\addISOWeekYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\addMilliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\addMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\addMonths\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\addQuarters\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\addSeconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\addWeeks\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\addYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\areIntervalsOverlapping\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\clamp\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\closestIndexTo\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\closestTo\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\compareAsc\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\compareDesc\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\daysToWeeks\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\differenceInBusinessDays\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\differenceInCalendarDays\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\differenceInCalendarISOWeeks\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\differenceInCalendarISOWeekYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\differenceInCalendarMonths\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\differenceInCalendarQuarters\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\differenceInCalendarWeeks\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\differenceInCalendarYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\differenceInDays\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\differenceInHours\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\differenceInISOWeekYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\differenceInMilliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\differenceInMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\differenceInMonths\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\differenceInQuarters\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\differenceInSeconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\differenceInWeeks\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\differenceInYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\eachDayOfInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\eachHourOfInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\eachMinuteOfInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\eachMonthOfInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\eachQuarterOfInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\eachWeekendOfInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\eachWeekendOfMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\eachWeekendOfYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\eachWeekOfInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\eachYearOfInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\endOfDay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\endOfDecade\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\endOfHour\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\endOfISOWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\endOfISOWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\endOfMinute\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\endOfMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\endOfQuarter\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\endOfSecond\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\endOfToday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\endOfTomorrow\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\endOfWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\endOfYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\endOfYesterday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\add\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\addBusinessDays\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\addDays\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\addHours\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\addISOWeekYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\addMilliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\addMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\addMonths\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\addQuarters\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\addSeconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\addWeeks\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\addYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\areIntervalsOverlapping\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\clamp\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\closestIndexTo\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\closestTo\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\compareAsc\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\compareDesc\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\daysToWeeks\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\differenceInBusinessDays\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\differenceInCalendarDays\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\differenceInCalendarISOWeeks\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\differenceInCalendarISOWeekYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\differenceInCalendarMonths\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\differenceInCalendarQuarters\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\differenceInCalendarWeeks\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\differenceInCalendarYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\differenceInDays\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\differenceInHours\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\differenceInISOWeekYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\differenceInMilliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\differenceInMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\differenceInMonths\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\differenceInQuarters\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\differenceInSeconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\differenceInWeeks\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\differenceInYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\eachDayOfInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\eachHourOfInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\eachMinuteOfInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\eachMonthOfInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\eachQuarterOfInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\eachWeekendOfInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\eachWeekendOfMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\eachWeekendOfYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\eachWeekOfInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\eachYearOfInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\endOfDay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\endOfDecade\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\endOfHour\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\endOfISOWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\endOfISOWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\endOfMinute\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\endOfMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\endOfQuarter\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\endOfSecond\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\endOfToday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\endOfTomorrow\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\endOfWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\endOfYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\endOfYesterday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\format\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\formatDistance\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\formatDistanceStrict\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\formatDistanceToNow\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\formatDistanceToNowStrict\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\formatDuration\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\formatISO\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\formatISO9075\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\formatISODuration\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\formatRelative\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\formatRFC3339\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\formatRFC7231\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\add\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\addBusinessDays\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\addDays\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\addHours\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\addISOWeekYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\addMilliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\addMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\addMonths\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\addQuarters\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\addSeconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\addWeeks\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\addYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\areIntervalsOverlapping\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\areIntervalsOverlappingWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\clamp\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\closestIndexTo\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\closestTo\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\compareAsc\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\compareDesc\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\daysToWeeks\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\differenceInBusinessDays\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\differenceInCalendarDays\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\differenceInCalendarISOWeeks\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\differenceInCalendarISOWeekYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\differenceInCalendarMonths\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\differenceInCalendarQuarters\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\differenceInCalendarWeeks\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\differenceInCalendarWeeksWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\differenceInCalendarYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\differenceInDays\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\differenceInHours\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\differenceInHoursWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\differenceInISOWeekYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\differenceInMilliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\differenceInMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\differenceInMinutesWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\differenceInMonths\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\differenceInQuarters\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\differenceInQuartersWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\differenceInSeconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\differenceInSecondsWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\differenceInWeeks\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\differenceInWeeksWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\differenceInYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\eachDayOfInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\eachDayOfIntervalWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\eachHourOfInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\eachHourOfIntervalWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\eachMinuteOfInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\eachMinuteOfIntervalWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\eachMonthOfInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\eachQuarterOfInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\eachWeekendOfInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\eachWeekendOfMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\eachWeekendOfYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\eachWeekOfInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\eachWeekOfIntervalWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\eachYearOfInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\endOfDay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\endOfDecade\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\endOfDecadeWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\endOfHour\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\endOfISOWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\endOfISOWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\endOfMinute\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\endOfMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\endOfQuarter\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\endOfSecond\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\endOfWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\endOfWeekWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\endOfYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\format\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\formatDistance\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\formatDistanceStrict\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\formatDistanceStrictWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\formatDistanceWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\formatDuration\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\formatDurationWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\formatISO\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\formatISO9075\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\formatISO9075WithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\formatISODuration\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\formatISOWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\formatRelative\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\formatRelativeWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\formatRFC3339\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\formatRFC3339WithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\formatRFC7231\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\formatWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\fromUnixTime\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\getDate\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\getDay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\getDayOfYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\getDaysInMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\getDaysInYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\getDecade\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\getHours\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\getISODay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\getISOWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\getISOWeeksInYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\getISOWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\getMilliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\getMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\getMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\getOverlappingDaysInIntervals\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\getQuarter\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\getSeconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\getTime\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\getUnixTime\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\getWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\getWeekOfMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\getWeekOfMonthWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\getWeeksInMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\getWeeksInMonthWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\getWeekWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\getWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\getWeekYearWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\getYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\hoursToMilliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\hoursToMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\hoursToSeconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\intervalToDuration\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\intlFormat\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\intlFormatDistance\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\intlFormatDistanceWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\isAfter\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\isBefore\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\isDate\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\isEqual\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\isExists\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\isFirstDayOfMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\isFriday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\isLastDayOfMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\isLeapYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\isMatch\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\isMatchWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\isMonday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\isSameDay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\isSameHour\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\isSameISOWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\isSameISOWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\isSameMinute\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\isSameMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\isSameQuarter\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\isSameSecond\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\isSameWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\isSameWeekWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\isSameYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\isSaturday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\isSunday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\isThursday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\isTuesday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\isValid\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\isWednesday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\isWeekend\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\isWithinInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\lastDayOfDecade\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\lastDayOfISOWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\lastDayOfISOWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\lastDayOfMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\lastDayOfQuarter\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\lastDayOfQuarterWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\lastDayOfWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\lastDayOfWeekWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\lastDayOfYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\lightFormat\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\max\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\milliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\millisecondsToHours\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\millisecondsToMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\millisecondsToSeconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\min\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\minutesToHours\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\minutesToMilliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\minutesToSeconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\monthsToQuarters\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\monthsToYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\nextDay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\nextFriday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\nextMonday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\nextSaturday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\nextSunday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\nextThursday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\nextTuesday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\nextWednesday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\parse\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\parseISO\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\parseISOWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\parseJSON\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\parseWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\previousDay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\previousFriday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\previousMonday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\previousSaturday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\previousSunday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\previousThursday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\previousTuesday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\previousWednesday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\quartersToMonths\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\quartersToYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\roundToNearestMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\roundToNearestMinutesWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\secondsToHours\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\secondsToMilliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\secondsToMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\set\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\setDate\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\setDay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\setDayOfYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\setDayWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\setHours\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\setISODay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\setISOWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\setISOWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\setMilliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\setMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\setMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\setQuarter\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\setSeconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\setWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\setWeekWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\setWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\setWeekYearWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\setYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\startOfDay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\startOfDecade\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\startOfHour\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\startOfISOWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\startOfISOWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\startOfMinute\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\startOfMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\startOfQuarter\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\startOfSecond\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\startOfWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\startOfWeekWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\startOfWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\startOfWeekYearWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\startOfYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\sub\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\subBusinessDays\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\subDays\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\subHours\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\subISOWeekYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\subMilliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\subMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\subMonths\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\subQuarters\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\subSeconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\subWeeks\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\subYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\toDate\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\weeksToDays\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\yearsToMonths\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fp\yearsToQuarters\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\fromUnixTime\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\getDate\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\getDay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\getDayOfYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\getDaysInMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\getDaysInYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\getDecade\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\getDefaultOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\getHours\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\getISODay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\getISOWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\getISOWeeksInYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\getISOWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\getMilliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\getMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\getMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\getOverlappingDaysInIntervals\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\getQuarter\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\getSeconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\getTime\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\getUnixTime\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\getWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\getWeekOfMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\getWeeksInMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\getWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\getYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\hoursToMilliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\hoursToMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\hoursToSeconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\intervalToDuration\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\intlFormat\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\intlFormatDistance\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isAfter\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isBefore\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isDate\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isEqual\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isExists\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isFirstDayOfMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isFriday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isFuture\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isLastDayOfMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isLeapYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isMatch\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isMonday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isPast\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isSameDay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isSameHour\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isSameISOWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isSameISOWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isSameMinute\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isSameMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isSameQuarter\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isSameSecond\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isSameWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isSameYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isSaturday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isSunday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isThisHour\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isThisISOWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isThisMinute\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isThisMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isThisQuarter\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isThisSecond\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isThisWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isThisYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isThursday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isToday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isTomorrow\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isTuesday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isValid\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isWednesday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isWeekend\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isWithinInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\isYesterday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\lastDayOfDecade\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\lastDayOfISOWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\lastDayOfISOWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\lastDayOfMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\lastDayOfQuarter\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\lastDayOfWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\lastDayOfYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\lightFormat\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\af\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\ar\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\ar-DZ\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\ar-EG\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\ar-MA\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\ar-SA\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\ar-TN\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\az\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\be\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\be-tarask\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\bg\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\bn\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\bs\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\ca\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\cs\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\cy\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\da\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\de\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\de-AT\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\el\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\en-AU\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\en-CA\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\en-GB\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\en-IE\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\en-IN\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\en-NZ\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\en-US\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\en-ZA\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\eo\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\es\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\et\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\eu\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\fa-IR\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\fi\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\fr\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\fr-CA\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\fr-CH\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\fy\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\gd\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\gl\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\gu\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\he\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\hi\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\hr\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\ht\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\hu\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\hy\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\id\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\is\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\it\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\it-CH\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\ja\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\ja-Hira\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\ka\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\kk\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\km\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\kn\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\ko\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\lb\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\lt\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\lv\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\mk\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\mn\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\ms\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\mt\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\nb\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\nl\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\nl-BE\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\nn\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\oc\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\pl\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\pt\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\pt-BR\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\ro\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\ru\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\sk\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\sl\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\sq\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\sr\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\sr-Latn\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\sv\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\ta\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\te\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\th\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\tr\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\ug\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\uk\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\uz\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\uz-Cyrl\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\vi\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\zh-CN\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\zh-HK\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\locale\zh-TW\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\max\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\milliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\millisecondsToHours\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\millisecondsToMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\millisecondsToSeconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\min\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\minutesToHours\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\minutesToMilliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\minutesToSeconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\monthsToQuarters\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\monthsToYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\nextDay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\nextFriday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\nextMonday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\nextSaturday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\nextSunday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\nextThursday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\nextTuesday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\nextWednesday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\parse\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\parseISO\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\parseJSON\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\previousDay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\previousFriday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\previousMonday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\previousSaturday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\previousSunday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\previousThursday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\previousTuesday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\previousWednesday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\quartersToMonths\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\quartersToYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\roundToNearestMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\secondsToHours\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\secondsToMilliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\secondsToMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\set\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\setDate\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\setDay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\setDayOfYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\setDefaultOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\setHours\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\setISODay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\setISOWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\setISOWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\setMilliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\setMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\setMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\setQuarter\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\setSeconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\setWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\setWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\setYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\startOfDay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\startOfDecade\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\startOfHour\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\startOfISOWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\startOfISOWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\startOfMinute\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\startOfMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\startOfQuarter\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\startOfSecond\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\startOfToday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\startOfTomorrow\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\startOfWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\startOfWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\startOfYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\startOfYesterday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\sub\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\subBusinessDays\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\subDays\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\subHours\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\subISOWeekYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\subMilliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\subMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\subMonths\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\subQuarters\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\subSeconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\subWeeks\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\subYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\toDate\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\weeksToDays\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\yearsToMonths\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\esm\yearsToQuarters\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\format\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\formatDistance\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\formatDistanceStrict\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\formatDistanceToNow\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\formatDistanceToNowStrict\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\formatDuration\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\formatISO\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\formatISO9075\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\formatISODuration\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\formatRelative\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\formatRFC3339\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\formatRFC7231\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\add\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\addBusinessDays\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\addDays\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\addHours\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\addISOWeekYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\addMilliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\addMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\addMonths\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\addQuarters\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\addSeconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\addWeeks\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\addYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\areIntervalsOverlapping\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\areIntervalsOverlappingWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\clamp\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\closestIndexTo\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\closestTo\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\compareAsc\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\compareDesc\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\daysToWeeks\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\differenceInBusinessDays\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\differenceInCalendarDays\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\differenceInCalendarISOWeeks\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\differenceInCalendarISOWeekYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\differenceInCalendarMonths\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\differenceInCalendarQuarters\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\differenceInCalendarWeeks\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\differenceInCalendarWeeksWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\differenceInCalendarYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\differenceInDays\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\differenceInHours\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\differenceInHoursWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\differenceInISOWeekYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\differenceInMilliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\differenceInMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\differenceInMinutesWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\differenceInMonths\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\differenceInQuarters\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\differenceInQuartersWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\differenceInSeconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\differenceInSecondsWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\differenceInWeeks\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\differenceInWeeksWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\differenceInYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\eachDayOfInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\eachDayOfIntervalWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\eachHourOfInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\eachHourOfIntervalWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\eachMinuteOfInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\eachMinuteOfIntervalWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\eachMonthOfInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\eachQuarterOfInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\eachWeekendOfInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\eachWeekendOfMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\eachWeekendOfYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\eachWeekOfInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\eachWeekOfIntervalWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\eachYearOfInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\endOfDay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\endOfDecade\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\endOfDecadeWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\endOfHour\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\endOfISOWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\endOfISOWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\endOfMinute\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\endOfMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\endOfQuarter\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\endOfSecond\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\endOfWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\endOfWeekWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\endOfYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\format\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\formatDistance\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\formatDistanceStrict\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\formatDistanceStrictWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\formatDistanceWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\formatDuration\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\formatDurationWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\formatISO\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\formatISO9075\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\formatISO9075WithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\formatISODuration\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\formatISOWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\formatRelative\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\formatRelativeWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\formatRFC3339\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\formatRFC3339WithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\formatRFC7231\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\formatWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\fromUnixTime\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\getDate\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\getDay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\getDayOfYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\getDaysInMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\getDaysInYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\getDecade\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\getHours\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\getISODay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\getISOWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\getISOWeeksInYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\getISOWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\getMilliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\getMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\getMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\getOverlappingDaysInIntervals\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\getQuarter\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\getSeconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\getTime\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\getUnixTime\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\getWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\getWeekOfMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\getWeekOfMonthWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\getWeeksInMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\getWeeksInMonthWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\getWeekWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\getWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\getWeekYearWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\getYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\hoursToMilliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\hoursToMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\hoursToSeconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\intervalToDuration\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\intlFormat\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\intlFormatDistance\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\intlFormatDistanceWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\isAfter\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\isBefore\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\isDate\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\isEqual\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\isExists\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\isFirstDayOfMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\isFriday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\isLastDayOfMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\isLeapYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\isMatch\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\isMatchWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\isMonday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\isSameDay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\isSameHour\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\isSameISOWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\isSameISOWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\isSameMinute\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\isSameMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\isSameQuarter\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\isSameSecond\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\isSameWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\isSameWeekWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\isSameYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\isSaturday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\isSunday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\isThursday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\isTuesday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\isValid\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\isWednesday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\isWeekend\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\isWithinInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\lastDayOfDecade\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\lastDayOfISOWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\lastDayOfISOWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\lastDayOfMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\lastDayOfQuarter\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\lastDayOfQuarterWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\lastDayOfWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\lastDayOfWeekWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\lastDayOfYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\lightFormat\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\max\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\milliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\millisecondsToHours\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\millisecondsToMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\millisecondsToSeconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\min\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\minutesToHours\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\minutesToMilliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\minutesToSeconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\monthsToQuarters\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\monthsToYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\nextDay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\nextFriday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\nextMonday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\nextSaturday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\nextSunday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\nextThursday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\nextTuesday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\nextWednesday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\parse\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\parseISO\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\parseISOWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\parseJSON\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\parseWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\previousDay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\previousFriday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\previousMonday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\previousSaturday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\previousSunday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\previousThursday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\previousTuesday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\previousWednesday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\quartersToMonths\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\quartersToYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\roundToNearestMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\roundToNearestMinutesWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\secondsToHours\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\secondsToMilliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\secondsToMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\set\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\setDate\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\setDay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\setDayOfYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\setDayWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\setHours\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\setISODay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\setISOWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\setISOWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\setMilliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\setMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\setMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\setQuarter\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\setSeconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\setWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\setWeekWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\setWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\setWeekYearWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\setYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\startOfDay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\startOfDecade\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\startOfHour\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\startOfISOWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\startOfISOWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\startOfMinute\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\startOfMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\startOfQuarter\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\startOfSecond\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\startOfWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\startOfWeekWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\startOfWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\startOfWeekYearWithOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\startOfYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\sub\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\subBusinessDays\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\subDays\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\subHours\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\subISOWeekYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\subMilliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\subMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\subMonths\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\subQuarters\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\subSeconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\subWeeks\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\subYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\toDate\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\weeksToDays\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\yearsToMonths\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fp\yearsToQuarters\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\fromUnixTime\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\getDate\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\getDay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\getDayOfYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\getDaysInMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\getDaysInYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\getDecade\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\getDefaultOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\getHours\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\getISODay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\getISOWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\getISOWeeksInYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\getISOWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\getMilliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\getMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\getMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\getOverlappingDaysInIntervals\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\getQuarter\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\getSeconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\getTime\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\getUnixTime\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\getWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\getWeekOfMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\getWeeksInMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\getWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\getYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\hoursToMilliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\hoursToMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\hoursToSeconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\intervalToDuration\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\intlFormat\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\intlFormatDistance\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isAfter\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isBefore\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isDate\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isEqual\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isExists\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isFirstDayOfMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isFriday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isFuture\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isLastDayOfMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isLeapYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isMatch\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isMonday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isPast\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isSameDay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isSameHour\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isSameISOWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isSameISOWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isSameMinute\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isSameMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isSameQuarter\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isSameSecond\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isSameWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isSameYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isSaturday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isSunday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isThisHour\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isThisISOWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isThisMinute\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isThisMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isThisQuarter\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isThisSecond\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isThisWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isThisYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isThursday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isToday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isTomorrow\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isTuesday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isValid\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isWednesday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isWeekend\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isWithinInterval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\isYesterday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\lastDayOfDecade\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\lastDayOfISOWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\lastDayOfISOWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\lastDayOfMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\lastDayOfQuarter\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\lastDayOfWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\lastDayOfYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\lightFormat\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\af\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\ar\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\ar-DZ\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\ar-EG\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\ar-MA\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\ar-SA\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\ar-TN\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\az\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\be\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\be-tarask\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\bg\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\bn\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\bs\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\ca\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\cs\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\cy\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\da\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\de\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\de-AT\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\el\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\en-AU\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\en-CA\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\en-GB\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\en-IE\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\en-IN\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\en-NZ\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\en-US\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\en-ZA\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\eo\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\es\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\et\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\eu\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\fa-IR\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\fi\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\fr\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\fr-CA\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\fr-CH\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\fy\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\gd\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\gl\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\gu\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\he\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\hi\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\hr\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\ht\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\hu\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\hy\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\id\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\is\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\it\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\it-CH\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\ja\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\ja-Hira\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\ka\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\kk\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\km\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\kn\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\ko\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\lb\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\lt\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\lv\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\mk\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\mn\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\ms\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\mt\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\nb\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\nl\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\nl-BE\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\nn\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\oc\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\pl\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\pt\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\pt-BR\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\ro\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\ru\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\sk\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\sl\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\sq\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\sr\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\sr-Latn\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\sv\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\ta\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\te\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\th\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\tr\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\ug\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\uk\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\uz\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\uz-Cyrl\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\vi\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\zh-CN\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\zh-HK\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\locale\zh-TW\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\max\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\milliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\millisecondsToHours\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\millisecondsToMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\millisecondsToSeconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\min\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\minutesToHours\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\minutesToMilliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\minutesToSeconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\monthsToQuarters\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\monthsToYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\nextDay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\nextFriday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\nextMonday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\nextSaturday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\nextSunday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\nextThursday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\nextTuesday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\nextWednesday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\parse\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\parseISO\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\parseJSON\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\previousDay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\previousFriday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\previousMonday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\previousSaturday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\previousSunday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\previousThursday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\previousTuesday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\previousWednesday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\quartersToMonths\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\quartersToYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\roundToNearestMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\secondsToHours\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\secondsToMilliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\secondsToMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\set\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\setDate\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\setDay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\setDayOfYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\setDefaultOptions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\setHours\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\setISODay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\setISOWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\setISOWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\setMilliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\setMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\setMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\setQuarter\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\setSeconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\setWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\setWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\setYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\startOfDay\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\startOfDecade\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\startOfHour\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\startOfISOWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\startOfISOWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\startOfMinute\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\startOfMonth\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\startOfQuarter\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\startOfSecond\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\startOfToday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\startOfTomorrow\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\startOfWeek\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\startOfWeekYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\startOfYear\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\startOfYesterday\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\sub\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\subBusinessDays\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\subDays\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\subHours\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\subISOWeekYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\subMilliseconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\subMinutes\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\subMonths\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\subQuarters\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\subSeconds\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\subWeeks\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\subYears\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\toDate\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\weeksToDays\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\yearsToMonths\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\date-fns\yearsToQuarters\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\debug\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\deep-is\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\define-data-property\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\define-properties\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\depd\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\destroy\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\didyoumean\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\dlv\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\doctrine\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\dunder-proto\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\ee-first\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\electron-to-chromium\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\emoji-regex\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\encodeurl\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\es-abstract\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\es-define-property\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\es-errors\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\es-iterator-helpers\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\es-object-atoms\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\es-set-tostringtag\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\es-shim-unscopables\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\es-to-primitive\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\esbuild\package.json
+- Found package.json at: C:\Dev\Rally Forge\node_modules\escalade\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\escape-html\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\escape-string-regexp\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\eslint\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\eslint-plugin-react\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\eslint-plugin-react-hooks\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\eslint-scope\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\eslint-visitor-keys\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\espree\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\esquery\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\esrecurse\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\estraverse\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\esutils\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\etag\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\eventemitter3\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\express\package.json
+- Found package.json at: C:\Dev\Rally Forge\node_modules\express\node_modules\debug\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\express\node_modules\ms\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\fast-deep-equal\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\fast-glob\package.json
+- Found package.json at: C:\Dev\Rally Forge\node_modules\fast-glob\node_modules\glob-parent\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\fast-json-stable-stringify\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\fast-levenshtein\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\fastq\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\fdir\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\file-entry-cache\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\fill-range\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\finalhandler\package.json
+- Found package.json at: C:\Dev\Rally Forge\node_modules\finalhandler\node_modules\debug\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\finalhandler\node_modules\ms\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\find-up\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\flat-cache\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\flatted\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\flatted\cjs\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\follow-redirects\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\for-each\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\forwarded\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\fraction.js\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\fresh\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\function-bind\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\function.prototype.name\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\functions-have-names\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\generator-function\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\gensync\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\get-caller-file\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\get-intrinsic\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\get-proto\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\get-symbol-description\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\glob-parent\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\globals\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\globalthis\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\gopd\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\has-bigints\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\has-flag\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\has-property-descriptors\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\has-proto\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\has-symbols\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\has-tostringtag\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\hasown\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\he\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\hermes-estree\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\hermes-parser\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\html-encoding-sniffer\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\http-errors\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\http-proxy\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\http-server\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\iconv-lite\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\idb-keyval\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\ignore\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\import-fresh\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\imurmurhash\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\inherits\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\internal-slot\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\ipaddr.js\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\is-array-buffer\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\is-async-function\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\is-bigint\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\is-binary-path\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\is-boolean-object\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\is-callable\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\is-core-module\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\is-data-view\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\is-date-object\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\is-extglob\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\is-finalizationregistry\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\is-fullwidth-code-point\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\is-generator-function\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\is-glob\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\is-map\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\is-negative-zero\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\is-number\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\is-number-object\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\is-regex\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\is-set\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\is-shared-array-buffer\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\is-string\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\is-symbol\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\is-typed-array\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\is-url\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\is-weakmap\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\is-weakref\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\is-weakset\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\isarray\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\isexe\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\iterator.prototype\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\jiti\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\js-tokens\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\js-yaml\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\jsesc\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\json-buffer\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\json-schema-to-ts\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\json-schema-traverse\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\json-stable-stringify-without-jsonify\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\json5\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\jsx-ast-utils\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\keyv\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\levn\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\lilconfig\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\lines-and-columns\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\locate-path\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\lodash\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\lodash.merge\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\loose-envify\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\lru-cache\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\math-intrinsics\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\media-typer\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\memory-pager\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\merge-descriptors\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\merge2\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\methods\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\micromatch\package.json
+- Found package.json at: C:\Dev\Rally Forge\node_modules\micromatch\node_modules\picomatch\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\mime\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\mime-db\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\mime-types\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\minimatch\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\minimist\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\mkdirp\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\mongodb\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\mongodb-connection-string-url\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\ms\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\multer\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\mz\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\nanoid\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\nanoid\async\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\nanoid\non-secure\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\nanoid\url-alphabet\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\natural-compare\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\negotiator\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\node-exports-info\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\node-fetch\package.json
+- Found package.json at: C:\Dev\Rally Forge\node_modules\node-fetch\node_modules\tr46\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\node-fetch\node_modules\webidl-conversions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\node-fetch\node_modules\whatwg-url\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\node-releases\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\normalize-path\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\object-assign\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\object-hash\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\object-inspect\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\object-keys\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\object.assign\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\object.entries\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\object.fromentries\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\object.values\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\on-finished\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\opencollective-postinstall\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\opener\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\optionator\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\own-keys\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\p-limit\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\p-locate\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\parent-module\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\parseurl\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\path-exists\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\path-key\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\path-parse\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\path-to-regexp\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\pdfjs-dist\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\picocolors\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\picomatch\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\pify\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\pirates\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\portfinder\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\possible-typed-array-names\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\postcss\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\postcss-import\package.json
+- Found package.json at: C:\Dev\Rally Forge\node_modules\postcss-import\node_modules\resolve\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\postcss-import\node_modules\resolve\test\module_dir\zmodules\bbb\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\postcss-import\node_modules\resolve\test\resolver\baz\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\postcss-import\node_modules\resolve\test\resolver\browser_field\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\postcss-import\node_modules\resolve\test\resolver\dot_main\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\postcss-import\node_modules\resolve\test\resolver\dot_slash_main\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\postcss-import\node_modules\resolve\test\resolver\false_main\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\postcss-import\node_modules\resolve\test\resolver\incorrect_main\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\postcss-import\node_modules\resolve\test\resolver\invalid_main\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\postcss-import\node_modules\resolve\test\resolver\multirepo\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\postcss-import\node_modules\resolve\test\resolver\multirepo\packages\package-a\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\postcss-import\node_modules\resolve\test\resolver\multirepo\packages\package-b\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\postcss-import\node_modules\resolve\test\resolver\nested_symlinks\mylib\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\postcss-import\node_modules\resolve\test\resolver\symlinked\package\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\postcss-js\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\postcss-load-config\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\postcss-nested\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\postcss-selector-parser\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\postcss-value-parser\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\prelude-ls\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\prettier\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\prop-types\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\proxy-addr\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\punycode\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\qs\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\queue-microtask\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\range-parser\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\raw-body\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\react\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\react-dom\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\react-is\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\react-refresh\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\react-router\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\react-router-dom\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\read-cache\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\readable-stream\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\readdirp\package.json
+- Found package.json at: C:\Dev\Rally Forge\node_modules\readdirp\node_modules\picomatch\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\reflect.getprototypeof\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\regenerator-runtime\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\regexp.prototype.flags\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\require-directory\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\requires-port\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\resolve\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\resolve\test\module_dir\zmodules\bbb\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\resolve\test\resolver\baz\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\resolve\test\resolver\browser_field\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\resolve\test\resolver\dot_main\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\resolve\test\resolver\dot_slash_main\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\resolve\test\resolver\empty_main\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\resolve\test\resolver\false_main\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\resolve\test\resolver\incorrect_main\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\resolve\test\resolver\invalid_main\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\resolve\test\resolver\missing_index\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\resolve\test\resolver\missing_main\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\resolve\test\resolver\multirepo\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\resolve\test\resolver\multirepo\packages\package-a\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\resolve\test\resolver\multirepo\packages\package-b\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\resolve\test\resolver\nested_symlinks\mylib\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\resolve\test\resolver\null_main\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\resolve\test\resolver\symlinked\package\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\resolve-from\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\reusify\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\rollup\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\rollup\dist\es\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\run-parallel\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\rxjs\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\rxjs\ajax\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\rxjs\fetch\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\rxjs\operators\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\rxjs\testing\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\rxjs\webSocket\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\safe-array-concat\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\safe-buffer\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\safe-push-apply\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\safe-regex-test\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\safer-buffer\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\scheduler\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\secure-compare\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\semver\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\send\package.json
+- Found package.json at: C:\Dev\Rally Forge\node_modules\send\node_modules\debug\package.json
+- Found package.json at: C:\Dev\Rally Forge\node_modules\send\node_modules\debug\node_modules\ms\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\serve-static\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\set-function-length\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\set-function-name\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\set-proto\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\setprototypeof\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\shebang-command\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\shebang-regex\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\shell-quote\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\side-channel\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\side-channel-list\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\side-channel-map\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\side-channel-weakmap\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\source-map-js\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\sparse-bitfield\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\spawn-command\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\statuses\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\stop-iteration-iterator\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\streamsearch\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\string-width\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\string.prototype.matchall\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\string.prototype.repeat\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\string.prototype.trim\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\string.prototype.trimend\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\string.prototype.trimstart\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\string_decoder\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\strip-ansi\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\strip-json-comments\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\sucrase\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\supports-color\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\supports-preserve-symlinks-flag\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\tailwindcss\package.json
+- Found package.json at: C:\Dev\Rally Forge\node_modules\tailwindcss\node_modules\resolve\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\tailwindcss\node_modules\resolve\test\module_dir\zmodules\bbb\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\tailwindcss\node_modules\resolve\test\resolver\baz\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\tailwindcss\node_modules\resolve\test\resolver\browser_field\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\tailwindcss\node_modules\resolve\test\resolver\dot_main\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\tailwindcss\node_modules\resolve\test\resolver\dot_slash_main\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\tailwindcss\node_modules\resolve\test\resolver\false_main\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\tailwindcss\node_modules\resolve\test\resolver\incorrect_main\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\tailwindcss\node_modules\resolve\test\resolver\invalid_main\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\tailwindcss\node_modules\resolve\test\resolver\multirepo\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\tailwindcss\node_modules\resolve\test\resolver\multirepo\packages\package-a\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\tailwindcss\node_modules\resolve\test\resolver\multirepo\packages\package-b\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\tailwindcss\node_modules\resolve\test\resolver\nested_symlinks\mylib\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\tailwindcss\node_modules\resolve\test\resolver\symlinked\package\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\tesseract.js\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\tesseract.js-core\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\thenify\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\thenify-all\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\tinyglobby\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\to-regex-range\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\toidentifier\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\tr46\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\tree-kill\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\ts-algebra\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\ts-interface-checker\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\tslib\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\tslib\modules\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\type-check\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\type-is\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\typed-array-buffer\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\typed-array-byte-length\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\typed-array-byte-offset\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\typed-array-length\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\typedarray\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\typescript\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\unbox-primitive\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\union\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\unpipe\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\update-browserslist-db\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\uri-js\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\url-join\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\use-sync-external-store\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\util-deprecate\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\utils-merge\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\vary\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\vite\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\vite\types\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\wasm-feature-detect\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\webidl-conversions\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\whatwg-encoding\package.json
+- Found package.json at: C:\Dev\Rally Forge\node_modules\whatwg-encoding\node_modules\iconv-lite\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\whatwg-url\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\which\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\which-boxed-primitive\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\which-builtin-type\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\which-collection\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\which-typed-array\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\word-wrap\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\wrap-ansi\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\xtend\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\y18n\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\yallist\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\yargs\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\yargs\helpers\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\yargs-parser\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\yocto-queue\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\zlibjs\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\zod\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\zod\locales\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\zod\mini\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\zod\v3\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\zod\v4\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\zod\v4\classic\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\zod\v4\core\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\zod\v4\locales\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\zod\v4\mini\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\zod\v4-mini\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\zod-validation-error\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\node_modules\zustand\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\packages\lighthouse\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\packages\shared-data\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+- Found package.json at: C:\Dev\Rally Forge\Scanner\VA SCANNER\package.json
+  - node_modules MISSING (run npm install / pnpm / yarn as appropriate)
+
+## Git Status Snapshot
+
+## High-Risk Patterns Summary
+- Empty directories: 65
+- Zero-byte files: 75
+- Invalid JSON files: 94
+- Suspicious temp/backup files: 21
+
+### Recommended Next Actions (Manual / Scripted)
+- Review invalid JSON files and repair syntax.
+- Inspect zero-byte files for data loss; restore from backup if needed.
+- Review large files and logs; archive or rotate if appropriate.
+- Decide on cleanup strategy for suspicious temp/backup files.
+

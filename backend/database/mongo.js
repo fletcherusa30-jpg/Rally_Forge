@@ -7,7 +7,9 @@ let inMemoryDb;
 const getConnectionOptions = () => ({
   maxPoolSize: 10,
   minPoolSize: 2,
-  retryWrites: true
+  retryWrites: true,
+  serverSelectionTimeoutMS: 2000,
+  connectTimeoutMS: 2000
 });
 
 const valuesEqual = (left, right) => {
@@ -118,3 +120,4 @@ export const getDb = () => {
 
   return db;
 };
+

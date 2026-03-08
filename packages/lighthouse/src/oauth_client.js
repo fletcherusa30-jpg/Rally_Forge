@@ -1,4 +1,4 @@
-export const requestToken = async ({
+﻿export const requestToken = async ({
   tokenUrl,
   clientId,
   clientSecret,
@@ -37,3 +37,4 @@ export const requestToken = async ({
 
   return response.json();
 };
+

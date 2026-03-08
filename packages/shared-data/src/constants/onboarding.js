@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @typedef {Object} ServicePeriod
  * @property {string} startDate - ISO date string (YYYY-MM-DD).
  * @property {string|null} endDate - ISO date string or null when active.
@@ -18,3 +18,4 @@
  */
 
 export {};
+

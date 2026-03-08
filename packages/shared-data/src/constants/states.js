@@ -1,4 +1,4 @@
-export const STATES = [
+﻿export const STATES = [
   "Alabama",
   "Alaska",
   "Arizona",
@@ -56,3 +56,4 @@ export const STATES = [
   "Puerto Rico",
   "U.S. Virgin Islands"
 ];
+

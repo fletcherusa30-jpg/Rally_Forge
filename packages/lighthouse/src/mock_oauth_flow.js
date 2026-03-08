@@ -1,4 +1,4 @@
-export const buildMockAuthorizeUrl = ({
+﻿export const buildMockAuthorizeUrl = ({
   clientId = "MOCK_CLIENT_ID",
   redirectUri = "https://mock.invalid/callback",
   scope = "mock.scope",
@@ -27,3 +27,4 @@ export const validateMockToken = async (token) => ({
   scope: "mock.scope",
   exp: Math.floor(Date.now() / 1000) + 3600
 });
+

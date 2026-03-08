@@ -1,4 +1,4 @@
-export const mockEndpoints = {
+﻿export const mockEndpoints = {
   baseUrl: "https://mock.lighthouse.invalid",
   veteranVerification: "/MOCK/veteran-verification",
   disabilityRating: "/MOCK/disability-rating",
@@ -26,3 +26,4 @@ export const mockResponses = {
     items: []
   }
 };
+

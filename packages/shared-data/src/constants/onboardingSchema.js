@@ -1,4 +1,4 @@
-import { BRANCHES, COMPONENTS, THEATERS } from "../constants/branches.js";
+﻿import { BRANCHES, COMPONENTS, THEATERS } from "../constants/branches.js";
 import { STATES } from "../constants/states.js";
 import { AWARDS_LIST } from "../constants/awardsList.js";
 
@@ -96,3 +96,4 @@ export const validateOnboarding = (payload) => {
 
   return { valid: errors.length === 0, errors };
 };
+

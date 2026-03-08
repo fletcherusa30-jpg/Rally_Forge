@@ -1,4 +1,4 @@
-import { requestToken } from "./oauth_client.js";
+﻿import { requestToken } from "./oauth_client.js";
 import { TokenManager } from "./token_manager.js";
 
 export class LighthouseClient {
@@ -47,3 +47,4 @@ export class LighthouseClient {
     return response.json();
   }
 }
+

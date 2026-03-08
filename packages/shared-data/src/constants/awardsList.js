@@ -1,4 +1,4 @@
-export const AWARDS_LIST = [
+﻿export const AWARDS_LIST = [
   { id: "CIB", name: "Combat Infantryman Badge", category: "combat_award" },
   { id: "CAB", name: "Combat Action Badge", category: "combat_award" },
   { id: "CMB", name: "Combat Medical Badge", category: "combat_award" },
@@ -66,3 +66,4 @@ export const AWARDS_LIST = [
   { id: "NWPB", name: "Nuclear Weapons Personnel Badge", category: "rare_award" },
   { id: "RWB", name: "Radiation Worker Badge", category: "rare_award" }
 ];
+
