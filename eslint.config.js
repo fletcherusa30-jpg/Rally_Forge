@@ -15,6 +15,29 @@ export default [
   },
   js.configs.recommended,
   {
+    files: ['**/*.mjs'],
+    languageOptions: {
+      globals: {
+        ...globals.node
+      }
+    }
+  },
+  {
+    files: ['backend/va_scanner/**/*.{js,mjs}'],
+    rules: {
+      // Migrated scanner rules rely on dense regex catalogs; keep these as warnings/ignored for now.
+      'no-useless-escape': 'off',
+      'no-control-regex': 'off',
+      'no-unused-vars': 'off'
+    }
+  },
+  {
+    files: ['backend/tests/**/*.{js,mjs}'],
+    rules: {
+      'no-unused-vars': 'off'
+    }
+  },
+  {
     files: ['src/**/*.{js,jsx}', 'backend/**/*.{js,jsx}'],
     languageOptions: {
       ecmaVersion: 'latest',
@@ -41,6 +64,12 @@ export default [
       'react/prop-types': 'off',
       'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       ...reactHooks.configs.recommended.rules
+    }
+  },
+  {
+    files: ['backend/va_scanner/**/*.{js,mjs}', 'backend/tests/**/*.{js,mjs}'],
+    rules: {
+      'no-unused-vars': 'off'
     }
   }
 ];

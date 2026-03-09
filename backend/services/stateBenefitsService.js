@@ -15,7 +15,6 @@ const __dirname = path.dirname(__filename);
 const KNOWLEDGE_BASE_DIR = path.resolve(__dirname, '../../knowledge/STATE_BENEFITS');
 
 let benefitsCache = null;
-let benefitsByStateCache = {};
 
 /**
  * Parse the STATE_BENEFITS_DATABASE.md file

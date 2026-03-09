@@ -12,7 +12,6 @@ import casesRouter from './api/cases.js';
 import intelligenceRouter from './api/intelligence.js';
 import stateBenefitsRouter from './api/stateBenefits.js';
 import authRouter from './api/auth.js';
-import { generalRateLimiter } from './middleware/hardening.js';
 import { requestLogger, consoleLogger, errorLogger } from './middleware/logging.js';
 import { getConfig } from './config.js';
 
@@ -109,7 +108,7 @@ export function createApp() {
   // ═════════════════════════════════════════════════════════════
   // GLOBAL ERROR HANDLER (Must be last)
   // ═════════════════════════════════════════════════════════════
-  app.use((err, req, res, next) => {
+  app.use((err, req, res, _next) => {
     console.error('❌ Unhandled error:', err);
 
     const statusCode = err.statusCode || err.status || 500;

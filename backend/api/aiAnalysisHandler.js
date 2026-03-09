@@ -297,7 +297,7 @@ Be specific. Reference exact CFR sections. Identify ALL viable alternate theorie
       } else {
         throw new Error('No JSON found in response');
       }
-    } catch (parseError) {
+    } catch {
       analysis = {
         condition,
         rawAnalysis: responseText,

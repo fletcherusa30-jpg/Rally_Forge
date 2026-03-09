@@ -1,6 +1,5 @@
 ﻿const express = require('express');
 const cors = require('cors');
-const path = require('path');
 require('dotenv').config();
 
 const app = express();
@@ -13,12 +12,12 @@ app.get('/health', (req, res) => {
   res.json({ status: 'ok', service: 'va-scanner-backend' });
 });
 
-app.use((err, req, res, next) => {
+app.use((err, req, res, _next) => {
   console.error('[ERROR]', err);
   res.status(500).json({ error: 'Internal server error', details: err.message });
 });
 
 app.listen(PORT, () => {
-  console.log(VA Scanner backend running on port \);
+  console.log(`VA Scanner backend running on port ${PORT}`);
 });
 

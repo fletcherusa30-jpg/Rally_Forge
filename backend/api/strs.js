@@ -6,7 +6,6 @@ import { promises as fs } from "fs";
 import { asyncHandler } from "../utils/errors.js";
 import {
   extractTextFromPdf,
-  normalizeText,
   scanSTRText,
   validateScanResult
 } from "../engine/strs/strs-engine.js";

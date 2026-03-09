@@ -5,7 +5,7 @@ import { fileURLToPath, pathToFileURL } from 'url';
 import { scanVaDecision, looksLikeRatingDecisionNarrative } from '../va_scanner/engine/vaSuperScanner.js';
 import { getSMCRate, getAncillaryRate } from '../va_scanner/engine/rateLoader.js';
 import { extractDependents } from '../va_scanner/frontend/utils/extractDependents.js';
-import { getDisabilityAmount, getDependentAmount, getRatesForYear } from '../va_scanner/engine/rateEscalator.js';
+import { getDisabilityAmount } from '../va_scanner/engine/rateEscalator.js';
 import { computeDependentCompensation } from '../services/dependentCompensationEngine.js';
 import { scannerRateLimiter } from '../middleware/hardening.js';
 
@@ -31,16 +31,6 @@ function extractSmcCodesFromText(value) {
   }
 
   return Array.from(codes);
-}
-
-function textSuggestsAidAndAttendance(value) {
-  const text = String(value || '').toLowerCase();
-  return text.includes('aid and attendance') || text.includes('a&a');
-}
-
-function textSuggestsHousebound(value) {
-  const text = String(value || '').toLowerCase();
-  return text.includes('housebound');
 }
 
 function getHighestSmcCode(scanData = {}) {

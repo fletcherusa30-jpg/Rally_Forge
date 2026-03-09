@@ -22,11 +22,6 @@ const accessLogStream = fs.createWriteStream(
   { flags: 'a' }
 );
 
-const errorLogStream = fs.createWriteStream(
-  path.join(logsDir, 'error.log'),
-  { flags: 'a' }
-);
-
 /**
  * Custom Morgan token for user identification
  */

@@ -93,7 +93,6 @@ exports.updateContention = async (req, res, next) => {
     const { claimId, contentionId } = req.params;
     const fields = req.body;
     const setClauses = Object.keys(fields).map((key, idx) => `${key} = $${idx + 2}`).join(', ');
-    const values = [contentionId, ...Object.values(fields)];
     const result = await query(
       `UPDATE cp.contentions SET ${setClauses} WHERE contention_id = $1 AND claim_id = $2 RETURNING *`,
       [contentionId, claimId]

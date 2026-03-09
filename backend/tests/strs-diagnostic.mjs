@@ -2,8 +2,6 @@
  * Quick diagnostic to see what's actually being extracted
  */
 
-/* eslint-env node */
-
 import {
   normalizeText,
   scanSTRText

@@ -526,7 +526,7 @@ export function crossReferenceMedications(medications, conditions) {
   for (const condition of conditions) {
     const cNorm = normalizeCondition(condition.label);
     const shouldHaveMeds = Object.entries(MEDICATION_CONDITION_MAP)
-      .filter(([medType, condList]) => 
+      .filter(([_medType, condList]) => 
         condList.some(ec => 
           cNorm.canonical.toLowerCase().includes(ec.toLowerCase()) ||
           ec.toLowerCase().includes(cNorm.canonical.toLowerCase())

@@ -259,7 +259,7 @@ function determinePactActType(conditionName) {
 /**
  * Check if condition qualifies as traditional presumptive
  */
-function isTraditionalPresumptive(conditionName, serviceInfo) {
+function isTraditionalPresumptive(conditionName, _serviceInfo) {
   const allTraditional = [
     ...TRADITIONAL_PRESUMPTIVES.pow,
     ...TRADITIONAL_PRESUMPTIVES.gulfWar
@@ -273,7 +273,7 @@ function isTraditionalPresumptive(conditionName, serviceInfo) {
 /**
  * Determine traditional presumptive type
  */
-function determineTraditionalType(conditionName, serviceInfo) {
+function determineTraditionalType(conditionName, _serviceInfo) {
   if (TRADITIONAL_PRESUMPTIVES.pow.some(c => conditionName.includes(c))) {
     return 'POW Presumptive';
   }
@@ -313,7 +313,7 @@ function isAggravation(condition) {
 /**
  * Check if post-service diagnosis
  */
-function isPostServiceDiagnosis(condition) {
+function isPostServiceDiagnosis(_condition) {
   // This would need effective date analysis
   // For now, return false (would need actual implementation)
   return false;

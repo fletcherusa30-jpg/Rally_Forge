@@ -140,7 +140,7 @@ export const optionalAuth = (req, res, next) => {
       const decoded = verifyToken(token);
       req.user = decoded;
       req.veteranId = decoded.veteranId;
-    } catch (error) {
+    } catch {
       // Ignore auth errors for optional endpoints
       req.user = null;
     }

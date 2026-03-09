@@ -178,7 +178,7 @@ if (pdfQueueInstance) {
  * Handle job completion
  */
 if (pdfQueueInstance) {
-  pdfQueueInstance.on('completed', (job, result) => {
+  pdfQueueInstance.on('completed', (job, _result) => {
   logger.info('Job completed successfully', {
     jobId: job.id,
     veteranId: job.data.veteranId

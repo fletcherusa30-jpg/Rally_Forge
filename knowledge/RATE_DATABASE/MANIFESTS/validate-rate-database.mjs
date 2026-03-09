@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const databaseDir = path.resolve(__dirname, '..');
-const workspaceDir = path.resolve(databaseDir, '..');
+const workspaceDir = path.resolve(databaseDir, '..', '..');
 
 const manifestPath = path.join(__dirname, 'rate-database-manifest.json');
 const yearsDir = path.join(databaseDir, 'YEARS');

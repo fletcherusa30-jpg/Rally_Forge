@@ -92,7 +92,7 @@ const STRS_PATTERNS = {
     { label: "Peripheral Neuropathy", pattern: "peripheral neuropathy|neuropathy|diabetic neuropathy|nerve damage", category: "neurological" },
     { label: "Epilepsy", pattern: "epilepsy|seizure disorder|recurrent seizures", category: "neurological" },
     // Keep acronym matching strict to avoid rank/title false positives like "COL, MS".
-    { label: "Multiple Sclerosis", pattern: "multiple sclerosis|demyelinating disease|diagnos(?:is|ed)\s+(?:with\s+)?MS|history of\s+MS|MS\s+(?:relapse|lesions?)", category: "neurological" },
+    { label: "Multiple Sclerosis", pattern: "multiple sclerosis|demyelinating disease|diagnos(?:is|ed)\\s+(?:with\\s+)?MS|history of\\s+MS|MS\\s+(?:relapse|lesions?)", category: "neurological" },
     
     // Auditory Diagnoses
     { label: "Sensorineural Hearing Loss", pattern: "sensorineural hearing loss|SNHL|nerve deafness|hearing loss|hearing impairment", category: "auditory" },
