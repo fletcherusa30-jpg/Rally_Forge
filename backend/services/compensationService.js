@@ -1,4 +1,4 @@
-import CompensationEngine from '../../compensation-engine/index.js';
+import { compensationEngine } from '../domain/index.js';
 
 function toInteger(value, fallback = 0) {
   const parsed = Number.parseInt(String(value ?? ''), 10);
@@ -37,7 +37,7 @@ export function calculateCompensationQuote({
   const normalizedRating = toInteger(rating, 0);
   const normalizedDependents = normalizeDependentProfile(dependents);
 
-  return CompensationEngine.calculateVeteranCompensation({
+  return compensationEngine.calculateVeteran({
     rating: normalizedRating,
     dependents: normalizedDependents,
     smcCode,
@@ -83,7 +83,7 @@ export function calculateBackPay({
 
   while (monthCursor <= monthEnd) {
     const periodDate = `${monthCursor.getFullYear()}-${String(monthCursor.getMonth() + 1).padStart(2, '0')}-01`;
-    const quote = CompensationEngine.calculateVeteranCompensation({
+    const quote = compensationEngine.calculateVeteran({
       rating: normalizedRating,
       dependents: normalizedDependents,
       smcCode,

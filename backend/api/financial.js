@@ -1,22 +1,18 @@
 import express from 'express';
-import { asyncHandler } from '../utils/errors.js';
+import { asyncHandler } from '../core/index.js';
 import {
-  analyzeBudget,
-  calculateRetirement,
-  generateFinancialPlan
-} from '../services/financialPlannerService.js';
+  getFinancialLegacy,
+  analyzeFinancialBudget,
+  calculateFinancialRetirement,
+  generateComprehensiveFinancialPlan,
+} from '../controllers/financialController.js';
 
 const router = express.Router();
 
 /**
  * GET /financial - Legacy compatibility endpoint
  */
-router.get('/', (req, res) => {
-  res.json({
-    current: { monthly: 1650, yearly: 19800 },
-    future: { monthly: 2000, yearly: 24000 }
-  });
-});
+router.get('/', getFinancialLegacy);
 
 /**
  * POST /financial/budget
@@ -31,13 +27,7 @@ router.get('/', (req, res) => {
  *   emergencyFundBalance: number
  * }
  */
-router.post('/budget', asyncHandler(async (req, res) => {
-  const analysis = analyzeBudget(req.body);
-  res.json({
-    success: true,
-    data: analysis
-  });
-}));
+router.post('/budget', asyncHandler(analyzeFinancialBudget));
 
 /**
  * POST /financial/retirement
@@ -52,13 +42,7 @@ router.post('/budget', asyncHandler(async (req, res) => {
  *   annualReturnRate, estimatedMonthlyExpenses
  * }
  */
-router.post('/retirement', asyncHandler(async (req, res) => {
-  const projections = calculateRetirement(req.body);
-  res.json({
-    success: true,
-    data: projections
-  });
-}));
+router.post('/retirement', asyncHandler(calculateFinancialRetirement));
 
 /**
  * POST /financial/plan
@@ -69,22 +53,7 @@ router.post('/retirement', asyncHandler(async (req, res) => {
  *   retirement: { ... }
  * }
  */
-router.post('/plan', asyncHandler(async (req, res) => {
-  const { budget, retirement } = req.body;
-  
-  if (!budget || !retirement) {
-    return res.status(400).json({
-      success: false,
-      error: 'Both budget and retirement data required'
-    });
-  }
-  
-  const plan = generateFinancialPlan(budget, retirement);
-  res.json({
-    success: true,
-    data: plan
-  });
-}));
+router.post('/plan', asyncHandler(generateComprehensiveFinancialPlan));
 
 export default router;
 

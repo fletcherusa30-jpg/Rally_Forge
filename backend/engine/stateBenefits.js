@@ -1,4 +1,9 @@
 /**
+ * ⚠️  DEPRECATED: Use backend/domain/engines/BenefitsEngine.js instead.
+ * 
+ * This monolithic implementation is being consolidated into the domain layer.
+ * Will be removed in Phase 4 (Backend Services Refactor).
+ * 
  * stateBenefits.js - State-Level Benefits Determination
  *
  * Evaluates eligibility for state-specific veteran benefits based on:

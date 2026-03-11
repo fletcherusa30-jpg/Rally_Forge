@@ -1,23 +1,17 @@
 import express from "express";
-import { asyncHandler } from "../utils/errors.js";
-import { analyzeAuthorityText, searchAuthorityText } from "../services/authorityService.js";
+import { asyncHandler } from "../core/index.js";
+import { analyzeAuthority, searchAuthority } from "../controllers/authorityController.js";
 
 const router = express.Router();
 
 router.post(
   "/authority/analyze-text",
-  asyncHandler(async (req, res) => {
-    const data = analyzeAuthorityText(req.body?.text || "");
-    res.json({ success: true, data });
-  })
+  asyncHandler(analyzeAuthority)
 );
 
 router.post(
   "/authority/search-text",
-  asyncHandler(async (req, res) => {
-    const data = searchAuthorityText(req.body?.text || "", req.body?.query || "", req.body?.maxResults);
-    res.json({ success: true, data });
-  })
+  asyncHandler(searchAuthority)
 );
 
 export default router;

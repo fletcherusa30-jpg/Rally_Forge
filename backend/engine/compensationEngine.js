@@ -1,4 +1,9 @@
 /**
+ * ⚠️  DEPRECATED: Use backend/domain/engines/CompensationEngine.js instead.
+ * 
+ * This backend implementation is being consolidated into the domain layer.
+ * Will be removed in Phase 4 (Backend Services Refactor).
+ * 
  * VA Compensation Engine - Backend Implementation
  * Deterministic calculation engine for VA disability compensation
  * Integrates with STR Scanner output to calculate period-based compensation

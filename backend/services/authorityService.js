@@ -1,4 +1,4 @@
-import { AppError } from "../utils/errors.js";
+import { AppError } from "../core/index.js";
 
 const normalizeAuthorityInput = (value) =>
   String(value || "")

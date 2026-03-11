@@ -1,6 +1,6 @@
-import { evaluateStateBenefits } from '../engine/stateBenefits.js';
+import { benefitsEngine } from '../domain/index.js';
 
-export function stateService(onboardingResult) {
-    return evaluateStateBenefits(onboardingResult);
+export async function stateService(onboardingResult) {
+    return benefitsEngine.evaluateStateOnly(onboardingResult);
 }
 

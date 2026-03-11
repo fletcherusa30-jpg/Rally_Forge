@@ -1,15 +1,12 @@
 import express from "express";
-import { asyncHandler } from "../utils/errors.js";
-import { createOrUpdateOnboarding } from "../services/onboardingService.js";
+import { asyncHandler } from "../core/index.js";
+import { createOnboarding } from "../controllers/onboardingController.js";
 
 const router = express.Router();
 
 router.post(
   "/onboarding",
-  asyncHandler(async (req, res) => {
-    const result = await createOrUpdateOnboarding(req.body);
-    res.status(201).json({ success: true, data: result });
-  })
+  asyncHandler(createOnboarding)
 );
 
 export default router;

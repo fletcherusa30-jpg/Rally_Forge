@@ -11,8 +11,11 @@ import knowledgeRouter from './api/knowledge.js';
 import casesRouter from './api/cases.js';
 import intelligenceRouter from './api/intelligence.js';
 import stateBenefitsRouter from './api/stateBenefits.js';
+import benefitsRouter from './api/benefits.js';
+import onboardingRouter from './api/onboarding.js';
 import authRouter from './api/auth.js';
 import { requestLogger, consoleLogger, errorLogger } from './middleware/logging.js';
+import { notFoundHandler, errorHandler } from './core/index.js';
 import { getConfig } from './config.js';
 
 const config = getConfig();
@@ -84,6 +87,8 @@ export function createApp() {
   app.use('/api/financial', financialRouter);
   app.use('/api/military', militaryRouter);
   app.use('/api/cases', casesRouter);
+  app.use('/api/benefits', benefitsRouter);
+  app.use('/api/onboarding', onboardingRouter);
   app.use('/api', intelligenceRouter);
   app.use('/api/state-benefits', stateBenefitsRouter);
   app.use('/api', knowledgeRouter);
@@ -94,32 +99,10 @@ export function createApp() {
   app.use(errorLogger);
 
   // ═════════════════════════════════════════════════════════════
-  // 404 Handler (Last middleware)
+  // 404 + GLOBAL ERROR HANDLERS (Must be last)
   // ═════════════════════════════════════════════════════════════
-  app.use((req, res) => {
-    res.status(404).json({
-      success: false,
-      error: 'Route not found',
-      path: req.path,
-      method: req.method
-    });
-  });
-
-  // ═════════════════════════════════════════════════════════════
-  // GLOBAL ERROR HANDLER (Must be last)
-  // ═════════════════════════════════════════════════════════════
-  app.use((err, req, res, _next) => {
-    console.error('❌ Unhandled error:', err);
-
-    const statusCode = err.statusCode || err.status || 500;
-    const message = err.message || 'Internal server error';
-
-    res.status(statusCode).json({
-      success: false,
-      error: message,
-      ...(config.isDevelopment && { stack: err.stack })
-    });
-  });
+  app.use(notFoundHandler);
+  app.use(errorHandler);
 
   return app;
 }
