@@ -373,7 +373,17 @@ export function MilitaryServicePage() {
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+    <div className='page-shell'>
+      <section className='page-header'>
+        <div>
+          <div className='page-eyebrow'>Service History</div>
+          <h1 className='page-title'>Military Service</h1>
+          <p className='page-copy'>
+            Record branches, periods, ranks and discharge type. Service history is used to contextualize your compensation and scanner analysis.
+          </p>
+        </div>
+        <div className='page-badge'>Service record intake</div>
+      </section>
       <Card title='Military Service Information'>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>

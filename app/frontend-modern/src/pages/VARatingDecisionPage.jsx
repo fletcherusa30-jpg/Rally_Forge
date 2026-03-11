@@ -21,6 +21,7 @@ export function VARatingDecisionPage() {
   const [aiTags, setAiTags] = useState('appeal,nexus');
   const [aiError, setAiError] = useState('');
   const [aiResult, setAiResult] = useState(null);
+  const [plainLanguage, setPlainLanguage] = useState(true);
   const fileInputRef = useRef(null);
 
   useEffect(() => {
@@ -563,6 +564,35 @@ export function VARatingDecisionPage() {
   };
 
   const selected = decisions[selectedIndex] || null;
+
+  const toPlainLanguage = (text) => {
+    const raw = String(text || '').trim();
+    if (!plainLanguage || !raw) return raw;
+    return raw
+      .replace(/\bnexus\b/gi, 'medical link')
+      .replace(/\bservice connection\b/gi, 'proof this is tied to service')
+      .replace(/\bsecondary\b/gi, 'caused by another service-connected condition')
+      .replace(/\baggravation\b/gi, 'worsening due to service')
+      .replace(/\bC&P\b/gi, 'VA exam')
+      .replace(/\bDBQ\b/gi, 'doctor disability form');
+  };
+
+  const buildDeniedEvidenceChecklist = (decision) => {
+    const denied = Array.isArray(decision?.deniedConditions) ? decision.deniedConditions : [];
+    return denied.slice(0, 5).map((item) => {
+      const label = typeof item === 'string' ? item : (item?.label || 'Condition');
+      const reasons = Array.isArray(item?.reasons) ? item.reasons.filter(Boolean) : [];
+      const genericGaps = [
+        'Current diagnosis from a treating provider',
+        'Service record or buddy statement proving in-service event',
+        'Medical nexus letter linking condition to service',
+      ];
+      return {
+        label,
+        gaps: reasons.length > 0 ? reasons : genericGaps,
+      };
+    });
+  };
   const displayedCompensation = selected ? getDisplayedCompensation(selected) : null;
   const scannedFinalMonthly = Number(selected?.finalMonthlyAmount);
   const hasScannedFinalMonthly = Number.isFinite(scannedFinalMonthly) && scannedFinalMonthly > 0;
@@ -694,55 +724,38 @@ export function VARatingDecisionPage() {
   }, [selectedIndex, decisions]);
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-      <div style={{ display: 'flex', gap: '0.25rem', backgroundColor: '#1e293b', padding: '0.25rem', borderRadius: '0.5rem' }}>
+    <div className='page-shell'>
+      <section className='page-header'>
+        <div>
+          <div className='page-eyebrow'>Scanner</div>
+          <h1 className='page-title'>VA Rating Decision</h1>
+          <p className='page-copy'>
+            Upload a VA rating decision PDF to extract conditions, effective dates, ratings, SMC codes, and dependents — then run compensation analysis.
+          </p>
+        </div>
+        <div className='page-badge'>Rating decision scanner</div>
+      </section>
+      <div className='tab-strip'>
         <button
           type='button'
           onClick={() => setActiveTab('upload')}
-          style={{
-            padding: '0.75rem 1.5rem',
-            fontSize: '0.875rem',
-            fontWeight: '500',
-            backgroundColor: activeTab === 'upload' ? '#14b8a6' : 'transparent',
-            color: activeTab === 'upload' ? '#0f172a' : '#94a3b8',
-            border: 'none',
-            borderRadius: '0.375rem 0.375rem 0 0',
-            cursor: 'pointer'
-          }}
+          className={`tab-btn ${activeTab === 'upload' ? 'active' : ''}`}
         >
-          📤 Upload & Scan
+          Upload &amp; Scan
         </button>
         <button
           type='button'
           onClick={() => setActiveTab('manual')}
-          style={{
-            padding: '0.75rem 1.5rem',
-            fontSize: '0.875rem',
-            fontWeight: '500',
-            backgroundColor: activeTab === 'manual' ? '#14b8a6' : 'transparent',
-            color: activeTab === 'manual' ? '#0f172a' : '#94a3b8',
-            border: 'none',
-            borderRadius: '0.375rem 0.375rem 0 0',
-            cursor: 'pointer'
-          }}
+          className={`tab-btn ${activeTab === 'manual' ? 'active' : ''}`}
         >
-          ✏️ Manual Entry
+          Manual Entry
         </button>
         <button
           type='button'
           onClick={() => setActiveTab('ai-analyzer')}
-          style={{
-            padding: '0.75rem 1.5rem',
-            fontSize: '0.875rem',
-            fontWeight: '500',
-            backgroundColor: activeTab === 'ai-analyzer' ? '#14b8a6' : 'transparent',
-            color: activeTab === 'ai-analyzer' ? '#0f172a' : '#94a3b8',
-            border: 'none',
-            borderRadius: '0.375rem 0.375rem 0 0',
-            cursor: 'pointer'
-          }}
+          className={`tab-btn ${activeTab === 'ai-analyzer' ? 'active' : ''}`}
         >
-          🤖 AI Analyzer
+          AI Analyzer
         </button>
       </div>
 
@@ -758,6 +771,16 @@ export function VARatingDecisionPage() {
             <p style={{ fontSize: '0.875rem', color: '#cbd5e1' }}>
               Paste denied-condition context, decision rationale, or claim notes for deterministic intelligence scoring.
             </p>
+
+            <div>
+              <button
+                type='button'
+                onClick={() => setPlainLanguage((value) => !value)}
+                className='plain-toggle'
+              >
+                {plainLanguage ? 'Plain Language: ON' : 'Plain Language: OFF'}
+              </button>
+            </div>
 
             <label style={{ fontSize: '0.75rem', color: '#94a3b8' }}>Domain</label>
             <select
@@ -845,7 +868,7 @@ export function VARatingDecisionPage() {
                 </p>
                 <ul style={{ marginTop: '0.5rem', color: '#e2e8f0', fontSize: '0.8rem' }}>
                   {(aiResult.recommendations || []).map((rec, idx) => (
-                    <li key={`ai-rec-${idx}`}>{rec}</li>
+                    <li key={`ai-rec-${idx}`}>{toPlainLanguage(rec)}</li>
                   ))}
                 </ul>
               </div>
@@ -1214,6 +1237,36 @@ export function VARatingDecisionPage() {
                       })}
                   </ul>
                 </div>
+
+                {!!selected.deniedConditions?.length && (
+                  <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', borderRadius: '0.375rem', padding: '0.75rem' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem', gap: '0.5rem' }}>
+                      <p style={{ fontSize: '0.8rem', color: '#f5d5a3', fontWeight: 700, margin: 0 }}>Evidence Gap Finder</p>
+                      <button
+                        type='button'
+                        onClick={() => setPlainLanguage((value) => !value)}
+                        className='plain-toggle'
+                      >
+                        {plainLanguage ? 'Plain Language: ON' : 'Plain Language: OFF'}
+                      </button>
+                    </div>
+                    <p style={{ fontSize: '0.75rem', color: '#94a3b8', marginBottom: '0.75rem' }}>
+                      Start with these missing items to improve appeal strength on denied conditions.
+                    </p>
+                    <div className='gap-grid'>
+                      {buildDeniedEvidenceChecklist(selected).map((entry, idx) => (
+                        <div key={`va-gap-${idx}`} className='gap-card'>
+                          <div className='gap-title'>{entry.label}</div>
+                          <ul className='gap-list'>
+                            {entry.gaps.map((gap, gapIdx) => (
+                              <li key={`va-gap-item-${idx}-${gapIdx}`}>{toPlainLanguage(gap)}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
                 {!!selected.deniedConditions?.length && (
                   <div>

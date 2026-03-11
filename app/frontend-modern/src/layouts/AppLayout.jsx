@@ -1,40 +1,50 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-export function AppLayout({ children }) {
-  const linkStyle = ({ isActive }) => ({
-    display: 'block',
-    width: '100%',
-    textAlign: 'left',
-    color: isActive ? '#0f172a' : '#cbd5e1',
-    textDecoration: 'none',
-    padding: '0.5rem',
-    border: '1px solid #334155',
-    borderRadius: '0.375rem',
-    backgroundColor: isActive ? '#14b8a6' : '#0f172a',
-    fontSize: '0.875rem',
-    fontWeight: isActive ? '600' : '400'
-  });
+const primaryLinks = [
+  { to: '/military-service', icon: '01', label: 'Military Service' },
+  { to: '/va-decision', icon: '02', label: 'VA Rating Decision' },
+  { to: '/service-records', icon: '03', label: 'Service Treatment Records' },
+];
 
+const toolLinks = [
+  { to: '/financial-planner', icon: '04', label: 'Financial Planner' },
+  { to: '/knowledge-base', icon: '05', label: 'Knowledge Base' },
+  { to: '/system-health', icon: '06', label: 'System Health' },
+];
+
+function renderLink({ to, icon, label }) {
   return (
-    <div style={{ minHeight: '100vh', display: 'flex', backgroundColor: '#0f172a', color: '#f1f5f9' }}>
-      <aside style={{ width: '256px', backgroundColor: '#0f172a', borderRight: '1px solid #1e293b', padding: '1rem', display: 'flex', flexDirection: 'column' }}>
-        <div style={{ fontSize: '1.125rem', fontWeight: '600', marginBottom: '1.5rem' }}>Rally Forge</div>
-        <nav style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.875rem', flex: 1 }}>
-          <NavLink to='/military-service' style={linkStyle}>🚀 Military Service</NavLink>
-          <div style={{ fontSize: '0.7rem', color: '#64748b', fontWeight: '600', marginTop: '0.5rem', marginBottom: '0.25rem', paddingLeft: '0.5rem' }}>SCANNERS</div>
-          <NavLink to='/va-decision' style={linkStyle}>📄 VA Rating Decision</NavLink>
-          <NavLink to='/service-records' style={linkStyle}>🏥 Service Treatment Records</NavLink>
-          <div style={{ fontSize: '0.7rem', color: '#64748b', fontWeight: '600', marginTop: '0.5rem', marginBottom: '0.25rem', paddingLeft: '0.5rem' }}>TOOLS</div>
-          <NavLink to='/financial-planner' style={linkStyle}>💰 Financial Planner</NavLink>
-          <NavLink to='/knowledge-base' style={linkStyle}>📚 Knowledge Base</NavLink>
-          <NavLink to='/system-health' style={linkStyle}>🔧 System Health</NavLink>
-          <div style={{ marginTop: 'auto', paddingTop: '1rem', borderTop: '1px solid #1e293b' }}>
-            <NavLink to='/dashboard' style={linkStyle}>📊 Dashboard</NavLink>
+    <NavLink key={to} to={to} className={({ isActive }) => `app-nav-link${isActive ? ' active' : ''}`}>
+      <span className='app-nav-icon'>{icon}</span>
+      <span>{label}</span>
+    </NavLink>
+  );
+}
+
+export function AppLayout({ children }) {
+  return (
+    <div className='app-shell'>
+      <aside className='app-sidebar'>
+        <div className='app-brand'>
+          <div className='app-brand-kicker'>Veteran Claims Workspace</div>
+          <div className='app-brand-title'>Rally Forge</div>
+          <p className='app-brand-copy'>
+            A working console for evidence review, rating analysis, scanner output, and benefit planning.
+          </p>
+        </div>
+
+        <nav className='app-nav'>
+          {primaryLinks.map(renderLink)}
+          <div className='app-nav-section'>Operations</div>
+          {toolLinks.map(renderLink)}
+          <div className='app-nav-meta'>
+            {renderLink({ to: '/dashboard', icon: '07', label: 'Dashboard' })}
           </div>
         </nav>
       </aside>
-      <main style={{ flex: 1, padding: '1.5rem' }}>
+
+      <main className='app-main'>
         {children}
       </main>
     </div>

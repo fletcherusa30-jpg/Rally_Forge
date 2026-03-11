@@ -93,78 +93,67 @@ export default function KnowledgeBasePage() {
   const years = Object.keys(casesByYear).sort((a, b) => b - a);
 
   return (
-    <div style={{ padding: '2rem', maxWidth: '1200px', margin: '0 auto' }}>
-      <h1>VA Knowledge Base</h1>
-      <p style={{ color: '#666', marginBottom: '2rem' }}>
-        Access VA regulations, diagnostic codes, and precedential case law
-      </p>
+    <div className='kb-layout'>
+      <section className='page-header'>
+        <div>
+          <div className='page-eyebrow'>Regulatory Research</div>
+          <h1 className='page-title'>VA Knowledge Base</h1>
+          <p className='page-copy'>Access VA regulations, diagnostic codes, and precedential case law.</p>
+        </div>
+        <div className='page-badge'>Integrated Part 3 / Part 4 / CAVC</div>
+      </section>
 
       {status && (
-        <Card style={{ marginBottom: '2rem', padding: '1.5rem' }}>
+        <Card>
           <h2>Knowledge Base Status</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginTop: '1rem' }}>
-            <div>
-              <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#2563eb' }}>
+          <div className='kb-stat-grid' style={{ marginTop: '1rem' }}>
+            <div className='kb-stat-card'>
+              <div className='kb-stat-value'>
                 {status.stats.part3Sections}
               </div>
-              <div style={{ color: '#666' }}>Part 3 Sections</div>
-              <div style={{ fontSize: '0.875rem', color: '#999' }}>Compensation Regulations</div>
+              <div className='kb-stat-label'>Part 3 Sections</div>
+              <div className='kb-stat-sub'>Compensation Regulations</div>
             </div>
-            <div>
-              <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#2563eb' }}>
+            <div className='kb-stat-card'>
+              <div className='kb-stat-value'>
                 {status.stats.part4Sections}
               </div>
-              <div style={{ color: '#666' }}>Part 4 Sections</div>
-              <div style={{ fontSize: '0.875rem', color: '#999' }}>Rating Schedule</div>
+              <div className='kb-stat-label'>Part 4 Sections</div>
+              <div className='kb-stat-sub'>Rating Schedule</div>
             </div>
-            <div>
-              <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#2563eb' }}>
+            <div className='kb-stat-card'>
+              <div className='kb-stat-value'>
                 {status.stats.diagnosticCodes}
               </div>
-              <div style={{ color: '#666' }}>Diagnostic Codes</div>
-              <div style={{ fontSize: '0.875rem', color: '#999' }}>Conditions & Ratings</div>
+              <div className='kb-stat-label'>Diagnostic Codes</div>
+              <div className='kb-stat-sub'>Conditions and Ratings</div>
             </div>
-            <div>
-              <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#2563eb' }}>
+            <div className='kb-stat-card'>
+              <div className='kb-stat-value'>
                 {status.stats.totalCases}
               </div>
-              <div style={{ color: '#666' }}>CAVC Cases</div>
-              <div style={{ fontSize: '0.875rem', color: '#999' }}>Legal Precedents</div>
+              <div className='kb-stat-label'>CAVC Cases</div>
+              <div className='kb-stat-sub'>Legal Precedents</div>
             </div>
           </div>
         </Card>
       )}
 
-      <Card style={{ marginBottom: '2rem', padding: '1.5rem' }}>
+      <Card>
         <h2>Search Knowledge Base</h2>
         <form onSubmit={handleSearch} style={{ marginTop: '1rem' }}>
-          <div style={{ display: 'flex', gap: '0.5rem' }}>
+          <div className='kb-form'>
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search regulations, conditions, or cases..."
-              style={{
-                flex: 1,
-                padding: '0.75rem',
-                border: '1px solid #ddd',
-                borderRadius: '4px',
-                fontSize: '1rem'
-              }}
+              className='kb-input'
             />
             <button
               type="submit"
               disabled={loading || searchQuery.length < 2}
-              style={{
-                padding: '0.75rem 1.5rem',
-                background: loading ? '#ccc' : '#2563eb',
-                color: 'white',
-                border: 'none',
-                borderRadius: '4px',
-                cursor: loading ? 'not-allowed' : 'pointer',
-                fontSize: '1rem',
-                fontWeight: '500'
-              }}
+              className='kb-button'
             >
               {loading ? 'Searching...' : 'Search'}
             </button>
@@ -186,29 +175,10 @@ export default function KnowledgeBasePage() {
                       e.preventDefault();
                       viewCase(c.caseId);
                     }}
-                    style={{
-                      padding: '0.75rem',
-                      margin: '0.5rem 0',
-                      border: '1px solid #e5e7eb',
-                      borderRadius: '4px',
-                      cursor: 'pointer',
-                      transition: 'all 0.2s',
-                      textDecoration: 'none',
-                      color: 'inherit',
-                      display: 'block',
-                      background: 'white'
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.background = '#f9fafb';
-                      e.currentTarget.style.borderColor = '#2563eb';
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.background = 'white';
-                      e.currentTarget.style.borderColor = '#e5e7eb';
-                    }}
+                    className='kb-item kb-link'
                   >
                     <strong>{c.caseId}</strong>
-                    <div style={{ fontSize: '0.875rem', color: '#666', marginTop: '0.25rem' }}>
+                    <div style={{ fontSize: '0.875rem', color: 'var(--rf-text-soft)', marginTop: '0.25rem' }}>
                       Year: {c.year}
                     </div>
                   </a>
@@ -222,13 +192,7 @@ export default function KnowledgeBasePage() {
                 {searchResults.part3.map((section, idx) => (
                   <div
                     key={idx}
-                    style={{
-                      padding: '0.75rem',
-                      margin: '0.5rem 0',
-                      border: '1px solid #e5e7eb',
-                      borderRadius: '4px',
-                      background: '#f9fafb'
-                    }}
+                    className='kb-item'
                   >
                     <strong>{section.sectionNumber}</strong>: {section.title}
                   </div>
@@ -242,16 +206,10 @@ export default function KnowledgeBasePage() {
                 {searchResults.part4.map((code, idx) => (
                   <div
                     key={idx}
-                    style={{
-                      padding: '0.75rem',
-                      margin: '0.5rem 0',
-                      border: '1px solid #e5e7eb',
-                      borderRadius: '4px',
-                      background: '#f9fafb'
-                    }}
+                    className='kb-item'
                   >
                     <strong>Code {code.code}</strong>: {code.section}
-                    <div style={{ fontSize: '0.875rem', color: '#666', marginTop: '0.25rem' }}>
+                    <div style={{ fontSize: '0.875rem', color: 'var(--rf-text-soft)', marginTop: '0.25rem' }}>
                       {code.description?.substring(0, 200)}...
                     </div>
                   </div>
@@ -262,15 +220,15 @@ export default function KnowledgeBasePage() {
         )}
       </Card>
 
-      <Card style={{ padding: '1.5rem' }}>
+      <Card>
         <h2>CAVC Precedential Cases</h2>
-        <p style={{ color: '#666', marginBottom: '1rem' }}>
+        <p style={{ color: 'var(--rf-text-soft)', marginBottom: '1rem' }}>
           Court of Appeals for Veterans Claims decisions providing legal guidance for VA benefit determinations
         </p>
 
         {years.map(year => (
           <div key={year} style={{ marginTop: '1.5rem' }}>
-            <h3 style={{ color: '#2563eb', marginBottom: '0.5rem' }}>{year}</h3>
+            <h3 style={{ color: 'var(--rf-accent)', marginBottom: '0.5rem' }}>{year}</h3>
             <div style={{ display: 'grid', gap: '0.75rem' }}>
               {casesByYear[year].map(c => (
                 <a
@@ -280,28 +238,10 @@ export default function KnowledgeBasePage() {
                     e.preventDefault();
                     viewCase(c.caseId);
                   }}
-                  style={{
-                    padding: '1rem',
-                    border: '1px solid #e5e7eb',
-                    borderRadius: '4px',
-                    cursor: 'pointer',
-                    transition: 'all 0.2s',
-                    textDecoration: 'none',
-                    color: 'inherit',
-                    display: 'block',
-                    background: 'white'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background = '#f9fafb';
-                    e.currentTarget.style.borderColor = '#2563eb';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background = 'white';
-                    e.currentTarget.style.borderColor = '#e5e7eb';
-                  }}
+                  className='kb-item kb-link'
                 >
                   <strong>{c.fileName.replace('.md', '')}</strong>
-                  <div style={{ fontSize: '0.875rem', color: '#666', marginTop: '0.25rem' }}>
+                  <div style={{ fontSize: '0.875rem', color: 'var(--rf-text-soft)', marginTop: '0.25rem' }}>
                     {c.filePath}
                   </div>
                 </a>
@@ -320,7 +260,7 @@ export default function KnowledgeBasePage() {
             left: 0,
             right: 0,
             bottom: 0,
-            background: 'rgba(0, 0, 0, 0.5)',
+            background: 'rgba(1, 6, 12, 0.74)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -332,13 +272,14 @@ export default function KnowledgeBasePage() {
           <div
             onClick={(e) => e.stopPropagation()}
             style={{
-              background: 'white',
+              background: 'var(--rf-panel-strong)',
               padding: '2rem',
-              borderRadius: '8px',
+              borderRadius: '14px',
+              border: '1px solid rgba(157, 177, 194, 0.2)',
               maxWidth: '800px',
               maxHeight: '80vh',
               overflow: 'auto',
-              boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)'
+              boxShadow: '0 20px 35px rgba(0, 0, 0, 0.35)'
             }}
           >
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1.5rem' }}>
@@ -350,17 +291,17 @@ export default function KnowledgeBasePage() {
                   border: 'none',
                   fontSize: '1.5rem',
                   cursor: 'pointer',
-                  color: '#666'
+                  color: 'var(--rf-text-muted)'
                 }}
               >
                 ×
               </button>
             </div>
-            <div style={{ whiteSpace: 'pre-wrap', fontFamily: 'monospace', fontSize: '0.875rem', lineHeight: '1.6' }}>
+            <div style={{ whiteSpace: 'pre-wrap', fontFamily: 'Consolas, monospace', fontSize: '0.875rem', lineHeight: '1.6', color: 'var(--rf-text-muted)' }}>
               {selectedCase.content}
             </div>
             {selectedCase.url && (
-              <div style={{ marginTop: '1.5rem', paddingTop: '1rem', borderTop: '1px solid #e5e7eb' }}>
+              <div style={{ marginTop: '1.5rem', paddingTop: '1rem', borderTop: '1px solid rgba(157, 177, 194, 0.2)' }}>
                 <strong>File Path:</strong> {selectedCase.resourcePath}
               </div>
             )}
