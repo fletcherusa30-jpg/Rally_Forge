@@ -95,6 +95,32 @@ describe('Health', () => {
   });
 });
 
+describe('Military Service', () => {
+  test('GET /military/presumptive-knowledge — returns flattened locations and exposure rules', async () => {
+    const { ok, body } = await get('/military/presumptive-knowledge');
+    assert.ok(ok, `military/presumptive-knowledge failed: ${JSON.stringify(body)}`);
+    assert.equal(body.success, true);
+    assert.ok(Array.isArray(body.data?.locations) && body.data.locations.length > 0, 'Expected flattened deployment locations');
+    assert.ok(Array.isArray(body.data?.exposureRules) && body.data.exposureRules.length > 0, 'Expected exposure rules');
+  });
+
+  test('POST /military/match-deployment — returns structured deployment evidence', async () => {
+    const { ok, body } = await post('/military/match-deployment', {
+      deployment: {
+        location: 'Afghanistan',
+        startDate: '2011-03-01',
+        endDate: '2012-02-01',
+      },
+    });
+    assert.ok(ok, `military/match-deployment failed: ${JSON.stringify(body)}`);
+    assert.equal(body.success, true);
+    assert.equal(body.data?.type, 'Deployment');
+    assert.equal(body.data?.presumptiveMatch, true);
+    assert.equal(body.data?.matchedCategory, 'Burn Pits / Airborne Hazards (PACT Act)');
+    assert.deepEqual(body.data?.matchedDateRange, { start: '2001-09-11', end: 'present' });
+  });
+});
+
 describe('Auth', () => {
   test('POST /auth/login — returns JWT token', async () => {
     const { ok, body } = await post('/auth/login', {

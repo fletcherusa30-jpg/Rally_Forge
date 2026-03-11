@@ -27,7 +27,7 @@ function hasDateOverlap(startA, endA, startB, endB) {
 
 export async function loadPresumptiveKnowledge() {
   const raw = await fs.readFile(knowledgePath, 'utf-8');
-  const parsed = JSON.parse(raw);
+  const parsed = JSON.parse(raw.replace(/^\uFEFF/, ''));
   const categories = Array.isArray(parsed.categories) ? parsed.categories : [];
   return {
     version: parsed.version || null,

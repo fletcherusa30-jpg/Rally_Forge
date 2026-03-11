@@ -1,53 +1,70 @@
-import { ObjectId } from "mongodb";
-import { findOnboardingByVeteranId } from "../database/models/onboarding.js";
-import {
-    findBenefitsCacheByVeteranId,
-    saveBenefitsCache,
-    invalidateBenefitsCache
-} from "../database/models/benefitsCache.js";
-import { computeBenefits } from "../engine/benefits/benefitsEngine.js";
-import { AppError } from "../utils/errors.js";
+/**
+ * ⚠️  REFACTORED: Now uses domain layer (repositories + engines).
+ * 
+ * Previously imported from:
+ *   - database/models/onboarding.js  → now: domain/veteranRepo.getLatestOnboarding()
+ *   - database/models/benefitsCache.js → now: domain/benefitsRepo
+ *   - engine/benefits/benefitsEngine.js → now: domain/benefitsEngine
+ *   - utils/errors.js → now: core/errors/AppError.js
+ */
 
-const ensureValidVeteranId = (veteranId) => {
-    if (!ObjectId.isValid(veteranId)) {
-        throw new AppError("Invalid veteranId", 400, "invalid_veteran_id");
-    }
-};
+import { benefitsRepo, veteranRepo, benefitsEngine } from '../domain/index.js';
+import { Errors, createLogger } from '../core/index.js';
 
+const log = createLogger('benefits-service');
+
+/**
+ * Get cached benefits or compute new ones.
+ */
 export const getOrComputeBenefits = async (veteranId) => {
-    ensureValidVeteranId(veteranId);
+  // Verify veteran exists and load profile
+  await veteranRepo.requireById(veteranId);
 
-    const cached = await findBenefitsCacheByVeteranId(veteranId);
-    if (cached) {
-        return cached.benefitsResult;
-    }
+  // Check cache
+  const cached = await benefitsRepo.getLatestResult(veteranId);
+  if (cached) {
+    log.debug('Benefits served from cache', { veteranId });
+    return cached.benefitsResult;
+  }
 
-    const onboardingRecord = await findOnboardingByVeteranId(veteranId);
-    if (!onboardingRecord) {
-        throw new AppError("Onboarding result not found", 404, "onboarding_missing");
-    }
+  // Get onboarding record
+  const onboarding = await veteranRepo.getLatestOnboarding(veteranId);
+  if (!onboarding) {
+    throw Errors.badRequest('Onboarding record not found for veteran');
+  }
 
-    const benefitsResult = await computeBenefits(onboardingRecord.onboardingResult);
-    await saveBenefitsCache(veteranId, benefitsResult);
+  // Compute benefits
+  const benefitsResult = await benefitsEngine.evaluate(onboarding.onboardingResult, {
+    requestId: `compute-${veteranId}`,
+  });
+  await benefitsRepo.saveResult(veteranId, benefitsResult);
 
-    return benefitsResult;
+  return benefitsResult;
 };
 
+/**
+ * Force recomputation of benefits, invalidating cache.
+ */
 export const recomputeBenefits = async (veteranId) => {
-    ensureValidVeteranId(veteranId);
+  // Verify veteran exists
+  await veteranRepo.requireById(veteranId);
 
-    const onboardingRecord = await findOnboardingByVeteranId(veteranId);
-    if (!onboardingRecord) {
-        throw new AppError("Onboarding result not found", 404, "onboarding_missing");
-    }
+  // Get onboarding record
+  const onboarding = await veteranRepo.getLatestOnboarding(veteranId);
+  if (!onboarding) {
+    throw Errors.badRequest('Onboarding record not found for veteran');
+  }
 
-    const benefitsResult = await computeBenefits(onboardingRecord.onboardingResult, {
-        requestId: `recompute-${veteranId}`
-    });
+  // Recompute benefits
+  const benefitsResult = await benefitsEngine.evaluate(onboarding.onboardingResult, {
+    requestId: `recompute-${veteranId}`,
+  });
 
-    await invalidateBenefitsCache(veteranId);
-    await saveBenefitsCache(veteranId, benefitsResult);
+  // Invalidate and save new result
+  await benefitsRepo.invalidate(veteranId);
+  await benefitsRepo.saveResult(veteranId, benefitsResult);
+  log.info('Benefits recomputed', { veteranId });
 
-    return benefitsResult;
+  return benefitsResult;
 };
 
