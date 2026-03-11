@@ -1,0 +1,22 @@
+{
+  "releaseId": "knowledge-base-2026-03-10",
+  "schemaVersion": "1.0.0",
+  "releasedAt": "2026-03-10T00:00:00.000Z",
+  "files": [
+    "knowledge-node.schema.json",
+    "knowledge-taxonomy-map.json",
+    "knowledge-nodes.json",
+    "presumptive-locations.json",
+    "m21-1-structure.json",
+    "cfr-structure.json"
+  ],
+  "checksums": {
+    "knowledge-node.schema.json": "pending",
+    "knowledge-taxonomy-map.json": "pending",
+    "knowledge-nodes.json": "pending",
+    "presumptive-locations.json": "pending",
+    "m21-1-structure.json": "pending",
+    "cfr-structure.json": "pending"
+  },
+  "notes": "Structured scaffolding release for deterministic VA Knowledge Library base."
+}

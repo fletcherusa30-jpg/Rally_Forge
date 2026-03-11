@@ -198,6 +198,15 @@ describe('Knowledge Base', () => {
     const part3Count = body.stats?.part3Sections ?? body.data?.part3?.sections ?? body.data?.part3Count ?? 0;
     assert.ok(part3Count > 0, `Expected Part 3 sections > 0, got: ${part3Count}`);
   });
+
+  test('GET /knowledge/library/status — returns canonical library status', async () => {
+    const { ok, body } = await get('/knowledge/library/status');
+    assert.ok(ok, `knowledge/library/status failed: ${JSON.stringify(body)}`);
+    assert.equal(body.success, true);
+    assert.ok(body.data?.manifest, 'Expected library manifest in status response');
+    assert.ok(typeof body.data?.nodeCount === 'number', 'Expected numeric nodeCount');
+    assert.equal(body.data?.validation?.valid, true);
+  });
 });
 
 describe('State Benefits', () => {

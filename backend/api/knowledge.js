@@ -21,6 +21,13 @@ import {
   getDiagnosticCode,
   getPart3ByTopic,
   getPart4ByBodySystem,
+  getKnowledgeLibraryBaseStatus,
+  validateKnowledgeLibrary,
+  listLibraryNodes,
+  getLibraryNodeById,
+  queryLibraryNodes,
+  getLibraryDecisionTrace,
+  getLibraryEvidenceChecklist,
 } from '../controllers/knowledgeController.js';
 
 const router = express.Router();
@@ -90,6 +97,48 @@ router.get('/knowledge/part3/topic/:topic', asyncHandler(getPart3ByTopic));
  * Get diagnostic codes by body system
  */
 router.get('/knowledge/part4/body-system/:bodySystem', asyncHandler(getPart4ByBodySystem));
+
+/**
+ * GET /api/knowledge/library/status
+ * Get canonical knowledge library manifest/schema/taxonomy status
+ */
+router.get('/knowledge/library/status', asyncHandler(getKnowledgeLibraryBaseStatus));
+
+/**
+ * GET /api/knowledge/library/validate
+ * Validate canonical knowledge nodes against schema requirements
+ */
+router.get('/knowledge/library/validate', asyncHandler(validateKnowledgeLibrary));
+
+/**
+ * GET /api/knowledge/nodes
+ * List canonical library nodes with optional query params (domain, authority, tag, q)
+ */
+router.get('/knowledge/nodes', asyncHandler(listLibraryNodes));
+
+/**
+ * GET /api/knowledge/node/:id
+ * Get canonical knowledge node by id
+ */
+router.get('/knowledge/node/:id', asyncHandler(getLibraryNodeById));
+
+/**
+ * POST /api/knowledge/query
+ * Deterministic node query using domains/authorities/tags/condition filters
+ */
+router.post('/knowledge/query', asyncHandler(queryLibraryNodes));
+
+/**
+ * POST /api/knowledge/decision-trace
+ * Build deterministic decision trace from canonical nodes
+ */
+router.post('/knowledge/decision-trace', asyncHandler(getLibraryDecisionTrace));
+
+/**
+ * POST /api/knowledge/evidence-checklist
+ * Build deterministic evidence checklist from canonical nodes
+ */
+router.post('/knowledge/evidence-checklist', asyncHandler(getLibraryEvidenceChecklist));
 
 export default router;
 

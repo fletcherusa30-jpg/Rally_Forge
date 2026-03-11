@@ -1,0 +1,46 @@
+{
+  "version": "2026-03-10",
+  "domains": [
+    "service_connection",
+    "rating",
+    "exposure",
+    "appeals",
+    "effective_date",
+    "evidence_development"
+  ],
+  "serviceConnectionTypes": [
+    "direct",
+    "secondary",
+    "aggravation",
+    "presumptive"
+  ],
+  "exposureCategories": [
+    "agent_orange",
+    "burn_pits",
+    "gulf_war",
+    "radiation",
+    "camp_lejeune"
+  ],
+  "conditionClasses": [
+    "respiratory",
+    "neurological",
+    "mental_health",
+    "musculoskeletal",
+    "cardiovascular",
+    "oncology",
+    "genitourinary",
+    "gastrointestinal",
+    "dermatological"
+  ],
+  "evidencePrimitives": [
+    "current_diagnosis",
+    "in_service_event",
+    "nexus_opinion",
+    "chronicity",
+    "continuity",
+    "lay_statement",
+    "service_treatment_record",
+    "toxic_exposure_confirmation",
+    "severity_documentation"
+  ]
+}

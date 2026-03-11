@@ -1,4 +1,14 @@
 import { initializeKnowledgeBase } from '../services/knowledgeBaseService.js';
+import {
+  loadKnowledgeLibraryBase,
+  getKnowledgeLibraryStatus,
+  validateKnowledgeNodes,
+  listKnowledgeNodes,
+  getKnowledgeNodeById,
+  queryKnowledgeNodes,
+  buildDecisionTrace,
+  buildEvidenceChecklist,
+} from '../services/knowledgeLibraryService.js';
 
 let knowledgeServices = null;
 
@@ -103,4 +113,48 @@ export async function getPart4ByBodySystem(req, res) {
   const { bodySystem } = req.params;
   const codes = services.part4Service.getDiagnosticCodesByBodySystem(bodySystem);
   res.json({ success: true, bodySystem, diagnosticCodes: codes, count: codes.length });
+}
+
+export async function getKnowledgeLibraryBaseStatus(_req, res) {
+  const status = await getKnowledgeLibraryStatus();
+  res.json({ success: true, data: status });
+}
+
+export async function validateKnowledgeLibrary(_req, res) {
+  const base = await loadKnowledgeLibraryBase();
+  const validation = validateKnowledgeNodes(base.schema, base.nodes);
+  res.json({ success: true, data: validation });
+}
+
+export async function listLibraryNodes(req, res) {
+  const base = await loadKnowledgeLibraryBase();
+  const nodes = listKnowledgeNodes(base.nodes, req.query || {});
+  res.json({ success: true, data: nodes, count: nodes.length });
+}
+
+export async function getLibraryNodeById(req, res) {
+  const base = await loadKnowledgeLibraryBase();
+  const node = getKnowledgeNodeById(base.nodes, req.params.id);
+  if (!node) {
+    return res.status(404).json({ success: false, error: `Knowledge node ${req.params.id} not found` });
+  }
+  return res.json({ success: true, data: node });
+}
+
+export async function queryLibraryNodes(req, res) {
+  const base = await loadKnowledgeLibraryBase();
+  const matches = queryKnowledgeNodes(base.nodes, req.body || {});
+  res.json({ success: true, data: matches, count: matches.length });
+}
+
+export async function getLibraryDecisionTrace(req, res) {
+  const base = await loadKnowledgeLibraryBase();
+  const trace = buildDecisionTrace(base.nodes, req.body || {});
+  res.json({ success: true, data: trace });
+}
+
+export async function getLibraryEvidenceChecklist(req, res) {
+  const base = await loadKnowledgeLibraryBase();
+  const checklist = buildEvidenceChecklist(base.nodes, req.body || {});
+  res.json({ success: true, data: checklist });
 }

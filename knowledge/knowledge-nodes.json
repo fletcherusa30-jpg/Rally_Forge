@@ -1,0 +1,296 @@
+[
+  {
+    "id": "sc.direct.3_303",
+    "domain": "service_connection",
+    "authority": "cfr",
+    "citation": "38 CFR 3.303",
+    "title": "Direct service connection scaffold",
+    "effectiveRange": { "start": "1900-01-01", "end": "present" },
+    "conditions": ["any"],
+    "requiredEvidence": ["current_diagnosis", "in_service_event", "nexus_opinion"],
+    "decisionLogic": [
+      "if current_diagnosis && in_service_event && nexus_opinion then pathway=direct",
+      "if missing nexus_opinion then evidence_gap=nexus_opinion"
+    ],
+    "relatedNodes": ["ev.development.m21_1_iii", "appeal.hl_review"],
+    "tags": ["direct", "service_connection", "evidence_gap"],
+    "provenance": {
+      "file": "knowledge-nodes.json",
+      "hash": "pending",
+      "importedAt": "2026-03-10T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "sc.secondary.3_310",
+    "domain": "service_connection",
+    "authority": "cfr",
+    "citation": "38 CFR 3.310",
+    "title": "Secondary service connection scaffold",
+    "effectiveRange": { "start": "1900-01-01", "end": "present" },
+    "conditions": ["any"],
+    "requiredEvidence": ["current_diagnosis", "nexus_opinion", "severity_documentation"],
+    "decisionLogic": [
+      "if primary_service_connected && nexus_opinion then pathway=secondary",
+      "if severity_documentation missing then evidence_gap=severity_documentation"
+    ],
+    "relatedNodes": ["rating.functional_loss.4_40", "rating.painful_motion.4_59"],
+    "tags": ["secondary", "aggravation", "service_connection"],
+    "provenance": {
+      "file": "knowledge-nodes.json",
+      "hash": "pending",
+      "importedAt": "2026-03-10T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "sc.presumptive.agent_orange",
+    "domain": "exposure",
+    "authority": "policy",
+    "citation": "Presumptive Agent Orange Locations",
+    "title": "Agent Orange presumptive exposure scaffold",
+    "effectiveRange": { "start": "1962-01-09", "end": "present" },
+    "conditions": ["agent_orange_related"],
+    "requiredEvidence": ["service_treatment_record", "toxic_exposure_confirmation", "current_diagnosis"],
+    "decisionLogic": [
+      "if deployment.presumptiveMatch && deployment.matchedCategory=Agent Orange / Herbicide Exposure then exposure_confirmed=true",
+      "if exposure_confirmed && current_diagnosis then pathway=presumptive"
+    ],
+    "relatedNodes": ["sc.direct.3_303", "ev.development.m21_1_iii"],
+    "tags": ["presumptive", "agent_orange", "deployment_matching"],
+    "provenance": {
+      "file": "knowledge-nodes.json",
+      "hash": "pending",
+      "importedAt": "2026-03-10T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "sc.presumptive.burn_pits",
+    "domain": "exposure",
+    "authority": "policy",
+    "citation": "PACT Act Burn Pit Locations",
+    "title": "Burn pits presumptive exposure scaffold",
+    "effectiveRange": { "start": "1990-08-02", "end": "present" },
+    "conditions": ["burn_pit_related"],
+    "requiredEvidence": ["toxic_exposure_confirmation", "current_diagnosis"],
+    "decisionLogic": [
+      "if deployment.presumptiveMatch && deployment.matchedCategory=Burn Pits / Airborne Hazards (PACT Act) then exposure_confirmed=true",
+      "if exposure_confirmed && current_diagnosis then pathway=presumptive"
+    ],
+    "relatedNodes": ["sc.direct.3_303"],
+    "tags": ["presumptive", "burn_pits", "pact_act"],
+    "provenance": {
+      "file": "knowledge-nodes.json",
+      "hash": "pending",
+      "importedAt": "2026-03-10T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "sc.presumptive.gulf_war",
+    "domain": "exposure",
+    "authority": "policy",
+    "citation": "Southwest Asia Theater Presumptive",
+    "title": "Gulf War presumptive exposure scaffold",
+    "effectiveRange": { "start": "1990-08-02", "end": "present" },
+    "conditions": ["gulf_war_related"],
+    "requiredEvidence": ["toxic_exposure_confirmation", "current_diagnosis"],
+    "decisionLogic": [
+      "if deployment.presumptiveMatch && deployment.matchedCategory=Southwest Asia / Gulf War Presumptive Exposure then exposure_confirmed=true",
+      "if exposure_confirmed && current_diagnosis then pathway=presumptive"
+    ],
+    "relatedNodes": ["sc.direct.3_303"],
+    "tags": ["presumptive", "gulf_war", "southwest_asia"],
+    "provenance": {
+      "file": "knowledge-nodes.json",
+      "hash": "pending",
+      "importedAt": "2026-03-10T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "sc.presumptive.radiation",
+    "domain": "exposure",
+    "authority": "policy",
+    "citation": "Ionizing Radiation Presumptive Locations",
+    "title": "Radiation presumptive exposure scaffold",
+    "effectiveRange": { "start": "1945-07-16", "end": "present" },
+    "conditions": ["radiation_related"],
+    "requiredEvidence": ["toxic_exposure_confirmation", "current_diagnosis"],
+    "decisionLogic": [
+      "if deployment.presumptiveMatch && deployment.matchedCategory=Ionizing Radiation Presumptive Exposure then exposure_confirmed=true",
+      "if exposure_confirmed && current_diagnosis then pathway=presumptive"
+    ],
+    "relatedNodes": ["sc.direct.3_303"],
+    "tags": ["presumptive", "radiation"],
+    "provenance": {
+      "file": "knowledge-nodes.json",
+      "hash": "pending",
+      "importedAt": "2026-03-10T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "sc.presumptive.camp_lejeune",
+    "domain": "exposure",
+    "authority": "policy",
+    "citation": "Camp Lejeune Contaminated Water",
+    "title": "Camp Lejeune presumptive exposure scaffold",
+    "effectiveRange": { "start": "1953-08-01", "end": "1987-12-31" },
+    "conditions": ["camp_lejeune_related"],
+    "requiredEvidence": ["toxic_exposure_confirmation", "current_diagnosis"],
+    "decisionLogic": [
+      "if deployment.presumptiveMatch && deployment.matchedCategory=Camp Lejeune Contaminated Water then exposure_confirmed=true",
+      "if exposure_confirmed && current_diagnosis then pathway=presumptive"
+    ],
+    "relatedNodes": ["sc.direct.3_303"],
+    "tags": ["presumptive", "camp_lejeune"],
+    "provenance": {
+      "file": "knowledge-nodes.json",
+      "hash": "pending",
+      "importedAt": "2026-03-10T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "rating.functional_loss.4_40",
+    "domain": "rating",
+    "authority": "cfr",
+    "citation": "38 CFR 4.40",
+    "title": "Functional loss scaffold",
+    "effectiveRange": { "start": "1900-01-01", "end": "present" },
+    "conditions": ["musculoskeletal"],
+    "requiredEvidence": ["severity_documentation", "current_diagnosis"],
+    "decisionLogic": [
+      "if functional_impairment documented then rating_factor=functional_loss",
+      "if no functional_impairment documentation then evidence_gap=severity_documentation"
+    ],
+    "relatedNodes": ["rating.joints.4_45", "rating.painful_motion.4_59"],
+    "tags": ["rating", "functional_loss"],
+    "provenance": {
+      "file": "knowledge-nodes.json",
+      "hash": "pending",
+      "importedAt": "2026-03-10T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "rating.joints.4_45",
+    "domain": "rating",
+    "authority": "cfr",
+    "citation": "38 CFR 4.45",
+    "title": "Joints scaffold",
+    "effectiveRange": { "start": "1900-01-01", "end": "present" },
+    "conditions": ["musculoskeletal"],
+    "requiredEvidence": ["severity_documentation", "current_diagnosis"],
+    "decisionLogic": [
+      "if joint_instability_or_reduced_motion documented then rating_factor=joints",
+      "if no motion data then evidence_gap=severity_documentation"
+    ],
+    "relatedNodes": ["rating.functional_loss.4_40"],
+    "tags": ["rating", "joints"],
+    "provenance": {
+      "file": "knowledge-nodes.json",
+      "hash": "pending",
+      "importedAt": "2026-03-10T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "rating.painful_motion.4_59",
+    "domain": "rating",
+    "authority": "cfr",
+    "citation": "38 CFR 4.59",
+    "title": "Painful motion scaffold",
+    "effectiveRange": { "start": "1900-01-01", "end": "present" },
+    "conditions": ["musculoskeletal"],
+    "requiredEvidence": ["severity_documentation", "current_diagnosis"],
+    "decisionLogic": [
+      "if painful_motion documented then rating_factor=painful_motion",
+      "if pain not documented then evidence_gap=severity_documentation"
+    ],
+    "relatedNodes": ["rating.functional_loss.4_40"],
+    "tags": ["rating", "painful_motion"],
+    "provenance": {
+      "file": "knowledge-nodes.json",
+      "hash": "pending",
+      "importedAt": "2026-03-10T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "appeal.hl_review",
+    "domain": "appeals",
+    "authority": "policy",
+    "citation": "Higher-Level Review Path",
+    "title": "Higher-Level Review scaffold",
+    "effectiveRange": { "start": "2019-02-19", "end": "present" },
+    "conditions": ["any"],
+    "requiredEvidence": ["lay_statement"],
+    "decisionLogic": [
+      "if no new evidence and legal_error asserted then appeal_lane=hlr",
+      "if new evidence available then suggest supplemental_claim"
+    ],
+    "relatedNodes": ["appeal.supplemental_claim"],
+    "tags": ["appeals", "hlr"],
+    "provenance": {
+      "file": "knowledge-nodes.json",
+      "hash": "pending",
+      "importedAt": "2026-03-10T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "appeal.supplemental_claim",
+    "domain": "appeals",
+    "authority": "policy",
+    "citation": "Supplemental Claim Path",
+    "title": "Supplemental claim scaffold",
+    "effectiveRange": { "start": "2019-02-19", "end": "present" },
+    "conditions": ["any"],
+    "requiredEvidence": ["new_and_relevant_evidence"],
+    "decisionLogic": [
+      "if new evidence available then appeal_lane=supplemental_claim",
+      "if no new evidence then consider higher_level_review"
+    ],
+    "relatedNodes": ["appeal.hl_review"],
+    "tags": ["appeals", "supplemental_claim"],
+    "provenance": {
+      "file": "knowledge-nodes.json",
+      "hash": "pending",
+      "importedAt": "2026-03-10T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "ev.development.m21_1_iii",
+    "domain": "evidence_development",
+    "authority": "m21-1",
+    "citation": "M21-1_III",
+    "title": "Evidence development scaffold",
+    "effectiveRange": { "start": "1900-01-01", "end": "present" },
+    "conditions": ["any"],
+    "requiredEvidence": ["current_diagnosis", "service_treatment_record", "lay_statement"],
+    "decisionLogic": [
+      "if required evidence complete then development_status=ready_for_decision",
+      "if required evidence incomplete then development_status=evidence_gap"
+    ],
+    "relatedNodes": ["sc.direct.3_303", "sc.secondary.3_310"],
+    "tags": ["evidence_development", "m21-1"],
+    "provenance": {
+      "file": "knowledge-nodes.json",
+      "hash": "pending",
+      "importedAt": "2026-03-10T00:00:00.000Z"
+    }
+  },
+  {
+    "id": "effective_date.general",
+    "domain": "effective_date",
+    "authority": "policy",
+    "citation": "Effective Date General Scaffold",
+    "title": "Effective date determination scaffold",
+    "effectiveRange": { "start": "1900-01-01", "end": "present" },
+    "conditions": ["any"],
+    "requiredEvidence": ["claim_filing_date", "diagnosis_date", "nexus_opinion"],
+    "decisionLogic": [
+      "if claim_filing_date and entitlement_date then effective_date=max_or_rule_specific",
+      "if claim_filing_date missing then evidence_gap=claim_filing_date"
+    ],
+    "relatedNodes": ["sc.direct.3_303"],
+    "tags": ["effective_date"],
+    "provenance": {
+      "file": "knowledge-nodes.json",
+      "hash": "pending",
+      "importedAt": "2026-03-10T00:00:00.000Z"
+    }
+  }
+]
