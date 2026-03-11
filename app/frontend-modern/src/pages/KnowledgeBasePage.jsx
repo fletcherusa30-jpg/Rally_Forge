@@ -1,23 +1,48 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { Card } from '../components/Card';
+
+const VALID_TABS = ['overview', 'search', 'court-cases'];
 
 /**
  * Knowledge Base Page
  * Provides access to VA regulations, diagnostic codes, and case law
  */
 export default function KnowledgeBasePage() {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const tabParam = searchParams.get('tab');
+  const activeTab = VALID_TABS.includes(tabParam) ? tabParam : 'overview';
+
   const [status, setStatus] = useState(null);
   const [cases, setCases] = useState([]);
+  const [casesLoading, setCasesLoading] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState(null);
   const [loading, setLoading] = useState(false);
   const [selectedCase, setSelectedCase] = useState(null);
+  const [caseLoadError, setCaseLoadError] = useState(null);
+
+  // Court Cases filter state
+  const [caseFilter, setCaseFilter] = useState('');
+  const [selectedYear, setSelectedYear] = useState('');
+  const [sortOrder, setSortOrder] = useState('desc');
+
+  const setActiveTab = (tab) => {
+    setSearchParams({ tab });
+    setSelectedCase(null);
+  };
 
   // Load knowledge base status on mount
   useEffect(() => {
     loadStatus();
-    loadCases();
   }, []);
+
+  // Load cases only when the Court Cases tab is first opened.
+  useEffect(() => {
+    if (activeTab === 'court-cases' && cases.length === 0 && !casesLoading) {
+      loadCases();
+    }
+  }, [activeTab, cases.length, casesLoading]);
 
   const loadStatus = async () => {
     try {
@@ -32,6 +57,7 @@ export default function KnowledgeBasePage() {
   };
 
   const loadCases = async () => {
+    setCasesLoading(true);
     try {
       const response = await fetch('/api/knowledge/cases');
       const data = await response.json();
@@ -40,6 +66,8 @@ export default function KnowledgeBasePage() {
       }
     } catch (error) {
       console.error('Failed to load cases:', error);
+    } finally {
+      setCasesLoading(false);
     }
   };
 
@@ -64,6 +92,7 @@ export default function KnowledgeBasePage() {
   };
 
   const viewCase = async (caseId) => {
+    setCaseLoadError(null);
     setLoading(true);
     try {
       const response = await fetch(`/api/knowledge/cases/${encodeURIComponent(caseId)}`);
@@ -73,24 +102,51 @@ export default function KnowledgeBasePage() {
       }
     } catch (error) {
       console.error('Failed to load case:', error);
+      setCaseLoadError('Failed to load case details.');
     } finally {
       setLoading(false);
     }
   };
 
-  const groupCasesByYear = (cases) => {
+  const openCaseFromSearch = (caseId) => {
+    setActiveTab('court-cases');
+    viewCase(caseId);
+  };
+
+  const allYears = useMemo(
+    () => [...new Set(cases.map((c) => String(c.year)))].sort((a, b) => b - a),
+    [cases],
+  );
+
+  const filteredCases = useMemo(() => {
+    let result = cases;
+    if (selectedYear) result = result.filter((c) => String(c.year) === selectedYear);
+    if (caseFilter.trim()) {
+      const q = caseFilter.toLowerCase();
+      result = result.filter(
+        (c) =>
+          c.fileName.toLowerCase().includes(q) ||
+          c.caseId.toLowerCase().includes(q),
+      );
+    }
+    return [...result].sort((a, b) =>
+      sortOrder === 'asc' ? a.year - b.year : b.year - a.year,
+    );
+  }, [cases, selectedYear, caseFilter, sortOrder]);
+
+  const groupCasesByYear = (list) => {
     const grouped = {};
-    cases.forEach(c => {
-      if (!grouped[c.year]) {
-        grouped[c.year] = [];
-      }
+    list.forEach((c) => {
+      if (!grouped[c.year]) grouped[c.year] = [];
       grouped[c.year].push(c);
     });
     return grouped;
   };
 
-  const casesByYear = groupCasesByYear(cases);
-  const years = Object.keys(casesByYear).sort((a, b) => b - a);
+  const filteredByYear = groupCasesByYear(filteredCases);
+  const filteredYears = Object.keys(filteredByYear).sort((a, b) =>
+    sortOrder === 'asc' ? a - b : b - a,
+  );
 
   return (
     <div className='kb-layout'>
@@ -100,214 +156,253 @@ export default function KnowledgeBasePage() {
           <h1 className='page-title'>VA Knowledge Base</h1>
           <p className='page-copy'>Access VA regulations, diagnostic codes, and precedential case law.</p>
         </div>
-        <div className='page-badge'>Integrated Part 3 / Part 4 / CAVC</div>
+        <div className='page-badge'>Part 3 / Part 4 / CAVC</div>
       </section>
 
       {status && (
-        <Card>
-          <h2>Knowledge Base Status</h2>
-          <div className='kb-stat-grid' style={{ marginTop: '1rem' }}>
-            <div className='kb-stat-card'>
-              <div className='kb-stat-value'>
-                {status.stats.part3Sections}
-              </div>
-              <div className='kb-stat-label'>Part 3 Sections</div>
-              <div className='kb-stat-sub'>Compensation Regulations</div>
-            </div>
-            <div className='kb-stat-card'>
-              <div className='kb-stat-value'>
-                {status.stats.part4Sections}
-              </div>
-              <div className='kb-stat-label'>Part 4 Sections</div>
-              <div className='kb-stat-sub'>Rating Schedule</div>
-            </div>
-            <div className='kb-stat-card'>
-              <div className='kb-stat-value'>
-                {status.stats.diagnosticCodes}
-              </div>
-              <div className='kb-stat-label'>Diagnostic Codes</div>
-              <div className='kb-stat-sub'>Conditions and Ratings</div>
-            </div>
-            <div className='kb-stat-card'>
-              <div className='kb-stat-value'>
-                {status.stats.totalCases}
-              </div>
-              <div className='kb-stat-label'>CAVC Cases</div>
-              <div className='kb-stat-sub'>Legal Precedents</div>
-            </div>
+        <div className='kb-stat-grid'>
+          <div className='kb-stat-card'>
+            <div className='kb-stat-value'>{status.stats.part3Sections}</div>
+            <div className='kb-stat-label'>Part 3 Sections</div>
+            <div className='kb-stat-sub'>Compensation Regulations</div>
           </div>
-        </Card>
+          <div className='kb-stat-card'>
+            <div className='kb-stat-value'>{status.stats.part4Sections}</div>
+            <div className='kb-stat-label'>Part 4 Sections</div>
+            <div className='kb-stat-sub'>Rating Schedule</div>
+          </div>
+          <div className='kb-stat-card'>
+            <div className='kb-stat-value'>{status.stats.diagnosticCodes}</div>
+            <div className='kb-stat-label'>Diagnostic Codes</div>
+            <div className='kb-stat-sub'>Conditions and Ratings</div>
+          </div>
+          <div className='kb-stat-card'>
+            <div className='kb-stat-value'>{status.stats.totalCases}</div>
+            <div className='kb-stat-label'>CAVC Cases</div>
+            <div className='kb-stat-sub'>Legal Precedents</div>
+          </div>
+        </div>
       )}
 
       <Card>
-        <h2>Search Knowledge Base</h2>
-        <form onSubmit={handleSearch} style={{ marginTop: '1rem' }}>
-          <div className='kb-form'>
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search regulations, conditions, or cases..."
-              className='kb-input'
-            />
+        <div className='kb-tab-strip' role='tablist' aria-label='Knowledge sections'>
+          {VALID_TABS.map((tab) => (
             <button
-              type="submit"
-              disabled={loading || searchQuery.length < 2}
-              className='kb-button'
+              key={tab}
+              type='button'
+              role='tab'
+              aria-selected={activeTab === tab}
+              className={`kb-tab-btn${activeTab === tab ? ' active' : ''}`}
+              onClick={() => setActiveTab(tab)}
             >
-              {loading ? 'Searching...' : 'Search'}
+              {tab === 'overview' ? 'Overview' : tab === 'search' ? 'Search' : 'Court Cases'}
+              {tab === 'court-cases' && cases.length > 0 && (
+                <span className='kb-tab-count'>{cases.length}</span>
+              )}
             </button>
+          ))}
+        </div>
+
+        {/* ── OVERVIEW ─────────────────────────────────────────── */}
+        {activeTab === 'overview' && (
+          <div className='kb-tab-content'>
+            <p className='kb-note'>
+              Navigate regulations, rating guidance, and CAVC decisions from one place.
+            </p>
+            <div className='kb-overview-grid'>
+              <button type='button' className='kb-overview-tile' onClick={() => setActiveTab('search')}>
+                <div className='kb-overview-tile-icon'>§</div>
+                <strong>38 CFR Part 3</strong>
+                <div className='kb-subline'>Service connection and compensation regulations</div>
+              </button>
+              <button type='button' className='kb-overview-tile' onClick={() => setActiveTab('search')}>
+                <div className='kb-overview-tile-icon'>⊞</div>
+                <strong>38 CFR Part 4</strong>
+                <div className='kb-subline'>Diagnostic codes and rating schedule criteria</div>
+              </button>
+              <button type='button' className='kb-overview-tile' onClick={() => setActiveTab('court-cases')}>
+                <div className='kb-overview-tile-icon'>⚖</div>
+                <strong>Court Cases</strong>
+                <div className='kb-subline'>Precedential CAVC decisions grouped by year</div>
+              </button>
+            </div>
           </div>
-        </form>
+        )}
 
-        {searchResults && (
-          <div style={{ marginTop: '1.5rem' }}>
-            <h3>Search Results ({searchResults.part3?.length + searchResults.part4?.length + searchResults.cases?.length || 0})</h3>
-            
-            {searchResults.cases && searchResults.cases.length > 0 && (
-              <div style={{ marginTop: '1rem' }}>
-                <h4>CAVC Cases</h4>
-                {searchResults.cases.map(c => (
-                  <a
-                    key={c.caseId}
-                    href="#"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      viewCase(c.caseId);
-                    }}
-                    className='kb-item kb-link'
-                  >
-                    <strong>{c.caseId}</strong>
-                    <div style={{ fontSize: '0.875rem', color: 'var(--rf-text-soft)', marginTop: '0.25rem' }}>
-                      Year: {c.year}
-                    </div>
-                  </a>
-                ))}
+        {/* ── SEARCH ───────────────────────────────────────────── */}
+        {activeTab === 'search' && (
+          <div className='kb-tab-content'>
+            <form onSubmit={handleSearch} className='kb-top-space'>
+              <div className='kb-form'>
+                <input
+                  type='text'
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder='Search regulations, conditions, or cases...'
+                  className='kb-input'
+                  aria-label='Knowledge base search'
+                />
+                <button type='submit' disabled={loading || searchQuery.length < 2} className='kb-button'>
+                  {loading ? 'Searching…' : 'Search'}
+                </button>
+              </div>
+            </form>
+
+            {searchResults && (
+              <div className='kb-results'>
+                <p className='kb-note'>
+                  {searchResults.part3?.length + searchResults.part4?.length + searchResults.cases?.length || 0} result(s)
+                </p>
+
+                {searchResults.cases?.length > 0 && (
+                  <div className='kb-section'>
+                    <h4>Court Cases</h4>
+                    {searchResults.cases.map((c) => (
+                      <a
+                        key={c.caseId}
+                        href='#'
+                        onClick={(e) => { e.preventDefault(); openCaseFromSearch(c.caseId); }}
+                        className='kb-item kb-link'
+                      >
+                        <strong>{c.caseId}</strong>
+                        <div className='kb-subline'>Year: {c.year}</div>
+                      </a>
+                    ))}
+                  </div>
+                )}
+
+                {searchResults.part3?.length > 0 && (
+                  <div className='kb-section'>
+                    <h4>Part 3 Regulations</h4>
+                    {searchResults.part3.map((section, idx) => (
+                      <div key={idx} className='kb-item'>
+                        <strong>{section.sectionNumber}</strong>: {section.title}
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {searchResults.part4?.length > 0 && (
+                  <div className='kb-section'>
+                    <h4>Part 4 Diagnostic Codes</h4>
+                    {searchResults.part4.map((code, idx) => (
+                      <div key={idx} className='kb-item'>
+                        <strong>Code {code.code}</strong>: {code.section}
+                        <div className='kb-subline'>{code.description?.substring(0, 200)}…</div>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             )}
+          </div>
+        )}
 
-            {searchResults.part3 && searchResults.part3.length > 0 && (
-              <div style={{ marginTop: '1rem' }}>
-                <h4>Part 3 Regulations</h4>
-                {searchResults.part3.map((section, idx) => (
-                  <div
-                    key={idx}
-                    className='kb-item'
-                  >
-                    <strong>{section.sectionNumber}</strong>: {section.title}
-                  </div>
+        {/* ── COURT CASES ──────────────────────────────────────── */}
+        {activeTab === 'court-cases' && (
+          <div className='kb-tab-content'>
+            {/* Filter bar */}
+            <div className='kb-filter-bar'>
+              <input
+                type='text'
+                value={caseFilter}
+                onChange={(e) => { setCaseFilter(e.target.value); setSelectedCase(null); }}
+                placeholder='Filter cases…'
+                className='kb-input kb-filter-input'
+                aria-label='Filter cases'
+              />
+              <select
+                value={selectedYear}
+                onChange={(e) => { setSelectedYear(e.target.value); setSelectedCase(null); }}
+                className='kb-select'
+                aria-label='Filter by year'
+              >
+                <option value=''>All Years</option>
+                {allYears.map((y) => (
+                  <option key={y} value={y}>{y}</option>
                 ))}
-              </div>
+              </select>
+              <select
+                value={sortOrder}
+                onChange={(e) => setSortOrder(e.target.value)}
+                className='kb-select'
+                aria-label='Sort order'
+              >
+                <option value='desc'>Newest first</option>
+                <option value='asc'>Oldest first</option>
+              </select>
+              {(caseFilter || selectedYear) && (
+                <button
+                  type='button'
+                  className='kb-clear-btn'
+                  onClick={() => { setCaseFilter(''); setSelectedYear(''); setSelectedCase(null); }}
+                >
+                  Clear
+                </button>
+              )}
+            </div>
+
+            {casesLoading && <p className='kb-note'>Loading cases…</p>}
+
+            {!casesLoading && filteredCases.length === 0 && (
+              <p className='kb-note'>No cases match your filters.</p>
             )}
 
-            {searchResults.part4 && searchResults.part4.length > 0 && (
-              <div style={{ marginTop: '1rem' }}>
-                <h4>Part 4 Diagnostic Codes</h4>
-                {searchResults.part4.map((code, idx) => (
-                  <div
-                    key={idx}
-                    className='kb-item'
-                  >
-                    <strong>Code {code.code}</strong>: {code.section}
-                    <div style={{ fontSize: '0.875rem', color: 'var(--rf-text-soft)', marginTop: '0.25rem' }}>
-                      {code.description?.substring(0, 200)}...
+            {/* Split pane */}
+            {!casesLoading && filteredCases.length > 0 && (
+              <div className='kb-split-pane'>
+                {/* Left: case list */}
+                <div className='kb-case-list-pane'>
+                  {filteredYears.map((year) => (
+                    <div key={year} className='kb-year-group'>
+                      <div className='kb-year-title'>{year}</div>
+                      {filteredByYear[year].map((c) => (
+                        <button
+                          key={c.caseId}
+                          type='button'
+                          onClick={() => viewCase(c.caseId)}
+                          className={`kb-case-row${selectedCase?.caseId === c.caseId ? ' active' : ''}`}
+                        >
+                          <span className='kb-case-row-name'>{c.fileName.replace('.md', '')}</span>
+                          <span className='kb-case-row-year'>{c.year}</span>
+                        </button>
+                      ))}
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
+
+                {/* Right: detail pane */}
+                <div className='kb-case-detail-pane'>
+                  {loading && <p className='kb-note'>Loading…</p>}
+                  {caseLoadError && <p className='kb-note kb-error'>{caseLoadError}</p>}
+                  {!loading && !selectedCase && !caseLoadError && (
+                    <div className='kb-detail-empty'>
+                      <div className='kb-detail-empty-icon'>⚖</div>
+                      <p>Select a case to read the decision.</p>
+                    </div>
+                  )}
+                  {!loading && selectedCase && (
+                    <>
+                      <div className='kb-detail-head'>
+                        <h3>{selectedCase.caseId}</h3>
+                        <button type='button' className='kb-clear-btn' onClick={() => setSelectedCase(null)}>
+                          Close
+                        </button>
+                      </div>
+                      <div className='kb-case-content'>{selectedCase.content}</div>
+                      {selectedCase.resourcePath && (
+                        <div className='kb-detail-foot'>
+                          <span className='kb-subline'>{selectedCase.resourcePath}</span>
+                        </div>
+                      )}
+                    </>
+                  )}
+                </div>
               </div>
             )}
           </div>
         )}
       </Card>
-
-      <Card>
-        <h2>CAVC Precedential Cases</h2>
-        <p style={{ color: 'var(--rf-text-soft)', marginBottom: '1rem' }}>
-          Court of Appeals for Veterans Claims decisions providing legal guidance for VA benefit determinations
-        </p>
-
-        {years.map(year => (
-          <div key={year} style={{ marginTop: '1.5rem' }}>
-            <h3 style={{ color: 'var(--rf-accent)', marginBottom: '0.5rem' }}>{year}</h3>
-            <div style={{ display: 'grid', gap: '0.75rem' }}>
-              {casesByYear[year].map(c => (
-                <a
-                  key={c.caseId}
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    viewCase(c.caseId);
-                  }}
-                  className='kb-item kb-link'
-                >
-                  <strong>{c.fileName.replace('.md', '')}</strong>
-                  <div style={{ fontSize: '0.875rem', color: 'var(--rf-text-soft)', marginTop: '0.25rem' }}>
-                    {c.filePath}
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
-        ))}
-      </Card>
-
-      {/* Case Viewer Modal */}
-      {selectedCase && (
-        <div
-          style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            background: 'rgba(1, 6, 12, 0.74)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            zIndex: 1000,
-            padding: '2rem'
-          }}
-          onClick={() => setSelectedCase(null)}
-        >
-          <div
-            onClick={(e) => e.stopPropagation()}
-            style={{
-              background: 'var(--rf-panel-strong)',
-              padding: '2rem',
-              borderRadius: '14px',
-              border: '1px solid rgba(157, 177, 194, 0.2)',
-              maxWidth: '800px',
-              maxHeight: '80vh',
-              overflow: 'auto',
-              boxShadow: '0 20px 35px rgba(0, 0, 0, 0.35)'
-            }}
-          >
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1.5rem' }}>
-              <h2 style={{ margin: 0 }}>{selectedCase.caseId}</h2>
-              <button
-                onClick={() => setSelectedCase(null)}
-                style={{
-                  background: 'none',
-                  border: 'none',
-                  fontSize: '1.5rem',
-                  cursor: 'pointer',
-                  color: 'var(--rf-text-muted)'
-                }}
-              >
-                ×
-              </button>
-            </div>
-            <div style={{ whiteSpace: 'pre-wrap', fontFamily: 'Consolas, monospace', fontSize: '0.875rem', lineHeight: '1.6', color: 'var(--rf-text-muted)' }}>
-              {selectedCase.content}
-            </div>
-            {selectedCase.url && (
-              <div style={{ marginTop: '1.5rem', paddingTop: '1rem', borderTop: '1px solid rgba(157, 177, 194, 0.2)' }}>
-                <strong>File Path:</strong> {selectedCase.resourcePath}
-              </div>
-            )}
-          </div>
-        </div>
-      )}
     </div>
   );
 }
