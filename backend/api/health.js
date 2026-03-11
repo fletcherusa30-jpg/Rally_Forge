@@ -35,7 +35,7 @@ async function checkDiagnosticReport() {
 }
 
 router.get('/', async (req, res) => {
-  const scannerFile = path.join(rootDir, 'Scanner', 'VA SCANNER', 'backend', 'scannerRoute.js');
+  const scannerFile = path.join(rootDir, 'Scanner', 'STRS_SCANNER', 'STRS.Scanner.ps1');
   const compensationFile = path.join(rootDir, 'compensation-engine', 'index.js');
   const financialPlannerFile = path.join(rootDir, 'backend', 'services', 'financialPlannerService.js');
 
@@ -51,7 +51,8 @@ router.get('/', async (req, res) => {
   const compensation = compensationOk ? 'ok' : 'fail';
   const financialPlanner = financialPlannerOk ? 'ok' : 'fail';
   const diagnostic = diagnosticOk ? 'ok' : 'fail';
-  const startup = backend === 'ok' && frontend === 'ok' ? 'ok' : 'fail';
+  // startup reflects core backend components only; frontend is informational
+  const startup = backend === 'ok' && compensation === 'ok' ? 'ok' : 'fail';
 
   res.json({
     backend,

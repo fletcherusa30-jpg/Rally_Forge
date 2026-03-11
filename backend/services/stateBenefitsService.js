@@ -1,4 +1,9 @@
 /**
+ * ⚠️  DEPRECATED: Use backend/domain/engines/BenefitsEngine.js instead.
+ * 
+ * This service layer is being consolidated into the domain engine.
+ * Will be removed in Phase 4 (Backend Services Refactor).
+ * 
  * State Benefits Database Service
  * 
  * Integrates the comprehensive 250-benefit STATE_BENEFITS_DATABASE.md
@@ -21,7 +26,7 @@ let benefitsCache = null;
  */
 const parseBenefitsDatabase = (content) => {
   const benefits = {};
-  const lines = content.split('\n');
+  const lines = content.split(/\r?\n/);
   
   let currentState = null;
   let currentCategory = null;
@@ -246,7 +251,7 @@ export const getDatabaseStatistics = async () => {
   let benefitsByRating = {};
   
   Object.values(database).forEach(state => {
-    Object.forEach(Object.entries(state.categories), ([category, benefits]) => {
+    Object.entries(state.categories).forEach(([category, benefits]) => {
       totalCategories.add(category);
       benefits.forEach(benefit => {
         totalBenefits++;

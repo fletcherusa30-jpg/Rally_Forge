@@ -25,6 +25,46 @@ const cache = {
   schema: null
 };
 
+function normalizeSectionTitle(value) {
+  return String(value || '').replace(/\s+/g, ' ').trim().replace(/[.;:,]+$/, '');
+}
+
+function extractPart3SectionsFromRawDocument(rawDocument) {
+  const pages = Array.isArray(rawDocument?.pages) ? rawDocument.pages : [];
+  const sections = [];
+  const seen = new Set();
+  const sectionPattern = /§+\s*([0-9]+\.[0-9]+[a-z]?)\s+([^§\n]+?)(?=(?:\s§+\s*[0-9]+\.[0-9]+[a-z]?\s)|$)/g;
+
+  for (const page of pages) {
+    const rawText = String(page?.text || '').replace(/\s+/g, ' ').trim();
+    if (!rawText) {
+      continue;
+    }
+
+    let match;
+    while ((match = sectionPattern.exec(rawText)) !== null) {
+      const sectionNumber = `§${match[1]}`;
+      if (seen.has(sectionNumber)) {
+        continue;
+      }
+
+      sections.push({
+        sectionNumber,
+        title: normalizeSectionTitle(match[2]),
+        partNumber: 3,
+        rawText,
+        paragraphs: [],
+        authority: null,
+        crossReferences: [],
+        notes: [],
+      });
+      seen.add(sectionNumber);
+    }
+  }
+
+  return sections;
+}
+
 /**
  * Load JSON file with caching
  */
@@ -39,8 +79,17 @@ const loadJSON = async (relativePath) => {
  */
 export const loadPart3 = async () => {
   if (!cache.part3) {
-    const sections = await loadJSON('part3/sections.json');
-    cache.part3 = Array.isArray(sections) ? sections : sections.sections || [];
+    try {
+      const sections = await loadJSON('part3/sections.json');
+      cache.part3 = Array.isArray(sections) ? sections : sections.sections || [];
+    } catch (error) {
+      if (error?.code !== 'ENOENT') {
+        throw error;
+      }
+
+      const rawPart3 = await loadJSON('_raw_extraction/part3_raw.json');
+      cache.part3 = extractPart3SectionsFromRawDocument(rawPart3);
+    }
   }
   return cache.part3;
 };
