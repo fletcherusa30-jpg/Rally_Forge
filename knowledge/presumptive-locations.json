@@ -1,0 +1,186 @@
+﻿{
+    "version": "2026-03-10",
+    "categories": [
+        {
+            "id": "agent_orange",
+            "label": "Agent Orange / Herbicide Exposure",
+            "locations": [
+                {
+                    "name": "Republic of Vietnam",
+                    "aliases": ["Vietnam", "RVN", "In-country Vietnam", "Vietnam territorial waters"],
+                    "dateRanges": [{ "start": "1962-01-09", "end": "1975-05-07" }]
+                },
+                {
+                    "name": "Korean Demilitarized Zone",
+                    "aliases": ["Korean DMZ", "DMZ Korea"],
+                    "dateRanges": [{ "start": "1968-04-01", "end": "1971-08-31" }]
+                },
+                {
+                    "name": "Thailand Military Bases",
+                    "aliases": ["Thailand", "U-Tapao", "Ubon", "Nakhon Phanom", "Takhli", "Korat", "Don Muang"],
+                    "dateRanges": [{ "start": "1962-01-09", "end": "1976-06-30" }]
+                },
+                {
+                    "name": "Laos",
+                    "aliases": ["Laos"],
+                    "dateRanges": [{ "start": "1965-12-01", "end": "1969-09-30" }]
+                },
+                {
+                    "name": "Cambodia Mimot/Krek",
+                    "aliases": ["Cambodia", "Mimot", "Krek", "Cambodia Mimot", "Cambodia Krek"],
+                    "dateRanges": [{ "start": "1969-04-16", "end": "1969-04-30" }]
+                },
+                {
+                    "name": "Guam",
+                    "aliases": ["Guam"],
+                    "dateRanges": [{ "start": "1962-01-09", "end": "1980-07-30" }]
+                },
+                {
+                    "name": "American Samoa",
+                    "aliases": ["American Samoa", "Samoa"],
+                    "dateRanges": [{ "start": "1962-01-09", "end": "1980-07-30" }]
+                },
+                {
+                    "name": "Johnston Atoll",
+                    "aliases": ["Johnston Atoll", "Johnston Island"],
+                    "dateRanges": [{ "start": "1972-01-01", "end": "1977-09-30" }]
+                }
+            ]
+        },
+        {
+            "id": "burn_pits",
+            "label": "Burn Pits / Airborne Hazards (PACT Act)",
+            "locations": [
+                {
+                    "name": "Afghanistan",
+                    "aliases": ["Afghanistan", "Kabul", "Bagram", "Kandahar"],
+                    "dateRanges": [{ "start": "2001-09-11", "end": "present" }]
+                },
+                {
+                    "name": "Iraq",
+                    "aliases": ["Iraq", "Baghdad", "Mosul", "Balad"],
+                    "dateRanges": [{ "start": "1990-08-02", "end": "present" }]
+                },
+                {
+                    "name": "Djibouti",
+                    "aliases": ["Djibouti", "Camp Lemonnier"],
+                    "dateRanges": [{ "start": "2001-09-11", "end": "present" }]
+                },
+                {
+                    "name": "Egypt",
+                    "aliases": ["Egypt"],
+                    "dateRanges": [{ "start": "2001-09-11", "end": "present" }]
+                },
+                {
+                    "name": "Jordan",
+                    "aliases": ["Jordan"],
+                    "dateRanges": [{ "start": "2001-09-11", "end": "present" }]
+                },
+                {
+                    "name": "Lebanon",
+                    "aliases": ["Lebanon"],
+                    "dateRanges": [{ "start": "2001-09-11", "end": "present" }]
+                },
+                {
+                    "name": "Syria",
+                    "aliases": ["Syria"],
+                    "dateRanges": [{ "start": "2001-09-11", "end": "present" }]
+                },
+                {
+                    "name": "Uzbekistan",
+                    "aliases": ["Uzbekistan"],
+                    "dateRanges": [{ "start": "2001-09-11", "end": "present" }]
+                },
+                {
+                    "name": "Yemen",
+                    "aliases": ["Yemen"],
+                    "dateRanges": [{ "start": "2001-09-11", "end": "present" }]
+                },
+                {
+                    "name": "Somalia",
+                    "aliases": ["Somalia"],
+                    "dateRanges": [{ "start": "2001-09-11", "end": "present" }]
+                }
+            ]
+        },
+        {
+            "id": "gulf_war",
+            "label": "Southwest Asia / Gulf War Presumptive Exposure",
+            "locations": [
+                {
+                    "name": "Southwest Asia Theater of Operations",
+                    "aliases": [
+                        "Iraq",
+                        "Kuwait",
+                        "Saudi Arabia",
+                        "Bahrain",
+                        "Qatar",
+                        "United Arab Emirates",
+                        "UAE",
+                        "Oman",
+                        "Gulf of Aden",
+                        "Gulf of Oman",
+                        "Persian Gulf",
+                        "Arabian Sea",
+                        "Red Sea",
+                        "Neutral Zone between Iraq and Saudi Arabia",
+                        "Airspace above Southwest Asia"
+                    ],
+                    "dateRanges": [{ "start": "1990-08-02", "end": "present" }]
+                }
+            ]
+        },
+        {
+            "id": "radiation",
+            "label": "Ionizing Radiation Presumptive Exposure",
+            "locations": [
+                {
+                    "name": "Hiroshima Occupation",
+                    "aliases": ["Hiroshima", "Occupation of Hiroshima"],
+                    "dateRanges": [{ "start": "1945-08-06", "end": "1946-07-01" }]
+                },
+                {
+                    "name": "Nagasaki Occupation",
+                    "aliases": ["Nagasaki", "Occupation of Nagasaki"],
+                    "dateRanges": [{ "start": "1945-08-09", "end": "1946-07-01" }]
+                },
+                {
+                    "name": "Atmospheric Nuclear Test Sites",
+                    "aliases": ["Nevada Test Site", "Pacific Proving Grounds", "Operation Crossroads", "Operation Upshot-Knothole", "Operation Plumbbob"],
+                    "dateRanges": [{ "start": "1945-07-16", "end": "1962-12-31" }]
+                },
+                {
+                    "name": "Palomares, Spain",
+                    "aliases": ["Palomares Spain", "Palomares"],
+                    "dateRanges": [{ "start": "1966-01-17", "end": "1967-03-31" }]
+                },
+                {
+                    "name": "Thule, Greenland",
+                    "aliases": ["Thule Greenland", "Thule"],
+                    "dateRanges": [{ "start": "1968-01-21", "end": "1968-09-25" }]
+                },
+                {
+                    "name": "Enewetak Atoll",
+                    "aliases": ["Enewetak", "Enewetak Atoll"],
+                    "dateRanges": [{ "start": "1977-01-01", "end": "1980-12-31" }]
+                }
+            ]
+        },
+        {
+            "id": "camp_lejeune",
+            "label": "Camp Lejeune Contaminated Water",
+            "locations": [
+                {
+                    "name": "Camp Lejeune, North Carolina",
+                    "aliases": ["Camp Lejeune", "Lejeune"],
+                    "dateRanges": [{ "start": "1953-08-01", "end": "1987-12-31" }]
+                },
+                {
+                    "name": "MCAS New River, North Carolina",
+                    "aliases": ["MCAS New River", "New River"],
+                    "dateRanges": [{ "start": "1953-08-01", "end": "1987-12-31" }]
+                }
+            ]
+        }
+    ]
+}

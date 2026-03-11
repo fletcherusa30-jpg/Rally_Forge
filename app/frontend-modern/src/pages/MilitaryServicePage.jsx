@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Card } from '../components/Card';
+import { getPresumptiveKnowledge } from '../api/client';
+import {
+  getDropdownLocations,
+  getExposureRules,
+  buildDeploymentEvidence,
+} from '../utils/presumptiveMatching';
 
 const ranksByBranch = {
   'Army': {
@@ -223,8 +229,37 @@ export function MilitaryServicePage() {
     dischargeType: ''
   });
 
+  const [deploymentData, setDeploymentData] = useState({
+    location: '',
+    startDate: '',
+    endDate: '',
+    unitOperation: ''
+  });
+
+  const [draftDeployments, setDraftDeployments] = useState([]);
+  const [deploymentLocations, setDeploymentLocations] = useState([]);
+  const [exposureRules, setExposureRules] = useState([]);
+  const [knowledgeError, setKnowledgeError] = useState('');
+
   const [records, setRecords] = useState([]);
   const [saveMessage, setSaveMessage] = useState('');
+
+  const normalizeRecord = (record) => {
+    const deployments = Array.isArray(record?.serviceProfile?.deployments)
+      ? record.serviceProfile.deployments
+      : [];
+    const evidence = Array.isArray(record?.serviceProfile?.evidence)
+      ? record.serviceProfile.evidence
+      : [];
+
+    return {
+      ...record,
+      serviceProfile: {
+        deployments,
+        evidence,
+      },
+    };
+  };
 
   useEffect(() => {
     // Try to load from backend first, fall back to localStorage
@@ -234,7 +269,7 @@ export function MilitaryServicePage() {
         if (response.ok) {
           const result = await response.json();
           if (result.data && result.data.length > 0) {
-            setRecords(result.data);
+            setRecords(result.data.map(normalizeRecord));
             return;
           }
         }
@@ -246,7 +281,7 @@ export function MilitaryServicePage() {
       const saved = localStorage.getItem('militaryServiceRecords');
       if (saved) {
         try {
-          setRecords(JSON.parse(saved));
+          setRecords(JSON.parse(saved).map(normalizeRecord));
         } catch (error) {
           console.error('Failed to load records:', error);
         }
@@ -254,6 +289,23 @@ export function MilitaryServicePage() {
     };
     
     loadRecords();
+  }, []);
+
+  useEffect(() => {
+    const loadPresumptiveKnowledge = async () => {
+      try {
+        const payload = await getPresumptiveKnowledge();
+        const data = payload?.data || {};
+        setDeploymentLocations(getDropdownLocations(data));
+        setExposureRules(getExposureRules(data));
+      } catch (error) {
+        setKnowledgeError('Unable to load presumptive location knowledge right now.');
+        setDeploymentLocations([]);
+        setExposureRules([]);
+      }
+    };
+
+    loadPresumptiveKnowledge();
   }, []);
 
   const handleChange = (e) => {
@@ -273,7 +325,22 @@ export function MilitaryServicePage() {
 
   const handleAddRecord = () => {
     if (serviceData.branch && serviceData.startDate) {
-      setRecords((prev) => [...prev, { ...serviceData, id: Date.now() }]);
+      const deployments = draftDeployments.map((item) => ({ ...item.deployment }));
+      const evidence = draftDeployments.map((item) => ({
+        ...item.evidence,
+        unitOperation: item.deployment.unitOperation || ''
+      }));
+
+      const nextRecord = {
+        ...serviceData,
+        id: Date.now(),
+        serviceProfile: {
+          deployments,
+          evidence,
+        },
+      };
+
+      setRecords((prev) => [...prev, nextRecord]);
       setServiceData({
         branch: '',
         startDate: '',
@@ -282,7 +349,53 @@ export function MilitaryServicePage() {
         serviceType: '',
         dischargeType: ''
       });
+      setDraftDeployments([]);
     }
+  };
+
+  const handleDeploymentChange = (e) => {
+    const { name, value } = e.target;
+    setDeploymentData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleAddDeployment = () => {
+    if (!deploymentData.location || !deploymentData.startDate) {
+      setSaveMessage('⚠ Deployment location and start date are required');
+      setTimeout(() => setSaveMessage(''), 3000);
+      return;
+    }
+
+    const deployment = {
+      location: deploymentData.location,
+      startDate: deploymentData.startDate,
+      endDate: deploymentData.endDate,
+      unitOperation: deploymentData.unitOperation,
+    };
+
+    const evidence = buildDeploymentEvidence(deployment, exposureRules);
+
+    setDraftDeployments((prev) => [
+      ...prev,
+      {
+        id: Date.now() + Math.floor(Math.random() * 1000),
+        deployment,
+        evidence,
+      },
+    ]);
+
+    setDeploymentData({
+      location: '',
+      startDate: '',
+      endDate: '',
+      unitOperation: '',
+    });
+  };
+
+  const handleRemoveDraftDeployment = (id) => {
+    setDraftDeployments((prev) => prev.filter((item) => item.id !== id));
   };
 
   const handleRemoveRecord = (id) => {
@@ -555,6 +668,154 @@ export function MilitaryServicePage() {
             </div>
           </div>
 
+          <div style={{ borderTop: '1px solid #334155', paddingTop: '1rem' }}>
+            <h3 style={{ color: '#cbd5e1', fontSize: '0.95rem', marginBottom: '0.75rem' }}>Deployment Locations</h3>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '0.75rem' }}>
+              <div>
+                <label style={{ display: 'block', fontSize: '0.875rem', fontWeight: '600', marginBottom: '0.5rem', color: '#94a3b8' }}>Deployment Location</label>
+                <select
+                  name='location'
+                  value={deploymentData.location}
+                  onChange={handleDeploymentChange}
+                  style={{
+                    width: '100%',
+                    padding: '0.5rem',
+                    fontSize: '0.875rem',
+                    backgroundColor: '#0f172a',
+                    border: '1px solid #334155',
+                    borderRadius: '0.375rem',
+                    color: '#cbd5e1'
+                  }}
+                >
+                  <option value=''>Select location...</option>
+                  {deploymentLocations.map((item) => (
+                    <option key={`${item.value}-${item.category}`} value={item.value}>{item.label}</option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <label style={{ display: 'block', fontSize: '0.875rem', fontWeight: '600', marginBottom: '0.5rem', color: '#94a3b8' }}>Unit/Operation (optional)</label>
+                <input
+                  type='text'
+                  name='unitOperation'
+                  value={deploymentData.unitOperation}
+                  onChange={handleDeploymentChange}
+                  placeholder='e.g., OIF, 1-32 Infantry'
+                  style={{
+                    width: '100%',
+                    padding: '0.5rem',
+                    fontSize: '0.875rem',
+                    backgroundColor: '#0f172a',
+                    border: '1px solid #334155',
+                    borderRadius: '0.375rem',
+                    color: '#cbd5e1'
+                  }}
+                />
+              </div>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '0.75rem' }}>
+              <div>
+                <label style={{ display: 'block', fontSize: '0.875rem', fontWeight: '600', marginBottom: '0.5rem', color: '#94a3b8' }}>Start Date</label>
+                <input
+                  type='date'
+                  name='startDate'
+                  value={deploymentData.startDate}
+                  onChange={handleDeploymentChange}
+                  style={{
+                    width: '100%',
+                    padding: '0.5rem',
+                    fontSize: '0.875rem',
+                    backgroundColor: '#0f172a',
+                    border: '1px solid #334155',
+                    borderRadius: '0.375rem',
+                    color: '#cbd5e1'
+                  }}
+                />
+              </div>
+              <div>
+                <label style={{ display: 'block', fontSize: '0.875rem', fontWeight: '600', marginBottom: '0.5rem', color: '#94a3b8' }}>End Date</label>
+                <input
+                  type='date'
+                  name='endDate'
+                  value={deploymentData.endDate}
+                  onChange={handleDeploymentChange}
+                  style={{
+                    width: '100%',
+                    padding: '0.5rem',
+                    fontSize: '0.875rem',
+                    backgroundColor: '#0f172a',
+                    border: '1px solid #334155',
+                    borderRadius: '0.375rem',
+                    color: '#cbd5e1'
+                  }}
+                />
+              </div>
+            </div>
+
+            <button
+              type='button'
+              onClick={handleAddDeployment}
+              style={{
+                padding: '0.625rem 1.25rem',
+                backgroundColor: '#0ea5e9',
+                color: '#001018',
+                border: 'none',
+                borderRadius: '0.375rem',
+                fontWeight: '700',
+                cursor: 'pointer',
+                fontSize: '0.8rem'
+              }}
+            >
+              Add Deployment
+            </button>
+
+            {knowledgeError && (
+              <p style={{ color: '#fca5a5', fontSize: '0.8rem', marginTop: '0.75rem' }}>{knowledgeError}</p>
+            )}
+
+            {draftDeployments.length > 0 && (
+              <div style={{ marginTop: '0.9rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                {draftDeployments.map((item) => (
+                  <div
+                    key={item.id}
+                    style={{
+                      padding: '0.75rem',
+                      border: '1px solid #334155',
+                      borderRadius: '0.375rem',
+                      backgroundColor: '#1e293b'
+                    }}
+                  >
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', gap: '0.75rem' }}>
+                      <div>
+                        <p style={{ fontSize: '0.85rem', color: '#e2e8f0', fontWeight: 700 }}>
+                          {item.deployment.location} ({item.deployment.startDate} to {item.deployment.endDate || 'Present'})
+                        </p>
+                        {item.deployment.unitOperation && (
+                          <p style={{ fontSize: '0.75rem', color: '#94a3b8', marginTop: '0.25rem' }}>
+                            Unit/Operation: {item.deployment.unitOperation}
+                          </p>
+                        )}
+                        <p style={{ fontSize: '0.75rem', marginTop: '0.25rem', color: item.evidence.presumptiveMatch ? '#34d399' : '#fda4af' }}>
+                          {item.evidence.presumptiveMatch
+                            ? `Presumptive match: ${item.evidence.matchedCategory} (${item.evidence.matchedDateRange?.start} to ${item.evidence.matchedDateRange?.end})`
+                            : 'No presumptive match for selected dates/location'}
+                        </p>
+                      </div>
+                      <button
+                        type='button'
+                        onClick={() => handleRemoveDraftDeployment(item.id)}
+                        style={{ background: 'none', border: 'none', color: '#f87171', cursor: 'pointer', fontSize: '1rem', fontWeight: '700' }}
+                      >
+                        ✕
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
           <button
             onClick={handleAddRecord}
             style={{
@@ -600,6 +861,18 @@ export function MilitaryServicePage() {
                   <p style={{ fontSize: '0.875rem', color: '#14b8a6', fontWeight: '600' }}>
                     ⏱ Service: {calculateYearsOfService(record.startDate, record.endDate)}
                   </p>
+                  {!!record.serviceProfile?.evidence?.length && (
+                    <div style={{ marginTop: '0.6rem', display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
+                      {record.serviceProfile.evidence.map((evidence, idx) => (
+                        <div key={`${record.id}-evidence-${idx}`} style={{ fontSize: '0.75rem', color: '#cbd5e1' }}>
+                          • {evidence.location} ({evidence.startDate} to {evidence.endDate || 'Present'}) — {' '}
+                          {evidence.presumptiveMatch
+                            ? `Matched ${evidence.matchedCategory}`
+                            : 'No presumptive match'}
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
                 <button
                   onClick={() => handleRemoveRecord(record.id)}

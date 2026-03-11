@@ -53,3 +53,7 @@ export function analyzeIntelligence(payload) {
   });
 }
 
+export function getPresumptiveKnowledge() {
+  return fetchJson(`${API_BASE}/military/presumptive-knowledge`);
+}
+

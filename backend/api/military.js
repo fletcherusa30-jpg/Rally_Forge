@@ -1,4 +1,10 @@
 import express from 'express';
+import {
+  loadPresumptiveKnowledge,
+  getFlattenedPresumptiveLocations,
+  getPresumptiveExposureRules,
+  matchDeploymentToPresumptive,
+} from '../services/presumptiveLocationsService.js';
 
 const router = express.Router();
 
@@ -20,6 +26,61 @@ router.get('/records', (req, res) => {
     res.status(500).json({
       success: false,
       error: error.message
+    });
+  }
+});
+
+/**
+ * GET /api/military/presumptive-knowledge
+ * Get flattened deployment locations and exposure matching rules from knowledge JSON
+ */
+router.get('/presumptive-knowledge', async (_req, res) => {
+  try {
+    const knowledge = await loadPresumptiveKnowledge();
+    const locations = getFlattenedPresumptiveLocations(knowledge);
+    const exposureRules = getPresumptiveExposureRules(knowledge);
+    res.json({
+      success: true,
+      data: {
+        version: knowledge.version,
+        locations,
+        exposureRules,
+      },
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      error: error.message,
+    });
+  }
+});
+
+/**
+ * POST /api/military/match-deployment
+ * Match a deployment object against presumptive knowledge rules
+ */
+router.post('/match-deployment', async (req, res) => {
+  try {
+    const deployment = req.body?.deployment;
+    if (!deployment || !deployment.location) {
+      return res.status(400).json({
+        success: false,
+        error: 'deployment.location is required',
+      });
+    }
+
+    const knowledge = await loadPresumptiveKnowledge();
+    const exposureRules = getPresumptiveExposureRules(knowledge);
+    const evidence = matchDeploymentToPresumptive(deployment, exposureRules);
+
+    return res.json({
+      success: true,
+      data: evidence,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      error: error.message,
     });
   }
 });

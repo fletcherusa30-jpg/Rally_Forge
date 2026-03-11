@@ -1,0 +1,21 @@
+﻿{
+    "Description":  "This file contains structured placeholders for M21-1 sections used by Rally Forge. No copyrighted text included.",
+    "Sections":  [
+                     {
+                         "Key":  "M21-1_I",
+                         "Name":  "General Claims Processing"
+                     },
+                     {
+                         "Key":  "M21-1_III",
+                         "Name":  "Evidence Development"
+                     },
+                     {
+                         "Key":  "M21-1_IV",
+                         "Name":  "Service Connection Principles"
+                     },
+                     {
+                         "Key":  "M21-1_V",
+                         "Name":  "Rating Procedures"
+                     }
+                 ]
+}
