@@ -1,4 +1,13 @@
-﻿<# Analyzer.psm1
+﻿<# DEPRECATED — modules/Analyzer.psm1
+===========================================================
+ DEPRECATION NOTICE:
+   Logic migrated to: engine/core/scanner_core.psm1::Invoke-AnalysisEngine
+   Do not modify. Retained for fallback until validation completes.
+   Migration date: March 9, 2026
+===========================================================
+#>
+
+<# Analyzer.psm1
 STRS Analyzer Module - Handles analysis and service connection opportunity detection.
 Maps conditions to presumptive pathways, checks chronicity and continuity of care.
 #>

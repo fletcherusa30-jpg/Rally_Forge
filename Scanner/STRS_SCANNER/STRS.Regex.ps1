@@ -1,6 +1,17 @@
 <#
 ===========================================================
- STRS.Regex.ps1 — Regex Library
+ DEPRECATED â€” STRS.Regex.ps1
+===========================================================
+ DEPRECATION NOTICE:
+   Logic migrated to: engine/rules/strs_rules.psm1
+   Do not modify. Retained for fallback until validation completes.
+   Migration date: March 9, 2026
+===========================================================
+#>
+
+<#
+===========================================================
+ STRS.Regex.ps1 ï¿½ Regex Library
 ===========================================================
 #>
 

@@ -1,4 +1,13 @@
 ﻿# ============================================================
+# DEPRECATED — engine/STRS.NLP.ps1
+# ============================================================
+# DEPRECATION NOTICE:
+#   Logic migrated to: engine/rules/strs_rules.psm1
+#   Do not modify. Retained for fallback until validation completes.
+#   Migration date: March 9, 2026
+# ============================================================
+
+# ============================================================
 # COPILOT SYSTEM INSTRUCTIONS — STRS_SCANNER FOLDER
 # ============================================================
 # You are maintaining the Rally Forge STR Scanner located in:

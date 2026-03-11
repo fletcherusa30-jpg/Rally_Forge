@@ -1,4 +1,13 @@
-﻿# COPILOT SYSTEM INSTRUCTIONS — STRS ANALYZER (DO NOT REMOVE)
+﻿# ===========================================================
+# DEPRECATED — Analyzer.Engine.ps1
+# ===========================================================
+# DEPRECATION NOTICE:
+#   Logic migrated to: engine/core/scanner_core.psm1::Invoke-AnalysisEngine
+#   Do not modify. Retained for fallback until validation completes.
+#   Migration date: March 9, 2026
+# ===========================================================
+
+# COPILOT SYSTEM INSTRUCTIONS — STRS ANALYZER (DO NOT REMOVE)
 # - Work ONLY from provided JSON inputs (STR scanner, decision letters, SC list, denied list, service profile).
 # - Never fabricate diagnoses, symptoms, medications, or conditions.
 # - Never state that a benefit 'will' be granted; only describe potential claims and evidence patterns.

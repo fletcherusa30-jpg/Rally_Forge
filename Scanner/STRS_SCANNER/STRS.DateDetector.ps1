@@ -1,6 +1,12 @@
 <#
 ===========================================================
- STRS.DateDetector.ps1 — Date Extraction
+ DEPRECATED â€” STRS.DateDetector.ps1
+===========================================================
+ DEPRECATION NOTICE:
+   Logic migrated to: engine/parsers/text_parser.psm1::Get-DateMatches
+   Do not modify. Retained for fallback until validation completes.
+   Migration date: March 9, 2026
+   Replacement function: Get-DateMatches
 ===========================================================
 #>
 

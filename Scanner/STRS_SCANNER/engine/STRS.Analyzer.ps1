@@ -1,4 +1,13 @@
 ﻿# ============================================================
+# DEPRECATED — engine/STRS.Analyzer.ps1
+# ============================================================
+# DEPRECATION NOTICE:
+#   Logic migrated to: engine/core/scanner_core.psm1::Invoke-AnalysisEngine
+#   Do not modify. Retained for fallback until validation completes.
+#   Migration date: March 9, 2026
+# ============================================================
+
+# ============================================================
 # COPILOT SYSTEM INSTRUCTIONS — STRS_SCANNER FOLDER
 # ============================================================
 # You are maintaining the Rally Forge STR Scanner located in:

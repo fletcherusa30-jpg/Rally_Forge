@@ -1,4 +1,13 @@
-﻿<# Parser.psm1
+﻿<# DEPRECATED — modules/Parser.psm1
+===========================================================
+ DEPRECATION NOTICE:
+   Logic migrated to: engine/parsers/text_parser.psm1
+   Do not modify. Retained for fallback until validation completes.
+   Migration date: March 9, 2026
+===========================================================
+#>
+
+<# Parser.psm1
 STRS Parser Module - Handles text parsing and medical record normalization.
 Extracts sections, dates, providers, and structure from Service Treatment Records.
 #>

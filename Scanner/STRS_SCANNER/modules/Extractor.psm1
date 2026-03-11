@@ -1,4 +1,13 @@
-﻿<# Extractor.psm1
+﻿<# DEPRECATED — modules/Extractor.psm1
+===========================================================
+ DEPRECATION NOTICE:
+   Logic migrated to: engine/rules/strs_rules.psm1::Invoke-MedicalExtraction
+   Do not modify. Retained for fallback until validation completes.
+   Migration date: March 9, 2026
+===========================================================
+#>
+
+<# Extractor.psm1
 STRS Extractor Module - Handles extraction of medical evidence from parsed text.
 Extracts conditions, medications, procedures, and encounters using medical terminology patterns.
 #>

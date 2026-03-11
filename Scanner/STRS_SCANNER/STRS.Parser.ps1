@@ -1,6 +1,12 @@
 <#
 ===========================================================
- STRS.Parser.ps1 — Extraction Engine
+ DEPRECATED â€” STRS.Parser.ps1
+===========================================================
+ DEPRECATION NOTICE:
+   Logic migrated to: engine/parsers/text_parser.psm1
+   Do not modify. Retained for fallback until validation completes.
+   Migration date: March 9, 2026
+   Replacement function: Invoke-TextParser
 ===========================================================
 #>
 

@@ -1,4 +1,14 @@
-﻿# Regex Library for STRS Scanner (Deterministic) - UPGRADED 2026
+﻿# ===========================================================
+# DEPRECATED — RegexLibrary.ps1
+# ===========================================================
+# DEPRECATION NOTICE:
+#   Logic migrated to: engine/rules/strs_rules.psm1
+#   Do not modify. Retained for fallback until validation completes.
+#   Migration date: March 9, 2026
+#   All regex patterns now in strs_rules.psm1
+# ===========================================================
+
+# Regex Library for STRS Scanner (Deterministic) - UPGRADED 2026
 # COPILOT CHANGE: Expanded patterns to capture more medical evidence
 
 # Diagnoses: formal dx, assessments, impressions, ICD codes, findings

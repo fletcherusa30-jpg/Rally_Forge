@@ -1,6 +1,12 @@
 <#
 ===========================================================
- STRS.PageDetector.ps1 — Page Number Detection
+ DEPRECATED â€” STRS.PageDetector.ps1
+===========================================================
+ DEPRECATION NOTICE:
+   Logic migrated to: engine/parsers/text_parser.psm1::Get-PageMarkers
+   Do not modify. Retained for fallback until validation completes.
+   Migration date: March 9, 2026
+   Replacement function: Get-PageMarkers
 ===========================================================
 #>
 

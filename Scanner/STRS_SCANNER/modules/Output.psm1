@@ -1,4 +1,13 @@
-﻿<# Output.psm1
+﻿<# DEPRECATED — modules/Output.psm1
+===========================================================
+ DEPRECATION NOTICE:
+   Logic migrated to: engine/exporters/json_exporter.psm1
+   Do not modify. Retained for fallback until validation completes.
+   Migration date: March 9, 2026
+===========================================================
+#>
+
+<# Output.psm1
 STRS Output Module - Handles formatting and writing of final JSON output.
 #>
 
