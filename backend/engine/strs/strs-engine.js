@@ -111,7 +111,7 @@ const STRS_PATTERNS = {
   // ═══════════════════════════════════════════════════════════════
   injuries: [
     // Head/Brain Injuries
-    { label: "Traumatic Brain Injury", pattern: "traumatic brain injury|TBI|brain injury|closed head injury|CHI|concussion|mild TBI|mTBI", category: "head" },
+      { label: "Traumatic Brain Injury", pattern: "traumatic brain injury|TBI|brain injury|closed head injury|CHI|mild TBI|mTBI", category: "head" },
     { label: "Skull Fracture", pattern: "skull fracture|cranial fracture|fractured skull", category: "head" },
     { label: "Concussion", pattern: "concussion|minor head injury|head trauma", category: "head" },
     
@@ -340,17 +340,130 @@ const EVIDENCE_CUES = {
     /\bwound\b/i,
     /\blaceration\b/i,
     /\bcontusion\b/i,
-    /\bdocumented\b/i,
-    /\bnoted\b/i,
     /\bstatus\s+post\b/i
   ]
 };
 
-function hasConfirmationEvidence(context, extractionType) {
+/**
+ * ACCURACY IMPROVEMENT MODULE: General Questionnaire Detection
+ * Detects post-deployment health assessment and screening questionnaires
+ * Rejects extractions from non-diagnostic contexts
+ */
+const QUESTIONNAIRE_INDICATORS = [
+  /\b(?:Did|does)\s+deployer\s+(?:mark|have|report|indicate)/i,
+  /\bdeployer\s+question(?:s|naire)?\s+\d+/i,
+  /\bdeployer\s+response(?:\s+or\s+concern)?:/i,
+  /\breported\s+on\s+deployer\s+question/i,
+  /\bwound,\s*injury,\s*or\s*assault\s+that\s+occurred\s+during\s+(?:their\s+)?deployment\?/i,
+  /\bDeployment\s+injury\s+and\s+concussion\s+risk\s+assessment/i,
+  /\bPost[-\s]?deployment\s+health\s+assessment/i,
+  /\bPDHA\b/i,
+  /\bDeployer\s+(?:Concerns|Indicated\s+Concern)/i,
+  /\bList\s+of\s+symptoms\s+reported\s+as\s+['"]Bothered/i,
+  /\bhealth\s+concerns\.\s*List\s+of\s+symptoms/i
+];
+
+/**
+ * Check if context appears to be from a questionnaire/screening form
+ * @param {string} context - Context text to check
+ * @returns {boolean} true if questionnaire indicators found
+ */
+function isQuestionnaireContext(context) {
+  return QUESTIONNAIRE_INDICATORS.some((regex) => regex.test(context));
+}
+
+/**
+ * Condition-specific rules for evidence validation
+ * TBI requires diagnosis keywords AND not screening/questionnaire context
+ */
+const CONDITION_SPECIFIC_EVIDENCE_CUES = {
+  'Traumatic Brain Injury': {
+    requiredAny: [
+      /\btraumatic\s+brain\s+injury\b/i,
+      /\bclosed\s+head\s+injury\b/i,
+      /\bhead\s+trauma\b/i,
+      /\bconcuss(?:ion|ive)\b/i,
+      /\bloss\s+of\s+consciousness\b/i,
+      /\bLOC\b/i,
+      /\bpost[-\s]?concussive\b/i,
+      /\bpost[-\s]?traumatic\s+amnesia\b/i,
+      /\bblast\s+(?:injury|exposure|event)\b/i,
+      /\bdiagnos(?:is|ed)\b/i,
+      /\bassessment:\s*(?:TBI|traumatic\s+brain\s+injury|concussion)\b/i,
+      /\bimpression:\s*(?:TBI|traumatic\s+brain\s+injury|concussion)\b/i
+    ],
+    rejectIfAny: [
+      /\b(?:history|number)\s+of\s+(?:m?TBI|concussion|head\s+injur(?:y|ies)).{0,40}\?/i,
+      /\b(?:m?TBI|concussion)\s+(?:screen|screening|checklist|questionnaire)\b/i,
+      /\bpost\s+deployment\s+health\s+assessment\b/i,
+      /\bPDHA\b/i
+    ]
+  },
+  'Concussion': {
+    requiredAny: [
+      /\bhead\s+trauma\b/i,
+      /\bloss\s+of\s+consciousness\b/i,
+      /\bLOC\b/i,
+      /\bdiagnos(?:is|ed)\s+(?:with\s+)?concussion\b/i,
+      /\binjury:\s*concussion\b/i,
+      /\bassessment:\s*concussion\b/i,
+      /\bimpression:\s*concussion\b/i,
+      /\bdiagnosis:\s*concussion\b/i,
+      /\bconcussion\s+(?:sustained|documented|confirmed)\b/i,
+      /\bpost[-\s]?concussive\s+syndrome\b/i
+    ],
+    rejectIfAny: [
+      /\b(?:history|number)\s+of\s+concussion.{0,40}\?/i,
+      /\bconcussion\s+(?:screen|screening|checklist|questionnaire)\b/i,
+      /\bconcussion\s+risk\s+assessment\b/i,
+      /\bpossible\s+concussion\b/i,
+      /\bpost\s+deployment\s+health\s+assessment\b/i
+    ]
+  }
+};
+
+/**
+ * Check if a condition has required evidence phrases in context
+ * @param {string} context - Context around the match
+ * @param {string} label - Condition label
+ * @returns {boolean} true if evidence cues are present
+ */
+function hasConditionSpecificEvidence(context, label) {
+  const rule = CONDITION_SPECIFIC_EVIDENCE_CUES[label];
+  if (!rule) {
+    return true;
+  }
+
+  // If context contains reject phrases, fail fast
+  if (rule.rejectIfAny?.some((regex) => regex.test(context))) {
+    return false;
+  }
+
+  // If no required phrases, pass by default
+  if (!rule.requiredAny || rule.requiredAny.length === 0) {
+    return true;
+  }
+
+  // Check if at least one required phrase is present
+  return rule.requiredAny.some((regex) => regex.test(context));
+}
+
+function hasConfirmationEvidence(context, extractionType, label) {
+  // FILTER QUESTIONNAIRES: Reject any extraction from screening/questionnaire context
+  if (isQuestionnaireContext(context)) {
+    return false;
+  }
+
   if (extractionType === 'event') {
     return true;
   }
 
+  // Check condition-specific evidence first
+  if (!hasConditionSpecificEvidence(context, label)) {
+    return false;
+  }
+
+  // Check general extraction type evidence
   const cues = EVIDENCE_CUES[extractionType];
   if (!cues || cues.length === 0) {
     return true;
@@ -417,7 +530,7 @@ function extractByPatterns(text, patterns, extractionType) {
       }
 
       // Precision gate: only keep confirmed diagnoses or explicitly noted/documented injuries.
-      if (!hasConfirmationEvidence(context, extractionType)) {
+      if (!hasConfirmationEvidence(context, extractionType, label)) {
         continue;
       }
       

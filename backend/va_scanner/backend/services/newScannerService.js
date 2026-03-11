@@ -1,7 +1,7 @@
 ﻿import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { AppError } from "../../../utils/errors.js";
+import { AppError } from "../../../core/index.js";
 import { validateScannerOutput } from "../shared/scanner/scannerMiddleware.js";
 import { classifyScannerDocument } from "./scannerDocumentClassifier.js";
 // NOTE: benefitScan is a frontend utility - using scanVaDecision from engine instead

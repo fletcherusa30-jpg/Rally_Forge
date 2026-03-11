@@ -18,13 +18,13 @@ if (!Promise.withResolvers) {
 import * as pdfjsLib from 'pdfjs-dist/build/pdf.mjs';
 import path from "path";
 import { fileURLToPath, pathToFileURL } from "url";
-import { asyncHandler } from "../../utils/errors.js";
+import { asyncHandler } from "../../core/index.js";
 import { getLatestNewScannerOutput } from "./services/newScannerService.js";
 import { recordScan, getScanHistory, getScanStatistics } from "./services/scanHistoryService.js";
 import { scanVaDecision, looksLikeRatingDecisionNarrative } from "../engine/vaSuperScanner.js";
 import { performComprehensiveValidation, getFlaggedItems } from "../engine/cfrValidation.js";
 import { ExtractionScorer } from "../engine/confidenceScorer.js";
-import CompensationEngine from "../../../compensation-engine/index.js";
+import { compensationEngine } from "../../domain/index.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -126,7 +126,7 @@ function calculateCompensation(scanData) {
     };
 
     // Calculate compensation
-    const compensation = CompensationEngine.calculateVeteranCompensation(compensationInput);
+    const compensation = compensationEngine.calculateVeteran(compensationInput);
 
     return {
       success: true,

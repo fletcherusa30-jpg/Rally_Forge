@@ -95,7 +95,7 @@ export function analyzeNegation(context, matchPosition) {
   const beforeMatch = context.substring(0, matchPosition);
   const afterMatch = context.substring(matchPosition);
   const window = beforeMatch.slice(-150); // Check 150 chars before match (increased from 100)
-  const afterWindow = afterMatch.slice(0, 200); // Check 200 chars after match (increased from 150)
+  const afterWindow = afterMatch.slice(0, 50); // Check 50 chars after match (tightened to avoid distant "no" mentions)
   
   // Check for quantitative negations (e.g., "0 occurrences", "number of TBI? 0")
   // These are HIGHEST priority as they're most definitive

@@ -73,13 +73,25 @@ function buildServiceConnectionPrompt(condition, _fullText, _metadata) {
   const hasNegation = occurrences.some(occ => occ.negation?.isNegated);
   const negationType = hasNegation ? occurrences.find(occ => occ.negation?.isNegated)?.negation?.type : null;
 
+  // Extract metadata for richer AI context
+  const category = condition.category || 'unknown';
+  const extractionType = condition.extractionType || 'condition';
+  const laterality = firstOccurrence.laterality?.side || null;
+  const severity = firstOccurrence.severity?.interpretation || firstOccurrence.severity?.value || null;
+  const confidence = condition.confidence?.level || null;
+  const confidenceScore = condition.confidence?.score || null;
+
   return `You are a VA disability claims expert. Analyze this Service Treatment Records (STR) evidence for service connection potential.
 
 CONDITION: ${condition.label}
+TYPE: ${extractionType} (${category})
 TOTAL MENTIONS: ${occurrences.length}
 FIRST DOCUMENTED: ${firstOccurrence.date || 'Unknown date'}
 PAGE: ${firstOccurrence.page || 'Unknown'}
 FOLLOW-UPS: ${followUpCount}
+${laterality ? `LATERALITY: ${laterality.toUpperCase()} side` : ''}
+${severity ? `SEVERITY: ${severity}` : ''}
+${confidence && confidenceScore ? `EXTRACTION CONFIDENCE: ${confidenceScore}/100 (${confidence.toUpperCase()})` : ''}
 ${hasNegation ? `\n⚠️ NEGATION DETECTED: This condition appears in a REVIEW/SCREENING section with ${negationType} negation (e.g., "0 occurrences", "denies", "negative for")` : ''}
 
 CONTEXT FROM MEDICAL RECORDS:
@@ -90,6 +102,8 @@ Occurrence ${idx + 1}:
 - Text: "${occ.matchedText}"
 - Context: "${occ.context?.substring(0, 200)}..."
 ${occ.negation?.isNegated ? `- ⚠️ NEGATED: ${occ.negation.type} ("${occ.negation.trigger}") - ${occ.negation.note || 'Condition documented as absent'}` : ''}
+${occ.laterality?.side ? `- Laterality: ${occ.laterality.side.toUpperCase()}` : ''}
+${occ.severity?.interpretation ? `- Severity: ${occ.severity.interpretation}` : ''}
 `).join('\n')}
 
 ${hasNegation ? `
@@ -115,6 +129,8 @@ Analyze this condition for VA service connection potential. Provide:
 3. LEGAL BASIS: Specific 38 CFR citation(s) OR "Not Applicable - Condition Not Diagnosed"
 
 4. KEY SUPPORTING FACTS: What evidence supports this claim? (2-3 bullet points, or "Condition reviewed but not diagnosed" if negated)
+   ${laterality ? `- Consider laterality (${laterality} side) when describing injury/pain` : ''}
+   ${severity ? `- Consider documented severity (${severity})` : ''}
 
 5. GAPS IN EVIDENCE: What's missing? (1-2 bullet points)
 
