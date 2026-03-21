@@ -48,6 +48,8 @@
     "ci:integration": "node tooling/scripts/ci-run-vitest-group.mjs integration",
     "ci:e2e": "node tooling/scripts/ci-run-vitest-group.mjs e2e",
     "ci:file-audit": "node tooling/scripts/ci-file-audit.mjs",
+    "ci:quality:snapshot": "node tooling/scripts/ci-quality-snapshot.mjs",
+    "ci:quality:enforce-baseline": "node tooling/scripts/ci-enforce-quality-baseline.mjs",
     "ci:build": "npm run build",
     "ci:package:validate": "node -e \"const fs=require('fs'); const candidates=['app/frontend-modern/dist','dist']; if(!candidates.some((p)=>fs.existsSync(p))){process.exit(1)}; console.log('BUILD ARTIFACTS VALIDATED')\"",
     "ci:deploy-gate": "npm run ci:lint && npm run ci:typecheck && npm run ci:validate:schema && npm run ci:unit && npm run ci:integration && npm run ci:e2e && npm run ci:file-audit && npm run ci:build && npm run ci:package:validate",

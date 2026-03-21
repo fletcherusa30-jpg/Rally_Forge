@@ -5,6 +5,23 @@ import process from 'node:process';
 import { execSync } from 'node:child_process';
 
 const ROOT = process.cwd();
+const args = process.argv.slice(2);
+
+function getArgValue(flag) {
+  const idx = args.indexOf(flag);
+  if (idx === -1 || idx + 1 >= args.length) return null;
+  return args[idx + 1];
+}
+
+const reportPath = getArgValue('--report-json');
+const noFail = args.includes('--no-fail');
+
+function writeReport(payload) {
+  if (!reportPath) return;
+  const full = path.resolve(ROOT, reportPath);
+  fs.mkdirSync(path.dirname(full), { recursive: true });
+  fs.writeFileSync(full, JSON.stringify(payload, null, 2));
+}
 
 function listTrackedFiles() {
   const output = execSync('git ls-files', { encoding: 'utf8' });
@@ -89,11 +106,22 @@ for (const rel of files) {
 }
 
 if (issues.length > 0) {
+  writeReport({
+    pass: false,
+    issueCount: issues.length,
+    auditedFileCount: files.length,
+  });
   console.error(`FILE AUDIT FAILED: ${issues.length} issue(s) found.`);
   issues.slice(0, 120).forEach((item) => {
     console.error(` - ${item.rel} :: ${item.rule} :: ${item.detail}`);
   });
-  process.exit(1);
+  if (!noFail) process.exit(1);
 }
+
+writeReport({
+  pass: true,
+  issueCount: issues.length,
+  auditedFileCount: files.length,
+});
 
 console.log(`FILE AUDIT PASSED: ${files.length} files audited.`);

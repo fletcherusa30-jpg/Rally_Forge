@@ -78,6 +78,8 @@ cleanup_approval_queue.md
 folder_alignment_plan.md
 NEW_FILES_*.md
 md_consolidation_*.md
+tooling/.tmp/
+tooling/ci-quality-current.json
 # Credential / secret test files
 test-auth.json
 # Personal documents folder

@@ -5,11 +5,39 @@ import process from 'node:process';
 import { execSync } from 'node:child_process';
 
 const ROOT = process.cwd();
+const args = process.argv.slice(2);
+
+function getArgValue(flag) {
+  const idx = args.indexOf(flag);
+  if (idx === -1 || idx + 1 >= args.length) return null;
+  return args[idx + 1];
+}
+
+const reportPath = getArgValue('--report-json');
+const noFail = args.includes('--no-fail');
+
+function writeReport(payload) {
+  if (!reportPath) return;
+  const full = path.resolve(ROOT, reportPath);
+  fs.mkdirSync(path.dirname(full), { recursive: true });
+  fs.writeFileSync(full, JSON.stringify(payload, null, 2));
+}
 
 function fail(message, rows = []) {
+  writeReport({
+    pass: false,
+    reason: message,
+    counts: {
+      todo: findings.todo.length,
+      commentedOut: findings.commentedOut.length,
+      consoleLog: findings.consoleLog.length,
+      deprecated: findings.deprecated.length,
+      totalViolations: findings.todo.length + findings.commentedOut.length + findings.consoleLog.length + findings.deprecated.length,
+    },
+  });
   console.error(`STATIC GUARD FAILED: ${message}`);
   rows.slice(0, 50).forEach((row) => console.error(` - ${row}`));
-  process.exit(1);
+  if (!noFail) process.exit(1);
 }
 
 function isAuditedCodeFile(filePath) {
@@ -63,5 +91,17 @@ if (findings.todo.length) fail('TODO/FIXME markers are not allowed', findings.to
 if (findings.consoleLog.length) fail('console.log statements are not allowed', findings.consoleLog);
 if (findings.commentedOut.length) fail('Commented-out code detected', findings.commentedOut);
 if (findings.deprecated.length) fail('Deprecated markers detected', findings.deprecated);
+
+writeReport({
+  pass: true,
+  reason: null,
+  counts: {
+    todo: findings.todo.length,
+    commentedOut: findings.commentedOut.length,
+    consoleLog: findings.consoleLog.length,
+    deprecated: findings.deprecated.length,
+    totalViolations: findings.todo.length + findings.commentedOut.length + findings.consoleLog.length + findings.deprecated.length,
+  },
+});
 
 console.log('STATIC GUARD PASSED');
