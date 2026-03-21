@@ -1,0 +1,16 @@
+﻿{
+    "folder":  "C:\\Dev\\Rally Forge\\knowledge\\AI_Metadata",
+    "files":  [
+                  {
+                      "Name":  "manifest.json",
+                      "Length":  49,
+                      "Extension":  ".json"
+                  },
+                  {
+                      "Name":  "PURPOSE.md",
+                      "Length":  100,
+                      "Extension":  ".md"
+                  }
+              ],
+    "generated":  "2026-03-14"
+}

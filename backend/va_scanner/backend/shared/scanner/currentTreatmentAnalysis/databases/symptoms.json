@@ -1,0 +1,60 @@
+{
+  "symptoms": {
+    "description": "Medical symptoms glossary for recognition and standardization",
+    "lastUpdated": "2026-03-17T00:00:00Z",
+    "sampleSymptoms": [
+      {
+        "symptomName": "Pain",
+        "categories": [
+          "musculoskeletal",
+          "neuropathic",
+          "headache",
+          "abdominal",
+          "chest"
+        ],
+        "commonDescriptions": [
+          "ache",
+          "soreness",
+          "throbbing",
+          "sharp",
+          "dull"
+        ]
+      },
+      {
+        "symptomName": "Fatigue",
+        "categories": [
+          "general",
+          "chronic",
+          "post-exertional"
+        ],
+        "relatedTerms": [
+          "tiredness",
+          "exhaustion",
+          "low energy"
+        ]
+      },
+      {
+        "symptomName": "Sleep Disturbance",
+        "categories": [
+          "insomnia",
+          "hypersomnia",
+          "nightmares",
+          "sleep apnea"
+        ],
+        "impacts": [
+          "daytime fatigue",
+          "cognitive impairment"
+        ]
+      },
+      {
+        "symptomName": "Cognitive Impairment",
+        "categories": [
+          "memory",
+          "concentration",
+          "executive function",
+          "processing speed"
+        ]
+      }
+    ]
+  }
+}

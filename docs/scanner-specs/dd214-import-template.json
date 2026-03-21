@@ -1,0 +1,82 @@
+{
+  "documentType": "DD-214",
+  "schemaVersion": "portable-1.0",
+  "serviceIdentity": {
+    "veteranName": null,
+    "ssnOrServiceNumber": null,
+    "branchOfService": null,
+    "component": null
+  },
+  "servicePeriods": {
+    "entryDate": null,
+    "separationDate": null,
+    "netActiveServiceThisPeriod": null,
+    "totalPriorActiveService": null,
+    "totalPriorInactiveService": null,
+    "seaService": null,
+    "initialEntryTraining": null
+  },
+  "characterAndSeparation": {
+    "characterOfService": null,
+    "separationAuthority": null,
+    "separationCode": null,
+    "reentryCode": null,
+    "narrativeReasonForSeparation": null,
+    "typeOfSeparation": null
+  },
+  "gradeSpecialty": {
+    "gradeRateRank": null,
+    "payGrade": null,
+    "primaryMOSOrAFSCOrRating": null,
+    "additionalMOSOrSpecialties": [],
+    "mosDetails": []
+  },
+  "decorationsAndService": {
+    "decorationsAndAwards": [],
+    "foreignServiceTotal": null,
+    "foreignServiceLocationsIfListed": [],
+    "combatIndicatorsFromAwards": []
+  },
+  "specialProgramsRemarks": {
+    "remarksBlock": null,
+    "deploymentOrCampaignReferences": [],
+    "reenlistments": []
+  },
+  "militaryEducation": [],
+  "lastDutyAssignment": null,
+  "transferCommand": null,
+  "postServiceContact": {
+    "mailingAddressAtSeparation": null,
+    "nearestRelativeOrEmergencyContact": null
+  },
+  "intelligentExtraction": {
+    "retirementStatus": null,
+    "badgeIndicators": [],
+    "hazardIndicators": [],
+    "combatIndicators": []
+  },
+  "dd214Analysis": {
+    "serviceDates": {},
+    "separation": {},
+    "rankAndSpecialty": {},
+    "awards": [],
+    "deployments": [],
+    "militaryEducation": [],
+    "lastDutyAssignment": null,
+    "transferCommand": null,
+    "reenlistments": [],
+    "confidenceScores": {
+      "overall": 0,
+      "fields": {},
+      "lowConfidenceFields": []
+    },
+    "validationSummary": {}
+  },
+  "extractionMeta": {
+    "confidence": 0,
+    "fieldConfidence": {},
+    "optionalFieldConfidence": {},
+    "schemaValid": true,
+    "schemaErrors": []
+  }
+}

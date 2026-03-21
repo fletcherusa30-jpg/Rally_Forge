@@ -1,0 +1,14 @@
+﻿{
+  "name": "medical_condition",
+  "version": "1.0.0",
+  "fields": {
+    "condition_id": "string",
+    "name": "string",
+    "category": "string",
+    "description": "string",
+    "is_presumptive": "boolean",
+    "related_exposures": "array",
+    "related_benefits": "array",
+    "notes": "string"
+  }
+}

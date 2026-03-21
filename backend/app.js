@@ -1,33 +1,20 @@
+import { randomUUID } from 'node:crypto';
 import express from 'express';
 import cors from 'cors';
 import RateLimit from 'express-rate-limit';
-import scannerRouter from './api/scanner.js';
-import compensationRouter from './api/compensation.js';
-import financialRouter from './api/financial.js';
-import healthRouter from './api/health.js';
-import strsRouter from './api/strs.js';
-import militaryRouter from './api/military.js';
-import knowledgeRouter from './api/knowledge.js';
-import casesRouter from './api/cases.js';
-import intelligenceRouter from './api/intelligence.js';
-import stateBenefitsRouter from './api/stateBenefits.js';
-import benefitsRouter from './api/benefits.js';
-import onboardingRouter from './api/onboarding.js';
-import authRouter from './api/auth.js';
+import { buildRouteManifest } from './api/routeManifest.js';
 import { requestLogger, consoleLogger, errorLogger } from './middleware/logging.js';
 import { notFoundHandler, errorHandler } from './core/index.js';
 import { getConfig } from './config.js';
+import {
+  createCorsOptions,
+  generalRateLimiter,
+  requestTimeout,
+  responseCompression,
+  securityHeaders,
+} from './middleware/hardening.js';
 
 const config = getConfig();
-
-// Rate limiters for different endpoints
-const apiLimiter = RateLimit({
-  windowMs: config.rateLimit.windowMs,
-  max: config.rateLimit.maxRequests,
-  message: 'Too many requests, please try again later',
-  standardHeaders: true,
-  legacyHeaders: false
-});
 
 const authLimiter = RateLimit({
   windowMs: 60 * 60 * 1000, // 1 hour
@@ -38,6 +25,9 @@ const authLimiter = RateLimit({
 
 export function createApp() {
   const app = express();
+  const routeManifest = buildRouteManifest({ authLimiter });
+  app.locals.routeManifest = routeManifest.map(({ path, category }) => ({ path, category }));
+  app.set('trust proxy', config.isProduction ? 1 : false);
 
   // ═════════════════════════════════════════════════════════════
   // LOGGING (First middleware - log everything)
@@ -47,15 +37,31 @@ export function createApp() {
     app.use(consoleLogger);
   }
 
+  // Attach a correlation id so audit and error logs can be tied back to a single request.
+  app.use((req, res, next) => {
+    const correlationIdHeader = req.headers['x-correlation-id'];
+    const correlationId = typeof correlationIdHeader === 'string' && correlationIdHeader.trim()
+      ? correlationIdHeader
+      : randomUUID();
+    req.correlationId = correlationId;
+    res.setHeader('X-Correlation-Id', correlationId);
+    next();
+  });
+
+  // Reduce compression-based bandwidth costs without changing route semantics.
+  app.use(responseCompression);
+
+  // Harden browser-facing headers against clickjacking, sniffing, and unsafe framing.
+  app.use(securityHeaders);
+
   // ═════════════════════════════════════════════════════════════
   // CORS Configuration
   // ═════════════════════════════════════════════════════════════
-  app.use(cors({
-    origin: config.cors.origins,
-    credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
-    allowedHeaders: ['Content-Type', 'Authorization']
-  }));
+  // Reject unexpected browser origins in production instead of silently widening cross-origin access.
+  app.use(cors(createCorsOptions()));
+
+  // Fail slow or stuck requests deterministically so worker threads and sockets do not linger indefinitely.
+  app.use(requestTimeout());
 
   // ═════════════════════════════════════════════════════════════
   // BODY PARSING & REQUEST HANDLING
@@ -66,32 +72,26 @@ export function createApp() {
   // ═════════════════════════════════════════════════════════════
   // GENERAL RATE LIMITING (All endpoints)
   // ═════════════════════════════════════════════════════════════
-  app.use('/api/', apiLimiter);
+  // Slow down unauthenticated bursts before they reach route handlers and external integrations.
+  app.use('/api/', generalRateLimiter);
 
   // ═════════════════════════════════════════════════════════════
-  // HEALTH CHECK (No auth required)
+  // API ROUTE REGISTRATION
   // ═════════════════════════════════════════════════════════════
-  app.use('/api/health', healthRouter);
+  for (const entry of routeManifest) {
+    const { path, router, middlewares = [] } = entry;
+    app.use(path, ...middlewares, router);
+  }
 
-  // ═════════════════════════════════════════════════════════════
-  // AUTHENTICATION ROUTES (No auth required - entry point)
-  // ═════════════════════════════════════════════════════════════
-  app.use('/api/auth', authLimiter, authRouter);
-
-  // ═════════════════════════════════════════════════════════════
-  // PROTECTED ROUTES (Auth required)
-  // ═════════════════════════════════════════════════════════════
-  app.use('/api/scanner', scannerRouter);
-  app.use('/api/strs', strsRouter);
-  app.use('/api/compensation', compensationRouter);
-  app.use('/api/financial', financialRouter);
-  app.use('/api/military', militaryRouter);
-  app.use('/api/cases', casesRouter);
-  app.use('/api/benefits', benefitsRouter);
-  app.use('/api/onboarding', onboardingRouter);
-  app.use('/api', intelligenceRouter);
-  app.use('/api/state-benefits', stateBenefitsRouter);
-  app.use('/api', knowledgeRouter);
+  // Provide a simple root endpoint so service checks to "/" do not hit the 404 pipeline.
+  app.get('/', (_req, res) => {
+    res.status(200).json({
+      success: true,
+      service: 'Rally Forge Backend API',
+      health: '/api/health',
+      routes: app.locals.routeManifest,
+    });
+  });
 
   // ═════════════════════════════════════════════════════════════
   // ERROR HANDLING

@@ -1,0 +1,429 @@
+
+> rally-forge@0.2.0 test:dd214
+> node --test tests/dd214/dd214-variants.test.js tests/dd214/dd214-deterministic.test.js tests/dd214/dd214-discharge-extraction.test.js tests/dd214/dd214-stepone-mapper.test.js tests/dd214/dd214-semantic-anchors.test.js tests/dd214/dd214-extraction-extended.test.js tests/dd214/dd214-legacy-hardening.test.js tests/dd214/dd214-regression-hardening.test.js
+
+TAP version 13
+# Subtest: deterministic DD-214 parsing anchors to blocks and merges continuation
+ok 1 - deterministic DD-214 parsing anchors to blocks and merges continuation
+  ---
+  duration_ms: 33.6866
+  ...
+# Subtest: confidence cannot be 100% when required deterministic checks fail
+ok 2 - confidence cannot be 100% when required deterministic checks fail
+  ---
+  duration_ms: 9.3188
+  ...
+# Subtest: noisy OCR DD-214 still resolves component/net service and filters ribbon boilerplate
+ok 3 - noisy OCR DD-214 still resolves component/net service and filters ribbon boilerplate
+  ---
+  duration_ms: 4.3839
+  ...
+# Subtest: noisy block 24 does not leak SSN label into character of service
+ok 4 - noisy block 24 does not leak SSN label into character of service
+  ---
+  duration_ms: 1.6524
+  ...
+# Subtest: extractCharacterOfService: extracts honorable discharge
+ok 5 - extractCharacterOfService: extracts honorable discharge
+  ---
+  duration_ms: 1.1859
+  ...
+# Subtest: extractCharacterOfService: extracts general discharge
+ok 6 - extractCharacterOfService: extracts general discharge
+  ---
+  duration_ms: 0.1603
+  ...
+# Subtest: extractCharacterOfService: empty block returns null
+ok 7 - extractCharacterOfService: empty block returns null
+  ---
+  duration_ms: 0.1359
+  ...
+# Subtest: extractTypeOfSeparation: extracts retirement
+ok 8 - extractTypeOfSeparation: extracts retirement
+  ---
+  duration_ms: 0.1388
+  ...
+# Subtest: extractTypeOfSeparation: extracts release from active duty
+ok 9 - extractTypeOfSeparation: extracts release from active duty
+  ---
+  duration_ms: 0.0943
+  ...
+# Subtest: extractSeparationAuthority: extracts Army regulation
+ok 10 - extractSeparationAuthority: extracts Army regulation
+  ---
+  duration_ms: 0.3995
+  ...
+# Subtest: extractSeparationAuthority: extracts Air Force instruction
+ok 11 - extractSeparationAuthority: extracts Air Force instruction
+  ---
+  duration_ms: 0.4076
+  ...
+# Subtest: extractSeparationCode: normalizes disability SPD code (SEJ)
+ok 12 - extractSeparationCode: normalizes disability SPD code (SEJ)
+  ---
+  duration_ms: 0.9546
+  ...
+# Subtest: extractSeparationCode: normalizes completion of service SPD code (JKA)
+not ok 13 - extractSeparationCode: normalizes completion of service SPD code (JKA)
+  ---
+  duration_ms: 1.3887
+  location: 'C:\\Dev\\Rally Forge\\tests\\dd214\\dd214-discharge-extraction.test.js:73:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'Misconduct'
+    - 'Administrative'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'Administrative'
+  actual: 'Misconduct'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Dev/Rally%20Forge/tests/dd214/dd214-discharge-extraction.test.js:78:10)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: extractSeparationCode: handles unknown code gracefully
+ok 14 - extractSeparationCode: handles unknown code gracefully
+  ---
+  duration_ms: 0.2043
+  ...
+# Subtest: extractReentryCode: normalizes RE-1 (eligible)
+ok 15 - extractReentryCode: normalizes RE-1 (eligible)
+  ---
+  duration_ms: 0.2599
+  ...
+# Subtest: extractReentryCode: normalizes RE-4 (not eligible)
+ok 16 - extractReentryCode: normalizes RE-4 (not eligible)
+  ---
+  duration_ms: 0.1161
+  ...
+# Subtest: extractReentryCode: normalizes numeric code 1
+ok 17 - extractReentryCode: normalizes numeric code 1
+  ---
+  duration_ms: 0.1024
+  ...
+# Subtest: extractNarrativeReasonForSeparation: extracts from block 28
+ok 18 - extractNarrativeReasonForSeparation: extracts from block 28
+  ---
+  duration_ms: 0.2024
+  ...
+# Subtest: extractNarrativeReasonForSeparation: filters out noise
+ok 19 - extractNarrativeReasonForSeparation: filters out noise
+  ---
+  duration_ms: 0.0908
+  ...
+# Subtest: detectDisabilityRetirement: detects from SEJ code
+ok 20 - detectDisabilityRetirement: detects from SEJ code
+  ---
+  duration_ms: 0.2965
+  ...
+# Subtest: detectDisabilityRetirement: detects from JFH code
+ok 21 - detectDisabilityRetirement: detects from JFH code
+  ---
+  duration_ms: 0.6449
+  ...
+# Subtest: detectDisabilityRetirement: detects from narrative containing DISABILITY RETIREMENT
+ok 22 - detectDisabilityRetirement: detects from narrative containing DISABILITY RETIREMENT
+  ---
+  duration_ms: 0.4845
+  ...
+# Subtest: detectDisabilityRetirement: detects from AR 635-40 authority
+ok 23 - detectDisabilityRetirement: detects from AR 635-40 authority
+  ---
+  duration_ms: 0.1862
+  ...
+# Subtest: extractDischargeAndSeparationFields: full honorable discharge scenario
+ok 24 - extractDischargeAndSeparationFields: full honorable discharge scenario
+  ---
+  duration_ms: 0.6635
+  ...
+# Subtest: extractDischargeAndSeparationFields: full disability discharge scenario
+ok 25 - extractDischargeAndSeparationFields: full disability discharge scenario
+  ---
+  duration_ms: 0.5334
+  ...
+# Subtest: SPD_CODE_NORMALIZATIONS: contains key disability codes
+not ok 26 - SPD_CODE_NORMALIZATIONS: contains key disability codes
+  ---
+  duration_ms: 5.8474
+  location: 'C:\\Dev\\Rally Forge\\tests\\dd214\\dd214-discharge-extraction.test.js:226:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    The expression evaluated to a falsy value:
+    
+      assert.ok(SPD_CODE_NORMALIZATIONS['JFH'])
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Dev/Rally%20Forge/tests/dd214/dd214-discharge-extraction.test.js:228:10)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: RE_CODE_NORMALIZATIONS: contains key reenlistment codes
+ok 27 - RE_CODE_NORMALIZATIONS: contains key reenlistment codes
+  ---
+  duration_ms: 0.0997
+  ...
+# Subtest: extractSeparationCode: rejects garbage text
+ok 28 - extractSeparationCode: rejects garbage text
+  ---
+  duration_ms: 0.0766
+  ...
+# Subtest: extractNarrativeReasonForSeparation: handles continuation sheets
+ok 29 - extractNarrativeReasonForSeparation: handles continuation sheets
+  ---
+  duration_ms: 0.1623
+  ...
+# Subtest: MOS title and duration extracted from Block 11
+ok 30 - MOS title and duration extracted from Block 11
+  ---
+  duration_ms: 29.0192
+  ...
+# Subtest: Multiple MOS entries parsed into mosDetails array
+ok 31 - Multiple MOS entries parsed into mosDetails array
+  ---
+  duration_ms: 7.9628
+  ...
+# Subtest: Military education extracted from Block 14
+ok 32 - Military education extracted from Block 14
+  ---
+  duration_ms: 1.811
+  ...
+# Subtest: Military education entries include duration and year
+ok 33 - Military education entries include duration and year
+  ---
+  duration_ms: 1.5642
+  ...
+# Subtest: Type of separation: Retirement detected
+ok 34 - Type of separation: Retirement detected
+  ---
+  duration_ms: 2.8593
+  ...
+# Subtest: Type of separation: Release from Active Duty detected
+ok 35 - Type of separation: Release from Active Duty detected
+  ---
+  duration_ms: 1.953
+  ...
+# Subtest: Sea service extracted from Block 12g
+ok 36 - Sea service extracted from Block 12g
+  ---
+  duration_ms: 1.714
+  ...
+# Subtest: Reenlistments parsed from Block 18 remarks
+ok 37 - Reenlistments parsed from Block 18 remarks
+  ---
+  duration_ms: 1.6008
+  ...
+# Subtest: Initial entry training extracted from remarks
+ok 38 - Initial entry training extracted from remarks
+  ---
+  duration_ms: 1.5809
+  ...
+# Subtest: Last duty assignment extracted when blocks present
+ok 39 - Last duty assignment extracted when blocks present
+  ---
+  duration_ms: 1.3015
+  ...
+# Subtest: Transfer command extracted from transfer language
+ok 40 - Transfer command extracted from transfer language
+  ---
+  duration_ms: 1.3337
+  ...
+# Subtest: normalizeAwardName accepts NAVY CROSS
+ok 41 - normalizeAwardName accepts NAVY CROSS
+  ---
+  duration_ms: 5.2959
+  ...
+# Subtest: Award normalization includes award counts
+ok 42 - Award normalization includes award counts
+  ---
+  duration_ms: 3.1492
+  ...
+# Subtest: Unified deployments include source attribution and confidence
+ok 43 - Unified deployments include source attribution and confidence
+  ---
+  duration_ms: 2.5164
+  ...
+# Subtest: citation-only award text is handled without extraction regressions
+ok 44 - citation-only award text is handled without extraction regressions
+  ---
+  duration_ms: 1.0504
+  ...
+# Subtest: optionalFieldConfidence present and structured
+ok 45 - optionalFieldConfidence present and structured
+  ---
+  duration_ms: 0.9067
+  ...
+# Subtest: New fields do not break existing confidence === 1 for full document
+ok 46 - New fields do not break existing confidence === 1 for full document
+  ---
+  duration_ms: 1.2176
+  ...
+# Subtest: legacy pre-1980 variant is detected
+ok 47 - legacy pre-1980 variant is detected
+  ---
+  duration_ms: 3.5674
+  ...
+# Subtest: legacy pre-1980 document still resolves core service dates
+ok 48 - legacy pre-1980 document still resolves core service dates
+  ---
+  duration_ms: 29.4828
+  ...
+# Subtest: OCR-degraded document still extracts deployment with confidence and source attribution
+ok 49 - OCR-degraded document still extracts deployment with confidence and source attribution
+  ---
+  duration_ms: 12.1677
+  ...
+# Subtest: training-only location mention does not create a deployment record
+ok 50 - training-only location mention does not create a deployment record
+  ---
+  duration_ms: 1.8529
+  ...
+# Subtest: duplicate deployment mentions are deduplicated in analysis
+ok 51 - duplicate deployment mentions are deduplicated in analysis
+  ---
+  duration_ms: 1.6494
+  ...
+# Subtest: Block 12a entry date is not overwritten by reenlistment ranges
+ok 52 - Block 12a entry date is not overwritten by reenlistment ranges
+  ---
+  duration_ms: 51.6367
+  ...
+# Subtest: Transfer command strips SGLI boilerplate and keeps command target
+ok 53 - Transfer command strips SGLI boilerplate and keeps command target
+  ---
+  duration_ms: 8.3687
+  ...
+# Subtest: Separation authority narrows to regulation citation
+ok 54 - Separation authority narrows to regulation citation
+  ---
+  duration_ms: 3.1643
+  ...
+# Subtest: Last duty assignment prefers Block 8a and keeps major command
+ok 55 - Last duty assignment prefers Block 8a and keeps major command
+  ---
+  duration_ms: 2.4139
+  ...
+# Subtest: Post-service contact fields avoid signature contamination
+ok 56 - Post-service contact fields avoid signature contamination
+  ---
+  duration_ms: 2.1937
+  ...
+# Subtest: Flattened dd214Analysis fields are populated for UI compatibility
+ok 57 - Flattened dd214Analysis fields are populated for UI compatibility
+  ---
+  duration_ms: 3.2156
+  ...
+# Subtest: Manual review fallback triggers when extraction confidence is very low (<30%)
+ok 58 - Manual review fallback triggers when extraction confidence is very low (<30%)
+  ---
+  duration_ms: 6.1982
+  ...
+# Subtest: Manual review fallback provides structured field stubs with confidence and suggestions
+ok 59 - Manual review fallback provides structured field stubs with confidence and suggestions
+  ---
+  duration_ms: 5.5392
+  ...
+# Subtest: Manual review fallback includes review priority indicators
+ok 60 - Manual review fallback includes review priority indicators
+  ---
+  duration_ms: 2.3015
+  ...
+# Subtest: Manual review fallback embeds OCR quality assessment and applied enhancements
+ok 61 - Manual review fallback embeds OCR quality assessment and applied enhancements
+  ---
+  duration_ms: 2.7041
+  ...
+# Subtest: semantic anchor map covers required DD-214 extraction categories
+ok 62 - semantic anchor map covers required DD-214 extraction categories
+  ---
+  duration_ms: 2.2016
+  ...
+# Subtest: semantic extraction metadata returns normalized mappings and variant notes
+ok 63 - semantic extraction metadata returns normalized mappings and variant notes
+  ---
+  duration_ms: 39.6457
+  ...
+# Subtest: parseDD214 output includes semantic anchors, normalized mappings, and analysis variant notes
+ok 64 - parseDD214 output includes semantic anchors, normalized mappings, and analysis variant notes
+  ---
+  duration_ms: 8.1111
+  ...
+# Subtest: semantic award normalization removes OCR noise and keeps canonical medal names
+ok 65 - semantic award normalization removes OCR noise and keeps canonical medal names
+  ---
+  duration_ms: 5.265
+  ...
+# Subtest: step one mapping allows deterministic v3 data
+ok 66 - step one mapping allows deterministic v3 data
+  ---
+  duration_ms: 1.5359
+  ...
+# Subtest: step one mapping blocks legacy schema data
+ok 67 - step one mapping blocks legacy schema data
+  ---
+  duration_ms: 0.2732
+  ...
+# Subtest: step one mapping blocks when deterministic passes are missing
+ok 68 - step one mapping blocks when deterministic passes are missing
+  ---
+  duration_ms: 0.1472
+  ...
+# Subtest: step one mapping does not map noisy discharge labels
+ok 69 - step one mapping does not map noisy discharge labels
+  ---
+  duration_ms: 0.1736
+  ...
+# Subtest: step one mapping sets combat veteran from deployment combat signal
+ok 70 - step one mapping sets combat veteran from deployment combat signal
+  ---
+  duration_ms: 0.1811
+  ...
+# Subtest: detects supported DD-214 variants
+ok 71 - detects supported DD-214 variants
+  ---
+  duration_ms: 2.4903
+  ...
+# Subtest: looksLikeDD214 accepts DD214 family docs
+ok 72 - looksLikeDD214 accepts DD214 family docs
+  ---
+  duration_ms: 0.1639
+  ...
+# Subtest: ocr correction normalizes common OCR artifacts
+ok 73 - ocr correction normalizes common OCR artifacts
+  ---
+  duration_ms: 1.1335
+  ...
+# Subtest: block detection extracts key DD214 blocks
+ok 74 - block detection extracts key DD214 blocks
+  ---
+  duration_ms: 1.5907
+  ...
+# Subtest: parseDD214 produces required dd214Analysis schema contract
+ok 75 - parseDD214 produces required dd214Analysis schema contract
+  ---
+  duration_ms: 27.6599
+  ...
+1..75
+# tests 75
+# suites 0
+# pass 73
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 5419.6135

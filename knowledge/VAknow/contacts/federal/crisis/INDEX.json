@@ -1,0 +1,20 @@
+﻿{
+    "folder":  "VAknow\\contacts\\federal\\crisis",
+    "generated":  "2026-03-14T11:26:33.6816842-06:00",
+    "files":  [
+                  {
+                      "name":  "PURPOSE.md",
+                      "path":  "VAknow\\contacts\\federal\\crisis\\PURPOSE.md",
+                      "size":  329,
+                      "modified":  "2026-03-14T17:26:33.6816842Z",
+                      "extension":  ".md"
+                  },
+                  {
+                      "name":  "SUMMARY.md",
+                      "path":  "VAknow\\contacts\\federal\\crisis\\SUMMARY.md",
+                      "size":  317,
+                      "modified":  "2026-03-14T17:26:33.6816842Z",
+                      "extension":  ".md"
+                  }
+              ]
+}

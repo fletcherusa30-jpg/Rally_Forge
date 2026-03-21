@@ -1,0 +1,56 @@
+﻿{
+    "folder":  "C:\\Dev\\Rally Forge\\knowledge\\CFR_REGULATIONS\\38_CFR_Part_4",
+    "files":  [
+                  {
+                      "Name":  "chapter_4_cardio.md",
+                      "Length":  700,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "chapter_4_digestive.md",
+                      "Length":  690,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "chapter_4_general.md",
+                      "Length":  758,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "chapter_4_mental.md",
+                      "Length":  698,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "chapter_4_msk.md",
+                      "Length":  745,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "chapter_4_neuro.md",
+                      "Length":  711,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "chapter_4_other.md",
+                      "Length":  705,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "chapter_4_resp.md",
+                      "Length":  702,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "part_4_summary.md",
+                      "Length":  687,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "PURPOSE.md",
+                      "Length":  289,
+                      "Extension":  ".md"
+                  }
+              ],
+    "generated":  "2026-03-14"
+}

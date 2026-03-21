@@ -1,0 +1,21 @@
+﻿{
+    "folder":  "C:\\Dev\\Rally Forge\\knowledge\\VAknow\\survivors",
+    "files":  [
+                  {
+                      "Name":  "dic.md",
+                      "Length":  443,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "PURPOSE.md",
+                      "Length":  276,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "survivors_pension.md",
+                      "Length":  365,
+                      "Extension":  ".md"
+                  }
+              ],
+    "generated":  "2026-03-14"
+}

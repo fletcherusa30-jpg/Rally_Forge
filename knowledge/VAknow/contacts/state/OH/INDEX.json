@@ -1,0 +1,27 @@
+﻿{
+    "folder":  "VAknow\\contacts\\state\\OH",
+    "generated":  "2026-03-14T11:26:34.0916904-06:00",
+    "files":  [
+                  {
+                      "name":  "contacts.json",
+                      "path":  "VAknow\\contacts\\state\\OH\\contacts.json",
+                      "size":  579,
+                      "modified":  "2026-03-14T17:13:51.0923040Z",
+                      "extension":  ".json"
+                  },
+                  {
+                      "name":  "PURPOSE.md",
+                      "path":  "VAknow\\contacts\\state\\OH\\PURPOSE.md",
+                      "size":  317,
+                      "modified":  "2026-03-14T17:26:34.0916904Z",
+                      "extension":  ".md"
+                  },
+                  {
+                      "name":  "SUMMARY.md",
+                      "path":  "VAknow\\contacts\\state\\OH\\SUMMARY.md",
+                      "size":  309,
+                      "modified":  "2026-03-14T17:26:34.0916904Z",
+                      "extension":  ".md"
+                  }
+              ]
+}

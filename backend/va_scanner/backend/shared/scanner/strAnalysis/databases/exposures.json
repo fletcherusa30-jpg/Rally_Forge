@@ -1,0 +1,81 @@
+{
+  "exposures": {
+    "description": "Military exposure database - Era-specific hazards and exposures",
+    "lastUpdated": "2026-03-17T00:00:00Z",
+    "vietnamEra": {
+      "timeframe": "1954-1975",
+      "exposures": [
+        {
+          "name": "Agent Orange",
+          "type": "Herbicide/Dioxin",
+          "locations": [
+            "South Vietnam",
+            "Parts of Laos",
+            "Parts of Cambodia"
+          ],
+          "relatedConditions": [
+            "Cancers",
+            "Birth defects",
+            "Type 2 diabetes",
+            "Nerve damage"
+          ]
+        },
+        {
+          "name": "Other Herbicides",
+          "compounds": [
+            "Agent White",
+            "Agent Pink",
+            "Agent Purple"
+          ],
+          "relatedConditions": [
+            "Skin lesions",
+            "Respiratory issues"
+          ]
+        }
+      ]
+    },
+    "gulfWarEra": {
+      "timeframe": "1990-1991",
+      "exposures": [
+        {
+          "name": "Burn Pits",
+          "description": "Open-air burning of waste",
+          "locations": [
+            "Kuwait",
+            "Iraq",
+            "Saudi Arabia"
+          ]
+        },
+        {
+          "name": "Depleted Uranium",
+          "description": "Munitions and armor contamination",
+          "locations": [
+            "Iraq",
+            "Kuwait"
+          ]
+        },
+        {
+          "name": "Pesticides",
+          "description": "Insect and disease control",
+          "frequency": "Heavy use"
+        }
+      ]
+    },
+    "oefOifEra": {
+      "timeframe": "2001-2021",
+      "exposures": [
+        {
+          "name": "Burn Pits",
+          "locations": [
+            "Afghanistan",
+            "Iraq"
+          ]
+        },
+        {
+          "name": "IED Exposure",
+          "description": "Blast injuries and inhalation"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,20 @@
+﻿{
+    "folder":  "VAknow\\contacts\\records",
+    "generated":  "2026-03-14T11:26:33.5955959-06:00",
+    "files":  [
+                  {
+                      "name":  "PURPOSE.md",
+                      "path":  "VAknow\\contacts\\records\\PURPOSE.md",
+                      "size":  332,
+                      "modified":  "2026-03-14T17:26:33.5909316Z",
+                      "extension":  ".md"
+                  },
+                  {
+                      "name":  "SUMMARY.md",
+                      "path":  "VAknow\\contacts\\records\\SUMMARY.md",
+                      "size":  319,
+                      "modified":  "2026-03-14T17:26:33.5955959Z",
+                      "extension":  ".md"
+                  }
+              ]
+}

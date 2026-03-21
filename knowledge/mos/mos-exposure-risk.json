@@ -1,0 +1,62 @@
+{
+  "version": "1.0.0",
+  "source": "seeded-template",
+  "generatedAt": "2026-03-15T00:00:00.000Z",
+  "notes": "Replace or regenerate from MOS exposure spreadsheet using scripts/generate-mos-exposure-risk-map.mjs.",
+  "entries": [
+    {
+      "branch": "Army",
+      "mosCode": "13B",
+      "title": "Cannon Crewmember",
+      "noiseRisk": "high",
+      "exposures": [
+        {
+          "id": "noise",
+          "label": "Noise / Acoustic Trauma",
+          "confidence": "high",
+          "hint": "Review hearing loss, tinnitus, and audiogram threshold shifts."
+        }
+      ]
+    },
+    {
+      "branch": "Army",
+      "mosCode": "12W",
+      "title": "Carpentry and Masonry Specialist",
+      "noiseRisk": "mild",
+      "exposures": [
+        {
+          "id": "noise",
+          "label": "Noise / Acoustic Trauma",
+          "confidence": "mild",
+          "hint": "Document power-tool and heavy-equipment exposure windows."
+        },
+        {
+          "id": "solvents-fuels",
+          "label": "Solvents / Fuels / Degreasers",
+          "confidence": "mild",
+          "hint": "Capture maintenance and material-handling exposure details."
+        }
+      ]
+    },
+    {
+      "branch": "Army",
+      "mosCode": "92R",
+      "title": "Parachute Rigger",
+      "noiseRisk": "mild",
+      "exposures": [
+        {
+          "id": "noise",
+          "label": "Noise / Acoustic Trauma",
+          "confidence": "mild",
+          "hint": "Review flight-line and aircraft loading noise exposure."
+        },
+        {
+          "id": "solvents-fuels",
+          "label": "Solvents / Fuels / Degreasers",
+          "confidence": "mild",
+          "hint": "Review cleaning-agent and fuel-contact tasks."
+        }
+      ]
+    }
+  ]
+}

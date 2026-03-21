@@ -1,0 +1,29 @@
+﻿{
+    "name":  "VAknow Knowledge Base",
+    "version":  "1.0.0",
+    "last_verified":  "2026-03-13 23:33:40",
+    "domains":  [
+                    "healthcare",
+                    "burial",
+                    "life_insurance",
+                    "education",
+                    "home_loans",
+                    "compensation",
+                    "pension",
+                    "survivors",
+                    "caregivers"
+                ],
+    "websites":  [
+                     "va_gov.md",
+                     "benefits_va_gov.md",
+                     "dpris.md",
+                     "milconnect.md",
+                     "ebenefits.md",
+                     "tricare.md",
+                     "pact_act.md",
+                     "caregiver_program.md",
+                     "education_portal.md",
+                     "health_care_portal.md",
+                     "cemeteries_portal.md"
+                 ]
+}

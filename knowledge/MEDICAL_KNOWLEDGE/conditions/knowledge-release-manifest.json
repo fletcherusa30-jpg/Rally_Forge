@@ -1,0 +1,28 @@
+{
+  "releaseId": "knowledge-base-2026-03-12",
+  "schemaVersion": "1.0.0",
+  "releasedAt": "2026-03-12T03:06:34.509Z",
+  "files": [
+    "knowledge-node.schema.json",
+    "knowledge-taxonomy-map.json",
+    "knowledge-nodes.json",
+    "cases_index.json",
+    "part3/sections.json",
+    "part4/sections.json",
+    "part4/diagnostic_codes.json",
+    "presumptive-locations.json",
+    "m21-1-structure.json",
+    "cfr-structure.json"
+  ],
+  "checksums": {
+    "part3/sections.json": "generated",
+    "part4/sections.json": "generated",
+    "part4/diagnostic_codes.json": "generated"
+  },
+  "stats": {
+    "diagnosticCodes": 22,
+    "part4Sections": 12,
+    "generatedAt": "2026-03-12T03:06:34.509Z"
+  },
+  "notes": "Comprehensive VA Knowledge Library with regulatory schedules and diagnostic code mappings."
+}

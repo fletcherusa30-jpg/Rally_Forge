@@ -1,0 +1,45 @@
+﻿[
+    {
+        "links":  [
+                      "CFR_REGULATIONS",
+                      "VAknow"
+                  ],
+        "domain":  "38_USC"
+    },
+    {
+        "links":  [
+                      "38_USC",
+                      "VAknow"
+                  ],
+        "domain":  "CFR_REGULATIONS"
+    },
+    {
+        "links":  [
+                      "38_USC",
+                      "CFR_REGULATIONS",
+                      "FEDERAL_BENEFITS"
+                  ],
+        "domain":  "VAknow"
+    },
+    {
+        "links":  [
+                      "VAknow",
+                      "38_USC"
+                  ],
+        "domain":  "FEDERAL_BENEFITS"
+    },
+    {
+        "links":  [
+                      "VAknow",
+                      "CFR_REGULATIONS"
+                  ],
+        "domain":  "MEDICAL_KNOWLEDGE"
+    },
+    {
+        "links":  [
+                      "VAknow",
+                      "FEDERAL_BENEFITS"
+                  ],
+        "domain":  "State_Benefits"
+    }
+]

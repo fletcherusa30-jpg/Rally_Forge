@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0.0",
+  "subsystem": "analyzer",
+  "version": "unknown",
+  "generatedAt": "2026-03-14T04:54:49.313Z",
+  "discovery": {
+    "files": [
+      "app/frontend-modern/src/context/workspaceDerivations.js",
+      "tests/analyzer/workspace-derivations.snapshot.test.js",
+      "tests/analyzer/workspace-derivations.secondary-mode.test.js"
+    ]
+  },
+  "metrics": {
+    "derivationFunctions": 20,
+    "secondaryRules": 5,
+    "readinessMentions": 50,
+    "laneMentions": 18
+  },
+  "validation": {
+    "hasSnapshotTests": false,
+    "hasSecondaryModeTests": false
+  },
+  "modernization": {
+    "status": "modernized",
+    "notes": [
+      "Analyzer audit generated from derivation source and existing regression tests."
+    ]
+  }
+}

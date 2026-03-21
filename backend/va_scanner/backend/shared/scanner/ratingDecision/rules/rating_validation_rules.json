@@ -1,0 +1,41 @@
+{
+  "rules": [
+    {
+      "ruleId": "rd-combined-rating-validation",
+      "name": "Combined Rating Calculation Validation",
+      "rule": "Combined rating must be calculated using VA Schedule table per 38 CFR §4.25",
+      "validation": "calculated-rating-must-match-stated-combined-rating"
+    },
+    {
+      "ruleId": "rd-individual-ratings-sum",
+      "name": "Individual Ratings Must Sum Correctly",
+      "rule": "Verify that individual condition ratings, when combined using VA tables, equal the stated combined rating"
+    },
+    {
+      "ruleId": "rd-bilateral-factor",
+      "name": "Bilateral Factor Validation",
+      "conditions": "Two extremities (bilateral) with combined rating >= 20%",
+      "calculation": "(combined-rating × bilateral-factor-percentage) + base-rating",
+      "validation": "must-apply-when-applicable"
+    },
+    {
+      "ruleId": "rd-effective-date-logic",
+      "name": "Effective Date Logic Validation",
+      "rules": [
+        "Effective date cannot be in the future",
+        "Effective date for increase must be on or after claim date",
+        "Effective date for reduction must follow established rating"
+      ]
+    },
+    {
+      "ruleId": "rd-no-duplicate-conditions",
+      "name": "No Duplicate Service-Connected Conditions",
+      "rule": "Same condition cannot appear twice in service-connected list"
+    },
+    {
+      "ruleId": "rd-denied-vs-rated",
+      "name": "Condition Cannot Be Denied and Rated",
+      "rule": "Condition cannot appear in both service-connected and denied lists"
+    }
+  ]
+}

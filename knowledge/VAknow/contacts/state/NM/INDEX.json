@@ -1,0 +1,27 @@
+﻿{
+    "folder":  "VAknow\\contacts\\state\\NM",
+    "generated":  "2026-03-14T11:26:34.0810060-06:00",
+    "files":  [
+                  {
+                      "name":  "contacts.json",
+                      "path":  "VAknow\\contacts\\state\\NM\\contacts.json",
+                      "size":  579,
+                      "modified":  "2026-03-14T17:13:51.0841235Z",
+                      "extension":  ".json"
+                  },
+                  {
+                      "name":  "PURPOSE.md",
+                      "path":  "VAknow\\contacts\\state\\NM\\PURPOSE.md",
+                      "size":  317,
+                      "modified":  "2026-03-14T17:26:34.0792082Z",
+                      "extension":  ".md"
+                  },
+                  {
+                      "name":  "SUMMARY.md",
+                      "path":  "VAknow\\contacts\\state\\NM\\SUMMARY.md",
+                      "size":  309,
+                      "modified":  "2026-03-14T17:26:34.0810060Z",
+                      "extension":  ".md"
+                  }
+              ]
+}

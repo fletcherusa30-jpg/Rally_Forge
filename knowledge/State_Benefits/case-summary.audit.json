@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0.0",
+  "subsystem": "case-summary",
+  "version": "unknown",
+  "generatedAt": "2026-03-14T04:54:49.314Z",
+  "discovery": {
+    "files": [
+      "app/frontend-modern/src/pages/CaseSummaryPage.jsx",
+      "app/frontend-modern/src/services/caseSummaryExport.js"
+    ]
+  },
+  "metrics": {
+    "exportFunctions": 4,
+    "packetSections": 5,
+    "evidenceIndexMentions": 10,
+    "pageConditionCards": 3
+  },
+  "validation": {
+    "hasPacketBuilder": true,
+    "hasJsonBuilder": true,
+    "hasEvidenceIndexBuilder": true
+  },
+  "modernization": {
+    "status": "modernized",
+    "notes": [
+      "Case summary audit generated from export helpers and page integration."
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "medicalTerms": {
+    "description": "Military medical abbreviations and terminology glossary",
+    "lastUpdated": "2026-03-17T00:00:00Z",
+    "abbreviations": {
+      "providers": {
+        "MD": "Medical Doctor",
+        "DO": "Doctor of Osteopathy",
+        "PA": "Physician Assistant",
+        "NP": "Nurse Practitioner",
+        "RN": "Registered Nurse",
+        "LPN": "Licensed Practical Nurse"
+      },
+      "frequencies": {
+        "OD": "Once Daily",
+        "BID": "Twice Daily",
+        "TID": "Three Times Daily",
+        "QID": "Four Times Daily",
+        "Q4H": "Every 4 Hours",
+        "Q6H": "Every 6 Hours",
+        "QHS": "At Bedtime",
+        "PRN": "As Needed"
+      },
+      "symptoms": {
+        "SOB": "Shortness of Breath",
+        "CP": "Chest Pain",
+        "HA": "Headache",
+        "N/V": "Nausea/Vomiting",
+        "LOC": "Loss of Consciousness",
+        "PTA": "Prior to Admission"
+      },
+      "findings": {
+        "BP": "Blood Pressure",
+        "HR": "Heart Rate",
+        "RR": "Respiratory Rate",
+        "Temp": "Temperature",
+        "WBC": "White Blood Cell",
+        "CBC": "Complete Blood Count"
+      }
+    }
+  }
+}

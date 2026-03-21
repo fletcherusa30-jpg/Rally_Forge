@@ -1,0 +1,92 @@
+{
+  "rules": [
+    {
+      "ruleId": "ct-symptom-pain-extraction",
+      "name": "Pain Symptom Extraction",
+      "indicators": [
+        "pain",
+        "ache",
+        "soreness",
+        "discomfort"
+      ],
+      "extract": [
+        "location",
+        "severity (0-10)",
+        "character (sharp, dull, etc)",
+        "triggers",
+        "alleviating factors"
+      ]
+    },
+    {
+      "ruleId": "ct-symptom-fatigue-extraction",
+      "name": "Fatigue Symptom Extraction",
+      "indicators": [
+        "fatigue",
+        "tired",
+        "exhausted",
+        "low energy"
+      ],
+      "extract": [
+        "timing (all-day vs intermittent)",
+        "severity",
+        "triggering activities"
+      ]
+    },
+    {
+      "ruleId": "ct-symptom-cognitive-extraction",
+      "name": "Cognitive Symptom Extraction",
+      "indicators": [
+        "memory",
+        "concentration",
+        "focus",
+        "brain fog",
+        "forgetfulness"
+      ],
+      "extract": [
+        "type (memory vs concentration)",
+        "severity",
+        "frequency"
+      ]
+    },
+    {
+      "ruleId": "ct-symptom-mental-health-extraction",
+      "name": "Mental Health Symptom Extraction",
+      "indicators": [
+        "mood",
+        "anxiety",
+        "depression",
+        "sleep",
+        "stress"
+      ],
+      "extract": [
+        "symptom-type",
+        "severity",
+        "frequency",
+        "triggers"
+      ]
+    },
+    {
+      "ruleId": "ct-severity-normalization",
+      "name": "Symptom Severity Normalization",
+      "sources": [
+        "numeric-0-10-scale",
+        "verbal-descriptors (mild, moderate, severe)",
+        "functional-impact-indicators"
+      ],
+      "mapping": "all-to-0-10-scale"
+    },
+    {
+      "ruleId": "ct-frequency-normalization",
+      "name": "Symptom Frequency Normalization",
+      "values": [
+        "constant",
+        "daily",
+        "several-times-per-day",
+        "weekly",
+        "monthly",
+        "intermittent",
+        "as-needed"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+﻿{
+    "folder":  "VAknow\\contacts\\facilities\\vamc",
+    "generated":  "2026-03-14T11:26:33.6477953-06:00",
+    "files":  [
+                  {
+                      "name":  "facilities.json",
+                      "path":  "VAknow\\contacts\\facilities\\vamc\\facilities.json",
+                      "size":  118,
+                      "modified":  "2026-03-14T17:13:51.3948446Z",
+                      "extension":  ".json"
+                  },
+                  {
+                      "name":  "PURPOSE.md",
+                      "path":  "VAknow\\contacts\\facilities\\vamc\\PURPOSE.md",
+                      "size":  323,
+                      "modified":  "2026-03-14T17:26:33.6477953Z",
+                      "extension":  ".md"
+                  },
+                  {
+                      "name":  "SUMMARY.md",
+                      "path":  "VAknow\\contacts\\facilities\\vamc\\SUMMARY.md",
+                      "size":  313,
+                      "modified":  "2026-03-14T17:26:33.6477953Z",
+                      "extension":  ".md"
+                  }
+              ]
+}

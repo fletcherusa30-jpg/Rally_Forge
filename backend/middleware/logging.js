@@ -7,8 +7,60 @@ import morgan from 'morgan';
 import fs from 'fs';
 import path from 'path';
 import { getConfig } from '../config.js';
+import { createLogger as createCoreLogger } from '../core/logging/logger.js';
 
 const config = getConfig();
+
+const SENSITIVE_KEYS = new Set([
+  'password',
+  'pass',
+  'token',
+  'authorization',
+  'apiKey',
+  'ssn',
+  'email',
+  'phone',
+  'dob',
+]);
+
+function maskString(value) {
+  const text = String(value || '');
+  if (!text) return text;
+
+  let masked = text;
+  masked = masked.replace(/\b\d{3}-?\d{2}-?\d{4}\b/g, '***-**-****');
+  masked = masked.replace(/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/gi, '***@***');
+  masked = masked.replace(/\b(?:\+1[-.\s]?)?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b/g, '(***) ***-****');
+  return masked;
+}
+
+function maskSensitive(meta) {
+  if (!meta || typeof meta !== 'object') {
+    return meta;
+  }
+
+  if (Array.isArray(meta)) {
+    return meta.map((item) => maskSensitive(item));
+  }
+
+  const output = {};
+  for (const [key, value] of Object.entries(meta)) {
+    const lowered = String(key).toLowerCase();
+    if (SENSITIVE_KEYS.has(lowered)) {
+      output[key] = '[REDACTED]';
+      continue;
+    }
+
+    if (typeof value === 'string') {
+      output[key] = maskString(value);
+      continue;
+    }
+
+    output[key] = maskSensitive(value);
+  }
+
+  return output;
+}
 
 // Ensure logs directory exists
 const logsDir = config.logging.dir;
@@ -38,7 +90,7 @@ const morganFormat = ':remote-addr - :veteranId [:date[clf]] ":method :url HTTP/
  * Skip function: Don't log health checks or static assets
  */
 const skipHealthChecks = (req) => {
-  return req.path === '/api/health' || req.path.match(/\.(css|js|png|jpg|gif|ico)$/);
+  return req.path === '/api/health' || /\.(css|js|png|jpg|gif|ico)$/i.test(req.path || '');
 };
 
 /**
@@ -68,10 +120,12 @@ export const errorLogger = (err, req, res, next) => {
     method: req.method,
     path: req.path,
     statusCode: res.statusCode || 500,
-    message: err.message,
-    stack: err.stack,
+    message: maskString(err.message),
+    stack: config.isDevelopment ? err.stack : undefined,
     veteranId: req.veteranId || 'anonymous',
-    userAgent: req.headers['user-agent']
+    userAgent: req.headers['user-agent'],
+    query: maskSensitive(req.query),
+    params: maskSensitive(req.params),
   };
 
   // Write to error log
@@ -91,61 +145,29 @@ export const errorLogger = (err, req, res, next) => {
 /**
  * Structured logging utility for application logs
  */
-export const createLogger = (module) => {
-  const logFile = path.join(logsDir, `${module}.log`);
+export const createLogger = (moduleName) => {
+  const base = createCoreLogger(moduleName);
 
   return {
-    info: (message, data = {}) => {
-      const log = {
-        timestamp: new Date().toISOString(),
-        level: 'INFO',
-        module,
-        message,
-        ...data
-      };
-      fs.appendFileSync(logFile, JSON.stringify(log) + '\n');
-      if (config.isDevelopment) console.log('ℹ️ ', message, data);
-    },
-
-    warning: (message, data = {}) => {
-      const log = {
-        timestamp: new Date().toISOString(),
-        level: 'WARN',
-        module,
-        message,
-        ...data
-      };
-      fs.appendFileSync(logFile, JSON.stringify(log) + '\n');
-      console.warn('⚠️ ', message, data);
-    },
-
-    error: (message, error, data = {}) => {
-      const log = {
-        timestamp: new Date().toISOString(),
-        level: 'ERROR',
-        module,
-        message,
-        errorMessage: error?.message,
-        errorStack: error?.stack,
-        ...data
-      };
-      fs.appendFileSync(logFile, JSON.stringify(log) + '\n');
-      console.error('❌ ', message, error?.message);
-    },
-
-    debug: (message, data = {}) => {
-      if (config.isDevelopment) {
-        const log = {
-          timestamp: new Date().toISOString(),
-          level: 'DEBUG',
-          module,
-          message,
-          ...data
-        };
-        fs.appendFileSync(logFile, JSON.stringify(log) + '\n');
-        console.debug('🐛 ', message, data);
+    info: (message, data = {}) => base.info(maskString(message), maskSensitive(data)),
+    warn: (message, data = {}) => base.warn(maskString(message), maskSensitive(data)),
+    warning: (message, data = {}) => base.warn(maskString(message), maskSensitive(data)),
+    error: (message, errorOrMeta = {}, data = {}) => {
+      if (errorOrMeta instanceof Error) {
+        base.error(maskString(message), {
+          errorMessage: maskString(errorOrMeta.message),
+          errorStack: errorOrMeta.stack,
+          ...maskSensitive(data),
+        });
+        return;
       }
-    }
+
+      base.error(maskString(message), {
+        ...maskSensitive(errorOrMeta || {}),
+        ...maskSensitive(data),
+      });
+    },
+    debug: (message, data = {}) => base.debug(maskString(message), maskSensitive(data)),
   };
 };
 

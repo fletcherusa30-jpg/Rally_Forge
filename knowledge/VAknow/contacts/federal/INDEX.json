@@ -1,0 +1,27 @@
+﻿{
+    "folder":  "VAknow\\contacts\\federal",
+    "generated":  "2026-03-14T11:26:33.5456730-06:00",
+    "files":  [
+                  {
+                      "name":  "federal_contacts.json",
+                      "path":  "VAknow\\contacts\\federal\\federal_contacts.json",
+                      "size":  9550,
+                      "modified":  "2026-03-14T17:18:13.7640827Z",
+                      "extension":  ".json"
+                  },
+                  {
+                      "name":  "PURPOSE.md",
+                      "path":  "VAknow\\contacts\\federal\\PURPOSE.md",
+                      "size":  332,
+                      "modified":  "2026-03-14T17:26:33.5413517Z",
+                      "extension":  ".md"
+                  },
+                  {
+                      "name":  "SUMMARY.md",
+                      "path":  "VAknow\\contacts\\federal\\SUMMARY.md",
+                      "size":  319,
+                      "modified":  "2026-03-14T17:26:33.5436655Z",
+                      "extension":  ".md"
+                  }
+              ]
+}

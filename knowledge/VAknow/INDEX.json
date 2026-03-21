@@ -1,0 +1,21 @@
+﻿{
+    "folder":  "C:\\Dev\\Rally Forge\\knowledge\\VAknow",
+    "files":  [
+                  {
+                      "Name":  "metadata.json",
+                      "Length":  292,
+                      "Extension":  ".json"
+                  },
+                  {
+                      "Name":  "PURPOSE.md",
+                      "Length":  90,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "vaknow_validation_report_20260313_233431.txt",
+                      "Length":  508,
+                      "Extension":  ".txt"
+                  }
+              ],
+    "generated":  "2026-03-14"
+}

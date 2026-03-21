@@ -1,0 +1,229 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "VA Rating Decision Scanner Output Schema",
+  "description": "Complete output from VA Rating Decision scanner including ratings, SMC, denials, calculations",
+  "type": "object",
+  "properties": {
+    "_metadata": {
+      "type": "object",
+      "properties": {
+        "scannerId": {
+          "type": "string"
+        },
+        "documentAnalysisDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "decisionType": {
+          "type": "string",
+          "enum": [
+            "Initial",
+            "Rerate",
+            "Supplemental",
+            "Reduction",
+            "Assumed-Granted",
+            "Deferred"
+          ]
+        },
+        "combinedRating": {
+          "type": "integer",
+          "enum": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50,
+            60,
+            70,
+            80,
+            90,
+            100
+          ]
+        },
+        "serviceConnectedConditionCount": {
+          "type": "integer"
+        },
+        "deniedConditionCount": {
+          "type": "integer"
+        },
+        "smcAwarded": {
+          "type": "boolean"
+        },
+        "backPayPeriod": {
+          "type": "object",
+          "properties": {
+            "startDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "endDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "months": {
+              "type": "integer"
+            }
+          }
+        },
+        "confidence": {
+          "type": "object",
+          "properties": {
+            "overall": {
+              "type": "number"
+            },
+            "byField": {
+              "type": "object"
+            }
+          }
+        },
+        "validationStatus": {
+          "type": "string",
+          "enum": [
+            "passed",
+            "warnings",
+            "failed"
+          ]
+        }
+      }
+    },
+    "combinedRating": {
+      "type": "object",
+      "properties": {
+        "percentage": {
+          "type": "integer"
+        },
+        "effectiveDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "calculationMethod": {
+          "type": "string",
+          "enum": [
+            "va-schedule-table",
+            "bilateral-factor",
+            "other"
+          ]
+        },
+        "priorPercentage": {
+          "type": "integer"
+        }
+      }
+    },
+    "serviceConnectedConditions": {
+      "type": "array",
+      "items": {
+        "$ref": "rating-decision-condition.schema.json"
+      }
+    },
+    "deniedConditions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "conditionName": {
+            "type": "string"
+          },
+          "denialReason": {
+            "type": "string",
+            "enum": [
+              "not-service-connected",
+              "insufficient-evidence",
+              "already-rated",
+              "other"
+            ]
+          },
+          "evidenceConsidereAddress": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "specialMonthlyCompensation": {
+      "type": "array",
+      "items": {
+        "$ref": "rating-decision-smc.schema.json"
+      }
+    },
+    "bilateralFactor": {
+      "type": "object",
+      "properties": {
+        "applicable": {
+          "type": "boolean"
+        },
+        "percentage": {
+          "type": "number"
+        },
+        "affectedConditions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "effectiveDate": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "deferredIssues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "conditionName": {
+            "type": "string"
+          },
+          "deferralReason": {
+            "type": "string"
+          },
+          "expectedDecisionDate": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      }
+    },
+    "proposedReductions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "conditionName": {
+            "type": "string"
+          },
+          "proposedPercentage": {
+            "type": "integer"
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "appealRights": {
+      "type": "object",
+      "properties": {
+        "appealDeadline": {
+          "type": "string",
+          "format": "date"
+        },
+        "claimNumber": {
+          "type": "string"
+        },
+        "decisionDate": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    }
+  },
+  "required": [
+    "_metadata",
+    "combinedRating",
+    "serviceConnectedConditions"
+  ]
+}

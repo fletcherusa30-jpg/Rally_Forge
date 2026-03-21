@@ -1,0 +1,16 @@
+﻿{
+    "folder":  "C:\\Dev\\Rally Forge\\knowledge\\FEDERAL_BENEFITS\\sources",
+    "files":  [
+                  {
+                      "Name":  "PURPOSE.md",
+                      "Length":  284,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "va_sources.json",
+                      "Length":  1887,
+                      "Extension":  ".json"
+                  }
+              ],
+    "generated":  "2026-03-14"
+}

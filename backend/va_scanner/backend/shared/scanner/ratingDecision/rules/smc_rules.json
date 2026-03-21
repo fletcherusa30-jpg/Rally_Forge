@@ -1,0 +1,61 @@
+{
+  "rules": [
+    {
+      "ruleId": "rd-smc-code-extraction",
+      "name": "SMC Code Extraction",
+      "validCodes": [
+        "A",
+        "A1",
+        "A2",
+        "H",
+        "H1",
+        "H2",
+        "K",
+        "K1",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T"
+      ],
+      "extraction": "uppercase-single-or-double-letter"
+    },
+    {
+      "ruleId": "rd-smc-qualification",
+      "name": "SMC Qualification Criteria",
+      "mappings": {
+        "A": "Aid and Attendance (any rating)",
+        "A1": "Aid and Attendance improved",
+        "A2": "Aid and Attendance highest level",
+        "H": "Housebound (any rating)",
+        "H1": "Housebound improved",
+        "H2": "Housebound highest level",
+        "K": "Loss of use of one extremity",
+        "K1": "Loss of use of one extremity + bilateral or other factor",
+        "L": "Loss of use of both hands or feet, or blindness",
+        "M": "Blindness + loss of use of one extremity",
+        "N": "Blindness + loss of use of both extremities",
+        "O": "Aid and Attendance + blindness",
+        "P": "Aid and Attendance + loss of use of both extremities",
+        "Q": "Aid and Attendance + blindness + loss of use of one extremity",
+        "R": "Aid and Attendance + blindness + loss of use of both extremities",
+        "S": "Housebound + loss of use of one extremity",
+        "T": "Housebound + loss of use of both extremities"
+      }
+    },
+    {
+      "ruleId": "rd-smc-effective-date",
+      "name": "SMC Effective Date Extraction",
+      "rule": "SMC effective date often differs from rating effective date"
+    },
+    {
+      "ruleId": "rd-smc-amount-validation",
+      "name": "SMC Amount Must Match Code",
+      "rule": "Stated SMC amount must correspond to current SMC code from VA payment schedule"
+    }
+  ]
+}

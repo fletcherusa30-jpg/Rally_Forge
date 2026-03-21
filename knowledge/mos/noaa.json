@@ -1,0 +1,75 @@
+{
+    "mos": [
+        {
+            "code": "OPS",
+            "title": "Operations Officer",
+            "type": "officer"
+        },
+        {
+            "code": "NAV",
+            "title": "Navigation Officer",
+            "type": "officer"
+        },
+        {
+            "code": "MET",
+            "title": "Meteorology Officer",
+            "type": "officer"
+        },
+        {
+            "code": "OCE",
+            "title": "Oceanography Officer",
+            "type": "officer"
+        },
+        {
+            "code": "ENG",
+            "title": "Engineering Officer",
+            "type": "officer"
+        },
+        {
+            "code": "MRE",
+            "title": "Marine Engineering Officer",
+            "type": "officer"
+        },
+        {
+            "code": "AVO",
+            "title": "Aviation Officer",
+            "type": "officer"
+        },
+        {
+            "code": "RDO",
+            "title": "Remote Sensing Officer",
+            "type": "officer"
+        },
+        {
+            "code": "FIS",
+            "title": "Fisheries Science Officer",
+            "type": "officer"
+        },
+        {
+            "code": "HYS",
+            "title": "Hydrographic Science Officer",
+            "type": "officer"
+        },
+        {
+            "code": "CHT",
+            "title": "Charting and Survey Officer",
+            "type": "officer"
+        },
+        {
+            "code": "ENV",
+            "title": "Environmental Science Officer",
+            "type": "officer"
+        },
+        {
+            "code": "ITM",
+            "title": "Information Technology Management Officer",
+            "type": "officer"
+        },
+        {
+            "code": "ADM",
+            "title": "Administrative Officer",
+            "type": "officer"
+        }
+    ],
+    "branch": "NOAA"
+}

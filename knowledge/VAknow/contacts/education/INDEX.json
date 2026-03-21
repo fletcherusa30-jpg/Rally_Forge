@@ -1,0 +1,27 @@
+﻿{
+    "folder":  "VAknow\\contacts\\education",
+    "generated":  "2026-03-14T11:26:33.5216943-06:00",
+    "files":  [
+                  {
+                      "name":  "education_contacts.json",
+                      "path":  "VAknow\\contacts\\education\\education_contacts.json",
+                      "size":  1528,
+                      "modified":  "2026-03-14T17:18:14.0028355Z",
+                      "extension":  ".json"
+                  },
+                  {
+                      "name":  "PURPOSE.md",
+                      "path":  "VAknow\\contacts\\education\\PURPOSE.md",
+                      "size":  338,
+                      "modified":  "2026-03-14T17:26:33.5208936Z",
+                      "extension":  ".md"
+                  },
+                  {
+                      "name":  "SUMMARY.md",
+                      "path":  "VAknow\\contacts\\education\\SUMMARY.md",
+                      "size":  323,
+                      "modified":  "2026-03-14T17:26:33.5216943Z",
+                      "extension":  ".md"
+                  }
+              ]
+}

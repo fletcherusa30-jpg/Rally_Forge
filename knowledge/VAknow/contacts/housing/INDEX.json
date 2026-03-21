@@ -1,0 +1,27 @@
+﻿{
+    "folder":  "VAknow\\contacts\\housing",
+    "generated":  "2026-03-14T11:26:33.5623416-06:00",
+    "files":  [
+                  {
+                      "name":  "housing_contacts.json",
+                      "path":  "VAknow\\contacts\\housing\\housing_contacts.json",
+                      "size":  1137,
+                      "modified":  "2026-03-14T17:18:13.9596625Z",
+                      "extension":  ".json"
+                  },
+                  {
+                      "name":  "PURPOSE.md",
+                      "path":  "VAknow\\contacts\\housing\\PURPOSE.md",
+                      "size":  332,
+                      "modified":  "2026-03-14T17:26:33.5623416Z",
+                      "extension":  ".md"
+                  },
+                  {
+                      "name":  "SUMMARY.md",
+                      "path":  "VAknow\\contacts\\housing\\SUMMARY.md",
+                      "size":  319,
+                      "modified":  "2026-03-14T17:26:33.5623416Z",
+                      "extension":  ".md"
+                  }
+              ]
+}

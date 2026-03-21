@@ -1,0 +1,35 @@
+{
+    "branch": "Space Force",
+    "mos": [
+        {
+            "code": "1C6X1",
+            "title": "Space Systems Operations",
+            "type": "enlisted"
+        },
+        {
+            "code": "1N8X1",
+            "title": "Targeting Analysis",
+            "type": "enlisted"
+        },
+        {
+            "code": "13SXA",
+            "title": "Space Operations Officer",
+            "type": "officer"
+        },
+        {
+            "code": "17DXA",
+            "title": "Cyber Operations Officer",
+            "type": "officer"
+        },
+        {
+            "code": "61DXA",
+            "title": "Space Systems Acquisitions Officer",
+            "type": "officer"
+        },
+        {
+            "code": "62EXA",
+            "title": "Space Systems Engineer",
+            "type": "officer"
+        }
+    ]
+}

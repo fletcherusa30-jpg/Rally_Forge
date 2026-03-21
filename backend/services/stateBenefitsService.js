@@ -6,24 +6,98 @@
  * 
  * State Benefits Database Service
  * 
- * Integrates the comprehensive 250-benefit STATE_BENEFITS_DATABASE.md
+ * Integrates the canonical state benefits dataset
  * into the Rally Forge system for state-specific benefit recommendations.
  */
 
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import {
+  loadUnifiedStateBenefits,
+  loadUnifiedStateBenefitsAudit,
+  getUnifiedStateBenefitsByCode,
+} from './stateBenefitsService.generated.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const KNOWLEDGE_BASE_DIR = path.resolve(__dirname, '../../knowledge/STATE_BENEFITS');
+const KNOWLEDGE_BASE_DIR = path.resolve(__dirname, '../../knowledge/State_Benefits');
 
 let benefitsCache = null;
+let structuredBenefitsCache = null;
 
-/**
- * Parse the STATE_BENEFITS_DATABASE.md file
- */
+const normalizeStateCode = (stateCode) => String(stateCode || '').trim().toUpperCase();
+
+const conditionFlags = (conditions) => {
+  const items = Array.isArray(conditions) ? conditions.map((item) => String(item || '').toLowerCase()) : [];
+  return {
+    requiresServiceConnection: items.some((item) => /service/.test(item)),
+    requiresHomeowner: items.some((item) => /homeowner|property owner|owner occupied/.test(item)),
+    requiresWartimeService: items.some((item) => /wartime/.test(item)),
+    requiresCombatFlag: items.some((item) => /combat/.test(item)),
+  };
+};
+
+const toLegacyBenefit = (benefit, stateCode, stateName, index) => {
+  const eligibility = benefit?.eligibility || {};
+  const conditions = Array.isArray(eligibility.conditions) ? eligibility.conditions : [];
+  const flags = conditionFlags(conditions);
+  const ratingMin = Number(eligibility.ratingThreshold || 0);
+  const name = String(benefit?.title || '').trim() || 'Untitled Benefit';
+  const description = String(benefit?.description || '').trim();
+  const link = benefit?.url ? String(benefit.url) : null;
+
+  return {
+    id: `${stateCode}-${String(benefit?.category || 'Other').replace(/\s+/g, '-')}-${index}`,
+    state_code: stateCode,
+    state_name: stateName,
+    category: String(benefit?.category || 'Other'),
+    name,
+    description,
+    benefit_details: description,
+    rating_min: ratingMin,
+    minimumRating: ratingMin,
+    requires: [...conditions],
+    requires_service_connection: flags.requiresServiceConnection,
+    requires_homeowner: flags.requiresHomeowner,
+    requires_wartime_service: flags.requiresWartimeService,
+    requires_combat_flag: flags.requiresCombatFlag,
+    links: { learnMore: link },
+    link,
+    criteria: { rating_min: ratingMin },
+    active: true,
+    source: benefit?.provenance || 'state',
+  };
+};
+
+const toLegacyStateRecord = (record) => {
+  const stateCode = normalizeStateCode(record?.stateCode);
+  const stateName = String(record?.stateName || stateCode);
+  const categories = {};
+
+  (record?.benefits || []).forEach((benefit, index) => {
+    const category = String(benefit?.category || 'Other');
+    if (!categories[category]) {
+      categories[category] = [];
+    }
+    categories[category].push(toLegacyBenefit(benefit, stateCode, stateName, index));
+  });
+
+  return {
+    name: stateName,
+    code: stateCode,
+    categories,
+    federal: record?.federal || { programs: [] },
+  };
+};
+
+const legacyBenefitsListFromRecord = (record) => {
+  const stateCode = normalizeStateCode(record?.stateCode);
+  const stateName = String(record?.stateName || stateCode);
+  return (record?.benefits || []).map((benefit, index) => toLegacyBenefit(benefit, stateCode, stateName, index));
+};
+
 const parseBenefitsDatabase = (content) => {
   const benefits = {};
   const lines = content.split(/\r?\n/);
@@ -108,29 +182,53 @@ const parseBenefitsDatabase = (content) => {
 };
 
 /**
- * Load the benefits database
- */
-const loadBenefitsDatabase = async () => {
-  if (!benefitsCache) {
-    const dbPath = path.join(KNOWLEDGE_BASE_DIR, 'STATE_BENEFITS_DATABASE.md');
-    const content = await fs.readFile(dbPath, 'utf-8');
-    benefitsCache = parseBenefitsDatabase(content);
-  }
-  return benefitsCache;
-};
-
-/**
  * Get benefits by state code
  */
 export const getBenefitsByState = async (stateCode) => {
-  const database = await loadBenefitsDatabase();
-  const state = database[stateCode];
-  
-  if (!state) {
-    return null;
-  }
-  
-  return state;
+  const state = await getUnifiedStateBenefitsByCode(stateCode);
+  if (!state) return null;
+  return toLegacyStateRecord(state);
+};
+
+export const getStructuredBenefitsByState = async (stateCode) => {
+  const state = await getUnifiedStateBenefitsByCode(stateCode);
+  if (!state) return [];
+  return legacyBenefitsListFromRecord(state);
+};
+
+export const getEligibleStructuredBenefits = async ({
+  stateCode,
+  rating = 0,
+  serviceConnected = false,
+  combatVeteran = false,
+  wartimeVeteran = false,
+  homeowner = false,
+}) => {
+  const stateBenefits = await getStructuredBenefitsByState(stateCode);
+  const numericRating = Number.isFinite(Number(rating)) ? Number(rating) : 0;
+
+  const eligible = stateBenefits.filter((benefit) => {
+    if (Number(benefit.rating_min || 0) > numericRating) return false;
+    if (benefit.requires_service_connection && !serviceConnected) return false;
+    if (benefit.requires_combat_flag && !combatVeteran) return false;
+    if (benefit.requires_wartime_service && !wartimeVeteran) return false;
+    if (benefit.requires_homeowner && !homeowner) return false;
+    return true;
+  });
+
+  return {
+    stateCode: normalizeStateCode(stateCode),
+    profile: {
+      rating: numericRating,
+      serviceConnected,
+      combatVeteran,
+      wartimeVeteran,
+      homeowner,
+    },
+    totalInState: stateBenefits.length,
+    eligibleCount: eligible.length,
+    eligible,
+  };
 };
 
 /**
@@ -180,30 +278,35 @@ export const getVeteranBenefits = async (stateCode, combinedRating) => {
  * Get all available states
  */
 export const getAllStates = async () => {
-  const database = await loadBenefitsDatabase();
-  return Object.entries(database).map(([code, state]) => ({
-    code,
-    name: state.name,
-    benefitsCount: Object.values(state.categories).reduce(
-      (sum, benefits) => sum + benefits.length,
-      0
-    ),
-    categories: Object.keys(state.categories)
-  }));
+  const dataset = await loadUnifiedStateBenefits();
+  return (dataset.records || []).map((record) => {
+    const categories = Array.from(new Set((record.benefits || []).map((benefit) => String(benefit.category || 'Other')))).sort();
+    return {
+      code: normalizeStateCode(record.stateCode),
+      name: String(record.stateName || record.stateCode),
+      benefitsCount: Array.isArray(record.benefits) ? record.benefits.length : 0,
+      categories,
+    };
+  });
 };
 
 /**
  * Get benefits by category across all states
  */
 export const getBenefitsByCategory = async (category) => {
-  const database = await loadBenefitsDatabase();
+  const dataset = await loadUnifiedStateBenefits();
   const results = {};
+  const normalizedCategory = String(category || '').toLowerCase();
   
-  Object.entries(database).forEach(([stateCode, state]) => {
-    if (state.categories[category]) {
-      results[stateCode] = {
-        state: state.name,
-        benefits: state.categories[category]
+  (dataset.records || []).forEach((record) => {
+    const matches = legacyBenefitsListFromRecord(record).filter(
+      (benefit) => String(benefit.category || '').toLowerCase() === normalizedCategory
+    );
+    if (matches.length > 0) {
+      const code = normalizeStateCode(record.stateCode);
+      results[code] = {
+        state: String(record.stateName || code),
+        benefits: matches,
       };
     }
   });
@@ -215,24 +318,52 @@ export const getBenefitsByCategory = async (category) => {
  * Search benefits across all states
  */
 export const searchBenefits = async (searchTerm) => {
-  const database = await loadBenefitsDatabase();
-  const lowerSearchTerm = searchTerm.toLowerCase();
+  const dataset = await loadUnifiedStateBenefits();
+  const normalizedQuery = String(searchTerm || '').toLowerCase().replace(/\+/g, ' ').trim();
+  const searchTokens = normalizedQuery.split(/\s+/).filter(Boolean);
   const results = [];
+
+  if (searchTokens.length === 0) {
+    return results;
+  }
   
-  Object.entries(database).forEach(([stateCode, state]) => {
-    Object.entries(state.categories).forEach(([category, benefits]) => {
-      benefits.forEach(benefit => {
-        if (
-          benefit.name.toLowerCase().includes(lowerSearchTerm) ||
-          (benefit.description && benefit.description.toLowerCase().includes(lowerSearchTerm))
-        ) {
-          results.push({
-            ...benefit,
-            category,
-            state: stateCode,
-            stateName: state.name
-          });
-        }
+  (dataset.records || []).forEach((record) => {
+    const stateCode = normalizeStateCode(record.stateCode);
+    const stateName = String(record.stateName || stateCode);
+    const addIfMatch = (benefit) => {
+      const haystack = [
+        benefit.name,
+        benefit.description,
+        benefit.category,
+        ...(Array.isArray(benefit.requires) ? benefit.requires : []),
+      ]
+        .map((value) => String(value || '').toLowerCase())
+        .join(' ');
+
+      const matches = searchTokens.every((token) => haystack.includes(token));
+      if (!matches) return;
+
+      results.push({
+        ...benefit,
+        state: stateCode,
+        stateName,
+      });
+    };
+
+    legacyBenefitsListFromRecord(record).forEach((benefit) => {
+      addIfMatch(benefit);
+    });
+
+    const federalPrograms = Array.isArray(record?.federal?.programs) ? record.federal.programs : [];
+    federalPrograms.forEach((program, index) => {
+      addIfMatch({
+        id: `${stateCode}-federal-${index}`,
+        category: String(program?.category || 'Federal Program'),
+        name: String(program?.title || '').trim() || 'Federal Program',
+        description: String(program?.description || '').trim(),
+        requires: Array.isArray(program?.eligibility?.conditions) ? program.eligibility.conditions : [],
+        link: program?.url ? String(program.url) : null,
+        source: program?.provenance || 'federal',
       });
     });
   });
@@ -244,18 +375,28 @@ export const searchBenefits = async (searchTerm) => {
  * Get summary statistics
  */
 export const getDatabaseStatistics = async () => {
-  const database = await loadBenefitsDatabase();
+  const dataset = await loadUnifiedStateBenefits();
+  const audit = await loadUnifiedStateBenefitsAudit();
   
   let totalBenefits = 0;
   let totalCategories = new Set();
   let benefitsByRating = {};
   
-  Object.values(database).forEach(state => {
-    Object.entries(state.categories).forEach(([category, benefits]) => {
+  (dataset.records || []).forEach((state) => {
+    const categories = {};
+    legacyBenefitsListFromRecord(state).forEach((benefit) => {
+      const category = String(benefit.category || 'Other');
+      if (!categories[category]) {
+        categories[category] = [];
+      }
+      categories[category].push(benefit);
+    });
+
+    Object.entries(categories).forEach(([category, benefits]) => {
       totalCategories.add(category);
-      benefits.forEach(benefit => {
+      benefits.forEach((benefit) => {
         totalBenefits++;
-        const rating = benefit.minimumRating || 0;
+        const rating = Number(benefit.minimumRating ?? benefit.rating_min ?? 0);
         if (!benefitsByRating[rating]) {
           benefitsByRating[rating] = 0;
         }
@@ -265,14 +406,15 @@ export const getDatabaseStatistics = async () => {
   });
   
   return {
-    totalStates: Object.keys(database).length,
+    totalStates: Array.isArray(dataset.records) ? dataset.records.length : 0,
     totalBenefits,
     totalCategories: totalCategories.size,
     categories: Array.from(totalCategories).sort(),
     benefitsByMinimumRating: benefitsByRating,
     metadata: {
       generatedAt: new Date().toISOString(),
-      dataSource: 'STATE_BENEFITS_DATABASE.md'
+      dataSource: 'resources/state-benefits.json',
+      schemaVersion: audit?.schemaVersion || dataset?.schemaVersion || '1.0.0',
     }
   };
 };

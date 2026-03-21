@@ -59,7 +59,11 @@ export async function uploadStrs(req, res) {
       filePath,
     });
 
-    const result = await submitPdfForProcessing(filePath, fileName, req.veteranId);
+    const result = await submitPdfForProcessing(filePath, fileName, req.veteranId, {
+      mimeType: req.file.mimetype,
+      isPdf,
+      isText,
+    });
 
     return res.status(202).json({ success: true, ...result });
   } catch (error) {
@@ -222,6 +226,14 @@ export async function getStrsJobStatus(req, res) {
 
   try {
     const status = await getJobStatus(jobId);
+    if (status?.status === 'not_found') {
+      return res.status(404).json({
+        success: false,
+        error: `Job not found: ${jobId}`,
+        code: 'JOB_NOT_FOUND',
+        ...status,
+      });
+    }
     return res.json({ success: true, ...status });
   } catch (error) {
     logger.error('Failed to get job status', error);

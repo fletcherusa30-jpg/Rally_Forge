@@ -1,0 +1,136 @@
+{
+  "name": "VA Rating Decision Scanner",
+  "version": "2.0.0",
+  "description": "Extracts service-connected ratings, SMC, denials, and compensation from VA Rating Decisions",
+  "lastUpdated": "2026-03-17T00:00:00Z",
+  "maintainer": "Rally Forge Team",
+  "status": "production",
+  "extractionPipeline": [
+    "Document format detection",
+    "Layout analysis",
+    "Condition extraction",
+    "Rating extraction",
+    "SMC extraction",
+    "Denial extraction",
+    "Bilateral factor extraction",
+    "Combined rating calculation",
+    "Back pay calculation",
+    "Effective date normalization",
+    "Cross-validation",
+    "Output normalization"
+  ],
+  "supportedDecisionTypes": [
+    "Initial",
+    "Rerate",
+    "Supplemental",
+    "Reduction",
+    "Assumed Granted",
+    "Deferred"
+  ],
+  "requiredFields": [
+    "combinedRating",
+    "effectiveDate",
+    "decisionType",
+    "serviceConnectedConditions",
+    "deniedConditions"
+  ],
+  "optionalFields": [
+    "specialMonthlyCompensation",
+    "bilateralFactor",
+    "deferredIssues",
+    "proposedReductions",
+    "backPayPeriod",
+    "inferredClaims",
+    "secondaryConditions",
+    "scheduleRatingReferences"
+  ],
+  "validationRules": {
+    "combinedRatingMustMatchCalculation": true,
+    "smcCodeMustBeValid": true,
+    "effectiveDateCannotBeFuture": true,
+    "serviceConnectionMustBeClear": true,
+    "diagnosticCodeMustBeValid": true
+  },
+  "confidenceThresholds": {
+    "documentIdentification": 0.90,
+    "conditionExtraction": 0.85,
+    "ratingExtraction": 0.90,
+    "smcExtraction": 0.85,
+    "combinedRatingValidation": 0.95,
+    "backPayCalculation": 0.95
+  },
+  "smcCodes": {
+    "aid": [
+      "A",
+      "A1",
+      "A2"
+    ],
+    "housebound": [
+      "H",
+      "H1",
+      "H2"
+    ],
+    "extremityLoss": [
+      "K",
+      "K1"
+    ],
+    "progressive": [
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T"
+    ]
+  },
+  "ratingPercentages": [
+    0,
+    10,
+    20,
+    30,
+    40,
+    50,
+    60,
+    70,
+    80,
+    90,
+    100
+  ],
+  "combinedRatingCalculation": {
+    "method": "VA-Schedule-Table",
+    "regulationCitation": "38 CFR §4.25",
+    "bilateralFactorApplies": true,
+    "roundingMethod": "nearest-10-percent"
+  },
+  "backPayCalculation": {
+    "enabled": true,
+    "regulationCitation": "38 CFR §3.400",
+    "requiresEffectiveDate": true,
+    "requiresDecisionDate": true
+  },
+  "errorHandling": {
+    "multiColumnPdfStrategy": "parse-column-by-column",
+    "missingDiagnosticCodeStrategy": "extract-via-condition-name",
+    "unclearSmcStrategy": "extract-with-confidence-flag",
+    "illegibleDateStrategy": "parse-nearby-dates-for-context",
+    "criticalErrorsStopProcessing": true
+  },
+  "metadata": {
+    "scannerId": "rating-decision-analysis-v2.0.0",
+    "scannerType": "va-rating-decision",
+    "documentType": "rating-decision-letter",
+    "capabilities": {
+      "formatDetection": true,
+      "multiColumnSupport": true,
+      "conditionExtraction": true,
+      "ratingCalculation": true,
+      "smcExtraction": true,
+      "backPayCalculation": true,
+      "bilateralFactorSupport": true,
+      "deferredIssueDetection": true
+    }
+  }
+}

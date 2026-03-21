@@ -5,7 +5,7 @@ import { recalculateBenefits } from "../controllers/recalculateController.js";
 const router = express.Router();
 
 router.post(
-  "/benefits/recalculate/:veteranId",
+  "/recalculate/:veteranId",
   asyncHandler(recalculateBenefits)
 );
 

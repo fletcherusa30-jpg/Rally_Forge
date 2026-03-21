@@ -11,6 +11,11 @@ import {
   getStrsQueueStats,
   getStrsHealth,
 } from "../controllers/strsController.js";
+import {
+  submitStrsFeedback,
+  getRecentStrsFeedback,
+  getStrsFeedbackSummary,
+} from '../controllers/strsFeedbackController.js';
 
 const upload = multer({
   storage: multer.memoryStorage(),
@@ -87,6 +92,25 @@ router.get(
 router.get(
   "/health",
   asyncHandler(getStrsHealth)
+);
+
+router.post(
+  '/feedback',
+  optionalAuth,
+  express.json({ limit: '256kb' }),
+  asyncHandler(submitStrsFeedback)
+);
+
+router.get(
+  '/feedback/summary',
+  optionalAuth,
+  asyncHandler(getStrsFeedbackSummary)
+);
+
+router.get(
+  '/feedback/recent',
+  optionalAuth,
+  asyncHandler(getRecentStrsFeedback)
 );
 
 export default router;

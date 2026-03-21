@@ -2,6 +2,7 @@ import express from 'express';
 import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { getKnowledgeManifestIntegrity } from '../services/knowledgeManifestService.js';
 
 const router = express.Router();
 
@@ -35,7 +36,7 @@ async function checkDiagnosticReport() {
 }
 
 router.get('/', async (req, res) => {
-  const scannerFile = path.join(rootDir, 'Scanner', 'STRS_SCANNER', 'STRS.Scanner.ps1');
+  const scannerFile = path.join(rootDir, 'backend', 'engine', 'scanner', 'UnifiedScannerEngine.js');
   const compensationFile = path.join(rootDir, 'compensation-engine', 'index.js');
   const financialPlannerFile = path.join(rootDir, 'backend', 'services', 'financialPlannerService.js');
 
@@ -44,6 +45,7 @@ router.get('/', async (req, res) => {
   const compensationOk = await exists(compensationFile);
   const financialPlannerOk = await exists(financialPlannerFile);
   const diagnosticOk = await checkDiagnosticReport();
+  const knowledgeIntegrity = await getKnowledgeManifestIntegrity();
 
   const backend = 'ok';
   const frontend = frontendOk ? 'ok' : 'fail';
@@ -51,8 +53,10 @@ router.get('/', async (req, res) => {
   const compensation = compensationOk ? 'ok' : 'fail';
   const financialPlanner = financialPlannerOk ? 'ok' : 'fail';
   const diagnostic = diagnosticOk ? 'ok' : 'fail';
+  const knowledge = knowledgeIntegrity.success ? 'ok' : 'fail';
   // startup reflects core backend components only; frontend is informational
   const startup = backend === 'ok' && compensation === 'ok' ? 'ok' : 'fail';
+  const routeManifest = Array.isArray(req.app?.locals?.routeManifest) ? req.app.locals.routeManifest : [];
 
   res.json({
     backend,
@@ -61,7 +65,18 @@ router.get('/', async (req, res) => {
     compensation,
     financialPlanner,
     diagnostic,
-    startup
+    knowledge,
+    knowledgeIntegrity: {
+      status: knowledgeIntegrity.status,
+      filesChecked: knowledgeIntegrity.filesChecked,
+      missingFiles: knowledgeIntegrity.missingFiles.length,
+      checksumMismatches: knowledgeIntegrity.checksums?.mismatched?.length ?? 0,
+    },
+    startup,
+    api: {
+      routesMounted: routeManifest.length,
+      routes: routeManifest,
+    }
   });
 });
 

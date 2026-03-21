@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const databaseDir = path.resolve(__dirname, '..');
-const workspaceDir = path.resolve(databaseDir, '..');
+const workspaceDir = path.resolve(databaseDir, '../../..');
 
 const manifestPath = path.join(__dirname, 'rate-database-manifest.json');
 const yearsDir = path.join(databaseDir, 'YEARS');
@@ -40,6 +40,7 @@ function compareMoney(a, b) {
 function run() {
   const errors = [];
   const warnings = [];
+  let expectedUnpopulatedPlaceholders = 0;
 
   if (!fs.existsSync(manifestPath)) {
     throw new Error(`Manifest file not found: ${manifestPath}`);
@@ -112,7 +113,7 @@ function run() {
         }
       } else {
         if (yearVeteran === null || yearVeteran === undefined) {
-          warnings.push(`YEAR ${year}: rating ${rating} veteran is null (expected while UNPOPULATED)`);
+          expectedUnpopulatedPlaceholders += 1;
         }
       }
     }
@@ -124,6 +125,9 @@ function run() {
   console.log(`- YEAR json files: ${yearFiles.length}`);
   console.log(`- engine overlap years: ${overlapYears.length}`);
   console.log(`- strict mode: ${STRICT_MODE ? 'ENABLED' : 'DISABLED'}`);
+  if (dataStatus !== 'POPULATED' && expectedUnpopulatedPlaceholders > 0) {
+    console.log(`- expected UNPOPULATED placeholders: ${expectedUnpopulatedPlaceholders}`);
+  }
 
   if (warnings.length > 0) {
     const warningLabel = STRICT_MODE ? 'Errors (strict mode)' : 'Warnings';

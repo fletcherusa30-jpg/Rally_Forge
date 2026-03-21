@@ -9,6 +9,7 @@ import {
   buildDecisionTrace,
   buildEvidenceChecklist,
 } from '../services/knowledgeLibraryService.js';
+import { getKnowledgeManifestIntegrity } from '../services/knowledgeManifestService.js';
 
 let knowledgeServices = null;
 
@@ -29,10 +30,35 @@ export async function getKnowledgeStatus(_req, res) {
   });
 }
 
+export async function initializeKnowledge(_req, res) {
+  const services = await getKnowledgeServices();
+  res.json({
+    success: true,
+    message: 'Knowledge base initialized',
+    stats: services.knowledgeBase.stats,
+  });
+}
+
 export async function listKnowledgeCases(_req, res) {
   const services = await getKnowledgeServices();
   const cases = services.caseService.getAllCases();
   res.json({ success: true, cases, count: cases.length });
+}
+
+export async function listKnowledgeCasesTimeline(_req, res) {
+  const services = await getKnowledgeServices();
+  const cases = services.caseService.getAllCases();
+  const timeline = {};
+
+  for (const item of cases) {
+    const year = String(item?.year || 'unknown');
+    if (!timeline[year]) {
+      timeline[year] = [];
+    }
+    timeline[year].push(item);
+  }
+
+  res.json({ success: true, timeline });
 }
 
 export async function getKnowledgeCaseById(req, res) {
@@ -64,6 +90,28 @@ export async function searchKnowledge(req, res) {
   return res.json({ success: true, ...results });
 }
 
+export async function searchKnowledgePart3(req, res) {
+  const services = await getKnowledgeServices();
+  const { q } = req.query;
+  if (!q || q.trim().length < 2) {
+    return res.status(400).json({ success: false, error: 'Search query must be at least 2 characters' });
+  }
+
+  const sections = services.part3Service.searchSections(q);
+  return res.json({ success: true, query: q, sections, count: sections.length });
+}
+
+export async function searchKnowledgeDiagnosticCodes(req, res) {
+  const services = await getKnowledgeServices();
+  const { q } = req.query;
+  if (!q || q.trim().length < 2) {
+    return res.status(400).json({ success: false, error: 'Search query must be at least 2 characters' });
+  }
+
+  const diagnosticCodes = services.part4Service.searchDiagnosticCodes(q);
+  return res.json({ success: true, query: q, diagnosticCodes, count: diagnosticCodes.length });
+}
+
 export async function getKnowledgeForCondition(req, res) {
   const services = await getKnowledgeServices();
   const { conditionName } = req.params;
@@ -73,10 +121,11 @@ export async function getKnowledgeForCondition(req, res) {
 
 export async function getPart3Section(req, res) {
   const services = await getKnowledgeServices();
-  const { sectionNumber } = req.params;
-  const section = services.part3Service.getSectionByNumber(sectionNumber);
+  const rawSection = String(req.params.sectionNumber || '').trim();
+  const normalizedSection = rawSection.startsWith('§') ? rawSection : `§${rawSection}`;
+  const section = services.part3Service.getSectionByNumber(normalizedSection);
   if (!section) {
-    return res.status(404).json({ success: false, error: `Section ${sectionNumber} not found in Part 3` });
+    return res.status(404).json({ success: false, error: `Section ${rawSection} not found in Part 3` });
   }
   return res.json({ success: true, section });
 }
@@ -118,6 +167,12 @@ export async function getPart4ByBodySystem(req, res) {
 export async function getKnowledgeLibraryBaseStatus(_req, res) {
   const status = await getKnowledgeLibraryStatus();
   res.json({ success: true, data: status });
+}
+
+export async function getKnowledgeLibraryIntegrity(_req, res) {
+  const integrity = await getKnowledgeManifestIntegrity();
+  const statusCode = integrity.success ? 200 : 503;
+  res.status(statusCode).json({ success: integrity.success, data: integrity });
 }
 
 export async function validateKnowledgeLibrary(_req, res) {

@@ -1,0 +1,149 @@
+{
+  "rules": [
+    {
+      "ruleId": "str-exposure-vietnam-era",
+      "name": "Vietnam Era Exposure Detection",
+      "era": "Vietnam",
+      "keywords": [
+        {
+          "term": "Agent Orange",
+          "type": "herbicide",
+          "confidence": 1.0
+        },
+        {
+          "term": "Dioxin",
+          "type": "chemical",
+          "confidence": 0.95
+        },
+        {
+          "term": "herbicide",
+          "type": "chemical",
+          "confidence": 0.9
+        },
+        {
+          "term": "defoliant",
+          "type": "chemical",
+          "confidence": 0.9
+        },
+        {
+          "term": "spraying",
+          "type": "exposure",
+          "confidence": 0.85
+        }
+      ]
+    },
+    {
+      "ruleId": "str-exposure-gulf-war",
+      "name": "Gulf War Era Exposure Detection",
+      "era": "Gulf War",
+      "keywords": [
+        {
+          "term": "Burn pit",
+          "type": "environmental",
+          "confidence": 1.0
+        },
+        {
+          "term": "depleted uranium",
+          "type": "radiation",
+          "confidence": 0.95
+        },
+        {
+          "term": "pesticides",
+          "type": "chemical",
+          "confidence": 0.9
+        },
+        {
+          "term": "anthrax vaccine",
+          "type": "biological",
+          "confidence": 0.95
+        },
+        {
+          "term": "pyridostigmine",
+          "type": "chemical",
+          "confidence": 0.95
+        }
+      ]
+    },
+    {
+      "ruleId": "str-exposure-oef-oif",
+      "name": "OEF/OIF Exposure Detection",
+      "era": "OEF/OIF",
+      "keywords": [
+        {
+          "term": "Burn pit",
+          "type": "environmental",
+          "confidence": 1.0
+        },
+        {
+          "term": "IED",
+          "type": "blast",
+          "confidence": 0.95
+        },
+        {
+          "term": "blast",
+          "type": "blast",
+          "confidence": 0.95
+        },
+        {
+          "term": "particulate",
+          "type": "environmental",
+          "confidence": 0.85
+        },
+        {
+          "term": "dust storm",
+          "type": "environmental",
+          "confidence": 0.85
+        }
+      ]
+    },
+    {
+      "ruleId": "str-exposure-universal",
+      "name": "Universal Exposure Keywords (All Eras)",
+      "keywords": [
+        {
+          "term": "Chemical",
+          "type": "chemical",
+          "confidence": 0.85
+        },
+        {
+          "term": "Biological",
+          "type": "biological",
+          "confidence": 0.85
+        },
+        {
+          "term": "Radiation",
+          "type": "radiation",
+          "confidence": 0.85
+        },
+        {
+          "term": "Lead",
+          "type": "chemical",
+          "confidence": 0.9
+        },
+        {
+          "term": "Asbestos",
+          "type": "chemical",
+          "confidence": 0.9
+        },
+        {
+          "term": "Noise",
+          "type": "occupational",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "ruleId": "str-exposure-location-inference",
+      "name": "Location-Based Exposure Inference",
+      "locations": [
+        {
+          "location": "Mailbu",
+          "eraSpecific": "Vietnam",
+          "exposures": [
+            "Agent Orange"
+          ]
+        }
+      ]
+    }
+  ]
+}

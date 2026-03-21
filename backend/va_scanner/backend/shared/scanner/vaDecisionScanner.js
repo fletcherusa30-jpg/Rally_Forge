@@ -1,18 +1,21 @@
 ﻿import { preprocessScannerText, validateScannerOutput } from "./scannerMiddleware.js";
+import { analyzeDecisionQuality } from "./ratingDecision/cueAnalysis.js";
 
 const EMPTY_RESULT = {
   serviceConnected: [],
   denied: [],
   allConditions: [],
   service_connected: [],
-  deniedConditions: []
+  deniedConditions: [],
+  schemaVersion: '4.2.0',
+  cfrCompliant: true
 };
 
 /**
- * Authoritative VA Decision Scanner.
+ * VA Decision Scanner v4.2 - CFR-Compliant Extraction per .copilot-instructions.md
  * Input: full plain-text decision letter.
  * Output: strict JSON with `service_connected` and `denied` arrays,
- * or an empty structured result when no data is found.
+ * CFR-compliant rating determinations, or an empty structured result when no data is found.
  */
 
 const DATE_PATTERN =
@@ -1094,7 +1097,10 @@ const scanRatingNarrative = (fullText) => {
 
     return {
       ...validated,
-      allConditions: mergeConditions(validated.serviceConnected, validated.denied)
+      allConditions: mergeConditions(validated.serviceConnected, validated.denied),
+      qualityAndCueIndicators: analyzeDecisionQuality(preprocessedText, {
+        serviceConnectedConditions: validated.serviceConnected || [],
+      }),
     };
   } catch {
     return { ...EMPTY_RESULT };

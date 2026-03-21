@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { VARatingDecisionManualEntry } from './VARatingDecisionManualEntry';
+import { VARatingDecisionManualEntry } from './va/VARatingDecisionManualEntry';
 import { STRManualEntry } from './STRManualEntry';
 
 /**
@@ -15,13 +15,11 @@ export function ManualEntrySelector({ onComplete }) {
   const [completedEntries, setCompletedEntries] = useState([]);
 
   const handleVAEntry = (result) => {
-    console.log('[ManualEntry] VA Rating Decision entry saved', result);
     setCompletedEntries([...completedEntries, { ...result, submittedAt: new Date().toISOString() }]);
     setSelectedForm(null); // Reset to selector
   };
 
   const handleSTREntry = (result) => {
-    console.log('[ManualEntry] Service Treatment Records entry saved', result);
     setCompletedEntries([...completedEntries, { ...result, submittedAt: new Date().toISOString() }]);
     setSelectedForm(null); // Reset to selector
   };

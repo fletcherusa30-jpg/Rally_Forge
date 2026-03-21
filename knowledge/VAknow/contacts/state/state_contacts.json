@@ -1,0 +1,1802 @@
+﻿[
+    {
+        "scope":  "state",
+        "name":  "AK State Department of Veterans Affairs",
+        "region":  "AK",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "AK Veterans Benefits Hotline",
+        "region":  "AK",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "AK Veterans Homes",
+        "region":  "AK",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "AK Claims Assistance Office",
+        "region":  "AK",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "AL State Department of Veterans Affairs",
+        "region":  "AL",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "AL Veterans Benefits Hotline",
+        "region":  "AL",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "AL Veterans Homes",
+        "region":  "AL",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "AL Claims Assistance Office",
+        "region":  "AL",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "AR State Department of Veterans Affairs",
+        "region":  "AR",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "AR Veterans Benefits Hotline",
+        "region":  "AR",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "AR Veterans Homes",
+        "region":  "AR",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "AR Claims Assistance Office",
+        "region":  "AR",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "AZ State Department of Veterans Affairs",
+        "region":  "AZ",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "AZ Veterans Benefits Hotline",
+        "region":  "AZ",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "AZ Veterans Homes",
+        "region":  "AZ",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "AZ Claims Assistance Office",
+        "region":  "AZ",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "CA State Department of Veterans Affairs",
+        "region":  "CA",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "CA Veterans Benefits Hotline",
+        "region":  "CA",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "CA Veterans Homes",
+        "region":  "CA",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "CA Claims Assistance Office",
+        "region":  "CA",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "CO State Department of Veterans Affairs",
+        "region":  "CO",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "CO Veterans Benefits Hotline",
+        "region":  "CO",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "CO Veterans Homes",
+        "region":  "CO",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "CO Claims Assistance Office",
+        "region":  "CO",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "CT State Department of Veterans Affairs",
+        "region":  "CT",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "CT Veterans Benefits Hotline",
+        "region":  "CT",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "CT Veterans Homes",
+        "region":  "CT",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "CT Claims Assistance Office",
+        "region":  "CT",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "DE State Department of Veterans Affairs",
+        "region":  "DE",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "DE Veterans Benefits Hotline",
+        "region":  "DE",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "DE Veterans Homes",
+        "region":  "DE",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "DE Claims Assistance Office",
+        "region":  "DE",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "FL State Department of Veterans Affairs",
+        "region":  "FL",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "FL Veterans Benefits Hotline",
+        "region":  "FL",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "FL Veterans Homes",
+        "region":  "FL",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "FL Claims Assistance Office",
+        "region":  "FL",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "GA State Department of Veterans Affairs",
+        "region":  "GA",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "GA Veterans Benefits Hotline",
+        "region":  "GA",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "GA Veterans Homes",
+        "region":  "GA",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "GA Claims Assistance Office",
+        "region":  "GA",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "HI State Department of Veterans Affairs",
+        "region":  "HI",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "HI Veterans Benefits Hotline",
+        "region":  "HI",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "HI Veterans Homes",
+        "region":  "HI",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "HI Claims Assistance Office",
+        "region":  "HI",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "IA State Department of Veterans Affairs",
+        "region":  "IA",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "IA Veterans Benefits Hotline",
+        "region":  "IA",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "IA Veterans Homes",
+        "region":  "IA",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "IA Claims Assistance Office",
+        "region":  "IA",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "ID State Department of Veterans Affairs",
+        "region":  "ID",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "ID Veterans Benefits Hotline",
+        "region":  "ID",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "ID Veterans Homes",
+        "region":  "ID",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "ID Claims Assistance Office",
+        "region":  "ID",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "IL State Department of Veterans Affairs",
+        "region":  "IL",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "IL Veterans Benefits Hotline",
+        "region":  "IL",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "IL Veterans Homes",
+        "region":  "IL",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "IL Claims Assistance Office",
+        "region":  "IL",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "IN State Department of Veterans Affairs",
+        "region":  "IN",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "IN Veterans Benefits Hotline",
+        "region":  "IN",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "IN Veterans Homes",
+        "region":  "IN",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "IN Claims Assistance Office",
+        "region":  "IN",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "KS State Department of Veterans Affairs",
+        "region":  "KS",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "KS Veterans Benefits Hotline",
+        "region":  "KS",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "KS Veterans Homes",
+        "region":  "KS",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "KS Claims Assistance Office",
+        "region":  "KS",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "KY State Department of Veterans Affairs",
+        "region":  "KY",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "KY Veterans Benefits Hotline",
+        "region":  "KY",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "KY Veterans Homes",
+        "region":  "KY",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "KY Claims Assistance Office",
+        "region":  "KY",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "LA State Department of Veterans Affairs",
+        "region":  "LA",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "LA Veterans Benefits Hotline",
+        "region":  "LA",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "LA Veterans Homes",
+        "region":  "LA",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "LA Claims Assistance Office",
+        "region":  "LA",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "MA State Department of Veterans Affairs",
+        "region":  "MA",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "MA Veterans Benefits Hotline",
+        "region":  "MA",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "MA Veterans Homes",
+        "region":  "MA",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "MA Claims Assistance Office",
+        "region":  "MA",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "MD State Department of Veterans Affairs",
+        "region":  "MD",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "MD Veterans Benefits Hotline",
+        "region":  "MD",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "MD Veterans Homes",
+        "region":  "MD",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "MD Claims Assistance Office",
+        "region":  "MD",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "ME State Department of Veterans Affairs",
+        "region":  "ME",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "ME Veterans Benefits Hotline",
+        "region":  "ME",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "ME Veterans Homes",
+        "region":  "ME",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "ME Claims Assistance Office",
+        "region":  "ME",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "MI State Department of Veterans Affairs",
+        "region":  "MI",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "MI Veterans Benefits Hotline",
+        "region":  "MI",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "MI Veterans Homes",
+        "region":  "MI",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "MI Claims Assistance Office",
+        "region":  "MI",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "MN State Department of Veterans Affairs",
+        "region":  "MN",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "MN Veterans Benefits Hotline",
+        "region":  "MN",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "MN Veterans Homes",
+        "region":  "MN",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "MN Claims Assistance Office",
+        "region":  "MN",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "MO State Department of Veterans Affairs",
+        "region":  "MO",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "MO Veterans Benefits Hotline",
+        "region":  "MO",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "MO Veterans Homes",
+        "region":  "MO",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "MO Claims Assistance Office",
+        "region":  "MO",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "MS State Department of Veterans Affairs",
+        "region":  "MS",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "MS Veterans Benefits Hotline",
+        "region":  "MS",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "MS Veterans Homes",
+        "region":  "MS",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "MS Claims Assistance Office",
+        "region":  "MS",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "MT State Department of Veterans Affairs",
+        "region":  "MT",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "MT Veterans Benefits Hotline",
+        "region":  "MT",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "MT Veterans Homes",
+        "region":  "MT",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "MT Claims Assistance Office",
+        "region":  "MT",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "NC State Department of Veterans Affairs",
+        "region":  "NC",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "NC Veterans Benefits Hotline",
+        "region":  "NC",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "NC Veterans Homes",
+        "region":  "NC",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "NC Claims Assistance Office",
+        "region":  "NC",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "ND State Department of Veterans Affairs",
+        "region":  "ND",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "ND Veterans Benefits Hotline",
+        "region":  "ND",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "ND Veterans Homes",
+        "region":  "ND",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "ND Claims Assistance Office",
+        "region":  "ND",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "NE State Department of Veterans Affairs",
+        "region":  "NE",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "NE Veterans Benefits Hotline",
+        "region":  "NE",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "NE Veterans Homes",
+        "region":  "NE",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "NE Claims Assistance Office",
+        "region":  "NE",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "NH State Department of Veterans Affairs",
+        "region":  "NH",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "NH Veterans Benefits Hotline",
+        "region":  "NH",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "NH Veterans Homes",
+        "region":  "NH",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "NH Claims Assistance Office",
+        "region":  "NH",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "NJ State Department of Veterans Affairs",
+        "region":  "NJ",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "NJ Veterans Benefits Hotline",
+        "region":  "NJ",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "NJ Veterans Homes",
+        "region":  "NJ",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "NJ Claims Assistance Office",
+        "region":  "NJ",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "NM State Department of Veterans Affairs",
+        "region":  "NM",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "NM Veterans Benefits Hotline",
+        "region":  "NM",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "NM Veterans Homes",
+        "region":  "NM",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "NM Claims Assistance Office",
+        "region":  "NM",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "NV State Department of Veterans Affairs",
+        "region":  "NV",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "NV Veterans Benefits Hotline",
+        "region":  "NV",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "NV Veterans Homes",
+        "region":  "NV",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "NV Claims Assistance Office",
+        "region":  "NV",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "NY State Department of Veterans Affairs",
+        "region":  "NY",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "NY Veterans Benefits Hotline",
+        "region":  "NY",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "NY Veterans Homes",
+        "region":  "NY",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "NY Claims Assistance Office",
+        "region":  "NY",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "OH State Department of Veterans Affairs",
+        "region":  "OH",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "OH Veterans Benefits Hotline",
+        "region":  "OH",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "OH Veterans Homes",
+        "region":  "OH",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "OH Claims Assistance Office",
+        "region":  "OH",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "OK State Department of Veterans Affairs",
+        "region":  "OK",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "OK Veterans Benefits Hotline",
+        "region":  "OK",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "OK Veterans Homes",
+        "region":  "OK",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "OK Claims Assistance Office",
+        "region":  "OK",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "OR State Department of Veterans Affairs",
+        "region":  "OR",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "OR Veterans Benefits Hotline",
+        "region":  "OR",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "OR Veterans Homes",
+        "region":  "OR",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "OR Claims Assistance Office",
+        "region":  "OR",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "PA State Department of Veterans Affairs",
+        "region":  "PA",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "PA Veterans Benefits Hotline",
+        "region":  "PA",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "PA Veterans Homes",
+        "region":  "PA",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "PA Claims Assistance Office",
+        "region":  "PA",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "RI State Department of Veterans Affairs",
+        "region":  "RI",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "RI Veterans Benefits Hotline",
+        "region":  "RI",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "RI Veterans Homes",
+        "region":  "RI",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "RI Claims Assistance Office",
+        "region":  "RI",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "SC State Department of Veterans Affairs",
+        "region":  "SC",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "SC Veterans Benefits Hotline",
+        "region":  "SC",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "SC Veterans Homes",
+        "region":  "SC",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "SC Claims Assistance Office",
+        "region":  "SC",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "SD State Department of Veterans Affairs",
+        "region":  "SD",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "SD Veterans Benefits Hotline",
+        "region":  "SD",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "SD Veterans Homes",
+        "region":  "SD",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "SD Claims Assistance Office",
+        "region":  "SD",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "TN State Department of Veterans Affairs",
+        "region":  "TN",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "TN Veterans Benefits Hotline",
+        "region":  "TN",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "TN Veterans Homes",
+        "region":  "TN",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "TN Claims Assistance Office",
+        "region":  "TN",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "TX State Department of Veterans Affairs",
+        "region":  "TX",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "TX Veterans Benefits Hotline",
+        "region":  "TX",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "TX Veterans Homes",
+        "region":  "TX",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "TX Claims Assistance Office",
+        "region":  "TX",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "UT State Department of Veterans Affairs",
+        "region":  "UT",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "UT Veterans Benefits Hotline",
+        "region":  "UT",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "UT Veterans Homes",
+        "region":  "UT",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "UT Claims Assistance Office",
+        "region":  "UT",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "VA State Department of Veterans Affairs",
+        "region":  "VA",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "VA Veterans Benefits Hotline",
+        "region":  "VA",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "VA Veterans Homes",
+        "region":  "VA",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "VA Claims Assistance Office",
+        "region":  "VA",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "VT State Department of Veterans Affairs",
+        "region":  "VT",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "VT Veterans Benefits Hotline",
+        "region":  "VT",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "VT Veterans Homes",
+        "region":  "VT",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "VT Claims Assistance Office",
+        "region":  "VT",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "WA State Department of Veterans Affairs",
+        "region":  "WA",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "WA Veterans Benefits Hotline",
+        "region":  "WA",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "WA Veterans Homes",
+        "region":  "WA",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "WA Claims Assistance Office",
+        "region":  "WA",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "WI State Department of Veterans Affairs",
+        "region":  "WI",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "WI Veterans Benefits Hotline",
+        "region":  "WI",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "WI Veterans Homes",
+        "region":  "WI",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "WI Claims Assistance Office",
+        "region":  "WI",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "WV State Department of Veterans Affairs",
+        "region":  "WV",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "WV Veterans Benefits Hotline",
+        "region":  "WV",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "WV Veterans Homes",
+        "region":  "WV",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "WV Claims Assistance Office",
+        "region":  "WV",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    },
+    {
+        "scope":  "state",
+        "name":  "WY State Department of Veterans Affairs",
+        "region":  "WY",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State VA department."
+    },
+    {
+        "scope":  "state",
+        "name":  "WY Veterans Benefits Hotline",
+        "region":  "WY",
+        "phone":  "",
+        "website":  "",
+        "category":  "benefits",
+        "notes":  "State-level benefits inquiries."
+    },
+    {
+        "scope":  "state",
+        "name":  "WY Veterans Homes",
+        "region":  "WY",
+        "phone":  "",
+        "website":  "",
+        "category":  "housing",
+        "notes":  "State Veterans homes."
+    },
+    {
+        "scope":  "state",
+        "name":  "WY Claims Assistance Office",
+        "region":  "WY",
+        "phone":  "",
+        "website":  "",
+        "category":  "legal",
+        "notes":  "State claims assistance."
+    }
+]

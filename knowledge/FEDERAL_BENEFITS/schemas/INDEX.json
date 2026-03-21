@@ -1,0 +1,20 @@
+﻿{
+    "folder":  "FEDERAL_BENEFITS\\schemas",
+    "generated":  "2026-03-14T11:27:10.8563070-06:00",
+    "files":  [
+                  {
+                      "name":  "PURPOSE.md",
+                      "path":  "FEDERAL_BENEFITS\\schemas\\PURPOSE.md",
+                      "size":  284,
+                      "modified":  "2026-03-14T17:01:54.8228921Z",
+                      "extension":  ".md"
+                  },
+                  {
+                      "name":  "SUMMARY.md",
+                      "path":  "FEDERAL_BENEFITS\\schemas\\SUMMARY.md",
+                      "size":  319,
+                      "modified":  "2026-03-14T17:26:33.0042738Z",
+                      "extension":  ".md"
+                  }
+              ]
+}

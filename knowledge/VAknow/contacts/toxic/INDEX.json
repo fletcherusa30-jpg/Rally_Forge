@@ -1,0 +1,27 @@
+﻿{
+    "folder":  "VAknow\\contacts\\toxic",
+    "generated":  "2026-03-14T11:26:33.6161747-06:00",
+    "files":  [
+                  {
+                      "name":  "PURPOSE.md",
+                      "path":  "VAknow\\contacts\\toxic\\PURPOSE.md",
+                      "size":  326,
+                      "modified":  "2026-03-14T17:26:33.6161747Z",
+                      "extension":  ".md"
+                  },
+                  {
+                      "name":  "SUMMARY.md",
+                      "path":  "VAknow\\contacts\\toxic\\SUMMARY.md",
+                      "size":  315,
+                      "modified":  "2026-03-14T17:26:33.6161747Z",
+                      "extension":  ".md"
+                  },
+                  {
+                      "name":  "toxic_contacts.json",
+                      "path":  "VAknow\\contacts\\toxic\\toxic_contacts.json",
+                      "size":  564,
+                      "modified":  "2026-03-14T17:18:14.1433651Z",
+                      "extension":  ".json"
+                  }
+              ]
+}

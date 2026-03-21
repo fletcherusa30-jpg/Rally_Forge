@@ -1,0 +1,27 @@
+﻿{
+    "folder":  "VAknow\\contacts\\state\\CO",
+    "generated":  "2026-03-14T11:26:33.7994217-06:00",
+    "files":  [
+                  {
+                      "name":  "contacts.json",
+                      "path":  "VAknow\\contacts\\state\\CO\\contacts.json",
+                      "size":  579,
+                      "modified":  "2026-03-14T17:13:50.9725004Z",
+                      "extension":  ".json"
+                  },
+                  {
+                      "name":  "PURPOSE.md",
+                      "path":  "VAknow\\contacts\\state\\CO\\PURPOSE.md",
+                      "size":  317,
+                      "modified":  "2026-03-14T17:26:33.7974136Z",
+                      "extension":  ".md"
+                  },
+                  {
+                      "name":  "SUMMARY.md",
+                      "path":  "VAknow\\contacts\\state\\CO\\SUMMARY.md",
+                      "size":  309,
+                      "modified":  "2026-03-14T17:26:33.7994217Z",
+                      "extension":  ".md"
+                  }
+              ]
+}

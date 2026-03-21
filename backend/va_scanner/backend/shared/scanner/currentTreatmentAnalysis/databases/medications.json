@@ -1,0 +1,53 @@
+{
+  "medications": {
+    "description": "VA Drug Formulary reference database",
+    "lastUpdated": "2026-03-17T00:00:00Z",
+    "disclaimer": "This is a sample subset. Full database integrates with VA National Formulary (NF) and FDA database",
+    "sampleMedications": [
+      {
+        "drugName": "Metformin",
+        "genericName": "metformin hydrochloride",
+        "ndc": "00093-7671-01",
+        "category": "Antidiabetic",
+        "commonDosages": [
+          "500 mg",
+          "850 mg",
+          "1000 mg"
+        ],
+        "commonFrequencies": [
+          "OD",
+          "BID",
+          "TID"
+        ]
+      },
+      {
+        "drugName": "Sertraline",
+        "genericName": "sertraline hydrochloride",
+        "ndc": "00093-0099-84",
+        "category": "Antidepressant/Anxiolytic",
+        "commonDosages": [
+          "50 mg",
+          "100 mg",
+          "200 mg"
+        ],
+        "commonFrequencies": [
+          "OD"
+        ]
+      },
+      {
+        "drugName": "Lisinopril",
+        "genericName": "lisinopril",
+        "ndc": "00093-0147-01",
+        "category": "Antihypertensive",
+        "commonDosages": [
+          "5 mg",
+          "10 mg",
+          "20 mg"
+        ],
+        "commonFrequencies": [
+          "OD"
+        ]
+      }
+    ]
+  }
+}

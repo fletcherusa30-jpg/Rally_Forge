@@ -13,7 +13,7 @@ export const strsUploadSchema = z.object({
   file: z.object({
     originalname: z.string().min(1, 'Filename required'),
     mimetype: z.enum(['application/pdf', 'text/plain'], {
-      errorMap: () => ({ message: 'Only PDF or TXT files allowed' })
+      error: 'Only PDF or TXT files allowed'
     }),
     size: z.number()
       .max(50 * 1024 * 1024, 'File exceeds 50MB limit')
@@ -28,11 +28,11 @@ export const strsUploadSchema = z.object({
 export const onboardingSchema = z.object({
   branch: z.enum(
     ['Army', 'Navy', 'Air Force', 'Marine Corps', 'Coast Guard', 'Space Force', 'Other'],
-    { errorMap: () => ({ message: 'Invalid military branch' }) }
+    { error: 'Invalid military branch' }
   ),
   component: z.enum(
     ['Active Duty', 'Reserve', 'National Guard'],
-    { errorMap: () => ({ message: 'Invalid service component' }) }
+    { error: 'Invalid service component' }
   ),
   servicePeriods: z.array(z.object({
     startDate: z.string().date('Invalid start date format (YYYY-MM-DD)'),

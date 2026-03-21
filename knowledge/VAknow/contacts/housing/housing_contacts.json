@@ -1,0 +1,38 @@
+﻿[
+    {
+        "scope":  "housing",
+        "name":  "HUD-VASH",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.va.gov/homeless/hud-vash.asp",
+        "category":  "housing",
+        "notes":  "HUD-VASH housing program."
+    },
+    {
+        "scope":  "housing",
+        "name":  "SSVF",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.va.gov/homeless/ssvf",
+        "category":  "housing",
+        "notes":  "Supportive Services for Veteran Families."
+    },
+    {
+        "scope":  "housing",
+        "name":  "National Coalition for Homeless Veterans",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://nchv.org",
+        "category":  "housing",
+        "notes":  "Homeless Veterans advocacy and resources."
+    },
+    {
+        "scope":  "housing",
+        "name":  "HUD Housing Counseling",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.hud.gov/offices/hsg/sfh/hcc/hcs.cfm",
+        "category":  "housing",
+        "notes":  "Housing counseling resources."
+    }
+]

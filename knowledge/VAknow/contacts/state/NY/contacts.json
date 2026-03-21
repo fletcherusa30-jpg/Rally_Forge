@@ -1,0 +1,26 @@
+﻿[
+    {
+        "category":  "state",
+        "name":  "NY State Department of Veterans Affairs",
+        "website":  "",
+        "phone":  ""
+    },
+    {
+        "category":  "state",
+        "name":  "NY Veterans Benefits Hotline",
+        "website":  "",
+        "phone":  ""
+    },
+    {
+        "category":  "state",
+        "name":  "NY Veterans Homes",
+        "website":  "",
+        "phone":  ""
+    },
+    {
+        "category":  "state",
+        "name":  "NY Claims Assistance Office",
+        "website":  "",
+        "phone":  ""
+    }
+]

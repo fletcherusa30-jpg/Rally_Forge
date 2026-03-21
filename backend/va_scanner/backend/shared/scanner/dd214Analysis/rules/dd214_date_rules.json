@@ -1,0 +1,43 @@
+{
+  "rules": [
+    {
+      "ruleId": "dd214-date-entry-format",
+      "name": "Entry Date Normalization",
+      "field": "entryDate",
+      "validFormats": [
+        "YYYY-MM-DD",
+        "MM/DD/YYYY",
+        "DD MMM YYYY"
+      ],
+      "converterFunctions": [
+        "parseUSDate",
+        "parseISODate",
+        "parseWrittenDate"
+      ]
+    },
+    {
+      "ruleId": "dd214-date-separation-format",
+      "name": "Separation Date Normalization",
+      "field": "separationDate",
+      "validFormats": [
+        "YYYY-MM-DD",
+        "MM/DD/YYYY",
+        "DD MMM YYYY"
+      ],
+      "validation": "date-must-be-after-entry-date"
+    },
+    {
+      "ruleId": "dd214-date-rank-progression",
+      "name": "Rank Date Validation",
+      "validation": "rank-dates-must-be-sequential-and-within-service-period",
+      "priority": "high"
+    },
+    {
+      "ruleId": "dd214-date-length-of-service",
+      "name": "Length of Service Validation",
+      "calculation": "(separationDate - entryDate) in days",
+      "fieldMapping": "totalActiveDays",
+      "validation": "must-match-stated-service-length"
+    }
+  ]
+}

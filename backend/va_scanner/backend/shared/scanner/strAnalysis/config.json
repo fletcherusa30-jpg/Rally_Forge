@@ -1,0 +1,109 @@
+{
+  "name": "STR Scanner",
+  "version": "2.0.0",
+  "description": "Extracts diagnoses and exposures from military service treatment records",
+  "lastUpdated": "2026-03-17T00:00:00Z",
+  "maintainer": "Rally Forge Team",
+  "status": "production",
+  "extractionPipeline": [
+    "Encounter detection",
+    "Complaint extraction",
+    "Diagnosis parsing",
+    "Exposure detection",
+    "Timeline building",
+    "Chronicity scoring",
+    "Cross-validation",
+    "Output normalization"
+  ],
+  "supportedEras": [
+    "Vietnam",
+    "Gulf War",
+    "OEF/OIF",
+    "Modern"
+  ],
+  "requiredFields": [
+    "encounterDate",
+    "chiefComplaint",
+    "diagnosis",
+    "treatmentProvided",
+    "injuryDate",
+    "bodyPartAffected",
+    "lineOfDuty",
+    "exposureType"
+  ],
+  "optionalFields": [
+    "providerType",
+    "specialty",
+    "dutyLimitations",
+    "mosRelatedInjury",
+    "deploymentRelatedIssue",
+    "sexualAssaultReport",
+    "substanceUseDocumentation",
+    "labResults",
+    "priorDeploymentScreening",
+    "postDeploymentHealth"
+  ],
+  "validationRules": {
+    "encountersInChronologicalOrder": true,
+    "diagnosisMustBeValid": true,
+    "exposureKeywordRecognition": true,
+    "pulhesProfileValidation": true
+  },
+  "confidenceThresholds": {
+    "encounterDetection": 0.85,
+    "diagnosisExtraction": 0.80,
+    "exposureDetection": 0.75,
+    "chronologyValidation": 0.90
+  },
+  "exposureDetection": {
+    "vietnamEraKeywords": [
+      "Agent Orange",
+      "herbicide",
+      "defoliant",
+      "dioxin"
+    ],
+    "gulfWarKeywords": [
+      "Burn pit",
+      "depleted uranium",
+      "pesticides",
+      "anthrax vaccine",
+      "pyridostigmine"
+    ],
+    "oefOifKeywords": [
+      "Burn pit",
+      "IED",
+      "blast",
+      "particulate",
+      "contamination",
+      "dust storm",
+      "sand storm"
+    ],
+    "universalKeywords": [
+      "Chemical",
+      "Biological",
+      "Radiation",
+      "Lead",
+      "Asbestos",
+      "Noise"
+    ]
+  },
+  "errorHandling": {
+    "unreadableEncounterStrategy": "skip-and-log",
+    "missingDiagnosisStrategy": "extract-complaint-only",
+    "invalidDateFormatStrategy": "best-guess-and-flag",
+    "unrecognizedExposureStrategy": "extract-text-and-flag",
+    "criticalErrorsStopProcessing": true
+  },
+  "metadata": {
+    "scannerId": "str-analysis-v2.0.0",
+    "scannerType": "military-medical-record",
+    "documentType": "service-treatment-record",
+    "capabilities": {
+      "encounterDetection": true,
+      "exposureDetection": true,
+      "chronologyValidation": true,
+      "chronicityScoring": true,
+      "dutyLimitationDetection": true
+    }
+  }
+}

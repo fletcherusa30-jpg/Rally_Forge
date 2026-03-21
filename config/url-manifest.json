@@ -1,0 +1,281 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-03-17T00:00:00.000Z",
+  "sources": {
+    "previousWorkingCommits": [
+      "fd54c1e",
+      "8e2e49a",
+      "9511fbe"
+    ],
+    "documentation": [
+      "docs/architecture/ARCHITECTURE.md",
+      "docs/api/strs-api-contract.md",
+      "docs/api/audit-metadata.md"
+    ],
+    "dbqIndex": [
+      "/api/claim-workspace/dbq-index"
+    ],
+    "cfrMicroservice": [
+      "/api/cfr/status",
+      "/api/cfr/38/part/:partNumber",
+      "/api/cfr/38/part/:partNumber/section/:sectionNumber",
+      "/api/cfr/38/part/4/dx/:dxCode"
+    ],
+    "scannerEndpoints": [
+      "/api/scanner",
+      "/api/scanner/test",
+      "/api/scanner/health",
+      "/api/scanner/diagnostics",
+      "/api/scanner/export",
+      "/api/scanner/scan-pdf",
+      "/api/scanner/scan-dd214",
+      "/api/scanner/scan-str-text",
+      "/api/scanner/scan-current-treatment-text",
+      "/api/scanner/scan-current-treatment-pdf",
+      "/api/scanner/scan-va-decision",
+      "/api/scanner/scan-fusion",
+      "/api/scanner/cross-verify",
+      "/api/scanner/validate-schema",
+      "/api/scanner/queue-pdf",
+      "/api/scanner/queue-pdf/:jobId"
+    ],
+    "analyzerEndpoints": [
+      "/api/intelligence",
+      "/api/intelligence/analyze",
+      "/api/ai/analyze-denied-condition",
+      "/api/ai/analyze-bulk",
+      "/api/ai/health",
+      "/api/claim-workspace/analyzer-index"
+    ],
+    "staticAssetPaths": [
+      "/ai/config.json",
+      "/financial-planner.html",
+      "/favicon.svg",
+      "/LOGO.png"
+    ]
+  },
+  "canonical": {
+    "exact": [
+      "/api/health",
+      "/api/audit/metadata",
+      "/api/audit/scan",
+      "/api/audit/resolve-all",
+      "/api/auth/login",
+      "/api/auth/logout",
+      "/api/auth/refresh",
+      "/api/auth/me",
+      "/api/auth/verify",
+      "/api/scanner",
+      "/api/scanner/test",
+      "/api/scanner/health",
+      "/api/scanner/diagnostics",
+      "/api/scanner/export",
+      "/api/scanner/scan-pdf",
+      "/api/scanner/scan-dd214",
+      "/api/scanner/scan-str-text",
+      "/api/scanner/scan-current-treatment-text",
+      "/api/scanner/scan-current-treatment-pdf",
+      "/api/scanner/scan-va-decision",
+      "/api/scanner/scan-fusion",
+      "/api/scanner/cross-verify",
+      "/api/scanner/validate-schema",
+      "/api/scanner/queue-pdf",
+      "/api/strs/upload",
+      "/api/strs/upload-sync",
+      "/api/strs/status/:jobId",
+      "/api/strs/status/batch",
+      "/api/strs/queue/stats",
+      "/api/strs/health",
+      "/api/strs/feedback",
+      "/api/strs/feedback/summary",
+      "/api/strs/feedback/recent",
+      "/api/compensation",
+      "/api/compensation/quote",
+      "/api/compensation/backpay",
+      "/api/compensation/years",
+      "/api/compensation/supported-years",
+      "/api/financial",
+      "/api/financial/budget",
+      "/api/financial/retirement",
+      "/api/financial/plan",
+      "/api/military/records",
+      "/api/military/presumptive-knowledge",
+      "/api/military/radiation-operations",
+      "/api/military/match-deployment",
+      "/api/military/save-records",
+      "/api/military/add-record",
+      "/api/military/records/:id",
+      "/api/military/stats",
+      "/api/knowledge/status",
+      "/api/knowledge/cases",
+      "/api/knowledge/cases/timeline",
+      "/api/knowledge/cases/:caseId",
+      "/api/knowledge/cases/year/:year",
+      "/api/knowledge/search",
+      "/api/knowledge/condition/:conditionName",
+      "/api/knowledge/diagnostic-code/:code",
+      "/api/knowledge/part4/diagnostic/search",
+      "/api/knowledge/part4/diagnostic/:code",
+      "/api/cases",
+      "/api/cases/timeline",
+      "/api/cases/year/:year",
+      "/api/cases/topic/:topic",
+      "/api/cases/search",
+      "/api/cases/regulatory-references",
+      "/api/cases/:caseId",
+      "/api/state-benefits/states",
+      "/api/state-benefits/stats",
+      "/api/state-benefits/structured/:stateCode",
+      "/api/state-benefits/:stateCode/eligible",
+      "/api/state-benefits/category/:categoryName",
+      "/api/state-benefits/search",
+      "/api/state-benefits/compare",
+      "/api/state-benefits/:stateCode",
+      "/api/reviews",
+      "/api/claim-workspace",
+      "/api/claim-workspace/dbq-index",
+      "/api/claim-workspace/analyzer-index",
+      "/api/benefits/recalculate",
+      "/api/cfr/status",
+      "/api/cfr/38/part/:partNumber",
+      "/api/cfr/38/part/:partNumber/section/:sectionNumber",
+      "/api/cfr/38/part/4/dx/:dxCode",
+      "/api/intelligence",
+      "/api/intelligence/analyze",
+      "/api/ai/analyze-denied-condition",
+      "/api/ai/analyze-bulk",
+      "/api/ai/health",
+      "/api/ai-test/conditions",
+      "/api/ai-test/validate",
+      "/api/ai-test/run-suite",
+      "/api/ai-test/theory-guide",
+      "/api/evidence-graph/status",
+      "/api/evidence-graph/veteran/:veteranId/bundles",
+      "/api/evidence-graph/veteran/:veteranId/conditions",
+      "/api/evidence-graph/veteran/:veteranId/timeline",
+      "/api/evidence-graph/snapshot",
+      "/api/evidence-graph/metrics",
+      "/api/evidence-graph/ingest/dd214",
+      "/api/evidence-graph/ingest/str",
+      "/api/evidence-graph/ingest/rating-decision",
+      "/api/evidence-graph/verify/:veteranId",
+      "/ai/config.json",
+      "/financial-planner.html",
+      "/favicon.svg",
+      "/LOGO.png"
+    ],
+    "patterns": [
+      "^/api/strs/status/[^/]+$",
+      "^/api/scanner/queue-pdf/[^/]+$",
+      "^/api/military/records/[^/]+$",
+      "^/api/cases/[^/]+$",
+      "^/api/knowledge/cases/[^/]+$",
+      "^/api/knowledge/condition/[^/]+$",
+      "^/api/knowledge/search[?]q=.*$",
+      "^/api/compensation[?].*$",
+      "^/api/state-benefits/structured/[^/?]+[?].*$",
+      "^/api/state-benefits/[^/?]+$",
+      "^/api/evidence-graph/veteran/[^/]+/(bundles|conditions|timeline)$",
+      "^/api/evidence-graph/verify/[^/]+$",
+      "^/api/cfr/38/part/[0-9]+$",
+      "^/api/cfr/38/part/[0-9]+/section/[0-9A-Za-z.-]+$",
+      "^/api/cfr/38/part/4/dx/[0-9A-Za-z.-]+$"
+    ]
+  },
+  "legacyMappings": [
+    {
+      "legacy": "/api/financial-planner",
+      "canonical": "/api/financial",
+      "reason": "Financial planner route namespace was consolidated"
+    },
+    {
+      "legacy": "/api/scanner/diagnostic",
+      "canonical": "/api/scanner/diagnostics",
+      "reason": "Scanner diagnostics endpoint naming normalization"
+    },
+    {
+      "legacy": "/api/compensation/calculate",
+      "canonical": "/api/compensation/quote",
+      "reason": "Compensation API contract modernization"
+    }
+  ],
+  "requiredUrls": [
+    {
+      "url": "/api/scanner/scan-pdf",
+      "requiredIn": [
+        "app/frontend-modern/src/pages/benefits/VARatingDecisionPage.jsx",
+        "app/frontend-modern/src/components/va/VAScannerCard.jsx"
+      ]
+    },
+    {
+      "url": "/api/scanner/scan-dd214",
+      "requiredIn": [
+        "app/frontend-modern/src/pages/MilitaryServicePage.jsx"
+      ]
+    },
+    {
+      "url": "/api/scanner/scan-current-treatment-pdf",
+      "requiredIn": [
+        "app/frontend-modern/src/pages/treatment/CurrentTreatmentPage.jsx"
+      ]
+    },
+    {
+      "url": "/api/claim-workspace/dbq-index",
+      "requiredIn": [
+        "app/frontend-modern/src/pages/scanner/ScannerHub.jsx"
+      ]
+    },
+    {
+      "url": "/api/claim-workspace/analyzer-index",
+      "requiredIn": [
+        "app/frontend-modern/src/pages/scanner/ScannerHub.jsx"
+      ]
+    },
+    {
+      "url": "/api/cfr/status",
+      "requiredIn": [
+        "tests/scanner/cfr-api-route.test.js"
+      ]
+    }
+  ],
+  "validation": {
+    "include": [
+      "app/frontend-modern/src",
+      "backend",
+      "tests",
+      "public",
+      "ai/config.json",
+      "financial-planner.html",
+      "vite.config.js",
+      "app/frontend-modern/vite.config.js"
+    ],
+    "extensions": [
+      ".js",
+      ".jsx",
+      ".ts",
+      ".tsx",
+      ".mjs",
+      ".cjs",
+      ".json",
+      ".html",
+      ".md",
+      ".txt"
+    ],
+    "exclude": [
+      "node_modules",
+      ".git",
+      "dist",
+      "coverage",
+      "logs"
+    ]
+  },
+  "serviceChecks": [
+    { "url": "/api/health", "method": "GET", "expectAnyOf": [200] },
+    { "url": "/api/scanner/health", "method": "GET", "expectAnyOf": [200] },
+    { "url": "/api/cfr/status", "method": "GET", "expectAnyOf": [200] },
+    { "url": "/api/claim-workspace/dbq-index", "method": "GET", "expectAnyOf": [200] },
+    { "url": "/api/claim-workspace/analyzer-index", "method": "GET", "expectAnyOf": [200] },
+    { "url": "/api/intelligence", "method": "GET", "expectAnyOf": [200] },
+    { "url": "/api/evidence-graph/status", "method": "GET", "expectAnyOf": [200] }
+  ]
+}

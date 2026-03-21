@@ -1,0 +1,560 @@
+{
+    "mos": [
+        {
+            "code": "1A0X1",
+            "title": "In-Flight Refueling",
+            "type": "enlisted"
+        },
+        {
+            "code": "1A1X1",
+            "title": "Flight Engineer",
+            "type": "enlisted"
+        },
+        {
+            "code": "1A2X1",
+            "title": "Aircraft Loadmaster",
+            "type": "enlisted"
+        },
+        {
+            "code": "1A3X1",
+            "title": "Airborne Mission Systems",
+            "type": "enlisted"
+        },
+        {
+            "code": "1A6X1",
+            "title": "Flight Attendant",
+            "type": "enlisted"
+        },
+        {
+            "code": "1A8X1",
+            "title": "Airborne Cryptologic Language Analyst",
+            "type": "enlisted"
+        },
+        {
+            "code": "1A8X2",
+            "title": "Airborne ISR Operator",
+            "type": "enlisted"
+        },
+        {
+            "code": "1B4X1",
+            "title": "Cyber Warfare Operations",
+            "type": "enlisted"
+        },
+        {
+            "code": "1C0X2",
+            "title": "Aviation Resource Management",
+            "type": "enlisted"
+        },
+        {
+            "code": "1C1X1",
+            "title": "Air Traffic Control",
+            "type": "enlisted"
+        },
+        {
+            "code": "1C2X1",
+            "title": "Combat Control",
+            "type": "enlisted"
+        },
+        {
+            "code": "1C3X1",
+            "title": "Command Post",
+            "type": "enlisted"
+        },
+        {
+            "code": "1C4X1",
+            "title": "Tactical Air Control Party",
+            "type": "enlisted"
+        },
+        {
+            "code": "1N0X1",
+            "title": "Intelligence Analyst",
+            "type": "enlisted"
+        },
+        {
+            "code": "1N1X1",
+            "title": "Geospatial Intelligence",
+            "type": "enlisted"
+        },
+        {
+            "code": "1N2X1",
+            "title": "Signals Intelligence",
+            "type": "enlisted"
+        },
+        {
+            "code": "1N3X1",
+            "title": "Cryptologic Language Analyst",
+            "type": "enlisted"
+        },
+        {
+            "code": "1N4X1",
+            "title": "Fusion Analyst",
+            "type": "enlisted"
+        },
+        {
+            "code": "1P0X1",
+            "title": "Aircrew Flight Equipment",
+            "type": "enlisted"
+        },
+        {
+            "code": "1S0X1",
+            "title": "Safety",
+            "type": "enlisted"
+        },
+        {
+            "code": "1T0X1",
+            "title": "SERE Specialist",
+            "type": "enlisted"
+        },
+        {
+            "code": "1U0X1",
+            "title": "RPA Sensor Operator",
+            "type": "enlisted"
+        },
+        {
+            "code": "2A0X1",
+            "title": "Avionics Test Station",
+            "type": "enlisted"
+        },
+        {
+            "code": "2A3X3",
+            "title": "Tactical Aircraft Maintenance",
+            "type": "enlisted"
+        },
+        {
+            "code": "2A5X1",
+            "title": "Aerospace Maintenance",
+            "type": "enlisted"
+        },
+        {
+            "code": "2A6X1",
+            "title": "Aerospace Propulsion",
+            "type": "enlisted"
+        },
+        {
+            "code": "2A7X1",
+            "title": "Aircraft Metals Technology",
+            "type": "enlisted"
+        },
+        {
+            "code": "2F0X1",
+            "title": "Fuels",
+            "type": "enlisted"
+        },
+        {
+            "code": "2G0X1",
+            "title": "Logistics Plans",
+            "type": "enlisted"
+        },
+        {
+            "code": "2M0X1",
+            "title": "Missile & Space Systems Maintenance",
+            "type": "enlisted"
+        },
+        {
+            "code": "2P0X1",
+            "title": "Precision Measurement Equipment",
+            "type": "enlisted"
+        },
+        {
+            "code": "2R0X1",
+            "title": "Maintenance Management Analysis",
+            "type": "enlisted"
+        },
+        {
+            "code": "2S0X1",
+            "title": "Supply Management",
+            "type": "enlisted"
+        },
+        {
+            "code": "2T0X1",
+            "title": "Traffic Management",
+            "type": "enlisted"
+        },
+        {
+            "code": "2T1X1",
+            "title": "Vehicle Operations",
+            "type": "enlisted"
+        },
+        {
+            "code": "2T2X1",
+            "title": "Air Transportation",
+            "type": "enlisted"
+        },
+        {
+            "code": "2W0X1",
+            "title": "Munitions Systems",
+            "type": "enlisted"
+        },
+        {
+            "code": "2W1X1",
+            "title": "Aircraft Armament Systems",
+            "type": "enlisted"
+        },
+        {
+            "code": "2W2X1",
+            "title": "Nuclear Weapons",
+            "type": "enlisted"
+        },
+        {
+            "code": "3D0X1",
+            "title": "Knowledge Operations",
+            "type": "enlisted"
+        },
+        {
+            "code": "3D1X2",
+            "title": "Cyber Transport",
+            "type": "enlisted"
+        },
+        {
+            "code": "3D1X3",
+            "title": "RF Transmission",
+            "type": "enlisted"
+        },
+        {
+            "code": "3E0X1",
+            "title": "Electrical Systems",
+            "type": "enlisted"
+        },
+        {
+            "code": "3E1X1",
+            "title": "HVAC",
+            "type": "enlisted"
+        },
+        {
+            "code": "3E2X1",
+            "title": "Pavements & Construction",
+            "type": "enlisted"
+        },
+        {
+            "code": "3E3X1",
+            "title": "Structural",
+            "type": "enlisted"
+        },
+        {
+            "code": "3E4X1",
+            "title": "Water & Fuel Systems",
+            "type": "enlisted"
+        },
+        {
+            "code": "3E5X1",
+            "title": "Engineering",
+            "type": "enlisted"
+        },
+        {
+            "code": "3F0X1",
+            "title": "Personnel",
+            "type": "enlisted"
+        },
+        {
+            "code": "3F1X1",
+            "title": "Services",
+            "type": "enlisted"
+        },
+        {
+            "code": "3F2X1",
+            "title": "Education & Training",
+            "type": "enlisted"
+        },
+        {
+            "code": "3F3X1",
+            "title": "Manpower",
+            "type": "enlisted"
+        },
+        {
+            "code": "3G0X1",
+            "title": "Equal Opportunity",
+            "type": "enlisted"
+        },
+        {
+            "code": "3N0X2",
+            "title": "Broadcast Journalism",
+            "type": "enlisted"
+        },
+        {
+            "code": "3N1X1",
+            "title": "Public Affairs",
+            "type": "enlisted"
+        },
+        {
+            "code": "3P0X1",
+            "title": "Security Forces",
+            "type": "enlisted"
+        },
+        {
+            "code": "4A0X1",
+            "title": "Health Services Management",
+            "type": "enlisted"
+        },
+        {
+            "code": "4A1X1",
+            "title": "Medical Materiel",
+            "type": "enlisted"
+        },
+        {
+            "code": "4B0X1",
+            "title": "Bioenvironmental Engineering",
+            "type": "enlisted"
+        },
+        {
+            "code": "4C0X1",
+            "title": "Mental Health Service",
+            "type": "enlisted"
+        },
+        {
+            "code": "4D0X1",
+            "title": "Diet Therapy",
+            "type": "enlisted"
+        },
+        {
+            "code": "4E0X1",
+            "title": "Public Health",
+            "type": "enlisted"
+        },
+        {
+            "code": "4H0X1",
+            "title": "Cardiopulmonary Laboratory",
+            "type": "enlisted"
+        },
+        {
+            "code": "4J0X2",
+            "title": "Physical Medicine",
+            "type": "enlisted"
+        },
+        {
+            "code": "4M0X1",
+            "title": "Aerospace & Operational Physiology",
+            "type": "enlisted"
+        },
+        {
+            "code": "4N0X1",
+            "title": "Aerospace Medical Service",
+            "type": "enlisted"
+        },
+        {
+            "code": "4N1X1",
+            "title": "Surgical Service",
+            "type": "enlisted"
+        },
+        {
+            "code": "4P0X1",
+            "title": "Pharmacy",
+            "type": "enlisted"
+        },
+        {
+            "code": "4R0X1",
+            "title": "Diagnostic Imaging",
+            "type": "enlisted"
+        },
+        {
+            "code": "4T0X1",
+            "title": "Medical Laboratory",
+            "type": "enlisted"
+        },
+        {
+            "code": "4V0X1",
+            "title": "Optometry",
+            "type": "enlisted"
+        },
+        {
+            "code": "4Y0X1",
+            "title": "Dental Assistant",
+            "type": "enlisted"
+        },
+        {
+            "code": "5J0X1",
+            "title": "Paralegal",
+            "type": "enlisted"
+        },
+        {
+            "code": "5R0X1",
+            "title": "Chaplain Assistant",
+            "type": "enlisted"
+        },
+        {
+            "code": "6C0X1",
+            "title": "Contracting",
+            "type": "enlisted"
+        },
+        {
+            "code": "6F0X1",
+            "title": "Financial Management",
+            "type": "enlisted"
+        },
+        {
+            "code": "7S0X1",
+            "title": "Special Investigations",
+            "type": "enlisted"
+        },
+        {
+            "code": "9S100",
+            "title": "Scientific Applications Specialist",
+            "type": "enlisted"
+        },
+        {
+            "code": "9T100",
+            "title": "Officer Trainee",
+            "type": "enlisted"
+        },
+        {
+            "code": "9T200",
+            "title": "Pre-Commissioning",
+            "type": "enlisted"
+        },
+        {
+            "code": "11BX",
+            "title": "Bomber Pilot",
+            "type": "officer"
+        },
+        {
+            "code": "11FX",
+            "title": "Fighter Pilot",
+            "type": "officer"
+        },
+        {
+            "code": "11HX",
+            "title": "Helicopter Pilot",
+            "type": "officer"
+        },
+        {
+            "code": "11SX",
+            "title": "Special Operations Pilot",
+            "type": "officer"
+        },
+        {
+            "code": "12BX",
+            "title": "Bomber Navigator",
+            "type": "officer"
+        },
+        {
+            "code": "12SX",
+            "title": "Special Operations Combat Systems Officer",
+            "type": "officer"
+        },
+        {
+            "code": "13BX",
+            "title": "Air Battle Manager",
+            "type": "officer"
+        },
+        {
+            "code": "13DX",
+            "title": "Nuclear and Missile Operations",
+            "type": "officer"
+        },
+        {
+            "code": "13NX",
+            "title": "Nuclear and Missile Operations",
+            "type": "officer"
+        },
+        {
+            "code": "13SX",
+            "title": "Space Operations Officer",
+            "type": "officer"
+        },
+        {
+            "code": "14NX",
+            "title": "Intelligence Officer",
+            "type": "officer"
+        },
+        {
+            "code": "15WX",
+            "title": "Weather Officer",
+            "type": "officer"
+        },
+        {
+            "code": "16GX",
+            "title": "Air Force Operations Staff Officer",
+            "type": "officer"
+        },
+        {
+            "code": "17DX",
+            "title": "Cyberspace Operations Officer",
+            "type": "officer"
+        },
+        {
+            "code": "21AX",
+            "title": "Aircraft Maintenance Officer",
+            "type": "officer"
+        },
+        {
+            "code": "21MX",
+            "title": "Munitions and Missile Maintenance Officer",
+            "type": "officer"
+        },
+        {
+            "code": "31PX",
+            "title": "Security Forces Officer",
+            "type": "officer"
+        },
+        {
+            "code": "32EX",
+            "title": "Civil Engineer Officer",
+            "type": "officer"
+        },
+        {
+            "code": "33SX",
+            "title": "Communications Officer",
+            "type": "officer"
+        },
+        {
+            "code": "34MX",
+            "title": "Services Officer",
+            "type": "officer"
+        },
+        {
+            "code": "35PX",
+            "title": "Public Affairs Officer",
+            "type": "officer"
+        },
+        {
+            "code": "38FX",
+            "title": "Force Support Officer",
+            "type": "officer"
+        },
+        {
+            "code": "43HX",
+            "title": "Biomedical Laboratory Officer",
+            "type": "officer"
+        },
+        {
+            "code": "44MX",
+            "title": "Flight Surgeon",
+            "type": "officer"
+        },
+        {
+            "code": "46MX",
+            "title": "Nurse Officer",
+            "type": "officer"
+        },
+        {
+            "code": "51JX",
+            "title": "Judge Advocate",
+            "type": "officer"
+        },
+        {
+            "code": "61AX",
+            "title": "Operations Research Analyst",
+            "type": "officer"
+        },
+        {
+            "code": "62EX",
+            "title": "Developmental Engineer",
+            "type": "officer"
+        },
+        {
+            "code": "63AX",
+            "title": "Acquisition Manager",
+            "type": "officer"
+        },
+        {
+            "code": "64PX",
+            "title": "Contracting Officer",
+            "type": "officer"
+        },
+        {
+            "code": "65FX",
+            "title": "Financial Management Officer",
+            "type": "officer"
+        }
+    ],
+    "branch": "Air Force"
+}

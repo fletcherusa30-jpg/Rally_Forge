@@ -1,0 +1,20 @@
+﻿{
+  "name": "federal_benefit",
+  "version": "1.0.0",
+  "fields": {
+    "benefit_id": "string",
+    "title": "string",
+    "short_description": "string",
+    "long_description": "string",
+    "authority_citation": "string",        // e.g., 38 CFR x.x, 38 U.S.C. xxxxx
+    "administering_agency": "string",      // e.g., VA, DoD, SSA
+    "disability_percentage_min": "number",
+    "disability_percentage_max": "number",
+    "eligibility_criteria": "array",       // list of strings
+    "target_population": "array",          // e.g., "veteran", "survivor", "spouse"
+    "benefit_type": "string",              // e.g., "compensation", "healthcare", "education"
+    "application_pathways": "array",       // e.g., forms, portals
+    "interactions": "array",               // related benefits, offsets, dependencies
+    "notes": "string"
+  }
+}

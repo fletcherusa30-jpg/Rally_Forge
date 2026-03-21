@@ -1,0 +1,31 @@
+﻿{
+    "folder":  "C:\\Dev\\Rally Forge\\knowledge\\VAknow\\healthcare",
+    "files":  [
+                  {
+                      "Name":  "community_care.md",
+                      "Length":  335,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "eligibility.md",
+                      "Length":  379,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "priority_groups.md",
+                      "Length":  389,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "PURPOSE.md",
+                      "Length":  277,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "urgent_care.md",
+                      "Length":  395,
+                      "Extension":  ".md"
+                  }
+              ],
+    "generated":  "2026-03-14"
+}

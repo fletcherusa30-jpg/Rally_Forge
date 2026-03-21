@@ -1,0 +1,27 @@
+﻿{
+    "folder":  "VAknow\\contacts\\state\\AL",
+    "generated":  "2026-03-14T11:26:33.7478015-06:00",
+    "files":  [
+                  {
+                      "name":  "contacts.json",
+                      "path":  "VAknow\\contacts\\state\\AL\\contacts.json",
+                      "size":  579,
+                      "modified":  "2026-03-14T17:13:50.9638605Z",
+                      "extension":  ".json"
+                  },
+                  {
+                      "name":  "PURPOSE.md",
+                      "path":  "VAknow\\contacts\\state\\AL\\PURPOSE.md",
+                      "size":  317,
+                      "modified":  "2026-03-14T17:26:33.7478015Z",
+                      "extension":  ".md"
+                  },
+                  {
+                      "name":  "SUMMARY.md",
+                      "path":  "VAknow\\contacts\\state\\AL\\SUMMARY.md",
+                      "size":  309,
+                      "modified":  "2026-03-14T17:26:33.7478015Z",
+                      "extension":  ".md"
+                  }
+              ]
+}

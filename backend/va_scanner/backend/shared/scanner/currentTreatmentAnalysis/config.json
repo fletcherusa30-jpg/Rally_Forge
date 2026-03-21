@@ -1,0 +1,113 @@
+{
+  "name": "Current Treatment Scanner",
+  "version": "2.0.0",
+  "description": "Extracts active diagnoses, medications, and treatment from clinical documentation",
+  "lastUpdated": "2026-03-17T00:00:00Z",
+  "maintainer": "Rally Forge Team",
+  "status": "production",
+  "extractionPipeline": [
+    "Document format detection",
+    "Condition extraction",
+    "Medication extraction",
+    "Symptom extraction",
+    "Treatment frequency extraction",
+    "Functional impact assessment",
+    "Severity scoring",
+    "Cross-validation",
+    "Output normalization"
+  ],
+  "requiredFields": [
+    "activeConditions",
+    "medications",
+    "symptoms",
+    "treatmentFrequency",
+    "functionalImpact"
+  ],
+  "optionalFields": [
+    "icd10Codes",
+    "labResults",
+    "imagingFindings",
+    "providerCredentials",
+    "telehealth",
+    "refillHistory",
+    "goalProgressNotes",
+    "comorbidityFlags"
+  ],
+  "validationRules": {
+    "activeVsResolvedDistinction": true,
+    "medicationIndicationRequired": false,
+    "dosageNormalization": true,
+    "frequencyNormalization": true,
+    "functionalImpactRequired": false,
+    "symptomSeverityRequired": false
+  },
+  "confidenceThresholds": {
+    "conditionExtraction": 0.80,
+    "medicationExtraction": 0.85,
+    "symptomExtraction": 0.75,
+    "functionalImpactAssessment": 0.70,
+    "severityScoring": 0.65
+  },
+  "documentFormats": {
+    "soap": {
+      "enabled": true,
+      "subjectiveSection": "Patient reports",
+      "objectiveSection": "Vital signs, exam findings",
+      "assessmentSection": "Impressions, diagnoses",
+      "planSection": "Treatment/follow-up"
+    },
+    "medicationList": {
+      "enabled": true,
+      "formats": [
+        "structured-table",
+        "narrative-summary",
+        "rx-block"
+      ]
+    },
+    "progressNote": {
+      "enabled": true,
+      "requires": [
+        "date-stamp",
+        "provider-identifier",
+        "encounter-classification"
+      ]
+    }
+  },
+  "medicationDetection": {
+    "abbreviationNormalization": true,
+    "dosageFormats": [
+      "10 mg once daily",
+      "10mg OD",
+      "250mg TID",
+      "Q4-6H PRN"
+    ],
+    "frequencyMappings": {
+      "OD": "once daily",
+      "BID": "twice daily",
+      "TID": "three times daily",
+      "QID": "four times daily",
+      "PRN": "as needed",
+      "QHS": "at bedtime"
+    }
+  },
+  "errorHandling": {
+    "missingMedicationIndicationStrategy": "extract-drug-and-dose-only",
+    "symptomWithoutSeverityStrategy": "flag-as-present",
+    "conditionWithoutFunctionalImpactStrategy": "extract-diagnosis-only",
+    "unknownDocumentFormatStrategy": "attempt-generic-extraction",
+    "criticalErrorsStopProcessing": false
+  },
+  "metadata": {
+    "scannerId": "current-treatment-analysis-v2.0.0",
+    "scannerType": "clinical-documentation",
+    "documentType": "progress-notes",
+    "capabilities": {
+      "soapFormatDetection": true,
+      "medicationExtraction": true,
+      "symptomExtraction": true,
+      "functionalImpactAssessment": true,
+      "severityScoring": true,
+      "activeVsResolvedDetection": true
+    }
+  }
+}

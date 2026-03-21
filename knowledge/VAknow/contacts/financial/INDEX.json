@@ -1,0 +1,27 @@
+﻿{
+    "folder":  "VAknow\\contacts\\financial",
+    "generated":  "2026-03-14T11:26:33.5552808-06:00",
+    "files":  [
+                  {
+                      "name":  "financial_contacts.json",
+                      "path":  "VAknow\\contacts\\financial\\financial_contacts.json",
+                      "size":  627,
+                      "modified":  "2026-03-14T17:18:14.0437764Z",
+                      "extension":  ".json"
+                  },
+                  {
+                      "name":  "PURPOSE.md",
+                      "path":  "VAknow\\contacts\\financial\\PURPOSE.md",
+                      "size":  338,
+                      "modified":  "2026-03-14T17:26:33.5511404Z",
+                      "extension":  ".md"
+                  },
+                  {
+                      "name":  "SUMMARY.md",
+                      "path":  "VAknow\\contacts\\financial\\SUMMARY.md",
+                      "size":  323,
+                      "modified":  "2026-03-14T17:26:33.5531484Z",
+                      "extension":  ".md"
+                  }
+              ]
+}

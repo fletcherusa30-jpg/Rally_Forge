@@ -4,6 +4,8 @@
  * Uses pattern matching and heuristics to extract decision dates
  */
 
+import { normalizeDateFormat } from './dateFormatter.js';
+
 /**
  * Months in various formats
  */
@@ -22,11 +24,6 @@ const MONTH_PATTERNS = {
   december: { month: 11, patterns: ['dec', 'december', '12'] }
 };
 
-const MONTH_NAMES = [
-  'January', 'February', 'March', 'April', 'May', 'June',
-  'July', 'August', 'September', 'October', 'November', 'December'
-];
-
 /**
  * Parse month from string
  * @param {string} monthStr - Month string in any format
@@ -37,7 +34,7 @@ function parseMonth(monthStr) {
   
   const lower = monthStr.toLowerCase().trim();
   
-  for (const [monthName, monthData] of Object.entries(MONTH_PATTERNS)) {
+  for (const [, monthData] of Object.entries(MONTH_PATTERNS)) {
     if (monthData.patterns.some(p => lower.includes(p) || p.includes(lower))) {
       return monthData.month;
     }
@@ -234,7 +231,7 @@ export function intelligentlyParseDateFromPDF(documentText) {
   
   // Strategy 5: Extract all dates and prefer more recent ones (likely decision, not historical)
   const allDateMatches = [
-    ...text.matchAll(/(?:19|20)\d{2}[-\/](0[1-9]|1[0-2])[-\/](0[1-9]|[12]\d|3[01])/g),
+    ...text.matchAll(/(?:19|20)\d{2}[-/](0[1-9]|1[0-2])[-/](0[1-9]|[12]\d|3[01])/g),
     ...text.matchAll(/([A-Z][a-z]+)\s+(\d{1,2}),?\s+(19|20)\d{2}/g)
   ];
   
@@ -274,15 +271,7 @@ export function intelligentlyParseDateFromPDF(documentText) {
  * @returns {string} - Formatted date string
  */
 function formatDate(date) {
-  if (!(date instanceof Date) || isNaN(date.getTime())) {
-    return null;
-  }
-  
-  const month = MONTH_NAMES[date.getMonth()];
-  const day = date.getDate();
-  const year = date.getFullYear();
-  
-  return `${month} ${day}, ${year}`;
+  return normalizeDateFormat(date);
 }
 
 /**
@@ -302,8 +291,8 @@ export function extractDecisionDate(scannerResult) {
       if (!isNaN(date.getTime())) {
         return formatDate(date);
       }
-    } catch (error) {
-      console.error('[AI Date Parser] Error parsing metadata date:', error);
+    } catch {
+      // Malformed metadata date — fall through to text parsing
     }
   }
   

@@ -1,0 +1,34 @@
+{
+  "diagnoses": {
+    "description": "ICD-10 diagnostic code reference with VA relevance",
+    "lastUpdated": "2026-03-17T00:00:00Z",
+    "sampleDiagnoses": [
+      {
+        "icd10": "E11.9",
+        "description": "Type 2 diabetes mellitus without complications",
+        "vaRelevance": "Presumptive for Vietnam veterans (Agent Orange exposure)"
+      },
+      {
+        "icd10": "F41.1",
+        "description": "Generalized anxiety disorder",
+        "vaRelevance": "Common in service-connected ratings"
+      },
+      {
+        "icd10": "M79.3",
+        "description": "Panniculitis, unspecified",
+        "vaRelevance": "Related to Agent Orange exposure"
+      },
+      {
+        "icd10": "F32.9",
+        "description": "Major depressive disorder, single episode, unspecified",
+        "vaRelevance": "Common mental health condition in VAs"
+      },
+      {
+        "icd10": "H91.90",
+        "description": "Unspecified hearing loss, unspecified ear",
+        "vaRelevance": "Presumptive for certain eras and exposures"
+      }
+    ],
+    "note": "Full database integrates with official ICD-10 code set for validation"
+  }
+}

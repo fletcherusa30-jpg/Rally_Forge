@@ -1,0 +1,27 @@
+﻿{
+    "folder":  "VAknow\\contacts\\state\\MI",
+    "generated":  "2026-03-14T11:26:33.9792437-06:00",
+    "files":  [
+                  {
+                      "name":  "contacts.json",
+                      "path":  "VAknow\\contacts\\state\\MI\\contacts.json",
+                      "size":  579,
+                      "modified":  "2026-03-14T17:13:51.0426363Z",
+                      "extension":  ".json"
+                  },
+                  {
+                      "name":  "PURPOSE.md",
+                      "path":  "VAknow\\contacts\\state\\MI\\PURPOSE.md",
+                      "size":  317,
+                      "modified":  "2026-03-14T17:26:33.9721774Z",
+                      "extension":  ".md"
+                  },
+                  {
+                      "name":  "SUMMARY.md",
+                      "path":  "VAknow\\contacts\\state\\MI\\SUMMARY.md",
+                      "size":  309,
+                      "modified":  "2026-03-14T17:26:33.9792437Z",
+                      "extension":  ".md"
+                  }
+              ]
+}

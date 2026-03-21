@@ -1,0 +1,10 @@
+﻿{
+  "description": "Index of federal benefits by target population.",
+  "populations": [
+    { "code": "VETERAN",   "title": "Veteran",   "benefits": [] },
+    { "code": "SPOUSE",    "title": "Spouse",    "benefits": [] },
+    { "code": "SURVIVOR",  "title": "Survivor",  "benefits": [] },
+    { "code": "DEPENDENT","title": "Dependent", "benefits": [] },
+    { "code": "CAREGIVER","title": "Caregiver", "benefits": [] }
+  ]
+}

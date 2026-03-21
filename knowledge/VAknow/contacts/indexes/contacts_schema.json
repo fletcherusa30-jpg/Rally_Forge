@@ -1,0 +1,9 @@
+﻿{
+    "scope":  "federal | state | facility | crisis | legal | housing | financial | education | records | toxic",
+    "name":  "string",
+    "region":  "US | STATE_ABBR | GLOBAL | VISN | FACILITY_TYPE",
+    "phone":  "string",
+    "website":  "url",
+    "category":  "benefits | healthcare | education | home_loans | insurance | burial | records | tricare | dod | crisis | housing | employment | legal | financial | toxic | other",
+    "notes":  "string"
+}

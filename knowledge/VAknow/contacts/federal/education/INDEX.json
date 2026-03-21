@@ -1,0 +1,20 @@
+﻿{
+    "folder":  "VAknow\\contacts\\federal\\education",
+    "generated":  "2026-03-14T11:26:33.6955349-06:00",
+    "files":  [
+                  {
+                      "name":  "PURPOSE.md",
+                      "path":  "VAknow\\contacts\\federal\\education\\PURPOSE.md",
+                      "size":  338,
+                      "modified":  "2026-03-14T17:26:33.6955349Z",
+                      "extension":  ".md"
+                  },
+                  {
+                      "name":  "SUMMARY.md",
+                      "path":  "VAknow\\contacts\\federal\\education\\SUMMARY.md",
+                      "size":  323,
+                      "modified":  "2026-03-14T17:26:33.6955349Z",
+                      "extension":  ".md"
+                  }
+              ]
+}

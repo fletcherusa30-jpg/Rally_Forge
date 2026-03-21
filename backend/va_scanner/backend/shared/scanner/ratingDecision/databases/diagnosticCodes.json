@@ -1,0 +1,59 @@
+{
+  "diagnosticCodes": {
+    "description": "VA Diagnostic Code (DC) reference database - Essential for rating decisions",
+    "source": "VA Schedule for Rating Disabilities (38 CFR §4.71a)",
+    "lastUpdated": "2026-03-17T00:00:00Z",
+    "sampleEntries": [
+      {
+        "dc": "5001",
+        "name": "Arthritis, rheumatoid (including primary fibrositis)",
+        "code": "714.0",
+        "scheduleReference": "38 CFR §4.71a, Diagnostic Code 5001"
+      },
+      {
+        "dc": "5002",
+        "name": "Arthritis, osteoarthritis, degenerative",
+        "code": "715.9",
+        "scheduleReference": "38 CFR §4.71a, Diagnostic Code 5002"
+      },
+      {
+        "dc": "5003",
+        "name": "Arthritis, traumatic",
+        "code": "716.9",
+        "scheduleReference": "38 CFR §4.71a, Diagnostic Code 5003"
+      },
+      {
+        "dc": "6260",
+        "name": "Tinnitus",
+        "code": "388.30",
+        "scheduleReference": "38 CFR §4.71a, Diagnostic Code 6260"
+      },
+      {
+        "dc": "6360",
+        "name": "Hearing loss",
+        "code": "389.9",
+        "scheduleReference": "38 CFR §4.71a, Diagnostic Code 6360"
+      },
+      {
+        "dc": "7002",
+        "name": "Blindness, monocular",
+        "code": "369.60",
+        "scheduleReference": "38 CFR §4.71a, Diagnostic Code 7002"
+      },
+      {
+        "dc": "7101",
+        "name": "Psychosis, service-connected",
+        "code": "295.9",
+        "scheduleReference": "38 CFR §4.71a, Diagnostic Code 7101"
+      },
+      {
+        "dc": "9410",
+        "name": "PTSD (Posttraumatic Stress Disorder)",
+        "code": "309.81",
+        "scheduleReference": "38 CFR §4.71a, Diagnostic Code 9410"
+      }
+    ],
+    "note": "This is a sample subset. Full database would include 700+ diagnostic codes across all body systems and conditions",
+    "usage": "Used during VA Rating Decision scanning to validate and map extracted conditions to standardized DCs"
+  }
+}

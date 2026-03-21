@@ -5,7 +5,7 @@ export default {
     extend: {
       colors: {
         navy: '#0A1A2F',
-        slate: '#2E3A45',
+        'brand-slate': '#2E3A45',
         'cool-gray': '#F5F7FA',
         teal: '#1BA6A6',
         gold: '#C9A86A'

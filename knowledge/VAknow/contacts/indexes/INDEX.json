@@ -1,0 +1,48 @@
+﻿{
+    "folder":  "VAknow\\contacts\\indexes",
+    "generated":  "2026-03-14T11:26:33.5735914-06:00",
+    "files":  [
+                  {
+                      "name":  "contacts_index.json",
+                      "path":  "VAknow\\contacts\\indexes\\contacts_index.json",
+                      "size":  1669,
+                      "modified":  "2026-03-14T17:13:51.6258978Z",
+                      "extension":  ".json"
+                  },
+                  {
+                      "name":  "contacts_routing.json",
+                      "path":  "VAknow\\contacts\\indexes\\contacts_routing.json",
+                      "size":  5655,
+                      "modified":  "2026-03-14T17:18:14.4679025Z",
+                      "extension":  ".json"
+                  },
+                  {
+                      "name":  "contacts_schema.json",
+                      "path":  "VAknow\\contacts\\indexes\\contacts_schema.json",
+                      "size":  470,
+                      "modified":  "2026-03-14T17:18:11.5767847Z",
+                      "extension":  ".json"
+                  },
+                  {
+                      "name":  "PURPOSE.md",
+                      "path":  "VAknow\\contacts\\indexes\\PURPOSE.md",
+                      "size":  332,
+                      "modified":  "2026-03-14T17:26:33.5692730Z",
+                      "extension":  ".md"
+                  },
+                  {
+                      "name":  "schema.json",
+                      "path":  "VAknow\\contacts\\indexes\\schema.json",
+                      "size":  242,
+                      "modified":  "2026-03-14T17:13:50.3328805Z",
+                      "extension":  ".json"
+                  },
+                  {
+                      "name":  "SUMMARY.md",
+                      "path":  "VAknow\\contacts\\indexes\\SUMMARY.md",
+                      "size":  319,
+                      "modified":  "2026-03-14T17:26:33.5720755Z",
+                      "extension":  ".md"
+                  }
+              ]
+}

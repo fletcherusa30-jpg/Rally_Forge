@@ -1,0 +1,10 @@
+﻿{
+  "programs": [
+    { "program_code": "VA_COMP", "title": "VA Disability Compensation", "benefits": [] },
+    { "program_code": "VA_PENSION", "title": "VA Pension", "benefits": [] },
+    { "program_code": "VA_HEALTH", "title": "VA Healthcare Enrollment", "benefits": [] },
+    { "program_code": "VA_EDU", "title": "VA Education Benefits (GI Bill, etc.)", "benefits": [] },
+    { "program_code": "VA_VR_E", "title": "Veteran Readiness and Employment (VR&E)", "benefits": [] },
+    { "program_code": "VA_HOUSING", "title": "VA Home Loan Guaranty", "benefits": [] }
+  ]
+}

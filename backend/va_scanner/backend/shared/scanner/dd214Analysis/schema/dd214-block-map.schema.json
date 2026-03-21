@@ -1,0 +1,100 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DD-214 Block Map Schema",
+  "description": "Defines the structure and layout of blocks on a DD-214 discharge form",
+  "type": "object",
+  "properties": {
+    "blockNumber": {
+      "type": "string",
+      "pattern": "^\\d{1,2}$",
+      "description": "Block identifier (1-28, with some having sub-blocks like 9a, 9b)"
+    },
+    "blockName": {
+      "type": "string",
+      "description": "Human-readable name of the block"
+    },
+    "dataType": {
+      "type": "string",
+      "enum": [
+        "text",
+        "date",
+        "code",
+        "list",
+        "number"
+      ]
+    },
+    "required": {
+      "type": "boolean",
+      "default": true
+    },
+    "eraSpecific": {
+      "type": "object",
+      "properties": {
+        "vietnam": {
+          "type": "boolean"
+        },
+        "gulfWar": {
+          "type": "boolean"
+        },
+        "oefOif": {
+          "type": "boolean"
+        },
+        "modern": {
+          "type": "boolean"
+        }
+      }
+    },
+    "branchSpecific": {
+      "type": "object",
+      "properties": {
+        "army": {
+          "type": "boolean"
+        },
+        "navy": {
+          "type": "boolean"
+        },
+        "airForce": {
+          "type": "boolean"
+        },
+        "marines": {
+          "type": "boolean"
+        },
+        "coastGuard": {
+          "type": "boolean"
+        }
+      }
+    },
+    "position": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number",
+          "description": "X coordinate as percentage of page width"
+        },
+        "y": {
+          "type": "number",
+          "description": "Y coordinate as percentage of page height"
+        },
+        "width": {
+          "type": "number",
+          "description": "Block width as percentage"
+        },
+        "height": {
+          "type": "number",
+          "description": "Block height as percentage"
+        }
+      }
+    },
+    "validationRules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "blockNumber",
+    "blockName",
+    "dataType"
+  ]
+}

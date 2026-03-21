@@ -1,0 +1,47 @@
+﻿[
+    {
+        "scope":  "crisis",
+        "name":  "Veterans Crisis Line",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.veteranscrisisline.net",
+        "category":  "crisis",
+        "notes":  "Crisis support for Veterans."
+    },
+    {
+        "scope":  "crisis",
+        "name":  "Military OneSource",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.militaryonesource.mil",
+        "category":  "crisis",
+        "notes":  "24/7 support for service members and families."
+    },
+    {
+        "scope":  "crisis",
+        "name":  "National Suicide Prevention",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://988lifeline.org",
+        "category":  "crisis",
+        "notes":  "National suicide prevention lifeline."
+    },
+    {
+        "scope":  "crisis",
+        "name":  "Domestic Violence Hotline",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.thehotline.org",
+        "category":  "crisis",
+        "notes":  "Domestic violence support."
+    },
+    {
+        "scope":  "crisis",
+        "name":  "SAMHSA Helpline",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.samhsa.gov",
+        "category":  "crisis",
+        "notes":  "Substance use and mental health support."
+    }
+]

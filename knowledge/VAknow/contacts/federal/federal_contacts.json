@@ -1,0 +1,320 @@
+﻿[
+    {
+        "category":  "benefits",
+        "name":  "VA Benefits Hotline",
+        "website":  "https://www.va.gov",
+        "phone":  ""
+    },
+    {
+        "category":  "healthcare",
+        "name":  "VA Health Care Hotline",
+        "website":  "https://www.va.gov/health",
+        "phone":  ""
+    },
+    {
+        "category":  "education",
+        "name":  "GI Bill Hotline",
+        "website":  "https://www.va.gov/education",
+        "phone":  ""
+    },
+    {
+        "category":  "home_loans",
+        "name":  "VA Home Loan Center",
+        "website":  "https://www.va.gov/housing-assistance/home-loans",
+        "phone":  ""
+    },
+    {
+        "category":  "insurance",
+        "name":  "VA Life Insurance Center",
+        "website":  "https://www.va.gov/life-insurance",
+        "phone":  ""
+    },
+    {
+        "category":  "benefits",
+        "name":  "VA Debt Management Center",
+        "website":  "https://www.va.gov/manage-va-debt",
+        "phone":  ""
+    },
+    {
+        "category":  "benefits",
+        "name":  "VA Pension Management Center",
+        "website":  "https://www.va.gov/pension",
+        "phone":  ""
+    },
+    {
+        "category":  "healthcare",
+        "name":  "VA Caregiver Support Line",
+        "website":  "https://www.caregiver.va.gov",
+        "phone":  ""
+    },
+    {
+        "category":  "burial",
+        "name":  "VA Burial \u0026 Memorial Benefits",
+        "website":  "https://www.va.gov/burials-memorials",
+        "phone":  ""
+    },
+    {
+        "category":  "records",
+        "name":  "VA Records Management",
+        "website":  "https://www.va.gov/records",
+        "phone":  ""
+    },
+    {
+        "category":  "tricare",
+        "name":  "TRICARE East",
+        "website":  "https://www.tricare-east.com",
+        "phone":  ""
+    },
+    {
+        "category":  "tricare",
+        "name":  "TRICARE West",
+        "website":  "https://www.tricare-west.com",
+        "phone":  ""
+    },
+    {
+        "category":  "dod",
+        "name":  "DFAS",
+        "website":  "https://www.dfas.mil",
+        "phone":  ""
+    },
+    {
+        "category":  "crisis",
+        "name":  "Veterans Crisis Line",
+        "website":  "https://www.veteranscrisisline.net",
+        "phone":  ""
+    },
+    {
+        "scope":  "federal",
+        "name":  "VA Benefits Hotline",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.va.gov",
+        "category":  "benefits",
+        "notes":  "General VA benefits inquiries."
+    },
+    {
+        "scope":  "federal",
+        "name":  "VA Health Care Hotline",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.va.gov/health",
+        "category":  "healthcare",
+        "notes":  "VA health care eligibility and enrollment."
+    },
+    {
+        "scope":  "federal",
+        "name":  "GI Bill Hotline",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.va.gov/education",
+        "category":  "education",
+        "notes":  "Education and training benefits."
+    },
+    {
+        "scope":  "federal",
+        "name":  "VA Home Loan Center",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.va.gov/housing-assistance/home-loans",
+        "category":  "home_loans",
+        "notes":  "Home loan guaranty questions."
+    },
+    {
+        "scope":  "federal",
+        "name":  "VA Life Insurance Center",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.va.gov/life-insurance",
+        "category":  "insurance",
+        "notes":  "VA life insurance programs."
+    },
+    {
+        "scope":  "federal",
+        "name":  "VA Debt Management Center",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.va.gov/manage-va-debt",
+        "category":  "financial",
+        "notes":  "VA debt and overpayment issues."
+    },
+    {
+        "scope":  "federal",
+        "name":  "VA Pension Management Center",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.va.gov/pension",
+        "category":  "benefits",
+        "notes":  "Needs-based pension questions."
+    },
+    {
+        "scope":  "federal",
+        "name":  "VA Caregiver Support Line",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.caregiver.va.gov",
+        "category":  "healthcare",
+        "notes":  "Caregiver support and resources."
+    },
+    {
+        "scope":  "federal",
+        "name":  "VA Burial \u0026 Memorial Benefits",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.va.gov/burials-memorials",
+        "category":  "burial",
+        "notes":  "Burial and memorial benefits."
+    },
+    {
+        "scope":  "federal",
+        "name":  "VA Records Management",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.va.gov/records",
+        "category":  "records",
+        "notes":  "VA records and documentation."
+    },
+    {
+        "scope":  "federal",
+        "name":  "VA Facility Locator",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.va.gov/find-locations",
+        "category":  "healthcare",
+        "notes":  "Find VA facilities."
+    },
+    {
+        "scope":  "federal",
+        "name":  "VA Appeals Modernization (AMA)",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.va.gov/decision-reviews",
+        "category":  "legal",
+        "notes":  "Appeals and decision reviews."
+    },
+    {
+        "scope":  "federal",
+        "name":  "VA Form Library",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.va.gov/find-forms",
+        "category":  "other",
+        "notes":  "VA forms."
+    },
+    {
+        "scope":  "federal",
+        "name":  "VA Women Veterans Program",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.womenshealth.va.gov",
+        "category":  "healthcare",
+        "notes":  "Women Veterans health and benefits."
+    },
+    {
+        "scope":  "federal",
+        "name":  "VA Homeless Programs",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.va.gov/homeless",
+        "category":  "housing",
+        "notes":  "Homeless Veterans resources."
+    },
+    {
+        "scope":  "federal",
+        "name":  "VA Geriatrics \u0026 Extended Care",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.va.gov/GERIATRICS",
+        "category":  "healthcare",
+        "notes":  "Long-term and geriatric care."
+    },
+    {
+        "scope":  "federal",
+        "name":  "VA Whole Health",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.va.gov/wholehealth",
+        "category":  "healthcare",
+        "notes":  "Whole Health approach resources."
+    },
+    {
+        "scope":  "federal",
+        "name":  "VA Mental Health Hub",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.mentalhealth.va.gov",
+        "category":  "healthcare",
+        "notes":  "Mental health resources."
+    },
+    {
+        "scope":  "federal",
+        "name":  "VA MST Resources",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.mentalhealth.va.gov/msthome.asp",
+        "category":  "healthcare",
+        "notes":  "Military Sexual Trauma resources."
+    },
+    {
+        "scope":  "federal",
+        "name":  "VA PACT Act Hub",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.va.gov/resources/the-pact-act-and-your-va-benefits",
+        "category":  "toxic",
+        "notes":  "PACT Act information."
+    },
+    {
+        "scope":  "federal",
+        "name":  "TRICARE East",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.tricare-east.com",
+        "category":  "tricare",
+        "notes":  "TRICARE East region support."
+    },
+    {
+        "scope":  "federal",
+        "name":  "TRICARE West",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.tricare-west.com",
+        "category":  "tricare",
+        "notes":  "TRICARE West region support."
+    },
+    {
+        "scope":  "federal",
+        "name":  "TRICARE Overseas",
+        "region":  "GLOBAL",
+        "phone":  "",
+        "website":  "https://www.tricare-overseas.com",
+        "category":  "tricare",
+        "notes":  "TRICARE Overseas support."
+    },
+    {
+        "scope":  "federal",
+        "name":  "DFAS",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.dfas.mil",
+        "category":  "financial",
+        "notes":  "Defense Finance and Accounting Service."
+    },
+    {
+        "scope":  "federal",
+        "name":  "milConnect",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://milconnect.dmdc.osd.mil",
+        "category":  "records",
+        "notes":  "DoD records and benefits portal."
+    },
+    {
+        "scope":  "federal",
+        "name":  "DEERS Support",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.dmdc.osd.mil",
+        "category":  "records",
+        "notes":  "DEERS enrollment and updates."
+    }
+]

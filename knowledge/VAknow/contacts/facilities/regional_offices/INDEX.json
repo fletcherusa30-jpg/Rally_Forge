@@ -1,0 +1,27 @@
+﻿{
+    "folder":  "VAknow\\contacts\\facilities\\regional_offices",
+    "generated":  "2026-03-14T11:26:33.6432816-06:00",
+    "files":  [
+                  {
+                      "name":  "facilities.json",
+                      "path":  "VAknow\\contacts\\facilities\\regional_offices\\facilities.json",
+                      "size":  130,
+                      "modified":  "2026-03-14T17:13:51.4002411Z",
+                      "extension":  ".json"
+                  },
+                  {
+                      "name":  "PURPOSE.md",
+                      "path":  "VAknow\\contacts\\facilities\\regional_offices\\PURPOSE.md",
+                      "size":  359,
+                      "modified":  "2026-03-14T17:26:33.6368278Z",
+                      "extension":  ".md"
+                  },
+                  {
+                      "name":  "SUMMARY.md",
+                      "path":  "VAknow\\contacts\\facilities\\regional_offices\\SUMMARY.md",
+                      "size":  337,
+                      "modified":  "2026-03-14T17:26:33.6390443Z",
+                      "extension":  ".md"
+                  }
+              ]
+}

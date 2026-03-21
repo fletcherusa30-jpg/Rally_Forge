@@ -1,5 +1,13 @@
 ﻿const ALLOWED_TYPES = new Set(["new", "increase", "continued"]);
 
+export const SCANNER_SCHEMA_VERSIONS = Object.freeze({
+  ocr: "2.0.0-advanced-preprocessing",
+  dd214: "3.0.0-modernized-extraction",
+  str: "3.0.0-nlp-enhanced",
+  crossVerification: "2.0.0",
+  ratingDecision: "4.2.0-cfr-compliant",
+});
+
 export const VA_SCANNER_LLM_PROMPT_GUARDRAILS = `Do not repeat any disability. If the same disability appears multiple times in
  the document, list it only once per unique percentage. Before returning your
  final JSON, check your list and remove all duplicates. You must validate your
@@ -233,6 +241,63 @@ export const preprocessScannerText = (rawText) => {
 
   return dedupedLines.join("\n").trim();
 };
+
+const normalizeDiagnosticStrings = (values) => {
+  if (!Array.isArray(values)) {
+    return [];
+  }
+
+  return Array.from(new Set(values
+    .map((value) => String(value || '').trim())
+    .filter(Boolean)));
+};
+
+export const buildScannerDiagnostics = ({
+  stage = 'scan',
+  parserProfile = null,
+  classifier = null,
+  usedOcr = false,
+  ocrProfile = null,
+  ocrConfidence = null,
+  ocrScannerVersion = null,
+  ocrFallbackError = null,
+  warnings = [],
+  errors = [],
+  signals = [],
+} = {}) => ({
+  stage: String(stage || 'scan'),
+  parserProfile: parserProfile ? String(parserProfile) : null,
+  classifier: classifier ? String(classifier) : null,
+  usedOcr: Boolean(usedOcr),
+  ocrProfile: ocrProfile ? String(ocrProfile) : null,
+  ocrConfidence: Number.isFinite(Number(ocrConfidence)) ? Number(ocrConfidence) : null,
+  ocrScannerVersion: ocrScannerVersion ? String(ocrScannerVersion) : null,
+  ocrFallbackError: ocrFallbackError ? String(ocrFallbackError) : null,
+  warnings: normalizeDiagnosticStrings(warnings),
+  errors: normalizeDiagnosticStrings(errors),
+  signals: normalizeDiagnosticStrings(signals),
+});
+
+export const buildExtractionMeta = ({
+  scannerType,
+  schemaVersion,
+  confidence = 0,
+  fieldsPopulated = 0,
+  fieldsTotal = 0,
+  extras = {},
+} = {}) => ({
+  scannerType: String(scannerType || "unknown"),
+  scannerVersion: SCANNER_SCHEMA_VERSIONS[String(scannerType || "")] || String(schemaVersion || "1.0.0"),
+  schemaVersion: String(schemaVersion || "1.0.0"),
+  confidence: Math.max(0, Math.min(1, Number(confidence) || 0)),
+  fieldsPopulated: Math.max(0, Number(fieldsPopulated) || 0),
+  fieldsTotal: Math.max(0, Number(fieldsTotal) || 0),
+  extractedAt: new Date().toISOString(),
+  diagnostics: extras?.diagnostics && typeof extras.diagnostics === 'object' && !Array.isArray(extras.diagnostics)
+    ? extras.diagnostics
+    : undefined,
+  ...extras,
+});
 
 const sanitizeServiceConnectedEntries = (entries) => {
   if (!Array.isArray(entries)) {

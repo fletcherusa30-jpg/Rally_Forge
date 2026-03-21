@@ -1,10 +1,12 @@
 /**
- * PDF Processing Job Queue
- * Uses Bull queue to process STR PDFs asynchronously
- * Prevents large file processing from blocking main thread
+ * PDF Processing Job Queue v2.0 — Modernized Async Queue per .copilot-instructions.md
+ * Uses Bull queue with Redis to process PDFs asynchronously.
+ * Prevents large file processing from blocking main thread.
+ * Integrates with v3 scanners (DD214 v3, STR v3, OCR v2, RD v4.2).
  */
 
 import Bull from 'bull';
+import fs from 'node:fs/promises';
 import { getConfig } from '../config.js';
 import {
   extractTextFromPdf,
@@ -14,19 +16,19 @@ import {
 import { createLogger } from '../middleware/logging.js';
 
 const config = getConfig();
-const logger = createLogger('pdf-queue');
+const logger = createLogger('pdf-queue-v2');
 
 let isQueueReady = false;
 let queueError = null;
 let errorLoggedOnce = false;
 
 /**
- * Initialize PDF processing queue
+ * Initialize PDF processing queue with v2.0 schema support
  */
 let pdfQueueInstance = null;
 
 try {
-  pdfQueueInstance = new Bull('pdf-processing', {
+  pdfQueueInstance = new Bull('pdf-processing-v2', {
     redis: {
       host: config.redis.host,
       port: config.redis.port,
@@ -100,7 +102,7 @@ export const isQueueAvailable = () => isQueueReady && !queueError;
  */
 if (pdfQueueInstance) {
   pdfQueueInstance.process(async (job) => {
-  const { filePath, fileName, veteranId } = job.data;
+  const { filePath, fileName, veteranId, isPdf, isText, mimeType } = job.data;
 
   logger.info('Processing PDF job', {
     jobId: job.id,
@@ -109,13 +111,20 @@ if (pdfQueueInstance) {
   });
 
   try {
-    // Step 1: Extract text from PDF (report progress)
+    // Step 1: Extract text from source file (report progress)
     job.progress(10);
-    logger.debug('Extracting text from PDF', { fileName });
-    const text = await extractTextFromPdf(filePath);
+    logger.debug('Extracting text from source', { fileName, isPdf: Boolean(isPdf), isText: Boolean(isText), mimeType });
+    let text = '';
+
+    if (isText || mimeType === 'text/plain') {
+      text = await fs.readFile(filePath, 'utf-8');
+    } else {
+      const pdfBuffer = await fs.readFile(filePath);
+      text = await extractTextFromPdf(pdfBuffer);
+    }
 
     if (!text || text.length < 10) {
-      throw new Error('PDF text extraction returned empty content');
+      throw new Error('Text extraction returned empty content');
     }
 
     logger.debug('Text extraction complete', {
@@ -129,34 +138,35 @@ if (pdfQueueInstance) {
     const scanResult = scanSTRText(text);
 
     logger.debug('Scan complete', {
-      conditions: scanResult.diagnoses?.length || 0,
-      injuries: scanResult.injuries?.length || 0
+      diagnoses: scanResult?.Extracted?.Diagnoses?.length || 0,
+      injuries: scanResult?.Extracted?.Injuries?.length || 0
     });
 
     // Step 3: Validate results (report progress)
     job.progress(75);
     logger.debug('Validating scan results', { fileName });
-    const validated = validateScanResult(scanResult);
+    const validation = validateScanResult(scanResult);
+    if (!validation.isValid) {
+      throw new Error(`Invalid STR scan schema: ${validation.errors.join('; ')}`);
+    }
 
     // Step 4: Complete
     job.progress(100);
     logger.info('PDF processing complete', {
       jobId: job.id,
       fileName,
-      successCount: validated.diagnoses?.length || 0
+      successCount: scanResult?.Extracted?.Diagnoses?.length || 0
     });
 
     return {
-      success: true,
-      fileName,
-      extracted: {
-        diagnoses: validated.diagnoses || [],
-        injuries: validated.injuries || [],
-        medications: validated.medications || [],
-        providers: validated.providers || [],
-        procedures: validated.procedures || []
-      },
+      success: scanResult?.success ?? true,
+      ...scanResult,
       metadata: {
+        ...(scanResult.metadata || {}),
+        fileName,
+        mimeType: mimeType || (isText ? 'text/plain' : 'application/pdf'),
+        sourceType: isText ? 'txt' : 'pdf',
+        processingMode: 'async',
         processedAt: new Date().toISOString(),
         processingTimeMs: job.finishedOn - job.processedOn,
         textLength: text.length
@@ -208,8 +218,16 @@ if (pdfQueueInstance) {
  * Submit PDF for processing
  * Returns job ID immediately for polling
  */
-export const submitPdfForProcessing = async (filePath, fileName, veteranId) => {
+export const submitPdfForProcessing = async (filePath, fileName, veteranId, fileInfo = {}) => {
   const effectiveVeteranId = veteranId || 'anonymous';
+  const extension = String(fileName || '').toLowerCase();
+  const mimeType = String(fileInfo?.mimeType || '').toLowerCase();
+  const inferredText = fileInfo?.isText === true || mimeType === 'text/plain' || extension.endsWith('.txt');
+  const inferredPdf = fileInfo?.isPdf === true || mimeType === 'application/pdf' || extension.endsWith('.pdf');
+
+  if (!inferredText && !inferredPdf) {
+    throw new Error(`Unsupported STR source type for queue: ${fileName}`);
+  }
 
   if (!isQueueReady || queueError) {
     logger.warning('Queue not available, processing synchronously', {
@@ -236,6 +254,9 @@ export const submitPdfForProcessing = async (filePath, fileName, veteranId) => {
         filePath,
         fileName,
         veteranId: effectiveVeteranId,
+        mimeType: mimeType || (inferredText ? 'text/plain' : 'application/pdf'),
+        isText: inferredText,
+        isPdf: inferredPdf,
         submittedAt: new Date().toISOString()
       },
       {
@@ -294,7 +315,7 @@ export const getJobStatus = async (jobId) => {
   }
 
   const state = await job.getState();
-  const progress = job._progress || 0;
+  const progress = Number(job.progress() || 0);
 
   return {
     jobId,

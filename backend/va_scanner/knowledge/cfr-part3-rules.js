@@ -3,6 +3,46 @@
  * Authoritative rule set for determining service connection types
  */
 
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const CFR_INDEX_PATH = path.resolve(__dirname, '../../../knowledge/cfr/cfr-index.json');
+
+let SECTION_ID_BY_PART_AND_NUMBER = null;
+
+function buildSectionIdMap() {
+  if (SECTION_ID_BY_PART_AND_NUMBER) return SECTION_ID_BY_PART_AND_NUMBER;
+
+  const map = new Map();
+  try {
+    const raw = fs.readFileSync(CFR_INDEX_PATH, 'utf8');
+    const bundle = JSON.parse(raw);
+    const parts = bundle?.cfrIndex?.parts || [];
+    for (const part of parts) {
+      for (const section of part?.sections || []) {
+        const key = `${part.partNumber}|${String(section.sectionNumber || '').toLowerCase()}`;
+        map.set(key, section.id || null);
+      }
+    }
+  } catch {
+    // Structured index may not exist yet; keep map empty.
+  }
+
+  SECTION_ID_BY_PART_AND_NUMBER = map;
+  return SECTION_ID_BY_PART_AND_NUMBER;
+}
+
+function localSectionIdFromCitation(cfrCitation) {
+  const citation = String(cfrCitation || '');
+  const match = citation.match(/\b(3\.\d+[a-z]?)\b/i);
+  if (!match) return null;
+  const map = buildSectionIdMap();
+  return map.get(`3|${String(match[1]).toLowerCase()}`) || null;
+}
+
 export const CFR_PART3_RULES = {
   // Direct Service Connection (38 CFR 3.303)
   DIRECT_SERVICE_CONNECTION: {
@@ -184,28 +224,33 @@ export function detectServiceConnectionType(conditionText, contextText = '') {
   
   // Check for secondary
   if (/secondary to|caused by|aggravated by|due to service-connected/i.test(text)) {
-    types.push({ type: 'SECONDARY', cfr: '38 CFR 3.310' });
+    const cfr = '38 CFR 3.310';
+    types.push({ type: 'SECONDARY', cfr, localSectionId: localSectionIdFromCitation(cfr) });
   }
   
   // Check for aggravation
   if (/aggravat/i.test(text) && !/secondary/i.test(text)) {
-    types.push({ type: 'AGGRAVATION', cfr: '38 CFR 3.310(b)' });
+    const cfr = '38 CFR 3.310(b)';
+    types.push({ type: 'AGGRAVATION', cfr, localSectionId: localSectionIdFromCitation(cfr) });
   }
   
   // Check for presumptive (herbicide)
   const herbicideConditions = CFR_PART3_RULES.PRESUMPTIVE_HERBICIDE.conditions;
   if (herbicideConditions.some(cond => text.includes(cond.toLowerCase()))) {
-    types.push({ type: 'PRESUMPTIVE_HERBICIDE', cfr: '38 CFR 3.309(e)' });
+    const cfr = '38 CFR 3.309(e)';
+    types.push({ type: 'PRESUMPTIVE_HERBICIDE', cfr, localSectionId: localSectionIdFromCitation(cfr) });
   }
   
   // Check for presumptive (Gulf War)
   if (/chronic fatigue|fibromyalgia|gulf war|undiagnosed/i.test(text)) {
-    types.push({ type: 'PRESUMPTIVE_GULF_WAR', cfr: '38 CFR 3.317' });
+    const cfr = '38 CFR 3.317';
+    types.push({ type: 'PRESUMPTIVE_GULF_WAR', cfr, localSectionId: localSectionIdFromCitation(cfr) });
   }
   
   // Default to direct if no specific type found
   if (types.length === 0) {
-    types.push({ type: 'DIRECT', cfr: '38 CFR 3.303' });
+    const cfr = '38 CFR 3.303';
+    types.push({ type: 'DIRECT', cfr, localSectionId: localSectionIdFromCitation(cfr) });
   }
   
   return types;

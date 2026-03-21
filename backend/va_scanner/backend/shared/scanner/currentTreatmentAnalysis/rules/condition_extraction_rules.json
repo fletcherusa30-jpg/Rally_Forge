@@ -1,0 +1,62 @@
+{
+  "rules": [
+    {
+      "ruleId": "ct-condition-active-detection",
+      "name": "Active Condition Detection",
+      "indicators": {
+        "present": [
+          "patient has",
+          "currently",
+          "ongoing",
+          "chronic",
+          "uncontrolled",
+          "active"
+        ],
+        "resolved": [
+          "resolved",
+          "treated and cured",
+          "no longer",
+          "history of",
+          "past medical history"
+        ]
+      },
+      "timeWindow": "within-12-months"
+    },
+    {
+      "ruleId": "ct-condition-from-soap",
+      "name": "Extract Conditions from SOAP Note",
+      "soapSections": {
+        "subjective": "patient-reports",
+        "objective": "exam-findings",
+        "assessment": "diagnoses-primary-source",
+        "plan": "treatment-plan"
+      }
+    },
+    {
+      "ruleId": "ct-icd10-mapping",
+      "name": "ICD-10 Code Extraction and Mapping",
+      "pattern": "[A-Z]\\d{2}(\\.\\d{1,4})?",
+      "validation": "catalog-lookup",
+      "fuzzyMatch": 0.9
+    },
+    {
+      "ruleId": "ct-functional-impact-keywords",
+      "name": "Functional Impact Keywords",
+      "indicators": {
+        "limitation": [
+          "cannot",
+          "unable to",
+          "limited",
+          "restricted",
+          "difficulty"
+        ],
+        "improvement": [
+          "no longer",
+          "returned to",
+          "full duty",
+          "resolved"
+        ]
+      }
+    }
+  ]
+}

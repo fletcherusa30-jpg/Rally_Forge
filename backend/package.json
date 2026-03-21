@@ -4,15 +4,62 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "typecheck": "tsc --project tsconfig.json --pretty false",
+    "test:system": "node --test ../tests/system/audit-metadata.test.js ../tests/system/api-smoke.test.js ../tests/system/knowledge-manifest.test.js",
+    "test:conditions": "node --test ../tests/conditions/presumptive-locations-service.test.js ../tests/conditions/presumptive-matching-util.test.js",
+    "test:benefits": "node --test ../tests/benefits/compensation-regression.test.js ../tests/benefits/dependent-calculation.test.js",
+    "test:treatment": "node --test ../tests/treatment/strs-engine.test.js ../tests/treatment/strs-integration.test.js ../tests/treatment/strs-questionnaire-filter.test.js ../tests/treatment/strs-tbi-precision.test.js",
+    "test": "npm run test:system && npm run test:conditions && npm run test:benefits && npm run test:treatment"
+  },
+  "dependencyAuditNotes": {
+    "addedRuntimeDependencies": [
+      "bcryptjs",
+      "bull",
+      "dotenv",
+      "ioredis",
+      "jsonwebtoken",
+      "mongodb",
+      "morgan",
+      "pdfjs-dist",
+      "pg",
+      "tesseract.js",
+      "zod"
+    ],
+    "removedRuntimeDependencies": [
+      "express-validator"
+    ],
+    "rationale": [
+      "The backend package now declares the libraries imported directly by backend runtime modules instead of relying on the root workspace install.",
+      "Redis support is expressed as an explicit ioredis dependency because the cache layer imports ioredis directly.",
+      "Request validation is standardized on Zod, so express-validator was removed from the backend runtime surface."
+    ]
   },
   "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "bull": "^4.16.5",
     "compression": "^1.8.1",
     "cors": "^2.8.5",
+    "dotenv": "^17.3.1",
     "express": "^4.19.2",
     "express-rate-limit": "^8.3.0",
-    "express-validator": "^7.3.1",
     "helmet": "^8.1.0",
-    "multer": "^1.4.5-lts.1"
+    "ioredis": "^5.3.2",
+    "jsonwebtoken": "^9.0.3",
+    "mongodb": "^6.10.0",
+    "morgan": "^1.10.1",
+    "multer": "^2.0.2",
+    "pdfjs-dist": "^4.10.38",
+    "pg": "^8.20.0",
+    "xlsx": "^0.18.5",
+    "tesseract.js": "^7.0.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/compression": "^1.8.1",
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.5.2",
+    "@types/pg": "^8.18.0",
+    "typescript": "^5.6.3"
   }
 }

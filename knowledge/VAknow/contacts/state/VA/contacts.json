@@ -1,0 +1,26 @@
+﻿[
+    {
+        "category":  "state",
+        "name":  "VA State Department of Veterans Affairs",
+        "website":  "",
+        "phone":  ""
+    },
+    {
+        "category":  "state",
+        "name":  "VA Veterans Benefits Hotline",
+        "website":  "",
+        "phone":  ""
+    },
+    {
+        "category":  "state",
+        "name":  "VA Veterans Homes",
+        "website":  "",
+        "phone":  ""
+    },
+    {
+        "category":  "state",
+        "name":  "VA Claims Assistance Office",
+        "website":  "",
+        "phone":  ""
+    }
+]

@@ -12,6 +12,8 @@
  *   await fs.writeJson('output/result.json', data);
  */
 
+// @ts-check
+
 import { readFile, writeFile, mkdir, access } from 'fs/promises';
 import { existsSync, readFileSync } from 'fs';
 import path from 'path';
@@ -19,6 +21,21 @@ import { createLogger } from '../../core/logging/logger.js';
 import { Errors } from '../../core/errors/AppError.js';
 
 const log = createLogger('fs-data-source');
+
+/**
+ * @param {unknown} value
+ * @returns {{ code?: string, message: string }}
+ */
+function toErrorInfo(value) {
+  if (value instanceof Error) {
+    return {
+      code: /** @type {{ code?: string }} */ (value).code,
+      message: value.message,
+    };
+  }
+
+  return { message: String(value) };
+}
 
 export default class FileSystemDataSource {
   /**
@@ -30,16 +47,28 @@ export default class FileSystemDataSource {
 
   // ── Path helpers ────────────────────────────────────────────────────────────
 
+  /**
+   * @param {string} relativePath
+   * @returns {string}
+   */
   resolve(relativePath) {
     return this.baseDir ? path.join(this.baseDir, relativePath) : relativePath;
   }
 
   // ── Existence Checks ────────────────────────────────────────────────────────
 
+  /**
+   * @param {string} relativePath
+   * @returns {boolean}
+   */
   exists(relativePath) {
     return existsSync(this.resolve(relativePath));
   }
 
+  /**
+   * @param {string} relativePath
+   * @returns {Promise<boolean>}
+   */
   async existsAsync(relativePath) {
     try {
       await access(this.resolve(relativePath));
@@ -60,13 +89,14 @@ export default class FileSystemDataSource {
   async readText(relativePath, encoding = 'utf-8') {
     const fullPath = this.resolve(relativePath);
     try {
-      return await readFile(fullPath, encoding);
+      return await readFile(fullPath, /** @type {BufferEncoding} */ (encoding));
     } catch (err) {
-      if (err.code === 'ENOENT') {
+      const errorInfo = toErrorInfo(err);
+      if (errorInfo.code === 'ENOENT') {
         throw Errors.notFound(`File: ${fullPath}`);
       }
-      log.error('readText failed', { path: fullPath, error: err.message });
-      throw Errors.internal(`Failed to read file: ${err.message}`);
+      log.error('readText failed', { path: fullPath, error: errorInfo.message });
+      throw Errors.internal(`Failed to read file: ${errorInfo.message}`);
     }
   }
 
@@ -81,8 +111,9 @@ export default class FileSystemDataSource {
       await mkdir(path.dirname(fullPath), { recursive: true });
       await writeFile(fullPath, content, 'utf-8');
     } catch (err) {
-      log.error('writeText failed', { path: fullPath, error: err.message });
-      throw Errors.internal(`Failed to write file: ${err.message}`);
+      const errorInfo = toErrorInfo(err);
+      log.error('writeText failed', { path: fullPath, error: errorInfo.message });
+      throw Errors.internal(`Failed to write file: ${errorInfo.message}`);
     }
   }
 
@@ -91,23 +122,26 @@ export default class FileSystemDataSource {
   /**
    * Read and parse a JSON file.
    * @param {string} relativePath
-   * @returns {Promise<any>}
+   * @template T
+   * @returns {Promise<T>}
    */
   async readJson(relativePath) {
     const text = await this.readText(relativePath);
     try {
-      return JSON.parse(text);
+      return /** @type {T} */ (JSON.parse(text.replace(/^\uFEFF/, '')));
     } catch (err) {
       const fullPath = this.resolve(relativePath);
-      log.error('JSON parse failed', { path: fullPath, error: err.message });
-      throw Errors.internal(`Invalid JSON in file ${fullPath}: ${err.message}`);
+      const errorInfo = toErrorInfo(err);
+      log.error('JSON parse failed', { path: fullPath, error: errorInfo.message });
+      throw Errors.internal(`Invalid JSON in file ${fullPath}: ${errorInfo.message}`);
     }
   }
 
   /**
    * Serialize and write a JSON file (pretty-printed).
    * @param {string} relativePath
-   * @param {any} data
+    * @template T
+    * @param {T} data
    * @param {number} [indent=2]
    */
   async writeJson(relativePath, data, indent = 2) {
@@ -118,12 +152,13 @@ export default class FileSystemDataSource {
   /**
    * Read JSON or return a default value if file does not exist.
    * @param {string} relativePath
-   * @param {any} defaultValue
-   * @returns {Promise<any>}
+   * @template T
+   * @param {T} defaultValue
+   * @returns {Promise<T>}
    */
   async readJsonOrDefault(relativePath, defaultValue = null) {
     const exists = await this.existsAsync(relativePath);
-    if (!exists) return defaultValue;
+    if (!exists) return /** @type {T} */ (defaultValue);
     return this.readJson(relativePath);
   }
 
@@ -133,18 +168,20 @@ export default class FileSystemDataSource {
    * Synchronous read + parse — prefer async methods where possible.
    * Retained to support existing synchronous code during incremental migration.
    * @param {string} relativePath
-   * @returns {any}
+   * @template T
+   * @returns {T}
    */
   readJsonSync(relativePath) {
     const fullPath = this.resolve(relativePath);
     try {
       const content = readFileSync(fullPath, 'utf8');
-      return JSON.parse(content);
+      return /** @type {T} */ (JSON.parse(content.replace(/^\uFEFF/, '')));
     } catch (err) {
-      if (err.code === 'ENOENT') {
+      const errorInfo = toErrorInfo(err);
+      if (errorInfo.code === 'ENOENT') {
         throw Errors.notFound(`File: ${fullPath}`);
       }
-      throw Errors.internal(`Failed to read file synchronously: ${err.message}`);
+      throw Errors.internal(`Failed to read file synchronously: ${errorInfo.message}`);
     }
   }
 }

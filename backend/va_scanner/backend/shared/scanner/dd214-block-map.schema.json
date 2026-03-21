@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rallyforge.local/schemas/dd214-block-map.schema.json",
+  "title": "DD214 Block Map",
+  "description": "Deterministic DD-214 block extraction map with template metadata and continuation support.",
+  "type": "object",
+  "required": ["schemaVersion", "templateId", "blocks", "continuation"],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "templateId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "blocks": {
+      "type": "object",
+      "patternProperties": {
+        "^(?:[1-9]|1[0-9]|2[0-9]|30|12[a-g])$": {
+          "type": ["string", "null"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "continuation": {
+      "type": "object",
+      "required": ["13", "18"],
+      "properties": {
+        "13": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "18": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": true
+}

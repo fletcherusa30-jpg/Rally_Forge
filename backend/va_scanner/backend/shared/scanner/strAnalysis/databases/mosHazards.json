@@ -1,0 +1,37 @@
+{
+  "mosHazards": {
+    "description": "Military Occupational Specialty (MOS) hazard and exposure mappings",
+    "lastUpdated": "2026-03-17T00:00:00Z",
+    "examples": [
+      {
+        "mosCode": "11B",
+        "mosTitle": "Infantryman",
+        "hazards": [
+          "Combat exposure",
+          "Blast injuries",
+          "Hearing loss from weapons",
+          "PTSD"
+        ]
+      },
+      {
+        "mosCode": "68C",
+        "mosTitle": "Combat Medic",
+        "hazards": [
+          "Bloodborne pathogen exposure",
+          "Combat stress",
+          "Chemical exposure"
+        ]
+      },
+      {
+        "mosCode": "31B",
+        "mosTitle": "Military Police",
+        "hazards": [
+          "Occupational injury",
+          "Chemical exposure",
+          "Hearing loss"
+        ]
+      }
+    ],
+    "note": "Full database would contain 200+ MOS codes with mappings to hazard profiles"
+  }
+}

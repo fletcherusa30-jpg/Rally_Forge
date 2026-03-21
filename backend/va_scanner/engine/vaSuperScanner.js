@@ -807,12 +807,19 @@ function extractMetadata(text) {
   // Get primary effective date (first one found)
   const primaryEffectiveDate = effectiveDates.length > 0 ? effectiveDates[0] : null;
 
-  // Extract Combined Rating from decision
+  // Extract Combined Rating from decision (includes claim letter formats)
   const combinedRating =
     (text.match(/combined rating evaluation is (\d+)%/i) || [])[1] ||
     (text.match(/combined disability rating is (\d+)%/i) || [])[1] ||
     (text.match(/your combined disability rating is (\d+)%/i) || [])[1] ||
     (text.match(/combined evaluation is (\d+)%/i) || [])[1] ||
+    // Claim letter formats
+    (text.match(/combined service[- ]connected (?:disability )?(?:evaluation|rating) (?:is|of) (\d+)\s*(?:percent|%)/i) || [])[1] ||
+    (text.match(/your (?:overall |total )?(?:combined )?(?:disability )?rating (?:is|:)\s*(\d+)\s*(?:percent|%)/i) || [])[1] ||
+    (text.match(/rated (\d+)\s*(?:percent|%) (?:combined )?(?:service[- ]connected|disabled)/i) || [])[1] ||
+    (text.match(/(\d+)\s*(?:percent|%) combined (?:service[- ]connected|disability)/i) || [])[1] ||
+    (text.match(/(?:you are|veteran is) (\d+)\s*(?:percent|%) (?:service[- ]connected|disabled)/i) || [])[1] ||
+    (text.match(/(?:disability|combined) rating[:\s]+(\d+)%/i) || [])[1] ||
     null;
 
   return {
@@ -958,6 +965,281 @@ function extractServiceConnectedFromList(textWithLines) {
   
   // Combine both extraction methods and dedupe
   return dedupeByConditionAndRating([...fromNumbered, ...fromLines]);
+}
+
+/**
+ * Extract service-connected conditions from VA Claim Letter / Benefits Summary Letter.
+ * These documents use tabular or list format rather than narrative "is granted" language.
+ *
+ * Common claim-letter formats:
+ *   - "Tinnitus  10 percent ... effective May 1, 2020"
+ *   - "Service connected disabilities:" followed by columns
+ *   - Lines with condition name, percentage, and optional effective date
+ *   - "currently evaluated as 70 percent disabling"
+ *
+ * @param {string} text - Normalized document text
+ * @param {string} textWithLines - Text with line breaks preserved
+ * @returns {Array<Object>} Extracted conditions
+ */
+function extractServiceConnectedFromClaimLetter(text, textWithLines) {
+  const results = [];
+  const sourceText = textWithLines || text;
+  if (!sourceText) return results;
+
+  // --- Strategy 1: Look for a "service-connected disabilities" section ---
+  // Claim letters often have a section listing service-connected disabilities
+  const sectionHeaders = [
+    /(?:your\s+)?service[- ]connected\s+disabilities?\s*(?:are|include)?[:\s]*\n/i,
+    /(?:currently\s+)?service[- ]connected\s+(?:for|conditions?)\s*[:\s]*\n/i,
+    /the\s+following\s+(?:disabilities|conditions)\s+(?:are|have been)\s+(?:service[- ]connected|granted)\s*[:\s]*\n/i,
+    /disabilities?\s+decision\s*[:\s]*\n/i
+  ];
+
+  let sectionStart = -1;
+  let sectionStartEnd = -1;
+  for (const header of sectionHeaders) {
+    const match = header.exec(sourceText);
+    if (match) {
+      sectionStart = match.index;
+      sectionStartEnd = match.index + match[0].length;
+      break;
+    }
+  }
+
+  // --- Strategy 2: Look for lines matching "condition_text  NN percent" or "condition_text  NN%" ---
+  // This handles both section-based and scattered mentions
+  const conditionRatingPatterns = [
+    // "condition_name  -  NN percent disabling" (common in claim letters)
+    /^(.{5,120}?)\s+[-–]\s+(\d{1,3})\s*(?:percent|%)\s*(?:disabling)?/gim,
+    // "condition_name  NN percent" (tabular)
+    /^(.{5,120}?)\s{2,}(\d{1,3})\s*(?:percent|%)/gim,
+    // "condition_name, rated at NN percent" or "currently evaluated as NN percent"
+    /(.{5,120}?),?\s+(?:rated at|currently rated at|evaluated at|currently evaluated (?:as|at))\s+(\d{1,3})\s*(?:percent|%)/gi,
+    // "condition_name (NN%)" — parenthetical rating
+    /(.{5,120}?)\s+\((\d{1,3})(?:\s*percent|%)\)/gi,
+    // "NN percent - condition_name" (reversed tabular)
+    /(\d{1,3})\s*(?:percent|%)\s+[-–—]\s+(.{5,120})/gim,
+    // "Entitlement to an increased evaluation of NN percent for condition_name is granted"
+    /[Ee]ntitlement to an? (?:increased )?evaluation of (\d{1,3})\s*(?:percent|%)\s+for\s+(.{5,120}?)(?:\s+is\s+granted|\s+effective)/gi,
+    // "condition_name  is rated NN percent" 
+    /(.{5,120}?)\s+is\s+rated\s+(\d{1,3})\s*(?:percent|%)/gi
+  ];
+
+  for (const pattern of conditionRatingPatterns) {
+    pattern.lastIndex = 0;
+    let match;
+    while ((match = pattern.exec(sourceText)) !== null) {
+      // For reversed patterns (percentage first), swap groups
+      let rawCondition, ratingValue;
+      if (/^\(\d/.test(pattern.source) || pattern.source.startsWith('(\\d')) {
+        // Pattern starts with percentage capture
+        ratingValue = match[1];
+        rawCondition = match[2];
+      } else if (/Entitlement/i.test(match[0])) {
+        ratingValue = match[1];
+        rawCondition = match[2];
+      } else {
+        rawCondition = match[1];
+        ratingValue = match[2];
+      }
+
+      const condition = cleanCondition(rawCondition);
+      const percentage = safeNumber(ratingValue);
+
+      if (!condition || percentage === null) continue;
+      if (condition.length < 3 || condition.length > 200) continue;
+      if (/\bdenied\b/i.test(condition)) continue;
+      if (isNoiseCondition(condition)) continue;
+
+      // Screen out non-condition text (page numbers, headers, dates, etc.)
+      if (/^(page|file|date|total|amount|payment|effective|award|letter|dear|sincerely)/i.test(condition)) continue;
+      if (/^\d+$/.test(condition.trim())) continue;
+
+      results.push({
+        condition,
+        rating: `${percentage}%`,
+        percentage,
+        effectiveDate: '',
+        isBilateral: isBilateralCondition(condition),
+        laterality: extractLaterality(condition),
+        status: 'granted',
+        source: 'claim-letter'
+      });
+    }
+  }
+
+  // --- Strategy 3: Look for "combined service-connected evaluation is NN percent" ---
+  // This helps verify the combined rating even if individual conditions aren't fully parsed
+  const combinedPatterns = [
+    /combined\s+(?:service[- ]connected\s+)?(?:disability\s+)?(?:evaluation|rating)\s+(?:is|of|:)\s*(\d{1,3})\s*(?:percent|%)/i,
+    /your\s+(?:combined\s+)?(?:disability\s+)?rating\s+(?:is|:)\s*(\d{1,3})\s*(?:percent|%)/i,
+    /(?:overall|total)\s+(?:combined\s+)?(?:disability\s+)?(?:evaluation|rating)\s+(?:is|of|:)\s*(\d{1,3})\s*(?:percent|%)/i,
+    /rated\s+(?:at\s+)?(\d{1,3})\s*(?:percent|%)\s+(?:disabled|disabling|combined)/i,
+    /(\d{1,3})\s*(?:percent|%)\s+(?:combined\s+)?(?:service[- ]connected|disabled)/i
+  ];
+
+  for (const pattern of combinedPatterns) {
+    const match = pattern.exec(sourceText);
+    if (match) {
+      const combinedRating = safeNumber(match[1]);
+      if (combinedRating !== null && combinedRating > 0) {
+        // Attach the combined rating as metadata on first result
+        if (results.length > 0) {
+          results[0]._claimLetterCombinedRating = combinedRating;
+        } else {
+          // If no individual conditions found but we have a combined rating,
+          // push a synthetic entry with the rating info
+          results.push({
+            condition: `Combined rating ${combinedRating}% (individual conditions not parseable from claim letter)`,
+            rating: `${combinedRating}%`,
+            percentage: combinedRating,
+            effectiveDate: '',
+            isBilateral: false,
+            laterality: null,
+            status: 'granted',
+            source: 'claim-letter-combined',
+            _claimLetterCombinedRating: combinedRating
+          });
+        }
+        break;
+      }
+    }
+  }
+
+  return dedupeByConditionAndRating(results);
+}
+
+/**
+ * Extract SMC from VA Claim Letter / Benefits Summary format.
+ * Claim letters express SMC differently from rating decisions:
+ *   - "entitled to special monthly compensation under 38 U.S.C. 1114(k)"
+ *   - "includes special monthly compensation at the (k) rate"
+ *   - "You are receiving special monthly compensation"
+ *   - "special monthly compensation is payable"
+ *   - "SMC at the (k) rate" or "SMC at the housebound rate"
+ *   - "1114, subsection (k)" references from 38 U.S.C.
+ *
+ * @param {string} text - Normalized document text
+ * @returns {Array<Object>} Granted SMC levels
+ */
+function extractSmcFromClaimLetter(text) {
+  if (!text) return [];
+  const grantedSMC = [];
+  const seen = new Set();
+
+  const push = (level, reason, evidence) => {
+    const normalized = String(level || '').toUpperCase();
+    if (!normalized || seen.has(normalized)) return;
+    seen.add(normalized);
+    grantedSMC.push({ level: normalized, reason, cfr: '38 CFR 3.350', evidence });
+  };
+
+  // Map 38 U.S.C. 1114 subsections to SMC levels
+  const uscToSmc = {
+    'k': 'K', 'l': 'L', 'm': 'M', 'n': 'N', 'o': 'O',
+    'p': 'O', 'r': 'R1', 's': 'S', 't': 'T'
+  };
+
+  // Pattern 1: "special monthly compensation under 38 U.S.C. 1114(k)" or "1114, subsection (k)"
+  const uscPatterns = [
+    /(?:special\s+monthly\s+compensation|SMC)\s+(?:under|per|pursuant to)\s+38\s+U\.?S\.?C\.?\s+(?:section\s+)?1114\s*[,\s]*(?:subsection\s+)?\(([a-t])\)/gi,
+    /38\s+U\.?S\.?C\.?\s+1114\s*\(([a-t])\)\s*[-–—]?\s*(?:special\s+monthly\s+compensation|SMC)/gi,
+    /1114\s*,?\s*subsection\s+\(([a-t])\)/gi
+  ];
+
+  for (const pattern of uscPatterns) {
+    pattern.lastIndex = 0;
+    let match;
+    while ((match = pattern.exec(text)) !== null) {
+      const subsection = match[1].toLowerCase();
+      const smcLevel = uscToSmc[subsection] || subsection.toUpperCase();
+      push(smcLevel, `38 U.S.C. 1114(${subsection})`, 'Statutory reference in claim letter');
+    }
+  }
+
+  // Pattern 2: "SMC at the (k) rate" or "special monthly compensation at the (k) rate"
+  const ratePatterns = [
+    /(?:special\s+monthly\s+compensation|SMC)\s+at\s+the\s+\(?([a-t])\)?\s+rate/gi,
+    /(?:special\s+monthly\s+compensation|SMC)\s+at\s+the\s+(housebound|aid\s+and\s+attendance|higher\s+level)\s+rate/gi
+  ];
+
+  const descriptorToLevel = {
+    'housebound': 'S',
+    'aid and attendance': 'L',
+    'higher level': 'L'
+  };
+
+  for (const pattern of ratePatterns) {
+    pattern.lastIndex = 0;
+    let match;
+    while ((match = pattern.exec(text)) !== null) {
+      const val = match[1].toLowerCase();
+      const smcLevel = descriptorToLevel[val] || uscToSmc[val] || val.toUpperCase();
+      push(smcLevel, `SMC at the (${val}) rate`, 'Rate descriptor in claim letter');
+    }
+  }
+
+  // Pattern 3: "includes special monthly compensation" or "your monthly payment includes SMC"
+  const includesPatterns = [
+    /(?:includes?|including)\s+(?:special\s+monthly\s+compensation|SMC)\s*(?:\(([a-t])\))?/gi,
+    /(?:receiving|are paid|paid at)\s+(?:special\s+monthly\s+compensation|SMC)\s*(?:\(([a-t])\))?/gi,
+    /(?:special\s+monthly\s+compensation|SMC)\s+(?:is\s+)?(?:payable|included|added)/gi
+  ];
+
+  for (const pattern of includesPatterns) {
+    pattern.lastIndex = 0;
+    let match;
+    while ((match = pattern.exec(text)) !== null) {
+      if (match[1]) {
+        const subsection = match[1].toLowerCase();
+        const smcLevel = uscToSmc[subsection] || subsection.toUpperCase();
+        push(smcLevel, `SMC (${subsection}) included in payment`, 'Claim letter payment inclusion');
+      }
+      // If no specific level, just note SMC is present - will be resolved from context
+    }
+  }
+
+  // Pattern 4: "entitled to special monthly compensation based on [reason]"
+  const entitledPatterns = [
+    /entitled\s+to\s+(?:special\s+monthly\s+compensation|SMC)\s+(?:based on|for|due to)\s+([^.]{3,120})/gi,
+    /(?:special\s+monthly\s+compensation|SMC)\s+(?:based on|for|due to)\s+([^.]{3,120})/gi
+  ];
+
+  for (const pattern of entitledPatterns) {
+    pattern.lastIndex = 0;
+    let match;
+    while ((match = pattern.exec(text)) !== null) {
+      const reason = match[1].trim();
+      // Infer SMC level from reason text
+      let level = null;
+      if (/loss.*creative\s+organ|erectile\s+dysfunction/i.test(reason)) level = 'K';
+      else if (/housebound/i.test(reason)) level = 'S';
+      else if (/aid\s+and\s+attendance|a&a/i.test(reason)) level = 'L';
+      else if (/loss.*(?:hand|foot|extremity)/i.test(reason)) level = 'L';
+      else if (/blind/i.test(reason)) level = 'L';
+      else if (/deaf/i.test(reason)) level = 'L';
+
+      if (level) {
+        push(level, reason, 'Entitlement language in claim letter');
+      }
+    }
+  }
+
+  // Pattern 5: Direct "SMC-K" or "SMC (K)" style in claim letters
+  const directSmcPattern = /\bSMC\s*[-(\s]?\s*([KLMNOST](?:[12½])?)\s*\)?/gi;
+  let directMatch;
+  while ((directMatch = directSmcPattern.exec(text)) !== null) {
+    const level = directMatch[1].toUpperCase();
+    // Verify it's in a positive context (not denied, not explaining what SMC is)
+    const localStart = Math.max(0, directMatch.index - 80);
+    const localEnd = Math.min(text.length, directMatch.index + 80);
+    const context = text.substring(localStart, localEnd);
+    if (/\bdenied\b|not\s+granted|not\s+entitled/i.test(context)) continue;
+    if (/\bwhat\s+is\b|definition|explanation|if\s+you/i.test(context)) continue;
+    push(level, `SMC-${level} referenced in claim letter`, 'Direct SMC code in claim letter');
+  }
+
+  return grantedSMC;
 }
 
 function extractServiceConnected(text) {
@@ -1281,6 +1563,20 @@ function extractSMC(serviceConnected, text) {
   // Do NOT use detectSMC for conditions matching patterns - that detects eligibility, not grants
   const smcLevels = ['K', 'L', 'L½', 'M', 'M½', 'N', 'O', 'R1', 'R2', 'S', 'T'];
   const grantedSMC = [];
+
+  const pushGrantedLevel = (level, reason, evidence) => {
+    const normalizedLevel = String(level || '').toUpperCase();
+    if (!normalizedLevel) return;
+    const alreadyPresent = grantedSMC.some((item) => String(item?.level || '').toUpperCase() === normalizedLevel);
+    if (alreadyPresent) return;
+
+    grantedSMC.push({
+      level: normalizedLevel,
+      reason: reason || `Explicitly stated as SMC-${normalizedLevel}`,
+      cfr: '38 CFR 3.350',
+      evidence: evidence || 'Explicit SMC mention with grant context'
+    });
+  };
   
   for (const level of smcLevels) {
     // Look ONLY for explicit "SMC-X" or "SMC X" text in document
@@ -1310,7 +1606,6 @@ function extractSMC(serviceConnected, text) {
     }
     
     if (hasGrantedMention) {
-      // Create SMC entry for granted level
       const smcRules = {
         'K': 'Erectile dysfunction',
         'L': 'Loss or loss of use of hand',
@@ -1324,15 +1619,37 @@ function extractSMC(serviceConnected, text) {
         'S': 'Explicitly stated as SMC-S',
         'T': 'Explicitly stated as SMC-T'
       };
-      
-      grantedSMC.push({
-        level,
-        reason: smcRules[level] || `Explicitly stated as SMC-${level}`,
-        cfr: '38 CFR 3.350',
-        evidence: 'Explicit SMC mention with grant context'
-      });
+
+      pushGrantedLevel(level, smcRules[level] || `Explicitly stated as SMC-${level}`, 'Explicit SMC mention with grant context');
     }
   }
+
+  // Also detect explicit textual SMC grants where a code is not printed (common in narrative decisions).
+  const sentenceChunks = String(text || '').split(/[\r\n\.\!\?]+/).map((chunk) => chunk.trim()).filter(Boolean);
+  sentenceChunks.forEach((chunk) => {
+    if (!/special\s+monthly\s+compensation/i.test(chunk)) {
+      return;
+    }
+
+    const hasGrantLanguage = /\b(?:is\s+)?(?:granted|awarded|established)\b|\bentitled\s+to\b/i.test(chunk);
+    const hasDenialLanguage = /\bdenied\b|not\s+granted|not\s+warranted|insufficient|no\s+entitle/i.test(chunk);
+    if (!hasGrantLanguage || hasDenialLanguage) {
+      return;
+    }
+
+    const inferred = extractSMCLevelFromReason(chunk);
+    if (!inferred) {
+      return;
+    }
+
+    const normalized = inferred.match(/SMC[-\s]?([A-Z]\d?|L½|M½|N½)/i);
+    const level = normalized ? normalized[1].toUpperCase() : null;
+    if (!level) {
+      return;
+    }
+
+    pushGrantedLevel(level, inferred, 'Textual Special Monthly Compensation grant language');
+  });
   
   // Legacy format compatibility - only include actually granted SMC (no inferred)
   const explicit = grantedSMC.map(smc => `${smc.level} - ${smc.reason}`);
@@ -1823,6 +2140,27 @@ function scanVaDecision(rawText) {
     .filter((item) => Number.isFinite(item.percentage) && item.percentage >= 0)
     .filter((item) => !/\bdenied\b/i.test(item.condition));
   
+  // Claim Letter Fallback: If narrative extraction found nothing, try claim letter / benefits summary format
+  let claimLetterCombinedRating = null;
+  if (serviceConnected.length === 0) {
+    console.log('[Scanner] No conditions from narrative extraction — trying claim letter format...');
+    const claimLetterConditions = extractServiceConnectedFromClaimLetter(text, textWithLines);
+    if (claimLetterConditions.length > 0) {
+      // Check for synthetic combined-only entries
+      const realConditions = claimLetterConditions.filter(c => c.source !== 'claim-letter-combined');
+      const combinedEntry = claimLetterConditions.find(c => c._claimLetterCombinedRating);
+      if (combinedEntry) {
+        claimLetterCombinedRating = combinedEntry._claimLetterCombinedRating;
+      }
+      serviceConnected = dedupeByConditionAndRating(
+        realConditions.length > 0 ? realConditions : claimLetterConditions
+      )
+        .filter((item) => Number.isFinite(item.percentage) && item.percentage >= 0)
+        .filter((item) => !/\bdenied\b/i.test(item.condition));
+      console.log(`[Scanner] Claim letter extraction found ${serviceConnected.length} conditions${claimLetterCombinedRating ? `, combined rating: ${claimLetterCombinedRating}%` : ''}`);
+    }
+  }
+
   // Detect bilateral pairs per 38 CFR 4.25/4.26
   // Group conditions by body part, ignoring laterality
   const bilateralPairs = {};
@@ -1905,6 +2243,25 @@ function scanVaDecision(rawText) {
   });
   const ancillaryBenefits = extractAncillary(text);
   const smc = extractSMC(serviceConnected, text);
+
+  // Claim Letter SMC Fallback: If standard SMC extraction found nothing, try claim letter patterns
+  if (!smc.detectedLevels || smc.detectedLevels.length === 0) {
+    const claimLetterSmc = extractSmcFromClaimLetter(text);
+    if (claimLetterSmc.length > 0) {
+      console.log(`[Scanner] Claim letter SMC extraction found ${claimLetterSmc.length} SMC levels: ${claimLetterSmc.map(s => s.level).join(', ')}`);
+      smc.detectedLevels = claimLetterSmc;
+      smc.allLevels = claimLetterSmc;
+      smc.explicit = claimLetterSmc.map(s => `${s.level} - ${s.reason}`);
+      smc.smcK = claimLetterSmc.some(s => s.level === 'K');
+      smc.assessment = {
+        smcK: claimLetterSmc.some(s => s.level === 'K'),
+        smcL: claimLetterSmc.some(s => s.level === 'L'),
+        smcS: claimLetterSmc.some(s => s.level === 'S'),
+        hasAnySMC: true
+      };
+    }
+  }
+
   const housebound = extractHouseboundStatus(textWithLines || text, ancillaryBenefits, smc);
   const dependents = extractDependents(text);
   const payments = extractPayments(text);
@@ -1961,9 +2318,17 @@ function scanVaDecision(rawText) {
   const extractedCombined = metadata.combinedRating ? parseInt(metadata.combinedRating) : null;
   
   // Use bilateral-adjusted rating if bilateral pairs exist, otherwise regular combined
-  const calculatedCombinedRating = bilateralCalculation.hasBilateralPairs 
+  let calculatedCombinedRating = bilateralCalculation.hasBilateralPairs 
     ? bilateralCalculation.bilateralAdjustedCombined 
     : bilateralCalculation.regularCombined;
+
+  // Claim Letter Fallback: If calculated rating is 0 but the document states a combined rating,
+  // use the extracted or claim letter combined rating
+  if (calculatedCombinedRating === 0 && (extractedCombined > 0 || claimLetterCombinedRating > 0)) {
+    const fallbackRating = extractedCombined || claimLetterCombinedRating;
+    console.log(`[Scanner] Using extracted combined rating ${fallbackRating}% (calculated was 0%)`);
+    calculatedCombinedRating = fallbackRating;
+  }
 
   return {
     scannerVersion: SCANNER_VERSION,

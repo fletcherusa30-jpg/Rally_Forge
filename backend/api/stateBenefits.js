@@ -15,6 +15,7 @@ import {
   getBenefitsByCategoryAcrossStates,
   searchStateBenefits,
   compareStateBenefits,
+  getStructuredStateBenefitsEligibility,
 } from '../controllers/stateBenefitsController.js';
 
 const router = express.Router();
@@ -30,6 +31,18 @@ router.get('/states', asyncHandler(listStates));
  * Get database statistics
  */
 router.get('/stats', asyncHandler(getStateBenefitsStats));
+
+/**
+ * GET /state-benefits/structured/:stateCode
+ * Get JSON-backed state benefits filtered by veteran profile
+ * Query params:
+ *   rating=0-100
+ *   serviceConnected=true|false
+ *   combatVeteran=true|false
+ *   wartimeVeteran=true|false
+ *   homeowner=true|false
+ */
+router.get('/structured/:stateCode', asyncHandler(getStructuredStateBenefitsEligibility));
 
 /**
  * GET /state-benefits/:stateCode/eligible

@@ -1,0 +1,50 @@
+﻿{
+	"benefit": "VA health care",
+	"summary": "Enrollment-based access to VA medical, mental health, pharmacy, preventive, specialty, and community care services.",
+	"primaryEnrollmentForm": "VA Form 10-10EZ",
+	"enrollmentChannels": [
+		"VA.gov online enrollment",
+		"In-person enrollment at a VA medical facility",
+		"Mail or fax submission of VA Form 10-10EZ"
+	],
+	"priorityGroups": [
+		{
+			"group": 1,
+			"typicalEligibility": "Veterans rated 50% or more service-connected or unemployable due to service-connected conditions."
+		},
+		{
+			"group": 4,
+			"typicalEligibility": "Veterans receiving aid and attendance, housebound benefits, or determined catastrophically disabled."
+		},
+		{
+			"group": 5,
+			"typicalEligibility": "Low-income veterans and many pension recipients."
+		},
+		{
+			"group": 6,
+			"typicalEligibility": "Many toxic-exposed veterans, combat veterans in their enhanced eligibility window, and certain radiation-exposed veterans."
+		},
+		{
+			"group": 8,
+			"typicalEligibility": "Higher-income veterans who do not meet a higher-priority category and are enrolled when capacity permits."
+		}
+	],
+	"majorPrograms": [
+		"Primary care and preventive care",
+		"Mental health and PTSD treatment",
+		"Pharmacy and prescriptions",
+		"Specialty care and prosthetics",
+		"Community Care when eligibility criteria are met",
+		"Caregiver support and social work services"
+	],
+	"relatedPrograms": [
+		{
+			"name": "CHAMPVA",
+			"appliesTo": "Qualified spouses and dependents of veterans rated permanently and totally disabled or who died from service-connected causes."
+		},
+		{
+			"name": "Camp Lejeune family member reimbursement",
+			"appliesTo": "Certain family members exposed during the contamination period under separate authority from standard veteran enrollment."
+		}
+	]
+}

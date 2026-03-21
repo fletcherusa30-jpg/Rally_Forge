@@ -1,0 +1,20 @@
+﻿[
+    {
+        "scope":  "financial",
+        "name":  "IRS Military \u0026 Veterans",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.irs.gov/individuals/military",
+        "category":  "financial",
+        "notes":  "Tax resources for military and Veterans."
+    },
+    {
+        "scope":  "financial",
+        "name":  "CFPB Military \u0026 Veterans",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.consumerfinance.gov/servicemembers",
+        "category":  "financial",
+        "notes":  "Financial protections and resources."
+    }
+]

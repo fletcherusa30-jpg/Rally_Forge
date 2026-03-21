@@ -3,6 +3,57 @@
  * Diagnostic codes, pyramiding rules, bilateral factor, special rules
  */
 
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const CFR_INDEX_PATH = path.resolve(__dirname, '../../../knowledge/cfr/cfr-index.json');
+
+let SECTION_BY_DX = null;
+let SECTION_BY_NUMBER = null;
+
+function hydrateSectionMaps() {
+  if (SECTION_BY_DX && SECTION_BY_NUMBER) return;
+
+  const byDx = new Map();
+  const byNumber = new Map();
+
+  try {
+    const raw = fs.readFileSync(CFR_INDEX_PATH, 'utf8');
+    const bundle = JSON.parse(raw);
+    const part4 = (bundle?.cfrIndex?.parts || []).find((part) => Number(part?.partNumber) === 4);
+
+    for (const section of part4?.sections || []) {
+      const secNumber = String(section?.sectionNumber || '').toLowerCase();
+      if (secNumber) byNumber.set(secNumber, section);
+
+      for (const code of section?.diagnosticCodeRefs || []) {
+        const normalized = String(code).replace(/[^0-9]/g, '');
+        if (normalized) byDx.set(normalized, section);
+      }
+    }
+  } catch {
+    // Structured index may be missing; preserve null mappings.
+  }
+
+  SECTION_BY_DX = byDx;
+  SECTION_BY_NUMBER = byNumber;
+}
+
+function resolveLocalSectionFromDc(dc) {
+  hydrateSectionMaps();
+  const normalized = String(dc || '').replace(/[^0-9]/g, '');
+  if (!normalized) return null;
+  return SECTION_BY_DX.get(normalized) || null;
+}
+
+function resolveLocalSectionByNumber(sectionNumber) {
+  hydrateSectionMaps();
+  return SECTION_BY_NUMBER.get(String(sectionNumber || '').toLowerCase()) || null;
+}
+
 export const CFR_PART4_RULES = {
   // Bilateral Factor (38 CFR 4.26)
   BILATERAL_FACTOR: {
@@ -146,90 +197,109 @@ export const CFR_PART4_RULES = {
 // Normalize condition to CFR terminology
 export function normalizeToCFRTerminology(conditionText) {
   const text = conditionText.toLowerCase();
+
+  const withLocalSection = (payload) => {
+    const dc = payload?.dc;
+    const fromDc = dc ? resolveLocalSectionFromDc(dc) : null;
+    const fromRule = /bilateral|both|left|right/i.test(text) ? resolveLocalSectionByNumber('4.26') : null;
+    const section = fromDc || fromRule || null;
+
+    return {
+      ...payload,
+      localCfrSection: section
+        ? {
+            id: section?.id || null,
+            partNumber: 4,
+            sectionNumber: section?.sectionNumber || null,
+            sectionTitle: section?.sectionTitle || null,
+          }
+        : null,
+    };
+  };
   
   // Spine normalization
   if (/cervical.*spine|neck|c-?spine/i.test(text)) {
-    return { anatomy: 'cervical spine', category: 'musculoskeletal', subcategory: 'spine' };
+    return withLocalSection({ anatomy: 'cervical spine', category: 'musculoskeletal', subcategory: 'spine' });
   }
   if (/thoracic.*spine|t-?spine/i.test(text) || (/thoracic|lumbar/i.test(text) && /spine/i.test(text))) {
-    return { anatomy: 'thoracolumbar spine', category: 'musculoskeletal', subcategory: 'spine' };
+    return withLocalSection({ anatomy: 'thoracolumbar spine', category: 'musculoskeletal', subcategory: 'spine' });
   }
   if (/lumbar.*spine|l-?spine|low.*back/i.test(text)) {
-    return { anatomy: 'lumbar spine', category: 'musculoskeletal', subcategory: 'spine' };
+    return withLocalSection({ anatomy: 'lumbar spine', category: 'musculoskeletal', subcategory: 'spine' });
   }
   
   // Joint normalization
   if (/shoulder/i.test(text)) {
-    return { anatomy: 'shoulder', category: 'musculoskeletal', subcategory: 'joints' };
+    return withLocalSection({ anatomy: 'shoulder', category: 'musculoskeletal', subcategory: 'joints' });
   }
   if (/knee/i.test(text)) {
-    return { anatomy: 'knee', category: 'musculoskeletal', subcategory: 'joints' };
+    return withLocalSection({ anatomy: 'knee', category: 'musculoskeletal', subcategory: 'joints' });
   }
   if (/ankle/i.test(text)) {
-    return { anatomy: 'ankle', category: 'musculoskeletal', subcategory: 'joints' };
+    return withLocalSection({ anatomy: 'ankle', category: 'musculoskeletal', subcategory: 'joints' });
   }
   if (/hip/i.test(text)) {
-    return { anatomy: 'hip', category: 'musculoskeletal', subcategory: 'joints' };
+    return withLocalSection({ anatomy: 'hip', category: 'musculoskeletal', subcategory: 'joints' });
   }
   if (/elbow/i.test(text)) {
-    return { anatomy: 'elbow', category: 'musculoskeletal', subcategory: 'joints' };
+    return withLocalSection({ anatomy: 'elbow', category: 'musculoskeletal', subcategory: 'joints' });
   }
   if (/wrist/i.test(text)) {
-    return { anatomy: 'wrist', category: 'musculoskeletal', subcategory: 'joints' };
+    return withLocalSection({ anatomy: 'wrist', category: 'musculoskeletal', subcategory: 'joints' });
   }
   
   // Foot conditions
   if (/hallux.*valgus|bunion/i.test(text)) {
-    return { anatomy: 'hallux valgus', category: 'musculoskeletal', subcategory: 'feet', dc: 5280 };
+    return withLocalSection({ anatomy: 'hallux valgus', category: 'musculoskeletal', subcategory: 'feet', dc: 5280 });
   }
   if (/hammer.*toe/i.test(text)) {
-    return { anatomy: 'hammer toe', category: 'musculoskeletal', subcategory: 'feet', dc: 5282 };
+    return withLocalSection({ anatomy: 'hammer toe', category: 'musculoskeletal', subcategory: 'feet', dc: 5282 });
   }
   if (/flat.*foot|pes.*planus/i.test(text)) {
-    return { anatomy: 'flat foot', category: 'musculoskeletal', subcategory: 'feet', dc: 5276 };
+    return withLocalSection({ anatomy: 'flat foot', category: 'musculoskeletal', subcategory: 'feet', dc: 5276 });
   }
   
   // Nerves
   if (/sciatic/i.test(text)) {
-    return { anatomy: 'sciatic nerve', category: 'musculoskeletal', subcategory: 'nerves', dc: 8520 };
+    return withLocalSection({ anatomy: 'sciatic nerve', category: 'musculoskeletal', subcategory: 'nerves', dc: 8520 });
   }
   if (/radiculopathy|radicular/i.test(text)) {
-    return { anatomy: 'radiculopathy', category: 'musculoskeletal', subcategory: 'nerves' };
+    return withLocalSection({ anatomy: 'radiculopathy', category: 'musculoskeletal', subcategory: 'nerves' });
   }
   
   // Mental health
   if (/ptsd|post.*traumatic.*stress/i.test(text)) {
-    return { anatomy: 'PTSD', category: 'mental', dc: 9411 };
+    return withLocalSection({ anatomy: 'PTSD', category: 'mental', dc: 9411 });
   }
   if (/depress/i.test(text)) {
-    return { anatomy: 'depression', category: 'mental', dc: 9434 };
+    return withLocalSection({ anatomy: 'depression', category: 'mental', dc: 9434 });
   }
   if (/anxiety/i.test(text)) {
-    return { anatomy: 'anxiety', category: 'mental', dc: 9400 };
+    return withLocalSection({ anatomy: 'anxiety', category: 'mental', dc: 9400 });
   }
   if (/adjustment.*disorder/i.test(text)) {
-    return { anatomy: 'adjustment disorder', category: 'mental', dc: 9440 };
+    return withLocalSection({ anatomy: 'adjustment disorder', category: 'mental', dc: 9440 });
   }
   
   // Special conditions
   if (/tinnitus/i.test(text)) {
-    return { anatomy: 'tinnitus', category: 'ear', dc: 6260 };
+    return withLocalSection({ anatomy: 'tinnitus', category: 'ear', dc: 6260 });
   }
   if (/sleep.*apnea/i.test(text)) {
-    return { anatomy: 'sleep apnea', category: 'respiratory', dc: 6847 };
+    return withLocalSection({ anatomy: 'sleep apnea', category: 'respiratory', dc: 6847 });
   }
   if (/gerd|gastroesophageal.*reflux/i.test(text)) {
-    return { anatomy: 'GERD', category: 'digestive', dc: 7346 };
+    return withLocalSection({ anatomy: 'GERD', category: 'digestive', dc: 7346 });
   }
   if (/erectile.*dysfunction|ed\b/i.test(text)) {
-    return { anatomy: 'erectile dysfunction', category: 'genitourinary', dc: 7522 };
+    return withLocalSection({ anatomy: 'erectile dysfunction', category: 'genitourinary', dc: 7522 });
   }
   if (/hypertension|high.*blood.*pressure/i.test(text)) {
-    return { anatomy: 'hypertension', category: 'cardiovascular', dc: 7101 };
+    return withLocalSection({ anatomy: 'hypertension', category: 'cardiovascular', dc: 7101 });
   }
   
   // Default
-  return { anatomy: conditionText, category: 'unknown' };
+  return withLocalSection({ anatomy: conditionText, category: 'unknown' });
 }
 
 // Check if bilateral factor applies

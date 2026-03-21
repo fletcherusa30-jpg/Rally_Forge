@@ -1,0 +1,55 @@
+{
+    "mos": [
+        {
+            "code": "MED",
+            "title": "Medical Officer",
+            "type": "officer"
+        },
+        {
+            "code": "DEN",
+            "title": "Dental Officer",
+            "type": "officer"
+        },
+        {
+            "code": "NUR",
+            "title": "Nurse Officer",
+            "type": "officer"
+        },
+        {
+            "code": "ENG",
+            "title": "Engineer Officer",
+            "type": "officer"
+        },
+        {
+            "code": "ENV",
+            "title": "Environmental Health Officer",
+            "type": "officer"
+        },
+        {
+            "code": "HLS",
+            "title": "Health Services Officer",
+            "type": "officer"
+        },
+        {
+            "code": "PHM",
+            "title": "Pharmacist Officer",
+            "type": "officer"
+        },
+        {
+            "code": "SCI",
+            "title": "Scientist Officer",
+            "type": "officer"
+        },
+        {
+            "code": "VET",
+            "title": "Veterinary Officer",
+            "type": "officer"
+        },
+        {
+            "code": "SPC",
+            "title": "Specialist Officer",
+            "type": "officer"
+        }
+    ],
+    "branch": "USPHS"
+}

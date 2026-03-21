@@ -5,26 +5,25 @@ import {
   normalizeDependentProfile,
 } from '../services/compensationService.js';
 
-const DEFAULT_YEAR = 2026;
-const SUPPORTED_YEARS = [2024, 2025, 2026];
+// Default to current year; compensation-engine will fallback to most recent available if needed
+function getDefaultYear() {
+  return new Date().getFullYear();
+}
 
 function toInteger(value, fallback = 0) {
   const parsed = Number.parseInt(String(value ?? ''), 10);
   return Number.isFinite(parsed) ? parsed : fallback;
 }
 
-function buildAuthoritativeQuote({ rating, dependents = {}, smcCode = null, ancillary = {}, year = DEFAULT_YEAR } = {}) {
+function buildAuthoritativeQuote({ rating, dependents = {}, smcCode = null, ancillary = {}, year = null } = {}) {
   const normalizedRating = toInteger(rating, 0);
   const normalizedSmcCode = String(smcCode || '').toUpperCase().trim() || null;
-  const normalizedYear = toInteger(year, DEFAULT_YEAR);
+  // Let compensation-engine handle year selection and fallback
+  const normalizedYear = year ? toInteger(year, null) : null;
   const normalizedDependents = normalizeDependentProfile(dependents || {});
 
   if (normalizedRating <= 0) {
     throw new Error('rating must be a positive percentage value');
-  }
-
-  if (!SUPPORTED_YEARS.includes(normalizedYear)) {
-    throw new Error(`Year ${normalizedYear} not supported. Supported years: ${SUPPORTED_YEARS.join(', ')}`);
   }
 
   return calculateCompensationQuote({
@@ -39,7 +38,7 @@ function buildAuthoritativeQuote({ rating, dependents = {}, smcCode = null, anci
 export function getCompensation(req, res) {
   try {
     const rating = Number.parseInt(String(req.query.rating ?? '100'), 10);
-    const year = Number.parseInt(String(req.query.yearOverride ?? req.query.year ?? DEFAULT_YEAR), 10);
+    const year = Number.parseInt(String(req.query.yearOverride ?? req.query.year ?? ''), 10) || null;
     const dependents = normalizeDependentProfile({
       spouse: req.query.spouse,
       children: req.query.children,
@@ -84,22 +83,29 @@ export function getCompensationYears(_req, res) {
 }
 
 export function getSupportedCompensationYears(_req, res) {
-  res.json({
-    supportedYears: SUPPORTED_YEARS.sort((a, b) => a - b),
-    default: DEFAULT_YEAR,
-    note: '2024 and 2025 rates will use JSON data files if available; 2026 uses authoritative markdown tables',
-  });
+  try {
+    const availableYears = compensationEngine.getAvailableYears();
+    const currentYear = getDefaultYear();
+    res.json({
+      supportedYears: availableYears.sort((a, b) => a - b),
+      default: currentYear,
+      note: 'If requested year not available, compensation engine will use most recent available year.',
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.message || 'Failed to load supported years' });
+  }
 }
 
 export function createCompensationQuote(req, res) {
   try {
     const body = req.body || {};
+    const year = body.yearOverride || body.year || null;
     const quote = buildAuthoritativeQuote({
       rating: body.rating,
       dependents: body.dependents || {},
       smcCode: body.smcCode || null,
       ancillary: body.ancillary || { aidAndAttendance: false, housebound: false },
-      year: body.yearOverride || body.year || DEFAULT_YEAR,
+      year,
     });
     res.json({ success: true, quote });
   } catch (error) {

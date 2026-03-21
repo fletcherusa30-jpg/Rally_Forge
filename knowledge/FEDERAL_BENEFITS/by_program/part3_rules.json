@@ -1,0 +1,46 @@
+﻿{
+	"ruleGroups": [
+		{
+			"category": "Direct service connection",
+			"elements": [
+				"Current disability",
+				"In-service incurrence or aggravation",
+				"Medical nexus to service"
+			],
+			"primarySection": "§3.301"
+		},
+		{
+			"category": "Presumptive service connection",
+			"elements": [
+				"Qualifying service or exposure",
+				"Covered diagnosis or illness pattern",
+				"Manifestation within the applicable rule window when required"
+			],
+			"primarySections": ["§3.303", "§3.307", "§3.309"]
+		},
+		{
+			"category": "Effective dates",
+			"elements": [
+				"Date of claim or date entitlement arose controls in most cases",
+				"Retroactive awards depend on the evidence and specific statutory exceptions"
+			],
+			"primarySections": ["§3.400", "§3.401"]
+		},
+		{
+			"category": "Dependents",
+			"elements": [
+				"Spouse, child, and certain parents may qualify",
+				"Child status depends on age, school attendance, or helpless child criteria"
+			],
+			"primarySections": ["§3.500", "§3.501", "§3.502"]
+		},
+		{
+			"category": "Compensation rates",
+			"elements": [
+				"Monthly rates flow from the Part 4 schedule",
+				"Combined ratings are not simple arithmetic addition"
+			],
+			"primarySections": ["§3.600", "§3.650"]
+		}
+	]
+}

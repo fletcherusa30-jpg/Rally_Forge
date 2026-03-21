@@ -1,0 +1,51 @@
+﻿{
+	"facilityTypes": [
+		{
+			"type": "VA Medical Center",
+			"purpose": "Full-service hospital and specialty care hub.",
+			"examples": [
+				{ "name": "Michael E. DeBakey VA Medical Center", "city": "Houston", "state": "TX", "visn": 16 },
+				{ "name": "Durham VA Medical Center", "city": "Durham", "state": "NC", "visn": 6 },
+				{ "name": "Palo Alto VA Medical Center", "city": "Palo Alto", "state": "CA", "visn": 21 }
+			]
+		},
+		{
+			"type": "Community-Based Outpatient Clinic",
+			"purpose": "Primary care and routine specialty access closer to where veterans live.",
+			"examples": [
+				{ "name": "Austin VA Clinic", "city": "Austin", "state": "TX", "parentSystem": "Central Texas Veterans Health Care System" },
+				{ "name": "Bakersfield VA Clinic", "city": "Bakersfield", "state": "CA", "parentSystem": "Greater Los Angeles VA" }
+			]
+		},
+		{
+			"type": "Vet Center",
+			"purpose": "Readjustment counseling for combat veterans, survivors, and victims of military sexual trauma.",
+			"examples": [
+				{ "name": "Alexandria Vet Center", "city": "Alexandria", "state": "VA" },
+				{ "name": "Denver Vet Center", "city": "Denver", "state": "CO" }
+			]
+		},
+		{
+			"type": "Regional Office",
+			"purpose": "Benefits claims intake, hearings, and in-person benefits support.",
+			"examples": [
+				{ "name": "Houston Regional Office", "city": "Houston", "state": "TX" },
+				{ "name": "St. Petersburg Regional Office", "city": "St. Petersburg", "state": "FL" },
+				{ "name": "Seattle Regional Office", "city": "Seattle", "state": "WA" }
+			]
+		},
+		{
+			"type": "National Cemetery",
+			"purpose": "Burial and memorial services administered by the National Cemetery Administration.",
+			"examples": [
+				{ "name": "Arlington National Cemetery", "city": "Arlington", "state": "VA" },
+				{ "name": "Fort Snelling National Cemetery", "city": "Minneapolis", "state": "MN" }
+			]
+		}
+	],
+	"accessNotes": [
+		"Facility eligibility varies by enrollment status, priority group, and service need.",
+		"Community Care may be authorized when VA access standards or specialty availability requirements are met.",
+		"Benefit hearings and claims support usually route through regional offices rather than medical centers."
+	]
+}

@@ -5,9 +5,8 @@
  * Wraps backend/engine/benefits/benefitsEngine.js with structured logging and error handling.
  *
  * This is the domain layer entry point for benefits calculation.
- * Consolidates duplicated logic from:
- *   - backend/engine/stateBenefits.js (monolithic, deprecated)
- *   - backend/services/stateBenefitsService.js (deprecated)
+ * Consolidates duplicated logic from the former monolithic state benefits layer
+ * and the legacy service facade retained only for compatibility during migration.
  *
  * Implementation: Delegates to backend/engine/benefits/benefitsEngine.js for orchestration.
  */

@@ -10,49 +10,106 @@ import React, { useState } from 'react';
  * 
  * STRICTLY SEPARATED from VA Rating Decision entry
  */
-export function STRManualEntry({ onSave }) {
+export function STRManualEntry({ onSave, initialEntry = null }) {
+  const emitTelemetry = (event, details = {}) => {
+    console.info('[STRManualEntry]', {
+      event,
+      timestamp: new Date().toISOString(),
+      ...details,
+    });
+  };
+
+  const normalizeText = (value) => String(value || '').trim();
+  const normalizeDate = (value) => {
+    const text = normalizeText(value);
+    return /^\d{4}-\d{2}-\d{2}$/.test(text) ? text : '';
+  };
+
+  const canonicalEntryKey = (entry) => [
+    normalizeText(entry?.conditionName).toLowerCase(),
+    normalizeDate(entry?.dateOfEvent),
+    normalizeText(entry?.type).toLowerCase(),
+  ].join('|');
+
+  const buildDefaultEntry = (overrides = null) => {
+    const defaults = {
+      // Event Details
+      conditionName: '',
+      dateOfEvent: '',
+      type: 'illness',
+      location: '',
+
+      // Medical Documentation
+      provider: '',
+      description: '',
+      severity: 'moderate',
+
+      // Service Context
+      lineOfDuty: 'Yes',
+      MOSRelevant: false,
+
+      // Exposure & Context
+      exposureType: null,
+      inServiceEvent: true,
+
+      // Chronicity & Continuity
+      chronicityEvidence: '',
+      continuityNotes: '',
+      nexusIndicators: ''
+    };
+
+    if (!overrides) {
+      return defaults;
+    }
+
+    return {
+      ...defaults,
+      ...Object.fromEntries(Object.entries(overrides).filter(([, value]) => value !== undefined && value !== null && value !== '')),
+    };
+  };
+
   const [entries, setEntries] = useState([]);
-  const [newEntry, setNewEntry] = useState({
-    // Event Details
-    conditionName: '',
-    dateOfEvent: '',
-    type: 'illness',
-    location: '',
-    
-    // Medical Documentation
-    provider: '',
-    description: '',
-    severity: 'moderate',
-    
-    // Service Context
-    lineOfDuty: 'Yes',
-    MOSRelevant: false,
-    
-    // Exposure & Context
-    exposureType: null,
-    inServiceEvent: true,
-    
-    // Chronicity & Continuity
-    chronicityEvidence: '',
-    continuityNotes: '',
-    nexusIndicators: ''
-  });
+  const [newEntry, setNewEntry] = useState(() => buildDefaultEntry(initialEntry));
 
   const [errors, setErrors] = useState({});
+
+  const normalizeEntry = (entry) => ({
+    conditionName: normalizeText(entry?.conditionName),
+    dateOfEvent: normalizeDate(entry?.dateOfEvent),
+    type: normalizeText(entry?.type) || 'illness',
+    location: normalizeText(entry?.location) || null,
+    provider: normalizeText(entry?.provider) || null,
+    description: normalizeText(entry?.description),
+    severity: normalizeText(entry?.severity) || 'moderate',
+    lineOfDuty: normalizeText(entry?.lineOfDuty) || 'Yes',
+    MOSRelevant: entry?.exposureType ? Boolean(entry?.MOSRelevant) : null,
+    exposureType: normalizeText(entry?.exposureType) || null,
+    inServiceEvent: Boolean(entry?.inServiceEvent),
+    chronicityEvidence: normalizeText(entry?.chronicityEvidence) || null,
+    continuityNotes: normalizeText(entry?.chronicityEvidence) ? normalizeText(entry?.continuityNotes) || null : null,
+    nexusIndicators: normalizeText(entry?.nexusIndicators) || null,
+    manualEntry: true,
+    entryType: 'SERVICE_TREATMENT_RECORD'
+  });
 
   // Validation
   const validateEntry = (entry) => {
     const newErrors = {};
+    const conditionName = String(entry?.conditionName || '').trim();
+    const dateOfEvent = String(entry?.dateOfEvent || '').trim();
+    const description = String(entry?.description || '').trim();
+    const chronicityEvidence = String(entry?.chronicityEvidence || '').trim();
+    const continuityNotes = String(entry?.continuityNotes || '').trim();
     
-    if (!entry.conditionName.trim()) {
+    if (!conditionName) {
       newErrors.conditionName = 'Condition name is required';
     }
     
-    if (!entry.dateOfEvent) {
+    if (!dateOfEvent) {
       newErrors.dateOfEvent = 'Date of event is required';
     }
     
-    if (!entry.description.trim()) {
+    if (!description) {
       newErrors.description = 'Description is required';
     }
     
@@ -60,7 +117,7 @@ export function STRManualEntry({ onSave }) {
       newErrors.MOSRelevant = 'MOS relevance must be evaluated when exposure type is selected';
     }
     
-    if (entry.chronicityEvidence.trim() && !entry.continuityNotes.trim()) {
+    if (chronicityEvidence && !continuityNotes) {
       newErrors.continuityNotes = 'Continuity notes required when chronicality evidence is provided';
     }
     
@@ -75,45 +132,31 @@ export function STRManualEntry({ onSave }) {
       return;
     }
 
-    const entry = {
-      conditionName: newEntry.conditionName.trim(),
-      dateOfEvent: newEntry.dateOfEvent,
-      type: newEntry.type,
-      location: newEntry.location.trim() || null,
-      provider: newEntry.provider.trim() || null,
-      description: newEntry.description.trim(),
-      severity: newEntry.severity,
-      lineOfDuty: newEntry.lineOfDuty,
-      MOSRelevant: newEntry.exposureType ? newEntry.MOSRelevant : null,
-      exposureType: newEntry.exposureType || null,
-      inServiceEvent: newEntry.inServiceEvent,
-      chronicityEvidence: newEntry.chronicityEvidence.trim() || null,
-      continuityNotes: newEntry.chronicityEvidence.trim() ? newEntry.continuityNotes.trim() : null,
-      nexusIndicators: newEntry.nexusIndicators.trim() || null,
-      manualEntry: true,
-      type: 'SERVICE_TREATMENT_RECORD'
-    };
+    const entry = normalizeEntry(newEntry);
+    const existingIndex = entries.findIndex((item) => canonicalEntryKey(item) === canonicalEntryKey(entry));
 
-    setEntries([...entries, entry]);
+    setEntries([...entries, {
+      ...entry,
+      duplicateOf: existingIndex >= 0 ? existingIndex : null,
+    }]);
+    emitTelemetry('entry_added', {
+      duplicate: existingIndex >= 0,
+      conditionName: entry.conditionName,
+    });
     setErrors({});
     
     // Reset form
-    setNewEntry({
-      conditionName: '',
-      dateOfEvent: '',
-      type: 'illness',
-      location: '',
-      provider: '',
-      description: '',
-      severity: 'moderate',
-      lineOfDuty: 'Yes',
-      MOSRelevant: false,
-      exposureType: null,
-      inServiceEvent: true,
-      chronicityEvidence: '',
-      continuityNotes: '',
-      nexusIndicators: ''
-    });
+    setNewEntry(buildDefaultEntry({
+      ...initialEntry,
+      type: newEntry.type,
+      location: newEntry.location,
+      provider: newEntry.provider,
+      severity: newEntry.severity,
+      lineOfDuty: newEntry.lineOfDuty,
+      MOSRelevant: newEntry.MOSRelevant,
+      exposureType: newEntry.exposureType,
+      inServiceEvent: newEntry.inServiceEvent,
+    }));
   };
 
   const removeEntry = (index) => {
@@ -121,14 +164,22 @@ export function STRManualEntry({ onSave }) {
   };
 
   const handleSave = () => {
+    const normalizedEntries = entries.map(normalizeEntry);
+    const invalidEntry = normalizedEntries.find((entry) => Object.keys(validateEntry(entry)).length > 0);
+    if (invalidEntry) {
+      setErrors(validateEntry(invalidEntry));
+      emitTelemetry('save_blocked_validation', { conditionName: invalidEntry.conditionName });
+      return;
+    }
+
     const result = {
       success: true,
-      records: entries.map(e => ({
+      records: normalizedEntries.map(e => ({
         condition: e.conditionName,
         date: e.dateOfEvent,
         description: e.description
       })),
-      allRecords: entries,
+      allRecords: normalizedEntries,
       fileName: 'Service Treatment Records Manual Entry',
       metadata: {
         veteranName: null,
@@ -137,21 +188,23 @@ export function STRManualEntry({ onSave }) {
         serviceEra: null
       },
       patientHistory: {
-        totalMedicalEvents: entries.length,
-        inServiceCount: entries.filter(e => e.inServiceEvent).length,
-        exposureEvents: entries.filter(e => e.exposureType).length,
-        chronicConditions: entries.filter(e => e.chronicityEvidence).length
+        totalMedicalEvents: normalizedEntries.length,
+        inServiceCount: normalizedEntries.filter(e => e.inServiceEvent).length,
+        exposureEvents: normalizedEntries.filter(e => e.exposureType).length,
+        chronicConditions: normalizedEntries.filter(e => e.chronicityEvidence).length
       },
       exposureSummary: {
-        exposureTypes: [...new Set(entries.filter(e => e.exposureType).map(e => e.exposureType))],
-        MOSRelevantCount: entries.filter(e => e.MOSRelevant === true).length
+        exposureTypes: [...new Set(normalizedEntries.filter(e => e.exposureType).map(e => e.exposureType))],
+        MOSRelevantCount: normalizedEntries.filter(e => e.MOSRelevant === true).length
       },
       extractionSummary: {
-        totalRecords: entries.length,
+        totalRecords: normalizedEntries.length,
         manualEntry: true,
         entryType: 'SERVICE_TREATMENT_RECORD'
       }
     };
+
+    emitTelemetry('entries_saved', { totalRecords: normalizedEntries.length });
     
     if (onSave) {
       onSave(result);

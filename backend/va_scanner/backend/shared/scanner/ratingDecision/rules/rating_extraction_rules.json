@@ -1,0 +1,84 @@
+{
+  "rules": [
+    {
+      "ruleId": "rd-condition-extraction",
+      "name": "Service-Connected Condition Extraction",
+      "indicators": [
+        "service-connected",
+        "SC",
+        "rating established",
+        "rated at"
+      ],
+      "extract": [
+        "condition-name",
+        "rating-percentage",
+        "effective-date",
+        "diagnostic-code"
+      ]
+    },
+    {
+      "ruleId": "rd-rating-percentage-extraction",
+      "name": "Rating Percentage Extraction",
+      "validPercentages": [
+        0,
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90,
+        100
+      ],
+      "pattern": "(?:rated|rating)\\s+(?:at\\s+)?(?:^|\\D)(10|20|30|40|50|60|70|80|90|100)%"
+    },
+    {
+      "ruleId": "rd-diagnostic-code-extraction",
+      "name": "Diagnostic Code Extraction",
+      "pattern": "\\(\\d{6}\\)|DC\\s*\\d{6}|Code\\s*\\d{6}",
+      "extraction": "6-digit-number-only",
+      "validation": "must-be-valid-dc"
+    },
+    {
+      "ruleId": "rd-effective-date-extraction",
+      "name": "Effective Date Extraction",
+      "pattern": "(?:Effective|eff\\.|effective date)[:\\s]*([A-Za-z]+\\s+\\d{1,2},?\\s+\\d{4})",
+      "normalization": "YYYY-MM-DD"
+    },
+    {
+      "ruleId": "rd-decision-type-detection",
+      "name": "VA Decision Type Detection",
+      "types": {
+        "Initial": [
+          "initial rating",
+          "first rating",
+          "established"
+        ],
+        "Rerate": [
+          "increase",
+          "decrease",
+          "rerate",
+          "prior rating"
+        ],
+        "Supplemental": [
+          "supplemental",
+          "new evidence"
+        ],
+        "Reduction": [
+          "proposed reduction",
+          "reduction"
+        ],
+        "Assumed Granted": [
+          "assumed granted",
+          "assumed"
+        ],
+        "Deferred": [
+          "deferred",
+          "pending evidence"
+        ]
+      }
+    }
+  ]
+}

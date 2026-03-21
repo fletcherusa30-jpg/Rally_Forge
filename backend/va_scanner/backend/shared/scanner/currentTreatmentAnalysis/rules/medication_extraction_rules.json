@@ -1,0 +1,63 @@
+{
+  "rules": [
+    {
+      "ruleId": "ct-med-structured-table",
+      "name": "Extract from Structured Medication Table",
+      "format": "table",
+      "columns": [
+        "Name",
+        "Dose",
+        "Frequency",
+        "Indication"
+      ],
+      "parsing": "column-by-column"
+    },
+    {
+      "ruleId": "ct-med-bullet-list",
+      "name": "Extract from Bullet List",
+      "pattern": "^\\s*[-•]\\s+([A-Za-z\\s]+?):\\s+(\\d+\\s+mg)\\s+(.+?)\\s+(?:for|with)\\s+(.+?)$",
+      "groups": [
+        "drugName",
+        "dosage",
+        "frequency",
+        "indication"
+      ]
+    },
+    {
+      "ruleId": "ct-med-narrative",
+      "name": "Extract from Narrative Text",
+      "patterns": [
+        "Patient continues",
+        "Patient is on",
+        "Continue current",
+        "Current medications"
+      ],
+      "parsing": "free-text-extraction"
+    },
+    {
+      "ruleId": "ct-dosage-normalization",
+      "name": "Dosage Normalization",
+      "transformations": [
+        "10 mg once daily → 10 mg OD",
+        "250mg three times per day → 250mg TID",
+        "Every 4-6 hours as needed → Q4-6H PRN"
+      ]
+    },
+    {
+      "ruleId": "ct-frequency-mapping",
+      "name": "Frequency Code Mapping",
+      "mappings": {
+        "OD": "once daily",
+        "BID": "twice daily",
+        "TID": "three times daily",
+        "QID": "four times daily",
+        "Q4H": "every 4 hours",
+        "Q6H": "every 6 hours",
+        "Q8H": "every 8 hours",
+        "Q12H": "every 12 hours",
+        "QHS": "at bedtime",
+        "PRN": "as needed"
+      }
+    }
+  ]
+}

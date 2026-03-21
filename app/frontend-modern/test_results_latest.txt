@@ -1,0 +1,666 @@
+
+> rallyforge-frontend-modern@1.0.0 test
+> vitest run --config vitest.config.js
+
+
+[1m[46m RUN [49m[22m [36mv4.1.0 [39m[90mC:/Dev/Rally Forge/app/frontend-modern[39m
+
+ [32mΓ£ô[39m src/tests/rating-decision-normalization.test.js [2m([22m[2m5 tests[22m[2m)[22m[32m 37[2mms[22m[39m
+ [32mΓ£ô[39m src/tests/file-level-review.test.js [2m([22m[2m4 tests[22m[2m)[22m[32m 112[2mms[22m[39m
+ [32mΓ£ô[39m src/tests/claim-generator-summary-normalization.test.js [2m([22m[2m5 tests[22m[2m)[22m[32m 120[2mms[22m[39m
+ [32mΓ£ô[39m src/tests/current-treatment-normalization.test.js [2m([22m[2m21 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32mΓ£ô[39m src/tests/profile-legacy-reference-regression.test.jsx [2m([22m[2m1 test[22m[2m)[22m[32m 92[2mms[22m[39m
+ [32mΓ£ô[39m src/tests/strs-reviewer-feedback.test.jsx [2m([22m[2m2 tests[22m[2m)[22m[33m 3276[2mms[22m[39m
+     [33m[2mΓ£ô[22m[39m renders recent feedback summary and items [33m 687[2mms[22m[39m
+     [33m[2mΓ£ô[22m[39m invokes the true and false positive actions from feedback controls [33m 2583[2mms[22m[39m
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2mrenders all finalized fields in read and edit mode
+[22m[39mprofile.telemetry {
+  eventName: [32m'startEditingSection'[39m,
+  sectionId: [32m'personal'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mfalse[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+profile.section.transition {
+  sectionId: [32m'personal'[39m,
+  action: [32m'startEditingSection'[39m,
+  from: [32m'idle'[39m,
+  to: [32m'editing'[39m
+}
+
+ [32mΓ£ô[39m src/tests/strs-normalization.test.js [2m([22m[2m3 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2mrenders all finalized fields in read and edit mode
+[22m[39mprofile.telemetry {
+  eventName: [32m'startEditingSection'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mfalse[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+profile.section.transition {
+  sectionId: [32m'contact'[39m,
+  action: [32m'startEditingSection'[39m,
+  from: [32m'idle'[39m,
+  to: [32m'editing'[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'startEditingSection'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mfalse[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+profile.section.transition {
+  sectionId: [32m'contact'[39m,
+  action: [32m'startEditingSection'[39m,
+  from: [32m'idle'[39m,
+  to: [32m'editing'[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+profile.section.transition {
+  sectionId: [32m'contact'[39m,
+  action: [32m'setSectionField'[39m,
+  from: [32m'editing'[39m,
+  to: [32m'dirty'[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+stderr | src/tests/unified-claims-engine.test.jsx > Tab 07 - Resources Tests > validates resources navigation blocks and unified lay statement reflection
+ΓÜá∩╕Å React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+ΓÜá∩╕Å React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+ [32mΓ£ô[39m src/tests/claim-generator-summary-tab.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[33m 2047[2mms[22m[39m
+     [33m[2mΓ£ô[22m[39m renders unified header, dashboard cards, condition cards, and export controls [33m 1735[2mms[22m[39m
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+ [32mΓ£ô[39m src/tests/unified-claims-engine.test.jsx [2m([22m[2m19 tests[22m[2m)[22m[33m 2041[2mms[22m[39m
+     [33m[2mΓ£ô[22m[39m validates schema correctness, required fields, reference integrity, and dedupe [33m 505[2mms[22m[39m
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+ [32mΓ£ô[39m src/tests/profile-navigation-guard.test.jsx [2m([22m[2m3 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'saveSection'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+profile.telemetry {
+  eventName: [32m'persistProfile'[39m,
+  sectionId: [32m'profile'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mtrue[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+profile.section.transition {
+  sectionId: [32m'contact'[39m,
+  action: [32m'saveSection'[39m,
+  from: [32m'dirty'[39m,
+  to: [32m'saving'[39m
+}
+profile.section.transition {
+  sectionId: [32m'contact'[39m,
+  action: [32m'saveSectionSuccess'[39m,
+  from: [32m'saving'[39m,
+  to: [32m'idle'[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2msaves and restores preferredContactMethod
+[22m[39mprofile.telemetry {
+  eventName: [32m'startEditingSection'[39m,
+  sectionId: [32m'contact'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mfalse[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+profile.section.transition {
+  sectionId: [32m'contact'[39m,
+  action: [32m'startEditingSection'[39m,
+  from: [32m'idle'[39m,
+  to: [32m'editing'[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2mshows sticky save bar only when dirty
+[22m[39mprofile.telemetry {
+  eventName: [32m'startEditingSection'[39m,
+  sectionId: [32m'personal'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mfalse[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+profile.section.transition {
+  sectionId: [32m'personal'[39m,
+  action: [32m'startEditingSection'[39m,
+  from: [32m'idle'[39m,
+  to: [32m'editing'[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2mshows sticky save bar only when dirty
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'personal'[39m,
+  dirtyMap: { personal: [33mtrue[39m, contact: [33mfalse[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+profile.section.transition {
+  sectionId: [32m'personal'[39m,
+  action: [32m'setSectionField'[39m,
+  from: [32m'editing'[39m,
+  to: [32m'dirty'[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2mshows sticky save bar only when dirty
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'personal'[39m,
+  dirtyMap: { personal: [33mtrue[39m, contact: [33mfalse[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2mshows sticky save bar only when dirty
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'personal'[39m,
+  dirtyMap: { personal: [33mtrue[39m, contact: [33mfalse[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2mshows sticky save bar only when dirty
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'personal'[39m,
+  dirtyMap: { personal: [33mtrue[39m, contact: [33mfalse[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2mshows sticky save bar only when dirty
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'personal'[39m,
+  dirtyMap: { personal: [33mtrue[39m, contact: [33mfalse[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2mshows sticky save bar only when dirty
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'personal'[39m,
+  dirtyMap: { personal: [33mtrue[39m, contact: [33mfalse[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2mshows sticky save bar only when dirty
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'personal'[39m,
+  dirtyMap: { personal: [33mtrue[39m, contact: [33mfalse[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2mshows sticky save bar only when dirty
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'personal'[39m,
+  dirtyMap: { personal: [33mtrue[39m, contact: [33mfalse[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2mshows sticky save bar only when dirty
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'personal'[39m,
+  dirtyMap: { personal: [33mtrue[39m, contact: [33mfalse[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2mshows sticky save bar only when dirty
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'personal'[39m,
+  dirtyMap: { personal: [33mtrue[39m, contact: [33mfalse[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2mshows sticky save bar only when dirty
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'personal'[39m,
+  dirtyMap: { personal: [33mtrue[39m, contact: [33mfalse[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2mshows sticky save bar only when dirty
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'personal'[39m,
+  dirtyMap: { personal: [33mtrue[39m, contact: [33mfalse[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2mshows sticky save bar only when dirty
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'personal'[39m,
+  dirtyMap: { personal: [33mtrue[39m, contact: [33mfalse[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2mshows sticky save bar only when dirty
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'personal'[39m,
+  dirtyMap: { personal: [33mtrue[39m, contact: [33mfalse[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2mshows sticky save bar only when dirty
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'personal'[39m,
+  dirtyMap: { personal: [33mtrue[39m, contact: [33mfalse[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2mshows sticky save bar only when dirty
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'personal'[39m,
+  dirtyMap: { personal: [33mtrue[39m, contact: [33mfalse[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2mshows sticky save bar only when dirty
+[22m[39mprofile.telemetry {
+  eventName: [32m'saveSection'[39m,
+  sectionId: [32m'personal'[39m,
+  dirtyMap: { personal: [33mtrue[39m, contact: [33mfalse[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+profile.telemetry {
+  eventName: [32m'persistProfile'[39m,
+  sectionId: [32m'profile'[39m,
+  dirtyMap: { personal: [33mtrue[39m, contact: [33mfalse[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+profile.section.transition {
+  sectionId: [32m'personal'[39m,
+  action: [32m'saveSection'[39m,
+  from: [32m'dirty'[39m,
+  to: [32m'saving'[39m
+}
+profile.section.transition {
+  sectionId: [32m'personal'[39m,
+  action: [32m'saveSectionSuccess'[39m,
+  from: [32m'saving'[39m,
+  to: [32m'idle'[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2mprevents browser unload with unsaved changes
+[22m[39mprofile.telemetry {
+  eventName: [32m'startEditingSection'[39m,
+  sectionId: [32m'personal'[39m,
+  dirtyMap: { personal: [33mfalse[39m, contact: [33mfalse[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+profile.section.transition {
+  sectionId: [32m'personal'[39m,
+  action: [32m'startEditingSection'[39m,
+  from: [32m'idle'[39m,
+  to: [32m'editing'[39m
+}
+
+[90mstdout[2m | src/tests/profile-page.interactions.test.jsx[2m > [22m[2mProfilePage interactions[2m > [22m[2mprevents browser unload with unsaved changes
+[22m[39mprofile.telemetry {
+  eventName: [32m'setSectionField'[39m,
+  sectionId: [32m'personal'[39m,
+  dirtyMap: { personal: [33mtrue[39m, contact: [33mfalse[39m },
+  workspaceVersion: [33m1[39m,
+  profileSchemaVersion: [33m1[39m
+}
+profile.section.transition {
+  sectionId: [32m'personal'[39m,
+  action: [32m'setSectionField'[39m,
+  from: [32m'editing'[39m,
+  to: [32m'dirty'[39m
+}
+
+ [32mΓ£ô[39m src/tests/profile-page.interactions.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 4951[2mms[22m[39m
+     [33m[2mΓ£ô[22m[39m renders all finalized fields in read and edit mode [33m 1713[2mms[22m[39m
+     [33m[2mΓ£ô[22m[39m saves and restores preferredContactMethod [33m 2078[2mms[22m[39m
+     [33m[2mΓ£ô[22m[39m shows sticky save bar only when dirty [33m 926[2mms[22m[39m
+ [32mΓ£ô[39m src/tests/rating-decision-tab.test.jsx [2m([22m[2m5 tests[22m[2m)[22m[33m 6327[2mms[22m[39m
+     [33m[2mΓ£ô[22m[39m runs upload extraction flow and renders confidence badges with section confidence panel [33m 2597[2mms[22m[39m
+     [33m[2mΓ£ô[22m[39m renders evidence span trace panel with expand/collapse spans [33m 864[2mms[22m[39m
+     [33m[2mΓ£ô[22m[39m supports manual entry CRUD operations [33m 2655[2mms[22m[39m
+ [32mΓ£ô[39m src/tests/current-treatment-tab.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 7840[2mms[22m[39m
+     [33m[2mΓ£ô[22m[39m validates manual entry with an empty form ΓÇö shows errors for conditionName and symptomSummary [33m 2889[2mms[22m[39m
+     [33m[2mΓ£ô[22m[39m saves an entry and dedupes ΓÇö same conditionName+providerName saves twice ΓåÆ 1 entry shown [33m 3219[2mms[22m[39m
+     [33m[2mΓ£ô[22m[39m edit mode pre-fills the form and Update Entry replaces the existing entry [33m 1672[2mms[22m[39m
+ [32mΓ£ô[39m src/tests/strs-tab.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 7365[2mms[22m[39m
+     [33m[2mΓ£ô[22m[39m filters findings by confidence chip [33m 3117[2mms[22m[39m
+     [33m[2mΓ£ô[22m[39m validates manual entry and dedupes duplicate saves [33m 3315[2mms[22m[39m
+     [33m[2mΓ£ô[22m[39m converts findings into current treatment drafts without duplicates [33m 632[2mms[22m[39m
+ [32mΓ£ô[39m src/tests/military-service-tab.test.jsx [2m([22m[2m4 tests[22m[2m)[22m[33m 7906[2mms[22m[39m
+     [33m[2mΓ£ô[22m[39m uploads DD-214, shows confidence badges, and exposes compare/apply actions [33m 2501[2mms[22m[39m
+     [33m[2mΓ£ô[22m[39m applies extracted values through diff modal confirmation [33m 1037[2mms[22m[39m
+     [33m[2mΓ£ô[22m[39m supports analyzer accept and dismiss actions [33m 1546[2mms[22m[39m
+     [33m[2mΓ£ô[22m[39m adds, edits, deletes, and saves service records [33m 2815[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m15 passed[39m[22m[90m (15)[39m
+[2m      Tests [22m [1m[32m87 passed[39m[22m[90m (87)[39m
+[2m   Start at [22m 19:04:14
+[2m   Duration [22m 27.66s[2m (transform 41.09s, setup 0ms, import 66.04s, tests 42.15s, environment 56.25s)[22m
+

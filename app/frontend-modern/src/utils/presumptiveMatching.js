@@ -9,11 +9,20 @@ function parseDate(value) {
   return new Date(`${value}T00:00:00.000Z`);
 }
 
+function isValidDate(date) {
+  return date instanceof Date && !Number.isNaN(date.getTime());
+}
+
 function hasDateOverlap(startA, endA, startB, endB) {
   const aStart = parseDate(startA);
   const aEnd = parseDate(endA || 'present');
   const bStart = parseDate(startB);
   const bEnd = parseDate(endB || 'present');
+
+  if (!isValidDate(aStart) || !isValidDate(aEnd) || !isValidDate(bStart) || !isValidDate(bEnd)) {
+    return false;
+  }
+
   return aStart <= bEnd && bStart <= aEnd;
 }
 
@@ -69,3 +78,5 @@ export function buildDeploymentEvidence(deployment, exposureRules) {
       : null,
   };
 }
+
+export { hasDateOverlap };

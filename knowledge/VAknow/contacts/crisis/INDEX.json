@@ -1,0 +1,27 @@
+﻿{
+    "folder":  "VAknow\\contacts\\crisis",
+    "generated":  "2026-03-14T11:26:33.5152735-06:00",
+    "files":  [
+                  {
+                      "name":  "crisis_contacts.json",
+                      "path":  "VAknow\\contacts\\crisis\\crisis_contacts.json",
+                      "size":  1398,
+                      "modified":  "2026-03-14T17:18:13.8593439Z",
+                      "extension":  ".json"
+                  },
+                  {
+                      "name":  "PURPOSE.md",
+                      "path":  "VAknow\\contacts\\crisis\\PURPOSE.md",
+                      "size":  329,
+                      "modified":  "2026-03-14T17:26:33.5122002Z",
+                      "extension":  ".md"
+                  },
+                  {
+                      "name":  "SUMMARY.md",
+                      "path":  "VAknow\\contacts\\crisis\\SUMMARY.md",
+                      "size":  317,
+                      "modified":  "2026-03-14T17:26:33.5122002Z",
+                      "extension":  ".md"
+                  }
+              ]
+}

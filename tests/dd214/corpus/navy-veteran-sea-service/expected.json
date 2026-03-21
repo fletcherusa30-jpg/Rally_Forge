@@ -1,0 +1,168 @@
+{
+  "documentType": "DD-214",
+  "schemaVersion": "portable-1.0",
+  "serviceIdentity": {
+    "veteranName": "MARTINEZ, LUIS A",
+    "ssnOrServiceNumber": null,
+    "branchOfService": "Navy",
+    "component": "USN"
+  },
+  "servicePeriods": {
+    "entryDate": "2003-07-15",
+    "separationDate": "2011-09-30",
+    "netActiveServiceThisPeriod": {
+      "years": 8,
+      "months": 2,
+      "days": 15
+    },
+    "totalPriorActiveService": null,
+    "totalPriorInactiveService": null,
+    "seaService": {
+      "years": 2,
+      "months": 3,
+      "days": 10
+    },
+    "initialEntryTraining": null
+  },
+  "characterAndSeparation": {
+    "characterOfService": "Honorable",
+    "separationAuthority": "MILPERSMAN 1910-154",
+    "separationCode": "BFS",
+    "reentryCode": "1",
+    "narrativeReasonForSeparation": "TRANSFER TO FLEET RESERVE",
+    "typeOfSeparation": null
+  },
+  "gradeSpecialty": {
+    "gradeRateRank": null,
+    "payGrade": null,
+    "primaryMOSOrAFSCOrRating": "BM2",
+    "additionalMOSOrSpecialties": [],
+    "mosDetails": [
+      {
+        "code": "BM2",
+        "title": "BOATSWAIN'S MATE",
+        "yearsOfService": null,
+        "monthsOfService": null
+      }
+    ]
+  },
+  "decorationsAndService": {
+    "decorationsAndAwards": [
+      "NAVY AND MARINE CORPS ACHIEVEMENT MEDAL",
+      "GLOBAL WAR ON TERRORISM EXPEDITIONARY MEDAL"
+    ],
+    "foreignServiceTotal": {
+      "years": 1,
+      "months": 4,
+      "days": 0
+    },
+    "foreignServiceLocationsIfListed": [
+      "PERSIAN GULF"
+    ],
+    "combatIndicatorsFromAwards": []
+  },
+  "specialProgramsRemarks": {
+    "remarksBlock": "SERVICE IN PERSIAN GULF FROM 20050301-20060315",
+    "deploymentOrCampaignReferences": [
+      "SERVICE IN PERSIAN GULF FROM 20050301-20060315"
+    ],
+    "reenlistments": []
+  },
+  "militaryEducation": [],
+  "lastDutyAssignment": null,
+  "transferCommand": null,
+  "postServiceContact": {
+    "mailingAddressAtSeparation": null,
+    "nearestRelativeOrEmergencyContact": null
+  },
+  "intelligentExtraction": {
+    "retirementStatus": null,
+    "badgeIndicators": [],
+    "hazardIndicators": [],
+    "combatIndicators": []
+  },
+  "dd214Analysis": {
+    "serviceDates": {
+      "dateEnteredActiveDuty": "2003-07-15",
+      "separationDate": "2011-09-30",
+      "netActiveService": {
+        "years": 8,
+        "months": 2,
+        "days": 15
+      }
+    },
+    "separation": {
+      "characterOfService": "Honorable",
+      "separationAuthority": "MILPERSMAN 1910-154",
+      "separationCode": "BFS",
+      "reentryCode": "1",
+      "narrativeReasonForSeparation": "TRANSFER TO FLEET RESERVE",
+      "typeOfSeparation": null
+    },
+    "rankAndSpecialty": {
+      "primarySpecialty": "BM2",
+      "mosDetails": [
+        {
+          "code": "BM2",
+          "title": "BOATSWAIN'S MATE",
+          "yearsOfService": null,
+          "monthsOfService": null
+        }
+      ]
+    },
+    "awards": [
+      {
+        "name": "NAVY AND MARINE CORPS ACHIEVEMENT MEDAL",
+        "count": 1
+      }
+    ],
+    "deployments": [
+      {
+        "location": "PERSIAN GULF",
+        "dateRange": {
+          "start": "2005-03-01",
+          "end": "2006-03-15"
+        },
+        "campaign": null,
+        "operation": null,
+        "combatIndicator": false,
+        "hazardousDutyIndicator": false,
+        "confidence": 0.8,
+        "source": "remarks",
+        "sourceAttribution": [
+          {
+            "sourceType": "remarks",
+            "excerpt": "SERVICE IN PERSIAN GULF FROM 20050301-20060315"
+          }
+        ]
+      }
+    ],
+    "militaryEducation": [],
+    "lastDutyAssignment": null,
+    "transferCommand": null,
+    "reenlistments": [],
+    "confidenceScores": {
+      "overall": 0.81,
+      "fields": {
+        "entryDate": 1,
+        "separationDate": 1
+      },
+      "lowConfidenceFields": []
+    },
+    "validationSummary": {
+      "allChecksPassed": true
+    }
+  },
+  "extractionMeta": {
+    "confidence": 0.81,
+    "fieldConfidence": {
+      "entryDate": 1,
+      "separationDate": 1
+    },
+    "optionalFieldConfidence": {
+      "mosDetails": 1
+    },
+    "schemaValid": true,
+    "schemaErrors": []
+  }
+}

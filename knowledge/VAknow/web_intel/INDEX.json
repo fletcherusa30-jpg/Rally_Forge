@@ -1,0 +1,96 @@
+﻿{
+    "folder":  "C:\\Dev\\Rally Forge\\knowledge\\VAknow\\web_intel",
+    "files":  [
+                  {
+                      "Name":  "caregiver_program.md",
+                      "Length":  313,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "compensation_overview.md",
+                      "Length":  308,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "education_overview.md",
+                      "Length":  314,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "health_care_overview.md",
+                      "Length":  307,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "pact_act.md",
+                      "Length":  304,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "PURPOSE.md",
+                      "Length":  276,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "va_disability.raw.txt",
+                      "Length":  36155,
+                      "Extension":  ".txt"
+                  },
+                  {
+                      "Name":  "va_disability.summary.md",
+                      "Length":  410,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "va_education.raw.txt",
+                      "Length":  37399,
+                      "Extension":  ".txt"
+                  },
+                  {
+                      "Name":  "va_education.summary.md",
+                      "Length":  407,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "va_gov_intel.md",
+                      "Length":  34,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "va_healthcare.raw.txt",
+                      "Length":  38154,
+                      "Extension":  ".txt"
+                  },
+                  {
+                      "Name":  "va_healthcare.summary.md",
+                      "Length":  403,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "va_pact.raw.txt",
+                      "Length":  66679,
+                      "Extension":  ".txt"
+                  },
+                  {
+                      "Name":  "va_pact.summary.md",
+                      "Length":  384,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "va_pension.raw.txt",
+                      "Length":  35519,
+                      "Extension":  ".txt"
+                  },
+                  {
+                      "Name":  "va_pension.summary.md",
+                      "Length":  392,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "web_fetch_targets.json",
+                      "Length":  669,
+                      "Extension":  ".json"
+                  }
+              ],
+    "generated":  "2026-03-14"
+}

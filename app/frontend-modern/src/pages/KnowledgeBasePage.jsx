@@ -1,6 +1,11 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Card } from '../components/Card';
+import {
+  MODEL_PRICING,
+  getProfessionalSearchConfig,
+  runProfessionalSearchDesignMode,
+} from '../services/professionalSearch/claudeDesignMode';
 
 const VALID_TABS = ['overview', 'search', 'court-cases'];
 
@@ -21,6 +26,12 @@ export default function KnowledgeBasePage() {
   const [loading, setLoading] = useState(false);
   const [selectedCase, setSelectedCase] = useState(null);
   const [caseLoadError, setCaseLoadError] = useState(null);
+  const [proModel, setProModel] = useState('sonnet');
+  const [proContext, setProContext] = useState('');
+  const [proLoading, setProLoading] = useState(false);
+  const [proResult, setProResult] = useState(null);
+  const [proError, setProError] = useState(null);
+  const [proConfig] = useState(() => getProfessionalSearchConfig({ mode: 'design' }));
 
   // Court Cases filter state
   const [caseFilter, setCaseFilter] = useState('');
@@ -88,6 +99,30 @@ export default function KnowledgeBasePage() {
       console.error('Search failed:', error);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleProfessionalSearch = async () => {
+    setProError(null);
+    setProResult(null);
+    if (!searchQuery.trim()) {
+      setProError('Enter a query before running Professional Search.');
+      return;
+    }
+
+    setProLoading(true);
+    try {
+      const result = await runProfessionalSearchDesignMode({
+        query: searchQuery,
+        model: proModel,
+        context: proContext,
+        config: proConfig,
+      });
+      setProResult(result);
+    } catch (error) {
+      setProError(error.message || 'Professional Search simulation failed.');
+    } finally {
+      setProLoading(false);
     }
   };
 
@@ -232,6 +267,62 @@ export default function KnowledgeBasePage() {
         {/* ── SEARCH ───────────────────────────────────────────── */}
         {activeTab === 'search' && (
           <div className='kb-tab-content'>
+            <div className='kb-pro-search-card'>
+              <div className='kb-pro-search-head'>
+                <div>
+                  <h4>Professional Search</h4>
+                  <div className='kb-subline'>Design mode only: fully mocked, no external API calls, no billing.</div>
+                </div>
+                <span className='kb-pro-mode-pill'>{proConfig.mode.toUpperCase()}</span>
+              </div>
+
+              <div className='kb-pro-grid'>
+                <label className='kb-pro-field'>
+                  <span>Claude Tier</span>
+                  <select value={proModel} onChange={(e) => setProModel(e.target.value)} className='kb-select'>
+                    {Object.entries(MODEL_PRICING).map(([key, value]) => (
+                      <option key={key} value={key}>{value.label}</option>
+                    ))}
+                  </select>
+                </label>
+
+                <label className='kb-pro-field'>
+                  <span>Research Context (optional)</span>
+                  <input
+                    type='text'
+                    value={proContext}
+                    onChange={(e) => setProContext(e.target.value)}
+                    placeholder='Add internal context to the simulated request'
+                    className='kb-input'
+                  />
+                </label>
+              </div>
+
+              <div className='kb-pro-actions'>
+                <button type='button' className='kb-button' onClick={handleProfessionalSearch} disabled={proLoading}>
+                  {proLoading ? 'Running Professional Search…' : 'Professional Search'}
+                </button>
+                <div className='kb-subline'>Simulated sale price per search: ${proConfig.salePricePerSearch.toFixed(2)}</div>
+              </div>
+
+              {proError && <div className='kb-error'>{proError}</div>}
+
+              {proResult && (
+                <div className='kb-pro-result'>
+                  <div className='kb-pro-metrics'>
+                    <div className='kb-pro-metric'><strong>Input tokens:</strong> {proResult.usage.inputTokens}</div>
+                    <div className='kb-pro-metric'><strong>Output tokens:</strong> {proResult.usage.outputTokens}</div>
+                    <div className='kb-pro-metric'><strong>Total tokens:</strong> {proResult.usage.totalTokens}</div>
+                    <div className='kb-pro-metric'><strong>Estimated cost:</strong> ${proResult.billing.estimatedCost.toFixed(6)}</div>
+                    <div className='kb-pro-metric'><strong>Estimated profit:</strong> ${proResult.billing.estimatedProfit.toFixed(6)}</div>
+                    <div className='kb-pro-metric'><strong>Margin:</strong> {proResult.billing.marginPercent.toFixed(2)}%</div>
+                  </div>
+
+                  <pre className='kb-pro-response'>{proResult.response.text}</pre>
+                </div>
+              )}
+            </div>
+
             <form onSubmit={handleSearch} className='kb-top-space'>
               <div className='kb-form'>
                 <input

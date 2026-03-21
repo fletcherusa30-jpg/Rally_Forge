@@ -1,0 +1,27 @@
+﻿{
+    "folder":  "VAknow\\contacts\\state\\NH",
+    "generated":  "2026-03-14T11:26:34.0625128-06:00",
+    "files":  [
+                  {
+                      "name":  "contacts.json",
+                      "path":  "VAknow\\contacts\\state\\NH\\contacts.json",
+                      "size":  579,
+                      "modified":  "2026-03-14T17:13:51.0756034Z",
+                      "extension":  ".json"
+                  },
+                  {
+                      "name":  "PURPOSE.md",
+                      "path":  "VAknow\\contacts\\state\\NH\\PURPOSE.md",
+                      "size":  317,
+                      "modified":  "2026-03-14T17:26:34.0610052Z",
+                      "extension":  ".md"
+                  },
+                  {
+                      "name":  "SUMMARY.md",
+                      "path":  "VAknow\\contacts\\state\\NH\\SUMMARY.md",
+                      "size":  309,
+                      "modified":  "2026-03-14T17:26:34.0625128Z",
+                      "extension":  ".md"
+                  }
+              ]
+}

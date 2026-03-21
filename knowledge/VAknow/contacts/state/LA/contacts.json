@@ -1,0 +1,26 @@
+﻿[
+    {
+        "category":  "state",
+        "name":  "LA State Department of Veterans Affairs",
+        "website":  "",
+        "phone":  ""
+    },
+    {
+        "category":  "state",
+        "name":  "LA Veterans Benefits Hotline",
+        "website":  "",
+        "phone":  ""
+    },
+    {
+        "category":  "state",
+        "name":  "LA Veterans Homes",
+        "website":  "",
+        "phone":  ""
+    },
+    {
+        "category":  "state",
+        "name":  "LA Claims Assistance Office",
+        "website":  "",
+        "phone":  ""
+    }
+]

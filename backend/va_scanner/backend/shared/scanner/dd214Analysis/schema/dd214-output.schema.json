@@ -1,0 +1,238 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DD-214 Scanner Output Schema",
+  "description": "Defines the structure of data extracted from DD-214 discharge forms",
+  "type": "object",
+  "properties": {
+    "_metadata": {
+      "type": "object",
+      "description": "Metadata about the scanning process",
+      "properties": {
+        "scannerId": {
+          "type": "string"
+        },
+        "scanDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "documentFormat": {
+          "type": "string",
+          "enum": [
+            "dd214-member-1",
+            "dd214-member-4",
+            "dd214-1-addendum",
+            "typed",
+            "handwritten",
+            "scanned-ocr",
+            "digital-pdf"
+          ]
+        },
+        "era": {
+          "type": "string",
+          "enum": [
+            "vietnam",
+            "gulf-war",
+            "oef-oif",
+            "modern"
+          ]
+        },
+        "branch": {
+          "type": "string",
+          "enum": [
+            "army",
+            "navy",
+            "air-force",
+            "marines",
+            "coast-guard"
+          ]
+        },
+        "confidence": {
+          "type": "object",
+          "properties": {
+            "overall": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "byField": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "number"
+              }
+            }
+          }
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "validationStatus": {
+          "type": "string",
+          "enum": [
+            "passed",
+            "warnings",
+            "failed"
+          ]
+        }
+      }
+    },
+    "serviceHistory": {
+      "type": "object",
+      "properties": {
+        "veteranName": {
+          "type": "string",
+          "description": "Full name from Block 1a"
+        },
+        "branchOfService": {
+          "type": "string",
+          "enum": [
+            "Army",
+            "Navy",
+            "Air Force",
+            "Marines",
+            "Coast Guard"
+          ]
+        },
+        "entryDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "separationDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "totalActiveDays": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "totalInactiveDays": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "veteranName",
+        "branchOfService",
+        "entryDate",
+        "separationDate"
+      ]
+    },
+    "rank": {
+      "type": "object",
+      "properties": {
+        "rankAtEntry": {
+          "type": "string"
+        },
+        "rankAtSeparation": {
+          "type": "string"
+        },
+        "payGrade": {
+          "type": "string",
+          "pattern": "^[A-Z]\\d{1,2}$"
+        },
+        "mos": {
+          "type": "string",
+          "description": "Military Occupational Specialty"
+        },
+        "mosTitle": {
+          "type": "string"
+        }
+      }
+    },
+    "separation": {
+      "type": "object",
+      "properties": {
+        "separationCode": {
+          "type": "string",
+          "pattern": "^[A-Z]{3}$"
+        },
+        "separationCodeName": {
+          "type": "string"
+        },
+        "reenlistmentCode": {
+          "type": "string",
+          "pattern": "^[A-Z]{1,2}$"
+        },
+        "reenlistmentCodeName": {
+          "type": "string"
+        },
+        "characterOfService": {
+          "type": "string",
+          "enum": [
+            "honorable",
+            "general-discharge-under-honorable-conditions",
+            "under-other-than-honorable-conditions",
+            "bad-conduct",
+            "dishonorable"
+          ]
+        },
+        "narrativeReason": {
+          "type": "string"
+        }
+      }
+    },
+    "awards": {
+      "type": "object",
+      "properties": {
+        "awardsList": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "awardName": {
+                "type": "string"
+              },
+              "quantity": {
+                "type": "integer",
+                "minimum": 1,
+                "default": 1
+              },
+              "oakLeafClusters": {
+                "type": "integer",
+                "minimum": 0,
+                "default": 0
+              },
+              "campaigns": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "totalAwardCount": {
+          "type": "integer"
+        }
+      }
+    },
+    "validationResults": {
+      "type": "object",
+      "properties": {
+        "dateSequenceValid": {
+          "type": "boolean"
+        },
+        "codeValidation": {
+          "type": "object",
+          "properties": {
+            "spdValid": {
+              "type": "boolean"
+            },
+            "reValid": {
+              "type": "boolean"
+            },
+            "mosValid": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "_metadata",
+    "serviceHistory"
+  ]
+}

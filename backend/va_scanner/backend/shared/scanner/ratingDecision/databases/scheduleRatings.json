@@ -1,0 +1,113 @@
+{
+  "scheduleRatings": {
+    "description": "VA Schedule for Rating Disabilities reference tables",
+    "source": "38 CFR §4.71a and §4.71b",
+    "lastUpdated": "2026-03-17T00:00:00Z",
+    "ratingTables": {
+      "arthritis": {
+        "dc": 5001,
+        "condition": "Arthritis, Rheumatoid",
+        "ratingCriteria": [
+          {
+            "rating": 10,
+            "criteria": "Mild - Minimal symptoms, functional limitation"
+          },
+          {
+            "rating": 20,
+            "criteria": "Moderate - Multiple joints involved, some functional limitation"
+          },
+          {
+            "rating": 30,
+            "criteria": "Moderately severe - Multiple joints, moderate functional limitation"
+          },
+          {
+            "rating": 40,
+            "criteria": "Severe - Significant functional limitation, daily assistance"
+          },
+          {
+            "rating": 50,
+            "criteria": "Severe - Unable to engage in substantial gainful employment"
+          },
+          {
+            "rating": 60,
+            "criteria": "Very severe - Pronounced functional impairment"
+          }
+        ]
+      },
+      "ptsd": {
+        "dc": 9410,
+        "condition": "PTSD (Posttraumatic Stress Disorder)",
+        "ratingCriteria": [
+          {
+            "rating": 10,
+            "criteria": "Minimal occupational and social impairment"
+          },
+          {
+            "rating": 30,
+            "criteria": "Occupational and social impairment with mild symptoms"
+          },
+          {
+            "rating": 50,
+            "criteria": "Occupational and social impairment with moderate symptoms"
+          },
+          {
+            "rating": 70,
+            "criteria": "Occupational and social impairment with severe symptoms"
+          },
+          {
+            "rating": 100,
+            "criteria": "Total occupational and social impairment"
+          }
+        ]
+      },
+      "hearing": {
+        "dc": 6360,
+        "condition": "Hearing Loss",
+        "ratingCriteria": [
+          {
+            "rating": 0,
+            "criteria": "No hearing impairment"
+          },
+          {
+            "rating": 10,
+            "criteria": "Slight hearing impairment"
+          },
+          {
+            "rating": 20,
+            "criteria": "Mild hearing impairment"
+          },
+          {
+            "rating": 40,
+            "criteria": "Moderate hearing impairment"
+          },
+          {
+            "rating": 60,
+            "criteria": "Severe hearing impairment (95+ dB)"
+          }
+        ]
+      }
+    },
+    "combinedRatingTable": {
+      "description": "Table used to combine multiple ratings into a single combined rating percentage",
+      "source": "38 CFR §4.25",
+      "method": "Non-linear - percentages don't simply add",
+      "sampleCalculation": {
+        "conditions": [
+          {
+            "condition": "PTSD",
+            "rating": 70
+          },
+          {
+            "condition": "Hearing Loss",
+            "rating": 20
+          },
+          {
+            "condition": "Tinnitus",
+            "rating": 10
+          }
+        ],
+        "calculatedCombinedRating": 77
+      }
+    }
+  }
+}

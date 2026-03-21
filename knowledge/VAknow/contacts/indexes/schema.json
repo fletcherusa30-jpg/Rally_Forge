@@ -1,0 +1,8 @@
+﻿{
+  "name": "string",
+  "type": "federal | state | facility",
+  "category": "benefits | healthcare | education | home_loans | insurance | burial | records | tricare | dod | crisis | other",
+  "phone": "",
+  "website": "",
+  "notes": ""
+}

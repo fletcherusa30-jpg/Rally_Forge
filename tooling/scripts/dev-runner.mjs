@@ -6,6 +6,9 @@ const includeStatic = modes.has("--with-static");
 
 const processes = [];
 let shuttingDown = false;
+const restartState = new Map();
+const MAX_RESTARTS = 5;
+const RESTART_DELAY_MS = 1500;
 
 function start(name, command, args, color) {
   const child = spawn(command, args, {
@@ -28,8 +31,27 @@ function start(name, command, args, color) {
   child.on("exit", (code) => {
     if (shuttingDown) return;
     if (code !== 0) {
+      const isApiProcess = name === "api";
+      const currentRestarts = restartState.get(name) ?? 0;
+
+      if (isApiProcess && currentRestarts < MAX_RESTARTS) {
+        const nextRestart = currentRestarts + 1;
+        restartState.set(name, nextRestart);
+        console.error(
+          `${prefix} exited with code ${code}; restarting (${nextRestart}/${MAX_RESTARTS}) in ${RESTART_DELAY_MS}ms...`
+        );
+        setTimeout(() => {
+          if (!shuttingDown) {
+            start(name, command, args, color);
+          }
+        }, RESTART_DELAY_MS);
+        return;
+      }
+
       console.error(`${prefix} exited with code ${code}`);
       shutdown(code ?? 1);
+    } else {
+      restartState.set(name, 0);
     }
   });
 

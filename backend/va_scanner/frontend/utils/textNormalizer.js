@@ -4,7 +4,8 @@
  */
 
 /**
- * Normalize text for consistent parsing
+ * V2 Text Normalization for advanced preprocessing per .copilot-instructions.md
+ * Handles UTF-8 issues, OCR artifacts, deterministic text cleaning.
  * @param {string} rawText - Raw text from PDF or manual entry
  * @returns {string} Normalized text
  */
@@ -15,14 +16,15 @@ export function normalizeText(rawText) {
 
   let normalized = rawText;
 
-  // Step 1: Convert common PDF encoding issues
+  // Step 1: Convert common PDF encoding issues (deterministic)
   normalized = normalized
-    .replace(/\u00a0/g, ' ')           // Non-breaking space to regular space
-    .replace(/\u2013/g, '-')           // En dash to hyphen
-    .replace(/\u2014/g, '-')           // Em dash to hyphen
-    .replace(/\u2018|\u2019/g, "'")    // Smart quotes to regular
+    .replace(/\u00a0/g, ' ')           // Non-breaking space
+    .replace(/\u2013/g, '-')           // En dash
+    .replace(/\u2014/g, '-')           // Em dash
+    .replace(/\u2018|\u2019/g, "'")    // Smart quotes
     .replace(/\u201c|\u201d/g, '"')    // Smart double quotes
     .replace(/\u2026/g, '...')         // Ellipsis
+    .replace(/[\u200B-\u200D\uFEFF]/g, ''); // Zero-width chars
 
   // Step 2: Fix hyphenated words at line breaks
   // "post-trau-\nmatic" -> "post-traumatic"

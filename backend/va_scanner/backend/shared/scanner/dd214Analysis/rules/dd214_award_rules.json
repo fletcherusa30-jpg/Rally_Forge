@@ -1,0 +1,53 @@
+{
+  "rules": [
+    {
+      "ruleId": "dd214-award-validation",
+      "name": "Award Catalog Validation",
+      "description": "Validate extracted awards against official award catalog",
+      "catalogSource": "awards-catalog",
+      "validation": "exact-match, fuzzy-match-with-threshold-0.85",
+      "fuzzyMatching": true,
+      "threshold": 0.85
+    },
+    {
+      "ruleId": "dd214-oak-leaf-cluster-parsing",
+      "name": "Oak Leaf Cluster Extraction",
+      "pattern": "(\\d+)x? Oak Leaf Cluster",
+      "extraction": "quantity",
+      "mapping": "oaks-field"
+    },
+    {
+      "ruleId": "dd214-campaign-medal-extraction",
+      "name": "Campaign Medal with Stars",
+      "pattern": "([A-Z][A-Z\\s'-]*?) Medal(?: with (\\d+) stars)?",
+      "extraction": [
+        "medalName",
+        "starCount"
+      ]
+    },
+    {
+      "ruleId": "dd214-service-medal-suffix-strip",
+      "name": "Service Medal Suffix Normalization",
+      "suffixes": [
+        "1st Class",
+        "2nd Class",
+        "3rd Class",
+        "With Oak Leaf Cluster",
+        "with Valor"
+      ],
+      "processing": "normalize-by-removing-or-extracting-as-attribute"
+    },
+    {
+      "ruleId": "dd214-duplicate-award-detection",
+      "name": "Duplicate Award Detection",
+      "method": "exact-string-match + fuzzy-match-0.95",
+      "action": "merge-and-increment-quantity"
+    },
+    {
+      "ruleId": "dd214-award-era-validation",
+      "name": "Award Availability by Era",
+      "eraValidation": true,
+      "example": "GlobalAwardsAlwaysValid, some-Vietnam-awards-invalid-for-modern-era"
+    }
+  ]
+}

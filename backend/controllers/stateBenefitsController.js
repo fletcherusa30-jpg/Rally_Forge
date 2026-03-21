@@ -6,6 +6,7 @@ import {
   searchBenefits,
   getDatabaseStatistics,
   compareBenefitsAcrossStates,
+  getEligibleStructuredBenefits,
 } from '../services/stateBenefitsService.js';
 
 export async function listStates(_req, res) {
@@ -65,4 +66,19 @@ export async function compareStateBenefits(req, res) {
 
   const comparison = await compareBenefitsAcrossStates(states);
   return res.json({ success: true, data: comparison });
+}
+
+export async function getStructuredStateBenefitsEligibility(req, res) {
+  const toBool = (value) => String(value).toLowerCase() === 'true';
+
+  const data = await getEligibleStructuredBenefits({
+    stateCode: req.params.stateCode,
+    rating: Number(req.query.rating || 0),
+    serviceConnected: toBool(req.query.serviceConnected),
+    combatVeteran: toBool(req.query.combatVeteran),
+    wartimeVeteran: toBool(req.query.wartimeVeteran),
+    homeowner: toBool(req.query.homeowner),
+  });
+
+  return res.json({ success: true, data });
 }

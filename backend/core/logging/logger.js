@@ -21,7 +21,7 @@ const IS_PRODUCTION = config.nodeEnv === 'production';
 
 // Level hierarchy — only emit logs at or above the configured level
 const LEVELS = { error: 0, warn: 1, info: 2, debug: 3 };
-const CURRENT_LEVEL = LEVELS[LOG_LEVEL] ?? 2;
+const CURRENT_LEVEL = LEVELS[/** @type {keyof typeof LEVELS} */ (LOG_LEVEL)] ?? 2;
 
 // ── PII Masking ────────────────────────────────────────────────────────────────
 
@@ -38,6 +38,7 @@ const PII_RULES = [
   { pattern: /\bC[- ]?\d{7,9}\b/gi, replacement: '[VA-FILE# REDACTED]' },
 ];
 
+/** @param {string} message */
 function maskPII(message) {
   if (typeof message !== 'string') return message;
   let masked = message;
@@ -47,9 +48,12 @@ function maskPII(message) {
   return masked;
 }
 
+/** @param {Record<string, unknown>} obj
+ * @returns {Record<string, unknown>}
+ */
 function maskObjectPII(obj) {
-  if (!obj || typeof obj !== 'object') return obj;
-  const safe = {};
+  if (!obj || typeof obj !== 'object') return /** @type {Record<string, unknown>} */ (obj);
+  const safe = /** @type {Record<string, unknown>} */ ({});
   const SENSITIVE_KEYS = new Set(['ssn', 'dob', 'dateOfBirth', 'password', 'token', 'secret', 'authorization']);
   for (const [key, value] of Object.entries(obj)) {
     if (SENSITIVE_KEYS.has(key.toLowerCase())) {
@@ -57,7 +61,7 @@ function maskObjectPII(obj) {
     } else if (typeof value === 'string') {
       safe[key] = maskPII(value);
     } else if (typeof value === 'object' && value !== null) {
-      safe[key] = maskObjectPII(value);
+      safe[key] = maskObjectPII(/** @type {Record<string, unknown>} */ (value));
     } else {
       safe[key] = value;
     }
@@ -67,19 +71,25 @@ function maskObjectPII(obj) {
 
 // ── Formatting ─────────────────────────────────────────────────────────────────
 
+/**
+ * @param {string} level
+ * @param {string} module
+ * @param {unknown} message
+ * @param {Record<string, unknown> | undefined} meta
+ */
 function formatEntry(level, module, message, meta) {
   const timestamp = new Date().toISOString();
   const safeMessage = maskPII(String(message));
-  const safeMeta = meta ? maskObjectPII(meta) : undefined;
+  const safeMeta = meta ? maskObjectPII(/** @type {Record<string, unknown>} */ (meta)) : undefined;
 
   if (IS_PRODUCTION) {
     // Structured JSON — consumed by log aggregators (CloudWatch, Datadog, etc.)
-    const entry = {
+    const entry = /** @type {{ timestamp: string; level: string; module: string; message: string; meta?: unknown; correlationId?: unknown; veteranId?: unknown }} */ ({
       timestamp,
       level,
       module,
       message: safeMessage,
-    };
+    });
     if (safeMeta) entry.meta = safeMeta;
     if (meta?.correlationId) entry.correlationId = meta.correlationId;
     if (meta?.veteranId) entry.veteranId = meta.veteranId;
@@ -91,6 +101,12 @@ function formatEntry(level, module, message, meta) {
   return `[${timestamp}] [${level.toUpperCase().padEnd(5)}] [${module}] ${safeMessage}${metaStr}`;
 }
 
+/**
+ * @param {keyof typeof LEVELS} level
+ * @param {string} module
+ * @param {unknown} message
+ * @param {Record<string, unknown>} [meta]
+ */
 function emit(level, module, message, meta) {
   if (LEVELS[level] > CURRENT_LEVEL) return;
 
@@ -111,7 +127,12 @@ function emit(level, module, message, meta) {
  * Create a named logger scoped to a module.
  *
  * @param {string} moduleName  e.g. 'strs-api', 'compensation-engine'
- * @returns {{ error, warn, info, debug }}
+ * @returns {{
+ *   error: (msg: unknown, meta?: Record<string, unknown>) => void;
+ *   warn:  (msg: unknown, meta?: Record<string, unknown>) => void;
+ *   info:  (msg: unknown, meta?: Record<string, unknown>) => void;
+ *   debug: (msg: unknown, meta?: Record<string, unknown>) => void;
+ * }}
  *
  * @example
  * const log = createLogger('strs-api');

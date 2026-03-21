@@ -1,0 +1,20 @@
+﻿{
+    "folder":  "VAknow\\contacts\\federal\\tricare",
+    "generated":  "2026-03-14T11:26:33.7289583-06:00",
+    "files":  [
+                  {
+                      "name":  "PURPOSE.md",
+                      "path":  "VAknow\\contacts\\federal\\tricare\\PURPOSE.md",
+                      "size":  332,
+                      "modified":  "2026-03-14T17:26:33.7289583Z",
+                      "extension":  ".md"
+                  },
+                  {
+                      "name":  "SUMMARY.md",
+                      "path":  "VAknow\\contacts\\federal\\tricare\\SUMMARY.md",
+                      "size":  319,
+                      "modified":  "2026-03-14T17:26:33.7289583Z",
+                      "extension":  ".md"
+                  }
+              ]
+}

@@ -1,0 +1,20 @@
+﻿{
+    "folder":  "VAknow\\contacts\\federal\\burial",
+    "generated":  "2026-03-14T11:26:33.6755623-06:00",
+    "files":  [
+                  {
+                      "name":  "PURPOSE.md",
+                      "path":  "VAknow\\contacts\\federal\\burial\\PURPOSE.md",
+                      "size":  329,
+                      "modified":  "2026-03-14T17:26:33.6755623Z",
+                      "extension":  ".md"
+                  },
+                  {
+                      "name":  "SUMMARY.md",
+                      "path":  "VAknow\\contacts\\federal\\burial\\SUMMARY.md",
+                      "size":  317,
+                      "modified":  "2026-03-14T17:26:33.6755623Z",
+                      "extension":  ".md"
+                  }
+              ]
+}

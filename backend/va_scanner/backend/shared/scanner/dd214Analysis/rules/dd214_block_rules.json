@@ -1,0 +1,167 @@
+{
+  "rules": [
+    {
+      "ruleId": "dd214-block-1a",
+      "name": "Veteran Name Extraction",
+      "blockNumber": "1a",
+      "pattern": "(?:NAME|FULL NAME|NAME OF SERVICE MEMBER)[:\\s]*([A-Z][A-Z\\s,\\.'-]+)",
+      "dataType": "text",
+      "transformation": "normalize-whitespace, capitalize-names",
+      "validation": "required, non-empty, length > 3",
+      "priority": "critical",
+      "eraSupport": {
+        "vietnam": true,
+        "gulfWar": true,
+        "oefOif": true,
+        "modern": true
+      }
+    },
+    {
+      "ruleId": "dd214-block-2a",
+      "name": "Branch of Service Extraction",
+      "blockNumber": "2a",
+      "pattern": "(?:ARM|NAV|AF|MAR|CG|USCG|USMC)",
+      "dataType": "code",
+      "validValues": [
+        "Army",
+        "Navy",
+        "Air Force",
+        "Marines",
+        "Coast Guard"
+      ],
+      "transformation": "expand-abbreviation",
+      "validation": "required, must-match-catalog",
+      "priority": "critical",
+      "eraSupport": {
+        "vietnam": true,
+        "gulfWar": true,
+        "oefOif": true,
+        "modern": true
+      }
+    },
+    {
+      "ruleId": "dd214-block-17",
+      "name": "Separation Code (SPD) Extraction",
+      "blockNumber": "17",
+      "pattern": "^[A-Z]{3}$",
+      "dataType": "code",
+      "length": 3,
+      "validation": "required, pattern-match, catalog-lookup",
+      "catalogFile": "spdCatalog.json",
+      "priority": "high",
+      "eraSupport": {
+        "vietnam": true,
+        "gulfWar": true,
+        "oefOif": true,
+        "modern": true
+      }
+    },
+    {
+      "ruleId": "dd214-block-16",
+      "name": "Reenlistment Code (RE) Extraction",
+      "blockNumber": "16",
+      "pattern": "^[A-Z]{1,2}$",
+      "dataType": "code",
+      "length": "1-2",
+      "validation": "required, pattern-match, catalog-lookup",
+      "catalogFile": "reCatalog.json",
+      "priority": "high",
+      "eraSupport": {
+        "vietnam": true,
+        "gulfWar": true,
+        "oefOif": true,
+        "modern": true
+      }
+    },
+    {
+      "ruleId": "dd214-block-9",
+      "name": "MOS/AFSC/Rating Extraction",
+      "blockNumber": "9a/9b",
+      "pattern": "^[A-Z]{1,2}\\d{3,4}[A-Z]{0,2}$",
+      "dataType": "code",
+      "validation": "branch-specific, catalog-lookup",
+      "catalogFile": "mosCatalog.json",
+      "priority": "high",
+      "branchSpecific": {
+        "army": "MOS pattern",
+        "airForce": "AFSC pattern",
+        "navy": "Rating pattern",
+        "marines": "MOS pattern",
+        "coastGuard": "Rating pattern"
+      }
+    },
+    {
+      "ruleId": "dd214-date-normalization",
+      "name": "Date Format Normalization",
+      "description": "Convert various date formats to ISO 8601",
+      "patterns": [
+        {
+          "format": "YYYYMMDD",
+          "example": "19850315",
+          "transformation": "YYYY-MM-DD"
+        },
+        {
+          "format": "MM/DD/YYYY",
+          "example": "03/15/1985",
+          "transformation": "YYYY-MM-DD"
+        },
+        {
+          "format": "Month Day, Year",
+          "example": "March 15, 1985",
+          "transformation": "YYYY-MM-DD"
+        },
+        {
+          "format": "Day Month Year",
+          "example": "15 MAR 1985",
+          "transformation": "YYYY-MM-DD"
+        }
+      ],
+      "validation": "date-valid, entry-before-separation",
+      "priority": "high"
+    },
+    {
+      "ruleId": "dd214-awards-parsing",
+      "name": "Awards Extraction and Parsing",
+      "blockNumber": "13",
+      "description": "Extract individual awards from various formats",
+      "formats": [
+        {
+          "type": "comma-separated",
+          "pattern": "([A-Z][A-Z\\s\\.'-]*?)(?:,|$)"
+        },
+        {
+          "type": "bullet-list",
+          "pattern": "^\\s*[-•]\\s+([A-Z][A-Z\\s\\.'-]*?)(?:\\n|$)",
+          "flags": "multiline"
+        },
+        {
+          "type": "one-per-line",
+          "pattern": "^([A-Z][A-Z\\s\\.'-]*?)$",
+          "flags": "multiline"
+        }
+      ],
+      "oaks": {
+        "pattern": "Oak Leaf Cluster",
+        "abbreviation": "OLC"
+      },
+      "validation": "award-catalog-lookup",
+      "priority": "medium"
+    },
+    {
+      "ruleId": "dd214-continuation-detection",
+      "name": "Continuation Page Detection",
+      "blocks": [
+        "28a",
+        "28b"
+      ],
+      "indicators": [
+        "CONTINUATION",
+        "REMARKS CONTINUED",
+        "SEE PAGE",
+        "CONTINUATION PAGE"
+      ],
+      "processing": "concatenate-with-page-breaks",
+      "validation": "sequence-validation"
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Current Treatment Scanner Output Schema",
+  "description": "Complete output from Current Treatment scanner including active conditions, medications, symptoms",
+  "type": "object",
+  "properties": {
+    "_metadata": {
+      "type": "object",
+      "properties": {
+        "scannerId": {
+          "type": "string"
+        },
+        "documentAnalysisDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "activeConditionCount": {
+          "type": "integer"
+        },
+        "medicationCount": {
+          "type": "integer"
+        },
+        "functionalSeverityScore": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10
+        },
+        "confidence": {
+          "type": "object",
+          "properties": {
+            "overall": {
+              "type": "number"
+            },
+            "byField": {
+              "type": "object"
+            }
+          }
+        },
+        "recentChangesDetected": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "activeConditions": {
+      "type": "array",
+      "items": {
+        "$ref": "current-treatment-condition.schema.json"
+      }
+    },
+    "medications": {
+      "type": "array",
+      "items": {
+        "$ref": "current-treatment-medication.schema.json"
+      }
+    },
+    "symptoms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "symptomName": {
+            "type": "string"
+          },
+          "frequency": {
+            "type": "string",
+            "enum": [
+              "constant",
+              "daily",
+              "several-times-per-day",
+              "weekly",
+              "monthly",
+              "intermittent",
+              "prn"
+            ]
+          },
+          "severity": {
+            "type": "string",
+            "enum": [
+              "mild",
+              "moderate",
+              "severe"
+            ]
+          },
+          "severityScore": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 10
+          },
+          "triggers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "relievingFactors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "treatmentFrequency": {
+      "type": "object",
+      "properties": {
+        "physicalTherapySessions": {
+          "type": "object",
+          "properties": {
+            "perWeek": {
+              "type": "number"
+            },
+            "lastSession": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        },
+        "mentalHealthVisits": {
+          "type": "object",
+          "properties": {
+            "perMonth": {
+              "type": "number"
+            },
+            "lastVisit": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        },
+        "specialistFollowups": {
+          "type": "object",
+          "properties": {
+            "perYear": {
+              "type": "number"
+            },
+            "nextScheduled": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        }
+      }
+    },
+    "functionalStatus": {
+      "type": "object",
+      "properties": {
+        "abilityToWork": {
+          "type": "string",
+          "enum": [
+            "full-duty",
+            "light-duty",
+            "limited",
+            "unable-to-work"
+          ]
+        },
+        "mobilityLimitations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "cognitiveLimitations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "assistiveDevices": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "_metadata",
+    "activeConditions"
+  ]
+}

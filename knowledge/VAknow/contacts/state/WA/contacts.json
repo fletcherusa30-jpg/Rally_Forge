@@ -1,0 +1,26 @@
+﻿[
+    {
+        "category":  "state",
+        "name":  "WA State Department of Veterans Affairs",
+        "website":  "",
+        "phone":  ""
+    },
+    {
+        "category":  "state",
+        "name":  "WA Veterans Benefits Hotline",
+        "website":  "",
+        "phone":  ""
+    },
+    {
+        "category":  "state",
+        "name":  "WA Veterans Homes",
+        "website":  "",
+        "phone":  ""
+    },
+    {
+        "category":  "state",
+        "name":  "WA Claims Assistance Office",
+        "website":  "",
+        "phone":  ""
+    }
+]

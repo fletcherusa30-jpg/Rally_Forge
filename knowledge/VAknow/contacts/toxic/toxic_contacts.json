@@ -1,0 +1,20 @@
+﻿[
+    {
+        "scope":  "toxic",
+        "name":  "ATSDR (CDC) Environmental Health",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.atsdr.cdc.gov",
+        "category":  "toxic",
+        "notes":  "Environmental health and exposure info."
+    },
+    {
+        "scope":  "toxic",
+        "name":  "EPA Superfund",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.epa.gov/superfund",
+        "category":  "toxic",
+        "notes":  "Superfund sites and contamination."
+    }
+]

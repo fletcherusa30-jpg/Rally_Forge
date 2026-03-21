@@ -1,0 +1,46 @@
+﻿{
+    "folder":  "C:\\Dev\\Rally Forge\\knowledge\\CFR_REGULATIONS\\38_CFR_Part_3",
+    "files":  [
+                  {
+                      "Name":  "chapter_3_effective_dates.md",
+                      "Length":  747,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "chapter_3_evidence.md",
+                      "Length":  764,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "chapter_3_general.md",
+                      "Length":  778,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "chapter_3_pension.md",
+                      "Length":  752,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "chapter_3_service_conn.md",
+                      "Length":  768,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "chapter_3_special.md",
+                      "Length":  798,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "part_3_summary.md",
+                      "Length":  671,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "PURPOSE.md",
+                      "Length":  289,
+                      "Extension":  ".md"
+                  }
+              ],
+    "generated":  "2026-03-14"
+}

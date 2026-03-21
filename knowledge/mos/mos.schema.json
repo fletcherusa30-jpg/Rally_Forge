@@ -1,0 +1,31 @@
+﻿{
+  "": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MOS / Rate / AFSC Schema",
+  "type": "object",
+  "required": ["branch", "mos"],
+  "properties": {
+    "branch": {
+      "type": "string",
+      "minLength": 1
+    },
+    "mos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["code", "title"],
+        "properties": {
+          "code": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

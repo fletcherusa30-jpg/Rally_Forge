@@ -1,0 +1,56 @@
+﻿[
+    {
+        "scope":  "legal",
+        "name":  "VA Office of General Counsel",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.va.gov/ogc",
+        "category":  "legal",
+        "notes":  "Legal and accreditation information."
+    },
+    {
+        "scope":  "legal",
+        "name":  "Board of Veterans\u0027 Appeals",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.bva.va.gov",
+        "category":  "legal",
+        "notes":  "Appeals at the Board."
+    },
+    {
+        "scope":  "legal",
+        "name":  "Court of Appeals for Veterans Claims",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.uscourts.cavc.gov",
+        "category":  "legal",
+        "notes":  "Judicial review of VA decisions."
+    },
+    {
+        "scope":  "legal",
+        "name":  "Accredited VSO Directory",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.va.gov/ogc/apps/accreditation/index.asp",
+        "category":  "legal",
+        "notes":  "Find accredited representatives."
+    },
+    {
+        "scope":  "legal",
+        "name":  "NVLSP",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.nvlsp.org",
+        "category":  "legal",
+        "notes":  "National Veterans Legal Services Program."
+    },
+    {
+        "scope":  "legal",
+        "name":  "Veterans Consortium Pro Bono",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.vetsprobono.org",
+        "category":  "legal",
+        "notes":  "Pro bono representation for appeals."
+    }
+]

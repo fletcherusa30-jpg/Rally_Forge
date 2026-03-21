@@ -1,0 +1,81 @@
+{
+  "name": "DD-214 Scanner",
+  "version": "2.0.0",
+  "description": "Extracts service history from Department of Defense DD-214 discharge papers",
+  "lastUpdated": "2026-03-17T00:00:00Z",
+  "maintainer": "Rally Forge Team",
+  "status": "production",
+  "extractionPipeline": [
+    "OCR correction",
+    "Block detection",
+    "Content extraction",
+    "Date normalization",
+    "Award parsing",
+    "Code validation",
+    "Cross-validation",
+    "Output normalization"
+  ],
+  "supportedBranches": [
+    "Army",
+    "Navy",
+    "Air Force",
+    "Marines",
+    "Coast Guard"
+  ],
+  "supportedEras": [
+    "Vietnam",
+    "Gulf War",
+    "OEF/OIF",
+    "Modern"
+  ],
+  "requiredFields": [
+    "name",
+    "branchOfService",
+    "entryDate",
+    "separationDate",
+    "totalActiveService",
+    "rankAtSeparation",
+    "mos",
+    "separationCode",
+    "characterOfService"
+  ],
+  "optionalFields": [
+    "deploymentHistory",
+    "combatIndicators",
+    "specialDutyAssignments",
+    "securityClearanceLevel",
+    "organizationAtDischarge",
+    "homeAddress",
+    "priorService"
+  ],
+  "validationRules": {
+    "dateMustBeAfterEntry": true,
+    "rankMustBeConsecutive": true,
+    "spdMustMatchCatalog": true,
+    "reMustMatchCatalog": true
+  },
+  "confidenceThresholds": {
+    "blockDetection": 0.85,
+    "contentExtraction": 0.80,
+    "dateNormalization": 0.90,
+    "codeValidation": 0.95
+  },
+  "errorHandling": {
+    "missingBlocksStrategy": "flag-and-continue",
+    "lowQualityScanStrategy": "apply-enhancement-and-flag",
+    "multiPageStrategy": "concatenate-with-validation",
+    "criticalErrorsStopProcessing": true
+  },
+  "metadata": {
+    "scannerId": "dd214-analysis-v2.0.0",
+    "scannerType": "military-discharge-document",
+    "documentType": "dd214",
+    "capabilities": {
+      "ocrCorrection": true,
+      "multiPageHandling": true,
+      "eraDetection": true,
+      "branchDetection": true,
+      "awardParsing": true
+    }
+  }
+}

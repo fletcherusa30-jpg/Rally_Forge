@@ -1,0 +1,117 @@
+{
+  "rules": [
+    {
+      "ruleId": "str-encounter-date-extraction",
+      "name": "Encounter Date Extraction",
+      "patterns": [
+        {
+          "format": "ISO 8601",
+          "pattern": "\\d{4}-\\d{2}-\\d{2}"
+        },
+        {
+          "format": "US Format",
+          "pattern": "\\d{1,2}/\\d{1,2}/\\d{4}"
+        },
+        {
+          "format": "Full Month",
+          "pattern": "(January|February|March|April|May|June|July|August|September|October|November|December)\\s+\\d{1,2},?\\s+\\d{4}"
+        },
+        {
+          "format": "Abbreviated Month",
+          "pattern": "(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)\\s+\\d{1,2}\\s+\\d{4}"
+        }
+      ],
+      "validation": "date-within-military-service-period"
+    },
+    {
+      "ruleId": "str-encounter-type-detection",
+      "name": "Encounter Type Classification",
+      "types": [
+        {
+          "type": "sick-call",
+          "indicators": [
+            "SIC CALL",
+            "OFFICE CALL",
+            "WALK-IN",
+            "CLINIC",
+            "OPT"
+          ]
+        },
+        {
+          "type": "hospitalization",
+          "indicators": [
+            "ADMIT",
+            "HOSPITAL",
+            "INPATIENT",
+            "DISCHARGE",
+            "WARD"
+          ]
+        },
+        {
+          "type": "surgery",
+          "indicators": [
+            "SURGERY",
+            "OPERATION",
+            "OR",
+            "SURGICAL",
+            "ANESTHESIA"
+          ]
+        },
+        {
+          "type": "mental-health",
+          "indicators": [
+            "PSYCHIATRY",
+            "MENTAL HEALTH",
+            "PSYCHOLOGY",
+            "COUNSELING",
+            "PSYCH"
+          ]
+        }
+      ],
+      "priority": "high",
+      "fallback": "generic-medical-encounter"
+    },
+    {
+      "ruleId": "str-diagnosis-extraction",
+      "name": "Diagnosis Extraction and ICD-10 Mapping",
+      "patterns": [
+        {
+          "format": "ICD-10 code",
+          "pattern": "[A-Z]\\d{2}(\\.\\d{1,4})?"
+        },
+        {
+          "format": "Impression",
+          "pattern": "(?:IMPRESSION|ASSESSMENT|DIAGNOSIS)[:\\s]*([^\\n]+)"
+        }
+      ],
+      "validation": "catalog-lookup, icd-10-valid"
+    },
+    {
+      "ruleId": "str-chief-complaint-extraction",
+      "name": "Chief Complaint Extraction",
+      "patterns": [
+        "CC:",
+        "CHIEF COMPLAINT:",
+        "PRESENTING COMPLAINT:",
+        "REASON FOR VISIT:"
+      ],
+      "lineExtraction": "single-or-multi-line-until-next-section"
+    },
+    {
+      "ruleId": "str-provider-type-detection",
+      "name": "Provider Type Classification",
+      "types": [
+        "MD",
+        "DO",
+        "PA",
+        "NP",
+        "RN",
+        "LPN",
+        "Flight Surgeon",
+        "Corpsman",
+        "Medic"
+      ],
+      "extractionMethod": "signature-line-parsing"
+    }
+  ]
+}

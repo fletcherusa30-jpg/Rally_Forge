@@ -1,0 +1,26 @@
+﻿[
+    {
+        "category":  "state",
+        "name":  "CA State Department of Veterans Affairs",
+        "website":  "",
+        "phone":  ""
+    },
+    {
+        "category":  "state",
+        "name":  "CA Veterans Benefits Hotline",
+        "website":  "",
+        "phone":  ""
+    },
+    {
+        "category":  "state",
+        "name":  "CA Veterans Homes",
+        "website":  "",
+        "phone":  ""
+    },
+    {
+        "category":  "state",
+        "name":  "CA Claims Assistance Office",
+        "website":  "",
+        "phone":  ""
+    }
+]

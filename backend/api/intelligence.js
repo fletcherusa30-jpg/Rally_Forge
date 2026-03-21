@@ -4,8 +4,8 @@ import { getIntelligenceStatus, analyzeIntelligence } from '../controllers/intel
 
 const router = express.Router();
 
-router.get('/intelligence', asyncHandler(getIntelligenceStatus));
-router.post('/intelligence/analyze', asyncHandler(analyzeIntelligence));
+router.get('/', asyncHandler(getIntelligenceStatus));
+router.post('/analyze', asyncHandler(analyzeIntelligence));
 
 export default router;
 

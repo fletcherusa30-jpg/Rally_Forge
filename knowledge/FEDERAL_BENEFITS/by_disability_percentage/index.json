@@ -1,0 +1,10 @@
+﻿{
+  "disability_bands": [
+    { "min": 0,  "max": 0,  "benefits": [] },
+    { "min": 10, "max": 20, "benefits": [] },
+    { "min": 30, "max": 40, "benefits": [] },
+    { "min": 50, "max": 60, "benefits": [] },
+    { "min": 70, "max": 80, "benefits": [] },
+    { "min": 90, "max": 100,"benefits": [] }
+  ]
+}

@@ -1,0 +1,27 @@
+﻿{
+    "folder":  "VAknow\\contacts\\legal",
+    "generated":  "2026-03-14T11:26:33.5830236-06:00",
+    "files":  [
+                  {
+                      "name":  "legal_contacts.json",
+                      "path":  "VAknow\\contacts\\legal\\legal_contacts.json",
+                      "size":  1682,
+                      "modified":  "2026-03-14T17:18:13.9073560Z",
+                      "extension":  ".json"
+                  },
+                  {
+                      "name":  "PURPOSE.md",
+                      "path":  "VAknow\\contacts\\legal\\PURPOSE.md",
+                      "size":  326,
+                      "modified":  "2026-03-14T17:26:33.5830236Z",
+                      "extension":  ".md"
+                  },
+                  {
+                      "name":  "SUMMARY.md",
+                      "path":  "VAknow\\contacts\\legal\\SUMMARY.md",
+                      "size":  315,
+                      "modified":  "2026-03-14T17:26:33.5830236Z",
+                      "extension":  ".md"
+                  }
+              ]
+}

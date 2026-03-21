@@ -12,7 +12,7 @@ const router = express.Router();
  * POST /api/ai/analyze-denied-condition
  * Analyze a single denied condition for alternate theories of entitlement
  */
-router.post('/ai/analyze-denied-condition', async (req, res, next) => {
+router.post('/analyze-denied-condition', async (req, res, next) => {
   try {
     await aiHandler.handleAnalyzeDeniedCondition(req, res);
   } catch (error) {
@@ -24,7 +24,7 @@ router.post('/ai/analyze-denied-condition', async (req, res, next) => {
  * POST /api/ai/analyze-bulk
  * Analyze multiple denied conditions at once
  */
-router.post('/ai/analyze-bulk', async (req, res, next) => {
+router.post('/analyze-bulk', async (req, res, next) => {
   try {
     await aiHandler.handleBulkAnalyze(req, res);
   } catch (error) {
@@ -36,7 +36,7 @@ router.post('/ai/analyze-bulk', async (req, res, next) => {
  * GET /api/ai/health
  * Health check for Claude API connectivity
  */
-router.get('/ai/health', async (req, res, next) => {
+router.get('/health', async (req, res, next) => {
   try {
     await aiHandler.handleHealthCheck(req, res);
   } catch (error) {

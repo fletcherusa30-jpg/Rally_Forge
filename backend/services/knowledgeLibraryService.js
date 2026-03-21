@@ -1,10 +1,13 @@
-import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import FileSystemDataSource from '../data/access/FileSystemDataSource.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const KNOWLEDGE_DIR = path.resolve(__dirname, '../../knowledge');
+const KNOWLEDGE_DIR_CANDIDATES = [
+  path.resolve(__dirname, '../../knowledge'),
+  path.resolve(__dirname, '../../knowledge/MEDICAL_KNOWLEDGE/conditions'),
+];
 
 const FILES = {
   schema: 'knowledge-node.schema.json',
@@ -20,10 +23,42 @@ const cache = {
   manifest: null,
 };
 
+let knowledgeDataSource = null;
+
+async function resolveKnowledgeDataSource() {
+  if (knowledgeDataSource) {
+    return knowledgeDataSource;
+  }
+
+  let bestCandidate = null;
+  let bestScore = -1;
+
+  for (const candidate of KNOWLEDGE_DIR_CANDIDATES) {
+    const dataSource = new FileSystemDataSource(candidate);
+    const hasSchema = await dataSource.existsAsync(FILES.schema);
+    const hasNodes = await dataSource.existsAsync(FILES.nodes);
+    const hasManifest = await dataSource.existsAsync(FILES.manifest);
+    const hasTaxonomy = await dataSource.existsAsync(FILES.taxonomy);
+
+    const score = [hasSchema, hasNodes, hasManifest, hasTaxonomy].filter(Boolean).length;
+    if (score > bestScore) {
+      bestScore = score;
+      bestCandidate = dataSource;
+    }
+
+    if (hasSchema && hasNodes && hasManifest && hasTaxonomy) {
+      knowledgeDataSource = dataSource;
+      return dataSource;
+    }
+  }
+
+  knowledgeDataSource = bestCandidate || new FileSystemDataSource(KNOWLEDGE_DIR_CANDIDATES[0]);
+  return knowledgeDataSource;
+}
+
 async function readJson(name) {
-  const filePath = path.join(KNOWLEDGE_DIR, name);
-  const raw = await fs.readFile(filePath, 'utf-8');
-  return JSON.parse(raw.replace(/^\uFEFF/, ''));
+  const dataSource = await resolveKnowledgeDataSource();
+  return dataSource.readJson(name);
 }
 
 function normalizeText(value) {
@@ -36,10 +71,41 @@ function includesAny(haystack, terms) {
 }
 
 export async function loadKnowledgeLibraryBase() {
-  if (!cache.schema) cache.schema = await readJson(FILES.schema);
-  if (!cache.taxonomy) cache.taxonomy = await readJson(FILES.taxonomy);
-  if (!cache.nodes) cache.nodes = await readJson(FILES.nodes);
-  if (!cache.manifest) cache.manifest = await readJson(FILES.manifest);
+  if (!cache.schema) {
+    try {
+      cache.schema = await readJson(FILES.schema);
+    } catch (error) {
+      if (error?.code !== 'not_found') throw error;
+      cache.schema = { $schemaVersion: 'fallback-1.0.0', requiredFields: [] };
+    }
+  }
+
+  if (!cache.taxonomy) {
+    try {
+      cache.taxonomy = await readJson(FILES.taxonomy);
+    } catch (error) {
+      if (error?.code !== 'not_found') throw error;
+      cache.taxonomy = { version: 'fallback-1.0.0', domains: [] };
+    }
+  }
+
+  if (!cache.nodes) {
+    try {
+      cache.nodes = await readJson(FILES.nodes);
+    } catch (error) {
+      if (error?.code !== 'not_found') throw error;
+      cache.nodes = [];
+    }
+  }
+
+  if (!cache.manifest) {
+    try {
+      cache.manifest = await readJson(FILES.manifest);
+    } catch (error) {
+      if (error?.code !== 'not_found') throw error;
+      cache.manifest = { version: 'fallback-1.0.0', generatedAt: new Date().toISOString(), source: 'fallback' };
+    }
+  }
 
   return {
     schema: cache.schema,

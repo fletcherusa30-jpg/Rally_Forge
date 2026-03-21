@@ -1,0 +1,27 @@
+﻿{
+    "folder":  "VAknow\\contacts\\facilities\\vet_centers",
+    "generated":  "2026-03-14T11:26:33.6578070-06:00",
+    "files":  [
+                  {
+                      "name":  "facilities.json",
+                      "path":  "VAknow\\contacts\\facilities\\vet_centers\\facilities.json",
+                      "size":  125,
+                      "modified":  "2026-03-14T17:13:51.3969294Z",
+                      "extension":  ".json"
+                  },
+                  {
+                      "name":  "PURPOSE.md",
+                      "path":  "VAknow\\contacts\\facilities\\vet_centers\\PURPOSE.md",
+                      "size":  344,
+                      "modified":  "2026-03-14T17:26:33.6557996Z",
+                      "extension":  ".md"
+                  },
+                  {
+                      "name":  "SUMMARY.md",
+                      "path":  "VAknow\\contacts\\facilities\\vet_centers\\SUMMARY.md",
+                      "size":  327,
+                      "modified":  "2026-03-14T17:26:33.6578070Z",
+                      "extension":  ".md"
+                  }
+              ]
+}

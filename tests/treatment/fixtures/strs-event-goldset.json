@@ -1,0 +1,32 @@
+{
+  "cases": [
+    {
+      "id": "ahlta_page_270_capability_statement",
+      "description": "Capability language mentioning indirect fire and physical training should not become events",
+      "text": "NEUROSURGERY CLINIC NOTE. In discussing this with him personally, I find that he is able to meet all duty and fitness requirements. A/P: Staff Sergeant Fletcher is able to remain on active duty service and can perform activities such as lifting 40 pounds, riding in military vehicles, wearing load-bearing armor, evading direct and indirect fire, and participating in physical training. The only restrictions are no paratroop activities.",
+      "expectPresent": [],
+      "expectAbsent": ["Mortar Attack", "Physical Training Injury"]
+    },
+    {
+      "id": "explicit_incoming_fire_event",
+      "description": "Direct combat incident language should remain extractable",
+      "text": "During convoy operations in 2012, the unit came under incoming fire and sustained a mortar attack. Patient reported ringing in ears after the blast.",
+      "expectPresent": ["Mortar Attack"],
+      "expectAbsent": []
+    },
+    {
+      "id": "explicit_pt_injury_event",
+      "description": "Documented PT injury should remain extractable",
+      "text": "Soldier was injured during physical training after a ruck march and treated for severe knee pain.",
+      "expectPresent": ["Physical Training Injury"],
+      "expectAbsent": []
+    },
+    {
+      "id": "questionnaire_style_noise",
+      "description": "Questionnaire wording should not generate event findings",
+      "text": "Deployment injury and concussion risk assessment. Did deployer have an injury based on responses to question 10.a.?: Yes. Deployer response or concern: N/A.",
+      "expectPresent": [],
+      "expectAbsent": ["Mortar Attack", "Physical Training Injury", "Training Accident"]
+    }
+  ]
+}

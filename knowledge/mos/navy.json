@@ -1,0 +1,440 @@
+{
+    "mos": [
+        {
+            "code": "AB",
+            "title": "Aviation Boatswains Mate",
+            "type": "enlisted"
+        },
+        {
+            "code": "AC",
+            "title": "Air Traffic Controller",
+            "type": "enlisted"
+        },
+        {
+            "code": "AD",
+            "title": "Aviation Machinists Mate",
+            "type": "enlisted"
+        },
+        {
+            "code": "AE",
+            "title": "Aviation Electricians Mate",
+            "type": "enlisted"
+        },
+        {
+            "code": "AG",
+            "title": "Aerographers Mate",
+            "type": "enlisted"
+        },
+        {
+            "code": "AO",
+            "title": "Aviation Ordnanceman",
+            "type": "enlisted"
+        },
+        {
+            "code": "AS",
+            "title": "Aviation Support Equipment Technician",
+            "type": "enlisted"
+        },
+        {
+            "code": "AT",
+            "title": "Aviation Electronics Technician",
+            "type": "enlisted"
+        },
+        {
+            "code": "AW",
+            "title": "Naval Aircrewman",
+            "type": "enlisted"
+        },
+        {
+            "code": "AZ",
+            "title": "Aviation Maintenance Administrationman",
+            "type": "enlisted"
+        },
+        {
+            "code": "BM",
+            "title": "Boatswains Mate",
+            "type": "enlisted"
+        },
+        {
+            "code": "CS",
+            "title": "Culinary Specialist",
+            "type": "enlisted"
+        },
+        {
+            "code": "CTI",
+            "title": "Cryptologic Technician Interpretive",
+            "type": "enlisted"
+        },
+        {
+            "code": "CTM",
+            "title": "Cryptologic Technician Maintenance",
+            "type": "enlisted"
+        },
+        {
+            "code": "CTN",
+            "title": "Cryptologic Technician Networks",
+            "type": "enlisted"
+        },
+        {
+            "code": "CTR",
+            "title": "Cryptologic Technician Collection",
+            "type": "enlisted"
+        },
+        {
+            "code": "CTT",
+            "title": "Cryptologic Technician Technical",
+            "type": "enlisted"
+        },
+        {
+            "code": "DC",
+            "title": "Damage Controlman",
+            "type": "enlisted"
+        },
+        {
+            "code": "EA",
+            "title": "Engineering Aide",
+            "type": "enlisted"
+        },
+        {
+            "code": "EM",
+            "title": "Electricians Mate",
+            "type": "enlisted"
+        },
+        {
+            "code": "EN",
+            "title": "Engineman",
+            "type": "enlisted"
+        },
+        {
+            "code": "EO",
+            "title": "Equipment Operator",
+            "type": "enlisted"
+        },
+        {
+            "code": "ET",
+            "title": "Electronics Technician",
+            "type": "enlisted"
+        },
+        {
+            "code": "FC",
+            "title": "Fire Controlman",
+            "type": "enlisted"
+        },
+        {
+            "code": "GM",
+            "title": "Gunners Mate",
+            "type": "enlisted"
+        },
+        {
+            "code": "HM",
+            "title": "Hospital Corpsman",
+            "type": "enlisted"
+        },
+        {
+            "code": "HT",
+            "title": "Hull Maintenance Technician",
+            "type": "enlisted"
+        },
+        {
+            "code": "IC",
+            "title": "Interior Communications Electrician",
+            "type": "enlisted"
+        },
+        {
+            "code": "IS",
+            "title": "Intelligence Specialist",
+            "type": "enlisted"
+        },
+        {
+            "code": "IT",
+            "title": "Information Systems Technician",
+            "type": "enlisted"
+        },
+        {
+            "code": "LN",
+            "title": "Legalman",
+            "type": "enlisted"
+        },
+        {
+            "code": "LS",
+            "title": "Logistics Specialist",
+            "type": "enlisted"
+        },
+        {
+            "code": "MA",
+            "title": "Master-at-Arms",
+            "type": "enlisted"
+        },
+        {
+            "code": "MC",
+            "title": "Mass Communication Specialist",
+            "type": "enlisted"
+        },
+        {
+            "code": "MM",
+            "title": "Machinists Mate",
+            "type": "enlisted"
+        },
+        {
+            "code": "MN",
+            "title": "Mineman",
+            "type": "enlisted"
+        },
+        {
+            "code": "MR",
+            "title": "Machinery Repairman",
+            "type": "enlisted"
+        },
+        {
+            "code": "MT",
+            "title": "Missile Technician",
+            "type": "enlisted"
+        },
+        {
+            "code": "MU",
+            "title": "Musician",
+            "type": "enlisted"
+        },
+        {
+            "code": "NC",
+            "title": "Navy Counselor",
+            "type": "enlisted"
+        },
+        {
+            "code": "ND",
+            "title": "Navy Diver",
+            "type": "enlisted"
+        },
+        {
+            "code": "OS",
+            "title": "Operations Specialist",
+            "type": "enlisted"
+        },
+        {
+            "code": "PR",
+            "title": "Aircrew Survival Equipmentman",
+            "type": "enlisted"
+        },
+        {
+            "code": "PS",
+            "title": "Personnel Specialist",
+            "type": "enlisted"
+        },
+        {
+            "code": "QM",
+            "title": "Quartermaster",
+            "type": "enlisted"
+        },
+        {
+            "code": "RP",
+            "title": "Religious Program Specialist",
+            "type": "enlisted"
+        },
+        {
+            "code": "SB",
+            "title": "Special Warfare Boat Operator",
+            "type": "enlisted"
+        },
+        {
+            "code": "SH",
+            "title": "Ship Serviceman",
+            "type": "enlisted"
+        },
+        {
+            "code": "SO",
+            "title": "Special Warfare Operator",
+            "type": "enlisted"
+        },
+        {
+            "code": "STG",
+            "title": "Sonar Technician Surface",
+            "type": "enlisted"
+        },
+        {
+            "code": "STS",
+            "title": "Sonar Technician Submarine",
+            "type": "enlisted"
+        },
+        {
+            "code": "SW",
+            "title": "Steelworker",
+            "type": "enlisted"
+        },
+        {
+            "code": "TM",
+            "title": "Torpedoman Mate",
+            "type": "enlisted"
+        },
+        {
+            "code": "UT",
+            "title": "Utilitiesman",
+            "type": "enlisted"
+        },
+        {
+            "code": "YN",
+            "title": "Yeoman",
+            "type": "enlisted"
+        },
+        {
+            "code": "711X",
+            "title": "Navy CWO Designator 711X",
+            "type": "warrant"
+        },
+        {
+            "code": "712X",
+            "title": "Aviation Maintenance Duty Officer (Warrant)",
+            "type": "warrant"
+        },
+        {
+            "code": "721X",
+            "title": "Air Traffic Control Warrant Officer",
+            "type": "warrant"
+        },
+        {
+            "code": "731X",
+            "title": "Ship Repair Warrant Officer",
+            "type": "warrant"
+        },
+        {
+            "code": "733X",
+            "title": "Navy CWO Designator 733X",
+            "type": "warrant"
+        },
+        {
+            "code": "741X",
+            "title": "Civil Engineer Corps Warrant Officer",
+            "type": "warrant"
+        },
+        {
+            "code": "748X",
+            "title": "Diving Warrant Officer",
+            "type": "warrant"
+        },
+        {
+            "code": "749X",
+            "title": "Explosive Ordnance Disposal Warrant Officer",
+            "type": "warrant"
+        },
+        {
+            "code": "751X",
+            "title": "Surface Operations Warrant Officer",
+            "type": "warrant"
+        },
+        {
+            "code": "752X",
+            "title": "Naval Intelligence Warrant Officer",
+            "type": "warrant"
+        },
+        {
+            "code": "781X",
+            "title": "Supply Corps Warrant Officer",
+            "type": "warrant"
+        },
+        {
+            "code": "783X",
+            "title": "Personnel Administration Warrant Officer",
+            "type": "warrant"
+        },
+        {
+            "code": "1110",
+            "title": "Surface Warfare Officer",
+            "type": "officer"
+        },
+        {
+            "code": "1120",
+            "title": "Submarine Warfare Officer",
+            "type": "officer"
+        },
+        {
+            "code": "1130",
+            "title": "Special Warfare Officer (SEAL)",
+            "type": "officer"
+        },
+        {
+            "code": "1140",
+            "title": "Special Operations Officer (EOD)",
+            "type": "officer"
+        },
+        {
+            "code": "1310",
+            "title": "Naval Aviator",
+            "type": "officer"
+        },
+        {
+            "code": "1320",
+            "title": "Naval Flight Officer",
+            "type": "officer"
+        },
+        {
+            "code": "1510",
+            "title": "Intelligence Officer",
+            "type": "officer"
+        },
+        {
+            "code": "1610",
+            "title": "Information Warfare Officer",
+            "type": "officer"
+        },
+        {
+            "code": "1710",
+            "title": "Cyber Warfare Engineer",
+            "type": "officer"
+        },
+        {
+            "code": "1810",
+            "title": "Oceanography Officer",
+            "type": "officer"
+        },
+        {
+            "code": "2100",
+            "title": "Nuclear Power Officer",
+            "type": "officer"
+        },
+        {
+            "code": "2200",
+            "title": "Information Professional",
+            "type": "officer"
+        },
+        {
+            "code": "2300",
+            "title": "Meteorology / Oceanography Officer",
+            "type": "officer"
+        },
+        {
+            "code": "2500",
+            "title": "Judge Advocate General Corps",
+            "type": "officer"
+        },
+        {
+            "code": "2900",
+            "title": "Supply Corps Officer",
+            "type": "officer"
+        },
+        {
+            "code": "3100",
+            "title": "Civil Engineer Corps",
+            "type": "officer"
+        },
+        {
+            "code": "4100",
+            "title": "Medical Corps",
+            "type": "officer"
+        },
+        {
+            "code": "4200",
+            "title": "Dental Corps",
+            "type": "officer"
+        },
+        {
+            "code": "4500",
+            "title": "Medical Service Corps",
+            "type": "officer"
+        },
+        {
+            "code": "4600",
+            "title": "Nurse Corps",
+            "type": "officer"
+        }
+    ],
+    "branch": "Navy"
+}

@@ -12,6 +12,7 @@ import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const KNOWLEDGE_DIR = path.resolve(__dirname, '../../knowledge');
 
 // ============================================================================
 // VALIDATION TESTS
@@ -23,7 +24,7 @@ function validateBilateralFactorExtraction() {
     console.log('='.repeat(70));
     
     const bilateralFactor = JSON.parse(
-        fs.readFileSync(path.join(__dirname, 'knowledge', 'part4', 'bilateral_factor.json'), 'utf8')
+        fs.readFileSync(path.join(KNOWLEDGE_DIR, 'part4', 'bilateral_factor.json'), 'utf8')
     );
     
     const checks = [];
@@ -117,7 +118,7 @@ function validateCombinedRatingsExtraction() {
     console.log('='.repeat(70));
     
     const combinedRatings = JSON.parse(
-        fs.readFileSync(path.join(__dirname, 'knowledge', 'part4', 'combined_ratings_table.json'), 'utf8')
+        fs.readFileSync(path.join(KNOWLEDGE_DIR, 'part4', 'combined_ratings_table.json'), 'utf8')
     );
     
     const checks = [];
@@ -213,11 +214,11 @@ function validateVAScannerImplementation() {
     console.log('='.repeat(70));
     
     const bilateralFactor = JSON.parse(
-        fs.readFileSync(path.join(__dirname, 'knowledge', 'part4', 'bilateral_factor.json'), 'utf8')
+        fs.readFileSync(path.join(KNOWLEDGE_DIR, 'part4', 'bilateral_factor.json'), 'utf8')
     );
     
     const combinedRatings = JSON.parse(
-        fs.readFileSync(path.join(__dirname, 'knowledge', 'part4', 'combined_ratings_table.json'), 'utf8')
+        fs.readFileSync(path.join(KNOWLEDGE_DIR, 'part4', 'combined_ratings_table.json'), 'utf8')
     );
     
     console.log('\n§4.25 COMBINED RATINGS - Implementation Requirements:');
@@ -263,7 +264,7 @@ function validateKnowledgeBaseCompleteness() {
     console.log('='.repeat(70));
     
     const summary = JSON.parse(
-        fs.readFileSync(path.join(__dirname, 'knowledge', 'parsing_summary.json'), 'utf8')
+        fs.readFileSync(path.join(KNOWLEDGE_DIR, 'parsing_summary.json'), 'utf8')
     );
     
     console.log('\nPART 3 (ADJUDICATION):');

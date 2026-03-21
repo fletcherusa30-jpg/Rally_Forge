@@ -1,0 +1,148 @@
+{
+  "documentType": "DD-214",
+  "schemaVersion": "portable-1.0",
+  "serviceIdentity": {
+    "veteranName": "RETIRE, JANE Q",
+    "ssnOrServiceNumber": null,
+    "branchOfService": "Army",
+    "component": "RA"
+  },
+  "servicePeriods": {
+    "entryDate": "2011-01-01",
+    "separationDate": "2017-01-01",
+    "netActiveServiceThisPeriod": null,
+    "totalPriorActiveService": null,
+    "totalPriorInactiveService": null,
+    "seaService": null,
+    "initialEntryTraining": {
+      "completed": true,
+      "sourceText": "INITIAL ENTRY TRAINING COMPLETED SUCCESSFULLY"
+    }
+  },
+  "characterAndSeparation": {
+    "characterOfService": "Honorable",
+    "separationAuthority": "AR 635-200",
+    "separationCode": "RBD",
+    "reentryCode": "4",
+    "narrativeReasonForSeparation": "SUFFICIENT SERVICE FOR RETIREMENT",
+    "typeOfSeparation": "Retirement"
+  },
+  "gradeSpecialty": {
+    "gradeRateRank": null,
+    "payGrade": null,
+    "primaryMOSOrAFSCOrRating": "42A",
+    "additionalMOSOrSpecialties": [],
+    "mosDetails": [
+      {
+        "code": "42A",
+        "title": "HUMAN RESOURCES SPECIALIST",
+        "yearsOfService": 6,
+        "monthsOfService": 0
+      }
+    ]
+  },
+  "decorationsAndService": {
+    "decorationsAndAwards": [],
+    "foreignServiceTotal": null,
+    "foreignServiceLocationsIfListed": [],
+    "combatIndicatorsFromAwards": []
+  },
+  "specialProgramsRemarks": {
+    "remarksBlock": "INITIAL ENTRY TRAINING COMPLETED SUCCESSFULLY",
+    "deploymentOrCampaignReferences": [],
+    "reenlistments": []
+  },
+  "militaryEducation": [
+    {
+      "courseName": "ADVANCED LEADER COURSE",
+      "duration": "6 WKS",
+      "yearCompleted": 2015
+    }
+  ],
+  "lastDutyAssignment": null,
+  "transferCommand": {
+    "postServiceComponent": "USAR CON GP (RET)",
+    "sourceText": "USAR CON GP (RET)"
+  },
+  "postServiceContact": {
+    "mailingAddressAtSeparation": null,
+    "nearestRelativeOrEmergencyContact": null
+  },
+  "intelligentExtraction": {
+    "retirementStatus": "RETIRED",
+    "badgeIndicators": [],
+    "hazardIndicators": [],
+    "combatIndicators": []
+  },
+  "dd214Analysis": {
+    "serviceDates": {
+      "dateEnteredActiveDuty": "2011-01-01",
+      "separationDate": "2017-01-01",
+      "initialEntryTraining": {
+        "completed": true,
+        "sourceText": "INITIAL ENTRY TRAINING COMPLETED SUCCESSFULLY"
+      }
+    },
+    "separation": {
+      "characterOfService": "Honorable",
+      "separationAuthority": "AR 635-200",
+      "separationCode": "RBD",
+      "reentryCode": "4",
+      "narrativeReasonForSeparation": "SUFFICIENT SERVICE FOR RETIREMENT",
+      "typeOfSeparation": "Retirement"
+    },
+    "rankAndSpecialty": {
+      "primarySpecialty": "42A",
+      "mosDetails": [
+        {
+          "code": "42A",
+          "title": "HUMAN RESOURCES SPECIALIST",
+          "yearsOfService": 6,
+          "monthsOfService": 0
+        }
+      ]
+    },
+    "awards": [],
+    "deployments": [],
+    "militaryEducation": [
+      {
+        "courseName": "ADVANCED LEADER COURSE",
+        "duration": "6 WKS",
+        "yearCompleted": 2015
+      }
+    ],
+    "lastDutyAssignment": null,
+    "transferCommand": {
+      "postServiceComponent": "USAR CON GP (RET)",
+      "sourceText": "USAR CON GP (RET)"
+    },
+    "reenlistments": [],
+    "confidenceScores": {
+      "overall": 0.88,
+      "fields": {
+        "entryDate": 1,
+        "separationDate": 1
+      },
+      "lowConfidenceFields": []
+    },
+    "validationSummary": {
+      "allChecksPassed": true
+    }
+  },
+  "extractionMeta": {
+    "confidence": 0.88,
+    "fieldConfidence": {
+      "entryDate": 1,
+      "separationDate": 1
+    },
+    "optionalFieldConfidence": {
+      "initialEntryTraining": 1,
+      "typeOfSeparation": 1,
+      "mosDetails": 1,
+      "militaryEducation": 1,
+      "transferCommand": 1
+    },
+    "schemaValid": true,
+    "schemaErrors": []
+  }
+}

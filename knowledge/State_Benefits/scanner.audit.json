@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "subsystem": "scanner",
+  "version": "1.0.0",
+  "generatedAt": "2026-03-14T04:54:49.314Z",
+  "discovery": {
+    "files": [
+      "backend/api/scanner.js",
+      "backend/api/scannerDiagnostics.js",
+      "backend/va_scanner/backend/scanner-diagnostic.js",
+      "backend/va_scanner/backend/shared/scanner/vaDecisionScanner.js",
+      "backend/engine/strs/strs-engine.js"
+    ]
+  },
+  "metrics": {
+    "endpointCount": 2,
+    "regexMentions": 3,
+    "confidenceMentions": 0,
+    "provenanceMentions": 12
+  },
+  "validation": {
+    "hasDiagnosticsModule": true,
+    "hasScannerApi": true
+  },
+  "modernization": {
+    "status": "modernized",
+    "notes": [
+      "Scanner diagnostics artifact generated from existing scanner modules.",
+      "Counts are derived from current source text and require no external state."
+    ]
+  }
+}

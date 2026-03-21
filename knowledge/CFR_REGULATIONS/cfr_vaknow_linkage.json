@@ -1,0 +1,40 @@
+﻿[
+    {
+        "cfr_part":  "3",
+        "links":  [
+                      {
+                          "vaknow_domain":  "compensation",
+                          "path":  "C:\\Dev\\Rally Forge\\knowledge\\VAknow\\compensation"
+                      },
+                      {
+                          "vaknow_domain":  "pension",
+                          "path":  "C:\\Dev\\Rally Forge\\knowledge\\VAknow\\pension"
+                      },
+                      {
+                          "vaknow_domain":  "survivors",
+                          "path":  "C:\\Dev\\Rally Forge\\knowledge\\VAknow\\survivors"
+                      },
+                      {
+                          "vaknow_domain":  "caregivers",
+                          "path":  "C:\\Dev\\Rally Forge\\knowledge\\VAknow\\caregivers"
+                      }
+                  ],
+        "vaknow_root":  "C:\\Dev\\Rally Forge\\knowledge\\VAknow",
+        "cfr_path":  "C:\\Dev\\Rally Forge\\knowledge\\CFR_REGULATIONS\\38_CFR_Part_3"
+    },
+    {
+        "cfr_part":  "4",
+        "links":  [
+                      {
+                          "vaknow_domain":  "compensation",
+                          "path":  "C:\\Dev\\Rally Forge\\knowledge\\VAknow\\compensation"
+                      },
+                      {
+                          "vaknow_domain":  "Medical_Knowledge",
+                          "path":  "C:\\Dev\\Rally Forge\\knowledge\\VAknow\\medical"
+                      }
+                  ],
+        "vaknow_root":  "C:\\Dev\\Rally Forge\\knowledge\\VAknow",
+        "cfr_path":  "C:\\Dev\\Rally Forge\\knowledge\\CFR_REGULATIONS\\38_CFR_Part_4"
+    }
+]

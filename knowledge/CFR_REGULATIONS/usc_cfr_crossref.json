@@ -1,0 +1,50 @@
+﻿[
+    {
+        "usc_topic":  "Compensation for Service-Connected Disability or Death",
+        "usc_chapter":  "11",
+        "cfr_focus":  "Adjudication of compensation claims, service connection, effective dates, and related rules.",
+        "vaknow_domain":  "compensation",
+        "usc_title":  "38 USC",
+        "cfr_part":  "3"
+    },
+    {
+        "usc_topic":  "Pension for Non-Service-Connected Disability or Death",
+        "usc_chapter":  "15",
+        "cfr_focus":  "Pension adjudication, income rules, and needs-based determinations.",
+        "vaknow_domain":  "pension",
+        "usc_title":  "38 USC",
+        "cfr_part":  "3"
+    },
+    {
+        "usc_topic":  "Education and Training (GI Bill and related programs)",
+        "usc_chapter":  "30-36",
+        "cfr_focus":  "Education benefits administration and program rules.",
+        "vaknow_domain":  "education",
+        "usc_title":  "38 USC",
+        "cfr_part":  "21"
+    },
+    {
+        "usc_topic":  "Housing and Home Loan Guaranty",
+        "usc_chapter":  "37",
+        "cfr_focus":  "Loan guaranty, underwriting, servicing, and related rules.",
+        "vaknow_domain":  "home_loans",
+        "usc_title":  "38 USC",
+        "cfr_part":  "36"
+    },
+    {
+        "usc_topic":  "Hospital, Nursing Home, Domiciliary, and Medical Care",
+        "usc_chapter":  "17",
+        "cfr_focus":  "Eligibility, scope, and administration of VA health care.",
+        "vaknow_domain":  "healthcare",
+        "usc_title":  "38 USC",
+        "cfr_part":  "17"
+    },
+    {
+        "usc_topic":  "Burial Benefits",
+        "usc_chapter":  "23",
+        "cfr_focus":  "Burial allowances, national cemeteries, and memorial affairs.",
+        "vaknow_domain":  "burial",
+        "usc_title":  "38 USC",
+        "cfr_part":  "3, 38, 39"
+    }
+]

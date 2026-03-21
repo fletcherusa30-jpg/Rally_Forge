@@ -1,0 +1,16 @@
+﻿{
+  "name": "VAknow Knowledge Base",
+  "version": "1.0.0",
+  "domains": [
+    "healthcare",
+    "burial",
+    "life_insurance",
+    "education",
+    "home_loans",
+    "compensation",
+    "pension",
+    "survivors",
+    "caregivers"
+],
+  "last_verified": "2026-03-13 23:22:23"
+}

@@ -1,0 +1,5 @@
+﻿File missing metadata section: C:\Dev\Rally Forge\knowledge\VAknow\web_intel\va_disability.summary.md
+File missing metadata section: C:\Dev\Rally Forge\knowledge\VAknow\web_intel\va_education.summary.md
+File missing metadata section: C:\Dev\Rally Forge\knowledge\VAknow\web_intel\va_healthcare.summary.md
+File missing metadata section: C:\Dev\Rally Forge\knowledge\VAknow\web_intel\va_pact.summary.md
+File missing metadata section: C:\Dev\Rally Forge\knowledge\VAknow\web_intel\va_pension.summary.md

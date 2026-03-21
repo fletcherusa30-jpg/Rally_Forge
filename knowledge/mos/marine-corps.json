@@ -1,0 +1,420 @@
+{
+    "mos": [
+        {
+            "code": "0311",
+            "title": "Rifleman",
+            "type": "enlisted"
+        },
+        {
+            "code": "0331",
+            "title": "Machine Gunner",
+            "type": "enlisted"
+        },
+        {
+            "code": "0341",
+            "title": "Mortarman",
+            "type": "enlisted"
+        },
+        {
+            "code": "0351",
+            "title": "Infantry Assault Marine",
+            "type": "enlisted"
+        },
+        {
+            "code": "0352",
+            "title": "Anti-Tank Missile Gunner",
+            "type": "enlisted"
+        },
+        {
+            "code": "0411",
+            "title": "Maintenance Management Specialist",
+            "type": "enlisted"
+        },
+        {
+            "code": "0451",
+            "title": "Combat Photographer",
+            "type": "enlisted"
+        },
+        {
+            "code": "0481",
+            "title": "Landing Support Specialist",
+            "type": "enlisted"
+        },
+        {
+            "code": "0621",
+            "title": "Field Radio Operator",
+            "type": "enlisted"
+        },
+        {
+            "code": "0627",
+            "title": "Unit Level Circuit Switcher",
+            "type": "enlisted"
+        },
+        {
+            "code": "0631",
+            "title": "Network Administrator",
+            "type": "enlisted"
+        },
+        {
+            "code": "0651",
+            "title": "Cyber Network Operator",
+            "type": "enlisted"
+        },
+        {
+            "code": "0811",
+            "title": "Field Artillery Cannoneer",
+            "type": "enlisted"
+        },
+        {
+            "code": "0842",
+            "title": "Field Artillery Radar Operator",
+            "type": "enlisted"
+        },
+        {
+            "code": "0844",
+            "title": "Field Artillery Fire Control Man",
+            "type": "enlisted"
+        },
+        {
+            "code": "0847",
+            "title": "Artillery Meteorological Man",
+            "type": "enlisted"
+        },
+        {
+            "code": "1141",
+            "title": "Electrician",
+            "type": "enlisted"
+        },
+        {
+            "code": "1161",
+            "title": "Refrigeration Mechanic",
+            "type": "enlisted"
+        },
+        {
+            "code": "1171",
+            "title": "Water Support Technician",
+            "type": "enlisted"
+        },
+        {
+            "code": "1316",
+            "title": "Metal Worker",
+            "type": "enlisted"
+        },
+        {
+            "code": "1341",
+            "title": "Engineer Equipment Mechanic",
+            "type": "enlisted"
+        },
+        {
+            "code": "1345",
+            "title": "Engineer Equipment Operator",
+            "type": "enlisted"
+        },
+        {
+            "code": "1833",
+            "title": "Assault Amphibious Vehicle Crewman",
+            "type": "enlisted"
+        },
+        {
+            "code": "2111",
+            "title": "Small Arms Repairer/Technician",
+            "type": "enlisted"
+        },
+        {
+            "code": "2131",
+            "title": "Towed Artillery Systems Technician",
+            "type": "enlisted"
+        },
+        {
+            "code": "2141",
+            "title": "Tank Mechanic",
+            "type": "enlisted"
+        },
+        {
+            "code": "2147",
+            "title": "Light Armored Vehicle Mechanic",
+            "type": "enlisted"
+        },
+        {
+            "code": "2311",
+            "title": "Ammunition Technician",
+            "type": "enlisted"
+        },
+        {
+            "code": "2621",
+            "title": "Special Communications Signals Analyst",
+            "type": "enlisted"
+        },
+        {
+            "code": "2631",
+            "title": "Electronic Intelligence Intercept Operator",
+            "type": "enlisted"
+        },
+        {
+            "code": "2831",
+            "title": "Ground Electronics Transmission Systems Maintainer",
+            "type": "enlisted"
+        },
+        {
+            "code": "3043",
+            "title": "Supply Administration and Operations Specialist",
+            "type": "enlisted"
+        },
+        {
+            "code": "3051",
+            "title": "Warehouse Clerk",
+            "type": "enlisted"
+        },
+        {
+            "code": "3112",
+            "title": "Traffic Management Specialist",
+            "type": "enlisted"
+        },
+        {
+            "code": "3381",
+            "title": "Food Service Specialist",
+            "type": "enlisted"
+        },
+        {
+            "code": "3432",
+            "title": "Finance Technician",
+            "type": "enlisted"
+        },
+        {
+            "code": "3531",
+            "title": "Motor Vehicle Operator",
+            "type": "enlisted"
+        },
+        {
+            "code": "3537",
+            "title": "Motor Transport Operations Chief",
+            "type": "enlisted"
+        },
+        {
+            "code": "4133",
+            "title": "Marine Corps Community Services Specialist",
+            "type": "enlisted"
+        },
+        {
+            "code": "4421",
+            "title": "Legal Services Specialist",
+            "type": "enlisted"
+        },
+        {
+            "code": "4591",
+            "title": "Combat Lithographer",
+            "type": "enlisted"
+        },
+        {
+            "code": "4821",
+            "title": "Career Planner",
+            "type": "enlisted"
+        },
+        {
+            "code": "5831",
+            "title": "Military Police",
+            "type": "enlisted"
+        },
+        {
+            "code": "5832",
+            "title": "Criminal Investigator",
+            "type": "enlisted"
+        },
+        {
+            "code": "5952",
+            "title": "Air Traffic Control Radar Technician",
+            "type": "enlisted"
+        },
+        {
+            "code": "6046",
+            "title": "Aviation Maintenance Data Specialist",
+            "type": "enlisted"
+        },
+        {
+            "code": "6112",
+            "title": "Helicopter Mechanic (CH-53)",
+            "type": "enlisted"
+        },
+        {
+            "code": "6152",
+            "title": "Helicopter Mechanic (AH-1/UH-1)",
+            "type": "enlisted"
+        },
+        {
+            "code": "6174",
+            "title": "Helicopter Crew Chief (CH-53)",
+            "type": "enlisted"
+        },
+        {
+            "code": "6216",
+            "title": "Fixed-Wing Aircraft Mechanic (F/A-18)",
+            "type": "enlisted"
+        },
+        {
+            "code": "6256",
+            "title": "Fixed-Wing Aircraft Safety Equipment Mechanic",
+            "type": "enlisted"
+        },
+        {
+            "code": "6286",
+            "title": "Fixed-Wing Aircraft Safety Equipment Mechanic (F/A-18)",
+            "type": "enlisted"
+        },
+        {
+            "code": "6316",
+            "title": "Aircraft Communications/Navigation Systems Technician",
+            "type": "enlisted"
+        },
+        {
+            "code": "6326",
+            "title": "Aircraft Communications/Navigation Systems Technician (F/A-18)",
+            "type": "enlisted"
+        },
+        {
+            "code": "6531",
+            "title": "Aviation Ordnance Technician",
+            "type": "enlisted"
+        },
+        {
+            "code": "7041",
+            "title": "Aviation Operations Specialist",
+            "type": "enlisted"
+        },
+        {
+            "code": "7314",
+            "title": "Unmanned Aerial Vehicle Operator",
+            "type": "enlisted"
+        },
+        {
+            "code": "8411",
+            "title": "Recruiter",
+            "type": "enlisted"
+        },
+        {
+            "code": "0102",
+            "title": "Marine Officer Candidate",
+            "type": "officer"
+        },
+        {
+            "code": "0202",
+            "title": "Intelligence Officer",
+            "type": "officer"
+        },
+        {
+            "code": "0302",
+            "title": "Infantry Officer",
+            "type": "officer"
+        },
+        {
+            "code": "0402",
+            "title": "Logistics Officer",
+            "type": "officer"
+        },
+        {
+            "code": "0602",
+            "title": "Communications Officer",
+            "type": "officer"
+        },
+        {
+            "code": "0802",
+            "title": "Artillery Officer",
+            "type": "officer"
+        },
+        {
+            "code": "1302",
+            "title": "Engineer Officer (Combat)",
+            "type": "officer"
+        },
+        {
+            "code": "1802",
+            "title": "Tank Officer",
+            "type": "officer"
+        },
+        {
+            "code": "2502",
+            "title": "Operational Communications Officer",
+            "type": "officer"
+        },
+        {
+            "code": "3002",
+            "title": "Supply Administration Officer",
+            "type": "officer"
+        },
+        {
+            "code": "3102",
+            "title": "Purchasing Officer",
+            "type": "officer"
+        },
+        {
+            "code": "3502",
+            "title": "Motor Transport Officer",
+            "type": "officer"
+        },
+        {
+            "code": "4402",
+            "title": "Legal Services Officer",
+            "type": "officer"
+        },
+        {
+            "code": "5803",
+            "title": "Military Police Officer",
+            "type": "officer"
+        },
+        {
+            "code": "6002",
+            "title": "Aircraft Maintenance Officer",
+            "type": "officer"
+        },
+        {
+            "code": "7202",
+            "title": "Air Traffic Control Officer",
+            "type": "officer"
+        },
+        {
+            "code": "7315",
+            "title": "AV-8B Pilot",
+            "type": "officer"
+        },
+        {
+            "code": "0170",
+            "title": "Marine Warrant MOS 0170",
+            "type": "warrant"
+        },
+        {
+            "code": "0120",
+            "title": "Personnel Officer (Warrant)",
+            "type": "warrant"
+        },
+        {
+            "code": "0430",
+            "title": "Mobility Officer (Warrant)",
+            "type": "warrant"
+        },
+        {
+            "code": "0602",
+            "title": "Communications Warrant Officer",
+            "type": "warrant"
+        },
+        {
+            "code": "2805",
+            "title": "Electronics Maintenance Warrant Officer",
+            "type": "warrant"
+        },
+        {
+            "code": "3510",
+            "title": "Motor Transport Warrant Officer",
+            "type": "warrant"
+        },
+        {
+            "code": "4130",
+            "title": "Marine Corps Community Services Warrant Officer",
+            "type": "warrant"
+        },
+        {
+            "code": "5804",
+            "title": "Marine Warrant MOS 5804",
+            "type": "warrant"
+        }
+    ],
+    "branch": "Marine Corps"
+}

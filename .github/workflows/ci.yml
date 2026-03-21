@@ -1,16 +1,24 @@
-name: CI
+name: Rally Forge CI-CD Test Pipeline
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - '**'
   pull_request:
-    branches: [ main ]
+    branches:
+      - '**'
+  merge_group:
+  workflow_dispatch:
+
+concurrency:
+  group: rally-forge-ci-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  validate:
+  install_bootstrap:
+    name: 1. Install & Bootstrap
     runs-on: ubuntu-latest
     timeout-minutes: 20
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -22,22 +30,154 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm ci
+        run: npm run ci:install
 
-      - name: Lint
-        run: npm run lint
+      - name: Validate environment and schema bootstrap
+        run: npm run ci:bootstrap
 
-      - name: Build check
-        run: npm run build:check
+  lint_static_analysis:
+    name: 2. Lint & Static Analysis
+    runs-on: ubuntu-latest
+    needs: [install_bootstrap]
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Core tests
-        run: npm test
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
 
-      - name: Scanner regression tests
-        run: npm run test:scanner-regression
+      - name: Install dependencies
+        run: npm run ci:install
 
-      - name: Onboarding flow verification
-        run: npm run test:onboarding-flow
+      - name: Run lint (warnings blocked)
+        run: npm run ci:lint
 
-      - name: Rate database validation
-        run: npm run validate:rate-database
+      - name: Run type checker
+        run: npm run ci:typecheck
+
+      - name: Run static guard (unused/dead/TODO/deprecated/logs)
+        run: npm run ci:static
+
+      - name: Run schema validator
+        run: npm run ci:validate:schema
+
+  unit_tests:
+    name: 3. Unit Tests
+    runs-on: ubuntu-latest
+    needs: [lint_static_analysis]
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm run ci:install
+
+      - name: Run tab, engine, normalization, and mapping-table unit suites
+        run: npm run ci:unit
+
+  integration_tests:
+    name: 4. Integration Tests
+    runs-on: ubuntu-latest
+    needs: [unit_tests]
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm run ci:install
+
+      - name: Run cross-tab and unified integration suites
+        run: npm run ci:integration
+
+  end_to_end_tests:
+    name: 5. End-to-End Tests
+    runs-on: ubuntu-latest
+    needs: [integration_tests]
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm run ci:install
+
+      - name: Simulate full profile-to-claim workflow and validate outputs
+        run: npm run ci:e2e
+
+  file_level_audit:
+    name: 6. File-Level Audit
+    runs-on: ubuntu-latest
+    needs: [end_to_end_tests]
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm run ci:install
+
+      - name: Validate repository file-level checklist
+        run: npm run ci:file-audit
+
+  build_package:
+    name: 7. Build & Package
+    runs-on: ubuntu-latest
+    needs: [file_level_audit]
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm run ci:install
+
+      - name: Build production bundle
+        run: npm run ci:build
+
+      - name: Validate build artifacts
+        run: npm run ci:package:validate
+
+  deployment_gate:
+    name: 8. Deployment Gate
+    runs-on: ubuntu-latest
+    needs: [build_package]
+    timeout-minutes: 10
+    steps:
+      - name: Enforce pass-only gate
+        run: echo "Deployment gate passed. All stages succeeded with warning blocking enabled."

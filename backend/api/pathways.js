@@ -5,7 +5,7 @@ import { classifyPathways } from "../controllers/pathwaysController.js";
 const router = express.Router();
 
 router.post(
-  "/pathways/classify",
+  "/classify",
   asyncHandler(classifyPathways)
 );
 

@@ -1,0 +1,26 @@
+﻿{
+    "folder":  "C:\\Dev\\Rally Forge\\knowledge\\CFR_REGULATIONS",
+    "files":  [
+                  {
+                      "Name":  "cfr_index.json",
+                      "Length":  4944,
+                      "Extension":  ".json"
+                  },
+                  {
+                      "Name":  "cfr_vaknow_linkage.json",
+                      "Length":  1692,
+                      "Extension":  ".json"
+                  },
+                  {
+                      "Name":  "PURPOSE.md",
+                      "Length":  275,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "usc_cfr_crossref.json",
+                      "Length":  1861,
+                      "Extension":  ".json"
+                  }
+              ],
+    "generated":  "2026-03-14"
+}

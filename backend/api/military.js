@@ -1,10 +1,16 @@
 import express from 'express';
+import fs from 'fs/promises';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import {
   loadPresumptiveKnowledge,
   getFlattenedPresumptiveLocations,
   getPresumptiveExposureRules,
   matchDeploymentToPresumptive,
 } from '../services/presumptiveLocationsService.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const router = express.Router();
 
@@ -45,6 +51,59 @@ router.get('/presumptive-knowledge', async (_req, res) => {
         version: knowledge.version,
         locations,
         exposureRules,
+      },
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      error: error.message,
+    });
+  }
+});
+
+/**
+ * GET /api/military/radiation-operations
+ * Get radiation-risk activities from 38 CFR §3.309(d) and §3.311,
+ * optionally filtered by service era and/or date range.
+ * Query params: era, startDate, endDate
+ */
+router.get('/radiation-operations', async (req, res) => {
+  try {
+    const catalogPath = path.join(
+      __dirname, '..', '..', 'knowledge', 'MEDICAL_KNOWLEDGE', 'conditions', 'radiation-risk-activities.json'
+    );
+    const raw = await fs.readFile(catalogPath, 'utf-8');
+    const catalog = JSON.parse(raw.replace(/^\uFEFF/, ''));
+    const operations = Array.isArray(catalog.operations) ? catalog.operations : [];
+
+    const { era, startDate, endDate } = req.query;
+
+    const filtered = operations.filter((op) => {
+      if (era && Array.isArray(op.eligibleEras) && !op.eligibleEras.includes(era)) {
+        return false;
+      }
+      if (startDate || endDate) {
+        const svcStart = startDate ? new Date(`${startDate}T00:00:00Z`) : new Date('1900-01-01T00:00:00Z');
+        const svcEnd = endDate ? new Date(`${endDate}T00:00:00Z`) : new Date('9999-12-31T00:00:00Z');
+        const opStart = new Date(`${op.dateRange.start}T00:00:00Z`);
+        const opEnd = op.dateRange.end === 'present'
+          ? new Date('9999-12-31T00:00:00Z')
+          : new Date(`${op.dateRange.end}T00:00:00Z`);
+        if (svcStart > opEnd || opStart > svcEnd) {
+          return false;
+        }
+      }
+      return true;
+    });
+
+    res.json({
+      success: true,
+      data: {
+        version: catalog.version,
+        authority: catalog.authority,
+        operations: filtered,
+        presumptiveConditions: catalog.presumptiveConditions_309d,
+        radiogenicDiseases: catalog.radiogenicDiseases_311,
       },
     });
   } catch (error) {

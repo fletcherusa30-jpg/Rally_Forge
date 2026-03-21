@@ -1,0 +1,13 @@
+﻿{
+    "state":  "WI",
+    "categories":  [
+                       "compensation",
+                       "tax_relief",
+                       "education",
+                       "employment",
+                       "healthcare",
+                       "housing",
+                       "other"
+                   ],
+    "generated":  "2026-03-14"
+}

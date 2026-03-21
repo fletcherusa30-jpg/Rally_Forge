@@ -5,8 +5,8 @@
  * Wraps compensation-engine/index.js with structured logging and error handling.
  *
  * This is the domain layer entry point for compensation calculation.
- * Consolidates duplicated logic from:
- *   - backend/engine/compensationEngine.js (deprecated)
+ * Consolidates duplicated logic from the former backend compensation engine,
+ * which was removed after migration to the domain layer and compensation-engine module.
  *
  * Implementation: Delegates to compensation-engine/ module.
  */

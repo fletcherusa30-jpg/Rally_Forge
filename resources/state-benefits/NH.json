@@ -1,0 +1,136 @@
+{
+  "stateCode": "NH",
+  "stateName": "Unknown",
+  "benefits": [],
+  "federal": {
+    "summary": "Federal VA programs normalized from backend/rules/federalRules.json",
+    "programs": [
+      {
+        "id": "fed-gi-bill",
+        "category": "Education",
+        "title": "Post-9/11 GI Bill eligibility review",
+        "description": "Confirm education benefits and transfer options based on service history.",
+        "eligibility": {
+          "conditions": [
+            "facts.servicePeriodCount gte 1"
+          ]
+        },
+        "url": "https://www.va.gov/education/about-gi-bill-benefits/post-9-11/",
+        "provenance": "federal",
+        "confidence": 1
+      },
+      {
+        "id": "fed-va-healthcare",
+        "category": "Healthcare",
+        "title": "VA healthcare enrollment",
+        "description": "Enroll or confirm eligibility for VA health care coverage.",
+        "eligibility": {
+          "conditions": [
+            "combatSelfReported neq \"\""
+          ]
+        },
+        "url": "https://www.va.gov/health-care/how-to-apply/",
+        "provenance": "federal",
+        "confidence": 1
+      },
+      {
+        "id": "fed-home-loan",
+        "category": "Housing",
+        "title": "VA home loan guaranty",
+        "description": "Review eligibility, certificates of eligibility, and lender steps.",
+        "eligibility": {
+          "conditions": [
+            "facts.servicePeriodCount gte 1"
+          ]
+        },
+        "url": "https://www.va.gov/housing-assistance/home-loans/",
+        "provenance": "federal",
+        "confidence": 1
+      },
+      {
+        "id": "fed-burial-benefits",
+        "category": "General Benefits",
+        "title": "VA burial and memorial benefits",
+        "description": "Explore eligibility for burial in a VA national cemetery and memorial items.",
+        "eligibility": {
+          "conditions": [
+            "facts.servicePeriodCount gte 1"
+          ]
+        },
+        "url": "https://www.va.gov/burials-memorials/",
+        "provenance": "federal",
+        "confidence": 1
+      },
+      {
+        "id": "fed-vre",
+        "category": "Employment",
+        "title": "VR&E career and training support",
+        "description": "Explore training, resume, and job placement support for veterans with service-connected conditions.",
+        "eligibility": {
+          "conditions": [
+            "facts.servicePeriodCount gte 1"
+          ]
+        },
+        "url": "https://www.va.gov/careers-employment/vocational-rehabilitation/",
+        "provenance": "federal",
+        "confidence": 1
+      },
+      {
+        "id": "fed-pension",
+        "category": "Income",
+        "title": "VA pension eligibility review",
+        "description": "Check income-based pension eligibility for wartime service and age/disability criteria.",
+        "eligibility": {
+          "conditions": [
+            "facts.servicePeriodCount gte 1"
+          ]
+        },
+        "url": "https://www.va.gov/pension/",
+        "provenance": "federal",
+        "confidence": 1
+      },
+      {
+        "id": "fed-life-insurance",
+        "category": "Insurance",
+        "title": "VA life insurance programs",
+        "description": "Review coverage options including SGLI, VGLI, and other VA programs.",
+        "eligibility": {
+          "conditions": [
+            "facts.servicePeriodCount gte 1"
+          ]
+        },
+        "url": "https://www.va.gov/life-insurance/",
+        "provenance": "federal",
+        "confidence": 1
+      },
+      {
+        "id": "fed-caregiver-support",
+        "category": "Caregiver",
+        "title": "Caregiver support programs",
+        "description": "Explore caregiver assistance programs and training resources.",
+        "eligibility": {
+          "conditions": [
+            "facts.servicePeriodCount gte 1"
+          ]
+        },
+        "url": "https://www.va.gov/family-member-benefits/comprehensive-assistance-for-family-caregivers/",
+        "provenance": "federal",
+        "confidence": 1
+      },
+      {
+        "id": "fed-employment-center",
+        "category": "Employment",
+        "title": "Veteran employment resources",
+        "description": "Access job search tools, resume help, and training resources.",
+        "eligibility": {
+          "conditions": [
+            "facts.servicePeriodCount gte 1"
+          ]
+        },
+        "url": "https://www.va.gov/careers-employment/",
+        "provenance": "federal",
+        "confidence": 1
+      }
+    ]
+  }
+}

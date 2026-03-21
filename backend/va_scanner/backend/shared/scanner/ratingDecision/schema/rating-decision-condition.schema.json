@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Rating Decision Condition Schema",
+  "description": "Defines structure of service-connected conditions from VA rating decisions",
+  "type": "object",
+  "properties": {
+    "conditionId": {
+      "type": "string",
+      "pattern": "^RD-COND-[0-9]{6}$"
+    },
+    "conditionName": {
+      "type": "string"
+    },
+    "diagnosticCode": {
+      "type": "string",
+      "pattern": "^\\d{6}$"
+    },
+    "currentRatingPercentage": {
+      "type": "integer",
+      "enum": [
+        0,
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90,
+        100
+      ]
+    },
+    "effectiveDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "serviceConnected": {
+      "type": "boolean",
+      "default": true
+    },
+    "decisionType": {
+      "type": "string",
+      "enum": [
+        "initial",
+        "rerate",
+        "supplemental",
+        "reduction"
+      ]
+    },
+    "priorRatingPercentage": {
+      "type": "integer",
+      "enum": [
+        0,
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90,
+        100
+      ]
+    },
+    "priorEffectiveDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "reasonForRating": {
+      "type": "string"
+    },
+    "scheduleRatingBasis": {
+      "type": "string",
+      "description": "Citation to part of VA Schedule (e.g., 38 CFR §4.71a)"
+    },
+    "favorableFindings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "unfavorableFindings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "conditionId",
+    "conditionName",
+    "diagnosticCode",
+    "currentRatingPercentage",
+    "effectiveDate"
+  ]
+}

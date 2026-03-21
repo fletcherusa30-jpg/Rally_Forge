@@ -5,12 +5,12 @@ import { analyzeAuthority, searchAuthority } from "../controllers/authorityContr
 const router = express.Router();
 
 router.post(
-  "/authority/analyze-text",
+  "/analyze-text",
   asyncHandler(analyzeAuthority)
 );
 
 router.post(
-  "/authority/search-text",
+  "/search-text",
   asyncHandler(searchAuthority)
 );
 

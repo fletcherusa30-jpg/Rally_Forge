@@ -1,0 +1,47 @@
+﻿[
+    {
+        "scope":  "education",
+        "name":  "VR\u0026E (Vet Readiness \u0026 Employment)",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.va.gov/careers-employment/vocational-rehabilitation",
+        "category":  "education",
+        "notes":  "Employment and training for disabled Veterans."
+    },
+    {
+        "scope":  "education",
+        "name":  "DoL VETS",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.dol.gov/agencies/vets",
+        "category":  "employment",
+        "notes":  "Veterans Employment and Training Service."
+    },
+    {
+        "scope":  "education",
+        "name":  "USAJobs Veterans Portal",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.usajobs.gov/Help/working-in-government/unique-hiring-paths/veterans",
+        "category":  "employment",
+        "notes":  "Federal jobs for Veterans."
+    },
+    {
+        "scope":  "education",
+        "name":  "Apprenticeship.gov",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://www.apprenticeship.gov",
+        "category":  "employment",
+        "notes":  "Apprenticeship opportunities."
+    },
+    {
+        "scope":  "education",
+        "name":  "SkillBridge",
+        "region":  "US",
+        "phone":  "",
+        "website":  "https://skillbridge.osd.mil",
+        "category":  "employment",
+        "notes":  "Transition program for service members."
+    }
+]

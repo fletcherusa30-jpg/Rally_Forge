@@ -455,7 +455,7 @@ tooling/scripts
 VA SCANNER/backend
 VA SCANNER/data
 VA SCANNER/engine
-VA SCANNER/frontend
+backend/va_scanner/frontend
 VA SCANNER/logs
 
 =====================================================

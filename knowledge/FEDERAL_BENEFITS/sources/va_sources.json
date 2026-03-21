@@ -1,0 +1,19 @@
+﻿{
+  "description": "Authoritative VA web sources for federal benefits. Use these as primary data inputs.",
+  "sources": [
+    { "code": "VA_HOME",        "title": "VA Home Page",                         "url": "https://www.va.gov" },
+    { "code": "VA_OVERVIEW",    "title": "Benefits and Services Overview",       "url": "https://www.choose.va.gov" },
+    { "code": "VA_HEALTH",      "title": "Health Care Eligibility",              "url": "https://www.va.gov/health-care" },
+    { "code": "VA_EDU",         "title": "Education Benefits",                   "url": "https://www.va.gov/education" },
+    { "code": "VA_HOMELOANS",   "title": "Home Loan Guaranty",                   "url": "https://www.benefits.va.gov/homeloans" },
+    { "code": "VA_INSURANCE",   "title": "Life Insurance",                       "url": "https://www.benefits.va.gov/insurance" },
+    { "code": "VA_HOMELESS",    "title": "Homeless Veterans",                    "url": "https://www.va.gov/homeless" },
+    { "code": "VA_BURIAL",      "title": "Burial and Memorial Benefits",         "url": "https://www.cem.va.gov" },
+    { "code": "VA_FAMILY",      "title": "Family Members / Survivors",           "url": "https://www.va.gov/family-member-benefits" },
+    { "code": "VA_PACT",        "title": "PACT Act",                             "url": "https://www.va.gov/PACT" },
+    { "code": "VA_CAREGIVER",   "title": "Caregiver Support",                    "url": "https://www.caregiver.va.gov" },
+    { "code": "VA_MENTAL",      "title": "Mental Health",                        "url": "https://www.mentalhealth.va.gov" },
+    { "code": "VA_VRE",         "title": "Veteran Readiness and Employment",     "url": "https://www.va.gov/careers-employment/vocational-rehabilitation" },
+    { "code": "VA_WELCOME",     "title": "VA Welcome Kit",                       "url": "https://www.va.gov/welcome-kit" }
+  ]
+}

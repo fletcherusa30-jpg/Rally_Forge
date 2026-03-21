@@ -1,0 +1,39 @@
+{
+  "rules": [
+    {
+      "ruleId": "str-chronicity-3-encounters",
+      "name": "Chronicity: Three+ Encounters Within 12 Months",
+      "rule": "if(encounterCount >= 3 AND dateRange.months <= 12) then isChronicByCount = true",
+      "chronicityScore": 0.7
+    },
+    {
+      "ruleId": "str-chronicity-6-months-span",
+      "name": "Chronicity: Same Condition Over 6+ Months",
+      "rule": "if(dateRange >= 6 months AND sameCondition) then isChronicByTimespan = true",
+      "chronicityScore": 0.8
+    },
+    {
+      "ruleId": "str-chronicity-continuous-treatment",
+      "name": "Chronicity: Continuous Treatment Without Resolution",
+      "rule": "if(lastEncounter < TODAY - 90 days AND no-resolved-status) then isOngoing = true",
+      "chronicityScore": 0.6
+    },
+    {
+      "ruleId": "str-timeline-building",
+      "name": "Chronological Sequence Validation",
+      "validation": "encounters-must-be-sorted-ascending-by-date",
+      "gapDetection": "identify-gaps-greater-than-1-year"
+    },
+    {
+      "ruleId": "str-timeline-service-period-validation",
+      "name": "Encounters Must Fall Within Service Period",
+      "validation": "encounterDate >= serviceStartDate AND encounterDate <= serviceEndDate",
+      "flagOutOfRange": true
+    },
+    {
+      "ruleId": "str-timeline-future-date-detection",
+      "name": "Encounters Cannot Have Future Dates",
+      "validation": "encounterDate <= TODAY"
+    }
+  ]
+}

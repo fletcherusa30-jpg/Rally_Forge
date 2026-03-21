@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "VA Rating Decision SMC Schema",
+  "description": "Defines structure of Special Monthly Compensation awards in VA rating decisions",
+  "type": "object",
+  "properties": {
+    "smcId": {
+      "type": "string",
+      "pattern": "^SMC-[0-9]{6}$"
+    },
+    "smcCode": {
+      "type": "string",
+      "enum": [
+        "A",
+        "A1",
+        "A2",
+        "H",
+        "H1",
+        "H2",
+        "K",
+        "K1",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T"
+      ]
+    },
+    "smcCodeName": {
+      "type": "string"
+    },
+    "monthlyAmount": {
+      "type": "number",
+      "minimum": 0
+    },
+    "effectiveDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "reasonForAward": {
+      "type": "string"
+    },
+    "qualifyingConditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "priorSmcCode": {
+      "type": "string"
+    },
+    "priorAmount": {
+      "type": "number",
+      "minimum": 0
+    },
+    "changeAmount": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "smcId",
+    "smcCode",
+    "effectiveDate"
+  ]
+}

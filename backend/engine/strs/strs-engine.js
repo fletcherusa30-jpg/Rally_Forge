@@ -1,8 +1,6 @@
 /**
- * STRS Engine - Deterministic Service Treatment Records Extraction
- * 
- * This module extracts structured medical evidence from Service Treatment Records (STRs)
- * using deterministic, rule-based parsing. No AI-style reasoning, no assumptions, no inferences.
+ * STRS Engine v3.0 - NLP-Enhanced Service Treatment Records Extraction
+ * Per .copilot-instructions.md: Deterministic, rule-based medical evidence parsing.
  * 
  * Analysis modes:
  * - Service-connected opportunities: Direct nexus, secondary, aggravation, presumptive
@@ -14,17 +12,22 @@
  * - Duty limitation/profile: Work restrictions documented
  * - LOD event extraction: Line of duty events
  * 
- * ACCURACY IMPROVEMENTS v2.0:
- * - Negation detection: Filters out "denies PTSD", "no back pain", "resolved condition"
+ * ACCURACY IMPROVEMENTS v3.0:
+ * - NLP-enhanced negation detection: Filters out "denies PTSD", "no back pain", "resolved condition"
  * - Laterality tracking: Left/right/bilateral for anatomical conditions
  * - Severity extraction: Pain scale, qualitative descriptors, functional impact
  * - Confidence scoring: 7-factor algorithm for evidence quality (0-100 scale)
  * - Medical abbreviation normalization: DM = Diabetes = T2DM
  * - Deduplication: Eliminates redundant condition entries (expected 25% reduction)
  * - Cross-reference validation: Medications linked to conditions they treat
+ * - Schema compliance: All outputs conform to STRS v3.0.0 schema
  */
 
 // Import accuracy enhancement modules
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
 import { 
   analyzeNegation, 
   extractLaterality, 
@@ -37,6 +40,153 @@ import {
   deduplicateConditions,
   crossReferenceMedications
 } from './strs-normalization.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+function normalizeLocationToken(value) {
+  return String(value || '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+}
+
+function escapeRegex(value) {
+  return String(value || '').replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function buildLocationRegex(alias) {
+  const normalized = normalizeLocationToken(alias);
+  if (!normalized) {
+    return null;
+  }
+
+  const tokens = normalized.split(/\s+/).filter(Boolean).map((token) => escapeRegex(token));
+  if (tokens.length === 0) {
+    return null;
+  }
+
+  return new RegExp(`\\b${tokens.join('\\\\s+')}\\b`, 'gi');
+}
+
+function loadPresumptiveLocationCatalog() {
+  const catalogPath = path.resolve(__dirname, '../../../knowledge/MEDICAL_KNOWLEDGE/conditions/presumptive-locations.json');
+  try {
+    const rawBuffer = fs.readFileSync(catalogPath);
+    const parseJson = (text) => JSON.parse(String(text || '').replace(/^\uFEFF/, '').trim());
+    let parsed = null;
+
+    try {
+      parsed = parseJson(rawBuffer.toString('utf-8'));
+    } catch (_utf8Error) {
+      parsed = parseJson(rawBuffer.toString('utf16le'));
+    }
+
+    const categories = Array.isArray(parsed?.categories) ? parsed.categories : [];
+
+    return categories
+      .map((category) => {
+        const categoryLabel = String(category?.label || category?.id || '').trim();
+        const categoryId = String(category?.id || '').trim();
+        const locations = Array.isArray(category?.locations) ? category.locations : [];
+
+        return locations
+          .map((location) => {
+            const locationName = String(location?.name || '').trim();
+            const aliasPool = [locationName, ...(Array.isArray(location?.aliases) ? location.aliases : [])]
+              .map((alias) => String(alias || '').trim())
+              .filter(Boolean);
+
+            const uniqueAliases = Array.from(new Set(aliasPool));
+            const patterns = uniqueAliases
+              .map((alias) => ({ alias, regex: buildLocationRegex(alias) }))
+              .filter((item) => item.regex instanceof RegExp);
+
+            if (!locationName || !categoryLabel || patterns.length === 0) {
+              return null;
+            }
+
+            return {
+              categoryId,
+              categoryLabel,
+              locationName,
+              dateRanges: Array.isArray(location?.dateRanges) ? location.dateRanges : [],
+              patterns,
+            };
+          })
+          .filter(Boolean);
+      })
+      .flat();
+  } catch (_error) {
+    return [];
+  }
+}
+
+const PRESUMPTIVE_LOCATION_RULES = loadPresumptiveLocationCatalog();
+
+function getEvidenceSnippet(text, matchIndex, matchLength) {
+  const start = Math.max(0, matchIndex - 90);
+  const end = Math.min(text.length, matchIndex + matchLength + 90);
+  return text.slice(start, end).replace(/\s+/g, ' ').trim();
+}
+
+export function detectPresumptiveLocationSignals(text) {
+  const source = String(text || '');
+  if (!source.trim() || PRESUMPTIVE_LOCATION_RULES.length === 0) {
+    return [];
+  }
+
+  const signalMap = new Map();
+
+  for (const rule of PRESUMPTIVE_LOCATION_RULES) {
+    const signalKey = `${rule.categoryId}::${rule.locationName}`;
+    let signal = signalMap.get(signalKey);
+    if (!signal) {
+      signal = {
+        categoryId: rule.categoryId,
+        categoryLabel: rule.categoryLabel,
+        location: rule.locationName,
+        dateRanges: rule.dateRanges,
+        matchedAliases: new Set(),
+        occurrences: 0,
+        evidenceSnippets: [],
+      };
+      signalMap.set(signalKey, signal);
+    }
+
+    for (const patternRule of rule.patterns) {
+      patternRule.regex.lastIndex = 0;
+      let match;
+      while ((match = patternRule.regex.exec(source)) !== null) {
+        signal.occurrences += 1;
+        signal.matchedAliases.add(patternRule.alias);
+
+        if (signal.evidenceSnippets.length < 3) {
+          signal.evidenceSnippets.push(getEvidenceSnippet(source, match.index, match[0].length));
+        }
+      }
+    }
+  }
+
+  return Array.from(signalMap.values())
+    .filter((signal) => signal.occurrences > 0)
+    .map((signal) => ({
+      categoryId: signal.categoryId,
+      categoryLabel: signal.categoryLabel,
+      location: signal.location,
+      dateRanges: signal.dateRanges,
+      matchedAliases: Array.from(signal.matchedAliases),
+      occurrences: signal.occurrences,
+      evidenceSnippets: signal.evidenceSnippets,
+    }))
+    .sort((a, b) => {
+      const byCategory = a.categoryLabel.localeCompare(b.categoryLabel);
+      if (byCategory !== 0) {
+        return byCategory;
+      }
+      return a.location.localeCompare(b.location);
+    });
+}
 
 const STRS_PATTERNS = {
   // ═══════════════════════════════════════════════════════════════
@@ -197,7 +347,7 @@ const STRS_PATTERNS = {
     { label: "Blast Exposure", pattern: "blast exposure|overpressure|concussive blast|repeated blast exposure", category: "exposure" },
     
     // Line of Duty Events
-    { label: "LOD Event", pattern: "line of duty|LOD|in the line of duty|duty-related|performance of duty", category: "lod" },
+    { label: "LOD Event", pattern: "line[- ]of[- ]duty|LOD|ILOD|in the line of duty|in line of duty|duty-related|performance of duty|LOD determination|LOD investigation", category: "lod" },
     { label: "Service Connected Event", pattern: "service connected|in-service|during service|service-related", category: "lod" },
     
     // Sports/Recreation
@@ -279,8 +429,13 @@ const STRS_PATTERNS = {
   // LOD event keywords
   lodEvent: [
     "line of duty",
+    "line-of-duty",
+    "in line of duty",
     "in performance of duty",
     "duty related",
+    "lod determination",
+    "lod investigation",
+    "ilod",
     "combat",
     "training accident",
     "accident",
@@ -448,6 +603,43 @@ function hasConditionSpecificEvidence(context, label) {
   return rule.requiredAny.some((regex) => regex.test(context));
 }
 
+const EVENT_GENERIC_REJECT_CUES = [
+  /\bcan\s+perform\s+activities\s+such\s+as\b/i,
+  /\bable\s+to\s+(?:remain\s+on\s+active\s+duty|meet\s+all\s+of\s+the\s+duty)\b/i,
+  /\bfitness\s+requirements\b/i,
+  /\breleased\s+w\/?o\s+limitations\b/i,
+  /\bonly\s+restrictions?\b/i,
+  /\bwith\s+the\s+exception\s+of\b/i,
+];
+
+function hasEventSpecificEvidence(context, label) {
+  if (EVENT_GENERIC_REJECT_CUES.some((regex) => regex.test(context))) {
+    return false;
+  }
+
+  if (label === 'Mortar Attack') {
+    if (/\bevading\s+direct\s+and\s+indirect\s+fire\b/i.test(context)) {
+      return false;
+    }
+
+    const hasIndirectFire = /\bindirect\s+fire\b/i.test(context);
+    const hasCombatIncidentCue = /\b(mortar\s+attack|incoming\s+fire|mortar\s+round|came\s+under\s+fire|under\s+hostile\s+fire|under\s+enemy\s+fire|received\s+incoming\s+fire|enemy\s+fire|hostile\s+fire|attacked\s+by)\b/i.test(context);
+    if (hasIndirectFire && !hasCombatIncidentCue) {
+      return false;
+    }
+  }
+
+  if (label === 'Physical Training Injury') {
+    const hasPhysicalTrainingOnly = /\bparticipating\s+in\s+physical\s+training\b/i.test(context);
+    const hasInjuryCue = /\b(injur(?:y|ed)|hurt|strain|sprain|tear|pain\s+(?:after|during))\b/i.test(context);
+    if (hasPhysicalTrainingOnly && !hasInjuryCue) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
 function hasConfirmationEvidence(context, extractionType, label) {
   // FILTER QUESTIONNAIRES: Reject any extraction from screening/questionnaire context
   if (isQuestionnaireContext(context)) {
@@ -455,7 +647,7 @@ function hasConfirmationEvidence(context, extractionType, label) {
   }
 
   if (extractionType === 'event') {
-    return true;
+    return hasEventSpecificEvidence(context, label);
   }
 
   // Check condition-specific evidence first
@@ -856,6 +1048,21 @@ export function extractProcedures(text) {
  */
 export function identifyServiceConnectionOpportunities(text, extracted) {
   const opportunities = [];
+  const presumptiveLocationSignals = Array.isArray(extracted?.presumptiveLocationSignals)
+    ? extracted.presumptiveLocationSignals
+    : detectPresumptiveLocationSignals(text);
+
+  for (const signal of presumptiveLocationSignals) {
+    opportunities.push({
+      type: 'presumptive_location',
+      condition: signal.categoryLabel,
+      basis: `Key presumptive location match: ${signal.location}`,
+      evidence: `Matched aliases: ${signal.matchedAliases.join(', ')}`,
+      location: signal.location,
+      categoryId: signal.categoryId,
+      occurrences: signal.occurrences,
+    });
+  }
   
   // Check for presumptive conditions
   for (const { label, pattern } of STRS_PATTERNS.presumptive) {
@@ -924,6 +1131,7 @@ export function scanSTRText(text) {
   const events = extractEvents(normalized);
   const medications = extractMedications(normalized);
   const procedures = extractProcedures(normalized);
+  const presumptiveLocationSignals = detectPresumptiveLocationSignals(normalized);
   
   // Combine all conditions for chronicity/continuity analysis
   const allConditions = [...diagnoses, ...injuries];
@@ -980,6 +1188,7 @@ export function scanSTRText(text) {
       label: p.label,
       matchedText: p.matchedText
     })),
+    PresumptiveLocations: presumptiveLocationSignals,
     Chronicity: chronicity,
     Continuity: continuity
   };
@@ -987,6 +1196,7 @@ export function scanSTRText(text) {
   // Identify service connection opportunities
   const opportunities = identifyServiceConnectionOpportunities(normalized, {
     conditions: allConditions,
+    presumptiveLocationSignals,
     chronicity,
     continuity
   });
@@ -1001,6 +1211,7 @@ export function scanSTRText(text) {
       .filter(c => c.isChronicity).length,
     MedicationsFound: medications.length,
     ProceduresFound: procedures.length,
+    PresumptiveLocationSignalsFound: presumptiveLocationSignals.length,
     ServiceConnectionOpportunities: opportunities,
     Flags: generateAnalysisFlags(extracted, opportunities)
   };
@@ -1012,6 +1223,7 @@ export function scanSTRText(text) {
     Analysis: analysis,
     NLP: {
       ChronicityTerms: chronicity.explicitChronicTerms,
+      PresumptiveLocationSignals: presumptiveLocationSignals,
       ServiceConnectionOpportunities: opportunities
     },
     Timestamp: new Date().toISOString(),

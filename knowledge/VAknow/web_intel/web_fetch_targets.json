@@ -1,0 +1,27 @@
+﻿[
+    {
+        "title":  "VA Disability Benefits",
+        "url":  "https://www.va.gov/disability/",
+        "id":  "va_disability"
+    },
+    {
+        "title":  "VA Health Care",
+        "url":  "https://www.va.gov/health-care/",
+        "id":  "va_healthcare"
+    },
+    {
+        "title":  "VA Pension",
+        "url":  "https://www.va.gov/pension/",
+        "id":  "va_pension"
+    },
+    {
+        "title":  "VA Education Benefits",
+        "url":  "https://www.va.gov/education/",
+        "id":  "va_education"
+    },
+    {
+        "title":  "PACT Act",
+        "url":  "https://www.va.gov/pact/",
+        "id":  "va_pact"
+    }
+]

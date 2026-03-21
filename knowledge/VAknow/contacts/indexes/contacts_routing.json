@@ -1,0 +1,114 @@
+﻿[
+    {
+        "fallbacks":  [
+                          "state\\state_contacts.json",
+                          "legal\\legal_contacts.json"
+                      ],
+        "primary":  "federal\\federal_contacts.json",
+        "keywords":  [
+                         "benefits",
+                         "compensation",
+                         "pension",
+                         "claim",
+                         "rating",
+                         "decision",
+                         "back pay"
+                     ],
+        "intent":  "benefits_general"
+    },
+    {
+        "fallbacks":  [
+                          "facilities\\facility_contacts.json",
+                          "crisis\\crisis_contacts.json"
+                      ],
+        "primary":  "federal\\federal_contacts.json",
+        "keywords":  [
+                         "health",
+                         "doctor",
+                         "clinic",
+                         "hospital",
+                         "appointment",
+                         "primary care",
+                         "specialist"
+                     ],
+        "intent":  "healthcare"
+    },
+    {
+        "fallbacks":  [
+                          "federal\\federal_contacts.json"
+                      ],
+        "primary":  "education\\education_contacts.json",
+        "keywords":  [
+                         "gi bill",
+                         "school",
+                         "tuition",
+                         "college",
+                         "vr\u0026e",
+                         "training",
+                         "apprenticeship"
+                     ],
+        "intent":  "education"
+    },
+    {
+        "fallbacks":  [
+
+                      ],
+        "primary":  "crisis\\crisis_contacts.json",
+        "keywords":  [
+                         "suicide",
+                         "crisis",
+                         "kill myself",
+                         "hurt myself",
+                         "emergency",
+                         "immediate help"
+                     ],
+        "intent":  "crisis"
+    },
+    {
+        "fallbacks":  [
+                          "crisis\\crisis_contacts.json"
+                      ],
+        "primary":  "housing\\housing_contacts.json",
+        "keywords":  [
+                         "homeless",
+                         "housing",
+                         "shelter",
+                         "hud-vash",
+                         "ssvf",
+                         "eviction"
+                     ],
+        "intent":  "housing"
+    },
+    {
+        "fallbacks":  [
+                          "federal\\federal_contacts.json"
+                      ],
+        "primary":  "financial\\financial_contacts.json",
+        "keywords":  [
+                         "debt",
+                         "overpayment",
+                         "garnish",
+                         "dfas",
+                         "tax",
+                         "irs",
+                         "money"
+                     ],
+        "intent":  "financial"
+    },
+    {
+        "fallbacks":  [
+                          "federal\\federal_contacts.json"
+                      ],
+        "primary":  "toxic\\toxic_contacts.json",
+        "keywords":  [
+                         "pact act",
+                         "toxic",
+                         "burn pits",
+                         "agent orange",
+                         "radiation",
+                         "camp lejeune",
+                         "exposure"
+                     ],
+        "intent":  "toxic_exposure"
+    }
+]

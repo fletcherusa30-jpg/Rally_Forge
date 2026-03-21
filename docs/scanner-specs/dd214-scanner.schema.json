@@ -1,0 +1,818 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rallyforge.local/schemas/dd214-scanner.schema.json",
+  "title": "DD214 Military Service Scanner Output",
+  "description": "Canonical output contract for a portable DD-214 military service scanner.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "documentType",
+    "schemaVersion",
+    "serviceIdentity",
+    "servicePeriods",
+    "characterAndSeparation",
+    "gradeSpecialty",
+    "decorationsAndService",
+    "specialProgramsRemarks",
+    "militaryEducation",
+    "lastDutyAssignment",
+    "transferCommand",
+    "postServiceContact",
+    "intelligentExtraction",
+    "dd214Analysis",
+    "extractionMeta"
+  ],
+  "properties": {
+    "documentType": {
+      "const": "DD-214"
+    },
+    "schemaVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "serviceIdentity": {
+      "$ref": "#/$defs/serviceIdentity"
+    },
+    "servicePeriods": {
+      "$ref": "#/$defs/servicePeriods"
+    },
+    "characterAndSeparation": {
+      "$ref": "#/$defs/characterAndSeparation"
+    },
+    "gradeSpecialty": {
+      "$ref": "#/$defs/gradeSpecialty"
+    },
+    "decorationsAndService": {
+      "$ref": "#/$defs/decorationsAndService"
+    },
+    "specialProgramsRemarks": {
+      "$ref": "#/$defs/specialProgramsRemarks"
+    },
+    "militaryEducation": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/militaryEducationEntry"
+      }
+    },
+    "lastDutyAssignment": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/lastDutyAssignment"
+        }
+      ]
+    },
+    "transferCommand": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/transferCommand"
+        }
+      ]
+    },
+    "postServiceContact": {
+      "$ref": "#/$defs/postServiceContact"
+    },
+    "intelligentExtraction": {
+      "$ref": "#/$defs/intelligentExtraction"
+    },
+    "dd214Analysis": {
+      "$ref": "#/$defs/dd214Analysis"
+    },
+    "extractionMeta": {
+      "$ref": "#/$defs/extractionMeta"
+    }
+  },
+  "$defs": {
+    "nullableString": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "isoDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "duration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "years",
+        "months",
+        "days"
+      ],
+      "properties": {
+        "years": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "months": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "days": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "serviceIdentity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "veteranName",
+        "ssnOrServiceNumber",
+        "branchOfService",
+        "component"
+      ],
+      "properties": {
+        "veteranName": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "ssnOrServiceNumber": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "branchOfService": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "Army",
+            "Navy",
+            "Air Force",
+            "Marine Corps",
+            "Coast Guard",
+            "Space Force",
+            null
+          ]
+        },
+        "component": {
+          "$ref": "#/$defs/nullableString"
+        }
+      }
+    },
+    "servicePeriods": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "entryDate",
+        "separationDate",
+        "netActiveServiceThisPeriod",
+        "totalPriorActiveService",
+        "totalPriorInactiveService",
+        "seaService",
+        "initialEntryTraining"
+      ],
+      "properties": {
+        "entryDate": {
+          "$ref": "#/$defs/isoDate"
+        },
+        "separationDate": {
+          "$ref": "#/$defs/isoDate"
+        },
+        "netActiveServiceThisPeriod": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/duration"
+            }
+          ]
+        },
+        "totalPriorActiveService": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/duration"
+            }
+          ]
+        },
+        "totalPriorInactiveService": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/duration"
+            }
+          ]
+        },
+        "seaService": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/duration"
+            }
+          ]
+        },
+        "initialEntryTraining": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "completed",
+                "sourceText"
+              ],
+              "properties": {
+                "completed": {
+                  "type": "boolean"
+                },
+                "sourceText": {
+                  "$ref": "#/$defs/nullableString"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "characterAndSeparation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "characterOfService",
+        "separationAuthority",
+        "separationCode",
+        "reentryCode",
+        "narrativeReasonForSeparation",
+        "typeOfSeparation"
+      ],
+      "properties": {
+        "characterOfService": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "Honorable",
+            "General",
+            "Other Than Honorable",
+            "Bad Conduct",
+            "Dishonorable",
+            null
+          ]
+        },
+        "separationAuthority": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "separationCode": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "reentryCode": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "narrativeReasonForSeparation": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "typeOfSeparation": {
+          "$ref": "#/$defs/nullableString"
+        }
+      }
+    },
+    "mosDetail": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "code",
+        "title",
+        "yearsOfService",
+        "monthsOfService"
+      ],
+      "properties": {
+        "code": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "title": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "yearsOfService": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "monthsOfService": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        }
+      }
+    },
+    "gradeSpecialty": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "gradeRateRank",
+        "payGrade",
+        "primaryMOSOrAFSCOrRating",
+        "additionalMOSOrSpecialties",
+        "mosDetails"
+      ],
+      "properties": {
+        "gradeRateRank": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "payGrade": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "primaryMOSOrAFSCOrRating": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "additionalMOSOrSpecialties": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "mosDetails": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/mosDetail"
+          }
+        }
+      }
+    },
+    "decorationsAndService": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "decorationsAndAwards",
+        "foreignServiceTotal",
+        "foreignServiceLocationsIfListed",
+        "combatIndicatorsFromAwards"
+      ],
+      "properties": {
+        "decorationsAndAwards": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "foreignServiceTotal": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/duration"
+            }
+          ]
+        },
+        "foreignServiceLocationsIfListed": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "combatIndicatorsFromAwards": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "reenlistment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "start",
+        "end"
+      ],
+      "properties": {
+        "start": {
+          "$ref": "#/$defs/isoDate"
+        },
+        "end": {
+          "$ref": "#/$defs/isoDate"
+        }
+      }
+    },
+    "specialProgramsRemarks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "remarksBlock",
+        "deploymentOrCampaignReferences",
+        "reenlistments"
+      ],
+      "properties": {
+        "remarksBlock": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "deploymentOrCampaignReferences": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "reenlistments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reenlistment"
+          }
+        }
+      }
+    },
+    "militaryEducationEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "courseName",
+        "duration",
+        "yearCompleted"
+      ],
+      "properties": {
+        "courseName": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "duration": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "yearCompleted": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1900,
+          "maximum": 2100
+        }
+      }
+    },
+    "lastDutyAssignment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "lastDutyAssignmentTitle",
+        "majorCommand"
+      ],
+      "properties": {
+        "lastDutyAssignmentTitle": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "majorCommand": {
+          "$ref": "#/$defs/nullableString"
+        }
+      }
+    },
+    "transferCommand": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "postServiceComponent",
+        "sourceText"
+      ],
+      "properties": {
+        "postServiceComponent": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "sourceText": {
+          "$ref": "#/$defs/nullableString"
+        }
+      }
+    },
+    "postServiceContact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mailingAddressAtSeparation",
+        "nearestRelativeOrEmergencyContact"
+      ],
+      "properties": {
+        "mailingAddressAtSeparation": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "nearestRelativeOrEmergencyContact": {
+          "$ref": "#/$defs/nullableString"
+        }
+      }
+    },
+    "intelligentExtraction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "retirementStatus",
+        "badgeIndicators",
+        "hazardIndicators",
+        "combatIndicators"
+      ],
+      "properties": {
+        "retirementStatus": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "badgeIndicators": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "hazardIndicators": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "combatIndicators": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "countedAward": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "count"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "dateRange": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "start",
+        "end"
+      ],
+      "properties": {
+        "start": {
+          "$ref": "#/$defs/isoDate"
+        },
+        "end": {
+          "$ref": "#/$defs/isoDate"
+        }
+      }
+    },
+    "sourceAttribution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sourceType",
+        "excerpt"
+      ],
+      "properties": {
+        "sourceType": {
+          "type": "string"
+        },
+        "excerpt": {
+          "type": "string"
+        }
+      }
+    },
+    "deploymentRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "location",
+        "dateRange",
+        "campaign",
+        "operation",
+        "combatIndicator",
+        "hazardousDutyIndicator",
+        "confidence",
+        "source",
+        "sourceAttribution"
+      ],
+      "properties": {
+        "location": {
+          "type": "string"
+        },
+        "dateRange": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/dateRange"
+            }
+          ]
+        },
+        "campaign": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "operation": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "combatIndicator": {
+          "type": "boolean"
+        },
+        "hazardousDutyIndicator": {
+          "type": "boolean"
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "source": {
+          "type": "string"
+        },
+        "sourceAttribution": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/sourceAttribution"
+          }
+        }
+      }
+    },
+    "lowConfidenceField": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "field",
+        "confidence",
+        "notes"
+      ],
+      "properties": {
+        "field": {
+          "type": "string"
+        },
+        "confidence": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "dd214Analysis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "serviceDates",
+        "separation",
+        "rankAndSpecialty",
+        "awards",
+        "deployments",
+        "militaryEducation",
+        "lastDutyAssignment",
+        "transferCommand",
+        "reenlistments",
+        "confidenceScores",
+        "validationSummary"
+      ],
+      "properties": {
+        "serviceDates": {
+          "type": "object"
+        },
+        "separation": {
+          "type": "object"
+        },
+        "rankAndSpecialty": {
+          "type": "object"
+        },
+        "awards": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/countedAward"
+          }
+        },
+        "deployments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/deploymentRecord"
+          }
+        },
+        "militaryEducation": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/militaryEducationEntry"
+          }
+        },
+        "lastDutyAssignment": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/lastDutyAssignment"
+            }
+          ]
+        },
+        "transferCommand": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/transferCommand"
+            }
+          ]
+        },
+        "reenlistments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reenlistment"
+          }
+        },
+        "confidenceScores": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "overall",
+            "fields",
+            "lowConfidenceFields"
+          ],
+          "properties": {
+            "overall": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "fields": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              }
+            },
+            "lowConfidenceFields": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/lowConfidenceField"
+              }
+            }
+          }
+        },
+        "validationSummary": {
+          "type": "object"
+        }
+      }
+    },
+    "extractionMeta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "confidence",
+        "fieldConfidence",
+        "optionalFieldConfidence",
+        "schemaValid",
+        "schemaErrors"
+      ],
+      "properties": {
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "fieldConfidence": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        },
+        "optionalFieldConfidence": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        },
+        "schemaValid": {
+          "type": "boolean"
+        },
+        "schemaErrors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

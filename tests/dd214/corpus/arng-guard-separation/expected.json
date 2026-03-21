@@ -1,0 +1,146 @@
+{
+  "documentType": "DD-214",
+  "schemaVersion": "portable-1.0",
+  "serviceIdentity": {
+    "veteranName": "THOMPSON, ERIC J",
+    "ssnOrServiceNumber": null,
+    "branchOfService": "Army",
+    "component": "ARNG"
+  },
+  "servicePeriods": {
+    "entryDate": "2015-01-10",
+    "separationDate": "2021-03-15",
+    "netActiveServiceThisPeriod": {
+      "years": 6,
+      "months": 2,
+      "days": 5
+    },
+    "totalPriorActiveService": {
+      "years": 0,
+      "months": 8,
+      "days": 0
+    },
+    "totalPriorInactiveService": {
+      "years": 1,
+      "months": 0,
+      "days": 0
+    },
+    "seaService": null,
+    "initialEntryTraining": null
+  },
+  "characterAndSeparation": {
+    "characterOfService": "General",
+    "separationAuthority": "NGR 600-200",
+    "separationCode": "MBK",
+    "reentryCode": "3",
+    "narrativeReasonForSeparation": "COMPLETION OF REQUIRED SERVICE",
+    "typeOfSeparation": null
+  },
+  "gradeSpecialty": {
+    "gradeRateRank": null,
+    "payGrade": null,
+    "primaryMOSOrAFSCOrRating": "11B",
+    "additionalMOSOrSpecialties": [],
+    "mosDetails": [
+      {
+        "code": "11B",
+        "title": "INFANTRYMAN",
+        "yearsOfService": null,
+        "monthsOfService": null
+      }
+    ]
+  },
+  "decorationsAndService": {
+    "decorationsAndAwards": [
+      "ARMY ACHIEVEMENT MEDAL",
+      "NATIONAL DEFENSE SERVICE MEDAL"
+    ],
+    "foreignServiceTotal": null,
+    "foreignServiceLocationsIfListed": [],
+    "combatIndicatorsFromAwards": []
+  },
+  "specialProgramsRemarks": {
+    "remarksBlock": "ORDERED TO ACTIVE DUTY IN SUPPORT OF OPERATION ENDURING FREEDOM",
+    "deploymentOrCampaignReferences": [
+      "OPERATION ENDURING FREEDOM"
+    ],
+    "reenlistments": []
+  },
+  "militaryEducation": [],
+  "lastDutyAssignment": null,
+  "transferCommand": null,
+  "postServiceContact": {
+    "mailingAddressAtSeparation": null,
+    "nearestRelativeOrEmergencyContact": null
+  },
+  "intelligentExtraction": {
+    "retirementStatus": null,
+    "badgeIndicators": [],
+    "hazardIndicators": [],
+    "combatIndicators": []
+  },
+  "dd214Analysis": {
+    "serviceDates": {
+      "dateEnteredActiveDuty": "2015-01-10",
+      "separationDate": "2021-03-15",
+      "netActiveService": {
+        "years": 6,
+        "months": 2,
+        "days": 5
+      }
+    },
+    "separation": {
+      "characterOfService": "General",
+      "separationAuthority": "NGR 600-200",
+      "separationCode": "MBK",
+      "reentryCode": "3",
+      "narrativeReasonForSeparation": "COMPLETION OF REQUIRED SERVICE",
+      "typeOfSeparation": null
+    },
+    "rankAndSpecialty": {
+      "primarySpecialty": "11B",
+      "mosDetails": [
+        {
+          "code": "11B",
+          "title": "INFANTRYMAN",
+          "yearsOfService": null,
+          "monthsOfService": null
+        }
+      ]
+    },
+    "awards": [
+      {
+        "name": "ARMY ACHIEVEMENT MEDAL",
+        "count": 1
+      }
+    ],
+    "deployments": [],
+    "militaryEducation": [],
+    "lastDutyAssignment": null,
+    "transferCommand": null,
+    "reenlistments": [],
+    "confidenceScores": {
+      "overall": 0.78,
+      "fields": {
+        "entryDate": 1,
+        "separationDate": 1
+      },
+      "lowConfidenceFields": []
+    },
+    "validationSummary": {
+      "allChecksPassed": true
+    }
+  },
+  "extractionMeta": {
+    "confidence": 0.78,
+    "fieldConfidence": {
+      "entryDate": 1,
+      "separationDate": 1
+    },
+    "optionalFieldConfidence": {
+      "mosDetails": 1
+    },
+    "schemaValid": true,
+    "schemaErrors": []
+  }
+}

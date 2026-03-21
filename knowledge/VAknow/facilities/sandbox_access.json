@@ -1,0 +1,7 @@
+﻿{
+    "generatedAt":  "2026-03-14T11:38:26.9965878-06:00",
+    "sandboxBaseUrl":  "https://sandbox-api.va.gov/services/va_facilities/v1/",
+    "productionBaseUrl":  "https://api.va.gov/services/va_facilities/v1/",
+    "openApiSchema":  "openapi.json",
+    "notes":  "The VA Facilities API does not require authentication for sandbox or production read-only access."
+}

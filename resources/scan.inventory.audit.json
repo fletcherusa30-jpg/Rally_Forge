@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-03-15T23:05:26.460Z",
+  "coverage": {
+    "expectedStates": [],
+    "presentStates": [],
+    "missingStates": []
+  },
+  "discovery": {},
+  "extractedSchemas": {},
+  "inputs": {
+    "stateRecords": 0
+  },
+  "outputs": {
+    "stateRecords": 0,
+    "federalPrograms": 0
+  },
+  "missingFields": [],
+  "missingBenefits": [],
+  "outdatedBenefits": [],
+  "schemaMismatches": [],
+  "normalizationGaps": [],
+  "validationFailures": []
+}

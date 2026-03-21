@@ -4,7 +4,30 @@ import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const knowledgePath = path.join(__dirname, '..', '..', 'knowledge', 'presumptive-locations.json');
+const KNOWLEDGE_CANDIDATES = [
+  path.join(__dirname, '..', '..', 'knowledge', 'presumptive-locations.json'),
+  path.join(__dirname, '..', '..', 'knowledge', 'MEDICAL_KNOWLEDGE', 'conditions', 'presumptive-locations.json'),
+];
+
+let cachedKnowledgePath = null;
+
+async function resolveKnowledgePath() {
+  if (cachedKnowledgePath) {
+    return cachedKnowledgePath;
+  }
+
+  for (const candidate of KNOWLEDGE_CANDIDATES) {
+    try {
+      await fs.access(candidate);
+      cachedKnowledgePath = candidate;
+      return candidate;
+    } catch {
+      // Try the next candidate.
+    }
+  }
+
+  throw new Error('Presumptive knowledge file not found');
+}
 
 function normalizeLocation(value) {
   return String(value || '').trim().toLowerCase().replace(/\s+/g, ' ');
@@ -26,6 +49,7 @@ function hasDateOverlap(startA, endA, startB, endB) {
 }
 
 export async function loadPresumptiveKnowledge() {
+  const knowledgePath = await resolveKnowledgePath();
   const raw = await fs.readFile(knowledgePath, 'utf-8');
   const parsed = JSON.parse(raw.replace(/^\uFEFF/, ''));
   const categories = Array.isArray(parsed.categories) ? parsed.categories : [];

@@ -1,0 +1,16 @@
+﻿{
+    "folder":  "C:\\Dev\\Rally Forge\\knowledge\\FEDERAL_BENEFITS",
+    "files":  [
+                  {
+                      "Name":  "benefits_overview.md",
+                      "Length":  32,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "PURPOSE.md",
+                      "Length":  110,
+                      "Extension":  ".md"
+                  }
+              ],
+    "generated":  "2026-03-14"
+}

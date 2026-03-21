@@ -1,0 +1,94 @@
+{
+  "smcCodes": {
+    "description": "VA Special Monthly Compensation (SMC) codes and rates",
+    "source": "VA Payment Schedule",
+    "lastUpdated": "2026-03-17T00:00:00Z",
+    "effectiveDate": "2026-01-01",
+    "rates": [
+      {
+        "code": "A",
+        "name": "Aid and Attendance - Basic",
+        "monthlyAmount": 4025.44,
+        "requirements": [
+          "Need assistance in performing activities of daily living",
+          "Cannot work"
+        ]
+      },
+      {
+        "code": "A1",
+        "name": "Aid and Attendance - Improved",
+        "monthlyAmount": 4635.51,
+        "requirements": [
+          "More severe aid and attendance requirements"
+        ]
+      },
+      {
+        "code": "A2",
+        "name": "Aid and Attendance - Highest",
+        "monthlyAmount": 5235.00,
+        "requirements": [
+          "Most severe aid and attendance requirements"
+        ]
+      },
+      {
+        "code": "H",
+        "name": "Housebound - Basic",
+        "monthlyAmount": 2847.00,
+        "requirements": [
+          "Unable to leave home except with assistance",
+          "Rating of 50% or higher"
+        ]
+      },
+      {
+        "code": "H1",
+        "name": "Housebound - Improved",
+        "monthlyAmount": 3247.00,
+        "requirements": [
+          "More severe housebound condition"
+        ]
+      },
+      {
+        "code": "H2",
+        "name": "Housebound - Highest",
+        "monthlyAmount": 3651.00,
+        "requirements": [
+          "Most severe housebound condition"
+        ]
+      },
+      {
+        "code": "K",
+        "name": "Loss of Use of One Extremity",
+        "monthlyAmount": 1515.00,
+        "requirements": [
+          "Loss of use of one arm or leg"
+        ]
+      },
+      {
+        "code": "K1",
+        "name": "Loss of Use of One Extremity (Enhanced)",
+        "monthlyAmount": 2041.00,
+        "requirements": [
+          "Loss of use plus other qualifying conditions"
+        ]
+      },
+      {
+        "code": "L",
+        "name": "Loss of Both Hands and Feet, or Blindness",
+        "monthlyAmount": 2841.00,
+        "requirements": [
+          "Bilateral extremity loss or total blindness with bilateral extremity loss"
+        ]
+      },
+      {
+        "code": "M",
+        "name": "Bilateral Extremities and Blindness",
+        "monthlyAmount": 3126.00,
+        "requirements": [
+          "Blindness with bilateral extremity loss"
+        ]
+      }
+    ],
+    "note": "Rates are effective as of date shown. These rates are updated annually/monthly based on COLA adjustments.",
+    "regulationCitation": "38 U.S.C. §1114"
+  }
+}

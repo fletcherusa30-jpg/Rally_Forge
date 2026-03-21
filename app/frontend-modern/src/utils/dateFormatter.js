@@ -100,8 +100,7 @@ export function normalizeDateFormat(dateInput) {
     const year = date.getFullYear();
 
     return `${month} ${day}, ${year}`;
-  } catch (error) {
-    console.error('[dateFormatter] Error parsing date:', dateInput, error);
+  } catch {
     return null;
   }
 }

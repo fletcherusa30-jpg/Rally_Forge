@@ -1,0 +1,96 @@
+﻿[
+    {
+        "name":  "Adjudication",
+        "related_domains":  [
+                                "pension",
+                                "survivors",
+                                "caregivers"
+                            ],
+        "part":  "3",
+        "path":  "C:\\Dev\\Rally Forge\\knowledge\\CFR_REGULATIONS\\38_CFR_Part_3",
+        "chapters":  [
+                         {
+                             "summary":  "Covers general adjudication principles, definitions, and overarching rules for VA benefits decisions.",
+                             "title":  "General Adjudication Rules",
+                             "id":  "3_general"
+                         },
+                         {
+                             "summary":  "Addresses direct, secondary, and presumptive service connection, line of duty, and willful misconduct.",
+                             "title":  "Service Connection",
+                             "id":  "3_service_conn"
+                         },
+                         {
+                             "summary":  "Covers evidence standards, benefit of the doubt, and development responsibilities.",
+                             "title":  "Evidence and Burden of Proof",
+                             "id":  "3_evidence"
+                         },
+                         {
+                             "summary":  "Addresses rules for assigning effective dates for awards, increases, and reductions.",
+                             "title":  "Effective Dates",
+                             "id":  "3_effective_dates"
+                         },
+                         {
+                             "summary":  "Covers needs-based pension, income, exclusions, and related adjudication rules.",
+                             "title":  "Pension and Income Rules",
+                             "id":  "3_pension"
+                         },
+                         {
+                             "summary":  "Addresses special claims categories, ancillary benefits, and unique adjudication scenarios.",
+                             "title":  "Special Categories and Ancillary Benefits",
+                             "id":  "3_special"
+                         }
+                     ],
+        "primary_domain":  "compensation"
+    },
+    {
+        "name":  "Schedule for Rating Disabilities",
+        "related_domains":  [
+                                "medical_knowledge"
+                            ],
+        "part":  "4",
+        "path":  "C:\\Dev\\Rally Forge\\knowledge\\CFR_REGULATIONS\\38_CFR_Part_4",
+        "chapters":  [
+                         {
+                             "summary":  "Covers general principles for evaluating disability, including functional loss and combined ratings.",
+                             "title":  "General Rating Policies",
+                             "id":  "4_general"
+                         },
+                         {
+                             "summary":  "Addresses rating principles for bones, joints, spine, and related musculoskeletal conditions.",
+                             "title":  "Musculoskeletal System",
+                             "id":  "4_msk"
+                         },
+                         {
+                             "summary":  "Covers rating of neurological and convulsive disorders.",
+                             "title":  "Neurological Conditions",
+                             "id":  "4_neuro"
+                         },
+                         {
+                             "summary":  "Addresses rating criteria for mental health conditions.",
+                             "title":  "Mental Disorders",
+                             "id":  "4_mental"
+                         },
+                         {
+                             "summary":  "Covers rating of heart and vascular conditions.",
+                             "title":  "Cardiovascular System",
+                             "id":  "4_cardio"
+                         },
+                         {
+                             "summary":  "Addresses rating of respiratory diseases and impairments.",
+                             "title":  "Respiratory System",
+                             "id":  "4_resp"
+                         },
+                         {
+                             "summary":  "Covers rating of digestive tract conditions.",
+                             "title":  "Digestive System",
+                             "id":  "4_digestive"
+                         },
+                         {
+                             "summary":  "Covers remaining diagnostic code groups not captured above.",
+                             "title":  "Other Body Systems",
+                             "id":  "4_other"
+                         }
+                     ],
+        "primary_domain":  "compensation"
+    }
+]

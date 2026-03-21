@@ -1,0 +1,31 @@
+﻿{
+    "folder":  "C:\\Dev\\Rally Forge\\knowledge\\VAknow\\compensation",
+    "files":  [
+                  {
+                      "Name":  "claims_process.md",
+                      "Length":  365,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "eligibility.md",
+                      "Length":  373,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "evidence.md",
+                      "Length":  397,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "overview.md",
+                      "Length":  371,
+                      "Extension":  ".md"
+                  },
+                  {
+                      "Name":  "PURPOSE.md",
+                      "Length":  279,
+                      "Extension":  ".md"
+                  }
+              ],
+    "generated":  "2026-03-14"
+}

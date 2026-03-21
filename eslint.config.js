@@ -38,7 +38,16 @@ export default [
     }
   },
   {
-    files: ['src/**/*.{js,jsx}', 'backend/**/*.{js,jsx}'],
+    files: ['**/*.test.{js,mjs,jsx}'],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+        ...globals.jest
+      }
+    }
+  },
+  {
+    files: ['src/**/*.{js,jsx}', 'app/frontend-modern/src/**/*.{js,jsx}', 'backend/**/*.{js,jsx}'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',

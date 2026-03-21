@@ -1,0 +1,274 @@
+﻿[
+    {
+        "exposures":  [
+                          "Burn pits",
+                          "Airborne hazards (dust, sand, PM2.5)",
+                          "Blast overpressure (IEDs, breaching, artillery)",
+                          "Lead (weapons, indoor ranges)",
+                          "Noise (weapons, vehicles, aircraft)",
+                          "Solvents and CLP",
+                          "Depleted uranium (armor crews)",
+                          "JP-8 (aviation proximity)",
+                          "Firefighting foam (AFFF)"
+                      ],
+        "family":  "Combat Arms",
+        "examples":  [
+                         "11B",
+                         "0311",
+                         "19K",
+                         "13B",
+                         "19D",
+                         "18X",
+                         "SO",
+                         "SB",
+                         "1C4X1"
+                     ]
+    },
+    {
+        "exposures":  [
+                          "JP-8 / jet fuel",
+                          "Hydraulic fluid (Skydrol)",
+                          "Solvents and degreasers",
+                          "Noise (rotary and fixed-wing)",
+                          "Radiation (radar, comms)",
+                          "Burn pits (deployed flight lines)",
+                          "Composite materials dust",
+                          "Firefighting foam (AFFF)"
+                      ],
+        "family":  "Aviation",
+        "examples":  [
+                         "15T",
+                         "6174",
+                         "AT",
+                         "AE",
+                         "AD",
+                         "AMT",
+                         "AET",
+                         "2A5X1",
+                         "1A2X1"
+                     ]
+    },
+    {
+        "exposures":  [
+                          "Asbestos",
+                          "Silica dust",
+                          "Burn pits",
+                          "Demolition explosives",
+                          "Heavy metals",
+                          "Solvents",
+                          "Fuel and lubricants",
+                          "Treated lumber chemicals",
+                          "Noise (heavy equipment)"
+                      ],
+        "family":  "Engineering / Construction",
+        "examples":  [
+                         "12B",
+                         "1371",
+                         "EO",
+                         "BU",
+                         "CE",
+                         "UT",
+                         "3E5X1"
+                     ]
+    },
+    {
+        "exposures":  [
+                          "Solvents and degreasers",
+                          "Fuel and lubricants",
+                          "Asbestos (legacy platforms)",
+                          "Lead",
+                          "Heavy metals",
+                          "Noise",
+                          "Burn pits (deployed motor pools)",
+                          "Battery acid",
+                          "Welding fumes"
+                      ],
+        "family":  "Maintenance / Mechanical / Ordnance",
+        "examples":  [
+                         "91B",
+                         "1341",
+                         "MM",
+                         "MK",
+                         "EN",
+                         "EM",
+                         "2T3X1",
+                         "2A6X1"
+                     ]
+    },
+    {
+        "exposures":  [
+                          "Bloodborne pathogens",
+                          "Radiation (X-ray, CT)",
+                          "Anesthetic gases",
+                          "Chemical disinfectants",
+                          "Burn pits (deployed medical units)",
+                          "Noise (MEDEVAC, field hospitals)"
+                      ],
+        "family":  "Medical / Dental",
+        "examples":  [
+                         "68W",
+                         "HM",
+                         "4N0X1",
+                         "HS",
+                         "68C",
+                         "4A0X1"
+                     ]
+    },
+    {
+        "exposures":  [
+                          "Radiation (comms/radar sites)",
+                          "Burn pits (if deployed)",
+                          "Noise (tactical comms shelters)",
+                          "Solvents (if co-located with maintenance)"
+                      ],
+        "family":  "Intelligence / Cyber / Communications / IT",
+        "examples":  [
+                         "35F",
+                         "1N0X1",
+                         "IS",
+                         "IT",
+                         "CTN",
+                         "25B",
+                         "3D0X2"
+                     ]
+    },
+    {
+        "exposures":  [
+                          "Burn pits (if deployed)",
+                          "Warehouse dust",
+                          "Mold (older facilities)",
+                          "Noise (transport hubs)"
+                      ],
+        "family":  "Logistics / Supply / Admin / Finance / HR",
+        "examples":  [
+                         "92Y",
+                         "3043",
+                         "LS",
+                         "SK",
+                         "YN",
+                         "3S0X1"
+                     ]
+    },
+    {
+        "exposures":  [
+                          "Fuel and lubricants",
+                          "Solvents and cleaners",
+                          "Asbestos (legacy ships)",
+                          "Lead paint",
+                          "Noise (engines, weapons)",
+                          "Cold weather exposure",
+                          "Saltwater corrosion chemicals"
+                      ],
+        "family":  "Maritime / Deck / Boatswain / Coast Guard Ops",
+        "examples":  [
+                         "BM",
+                         "MK",
+                         "ME",
+                         "OS",
+                         "QM",
+                         "GM",
+                         "DC"
+                     ]
+    },
+    {
+        "exposures":  [
+                          "AFFF (PFAS)",
+                          "Smoke inhalation",
+                          "Burn pits (deployed airfields)",
+                          "Solvents",
+                          "Fuel",
+                          "Noise"
+                      ],
+        "family":  "Firefighting / Crash Rescue / Damage Control",
+        "examples":  [
+                         "ARFF",
+                         "DC",
+                         "3E7X1",
+                         "ABH"
+                     ]
+    },
+    {
+        "exposures":  [
+                          "Ionizing radiation",
+                          "Heavy metals",
+                          "Solvents",
+                          "Noise",
+                          "Asbestos (older subs/ships)"
+                      ],
+        "family":  "Nuclear / Submarine / Reactor / Radiation Tech",
+        "examples":  [
+                         "MMN",
+                         "EMN",
+                         "ETN",
+                         "6C0X1"
+                     ]
+    },
+    {
+        "exposures":  [
+                          "Lead (weapons ranges)",
+                          "Noise",
+                          "Burn pits (if deployed)",
+                          "Blast overpressure (breaching)",
+                          "Chemical agents (OC spray training)"
+                      ],
+        "family":  "Security Forces / MPs / Law Enforcement",
+        "examples":  [
+                         "31B",
+                         "5811",
+                         "MA",
+                         "3P0X1"
+                     ]
+    },
+    {
+        "exposures":  [
+                          "Chemical agents (training)",
+                          "Decontamination chemicals",
+                          "Radiation sources",
+                          "Burn pits (if deployed)"
+                      ],
+        "family":  "Chemical / Biological / Radiological (CBRN)",
+        "examples":  [
+                         "74D",
+                         "5711",
+                         "3E9X1"
+                     ]
+    },
+    {
+        "exposures":  [
+                          "Radiation (radar, satellite comms)",
+                          "Noise (launch facilities)",
+                          "Solvents (if co-located with maintenance)"
+                      ],
+        "family":  "Space / Missile / Satellite Ops",
+        "examples":  [
+                         "1C6X1",
+                         "13S",
+                         "3D1X3"
+                     ]
+    },
+    {
+        "exposures":  [
+                          "Cleaning chemicals",
+                          "Mold",
+                          "Burn pits (field kitchens)"
+                      ],
+        "family":  "Food Service / Culinary",
+        "examples":  [
+                         "92G",
+                         "CS",
+                         "FS",
+                         "4D0X1"
+                     ]
+    },
+    {
+        "exposures":  [
+                          "Noise (long-term hearing exposure)"
+                      ],
+        "family":  "Bands / Musicians",
+        "examples":  [
+                         "42R",
+                         "MU",
+                         "3N1X1"
+                     ]
+    }
+]

@@ -1,0 +1,65 @@
+{
+  "presumptiveMappings": {
+    "description": "VA Presumptive Condition Mappings - Auto-service-connected conditions",
+    "source": "38 U.S.C. §§1112, 1113, 1116",
+    "lastUpdated": "2026-03-17T00:00:00Z",
+    "categories": {
+      "vietnamVeterans": {
+        "era": "Vietnam (1964-1975)",
+        "conditions": [
+          {
+            "condition": "Agent Orange Exposure",
+            "presumptiveConditions": [
+              "Chloracne",
+              "Peripheral neuropathy",
+              "Porphyria cutanea tarda",
+              "Type 2 diabetes",
+              "Non-Hodgkins lymphoma",
+              "Prostate cancer",
+              "Respiratory cancers",
+              "Soft tissue sarcoma"
+            ]
+          },
+          {
+            "condition": "Service in Vietnam",
+            "presumptiveConditions": [
+              "PTSD (with qualifying service)"
+            ]
+          }
+        ]
+      },
+      "gulfWarVeterans": {
+        "era": "Gulf War (1990-1991)",
+        "conditions": [
+          {
+            "condition": "Gulf War Service",
+            "presumptiveConditions": [
+              "Chronic fatigue syndrome",
+              "Fibromyalgia",
+              "IBS (Irritable Bowel Syndrome)",
+              "Medically unexplained symptoms"
+            ]
+          }
+        ]
+      },
+      "campLejeune": {
+        "era": "Camp Lejeune Service (1953-1987)",
+        "specialConditions": [
+          "Cancer (multiple types)",
+          "Non-Hodgkins lymphoma",
+          "Aplastic anemia",
+          "Kidney disease",
+          "Liver disease",
+          "Parkinson's disease"
+        ]
+      },
+      "agentOrangeExposure": {
+        "era": "Anywhere (with exposure documentation)",
+        "conditions": [
+          "Agent Orange-related diseases"
+        ]
+      }
+    },
+    "usage": "Use to identify presumptive service-connections that don't require extensive evidence"
+  }
+}

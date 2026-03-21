@@ -10,6 +10,34 @@
     }
   ],
   "settings": {
+    "git.path": "C:\\Program Files\\Git\\bin\\git.exe",
+    "git.enabled": true,
+    "git.autofetch": false,
+    "editor.formatOnType": false,
+    "editor.largeFileOptimizations": true,
+    "extensions.autoUpdate": false,
+    "extensions.autoCheckUpdates": false,
+    "typescript.tsserver.enableTracing": false,
+    "security.workspace.trust.enabled": false,
+    "files.maxMemoryForLargeFilesMB": 8192,
+    "workbench.startupEditor": "none",
+    "typescript.tsserver.useSeparateSyntaxServer": false,
+    "files.autoSave": "off",
+    "editor.formatOnSave": false,
+    "extensions.supportUntrustedWorkspaces": false,
+    "editor.formatOnPaste": false,
+    "npm.autoDetect": "off",
+    "workbench.tree.indent": 8,
+    "telemetry.telemetryLevel": "off",
+    "editor.codeActionsOnSave": {},
+    "workbench.editor.restoreViewState": false,
+    "workbench.editor.enablePreview": false,
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.profiles.windows": {
+      "PowerShell": {
+        "path": "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
+      }
+    },
     "files.exclude": {
       "**/.git": true,
       "**/node_modules": true,

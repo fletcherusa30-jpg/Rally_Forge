@@ -1,0 +1,27 @@
+﻿{
+    "folder":  "VAknow\\contacts\\state\\IA",
+    "generated":  "2026-03-14T11:26:33.8726546-06:00",
+    "files":  [
+                  {
+                      "name":  "contacts.json",
+                      "path":  "VAknow\\contacts\\state\\IA\\contacts.json",
+                      "size":  579,
+                      "modified":  "2026-03-14T17:13:51.0043203Z",
+                      "extension":  ".json"
+                  },
+                  {
+                      "name":  "PURPOSE.md",
+                      "path":  "VAknow\\contacts\\state\\IA\\PURPOSE.md",
+                      "size":  317,
+                      "modified":  "2026-03-14T17:26:33.8685952Z",
+                      "extension":  ".md"
+                  },
+                  {
+                      "name":  "SUMMARY.md",
+                      "path":  "VAknow\\contacts\\state\\IA\\SUMMARY.md",
+                      "size":  309,
+                      "modified":  "2026-03-14T17:26:33.8720096Z",
+                      "extension":  ".md"
+                  }
+              ]
+}
