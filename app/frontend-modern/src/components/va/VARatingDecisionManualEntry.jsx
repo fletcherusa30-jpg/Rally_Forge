@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { placeholders } from '../../system/placeholders/index.js';
 
 /**
  * VA Rating Decision Manual Entry Form
@@ -247,7 +248,7 @@ export function VARatingDecisionManualEntry({ onSave }) {
                 type="text"
                 value={newEntry.conditionName}
                 onChange={(e) => setNewEntry({ ...newEntry, conditionName: e.target.value })}
-                placeholder="e.g., Tinnitus, PTSD, Left knee"
+                placeholder={placeholders.va.conditionName}
                 style={errors.conditionName ? errorInputStyle : inputStyle}
               />
               {errors.conditionName && <span style={{ fontSize: '0.7rem', color: '#ef4444' }}>{errors.conditionName}</span>}
@@ -273,7 +274,7 @@ export function VARatingDecisionManualEntry({ onSave }) {
               type="text"
               value={newEntry.pageNumber}
               onChange={(e) => setNewEntry({ ...newEntry, pageNumber: e.target.value })}
-              placeholder="e.g., 12"
+              placeholder={placeholders.va.pageNumber}
               style={inputStyle}
             />
           </div>
@@ -309,7 +310,7 @@ export function VARatingDecisionManualEntry({ onSave }) {
                   onChange={(e) => setNewEntry({ ...newEntry, ratingPercent: e.target.value })}
                   style={errors.ratingPercent ? errorInputStyle : inputStyle}
                 >
-                  <option value="">Select...</option>
+                  <option value="">{placeholders.va.ratingPercentSelect}</option>
                   {[0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100].map(p => (
                     <option key={p} value={p}>{p}%</option>
                   ))}
@@ -335,7 +336,7 @@ export function VARatingDecisionManualEntry({ onSave }) {
               <textarea
                 value={newEntry.denialReason}
                 onChange={(e) => setNewEntry({ ...newEntry, denialReason: e.target.value })}
-                placeholder="Explain why this condition was denied"
+                placeholder={placeholders.va.denialReason}
                 style={{ ...inputStyle, minHeight: '60px' }}
               />
               {errors.denialReason && <span style={{ fontSize: '0.7rem', color: '#ef4444' }}>{errors.denialReason}</span>}
@@ -370,7 +371,7 @@ export function VARatingDecisionManualEntry({ onSave }) {
                   type="text"
                   value={newEntry.secondaryTo}
                   onChange={(e) => setNewEntry({ ...newEntry, secondaryTo: e.target.value })}
-                  placeholder="e.g., Agent Orange exposure"
+                  placeholder={placeholders.va.primaryCondition}
                   style={errors.secondaryTo ? errorInputStyle : inputStyle}
                 />
                 {errors.secondaryTo && <span style={{ fontSize: '0.7rem', color: '#ef4444' }}>{errors.secondaryTo}</span>}
@@ -385,7 +386,7 @@ export function VARatingDecisionManualEntry({ onSave }) {
                   onChange={(e) => setNewEntry({ ...newEntry, aggravationPercent: e.target.value })}
                   style={errors.aggravationPercent ? errorInputStyle : inputStyle}
                 >
-                  <option value="">Select...</option>
+                  <option value="">{placeholders.va.aggravationPercentSelect}</option>
                   {[10, 20, 30, 40, 50].map(p => (
                     <option key={p} value={p}>{p}%</option>
                   ))}
@@ -415,7 +416,7 @@ export function VARatingDecisionManualEntry({ onSave }) {
                   onChange={(e) => setNewEntry({ ...newEntry, extremity: e.target.value })}
                   style={inputStyle}
                 >
-                  <option value="">Select...</option>
+                  <option value="">{placeholders.va.extremitySelect}</option>
                   <option value="left">Left</option>
                   <option value="right">Right</option>
                   <option value="both">Both</option>
@@ -445,7 +446,7 @@ export function VARatingDecisionManualEntry({ onSave }) {
             <textarea
               value={newEntry.evidenceNotes}
               onChange={(e) => setNewEntry({ ...newEntry, evidenceNotes: e.target.value })}
-              placeholder="Cite specific evidence, test results, or medical findings"
+              placeholder={placeholders.va.evidenceNotes}
               style={{ ...inputStyle, minHeight: '60px' }}
             />
           </div>
@@ -455,7 +456,7 @@ export function VARatingDecisionManualEntry({ onSave }) {
             <textarea
               value={newEntry.rationaleSummary}
               onChange={(e) => setNewEntry({ ...newEntry, rationaleSummary: e.target.value })}
-              placeholder="Explain the adjudicative rationale"
+              placeholder={placeholders.va.rationaleSummary}
               style={{ ...inputStyle, minHeight: '60px' }}
             />
           </div>
@@ -465,7 +466,7 @@ export function VARatingDecisionManualEntry({ onSave }) {
             <textarea
               value={newEntry.scEvidence}
               onChange={(e) => setNewEntry({ ...newEntry, scEvidence: e.target.value })}
-              placeholder="Evidence supporting service-connection"
+              placeholder={placeholders.va.serviceConnectionEvidence}
               style={{ ...inputStyle, minHeight: '60px' }}
             />
           </div>

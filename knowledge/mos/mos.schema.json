@@ -21,6 +21,33 @@
           "title": {
             "type": "string",
             "minLength": 1
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "type": "string",
+            "enum": ["enlisted", "warrant", "officer"]
+          },
+          "branch": {
+            "type": "string",
+            "minLength": 1
+          },
+          "crossBranchEquivalents": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "exposureCategory": {
+            "type": "string",
+            "minLength": 1
+          },
+          "notes": {
+            "type": "string",
+            "minLength": 1
           }
         },
         "additionalProperties": false

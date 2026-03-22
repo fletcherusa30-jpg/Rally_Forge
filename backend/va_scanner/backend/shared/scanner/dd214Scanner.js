@@ -143,6 +143,38 @@ function parseDuration(text, label) {
   return null;
 }
 
+/**
+ * Validates that a parsed service duration is reasonable
+ * Military service durations should not exceed ~80 years
+ * Months should be 0-11, days should be 0-31
+ */
+export function validateServiceDuration(duration) {
+  if (!duration || typeof duration !== 'object') {
+    return false;
+  }
+
+  const years = Number(duration.years || 0);
+  const months = Number(duration.months || 0);
+  const days = Number(duration.days || 0);
+
+  // Years should not exceed 80 (unrealistic for military service)
+  if (years > 80) {
+    return false;
+  }
+
+  // Months should be 0-11
+  if (months > 11) {
+    return false;
+  }
+
+  // Days should be 0-31
+  if (days > 31) {
+    return false;
+  }
+
+  return true;
+}
+
 /* ─── Service Identity ───────────────────────────────────────────── */
 
 /**
@@ -477,14 +509,29 @@ function extractServicePeriods(text, blockDetection = null) {
     ? toIsoDate(explicitSeparationMatch[1], explicitSeparationMatch[2], explicitSeparationMatch[3])
     : null;
 
-  const netActiveServiceThisPeriod = parseDuration(block12c || text, '(?:12c|NET\\s*ACTIVE\\s*SERVICE\\s*THIS\\s*PERIOD)');
-  const totalPriorActiveService = parseDuration(block12d || text, '(?:12d|TOTAL\\s*PRIOR\\s*ACTIVE\\s*SERVICE)');
-  const totalPriorInactiveService = parseDuration(block12e || text, '(?:12e|TOTAL\\s*PRIOR\\s*INACTIVE\\s*SERVICE)');
+  const netActiveServiceThisPeriod = (() => {
+    const parsed = parseDuration(block12c || text, '(?:12c|NET\\s*ACTIVE\\s*SERVICE\\s*THIS\\s*PERIOD)');
+    return parsed && validateServiceDuration(parsed) ? parsed : null;
+  })();
+  const totalPriorActiveService = (() => {
+    const parsed = parseDuration(block12d || text, '(?:12d|TOTAL\\s*PRIOR\\s*ACTIVE\\s*SERVICE)');
+    return parsed && validateServiceDuration(parsed) ? parsed : null;
+  })();
+  const totalPriorInactiveService = (() => {
+    const parsed = parseDuration(block12e || text, '(?:12e|TOTAL\\s*PRIOR\\s*INACTIVE\\s*SERVICE)');
+    return parsed && validateServiceDuration(parsed) ? parsed : null;
+  })();
   const block12f = getBlockValue(blockDetection, '12f');
-  const foreignService = parseDuration(block12f || text, '(?:12f|FOREIGN\\s*SERVICE)');
+  const foreignService = (() => {
+    const parsed = parseDuration(block12f || text, '(?:12f|FOREIGN\\s*SERVICE)');
+    return parsed && validateServiceDuration(parsed) ? parsed : null;
+  })();
 
   const block12g = getBlockValue(blockDetection, '12g');
-  const seaService = parseDuration(block12g || text, '(?:12g|SEA\\s+SERVICE|TOTAL\\s+SEA\\s+SERVICE)');
+  const seaService = (() => {
+    const parsed = parseDuration(block12g || text, '(?:12g|SEA\\s+SERVICE|TOTAL\\s+SEA\\s+SERVICE)');
+    return parsed && validateServiceDuration(parsed) ? parsed : null;
+  })();
   const initialEntryTraining = extractInitialEntryTraining(block18 || text);
 
   let resolvedEntryDate = explicitEntryDate || entryDate;
@@ -588,17 +635,20 @@ function extractCharacterAndSeparation(text, blockDetection = null) {
     if (narrowedAuthority) separationAuthority = narrowedAuthority;
   }
 
+  // Block 26 is the canonical source for separation code.
   let separationCode = clean(block26)?.toUpperCase() || null;
   if (separationCode) {
     const token = separationCode.replace(/\s+/g, '');
-    if (!/^[A-Z0-9]{2,4}$/.test(token) || !/[A-Z]/.test(token)) separationCode = null;
+    if (!/^[A-Z0-9]{3,4}$/.test(token) || !/[A-Z]/.test(token)) separationCode = null;
     else separationCode = token;
   }
-  const spdPat = /(?:26\.\s*SEPARATION\s*CODE|SPD\s*CODE|SEPARATION\s*PROGRAM\s*DESIGNATOR).*?:?\s*([A-Z0-9]{2,4})/is;
+  // Fallback only when Block 26 wasn't detected in block parsing.
+  // Keep this tightly anchored to line 26 to avoid pulling from Block 25 authority text.
+  const spdPat = /(?:^|\n)\s*26\.\s*(?:SEPARATION\s*CODE|SPD\s*CODE|SEPARATION\s*PROGRAM\s*DESIGNATOR)?\s*[:#-]?\s*([A-Z0-9]{3,4})\b/im;
   const spdM = !separationCode ? text.match(spdPat) : null;
   if (spdM) {
     const spd = spdM[1].trim().toUpperCase();
-    if (/^[A-Z0-9]{2,4}$/.test(spd) && /[A-Z]/.test(spd)) separationCode = spd;
+    if (/^[A-Z0-9]{3,4}$/.test(spd) && /[A-Z]/.test(spd)) separationCode = spd;
   }
 
   let reentryCode = clean(block27)?.toUpperCase().replace(/\s+/g, '') || null;
@@ -608,11 +658,6 @@ function extractCharacterAndSeparation(text, blockDetection = null) {
   if (reM) {
     const re = reM[1].trim().toUpperCase().replace(/\s+/g, '');
     if (/^[A-Z0-9\-]{1,5}$/.test(re)) reentryCode = re;
-  }
-
-  if (!separationCode && reentryCode && /[A-Z]/.test(reentryCode) && reentryCode.length <= 4) {
-    separationCode = reentryCode;
-    reentryCode = null;
   }
 
   return { characterOfService, narrativeReasonForSeparation, separationAuthority, separationCode, reentryCode };
@@ -656,13 +701,13 @@ function extractGradeSpecialty(text, blockDetection = null) {
   const mosEntrySource = block11 || text.match(/11\.\s*PRIMARY[^\n]*\n([\s\S]*?)(?=\n\s*(?:12|13|14|15|16|17|18)\.\s)/i)?.[1];
   if (mosEntrySource) {
     const rawEntries = String(mosEntrySource)
-      .split(/\r?\n|;|\s+(?=(?:[0-9]{4}|[0-9]{2,4}[A-Z][0-9A-Z]{0,4}|[A-Z]{2,5}[0-9]?)\s+[A-Z])/i)
+      .split(/\r?\n|;|\s+(?=(?:[0-9]{4}|[0-9]{2,4}[A-Z][0-9A-Z]{0,4}|[0-9][A-Z][0-9A-Z]{0,5}|[A-Z]{2,5}[0-9]?)\s+[A-Z])/i)
       .map((e) => e.trim())
       .filter(Boolean);
 
     for (const entry of rawEntries) {
       const normalizedEntry = String(entry || '').replace(/^[^A-Z0-9]+/i, '').trim();
-      const codeM = normalizedEntry.match(/^([0-9]{4}|[0-9]{2,4}[A-Z][0-9A-Z]{0,4}|[0-9][A-Z][0-9A-Z]{3,5}|[A-Z]{2,5}[0-9]?)/i);
+      const codeM = normalizedEntry.match(/^([0-9]{4}|[0-9]{2,4}[A-Z][0-9A-Z]{0,4}|[0-9][A-Z][0-9A-Z]{0,5}|[A-Z]{2,5}[0-9]?)/i);
       if (!codeM) continue;
       const code = codeM[1].toUpperCase();
       if (/^(19|20)\d{2}$/.test(code)) continue; // year-like → skip
@@ -706,10 +751,10 @@ function extractGradeSpecialty(text, blockDetection = null) {
 
   if (!primaryMOSOrAFSCOrRating) {
     const fallbackPatterns = [
-      /11\.\s*PRIMARY[^\n:]*[:\s]+([0-9]{2}[A-Z][0-9A-Z]{0,3})/gis,
-      /(?:MOS|SPECIALTY|PRIMARY)\s*[:\-]\s*([0-9]{2}[A-Z][0-9A-Z]{0,3})/gis,
+      /11\.\s*PRIMARY[^\n:]*[:\s]+([0-9]{2}[A-Z][0-9A-Z]{0,3}|[0-9][A-Z][0-9A-Z]{0,5})/gis,
+      /(?:MOS|SPECIALTY|PRIMARY)\s*[:\-]\s*([0-9]{2}[A-Z][0-9A-Z]{0,3}|[0-9][A-Z][0-9A-Z]{0,5})/gis,
       /\b([0-9]{4}|[0-9]{2}[A-Z][0-9A-Z]{0,3})\b/g,
-      /\b([0-9][A-Z][0-9A-Z]{3,4})\b/g,
+      /\b([0-9][A-Z][0-9A-Z]{0,5})\b/g,
       /\b([A-Z]{2,4}[0-9]?)\b\s+(?:RATING|RATE|SPECIALTY)/gi,
     ];
     for (const pattern of fallbackPatterns) {

@@ -91,6 +91,9 @@ describe('Tab 02 — Military Service: Data Normalization', () => {
     expect(isValidMosCode('13F')).toBe(true);
     expect(isValidMosCode('68W')).toBe(true);
     expect(isValidMosCode('18D')).toBe(true);
+    expect(isValidMosCode('5I0')).toBe(true);
+    expect(isValidMosCode('5S0')).toBe(true);
+    expect(isValidMosCode('1N0')).toBe(true);
   });
 
   it('isValidMosCode rejects obviously invalid values', () => {
@@ -267,6 +270,22 @@ describe('Tab 02 — Military Service: Silent Update Triggers', () => {
     expect(Array.isArray(errors)).toBe(true);
     const hasBranchError = errors.some((e) => /branch/i.test(e.field || e.message || JSON.stringify(e)));
     expect(hasBranchError).toBe(true);
+  });
+
+  it('validateMilitaryServiceForm returns errors for missing primaryMOS', () => {
+    const form = {
+      ...createEmptyMilitaryServiceForm(),
+      branchOfService: 'Army',
+      serviceType: 'Active',
+      startDate: '2001-01-10',
+      endDate: '2007-06-01',
+      dischargeType: 'Honorable',
+      primaryMOS: '',
+    };
+
+    const errors = validateMilitaryServiceForm(form);
+    expect(Array.isArray(errors)).toBe(true);
+    expect(errors.some((e) => /primary\s+mos|afsc|rating/i.test(String(e)))).toBe(true);
   });
 
   it('validateMilitaryServiceForm accepts a fully valid form with no errors', () => {

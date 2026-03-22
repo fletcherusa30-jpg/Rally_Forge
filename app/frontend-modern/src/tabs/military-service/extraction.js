@@ -2,8 +2,8 @@ import {
   inferServiceEra,
   normalizeDeploymentLocations,
   normalizeMosCode,
+  normalizeSeparationCode,
   normalizeReCode,
-  normalizeSpdCode,
   validateSeparationAuthority,
 } from './normalization.js';
 
@@ -36,7 +36,7 @@ export function buildExtractionConfidence(result) {
     deploymentLocations: getFieldConfidence(result, 'deployments'),
     hazardPayIndicators: getFieldConfidence(result, 'hazardIndicators'),
     separationAuthority: getFieldConfidence(result, 'separationAuthority'),
-    spdCode: getFieldConfidence(result, 'separationCode'),
+    separationCode: getFieldConfidence(result, 'separationCode'),
     reCode: getFieldConfidence(result, 'reentryCode'),
   };
 
@@ -121,7 +121,7 @@ export function extractDd214Panels(result) {
     },
     dischargeAndSeparation: {
       dischargeType: toDischargeType(parsed),
-      spdCode: parsed?.characterAndSeparation?.separationCode || '',
+      separationCode: parsed?.characterAndSeparation?.separationCode || '',
       reCode: parsed?.characterAndSeparation?.reentryCode || '',
       separationAuthority: parsed?.characterAndSeparation?.separationAuthority || '',
       narrativeReason: parsed?.characterAndSeparation?.narrativeReasonForSeparation || '',
@@ -166,7 +166,7 @@ export function mapExtractedToMilitaryForm(result, currentForm, knownLocations =
     return { mapped: null, warnings: ['No parsed DD-214 payload found.'] };
   }
 
-  const spdCode = normalizeSpdCode(parsed?.characterAndSeparation?.separationCode);
+  const separationCode = normalizeSeparationCode(parsed?.characterAndSeparation?.separationCode);
   const reCode = normalizeReCode(parsed?.characterAndSeparation?.reentryCode);
   const separationAuthorityRaw = String(parsed?.characterAndSeparation?.separationAuthority || '').trim();
   const separationAuthority = validateSeparationAuthority(separationAuthorityRaw) ? separationAuthorityRaw : '';
@@ -207,12 +207,12 @@ export function mapExtractedToMilitaryForm(result, currentForm, knownLocations =
   return {
     mapped,
     warnings: [
-      spdCode ? '' : 'SPD code did not pass normalization checks.',
+      separationCode ? '' : 'Separation code did not pass normalization checks.',
       reCode ? '' : 'RE code did not pass normalization checks.',
       separationAuthority ? '' : 'Separation authority failed validation and was omitted.',
     ].filter(Boolean),
     normalizedCodes: {
-      spdCode,
+      separationCode,
       reCode,
       separationAuthority,
     },

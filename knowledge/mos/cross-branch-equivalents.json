@@ -1,0 +1,71 @@
+{
+  "version": "2026-03-21",
+  "source": "Rally Forge Space Force AFSC upgrade",
+  "mappings": [
+    {
+      "code": "5S",
+      "title": "Space Systems Operations",
+      "branch": "USSF",
+      "equivalents": {
+        "Army": ["25S"],
+        "Navy": ["K10A", "K36A"],
+        "Marine Corps": ["2651"],
+        "Air Force": ["1C6", "1C6X1"],
+        "Space Force": ["5S0", "1C6", "1C6X1"]
+      },
+      "notes": "USSF enlisted AFSC"
+    },
+    {
+      "code": "5S0",
+      "title": "Space Systems Operations",
+      "branch": "USSF",
+      "equivalents": {
+        "Army": ["25S"],
+        "Navy": ["K10A", "K36A"],
+        "Marine Corps": ["2651"],
+        "Air Force": ["1C6", "1C6X1"],
+        "Space Force": ["5S", "1C6", "1C6X1"]
+      },
+      "notes": "USSF enlisted AFSC"
+    },
+    {
+      "code": "5I0",
+      "title": "All-Source Intelligence",
+      "branch": "USSF",
+      "equivalents": {
+        "Army": ["35F"],
+        "Navy": ["K36A"],
+        "Marine Corps": ["0231"],
+        "Air Force": ["1N0", "1N0X1"],
+        "Space Force": ["1N0", "1N0X1"]
+      },
+      "notes": "USSF enlisted AFSC"
+    },
+    {
+      "code": "1C6",
+      "title": "Space Systems Operations",
+      "branch": "USSF",
+      "equivalents": {
+        "Army": ["25S"],
+        "Navy": ["K10A", "K36A"],
+        "Marine Corps": ["2651"],
+        "Air Force": ["1C6X1"],
+        "Space Force": ["5S", "5S0", "1C6X1"]
+      },
+      "notes": "USSF enlisted AFSC"
+    },
+    {
+      "code": "1N0",
+      "title": "All-Source Intelligence",
+      "branch": "USSF",
+      "equivalents": {
+        "Army": ["35F"],
+        "Navy": ["K36A"],
+        "Marine Corps": ["0231"],
+        "Air Force": ["1N0X1"],
+        "Space Force": ["5I0", "1N0X1"]
+      },
+      "notes": "USSF enlisted AFSC"
+    }
+  ]
+}

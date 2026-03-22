@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { cleanup, fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 const updateWorkspaceMock = vi.fn();
@@ -22,6 +22,20 @@ vi.mock('../context/ClaimWorkspaceContext.jsx', () => ({
 
 vi.mock('../api/client.js', () => ({
   getPresumptiveKnowledge: vi.fn(async () => ({ data: {} })),
+  getMilitaryMosOptions: vi.fn(async (branch) => {
+    const byBranch = {
+      Army: [
+        { code: '11B', label: '11B - Infantryman', type: 'enlisted' },
+        { code: '11C', label: '11C - Indirect Fire Infantryman', type: 'enlisted' },
+        { code: '153A', label: '153A - Rotary Wing Aviator', type: 'warrant' },
+        { code: '18A', label: '18A - Special Forces Officer', type: 'officer' },
+      ],
+      Navy: [
+        { code: 'BM', label: 'BM - Boatswains Mate', type: 'enlisted' },
+      ],
+    };
+    return { data: { branch, options: byBranch[branch] || [] } };
+  }),
 }));
 
 vi.mock('../utils/presumptiveMatching.js', () => ({
@@ -165,7 +179,14 @@ describe('MilitaryServiceTab', () => {
     await user.click(screen.getByRole('button', { name: 'Confirm Apply' }));
 
     expect(screen.getByDisplayValue('Army')).toBeTruthy();
-    expect(screen.getByDisplayValue('11B')).toBeTruthy();
+    // Wait for rank to be applied first (E-6), which enables primaryMOS select
+    await waitFor(() => {
+      expect(screen.getByLabelText('rankRate').value).toBe('E-6');
+    });
+    // Then primaryMOS should be set to 11B
+    await waitFor(() => {
+      expect(screen.getByLabelText('primaryMOS').value).toBe('11B');
+    });
     expect(window.confirm).toHaveBeenCalled();
   });
 
@@ -191,6 +212,20 @@ describe('MilitaryServiceTab', () => {
     });
   });
 
+  it('auto-detects service era from start and end dates when left on auto mode', async () => {
+    render(<MilitaryServiceTab />);
+
+    const serviceEraSelect = screen.getByLabelText('serviceEra');
+    expect(serviceEraSelect.value).toBe('');
+
+    fireEvent.change(screen.getByLabelText('startDate'), { target: { value: '1965-01-01' } });
+    fireEvent.change(screen.getByLabelText('endDate'), { target: { value: '1968-01-01' } });
+
+    await waitFor(() => {
+      expect(screen.getByLabelText('serviceEra').value).toBe('Vietnam Era (1964-1975)');
+    });
+  });
+
   it('adds, edits, deletes, and saves service records', async () => {
     const user = userEvent.setup();
     render(<MilitaryServiceTab />);
@@ -200,14 +235,17 @@ describe('MilitaryServiceTab', () => {
     await user.type(screen.getByLabelText('startDate'), '2001-01-01');
     await user.type(screen.getByLabelText('endDate'), '2005-01-01');
     await user.selectOptions(screen.getByLabelText('dischargeType'), 'Honorable');
-    await user.type(screen.getByLabelText('primaryMOS'), '11b');
+    await user.selectOptions(screen.getByLabelText('serviceEra'), 'Post-9/11 (2001-Present)');
+    expect(screen.getByLabelText('serviceEra').value).toBe('Post-9/11 (2001-Present)');
+    // Select rank first (required before primaryMOS can be selected)
+    await user.selectOptions(screen.getByLabelText('rankRate'), 'E-3');
+    await user.selectOptions(screen.getByLabelText('primaryMOS'), '11B');
 
     await user.click(screen.getByRole('button', { name: 'Add Record' }));
     expect(screen.getByText(/Primary MOS: 11B/)).toBeTruthy();
 
     await user.click(screen.getByRole('button', { name: 'Edit' }));
-    await user.clear(screen.getByLabelText('primaryMOS'));
-    await user.type(screen.getByLabelText('primaryMOS'), '11C');
+    await user.selectOptions(screen.getByLabelText('primaryMOS'), '11C');
     await user.click(screen.getByRole('button', { name: 'Update Record' }));
     expect(screen.getByText(/Primary MOS: 11C/)).toBeTruthy();
 
@@ -216,5 +254,56 @@ describe('MilitaryServiceTab', () => {
 
     await user.click(screen.getByRole('button', { name: 'Save Records' }));
     expect(updateWorkspaceMock).toHaveBeenCalled();
+  });
+
+  it('filters additional MOS choices by branch and selected rank', async () => {
+    const user = userEvent.setup();
+    render(<MilitaryServiceTab />);
+
+    await user.selectOptions(screen.getByLabelText('branchOfService'), 'Army');
+
+    const additionalMosSelect = screen.getByLabelText('additionalMOS');
+    expect(additionalMosSelect.disabled).toBe(true);
+
+    await user.selectOptions(screen.getByLabelText('rankRate'), 'E-6');
+
+    await waitFor(() => {
+      expect(within(additionalMosSelect).getByRole('option', { name: '11B - Infantryman' })).toBeTruthy();
+    });
+    expect(within(additionalMosSelect).queryByRole('option', { name: '18A - Special Forces Officer' })).toBeNull();
+    expect(within(additionalMosSelect).queryByRole('option', { name: '153A - Rotary Wing Aviator' })).toBeNull();
+
+    await user.selectOptions(screen.getByLabelText('rankRate'), 'O-3');
+
+    await waitFor(() => {
+      expect(within(additionalMosSelect).getByRole('option', { name: '18A - Special Forces Officer' })).toBeTruthy();
+    });
+    expect(within(additionalMosSelect).queryByRole('option', { name: '11B - Infantryman' })).toBeNull();
+    expect(within(additionalMosSelect).queryByRole('option', { name: '153A - Rotary Wing Aviator' })).toBeNull();
+  });
+
+  it('filters primary MOS choices by branch and selected rank', async () => {
+    const user = userEvent.setup();
+    render(<MilitaryServiceTab />);
+
+    await user.selectOptions(screen.getByLabelText('branchOfService'), 'Army');
+
+    const primaryMosSelect = screen.getByLabelText('primaryMOS');
+    expect(primaryMosSelect.disabled).toBe(true);
+
+    await user.selectOptions(screen.getByLabelText('rankRate'), 'E-6');
+    await user.selectOptions(primaryMosSelect, '11B');
+
+    expect(primaryMosSelect.value).toBe('11B');
+    expect(within(primaryMosSelect).queryByRole('option', { name: '18A - Special Forces Officer' })).toBeNull();
+    expect(within(primaryMosSelect).queryByRole('option', { name: '153A - Rotary Wing Aviator' })).toBeNull();
+
+    await user.selectOptions(screen.getByLabelText('rankRate'), 'W-3');
+
+    await waitFor(() => {
+      expect(within(primaryMosSelect).getByRole('option', { name: '153A - Rotary Wing Aviator' })).toBeTruthy();
+    });
+    expect(within(primaryMosSelect).queryByRole('option', { name: '11B - Infantryman' })).toBeNull();
+    expect(primaryMosSelect.value).toBe('');
   });
 });

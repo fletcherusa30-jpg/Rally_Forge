@@ -1,5 +1,5 @@
 export const DD214_GLOSSARY_LINKS = {
-  spdCode: 'https://www.esd.whs.mil/Portals/54/Documents/DD/issuances/dodi/133601p.pdf',
+  separationCode: 'https://www.esd.whs.mil/Portals/54/Documents/DD/issuances/dodi/133601p.pdf',
   reCode: 'https://www.esd.whs.mil/Portals/54/Documents/DD/issuances/dodi/133601p.pdf',
   separationAuthority: 'https://www.ecfr.gov/current/title-38',
 };

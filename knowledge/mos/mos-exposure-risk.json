@@ -57,6 +57,122 @@
           "hint": "Review cleaning-agent and fuel-contact tasks."
         }
       ]
+    },
+    {
+      "branch": "Space Force",
+      "mosCode": "5S",
+      "title": "Space Systems Operations",
+      "noiseRisk": "medium",
+      "exposures": [
+        {
+          "id": "rf-emf",
+          "label": "Radiation / RF / EMF",
+          "confidence": "high",
+          "hint": "Review radar, SATCOM, and space-control platform radiation/RF proximity logs."
+        },
+        {
+          "id": "noise",
+          "label": "Noise / Acoustic Trauma",
+          "confidence": "mild",
+          "hint": "Capture launch site and mission-floor noise windows."
+        }
+      ]
+    },
+    {
+      "branch": "Space Force",
+      "mosCode": "5S0",
+      "title": "Space Systems Operations",
+      "noiseRisk": "medium",
+      "exposures": [
+        {
+          "id": "rf-emf",
+          "label": "Radiation / RF / EMF",
+          "confidence": "high",
+          "hint": "Review radar, SATCOM, and space-control platform radiation/RF proximity logs."
+        },
+        {
+          "id": "noise",
+          "label": "Noise / Acoustic Trauma",
+          "confidence": "mild",
+          "hint": "Capture launch site and mission-floor noise windows."
+        }
+      ]
+    },
+    {
+      "branch": "Space Force",
+      "mosCode": "5I0",
+      "title": "All-Source Intelligence",
+      "noiseRisk": "low",
+      "exposures": [
+        {
+          "id": "rf-emf",
+          "label": "Radiation / RF / EMF",
+          "confidence": "mild",
+          "hint": "Capture comms/radar site support exposure where applicable."
+        },
+        {
+          "id": "burn-pits",
+          "label": "Burn Pits / Airborne Hazards",
+          "confidence": "mild",
+          "hint": "Document deployed intel-support assignments and particulate exposure periods."
+        }
+      ]
+    },
+    {
+      "branch": "Space Force",
+      "mosCode": "1C6",
+      "title": "Space Systems Operations",
+      "noiseRisk": "medium",
+      "exposures": [
+        {
+          "id": "rf-emf",
+          "label": "Radiation / RF / EMF",
+          "confidence": "high",
+          "hint": "Review legacy AFSC records for radar and satellite control system exposure."
+        }
+      ]
+    },
+    {
+      "branch": "Space Force",
+      "mosCode": "1N0",
+      "title": "All-Source Intelligence",
+      "noiseRisk": "low",
+      "exposures": [
+        {
+          "id": "rf-emf",
+          "label": "Radiation / RF / EMF",
+          "confidence": "mild",
+          "hint": "Review facility and comms-site assignment records for RF proximity."
+        }
+      ]
+    },
+    {
+      "branch": "Space Force",
+      "mosCode": "1N1",
+      "title": "Geospatial Intelligence",
+      "noiseRisk": "low",
+      "exposures": [
+        {
+          "id": "rf-emf",
+          "label": "Radiation / RF / EMF",
+          "confidence": "mild",
+          "hint": "Assess remote sensing and mission support environments for RF source proximity."
+        }
+      ]
+    },
+    {
+      "branch": "Space Force",
+      "mosCode": "1N2",
+      "title": "Signals Intelligence",
+      "noiseRisk": "low",
+      "exposures": [
+        {
+          "id": "rf-emf",
+          "label": "Radiation / RF / EMF",
+          "confidence": "high",
+          "hint": "Review SIGINT equipment operations for sustained RF/EMF exposure patterns."
+        }
+      ]
     }
   ]
 }

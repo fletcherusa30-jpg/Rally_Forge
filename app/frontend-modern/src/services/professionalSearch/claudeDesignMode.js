@@ -1,3 +1,5 @@
+import { placeholders } from '../../system/placeholders/index.js';
+
 const MODEL_PRICING = Object.freeze({
   haiku: { inputPerMillion: 1.0, outputPerMillion: 5.0, label: 'Haiku' },
   sonnet: { inputPerMillion: 3.0, outputPerMillion: 15.0, label: 'Sonnet' },
@@ -6,8 +8,8 @@ const MODEL_PRICING = Object.freeze({
 
 const DEFAULT_CONFIG = Object.freeze({
   mode: 'design',
-  placeholderApiUrl: 'https://api.anthropic.example/v1/messages',
-  placeholderApiKey: 'ANTHROPIC_API_KEY_PLACEHOLDER',
+  placeholderApiUrl: placeholders.config.placeholderApiUrl,
+  placeholderApiKey: placeholders.config.placeholderApiKey,
   salePricePerSearch: 1.5,
   simulatedLatencyMs: [450, 1400],
   retryCount: 2,

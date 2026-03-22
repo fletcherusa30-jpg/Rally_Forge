@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { placeholders } from '../../system/placeholders/index.js';
 
 export function PromptInput({ onSubmit, disabled = false, loading = false }) {
   const [prompt, setPrompt] = useState('');
@@ -19,7 +20,7 @@ export function PromptInput({ onSubmit, disabled = false, loading = false }) {
         disabled={disabled || loading}
         onChange={(event) => setPrompt(event.target.value)}
         rows={4}
-        placeholder='Enter your prompt'
+        placeholder={placeholders.ai.promptTextarea}
         style={{
           width: '100%',
           borderRadius: '0.375rem',

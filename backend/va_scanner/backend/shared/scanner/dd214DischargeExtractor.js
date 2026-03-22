@@ -300,7 +300,7 @@ function extractSeparationAuthority(blocks) {
 }
 
 /**
- * Extract separation code / SPD code (Block 26) with normalization
+ * Extract separation code (Block 26) with normalization
  */
 function extractSeparationCode(blocks) {
   const block26 = blocks?.['26'];
@@ -309,8 +309,8 @@ function extractSeparationCode(blocks) {
   const normalized = normalizeText(block26).trim();
   if (isNoise(normalized) || normalized.length > 10) return null;
   
-  // Try to find matching SPD code
-  const codeMatch = normalized.match(/\b([A-Z]{2,4}\d?)\b/);
+  // Try to find matching separation code pattern
+  const codeMatch = normalized.match(/\b([A-Z]{3,4}\d?)\b/);
   if (codeMatch) {
     const code = codeMatch[1];
     const spdDef = SPD_CODE_NORMALIZATIONS[code];
@@ -325,7 +325,7 @@ function extractSeparationCode(blocks) {
   
   return {
     code: normalized,
-    meaning: 'Unknown/Custom SPD Code',
+    meaning: 'Unknown/Custom Separation Code',
     category: 'Unknown',
   };
 }

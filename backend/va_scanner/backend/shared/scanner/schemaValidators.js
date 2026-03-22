@@ -36,7 +36,7 @@ function isValidMos(value) {
   const v = String(value || '').trim().toUpperCase();
   if (!v) return false;
   if (/^\d{2}[A-Z][A-Z0-9]{0,3}$/.test(v)) return true; // MOS-like
-  if (/^\d[A-Z]\d[A-Z0-9]{2,3}$/.test(v)) return true; // AFSC-like
+  if (/^\d[A-Z][A-Z0-9]{1,5}$/.test(v)) return true; // AFSC-like including compact USSF codes
   if (/^[A-Z]{2,4}\d?$/.test(v)) return true; // rating-like
   return false;
 }

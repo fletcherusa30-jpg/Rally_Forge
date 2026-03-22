@@ -3,8 +3,9 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { Card } from '../../components/Card.jsx';
 // eslint-disable-next-line no-unused-vars
 import { WorkflowCarryForwardCard } from '../../components/WorkflowCarryForwardCard.jsx';
-import { getPresumptiveKnowledge } from '../../api/client.js';
+import { getMilitaryMosOptions, getPresumptiveKnowledge } from '../../api/client.js';
 import { useClaimWorkspace } from '../../context/ClaimWorkspaceContext.jsx';
+import { placeholders } from '../../system/placeholders/index.js';
 import { getDropdownLocations } from '../../utils/presumptiveMatching.js';
 import { buildExposureSuggestions } from './analyzer.js';
 import {
@@ -27,6 +28,9 @@ import {
   BRANCH_VALUES,
   createEmptyMilitaryServiceForm,
   DISCHARGE_TYPE_VALUES,
+  getMosTypesForRankRate,
+  getRankRateOptionsForBranch,
+  SERVICE_ERA_VALUES,
   SERVICE_TYPE_VALUES,
 } from './schema.js';
 
@@ -55,7 +59,7 @@ function toPerFieldRows(fieldConfidence) {
     ['Primary MOS', fieldConfidence.primaryMOS],
     ['Deployments', fieldConfidence.deploymentLocations],
     ['Hazard Indicators', fieldConfidence.hazardPayIndicators],
-    ['SPD Code', fieldConfidence.spdCode],
+    ['Separation Code', fieldConfidence.separationCode],
     ['RE Code', fieldConfidence.reCode],
     ['Separation Authority', fieldConfidence.separationAuthority],
   ];
@@ -84,7 +88,7 @@ function createPanelEntries(panels) {
       title: 'Discharge & Separation',
       items: [
         ['Discharge', panels.dischargeAndSeparation.dischargeType],
-        ['SPD Code', panels.dischargeAndSeparation.spdCode],
+        ['Separation Code', panels.dischargeAndSeparation.separationCode],
         ['RE Code', panels.dischargeAndSeparation.reCode],
         ['Separation Authority', panels.dischargeAndSeparation.separationAuthority],
         ['Narrative Reason', panels.dischargeAndSeparation.narrativeReason],
@@ -205,6 +209,9 @@ export function MilitaryServiceTab() {
   const fileRef = useRef(null);
 
   const [recognizedLocations, setRecognizedLocations] = useState([]);
+  const [branchMosOptions, setBranchMosOptions] = useState([]);
+  const [mosOptionsLoading, setMosOptionsLoading] = useState(false);
+  const [mosOptionsError, setMosOptionsError] = useState('');
   const [records, setRecords] = useState([]);
   const [editingRecordId, setEditingRecordId] = useState(null);
 
@@ -218,7 +225,7 @@ export function MilitaryServiceTab() {
   const [extractionResult, setExtractionResult] = useState(null);
   const [extractionPanels, setExtractionPanels] = useState(null);
   const [extractionConfidence, setExtractionConfidence] = useState({ overallConfidence: null, fieldConfidence: {} });
-  const [normalizedExtractionCodes, setNormalizedExtractionCodes] = useState({ spdCode: '', reCode: '', separationAuthority: '' });
+  const [normalizedExtractionCodes, setNormalizedExtractionCodes] = useState({ separationCode: '', reCode: '', separationAuthority: '' });
   const [applyWarnings, setApplyWarnings] = useState([]);
 
   const [diffOpen, setDiffOpen] = useState(false);
@@ -267,6 +274,61 @@ export function MilitaryServiceTab() {
     loadLocations();
   }, []);
 
+  useEffect(() => {
+    const branch = String(form.branchOfService || '').trim();
+    if (!branch) {
+      setBranchMosOptions([]);
+      setMosOptionsLoading(false);
+      setMosOptionsError('');
+      return;
+    }
+
+    let active = true;
+
+    const loadBranchMosOptions = async () => {
+      try {
+        setMosOptionsLoading(true);
+        setMosOptionsError('');
+        const payload = await getMilitaryMosOptions(branch);
+        if (!active) {
+          return;
+        }
+
+        const options = Array.isArray(payload?.data?.options) ? payload.data.options : [];
+        setBranchMosOptions(options);
+
+        const allowedCodes = new Set(options.map((item) => String(item?.code || '').trim().toUpperCase()).filter(Boolean));
+        setForm((current) => ({
+          ...current,
+          primaryMOS: allowedCodes.has(current.primaryMOS) ? current.primaryMOS : '',
+          additionalMOS: (current.additionalMOS || []).filter((code) => allowedCodes.has(String(code || '').trim().toUpperCase())),
+        }));
+
+        setMosTenureDraft((current) => ({
+          ...current,
+          code: allowedCodes.has(String(current.code || '').trim().toUpperCase()) ? current.code : '',
+        }));
+      } catch {
+        if (!active) {
+          return;
+        }
+        setBranchMosOptions([]);
+        setMosOptionsError('Unable to load branch MOS/AFSC/rating options.');
+      } finally {
+        if (!active) {
+          return;
+        }
+        setMosOptionsLoading(false);
+      }
+    };
+
+    loadBranchMosOptions();
+
+    return () => {
+      active = false;
+    };
+  }, [form.branchOfService]);
+
   const suggestions = useMemo(() => {
     const generated = buildExposureSuggestions(form);
     return generated.map((item) => ({
@@ -278,17 +340,113 @@ export function MilitaryServiceTab() {
   const panelEntries = useMemo(() => createPanelEntries(extractionPanels), [extractionPanels]);
 
   const extractionDone = uploadStatus === 'success' && extractionResult != null;
+  const extractionPerFieldRows = useMemo(
+    () => toPerFieldRows(extractionConfidence.fieldConfidence || {}),
+    [extractionConfidence.fieldConfidence]
+  );
+  const hasExtractionConfidence = useMemo(
+    () => (
+      extractionConfidence.overallConfidence != null
+      || extractionPerFieldRows.some(([, confidence]) => confidence != null)
+    ),
+    [extractionConfidence.overallConfidence, extractionPerFieldRows]
+  );
+
+  const hasBranchSelected = Boolean(String(form.branchOfService || '').trim());
+  const hasMosOptions = branchMosOptions.length > 0;
+  const rankRateOptions = useMemo(
+    () => getRankRateOptionsForBranch(form.branchOfService),
+    [form.branchOfService]
+  );
+  const allowedMosTypes = useMemo(
+    () => getMosTypesForRankRate(form.rankRate),
+    [form.rankRate]
+  );
+  const filteredPrimaryMosOptions = useMemo(() => {
+    if (!hasBranchSelected || allowedMosTypes.length === 0) {
+      return [];
+    }
+
+    return branchMosOptions.filter((item) => {
+      const type = String(item?.type || '').trim().toLowerCase();
+      return allowedMosTypes.includes(type);
+    });
+  }, [allowedMosTypes, branchMosOptions, hasBranchSelected]);
+  const filteredAdditionalMosOptions = useMemo(() => {
+    if (!hasBranchSelected || allowedMosTypes.length === 0) {
+      return [];
+    }
+
+    return branchMosOptions.filter((item) => {
+      const type = String(item?.type || '').trim().toLowerCase();
+      if (!allowedMosTypes.includes(type)) {
+        return false;
+      }
+
+      return !form.additionalMOS?.includes(item.code) && item.code !== form.primaryMOS;
+    });
+  }, [allowedMosTypes, branchMosOptions, form.additionalMOS, form.primaryMOS, hasBranchSelected]);
+  const showCustomRankRateOption = Boolean(form.rankRate) && !rankRateOptions.includes(form.rankRate);
+
+  useEffect(() => {
+    if (!mosTenureDraft.code || mosOptionsLoading || filteredAdditionalMosOptions.length === 0) {
+      return;
+    }
+
+    const allowedCodes = new Set(filteredAdditionalMosOptions.map((item) => item.code));
+    if (!allowedCodes.has(String(mosTenureDraft.code || '').trim().toUpperCase())) {
+      setMosTenureDraft((current) => ({ ...current, code: '' }));
+    }
+  }, [filteredAdditionalMosOptions, mosTenureDraft.code, mosOptionsLoading]);
+
+  useEffect(() => {
+    if (!form.primaryMOS || mosOptionsLoading || filteredPrimaryMosOptions.length === 0) {
+      return;
+    }
+
+    const allowedCodes = new Set(filteredPrimaryMosOptions.map((item) => item.code));
+    if (!allowedCodes.has(String(form.primaryMOS || '').trim().toUpperCase())) {
+      setForm((current) => ({ ...current, primaryMOS: '' }));
+    }
+  }, [filteredPrimaryMosOptions, form.primaryMOS, mosOptionsLoading]);
+
+  const cardBLabelStyle = { display: 'flex', flexDirection: 'column', gap: '0.33rem' };
+  const cardBLabelTextStyle = { fontSize: '0.84rem', letterSpacing: '0.01em', color: '#cfe0ef', fontWeight: 600 };
+  const cardBInputStyle = {
+    minHeight: '2.45rem',
+    borderRadius: '0.48rem',
+    border: '1px solid #334155',
+    background: 'rgba(15, 35, 53, 0.86)',
+    color: '#e8f1f7',
+    padding: '0.55rem 0.72rem',
+    width: '100%',
+  };
+  const cardBSectionStyle = {
+    border: '1px solid #334155',
+    borderRadius: '0.7rem',
+    padding: '1rem',
+    background: 'rgba(8, 23, 36, 0.55)',
+  };
 
   const getMappedExtraction = () => {
     if (!extractionResult) {
-      return { mapped: null, warnings: ['No extraction payload available.'], normalizedCodes: { spdCode: '', reCode: '', separationAuthority: '' } };
+      return { mapped: null, warnings: ['No extraction payload available.'], normalizedCodes: { separationCode: '', reCode: '', separationAuthority: '' } };
     }
 
     return mapExtractedToMilitaryForm(extractionResult, form, recognizedLocations);
   };
 
   const updateFormField = (field, value) => {
-    setForm((current) => ({ ...current, [field]: value }));
+    setForm((current) => {
+      const next = { ...current, [field]: value };
+
+      // Auto-detect era from dates whenever either date changes.
+      if (field === 'startDate' || field === 'endDate') {
+        next.serviceEra = inferServiceEra(next.startDate, next.endDate);
+      }
+
+      return next;
+    });
   };
 
   const handleFileUpload = async (event) => {
@@ -350,7 +508,7 @@ export function MilitaryServiceTab() {
     }
 
     setPendingMappedForm(mapped.mapped);
-    setNormalizedExtractionCodes(mapped.normalizedCodes || { spdCode: '', reCode: '', separationAuthority: '' });
+    setNormalizedExtractionCodes(mapped.normalizedCodes || { separationCode: '', reCode: '', separationAuthority: '' });
     setApplyWarnings(mapped.warnings || []);
     setDiffRows(buildExtractedVsCurrentDiff(form, mapped.mapped));
     setDiffOpen(true);
@@ -363,7 +521,7 @@ export function MilitaryServiceTab() {
       return;
     }
 
-    setNormalizedExtractionCodes(mapped.normalizedCodes || { spdCode: '', reCode: '', separationAuthority: '' });
+    setNormalizedExtractionCodes(mapped.normalizedCodes || { separationCode: '', reCode: '', separationAuthority: '' });
     setApplyWarnings(mapped.warnings || []);
 
     const confirmed = window.confirm('Apply extracted DD-214 values to the manual form?');
@@ -604,7 +762,8 @@ export function MilitaryServiceTab() {
             ) : null}
           </div>
 
-          <div style={{ padding: '0.75rem', border: '1px solid #334155', borderRadius: '0.5rem', backgroundColor: '#0f172a' }}>
+          {hasExtractionConfidence ? (
+            <div style={{ padding: '0.75rem', border: '1px solid #334155', borderRadius: '0.5rem', backgroundColor: '#0f172a' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.7rem', flexWrap: 'wrap' }}>
               <div>
                 <p style={{ fontSize: '0.8rem', fontWeight: 700, color: '#cbd5e1' }}>Extraction Summary</p>
@@ -613,14 +772,14 @@ export function MilitaryServiceTab() {
                 </p>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <a href={DD214_GLOSSARY_LINKS.spdCode} target='_blank' rel='noreferrer' style={{ fontSize: '0.72rem' }}>SPD Code Glossary</a>
+                <a href={DD214_GLOSSARY_LINKS.separationCode} target='_blank' rel='noreferrer' style={{ fontSize: '0.72rem' }}>Separation Code Glossary</a>
                 <a href={DD214_GLOSSARY_LINKS.reCode} target='_blank' rel='noreferrer' style={{ fontSize: '0.72rem' }}>RE Code Glossary</a>
                 <a href={DD214_GLOSSARY_LINKS.separationAuthority} target='_blank' rel='noreferrer' style={{ fontSize: '0.72rem' }}>Separation Authority Glossary</a>
               </div>
             </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(170px, 1fr))', gap: '0.4rem', marginTop: '0.7rem' }}>
-              {toPerFieldRows(extractionConfidence.fieldConfidence || {}).map(([label, confidence]) => (
+              {extractionPerFieldRows.map(([label, confidence]) => (
                 <div key={label} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.35rem 0.5rem', border: '1px solid #243244', borderRadius: '0.4rem' }}>
                   <span style={{ fontSize: '0.72rem', color: '#cbd5e1' }}>{label}</span>
                   <span
@@ -639,7 +798,8 @@ export function MilitaryServiceTab() {
                 </div>
               ))}
             </div>
-          </div>
+            </div>
+          ) : null}
 
           {panelEntries.length > 0 ? (
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '0.7rem' }}>
@@ -681,7 +841,7 @@ export function MilitaryServiceTab() {
             >
               Apply to Form
             </button>
-            {!glossaryStatus.spdCode || !glossaryStatus.reCode || !glossaryStatus.separationAuthority ? (
+            {!glossaryStatus.separationCode || !glossaryStatus.reCode || !glossaryStatus.separationAuthority ? (
               <span style={{ color: '#f87171', fontSize: '0.75rem', fontWeight: 700 }}>
                 One or more glossary links failed validation.
               </span>
@@ -694,9 +854,9 @@ export function MilitaryServiceTab() {
             </ul>
           ) : null}
 
-          {(normalizedExtractionCodes.spdCode || normalizedExtractionCodes.reCode || normalizedExtractionCodes.separationAuthority) ? (
+          {(normalizedExtractionCodes.separationCode || normalizedExtractionCodes.reCode || normalizedExtractionCodes.separationAuthority) ? (
             <div style={{ fontSize: '0.74rem', color: '#cbd5e1' }}>
-              <span style={{ marginRight: '0.7rem' }}>Normalized SPD: {normalizedExtractionCodes.spdCode || '(none)'}</span>
+              <span style={{ marginRight: '0.7rem' }}>Normalized Separation Code: {normalizedExtractionCodes.separationCode || '(none)'}</span>
               <span style={{ marginRight: '0.7rem' }}>Normalized RE: {normalizedExtractionCodes.reCode || '(none)'}</span>
               <span>Authority Validated: {normalizedExtractionCodes.separationAuthority ? 'Yes' : 'No'}</span>
             </div>
@@ -705,67 +865,136 @@ export function MilitaryServiceTab() {
       </Card>
 
       <Card title='Card B - Manual Service Intake'>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.6rem' }}>
-            <label>
-              <span>branchOfService</span>
-              <select value={form.branchOfService} onChange={(event) => updateFormField('branchOfService', event.target.value)}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: '1rem' }}>
+            <label style={cardBLabelStyle}>
+              <span style={cardBLabelTextStyle}>branchOfService</span>
+              <select style={cardBInputStyle} value={form.branchOfService} onChange={(event) => updateFormField('branchOfService', event.target.value)}>
                 <option value=''>Select branch...</option>
                 {BRANCH_VALUES.map((item) => <option key={item} value={item}>{item}</option>)}
               </select>
             </label>
 
-            <label>
-              <span>serviceType</span>
-              <select value={form.serviceType} onChange={(event) => updateFormField('serviceType', event.target.value)}>
+            <label style={cardBLabelStyle}>
+              <span style={cardBLabelTextStyle}>serviceType</span>
+              <select style={cardBInputStyle} value={form.serviceType} onChange={(event) => updateFormField('serviceType', event.target.value)}>
                 <option value=''>Select service type...</option>
                 {SERVICE_TYPE_VALUES.map((item) => <option key={item} value={item}>{item}</option>)}
               </select>
             </label>
 
-            <label>
-              <span>startDate</span>
-              <input type='date' value={form.startDate} onChange={(event) => updateFormField('startDate', event.target.value)} />
+            <label style={cardBLabelStyle}>
+              <span style={cardBLabelTextStyle}>startDate</span>
+              <input style={cardBInputStyle} type='date' value={form.startDate} onChange={(event) => updateFormField('startDate', event.target.value)} />
             </label>
 
-            <label>
-              <span>endDate</span>
-              <input type='date' value={form.endDate} onChange={(event) => updateFormField('endDate', event.target.value)} />
+            <label style={cardBLabelStyle}>
+              <span style={cardBLabelTextStyle}>endDate</span>
+              <input style={cardBInputStyle} type='date' value={form.endDate} onChange={(event) => updateFormField('endDate', event.target.value)} />
             </label>
 
-            <label>
-              <span>rankRate</span>
-              <input value={form.rankRate} onChange={(event) => updateFormField('rankRate', event.target.value)} placeholder='E-5 / O-3 / Chief / PO2' />
+            <label style={cardBLabelStyle}>
+              <span style={cardBLabelTextStyle}>rankRate</span>
+              <select
+                style={cardBInputStyle}
+                value={form.rankRate}
+                onChange={(event) => updateFormField('rankRate', event.target.value)}
+                disabled={!hasBranchSelected}
+              >
+                <option value=''>{hasBranchSelected ? 'Select rank/paygrade...' : 'Select branch first...'}</option>
+                {showCustomRankRateOption ? (
+                  <option value={form.rankRate}>{`${form.rankRate} (from extracted record)`}</option>
+                ) : null}
+                {rankRateOptions.map((item) => <option key={item} value={item}>{item}</option>)}
+              </select>
             </label>
 
-            <label>
-              <span>dischargeType</span>
-              <select value={form.dischargeType} onChange={(event) => updateFormField('dischargeType', event.target.value)}>
+            <label style={cardBLabelStyle}>
+              <span style={cardBLabelTextStyle}>dischargeType</span>
+              <select style={cardBInputStyle} value={form.dischargeType} onChange={(event) => updateFormField('dischargeType', event.target.value)}>
                 <option value=''>Select discharge type...</option>
                 {DISCHARGE_TYPE_VALUES.map((item) => <option key={item} value={item}>{item}</option>)}
               </select>
             </label>
 
-            <label>
-              <span>serviceEra</span>
-              <input value={form.serviceEra} onChange={(event) => updateFormField('serviceEra', event.target.value)} placeholder='Vietnam Era (1964-1975)' />
+            <label style={cardBLabelStyle}>
+              <span style={cardBLabelTextStyle}>serviceEra</span>
+              <select
+                style={cardBInputStyle}
+                value={form.serviceEra}
+                onChange={(event) => updateFormField('serviceEra', event.target.value)}
+              >
+                <option value=''>Auto-detect from service dates...</option>
+                {SERVICE_ERA_VALUES.map((item) => <option key={item} value={item}>{item}</option>)}
+              </select>
             </label>
 
-            <label>
-              <span>primaryMOS</span>
-              <input value={form.primaryMOS} onChange={(event) => updateFormField('primaryMOS', normalizeMosCode(event.target.value))} placeholder='11B / 68W / 4N0X1' />
+            <label style={cardBLabelStyle}>
+              <span style={cardBLabelTextStyle}>primaryMOS</span>
+              <select
+                style={cardBInputStyle}
+                value={form.primaryMOS}
+                onChange={(event) => updateFormField('primaryMOS', normalizeMosCode(event.target.value))}
+                disabled={!hasBranchSelected || !form.rankRate || !hasMosOptions || mosOptionsLoading}
+              >
+                <option value=''>
+                  {mosOptionsLoading
+                    ? 'Loading MOS options...'
+                    : mosOptionsError
+                      ? 'Unable to load options'
+                      : !hasBranchSelected
+                    ? 'Select branch first...'
+                    : !form.rankRate
+                      ? 'Select rank/paygrade first...'
+                    : filteredPrimaryMosOptions.length > 0
+                      ? 'Select MOS / AFSC / rating...'
+                      : 'No MOS options available for selected rank'}
+                </option>
+                {filteredPrimaryMosOptions.map((item) => (
+                  <option key={item.code} value={item.code}>{item.label || item.code}</option>
+                ))}
+              </select>
             </label>
           </div>
 
-          <div style={{ border: '1px solid #334155', borderRadius: '0.5rem', padding: '0.6rem' }}>
+          {mosOptionsError ? (
+            <div style={{ fontSize: '0.76rem', color: '#fca5a5' }}>
+              {mosOptionsError} Confirm backend is running on latest code, then refresh.
+            </div>
+          ) : null}
+
+          <div style={cardBSectionStyle}>
             <p style={{ fontSize: '0.78rem', color: '#93c5fd', fontWeight: 700 }}>MOS / AFSC / Rating - additionalMOS[]</p>
-            <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr auto', gap: '0.5rem', marginTop: '0.5rem' }}>
-              <input placeholder='Code' value={mosTenureDraft.code} onChange={(event) => setMosTenureDraft((current) => ({ ...current, code: event.target.value }))} />
-              <input placeholder='Years (optional)' value={mosTenureDraft.years} onChange={(event) => setMosTenureDraft((current) => ({ ...current, years: event.target.value }))} />
-              <input placeholder='Months (optional)' value={mosTenureDraft.months} onChange={(event) => setMosTenureDraft((current) => ({ ...current, months: event.target.value }))} />
+            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) auto', gap: '0.6rem', marginTop: '0.65rem' }}>
+              <select
+                style={cardBInputStyle}
+                aria-label='additionalMOS'
+                value={mosTenureDraft.code}
+                onChange={(event) => setMosTenureDraft((current) => ({ ...current, code: normalizeMosCode(event.target.value) }))}
+                disabled={!hasBranchSelected || !form.rankRate || !hasMosOptions || mosOptionsLoading}
+              >
+                <option value=''>
+                  {mosOptionsLoading
+                    ? 'Loading MOS options...'
+                    : !hasBranchSelected
+                    ? 'Select branch first...'
+                    : !form.rankRate
+                      ? 'Select rank/paygrade first...'
+                    : filteredAdditionalMosOptions.length > 0
+                      ? 'Select code...'
+                      : 'No additional MOS options available for selected rank'}
+                </option>
+                {filteredAdditionalMosOptions.map((item) => (
+                    <option key={item.code} value={item.code}>{item.label || item.code}</option>
+                  ))}
+              </select>
               <button type='button' onClick={addAdditionalMos} aria-label='Add additional MOS'>Add</button>
             </div>
-            <div style={{ marginTop: '0.5rem', display: 'flex', gap: '0.4rem', flexWrap: 'wrap' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(170px, 1fr))', gap: '0.6rem', marginTop: '0.6rem' }}>
+              <input style={cardBInputStyle} placeholder={placeholders.military.additionalMosYears} value={mosTenureDraft.years} onChange={(event) => setMosTenureDraft((current) => ({ ...current, years: event.target.value }))} />
+              <input style={cardBInputStyle} placeholder={placeholders.military.additionalMosMonths} value={mosTenureDraft.months} onChange={(event) => setMosTenureDraft((current) => ({ ...current, months: event.target.value }))} />
+            </div>
+            <div style={{ marginTop: '0.7rem', display: 'flex', gap: '0.45rem', flexWrap: 'wrap' }}>
               {(form.additionalMOS || []).map((code) => (
                 <span key={code} style={{ border: '1px solid #334155', borderRadius: '999px', padding: '0.2rem 0.45rem' }}>
                   {code}
@@ -775,17 +1004,18 @@ export function MilitaryServiceTab() {
             </div>
           </div>
 
-          <div style={{ border: '1px solid #334155', borderRadius: '0.5rem', padding: '0.6rem' }}>
+          <div style={cardBSectionStyle}>
             <p style={{ fontSize: '0.78rem', color: '#93c5fd', fontWeight: 700 }}>Deployment & Combat</p>
-            <div style={{ display: 'grid', gridTemplateColumns: '3fr auto', gap: '0.5rem', marginTop: '0.5rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) auto', gap: '0.6rem', marginTop: '0.65rem' }}>
               <input
-                placeholder='deploymentLocations[] entry'
+                style={cardBInputStyle}
+                placeholder={placeholders.military.deploymentLocationEntry}
                 value={deploymentDraft}
                 onChange={(event) => setDeploymentDraft(event.target.value)}
               />
               <button type='button' onClick={addDeploymentLocation} aria-label='Add deployment location'>Add</button>
             </div>
-            <div style={{ marginTop: '0.5rem', display: 'flex', gap: '0.4rem', flexWrap: 'wrap' }}>
+            <div style={{ marginTop: '0.7rem', display: 'flex', gap: '0.45rem', flexWrap: 'wrap' }}>
               {(form.deploymentLocations || []).map((location) => (
                 <span key={location} style={{ border: '1px solid #334155', borderRadius: '999px', padding: '0.2rem 0.45rem' }}>
                   {location}
@@ -793,7 +1023,7 @@ export function MilitaryServiceTab() {
                 </span>
               ))}
             </div>
-            <label style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', marginTop: '0.5rem' }}>
+            <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '0.75rem' }}>
               <input
                 type='checkbox'
                 checked={form.combatVeteran}
@@ -803,13 +1033,13 @@ export function MilitaryServiceTab() {
             </label>
           </div>
 
-          <div style={{ border: '1px solid #334155', borderRadius: '0.5rem', padding: '0.6rem' }}>
+          <div style={cardBSectionStyle}>
             <p style={{ fontSize: '0.78rem', color: '#93c5fd', fontWeight: 700 }}>hazardPayIndicators[]</p>
-            <div style={{ display: 'grid', gridTemplateColumns: '3fr auto', gap: '0.5rem', marginTop: '0.5rem' }}>
-              <input value={manualHazardDraft} onChange={(event) => setManualHazardDraft(event.target.value)} placeholder='Add hazard pay indicator' />
+            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) auto', gap: '0.6rem', marginTop: '0.65rem' }}>
+              <input style={cardBInputStyle} value={manualHazardDraft} onChange={(event) => setManualHazardDraft(event.target.value)} placeholder={placeholders.military.hazardPayIndicator} />
               <button type='button' onClick={addHazardIndicator} aria-label='Add hazard indicator'>Add</button>
             </div>
-            <div style={{ marginTop: '0.5rem', display: 'flex', gap: '0.4rem', flexWrap: 'wrap' }}>
+            <div style={{ marginTop: '0.7rem', display: 'flex', gap: '0.45rem', flexWrap: 'wrap' }}>
               {(form.hazardPayIndicators || []).map((indicator) => (
                 <span key={indicator} style={{ border: '1px solid #334155', borderRadius: '999px', padding: '0.2rem 0.45rem' }}>
                   {indicator}

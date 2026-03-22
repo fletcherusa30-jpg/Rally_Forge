@@ -92,8 +92,48 @@
                                 ],
                 "Space Force":  [
                                     {
+                                        "code":  "5S",
+                                        "title":  "Space Systems Operations"
+                                    },
+                                    {
+                                        "code":  "5S0",
+                                        "title":  "Space Systems Operations"
+                                    },
+                                    {
+                                        "code":  "5I0",
+                                        "title":  "All-Source Intelligence"
+                                    },
+                                    {
+                                        "code":  "1C6",
+                                        "title":  "Space Systems Operations"
+                                    },
+                                    {
                                         "code":  "1C6X1",
                                         "title":  "Space Systems Operations"
+                                    },
+                                    {
+                                        "code":  "1N0",
+                                        "title":  "All-Source Intelligence"
+                                    },
+                                    {
+                                        "code":  "1N0X1",
+                                        "title":  "All-Source Intelligence"
+                                    },
+                                    {
+                                        "code":  "1N1",
+                                        "title":  "Geospatial Intelligence"
+                                    },
+                                    {
+                                        "code":  "1N1X1",
+                                        "title":  "Geospatial Intelligence"
+                                    },
+                                    {
+                                        "code":  "1N2",
+                                        "title":  "Signals Intelligence"
+                                    },
+                                    {
+                                        "code":  "1N2X1",
+                                        "title":  "Signals Intelligence"
                                     },
                                     {
                                         "code":  "1N8X1",
@@ -1636,7 +1676,13 @@
                                         "family":  "Intelligence / Cyber / Communications / IT",
                                         "examples":  [
                                                          "35F",
+                                                         "5I0",
+                                                         "1N0",
                                                          "1N0X1",
+                                                         "1N1",
+                                                         "1N1X1",
+                                                         "1N2",
+                                                         "1N2X1",
                                                          "IS",
                                                          "IT",
                                                          "CTN",
@@ -1753,6 +1799,9 @@
                                                       ],
                                         "family":  "Space / Missile / Satellite Ops",
                                         "examples":  [
+                                                         "5S",
+                                                         "5S0",
+                                                         "1C6",
                                                          "1C6X1",
                                                          "13S",
                                                          "3D1X3"

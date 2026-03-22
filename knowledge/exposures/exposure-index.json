@@ -124,7 +124,13 @@
         "family":  "Intelligence / Cyber / Communications / IT",
         "examples":  [
                          "35F",
+                         "5I0",
+                         "1N0",
                          "1N0X1",
+                         "1N1",
+                         "1N1X1",
+                         "1N2",
+                         "1N2X1",
                          "IS",
                          "IT",
                          "CTN",
@@ -241,6 +247,9 @@
                       ],
         "family":  "Space / Missile / Satellite Ops",
         "examples":  [
+                         "5S",
+                         "5S0",
+                         "1C6",
                          "1C6X1",
                          "13S",
                          "3D1X3"

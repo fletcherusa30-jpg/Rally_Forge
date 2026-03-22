@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { normalizeDecisionSuggestion } from '../../services/normalization/suggestionNormalization.js';
+import { placeholders } from '../../system/placeholders/index.js';
 
 export function ManualConditionEntry({ onSave, initialDecisionDate = '', initialConditionName = '', seedConditions = [], seedSuggestions = [] }) {
   const [decisionDate, setDecisionDate] = useState(initialDecisionDate || '');
@@ -210,7 +211,7 @@ export function ManualConditionEntry({ onSave, initialDecisionDate = '', initial
             value={decisionDate}
             onChange={(e) => setDecisionDate(e.target.value)}
             style={inputStyle}
-            placeholder="When was the decision made?"
+            placeholder={placeholders.conditions.decisionDate}
           />
           {decisionDate && (
             <p style={{ fontSize: '0.7rem', color: '#10b981', marginTop: '0.25rem' }}>
@@ -244,7 +245,7 @@ export function ManualConditionEntry({ onSave, initialDecisionDate = '', initial
                 onChange={(e) => setNewCondition({ ...newCondition, percentage: e.target.value })}
                 style={inputStyle}
               >
-                <option value="">Select %</option>
+                <option value="">{placeholders.conditions.ratingPercentSelect}</option>
                 <option value="0">0%</option>
                 <option value="10">10%</option>
                 <option value="20">20%</option>
@@ -281,7 +282,7 @@ export function ManualConditionEntry({ onSave, initialDecisionDate = '', initial
             type="text"
             value={newCondition.name}
             onChange={(e) => setNewCondition({ ...newCondition, name: e.target.value })}
-            placeholder="e.g., Tinnitus, PTSD, Lower back pain"
+            placeholder={placeholders.conditions.disabilityName}
             style={inputStyle}
           />
         </div>

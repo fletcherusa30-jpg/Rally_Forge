@@ -75,7 +75,7 @@ function normalizeMappedMos(raw) {
   // Accept common DD214 specialty formats: Army/USMC style, AFSC style, and rating/designator style.
   const looksValid =
     /^[0-9]{2,3}[A-Z][A-Z0-9]*$/.test(value) ||
-    /^[0-9][A-Z][0-9A-Z]{3,5}$/.test(value) ||
+    /^[0-9][A-Z][0-9A-Z]{1,5}$/.test(value) ||
     /^[A-Z]{2,5}[0-9]?$/.test(value);
 
   return looksValid ? value : null;

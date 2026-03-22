@@ -4,8 +4,8 @@ import {
   SERVICE_TYPE_VALUES,
 } from './schema.js';
 
-const MOS_PATTERN = /^(?:[0-9]{2,4}[A-Z][A-Z0-9]{0,3}|[A-Z]{2,5}[0-9]?)$/;
-const SPD_PATTERN = /^[A-Z0-9]{3}$/;
+const MOS_PATTERN = /^(?:[0-9]{2,4}[A-Z][A-Z0-9]{0,3}|[0-9][A-Z][A-Z0-9]{0,4}|[A-Z]{2,5}[0-9]?)$/;
+const SEPARATION_CODE_PATTERN = /^[A-Z0-9]{3}$/;
 const RE_PATTERN = /^(?:RE)?[1-4](?:[A-C])?$/;
 
 const LOCATION_NORMALIZATION_MAP = {
@@ -48,9 +48,13 @@ export function isValidMosCode(value) {
   return MOS_PATTERN.test(normalized);
 }
 
-export function normalizeSpdCode(value) {
+export function normalizeSeparationCode(value) {
   const cleaned = String(value || '').trim().toUpperCase().replace(/[^A-Z0-9]/g, '');
-  return SPD_PATTERN.test(cleaned) ? cleaned : '';
+  return SEPARATION_CODE_PATTERN.test(cleaned) ? cleaned : '';
+}
+
+export function normalizeSpdCode(value) {
+  return normalizeSeparationCode(value);
 }
 
 export function normalizeReCode(value) {
@@ -137,7 +141,9 @@ export function validateMilitaryServiceForm(form, knownDeploymentLocations = [])
     errors.push('Discharge type is invalid.');
   }
 
-  if (form.primaryMOS && !isValidMosCode(form.primaryMOS)) {
+  if (!String(form.primaryMOS || '').trim()) {
+    errors.push('Primary MOS/AFSC/Rating is required.');
+  } else if (!isValidMosCode(form.primaryMOS)) {
     errors.push('Primary MOS format is invalid.');
   }
 

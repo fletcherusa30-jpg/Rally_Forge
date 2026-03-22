@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { normalizeTreatmentSuggestion } from '../../services/normalization/suggestionNormalization.js';
+import { placeholders } from '../../system/placeholders/index.js';
 
 export function CurrentTreatmentManualEntry({ onSave, initialEntry = null, seedConditions = [], seedSuggestions = [] }) {
   const emitTelemetry = (event, details = {}) => {
@@ -309,7 +310,7 @@ export function CurrentTreatmentManualEntry({ onSave, initialEntry = null, seedC
           </div>
           <div>
             <label style={{ display: 'block', fontSize: '0.75rem', color: '#94a3b8', marginBottom: '0.25rem' }}>Medications</label>
-            <input value={form.medications} onChange={(event) => update('medications', event.target.value)} placeholder='Comma-separated' style={inputStyle} />
+            <input value={form.medications} onChange={(event) => update('medications', event.target.value)} placeholder={placeholders.treatment.medications} style={inputStyle} />
           </div>
         </div>
 

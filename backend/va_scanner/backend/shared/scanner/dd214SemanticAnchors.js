@@ -315,7 +315,14 @@ function classifyMos(primarySpecialty, awards = []) {
   const awardText = (awards || []).join(' ').toUpperCase();
   const firstTwo = mos.slice(0, 2);
 
-  const occupationalCategory = {
+  const explicitAfscCategory = (() => {
+    if (/^(?:5S|1C6)/.test(mos)) return 'Space Operations';
+    if (/^(?:5I0|1N0|1N1|1N2|1N8)/.test(mos)) return 'Intelligence';
+    if (/^(?:1B4|17D|3D)/.test(mos)) return 'Cyber/Communications';
+    return null;
+  })();
+
+  const occupationalCategory = explicitAfscCategory || {
     '11': 'Infantry',
     '12': 'Engineering',
     '13': 'Field Artillery',

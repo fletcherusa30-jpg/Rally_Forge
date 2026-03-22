@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { placeholders } from '../../system/placeholders/index.js';
 
 const STORAGE_KEY = 'rallyforge_retirement_planner_v3';
 
@@ -811,7 +812,7 @@ export function RetirementPlanner({ retirementStage = 'planning' }) {
             name={field.name}
             value={formData[field.name]}
             onChange={handleChange}
-            placeholder="0"
+            placeholder={placeholders.financial.retirementManualEntry}
             style={{ ...inputStyle, marginBottom: '0.75rem' }}
           />
         )}

@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useClaimWorkspace } from '../../context/ClaimWorkspaceContext';
+import { placeholders } from '../../system/placeholders/index.js';
 // eslint-disable-next-line no-unused-vars
 import { ProfileSectionCard } from './ProfileSectionCard.jsx';
 // eslint-disable-next-line no-unused-vars
@@ -428,7 +429,7 @@ export function ProfilePage() {
     );
   };
 
-  const renderSelect = (sectionKey, field, label, options, placeholder = 'Select...') => {
+  const renderSelect = (sectionKey, field, label, options, placeholder = placeholders.profile.select) => {
     const inputId = `${sectionKey}-${field}`;
     const isDisabled = sectionMachine[sectionKey] === SECTION_MACHINE_STATE.IDLE || sectionMachine[sectionKey] === SECTION_MACHINE_STATE.SAVING;
 
@@ -520,11 +521,11 @@ export function ProfilePage() {
         onSave={() => saveSection('personal')}
       >
         <div className='profile-grid'>
-          {renderInput('personal', 'firstName', 'First Name', 'text', 'John')}
-          {renderInput('personal', 'middleName', 'Middle Name', 'text', 'M.')}
-          {renderInput('personal', 'lastName', 'Last Name', 'text', 'Doe')}
+          {renderInput('personal', 'firstName', 'First Name', 'text', placeholders.profile.personal.firstName)}
+          {renderInput('personal', 'middleName', 'Middle Name', 'text', placeholders.profile.personal.middleName)}
+          {renderInput('personal', 'lastName', 'Last Name', 'text', placeholders.profile.personal.lastName)}
           {renderInput('personal', 'dateOfBirth', 'Date of Birth', 'date')}
-          {renderInput('personal', 'ssnLast4', 'Last 4 of SSN', 'text', 'XXXX')}
+          {renderInput('personal', 'ssnLast4', 'Last 4 of SSN', 'text', placeholders.profile.personal.ssnLast4)}
         </div>
       </ProfileSectionCard>
 
@@ -549,9 +550,9 @@ export function ProfilePage() {
         onSave={() => saveSection('contact')}
       >
         <div className='profile-grid'>
-          {renderInput('contact', 'email', 'Email', 'email', 'you@example.com')}
-          {renderInput('contact', 'phone', 'Phone', 'tel', '(555) 000-0000')}
-          {renderInput('contact', 'city', 'City', 'text', 'City')}
+          {renderInput('contact', 'email', 'Email', 'email', placeholders.profile.contact.email)}
+          {renderInput('contact', 'phone', 'Phone', 'tel', placeholders.profile.contact.phone)}
+          {renderInput('contact', 'city', 'City', 'text', placeholders.profile.contact.city)}
           <div className='profile-field'>
             <label className='profile-label' htmlFor='contact-state'>State</label>
             <select
@@ -563,14 +564,14 @@ export function ProfilePage() {
               disabled={sectionMachine.contact === SECTION_MACHINE_STATE.IDLE || sectionMachine.contact === SECTION_MACHINE_STATE.SAVING}
               aria-disabled={sectionMachine.contact === SECTION_MACHINE_STATE.IDLE || sectionMachine.contact === SECTION_MACHINE_STATE.SAVING}
             >
-              <option value=''>Select state...</option>
+              <option value=''>{placeholders.profile.contact.state}</option>
               {US_STATES.map((code) => (
                 <option key={code} value={code}>{code}</option>
               ))}
             </select>
             {validationErrors?.contact?.state && <p className='profile-field-error'>{validationErrors.contact.state}</p>}
           </div>
-          {renderSelect('contact', 'preferredContactMethod', 'Preferred Contact Method', PREFERRED_CONTACT_OPTIONS.map((option) => option.value), 'Select contact method...')}
+          {renderSelect('contact', 'preferredContactMethod', 'Preferred Contact Method', PREFERRED_CONTACT_OPTIONS.map((option) => option.value), placeholders.profile.contact.preferredContactMethod)}
         </div>
       </ProfileSectionCard>
 

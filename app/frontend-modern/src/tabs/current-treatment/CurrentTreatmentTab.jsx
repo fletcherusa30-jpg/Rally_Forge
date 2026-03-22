@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import { Card } from '../../components/Card.jsx';
 import { WorkflowCarryForwardCard } from '../../components/WorkflowCarryForwardCard.jsx';
 import { useClaimWorkspace } from '../../context/ClaimWorkspaceContext.jsx';
+import { placeholders } from '../../system/placeholders/index.js';
 import {
   buildCountSummary,
   buildProviderTimeline,
@@ -181,7 +182,7 @@ function MedicationRow({ med, index, onChange, onRemove }) {
           value={med.medicationName}
           onChange={(e) => onChange(index, 'medicationName', e.target.value)}
           style={inputStyle}
-          placeholder='e.g., Sertraline'
+          placeholder={placeholders.treatment.medicationName}
         />
       </div>
       <div>
@@ -191,7 +192,7 @@ function MedicationRow({ med, index, onChange, onRemove }) {
           value={med.dosage}
           onChange={(e) => onChange(index, 'dosage', e.target.value)}
           style={inputStyle}
-          placeholder='e.g., 50mg daily'
+          placeholder={placeholders.treatment.dosage}
         />
       </div>
       <div>
@@ -201,7 +202,7 @@ function MedicationRow({ med, index, onChange, onRemove }) {
           value={med.sideEffects}
           onChange={(e) => onChange(index, 'sideEffects', e.target.value)}
           style={inputStyle}
-          placeholder='Optional'
+          placeholder={placeholders.treatment.sideEffects}
         />
       </div>
       <button
@@ -723,8 +724,8 @@ export function CurrentTreatmentTab() {
           <Card title={editingId ? 'Edit Entry' : 'Manual Entry — Current Diagnoses and Symptoms'}>
             <p style={{ fontSize: '0.8rem', color: '#94a3b8', marginBottom: '1rem', lineHeight: 1.5 }}>
               {editingId
-                ? 'Editing an existing condition. Update the fields and click Update Entry.'
-                : 'No document? Enter a current diagnosis or symptom record directly. Condition names are normalized to VA terminology.'}
+                ? placeholders.helperText.treatment.editingEntry
+                : placeholders.helperText.treatment.manualEntryGuide}
             </p>
 
             <div style={{ display: 'grid', gap: '0.85rem' }}>
@@ -739,7 +740,7 @@ export function CurrentTreatmentTab() {
                   value={draft.conditionName}
                   onChange={(e) => updateDraftField('conditionName', e.target.value)}
                   style={inputStyle}
-                  placeholder='e.g., PTSD, Lumbar strain, Tinnitus'
+                  placeholder={placeholders.treatment.conditionName}
                 />
                 {manualErrors.conditionName && (
                   <span style={errorStyle}>{manualErrors.conditionName}</span>
@@ -758,7 +759,7 @@ export function CurrentTreatmentTab() {
                   onChange={(e) => updateDraftField('symptomSummary', e.target.value)}
                   rows={3}
                   style={{ ...inputStyle, resize: 'vertical' }}
-                  placeholder='Describe current symptoms and functional impact'
+                  placeholder={placeholders.treatment.symptomSummary}
                 />
                 {manualErrors.symptomSummary && (
                   <span style={errorStyle}>{manualErrors.symptomSummary}</span>
@@ -802,7 +803,7 @@ export function CurrentTreatmentTab() {
                     value={draft.providerName}
                     onChange={(e) => updateDraftField('providerName', e.target.value)}
                     style={inputStyle}
-                    placeholder='e.g., Dr. Smith'
+                    placeholder={placeholders.treatment.providerName}
                   />
                 </div>
 
@@ -816,7 +817,7 @@ export function CurrentTreatmentTab() {
                     value={draft.providerType}
                     onChange={(e) => updateDraftField('providerType', e.target.value)}
                     style={inputStyle}
-                    placeholder='e.g., Psychiatrist'
+                    placeholder={placeholders.treatment.providerType}
                   />
                 </div>
               </div>
@@ -833,7 +834,7 @@ export function CurrentTreatmentTab() {
                   onChange={(e) => updateDraftField('treatmentDetails', e.target.value)}
                   rows={2}
                   style={{ ...inputStyle, resize: 'vertical' }}
-                  placeholder='Describe current treatment plan, therapies, procedures'
+                  placeholder={placeholders.treatment.treatmentDetails}
                 />
               </div>
 

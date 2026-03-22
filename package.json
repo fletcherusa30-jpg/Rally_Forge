@@ -90,6 +90,7 @@
     "audit:metadata:strict": "node tooling/scripts/audit-metadata-gate.mjs --pretty --fail-on-warn",
     "audit:architecture": "node tooling/scripts/check-architecture-conformance.mjs",
     "audit:docs": "node tooling/scripts/check-canonical-md.mjs",
+    "audit:placeholders": "node tooling/scripts/audit-placeholder-registry.mjs",
     "audit:strs-precision": "node tooling/scripts/strs-precision-report.mjs",
     "audit:strs-feedback": "node tooling/scripts/strs-feedback-report.mjs",
     "audit:full-system": "powershell -ExecutionPolicy Bypass -File scripts/full_system_audit.ps1",

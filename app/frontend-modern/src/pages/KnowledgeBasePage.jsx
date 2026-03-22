@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Card } from '../components/Card';
+import { placeholders } from '../system/placeholders/index.js';
 import {
   MODEL_PRICING,
   getProfessionalSearchConfig,
@@ -271,7 +272,7 @@ export default function KnowledgeBasePage() {
               <div className='kb-pro-search-head'>
                 <div>
                   <h4>Professional Search</h4>
-                  <div className='kb-subline'>Design mode only: fully mocked, no external API calls, no billing.</div>
+                  <div className='kb-subline'>{placeholders.helperText.knowledge.designModeNotice}</div>
                 </div>
                 <span className='kb-pro-mode-pill'>{proConfig.mode.toUpperCase()}</span>
               </div>
@@ -292,7 +293,7 @@ export default function KnowledgeBasePage() {
                     type='text'
                     value={proContext}
                     onChange={(e) => setProContext(e.target.value)}
-                    placeholder='Add internal context to the simulated request'
+                    placeholder={placeholders.knowledge.researchContext}
                     className='kb-input'
                   />
                 </label>
@@ -302,7 +303,7 @@ export default function KnowledgeBasePage() {
                 <button type='button' className='kb-button' onClick={handleProfessionalSearch} disabled={proLoading}>
                   {proLoading ? 'Running Professional Search…' : 'Professional Search'}
                 </button>
-                <div className='kb-subline'>Simulated sale price per search: ${proConfig.salePricePerSearch.toFixed(2)}</div>
+                <div className='kb-subline'>{placeholders.helperText.knowledge.simulatedSalePricePrefix} ${proConfig.salePricePerSearch.toFixed(2)}</div>
               </div>
 
               {proError && <div className='kb-error'>{proError}</div>}
@@ -329,7 +330,7 @@ export default function KnowledgeBasePage() {
                   type='text'
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder='Search regulations, conditions, or cases...'
+                  placeholder={placeholders.knowledge.searchQuery}
                   className='kb-input'
                   aria-label='Knowledge base search'
                 />
@@ -398,7 +399,7 @@ export default function KnowledgeBasePage() {
                 type='text'
                 value={caseFilter}
                 onChange={(e) => { setCaseFilter(e.target.value); setSelectedCase(null); }}
-                placeholder='Filter cases…'
+                placeholder={placeholders.knowledge.caseFilter}
                 className='kb-input kb-filter-input'
                 aria-label='Filter cases'
               />

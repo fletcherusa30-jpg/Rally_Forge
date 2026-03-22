@@ -38,6 +38,31 @@ export default [
     }
   },
   {
+    files: ['app/frontend-modern/src/**/*.{js,jsx}'],
+    ignores: [
+      'app/frontend-modern/src/tests/**/*.{js,jsx}',
+      'app/frontend-modern/src/**/__tests__/**/*.{js,jsx}',
+      'app/frontend-modern/src/system/placeholders/**/*.{js,jsx}'
+    ],
+    rules: {
+      'no-restricted-syntax': [
+        'error',
+        {
+          selector: "JSXAttribute[name.name='placeholder'][value.type='Literal']",
+          message: 'Use placeholders registry values instead of hardcoded placeholder strings.'
+        },
+        {
+          selector: "JSXAttribute[name.name='placeholder'] > JSXExpressionContainer > Literal",
+          message: 'Use placeholders registry values instead of hardcoded placeholder strings.'
+        },
+        {
+          selector: "JSXAttribute[name.name='placeholder'] > JSXExpressionContainer > TemplateLiteral[expressions.length=0]",
+          message: 'Use placeholders registry values instead of hardcoded placeholder strings.'
+        }
+      ]
+    }
+  },
+  {
     files: ['**/*.test.{js,mjs,jsx}'],
     languageOptions: {
       globals: {

@@ -11,11 +11,55 @@ import {
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const MOS_KNOWLEDGE_ROOT = path.join(__dirname, '..', '..', 'knowledge', 'mos');
+
+const MOS_FILE_BY_BRANCH = {
+  Army: 'army.json',
+  Navy: 'navy.json',
+  'Air Force': 'air-force.json',
+  'Marine Corps': 'marine-corps.json',
+  'Coast Guard': 'coast-guard.json',
+  'Space Force': 'space-force.json',
+  'Public Health Service Commissioned Corps (USPHS)': 'usphs.json',
+  'NOAA Commissioned Officer Corps': 'noaa.json',
+};
 
 const router = express.Router();
 
 // In-memory storage (would be replaced with database in production)
 let militaryRecords = [];
+
+function normalizeBranchName(value) {
+  const branch = String(value || '').trim();
+  return Object.prototype.hasOwnProperty.call(MOS_FILE_BY_BRANCH, branch) ? branch : '';
+}
+
+function normalizeMosEntry(entry = {}) {
+  const code = String(entry.code || '').trim().toUpperCase();
+  const title = String(entry.title || '').trim();
+  const type = String(entry.type || '').trim().toLowerCase();
+  const description = String(entry.description || '').trim();
+  const branch = String(entry.branch || '').trim();
+  const exposureCategory = String(entry.exposureCategory || '').trim();
+  const notes = String(entry.notes || '').trim();
+  const crossBranchEquivalents = Array.isArray(entry.crossBranchEquivalents)
+    ? entry.crossBranchEquivalents
+      .map((value) => String(value || '').trim().toUpperCase())
+      .filter(Boolean)
+    : [];
+
+  return {
+    code,
+    title,
+    type,
+    description,
+    branch,
+    crossBranchEquivalents,
+    exposureCategory,
+    notes,
+    label: title ? `${code} - ${title}` : code,
+  };
+}
 
 /**
  * GET /api/military/records
@@ -55,6 +99,48 @@ router.get('/presumptive-knowledge', async (_req, res) => {
     });
   } catch (error) {
     res.status(500).json({
+      success: false,
+      error: error.message,
+    });
+  }
+});
+
+/**
+ * GET /api/military/mos-options?branch=<branch>
+ * Return branch-specific MOS/AFSC/rating options from the root knowledge catalog.
+ */
+router.get('/mos-options', async (req, res) => {
+  try {
+    const branch = normalizeBranchName(req.query?.branch);
+
+    if (!branch) {
+      return res.status(400).json({
+        success: false,
+        error: 'A valid branch query parameter is required',
+      });
+    }
+
+    const fileName = MOS_FILE_BY_BRANCH[branch];
+    const filePath = path.join(MOS_KNOWLEDGE_ROOT, fileName);
+    const raw = await fs.readFile(filePath, 'utf-8');
+    const parsed = JSON.parse(raw.replace(/^\uFEFF/, ''));
+
+    const options = Array.isArray(parsed?.mos)
+      ? parsed.mos
+        .map((item) => normalizeMosEntry(item))
+        .filter((item) => item.code)
+        .sort((a, b) => a.code.localeCompare(b.code))
+      : [];
+
+    return res.json({
+      success: true,
+      data: {
+        branch,
+        options,
+      },
+    });
+  } catch (error) {
+    return res.status(500).json({
       success: false,
       error: error.message,
     });

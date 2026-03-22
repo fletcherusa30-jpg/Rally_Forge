@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { useClaimWorkspace } from '../../context/ClaimWorkspaceContext.jsx';
+import { placeholders } from '../../system/placeholders/index.js';
 
 const WIZARD_STEPS = [
   {
@@ -234,7 +235,7 @@ function WizardStepCard({ step, answer, onChange }) {
           <textarea
             value={answer.details}
             onChange={(e) => onChange({ ...answer, details: e.target.value })}
-            placeholder='Add details (optional)…'
+            placeholder={placeholders.claimWizard.additionalDetails}
             rows={3}
             style={{
               width: '100%',

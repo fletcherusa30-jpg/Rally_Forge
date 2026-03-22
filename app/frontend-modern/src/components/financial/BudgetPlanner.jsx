@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { placeholders } from '../../system/placeholders/index.js';
 
 const STORAGE_KEY = 'rallyforge_budget_planner_v2';
 const VA_DECISION_ENTITLEMENT_KEY = 'rallyforge_va_decision_entitlement';
@@ -782,7 +783,7 @@ export function BudgetPlanner() {
             name={field.name}
             value={formData[field.name]}
             onChange={handleChange}
-            placeholder="Enter amount (e.g. 125000)"
+            placeholder={placeholders.financial.budgetAmount}
             style={{ ...inputStyle, marginBottom: '0.75rem' }}
           />
         )}
@@ -801,7 +802,7 @@ export function BudgetPlanner() {
             name={field.name}
             value={formData[field.name]}
             onChange={handleChange}
-            placeholder="0"
+            placeholder={placeholders.financial.budgetManualEntry}
             style={{ ...inputStyle, marginBottom: '0.75rem' }}
           />
         )}

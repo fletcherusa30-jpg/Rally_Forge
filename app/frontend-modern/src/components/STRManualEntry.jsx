@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { placeholders } from '../system/placeholders/index.js';
 
 /**
  * Service Treatment Records (STR) Manual Entry Form
@@ -276,7 +277,7 @@ export function STRManualEntry({ onSave, initialEntry = null }) {
                 type="text"
                 value={newEntry.conditionName}
                 onChange={(e) => setNewEntry({ ...newEntry, conditionName: e.target.value })}
-                placeholder="e.g., Knee injury, Dermatitis, Respiratory symptoms"
+                placeholder={placeholders.str.conditionName}
                 style={errors.conditionName ? errorInputStyle : inputStyle}
               />
               {errors.conditionName && <span style={{ fontSize: '0.7rem', color: '#ef4444' }}>{errors.conditionName}</span>}
@@ -315,7 +316,7 @@ export function STRManualEntry({ onSave, initialEntry = null }) {
                 type="text"
                 value={newEntry.location}
                 onChange={(e) => setNewEntry({ ...newEntry, location: e.target.value })}
-                placeholder="e.g., Camp Lejeune, Kuwait"
+                placeholder={placeholders.str.location}
                 style={inputStyle}
               />
             </div>
@@ -347,7 +348,7 @@ export function STRManualEntry({ onSave, initialEntry = null }) {
                 type="text"
                 value={newEntry.provider}
                 onChange={(e) => setNewEntry({ ...newEntry, provider: e.target.value })}
-                placeholder="e.g., Dr. Smith, VA Hospital"
+                placeholder={placeholders.str.providerName}
                 style={inputStyle}
               />
             </div>
@@ -358,7 +359,7 @@ export function STRManualEntry({ onSave, initialEntry = null }) {
             <textarea
               value={newEntry.description}
               onChange={(e) => setNewEntry({ ...newEntry, description: e.target.value })}
-              placeholder="Detailed description of what happened, symptoms, or treatment provided"
+              placeholder={placeholders.str.description}
               style={errors.description ? { ...inputStyle, minHeight: '80px', borderColor: '#ef4444' } : { ...inputStyle, minHeight: '80px' }}
             />
             {errors.description && <span style={{ fontSize: '0.7rem', color: '#ef4444' }}>{errors.description}</span>}
@@ -436,7 +437,7 @@ export function STRManualEntry({ onSave, initialEntry = null }) {
             <textarea
               value={newEntry.chronicityEvidence}
               onChange={(e) => setNewEntry({ ...newEntry, chronicityEvidence: e.target.value })}
-              placeholder="Evidence of continuous or recurrent symptoms, hospitalizations, or ongoing treatment"
+              placeholder={placeholders.str.chronicityEvidence}
               style={{ ...inputStyle, minHeight: '60px' }}
             />
           </div>
@@ -447,7 +448,7 @@ export function STRManualEntry({ onSave, initialEntry = null }) {
               <textarea
                 value={newEntry.continuityNotes}
                 onChange={(e) => setNewEntry({ ...newEntry, continuityNotes: e.target.value })}
-                placeholder="How symptoms have persisted or evolved over time"
+                placeholder={placeholders.str.continuityNotes}
                 style={errors.continuityNotes ? { ...inputStyle, minHeight: '60px', borderColor: '#ef4444' } : { ...inputStyle, minHeight: '60px' }}
               />
               {errors.continuityNotes && <span style={{ fontSize: '0.7rem', color: '#ef4444' }}>{errors.continuityNotes}</span>}
@@ -459,7 +460,7 @@ export function STRManualEntry({ onSave, initialEntry = null }) {
             <textarea
               value={newEntry.nexusIndicators}
               onChange={(e) => setNewEntry({ ...newEntry, nexusIndicators: e.target.value })}
-              placeholder="Evidence establishing nexus between service and current condition"
+              placeholder={placeholders.str.nexusIndicators}
               style={{ ...inputStyle, minHeight: '60px' }}
             />
           </div>

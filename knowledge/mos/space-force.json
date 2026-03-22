@@ -2,14 +2,124 @@
     "branch": "Space Force",
     "mos": [
         {
+            "code": "5S",
+            "title": "Space Systems Operations",
+            "description": "USSF enlisted specialist for space domain operations, orbital systems control, and space mission execution.",
+            "type": "enlisted",
+            "branch": "USSF",
+            "crossBranchEquivalents": ["1C6", "1C6X1", "25S", "K10A", "K36A", "2651"],
+            "exposureCategory": "Space / Missile / Satellite Ops",
+            "notes": "USSF enlisted AFSC"
+        },
+        {
+            "code": "5S0",
+            "title": "Space Systems Operations",
+            "description": "USSF enlisted specialist for space domain operations, orbital systems control, and space mission execution.",
+            "type": "enlisted",
+            "branch": "USSF",
+            "crossBranchEquivalents": ["5S", "1C6", "1C6X1", "25S", "K10A", "K36A", "2651"],
+            "exposureCategory": "Space / Missile / Satellite Ops",
+            "notes": "USSF enlisted AFSC"
+        },
+        {
+            "code": "5I0",
+            "title": "All-Source Intelligence",
+            "description": "USSF enlisted intelligence specialty focused on all-source analysis supporting space operations and threat characterization.",
+            "type": "enlisted",
+            "branch": "USSF",
+            "crossBranchEquivalents": ["1N0", "1N0X1", "35F", "K36A", "0231"],
+            "exposureCategory": "Intelligence / Cyber / Communications / IT",
+            "notes": "USSF enlisted AFSC"
+        },
+        {
+            "code": "1C6",
+            "title": "Space Systems Operations",
+            "description": "Legacy Air Force specialty retained for USSF transition populations in space systems operations.",
+            "type": "enlisted",
+            "branch": "USSF",
+            "crossBranchEquivalents": ["5S", "5S0", "1C6X1", "25S", "K10A", "K36A", "2651"],
+            "exposureCategory": "Space / Missile / Satellite Ops",
+            "notes": "USSF enlisted AFSC"
+        },
+        {
             "code": "1C6X1",
             "title": "Space Systems Operations",
-            "type": "enlisted"
+            "description": "Legacy Air Force specialty retained for USSF transition populations in space systems operations.",
+            "type": "enlisted",
+            "branch": "USSF",
+            "crossBranchEquivalents": ["5S", "5S0", "1C6", "25S", "K10A", "K36A", "2651"],
+            "exposureCategory": "Space / Missile / Satellite Ops",
+            "notes": "USSF enlisted AFSC"
+        },
+        {
+            "code": "1N0",
+            "title": "All-Source Intelligence",
+            "description": "Legacy Air Force intelligence specialty retained for USSF transition populations.",
+            "type": "enlisted",
+            "branch": "USSF",
+            "crossBranchEquivalents": ["5I0", "1N0X1", "35F", "K36A", "0231"],
+            "exposureCategory": "Intelligence / Cyber / Communications / IT",
+            "notes": "USSF enlisted AFSC"
+        },
+        {
+            "code": "1N0X1",
+            "title": "All-Source Intelligence",
+            "description": "Legacy Air Force intelligence specialty retained for USSF transition populations.",
+            "type": "enlisted",
+            "branch": "USSF",
+            "crossBranchEquivalents": ["5I0", "1N0", "35F", "K36A", "0231"],
+            "exposureCategory": "Intelligence / Cyber / Communications / IT",
+            "notes": "USSF enlisted AFSC"
+        },
+        {
+            "code": "1N1",
+            "title": "Geospatial Intelligence",
+            "description": "Legacy Air Force geospatial intelligence specialty used in USSF transition and mission support contexts.",
+            "type": "enlisted",
+            "branch": "USSF",
+            "crossBranchEquivalents": ["1N1X1", "35G", "IS", "0261"],
+            "exposureCategory": "Intelligence / Cyber / Communications / IT",
+            "notes": "USSF enlisted AFSC"
+        },
+        {
+            "code": "1N1X1",
+            "title": "Geospatial Intelligence",
+            "description": "Legacy Air Force geospatial intelligence specialty used in USSF transition and mission support contexts.",
+            "type": "enlisted",
+            "branch": "USSF",
+            "crossBranchEquivalents": ["1N1", "35G", "IS", "0261"],
+            "exposureCategory": "Intelligence / Cyber / Communications / IT",
+            "notes": "USSF enlisted AFSC"
+        },
+        {
+            "code": "1N2",
+            "title": "Signals Intelligence",
+            "description": "Legacy Air Force signals intelligence specialty used in USSF transition and mission support contexts.",
+            "type": "enlisted",
+            "branch": "USSF",
+            "crossBranchEquivalents": ["1N2X1", "35N", "CTN", "2621"],
+            "exposureCategory": "Intelligence / Cyber / Communications / IT",
+            "notes": "USSF enlisted AFSC"
+        },
+        {
+            "code": "1N2X1",
+            "title": "Signals Intelligence",
+            "description": "Legacy Air Force signals intelligence specialty used in USSF transition and mission support contexts.",
+            "type": "enlisted",
+            "branch": "USSF",
+            "crossBranchEquivalents": ["1N2", "35N", "CTN", "2621"],
+            "exposureCategory": "Intelligence / Cyber / Communications / IT",
+            "notes": "USSF enlisted AFSC"
         },
         {
             "code": "1N8X1",
             "title": "Targeting Analysis",
-            "type": "enlisted"
+            "description": "USSF enlisted targeting analysis specialty supporting operational planning and mission assurance.",
+            "type": "enlisted",
+            "branch": "USSF",
+            "crossBranchEquivalents": ["1N8", "35F", "K36A", "0231"],
+            "exposureCategory": "Intelligence / Cyber / Communications / IT",
+            "notes": "USSF enlisted AFSC"
         },
         {
             "code": "13SXA",

@@ -147,6 +147,29 @@ test('Navy sea-service corpus extracts branch, sea service, and fleet reserve SP
   assert.equal(parsed.characterAndSeparation?.reentryCode, '1');
 });
 
+test('USSF compact AFSC (5S0) is accepted from Block 11 primary specialty', () => {
+  const parsed = parseDD214(`
+DD FORM 214 MEMBER-4
+1. NAME (Last, First, Middle)
+DOE, SPACE G
+2. DEPARTMENT, COMPONENT AND BRANCH
+SPACE FORCE / ACTIVE
+11. PRIMARY SPECIALTY
+5S0 SPACE SYSTEMS OPERATIONS - 3 YRS 2 MOS
+12. RECORD OF SERVICE
+a. DATE ENTERED AD THIS PERIOD | 2020 | 01 | 01 |
+b. SEPARATION DATE THIS PERIOD | 2024 | 01 | 01 |
+c. NET ACTIVE SERVICE THIS PERIOD | 0004 | 00 | 00 |
+24. CHARACTER OF SERVICE
+HONORABLE
+`);
+
+  assert.equal(parsed.serviceIdentity?.branchOfService, 'Space Force');
+  assert.equal(parsed.gradeSpecialty?.primaryMOSOrAFSCOrRating, '5S0');
+  assert.ok(Array.isArray(parsed.gradeSpecialty?.mosDetails));
+  assert.equal(parsed.gradeSpecialty?.mosDetails?.[0]?.code, '5S0');
+});
+
 test('ARNG corpus retains guard component and waiver-coded RE status', () => {
   const parsed = parseDD214(loadCorpusInput('arng-guard-separation'));
 
