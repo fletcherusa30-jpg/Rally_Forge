@@ -2,7 +2,7 @@
 // Source of truth: knowledge/STATE_BENEFITS/STATE_BENEFITS_DATABASE.json + backend/rules/federalRules.json
 export const stateBenefitsMetadata = {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-03-20T08:00:07.410Z",
+  "generatedAt": "2026-03-22T08:00:06.649Z",
   "federalProgramCount": 9,
   "source": {
     "states": "knowledge/State_Benefits/state-benefits.json",
@@ -12,7 +12,7 @@ export const stateBenefitsMetadata = {
 export const stateBenefitsRecords = {
   "metadata": {
     "schemaVersion": "1.0.0",
-    "generatedAt": "2026-03-20T08:00:07.410Z",
+    "generatedAt": "2026-03-22T08:00:06.649Z",
     "federalProgramCount": 9,
     "source": {
       "states": "knowledge/State_Benefits/state-benefits.json",

@@ -1,0 +1,143 @@
+[
+  {
+    "eligibilityRuleId": "elig-honorable-discharge",
+    "ruleName": "Honorable Discharge Requirement",
+    "description": "Primary eligibility requirement: veteran must have received an Honorable discharge",
+    "category": "discharge-type",
+    "applicableBenefits": ["disability-comp", "pension-o-old", "ed-benefit-ch33", "health-vamc", "burial-benefit"],
+    "conditions": [
+      {
+        "field": "serviceIdentity.dischargeCharacter",
+        "operator": "equals",
+        "values": ["Honorable", "HONORABLE"]
+      }
+    ],
+    "consequence": "PASS",
+    "severity": "CRITICAL",
+    "notes": "Dishonorable discharge makes veteran ineligible for most benefits"
+  },
+  {
+    "eligibilityRuleId": "elig-service-connected",
+    "ruleName": "Service-Connected Disability",
+    "description": "Condition must be service-connected for disability compensation eligibility",
+    "category": "service-connection",
+    "applicableBenefits": ["disability-comp"],
+    "conditions": [
+      {
+        "field": "condition.serviceConnected",
+        "operator": "equals",
+        "values": [true]
+      }
+    ],
+    "consequence": "PASS",
+    "severity": "CRITICAL",
+    "notes": "Service connection requires VA medical evidence"
+  },
+  {
+    "eligibilityRuleId": "elig-rating-10-plus",
+    "ruleName": "Minimum 10% Disability Rating",
+    "description": "Basic disability rating threshold for compensation eligibility",
+    "category": "disability-rating",
+    "applicableBenefits": ["disability-comp"],
+    "conditions": [
+      {
+        "field": "vaRating.ratingPercent",
+        "operator": "greaterThanOrEqual",
+        "value": 10
+      }
+    ],
+    "consequence": "PASS",
+    "severity": "CRITICAL",
+    "notes": "Below 10%, veteran not eligible for monthly compensation"
+  },
+  {
+    "eligibilityRuleId": "elig-income-limit-pension",
+    "ruleName": "Income Limit for Pension",
+    "description": "Non-service-connected pension has strict income limits",
+    "category": "income",
+    "applicableBenefits": ["pension-o-old"],
+    "conditions": [
+      {
+        "field": "veteran.annualIncome",
+        "operator": "lessThan",
+        "value": 35000
+      }
+    ],
+    "consequence": "PASS",
+    "severity": "CRITICAL",
+    "notes": "Income must remain below threshold; verified annually"
+  },
+  {
+    "eligibilityRuleId": "elig-post911-service-months",
+    "ruleName": "Post-9/11 Service Member (36+ months)",
+    "description": "Post-9/11 GI Bill requires active duty after September 10, 2001 with minimum service",
+    "category": "service-period",
+    "applicableBenefits": ["ed-benefit-ch33"],
+    "conditions": [
+      {
+        "field": "servicePeriods.activePostSept2001",
+        "operator": "equals",
+        "values": [true]
+      },
+      {
+        "field": "servicePeriods.totalActiveMonths",
+        "operator": "greaterThanOrEqual",
+        "value": 36
+      }
+    ],
+    "consequence": "PASS",
+    "severity": "CRITICAL",
+    "notes": " Less service = prorated benefits"
+  },
+  {
+    "eligibilityRuleId": "elig-burial-not-dishonorable",
+    "ruleName": "Burial Benefit Discharge Character",
+    "description": "Burial benefits available with Honorable or General discharge",
+    "category": "discharge-type",
+    "applicableBenefits": ["burial-benefit"],
+    "conditions": [
+      {
+        "field": "serviceIdentity.dischargeCharacter",
+        "operator": "in",
+        "values": ["Honorable", "General", "HONORABLE", "GENERAL"]
+      }
+    ],
+    "consequence": "PASS",
+    "severity": "HIGH",
+    "notes": "Broader eligibility than most benefits; even bad conduct allowed in limited cases"
+  },
+  {
+    "eligibilityRuleId": "elig-age-wartime-pension",
+    "ruleName": "Age 65 for Peacetime Pension",
+    "description": "Non-service-connected pension easier for veterans age 65+",
+    "category": "age",
+    "applicableBenefits": ["pension-o-old"],
+    "conditions": [
+      {
+        "field": "veteran.age",
+        "operator": "greaterThanOrEqual",
+        "value": 65
+      }
+    ],
+    "consequence": "FACILITATOR",
+    "severity": "LOW",
+    "notes": "Age 65+ removes need for being 'permanently and totally disabled'"
+  },
+  {
+    "eligibilityRuleId": "elig-spouse-unremarried",
+    "ruleName": "Spouse Remarriage Restriction",
+    "description": "DIC spouse benefits terminate if survivor remarries",
+    "category": "marital-status",
+    "applicableBenefits": ["depen-spouse"],
+    "conditions": [
+      {
+        "field": "spouse.maritalStatus",
+        "operator": "equals",
+        "values": ["Unmarried", "Single", "UNMARRIED"]
+      }
+    ],
+    "consequence": "PASS",
+    "severity": "CRITICAL",
+    "notes": "Remarriage ends DIC eligibility; benefits cease"
+  }
+]

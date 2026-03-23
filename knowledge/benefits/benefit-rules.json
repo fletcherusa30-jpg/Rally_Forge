@@ -1,0 +1,106 @@
+[
+  {
+    "benefitId": "disability-comp",
+    "benefitType": "Disability Compensation",
+    "shortName": "VA Disability Payment",
+    "description": "Monthly compensation for service-connected disabilities",
+    "eligibilityKey": "service-connected-disability",
+    "eligibilityStatus": "ELIGIBLE",
+    "minimumRating": 10,
+    "maxRating": 100,
+    "monthlyBaseAmount": 150,
+    "requirements": {
+      "mustHaveDischargeType": "Honorable",
+      "mustBeServiceConnected": true,
+      "minimumDisabilityRating": 10
+    },
+    "restrictions": [],
+    "applicableToBranches": ["Army", "Navy", "AirForce", "USMC", "CoastGuard", "SpaceForce"],
+    "notes": "Primary benefit for service-connected disability"
+  },
+  {
+    "benefitId": "depen-spouse",
+    "benefitType": "Dependency and Indemnity Compensation",
+    "shortName": "DIC - Spouse",
+    "description": "Monthly payment for surviving spouse of veteran who died from service-connected disability",
+    "eligibilityKey": "survivor-spouse-dic",
+    "eligibilityStatus": "ELIGIBLE",
+    "monthlyBaseAmount": 1800,
+    "requirements": {
+      "mustBeSpouse": true,
+      "mustBeUnmarried": true,
+      "veteranMustBeDeceased": true,
+      "deathMustBeServiceConnected": true
+    },
+    "restrictions": ["Cannot remarry"],
+    "applicableToBranches": ["Army", "Navy", "AirForce", "USMC", "CoastGuard", "SpaceForce"],
+    "notes": "For surviving spouses and children"
+  },
+  {
+    "benefitId": "pension-o-old",
+    "benefitType": "Non-Service-Connected Pension",
+    "shortName": "VA Pension",
+    "description": "Income-based pension for low-income wartime veterans",
+    "eligibilityKey": "wartime-veteran-pension",
+    "eligibilityStatus": "ELIGIBLE",
+    "monthlyBaseAmount": 1000,
+    "requirements": {
+      "mustBeWaretimeVeteran": true,
+      "mustBeAge65": false,
+      "incomeLimit": 35000,
+      "mustNotHaveServiceConnectedDisabilities": true
+    },
+    "restrictions": ["Income limit applies"],
+    "applicableToBranches": ["Army", "Navy", "AirForce", "USMC", "CoastGuard"],
+    "notes": "For low-income wartime veterans"
+  },
+  {
+    "benefitId": "ed-benefit-ch33",
+    "benefitType": "Education Benefit",
+    "shortName": "Post-9/11 GI Bill (Ch. 33)",
+    "description": "Tuition, fees, and living allowance for eligible service members and veterans",
+    "eligibilityKey": "post911-service-education",
+    "eligibilityStatus": "ELIGIBLE",
+    "monthlyAmount": 2000,
+    "requirements": {
+      "activePostSept2001": true,
+      "minimumServiceMonths": 36,
+      "mustBeEnrolledEducation": true
+    },
+    "restrictions": ["15-year use limit"],
+    "applicableToBranches": ["Army", "Navy", "AirForce", "USMC", "CoastGuard", "SpaceForce"],
+    "notes": "Highest tier education benefit"
+  },
+  {
+    "benefitId": "health-vamc",
+    "benefitType": "Healthcare",
+    "shortName": "VA Medical Center Care",
+    "description": "Inpatient and outpatient medical services through VA facilities",
+    "eligibilityKey": "va-healthcare",
+    "eligibilityStatus": "ELIGIBLE",
+    "requirements": {
+      "mustBeDischarged": true,
+      "dischargeTypeRequired": "Honorable"
+    },
+    "restrictions": [],
+    "applicableToBranches": ["Army", "Navy", "AirForce", "USMC", "CoastGuard", "SpaceForce"],
+    "notes": "Basic eligibility, priority based on rating and income"
+  },
+  {
+    "benefitId": "burial-benefit",
+    "benefitType": "Burial and Memorial Benefits",
+    "shortName": "VA Burial Benefits",
+    "description": "Burial allowance, plot allowance, and headstone or marker",
+    "eligibilityKey": "burial-eligible",
+    "eligibilityStatus": "ELIGIBLE",
+    "monthlyAmount": 0,
+    "oneTimeAmount": 2000,
+    "requirements": {
+      "mustBeDeceased": true,
+      "dischargeRequirement": "Honorable or General"
+    },
+    "restrictions": [],
+    "applicableToBranches": ["Army", "Navy", "AirForce", "USMC", "CoastGuard", "SpaceForce"],
+    "notes": "Available to eligible deceased veterans and family members"
+  }
+]

@@ -74,6 +74,15 @@ export function getPresumptiveKnowledge() {
   return fetchJson(`${API_BASE}/military/presumptive-knowledge`);
 }
 
+export function getMilitaryMosOptions(branch) {
+  const params = new URLSearchParams();
+  if (branch) {
+    params.set('branch', branch);
+  }
+  const query = params.toString();
+  return fetchJson(`${API_BASE}/military/mos-options${query ? `?${query}` : ''}`);
+}
+
 export function getRadiationOperations({ era, startDate, endDate } = {}) {
   const params = new URLSearchParams();
   if (era) params.set('era', era);
