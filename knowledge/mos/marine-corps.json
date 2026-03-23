@@ -376,44 +376,232 @@
             "type": "officer"
         },
         {
-            "code": "0170",
-            "title": "Marine Warrant MOS 0170",
-            "type": "warrant"
+            "code": "0160",
+            "title": "Postal Officer",
+            "description": "Marine Corps Warrant Officer responsible for postal operations, mail management, and postal finance activities in support of MAGTF operations.",
+            "type": "warrant",
+            "branch": "USMC",
+            "rankCategory": "Warrant Officer",
+            "feederMOS": "0151",
+            "crossBranchEquivalents": [],
+            "exposureCategory": "Administrative / Personnel / Legal",
+            "notes": "Marine Corps Warrant Officer MOS"
         },
         {
-            "code": "0120",
-            "title": "Personnel Officer (Warrant)",
-            "type": "warrant"
+            "code": "0170",
+            "title": "Personnel Officer",
+            "description": "Marine Corps Warrant Officer responsible for personnel administration, manpower management, and human resources operations across MAGTF elements.",
+            "type": "warrant",
+            "branch": "USMC",
+            "rankCategory": "Warrant Officer",
+            "feederMOS": "0111",
+            "crossBranchEquivalents": ["420A"],
+            "exposureCategory": "Administrative / Personnel / Legal",
+            "notes": "Marine Corps Warrant Officer MOS"
+        },
+        {
+            "code": "0201",
+            "title": "Basic Intelligence Officer",
+            "description": "Entry-level Marine Corps Warrant Officer designation in the intelligence field, serving as qualifying MOS for warrant officer intelligence billets.",
+            "type": "warrant",
+            "branch": "USMC",
+            "rankCategory": "Warrant Officer",
+            "feederMOS": "0231",
+            "crossBranchEquivalents": ["350F"],
+            "exposureCategory": "Intelligence / Cyber / Communications / IT",
+            "notes": "Marine Corps Warrant Officer MOS"
+        },
+        {
+            "code": "0205",
+            "title": "Senior All-Source Intelligence Analysis Officer",
+            "description": "Senior Marine Corps Warrant Officer specializing in all-source intelligence analysis, fusion, and production in support of MAGTF commanders.",
+            "type": "warrant",
+            "branch": "USMC",
+            "rankCategory": "Warrant Officer",
+            "feederMOS": "0231",
+            "crossBranchEquivalents": ["350F"],
+            "exposureCategory": "Intelligence / Cyber / Communications / IT",
+            "notes": "Marine Corps Warrant Officer MOS"
+        },
+        {
+            "code": "0210",
+            "title": "Counterintelligence/Human Intelligence Officer",
+            "description": "Marine Corps Warrant Officer specializing in CI and HUMINT collection, operations planning, and source development in support of all echelons.",
+            "type": "warrant",
+            "branch": "USMC",
+            "rankCategory": "Warrant Officer",
+            "feederMOS": "0211",
+            "crossBranchEquivalents": ["351M"],
+            "exposureCategory": "Intelligence / Cyber / Communications / IT",
+            "notes": "Marine Corps Warrant Officer MOS"
+        },
+        {
+            "code": "0220",
+            "title": "Surveillance Sensor Officer",
+            "description": "Marine Corps Warrant Officer managing organic ground and aerial surveillance sensor systems, sensor data exploitation, and ISR integration.",
+            "type": "warrant",
+            "branch": "USMC",
+            "rankCategory": "Warrant Officer",
+            "feederMOS": "0241",
+            "crossBranchEquivalents": [],
+            "exposureCategory": "Intelligence / Cyber / Communications / IT",
+            "notes": "Marine Corps Warrant Officer MOS"
+        },
+        {
+            "code": "0260",
+            "title": "Geographic Intelligence Officer",
+            "description": "Marine Corps Warrant Officer responsible for geospatial intelligence production, terrain analysis, and GEOINT support to MAGTF operations.",
+            "type": "warrant",
+            "branch": "USMC",
+            "rankCategory": "Warrant Officer",
+            "feederMOS": "0261",
+            "crossBranchEquivalents": ["350G"],
+            "exposureCategory": "Intelligence / Cyber / Communications / IT",
+            "notes": "Marine Corps Warrant Officer MOS"
+        },
+        {
+            "code": "0301",
+            "title": "Basic Infantry Officer",
+            "description": "Entry-level Marine Corps Warrant Officer designation in the infantry field, serving as the basic qualifying MOS for infantry warrant officer billets.",
+            "type": "warrant",
+            "branch": "USMC",
+            "rankCategory": "Warrant Officer",
+            "feederMOS": "0311",
+            "crossBranchEquivalents": [],
+            "exposureCategory": "Combat Arms / Infantry / Special Operations",
+            "notes": "Marine Corps Warrant Officer MOS"
+        },
+        {
+            "code": "0306",
+            "title": "Infantry Weapons Officer",
+            "description": "Marine Corps Warrant Officer designated as the Infantry Weapons Officer (The Gunner), serving as the principal advisor to commanders on employment of all organic and supporting infantry weapons, fire support integration, and close air support.",
+            "type": "warrant",
+            "branch": "USMC",
+            "rankCategory": "Warrant Officer",
+            "feederMOS": "0311",
+            "crossBranchEquivalents": ["131A"],
+            "exposureCategory": "Combat Arms / Infantry / Special Operations",
+            "notes": "Marine Corps Warrant Officer MOS — Iconic USMC Gunner designation"
+        },
+        {
+            "code": "0401",
+            "title": "Basic Logistics Officer",
+            "description": "Entry-level Marine Corps Warrant Officer designation in the logistics field, qualifying warrant officers for assignment across supply, maintenance, and motor transport logistics billets.",
+            "type": "warrant",
+            "branch": "USMC",
+            "rankCategory": "Warrant Officer",
+            "feederMOS": "3043",
+            "crossBranchEquivalents": ["920A"],
+            "exposureCategory": "Logistics / Supply / Transportation",
+            "notes": "Marine Corps Warrant Officer MOS"
         },
         {
             "code": "0430",
-            "title": "Mobility Officer (Warrant)",
-            "type": "warrant"
+            "title": "Mobility Officer",
+            "description": "Marine Corps Warrant Officer responsible for airlift planning, cargo/passenger manifesting, and air delivery coordination in support of MAGTF mobility operations. Legacy designation; may be documented on older DD-214s.",
+            "type": "warrant",
+            "branch": "USMC",
+            "rankCategory": "Warrant Officer",
+            "feederMOS": "3112",
+            "crossBranchEquivalents": [],
+            "exposureCategory": "Logistics / Supply / Transportation",
+            "notes": "Marine Corps Warrant Officer MOS — legacy designation"
         },
         {
-            "code": "0602",
-            "title": "Communications Warrant Officer",
-            "type": "warrant"
+            "code": "0501",
+            "title": "MAGTF Plans Officer",
+            "description": "Marine Corps Warrant Officer serving as a plans officer within the Marine Air-Ground Task Force (MAGTF) command element, responsible for operational and campaign planning support.",
+            "type": "warrant",
+            "branch": "USMC",
+            "rankCategory": "Warrant Officer",
+            "feederMOS": "0302",
+            "crossBranchEquivalents": [],
+            "exposureCategory": "Command / Staff / Operations",
+            "notes": "Marine Corps Warrant Officer MOS"
+        },
+        {
+            "code": "0601",
+            "title": "Basic Communications Officer",
+            "description": "Entry-level Marine Corps Warrant Officer designation in the communications field, qualifying warrant officers for assignment across voice, data, and tactical communications billets.",
+            "type": "warrant",
+            "branch": "USMC",
+            "rankCategory": "Warrant Officer",
+            "feederMOS": "0621",
+            "crossBranchEquivalents": ["255A"],
+            "exposureCategory": "Intelligence / Cyber / Communications / IT",
+            "notes": "Marine Corps Warrant Officer MOS"
+        },
+        {
+            "code": "0610",
+            "title": "Telephone Systems Officer",
+            "description": "Marine Corps Warrant Officer specializing in telephone and wire communications systems, including installation, operation, and maintenance of tactical wireline networks.",
+            "type": "warrant",
+            "branch": "USMC",
+            "rankCategory": "Warrant Officer",
+            "feederMOS": "0612",
+            "crossBranchEquivalents": ["255A"],
+            "exposureCategory": "Intelligence / Cyber / Communications / IT",
+            "notes": "Marine Corps Warrant Officer MOS"
+        },
+        {
+            "code": "1316",
+            "title": "Metal Worker Officer",
+            "description": "Marine Corps Warrant Officer with expertise in metal fabrication, welding, structural repair, and field maintenance of metal components across MAGTF engineer and maintenance units.",
+            "type": "warrant",
+            "branch": "USMC",
+            "rankCategory": "Warrant Officer",
+            "feederMOS": "1316",
+            "crossBranchEquivalents": [],
+            "exposureCategory": "Engineering / Construction / Utilities",
+            "notes": "Marine Corps Warrant Officer MOS — warrant variant; enlisted MOS 1316 also exists"
+        },
+        {
+            "code": "1361",
+            "title": "Engineering Assistant Officer",
+            "description": "Marine Corps Warrant Officer providing engineering staff support including site reconnaissance, construction surveying, drafting, and technical engineering documentation for MAGTF combat engineering operations.",
+            "type": "warrant",
+            "branch": "USMC",
+            "rankCategory": "Warrant Officer",
+            "feederMOS": "1341",
+            "crossBranchEquivalents": ["120A"],
+            "exposureCategory": "Engineering / Construction / Utilities",
+            "notes": "Marine Corps Warrant Officer MOS"
         },
         {
             "code": "2805",
-            "title": "Electronics Maintenance Warrant Officer",
-            "type": "warrant"
+            "title": "Electronics Maintenance Officer",
+            "description": "Marine Corps Warrant Officer responsible for management and technical supervision of electronics maintenance activities across ground electronics, communications, and sensor systems.",
+            "type": "warrant",
+            "branch": "USMC",
+            "rankCategory": "Warrant Officer",
+            "feederMOS": "2841",
+            "crossBranchEquivalents": ["250N"],
+            "exposureCategory": "Electronics / Electrical / Avionics",
+            "notes": "Marine Corps Warrant Officer MOS"
         },
         {
             "code": "3510",
-            "title": "Motor Transport Warrant Officer",
-            "type": "warrant"
+            "title": "Motor Transport Officer",
+            "description": "Marine Corps Warrant Officer responsible for motor transport operations, fleet management, vehicle maintenance oversight, and ground transportation support to MAGTF elements.",
+            "type": "warrant",
+            "branch": "USMC",
+            "rankCategory": "Warrant Officer",
+            "feederMOS": "3531",
+            "crossBranchEquivalents": ["882A"],
+            "exposureCategory": "Logistics / Supply / Transportation",
+            "notes": "Marine Corps Warrant Officer MOS"
         },
         {
             "code": "4130",
-            "title": "Marine Corps Community Services Warrant Officer",
-            "type": "warrant"
-        },
-        {
-            "code": "5804",
-            "title": "Marine Warrant MOS 5804",
-            "type": "warrant"
+            "title": "Marine Corps Community Services Officer",
+            "description": "Marine Corps Warrant Officer overseeing Marine Corps Community Services programs including morale, welfare, recreation, retail operations, and family support activities.",
+            "type": "warrant",
+            "branch": "USMC",
+            "rankCategory": "Warrant Officer",
+            "feederMOS": "4133",
+            "crossBranchEquivalents": [],
+            "exposureCategory": "Administrative / Personnel / Legal",
+            "notes": "Marine Corps Warrant Officer MOS"
         }
     ],
     "branch": "Marine Corps"

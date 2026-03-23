@@ -35,9 +35,10 @@ function isValidMos(value) {
   if (value === null) return true;
   const v = String(value || '').trim().toUpperCase();
   if (!v) return false;
-  if (/^\d{2}[A-Z][A-Z0-9]{0,3}$/.test(v)) return true; // MOS-like
+  if (/^\d{4}$/.test(v)) return true; // USMC 4-digit MOS (e.g. 0311, 0306, 1316)
+  if (/^\d{2}[A-Z][A-Z0-9]{0,3}$/.test(v)) return true; // Army MOS-like (e.g. 11B, 13B)
   if (/^\d[A-Z][A-Z0-9]{1,5}$/.test(v)) return true; // AFSC-like including compact USSF codes
-  if (/^[A-Z]{2,4}\d?$/.test(v)) return true; // rating-like
+  if (/^[A-Z]{2,4}\d?$/.test(v)) return true; // rating-like (Coast Guard, Navy)
   return false;
 }
 

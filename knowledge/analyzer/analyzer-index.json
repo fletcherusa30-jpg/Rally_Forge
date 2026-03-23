@@ -1324,6 +1324,78 @@
                                      {
                                          "code":  "8411",
                                          "title":  "Recruiter"
+                                     },
+                                     {
+                                         "code":  "0160",
+                                         "title":  "Postal Officer (Warrant)"
+                                     },
+                                     {
+                                         "code":  "0170",
+                                         "title":  "Personnel Officer (Warrant)"
+                                     },
+                                     {
+                                         "code":  "0201",
+                                         "title":  "Basic Intelligence Officer (Warrant)"
+                                     },
+                                     {
+                                         "code":  "0205",
+                                         "title":  "Senior All-Source Intelligence Analysis Officer (Warrant)"
+                                     },
+                                     {
+                                         "code":  "0210",
+                                         "title":  "Counterintelligence/Human Intelligence Officer (Warrant)"
+                                     },
+                                     {
+                                         "code":  "0220",
+                                         "title":  "Surveillance Sensor Officer (Warrant)"
+                                     },
+                                     {
+                                         "code":  "0260",
+                                         "title":  "Geographic Intelligence Officer (Warrant)"
+                                     },
+                                     {
+                                         "code":  "0301",
+                                         "title":  "Basic Infantry Officer (Warrant)"
+                                     },
+                                     {
+                                         "code":  "0306",
+                                         "title":  "Infantry Weapons Officer — Gunner (Warrant)"
+                                     },
+                                     {
+                                         "code":  "0401",
+                                         "title":  "Basic Logistics Officer (Warrant)"
+                                     },
+                                     {
+                                         "code":  "0430",
+                                         "title":  "Mobility Officer (Warrant)"
+                                     },
+                                     {
+                                         "code":  "0501",
+                                         "title":  "MAGTF Plans Officer (Warrant)"
+                                     },
+                                     {
+                                         "code":  "0601",
+                                         "title":  "Basic Communications Officer (Warrant)"
+                                     },
+                                     {
+                                         "code":  "0610",
+                                         "title":  "Telephone Systems Officer (Warrant)"
+                                     },
+                                     {
+                                         "code":  "1361",
+                                         "title":  "Engineering Assistant Officer (Warrant)"
+                                     },
+                                     {
+                                         "code":  "2805",
+                                         "title":  "Electronics Maintenance Officer (Warrant)"
+                                     },
+                                     {
+                                         "code":  "3510",
+                                         "title":  "Motor Transport Officer (Warrant)"
+                                     },
+                                     {
+                                         "code":  "4130",
+                                         "title":  "Marine Corps Community Services Officer (Warrant)"
                                      }
                                  ],
                 "Navy":  [

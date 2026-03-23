@@ -66,6 +66,123 @@
         "Space Force": ["5I0", "1N0X1"]
       },
       "notes": "USSF enlisted AFSC"
+    },
+    {
+      "code": "0306",
+      "title": "Infantry Weapons Officer (Gunner)",
+      "branch": "USMC",
+      "equivalents": {
+        "Army": ["131A"],
+        "Navy": null,
+        "Air Force": null,
+        "Space Force": null,
+        "Coast Guard": null
+      },
+      "notes": "USMC Warrant Officer MOS — Infantry Weapons Officer; Army 131A Field Artillery Technician is closest WO cross-branch equivalent in technical weapons advisory role"
+    },
+    {
+      "code": "0205",
+      "title": "Senior All-Source Intelligence Analysis Officer",
+      "branch": "USMC",
+      "equivalents": {
+        "Army": ["350F"],
+        "Navy": ["1830"],
+        "Air Force": ["14F"],
+        "Space Force": null,
+        "Coast Guard": null
+      },
+      "notes": "USMC Warrant Officer MOS — All-Source Intelligence; Army 350F All-Source Intelligence Technician is direct WO equivalent"
+    },
+    {
+      "code": "0601",
+      "title": "Basic Communications Officer",
+      "branch": "USMC",
+      "equivalents": {
+        "Army": ["255A"],
+        "Navy": ["161X"],
+        "Air Force": ["33S"],
+        "Space Force": null,
+        "Coast Guard": null
+      },
+      "notes": "USMC Warrant Officer MOS — Communications; Army 255A Information Services Technician is closest WO cross-branch equivalent"
+    },
+    {
+      "code": "0210",
+      "title": "Counterintelligence/Human Intelligence Officer",
+      "branch": "USMC",
+      "equivalents": {
+        "Army": ["351M"],
+        "Navy": ["1830"],
+        "Air Force": ["14F"],
+        "Space Force": null,
+        "Coast Guard": null
+      },
+      "notes": "USMC Warrant Officer MOS — CI/HUMINT; Army 351M HUMINT Collection Technician is direct WO equivalent"
+    },
+    {
+      "code": "0260",
+      "title": "Geographic Intelligence Officer",
+      "branch": "USMC",
+      "equivalents": {
+        "Army": ["350G"],
+        "Navy": null,
+        "Air Force": ["1N1"],
+        "Space Force": ["1N1"],
+        "Coast Guard": null
+      },
+      "notes": "USMC Warrant Officer MOS — GEOINT; Army 350G Geospatial Intelligence Technician is direct WO equivalent"
+    },
+    {
+      "code": "0170",
+      "title": "Personnel Officer",
+      "branch": "USMC",
+      "equivalents": {
+        "Army": ["420A"],
+        "Navy": ["163X"],
+        "Air Force": ["38F"],
+        "Space Force": null,
+        "Coast Guard": null
+      },
+      "notes": "USMC Warrant Officer MOS — Personnel; Army 420A Human Resources Technician is direct WO equivalent"
+    },
+    {
+      "code": "1361",
+      "title": "Engineering Assistant Officer",
+      "branch": "USMC",
+      "equivalents": {
+        "Army": ["120A"],
+        "Navy": null,
+        "Air Force": null,
+        "Space Force": null,
+        "Coast Guard": null
+      },
+      "notes": "USMC Warrant Officer MOS — Engineering; Army 120A Construction Engineering Technician is closest WO cross-branch equivalent"
+    },
+    {
+      "code": "0401",
+      "title": "Basic Logistics Officer",
+      "branch": "USMC",
+      "equivalents": {
+        "Army": ["920A", "920B"],
+        "Navy": ["310X"],
+        "Air Force": ["21R"],
+        "Space Force": null,
+        "Coast Guard": null
+      },
+      "notes": "USMC Warrant Officer MOS — Logistics; Army 920A/920B Property Accounting / Senior Logistics Technician are closest WO cross-branch equivalents"
+    },
+    {
+      "code": "3510",
+      "title": "Motor Transport Officer",
+      "branch": "USMC",
+      "equivalents": {
+        "Army": ["882A"],
+        "Navy": null,
+        "Air Force": null,
+        "Space Force": null,
+        "Coast Guard": null
+      },
+      "notes": "USMC Warrant Officer MOS — Motor Transport; Army 882A Military Surface Deployment/Distribution Technician is closest WO cross-branch equivalent"
     }
   ]
 }

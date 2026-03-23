@@ -32,16 +32,38 @@ function loadCatalog() {
     const filePath = path.join(ROOT, file);
     if (!fs.existsSync(filePath)) continue;
     const data = readJsonWithFallback(filePath);
-    const tiers = data?.tiers || {};
 
     const byCode = new Map();
-    for (const [tier, entries] of Object.entries(tiers)) {
-      for (const entry of entries || []) {
+
+    // Support both legacy tiers format { tiers: { enlisted: [...], warrant: [...], officer: [...] } }
+    // and the current flat format { mos: [{ code, type, ... }] }
+    if (data?.tiers && typeof data.tiers === 'object') {
+      for (const [tier, entries] of Object.entries(data.tiers)) {
+        for (const entry of entries || []) {
+          const code = String(entry?.code || '').toUpperCase().trim();
+          if (!code) continue;
+          byCode.set(code, { tier, title: entry?.title || null, branch });
+        }
+      }
+    } else if (Array.isArray(data?.mos)) {
+      for (const entry of data.mos) {
         const code = String(entry?.code || '').toUpperCase().trim();
+        const tier = String(entry?.type || '').toLowerCase().trim() || 'enlisted';
         if (!code) continue;
-        byCode.set(code, { tier, title: entry?.title || null, branch });
+        // For codes that exist in multiple tiers (e.g. USMC 1316 enlisted + warrant)
+        // store the first occurrence; tier-mismatch validation will catch pay-grade conflicts
+        if (!byCode.has(code)) {
+          byCode.set(code, { tier, title: entry?.title || null, branch });
+        } else {
+          // If same code appears in multiple types, store as a multi-tier entry
+          const existing = byCode.get(code);
+          if (existing.tier !== tier) {
+            byCode.set(code, { tier: 'multi', title: entry?.title || null, branch });
+          }
+        }
       }
     }
+
     catalog[branch] = byCode;
   }
 
@@ -89,6 +111,19 @@ export function validateMosAgainstCatalog({ branch, payGrade, mosCode }) {
 
   if (!hit) {
     return { valid: false, reason: 'code-not-in-branch', branch: branchKey, code, expectedTier };
+  }
+
+  // 'multi' tier means the same code appears under more than one type (e.g. USMC 1316 enlisted + warrant).
+  // Treat as valid if we can't determine a single expected tier, or if the pay-grade confirms the tier.
+  if (hit.tier === 'multi') {
+    return {
+      valid: true,
+      branch: branchKey,
+      code,
+      expectedTier,
+      actualTier: expectedTier || 'multi',
+      title: hit.title,
+    };
   }
 
   if (expectedTier && hit.tier !== expectedTier) {

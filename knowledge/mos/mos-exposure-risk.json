@@ -173,6 +173,172 @@
           "hint": "Review SIGINT equipment operations for sustained RF/EMF exposure patterns."
         }
       ]
+    },
+    {
+      "branch": "Marine Corps",
+      "mosCode": "0306",
+      "title": "Infantry Weapons Officer (Gunner)",
+      "noiseRisk": "high",
+      "exposures": [
+        {
+          "id": "noise",
+          "label": "Noise / Acoustic Trauma",
+          "confidence": "high",
+          "hint": "Review sustained weapons firing, range qualification, and direct-fire systems exposure throughout career."
+        },
+        {
+          "id": "blast",
+          "label": "Blast / TBI / Concussive Exposure",
+          "confidence": "high",
+          "hint": "Document proximity to weapons discharge, IED events, and breaching operations."
+        },
+        {
+          "id": "burn-pits",
+          "label": "Burn Pits / Airborne Hazards",
+          "confidence": "mild",
+          "hint": "Capture deployed assignment periods at locations with known burn pit activity."
+        }
+      ]
+    },
+    {
+      "branch": "Marine Corps",
+      "mosCode": "0205",
+      "title": "Senior All-Source Intelligence Analysis Officer",
+      "noiseRisk": "low",
+      "exposures": [
+        {
+          "id": "burn-pits",
+          "label": "Burn Pits / Airborne Hazards",
+          "confidence": "mild",
+          "hint": "Document deployed intel-support assignments and any particulate exposure periods."
+        },
+        {
+          "id": "rf-emf",
+          "label": "Radiation / RF / EMF",
+          "confidence": "mild",
+          "hint": "Capture SCIF, antenna farm, or signals-site proximity during deployed or garrison assignments."
+        }
+      ]
+    },
+    {
+      "branch": "Marine Corps",
+      "mosCode": "0210",
+      "title": "Counterintelligence/Human Intelligence Officer",
+      "noiseRisk": "low",
+      "exposures": [
+        {
+          "id": "burn-pits",
+          "label": "Burn Pits / Airborne Hazards",
+          "confidence": "mild",
+          "hint": "Document forward-deployed CI/HUMINT collection assignments and associated burn pit exposure."
+        },
+        {
+          "id": "blast",
+          "label": "Blast / TBI / Concussive Exposure",
+          "confidence": "mild",
+          "hint": "Review any direct-action support or IED exposure during collection missions."
+        }
+      ]
+    },
+    {
+      "branch": "Marine Corps",
+      "mosCode": "0601",
+      "title": "Basic Communications Officer",
+      "noiseRisk": "mild",
+      "exposures": [
+        {
+          "id": "rf-emf",
+          "label": "Radiation / RF / EMF",
+          "confidence": "high",
+          "hint": "Review antenna, SATCOM, HF/VHF/UHF radio proximity logs throughout career."
+        },
+        {
+          "id": "noise",
+          "label": "Noise / Acoustic Trauma",
+          "confidence": "mild",
+          "hint": "Capture communications shelter and generator noise exposure windows."
+        }
+      ]
+    },
+    {
+      "branch": "Marine Corps",
+      "mosCode": "0610",
+      "title": "Telephone Systems Officer",
+      "noiseRisk": "mild",
+      "exposures": [
+        {
+          "id": "rf-emf",
+          "label": "Radiation / RF / EMF",
+          "confidence": "mild",
+          "hint": "Review wireline and telephone switch proximity to RF-emitting equipment."
+        },
+        {
+          "id": "solvents-fuels",
+          "label": "Solvents / Fuels / Degreasers",
+          "confidence": "mild",
+          "hint": "Document use of cleaning agents and cable insulation solvents during equipment maintenance."
+        }
+      ]
+    },
+    {
+      "branch": "Marine Corps",
+      "mosCode": "1316",
+      "title": "Metal Worker / Metal Worker Officer",
+      "noiseRisk": "high",
+      "exposures": [
+        {
+          "id": "noise",
+          "label": "Noise / Acoustic Trauma",
+          "confidence": "high",
+          "hint": "Review grinding, cutting, welding, and fabrication equipment noise exposure throughout career."
+        },
+        {
+          "id": "solvents-fuels",
+          "label": "Solvents / Fuels / Degreasers",
+          "confidence": "high",
+          "hint": "Document use of cutting fluids, flux, degreasers, and chemical cleaning agents."
+        },
+        {
+          "id": "heavy-metals",
+          "label": "Heavy Metals / Toxic Materials",
+          "confidence": "high",
+          "hint": "Capture welding fume, lead, cadmium, and chromium exposure from fabrication and surface treatment work."
+        }
+      ]
+    },
+    {
+      "branch": "Marine Corps",
+      "mosCode": "1361",
+      "title": "Engineering Assistant Officer",
+      "noiseRisk": "mild",
+      "exposures": [
+        {
+          "id": "noise",
+          "label": "Noise / Acoustic Trauma",
+          "confidence": "mild",
+          "hint": "Review heavy construction equipment and generator noise during field engineering operations."
+        },
+        {
+          "id": "solvents-fuels",
+          "label": "Solvents / Fuels / Degreasers",
+          "confidence": "mild",
+          "hint": "Document fuel and solvent exposure during engineer construction or survey operations."
+        }
+      ]
+    },
+    {
+      "branch": "Marine Corps",
+      "mosCode": "0260",
+      "title": "Geographic Intelligence Officer",
+      "noiseRisk": "low",
+      "exposures": [
+        {
+          "id": "rf-emf",
+          "label": "Radiation / RF / EMF",
+          "confidence": "mild",
+          "hint": "Capture remote sensing and UAV exploitation assignments with RF proximity."
+        }
+      ]
     }
   ]
 }

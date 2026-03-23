@@ -48,6 +48,14 @@
           "notes": {
             "type": "string",
             "minLength": 1
+          },
+          "rankCategory": {
+            "type": "string",
+            "minLength": 1
+          },
+          "feederMOS": {
+            "type": "string",
+            "minLength": 1
           }
         },
         "additionalProperties": false

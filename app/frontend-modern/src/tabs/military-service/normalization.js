@@ -4,7 +4,7 @@ import {
   SERVICE_TYPE_VALUES,
 } from './schema.js';
 
-const MOS_PATTERN = /^(?:[0-9]{2,4}[A-Z][A-Z0-9]{0,3}|[0-9][A-Z][A-Z0-9]{0,4}|[A-Z]{2,5}[0-9]?)$/;
+const MOS_PATTERN = /^(?:[0-9]{4}|[0-9]{2,4}[A-Z][A-Z0-9]{0,3}|[0-9][A-Z][A-Z0-9]{0,4}|[A-Z]{2,5}[0-9]?)$/;
 const SEPARATION_CODE_PATTERN = /^[A-Z0-9]{3}$/;
 const RE_PATTERN = /^(?:RE)?[1-4](?:[A-C])?$/;
 
