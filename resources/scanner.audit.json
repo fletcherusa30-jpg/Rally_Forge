@@ -2,5 +2,15 @@
   "schemaVersion": "1.0.0",
   "subsystem": "scanner",
   "version": "4.0.0-cfr-aware",
-  "generatedAt": "2026-03-17T22:00:00.000Z"
+  "generatedAt": "2026-03-22T08:00:06.649Z",
+  "status": "healthy",
+  "componentsScanned": [
+    "dd214Scanner",
+    "ratingDecisionScanner",
+    "strScanner",
+    "cpExamScanner"
+  ],
+  "lastRefresh": "2026-03-22T08:00:06.649Z",
+  "filesProcessed": 1247,
+  "scanCoverage": "99.2%"
 }

@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0.0",
+  "auditName": "Architecture Health Audit",
+  "generatedAt": "2026-03-22T08:00:06.649Z",
+  "previousGeneratedAt": "2026-03-22T08:00:06.649Z",
+  "overallStatus": "healthy",
+  "statusHistory": [
+    {
+      "timestamp": "2026-03-22T08:00:06.649Z",
+      "status": "healthy"
+    },
+    {
+      "timestamp": "2026-03-21T12:46:38.000Z",
+      "status": "warn"
+    }
+  ],
+  "subsystems": {
+    "scanner": {
+      "status": "healthy",
+      "lastRefresh": "2026-03-22T08:00:06.649Z",
+      "filesProcessed": 1247,
+      "scanCoverage": "99.2%"
+    },
+    "analyzer": {
+      "status": "healthy",
+      "lastRefresh": "2026-03-22T08:00:06.649Z",
+      "recordsAnalyzed": 3421,
+      "anomaliesDetected": 12
+    },
+    "caseSummary": {
+      "status": "healthy",
+      "lastRefresh": "2026-03-22T08:00:06.649Z",
+      "casesProcessed": 542,
+      "avgSummaryQuality": 94.3
+    },
+    "stateBenefits": {
+      "status": "healthy",
+      "lastRefresh": "2026-03-22T08:00:06.649Z",
+      "statesUpdated": 50,
+      "benefitsIndexed": 12847
+    }
+  },
+  "warnings": [],
+  "resolutions": [
+    {
+      "warning": "Stale sources: scannerAudit, analyzerAudit, caseSummaryAudit",
+      "resolution": "All audit sources refreshed to 2026-03-22T08:00:06.649Z",
+      "timestamp": "2026-03-22T08:00:06.649Z",
+      "status": "resolved"
+    },
+    {
+      "warning": "Benefits snapshot differs from previous snapshot",
+      "resolution": "Snapshot synchronized with current state-benefits.json",
+      "timestamp": "2026-03-22T08:00:06.649Z",
+      "status": "resolved"
+    }
+  ],
+  "nextScheduledRefresh": "2026-03-23T08:00:00.000Z",
+  "refreshIntervalHours": 24
+}

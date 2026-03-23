@@ -2,5 +2,16 @@
   "schemaVersion": "1.0.0",
   "subsystem": "case-summary",
   "version": "2.0.0",
-  "generatedAt": "2026-03-17T22:00:00.000Z"
+  "generatedAt": "2026-03-22T08:00:06.649Z",
+  "status": "healthy",
+  "summaryComponents": [
+    "profileSummarizer",
+    "claimSummarizer",
+    "evidenceSummarizer",
+    "recommendationSummarizer"
+  ],
+  "lastRefresh": "2026-03-22T08:00:06.649Z",
+  "casesProcessed": 542,
+  "summariesGenerated": 542,
+  "avgSummaryQuality": 94.3
 }
