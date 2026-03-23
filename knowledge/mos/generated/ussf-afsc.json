@@ -1,0 +1,300 @@
+[
+  {
+    "code": "5S",
+    "title": "Space Systems Operations",
+    "description": "USSF enlisted specialist for space domain operations, orbital systems control, and space mission execution.",
+    "branch": "USSF",
+    "rankCategory": "Enlisted",
+    "feederMOS": null,
+    "feederCodes": [],
+    "feederRatings": [],
+    "crossBranchEquivalents": [
+      "1C6",
+      "1C6X1",
+      "25S",
+      "K10A",
+      "K36A",
+      "2651"
+    ],
+    "exposureCategory": "Space / Missile / Satellite Ops",
+    "notes": "USSF enlisted AFSC",
+    "type": "enlisted"
+  },
+  {
+    "code": "5S0",
+    "title": "Space Systems Operations",
+    "description": "USSF enlisted specialist for space domain operations, orbital systems control, and space mission execution.",
+    "branch": "USSF",
+    "rankCategory": "Enlisted",
+    "feederMOS": null,
+    "feederCodes": [],
+    "feederRatings": [],
+    "crossBranchEquivalents": [
+      "5S",
+      "1C6",
+      "1C6X1",
+      "25S",
+      "K10A",
+      "K36A",
+      "2651"
+    ],
+    "exposureCategory": "Space / Missile / Satellite Ops",
+    "notes": "USSF enlisted AFSC",
+    "type": "enlisted"
+  },
+  {
+    "code": "5I0",
+    "title": "All-Source Intelligence",
+    "description": "USSF enlisted intelligence specialty focused on all-source analysis supporting space operations and threat characterization.",
+    "branch": "USSF",
+    "rankCategory": "Enlisted",
+    "feederMOS": null,
+    "feederCodes": [],
+    "feederRatings": [],
+    "crossBranchEquivalents": [
+      "1N0",
+      "1N0X1",
+      "35F",
+      "K36A",
+      "0231"
+    ],
+    "exposureCategory": "Intelligence / Cyber / Communications / IT",
+    "notes": "USSF enlisted AFSC",
+    "type": "enlisted"
+  },
+  {
+    "code": "1C6",
+    "title": "Space Systems Operations",
+    "description": "Legacy Air Force specialty retained for USSF transition populations in space systems operations.",
+    "branch": "USSF",
+    "rankCategory": "Enlisted",
+    "feederMOS": null,
+    "feederCodes": [],
+    "feederRatings": [],
+    "crossBranchEquivalents": [
+      "5S",
+      "5S0",
+      "1C6X1",
+      "25S",
+      "K10A",
+      "K36A",
+      "2651"
+    ],
+    "exposureCategory": "Space / Missile / Satellite Ops",
+    "notes": "USSF enlisted AFSC",
+    "type": "enlisted"
+  },
+  {
+    "code": "1C6X1",
+    "title": "Space Systems Operations",
+    "description": "Legacy Air Force specialty retained for USSF transition populations in space systems operations.",
+    "branch": "USSF",
+    "rankCategory": "Enlisted",
+    "feederMOS": null,
+    "feederCodes": [],
+    "feederRatings": [],
+    "crossBranchEquivalents": [
+      "5S",
+      "5S0",
+      "1C6",
+      "25S",
+      "K10A",
+      "K36A",
+      "2651"
+    ],
+    "exposureCategory": "Space / Missile / Satellite Ops",
+    "notes": "USSF enlisted AFSC",
+    "type": "enlisted"
+  },
+  {
+    "code": "1N0",
+    "title": "All-Source Intelligence",
+    "description": "Legacy Air Force intelligence specialty retained for USSF transition populations.",
+    "branch": "USSF",
+    "rankCategory": "Enlisted",
+    "feederMOS": null,
+    "feederCodes": [],
+    "feederRatings": [],
+    "crossBranchEquivalents": [
+      "5I0",
+      "1N0X1",
+      "35F",
+      "K36A",
+      "0231"
+    ],
+    "exposureCategory": "Intelligence / Cyber / Communications / IT",
+    "notes": "USSF enlisted AFSC",
+    "type": "enlisted"
+  },
+  {
+    "code": "1N0X1",
+    "title": "All-Source Intelligence",
+    "description": "Legacy Air Force intelligence specialty retained for USSF transition populations.",
+    "branch": "USSF",
+    "rankCategory": "Enlisted",
+    "feederMOS": null,
+    "feederCodes": [],
+    "feederRatings": [],
+    "crossBranchEquivalents": [
+      "5I0",
+      "1N0",
+      "35F",
+      "K36A",
+      "0231"
+    ],
+    "exposureCategory": "Intelligence / Cyber / Communications / IT",
+    "notes": "USSF enlisted AFSC",
+    "type": "enlisted"
+  },
+  {
+    "code": "1N1",
+    "title": "Geospatial Intelligence",
+    "description": "Legacy Air Force geospatial intelligence specialty used in USSF transition and mission support contexts.",
+    "branch": "USSF",
+    "rankCategory": "Enlisted",
+    "feederMOS": null,
+    "feederCodes": [],
+    "feederRatings": [],
+    "crossBranchEquivalents": [
+      "1N1X1",
+      "35G",
+      "IS",
+      "0261"
+    ],
+    "exposureCategory": "Intelligence / Cyber / Communications / IT",
+    "notes": "USSF enlisted AFSC",
+    "type": "enlisted"
+  },
+  {
+    "code": "1N1X1",
+    "title": "Geospatial Intelligence",
+    "description": "Legacy Air Force geospatial intelligence specialty used in USSF transition and mission support contexts.",
+    "branch": "USSF",
+    "rankCategory": "Enlisted",
+    "feederMOS": null,
+    "feederCodes": [],
+    "feederRatings": [],
+    "crossBranchEquivalents": [
+      "1N1",
+      "35G",
+      "IS",
+      "0261"
+    ],
+    "exposureCategory": "Intelligence / Cyber / Communications / IT",
+    "notes": "USSF enlisted AFSC",
+    "type": "enlisted"
+  },
+  {
+    "code": "1N2",
+    "title": "Signals Intelligence",
+    "description": "Legacy Air Force signals intelligence specialty used in USSF transition and mission support contexts.",
+    "branch": "USSF",
+    "rankCategory": "Enlisted",
+    "feederMOS": null,
+    "feederCodes": [],
+    "feederRatings": [],
+    "crossBranchEquivalents": [
+      "1N2X1",
+      "35N",
+      "CTN",
+      "2621"
+    ],
+    "exposureCategory": "Intelligence / Cyber / Communications / IT",
+    "notes": "USSF enlisted AFSC",
+    "type": "enlisted"
+  },
+  {
+    "code": "1N2X1",
+    "title": "Signals Intelligence",
+    "description": "Legacy Air Force signals intelligence specialty used in USSF transition and mission support contexts.",
+    "branch": "USSF",
+    "rankCategory": "Enlisted",
+    "feederMOS": null,
+    "feederCodes": [],
+    "feederRatings": [],
+    "crossBranchEquivalents": [
+      "1N2",
+      "35N",
+      "CTN",
+      "2621"
+    ],
+    "exposureCategory": "Intelligence / Cyber / Communications / IT",
+    "notes": "USSF enlisted AFSC",
+    "type": "enlisted"
+  },
+  {
+    "code": "1N8X1",
+    "title": "Targeting Analysis",
+    "description": "USSF enlisted targeting analysis specialty supporting operational planning and mission assurance.",
+    "branch": "USSF",
+    "rankCategory": "Enlisted",
+    "feederMOS": null,
+    "feederCodes": [],
+    "feederRatings": [],
+    "crossBranchEquivalents": [
+      "1N8",
+      "35F",
+      "K36A",
+      "0231"
+    ],
+    "exposureCategory": "Intelligence / Cyber / Communications / IT",
+    "notes": "USSF enlisted AFSC",
+    "type": "enlisted"
+  },
+  {
+    "code": "13SXA",
+    "title": "Space Operations Officer",
+    "description": "Space Operations Officer specialty in the Space Force occupational system.",
+    "branch": "USSF",
+    "rankCategory": "Officer",
+    "feederMOS": null,
+    "feederCodes": [],
+    "feederRatings": [],
+    "crossBranchEquivalents": [],
+    "exposureCategory": "Leadership / Staff",
+    "notes": "USSF Officer specialty",
+    "type": "officer"
+  },
+  {
+    "code": "17DXA",
+    "title": "Cyber Operations Officer",
+    "description": "Cyber Operations Officer specialty in the Space Force occupational system.",
+    "branch": "USSF",
+    "rankCategory": "Officer",
+    "feederMOS": null,
+    "feederCodes": [],
+    "feederRatings": [],
+    "crossBranchEquivalents": [],
+    "exposureCategory": "Leadership / Staff",
+    "notes": "USSF Officer specialty",
+    "type": "officer"
+  },
+  {
+    "code": "61DXA",
+    "title": "Space Systems Acquisitions Officer",
+    "description": "Space Systems Acquisitions Officer specialty in the Space Force occupational system.",
+    "branch": "USSF",
+    "rankCategory": "Officer",
+    "feederMOS": null,
+    "feederCodes": [],
+    "feederRatings": [],
+    "crossBranchEquivalents": [],
+    "exposureCategory": "Leadership / Staff",
+    "notes": "USSF Officer specialty",
+    "type": "officer"
+  },
+  {
+    "code": "62EXA",
+    "title": "Space Systems Engineer",
+    "description": "Space Systems Engineer specialty in the Space Force occupational system.",
+    "branch": "USSF",
+    "rankCategory": "Officer",
+    "feederMOS": null,
+    "feederCodes": [],
+    "feederRatings": [],
+    "crossBranchEquivalents": [],
+    "exposureCategory": "Leadership / Staff",
+    "notes": "USSF Officer specialty",
+    "type": "officer"
+  }
+]

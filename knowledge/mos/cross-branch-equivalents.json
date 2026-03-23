@@ -1,17 +1,31 @@
 {
-  "version": "2026-03-21",
-  "source": "Rally Forge Space Force AFSC upgrade",
+  "version": "2026-03-23",
+  "source": "Rally Forge MOS/Warrant normalization and matrix generation",
   "mappings": [
     {
       "code": "5S",
       "title": "Space Systems Operations",
       "branch": "USSF",
       "equivalents": {
-        "Army": ["25S"],
-        "Navy": ["K10A", "K36A"],
-        "Marine Corps": ["2651"],
-        "Air Force": ["1C6", "1C6X1"],
-        "Space Force": ["5S0", "1C6", "1C6X1"]
+        "Army": [
+          "25S"
+        ],
+        "Navy": [
+          "K10A",
+          "K36A"
+        ],
+        "Marine Corps": [
+          "2651"
+        ],
+        "Air Force": [
+          "1C6",
+          "1C6X1"
+        ],
+        "Space Force": [
+          "5S0",
+          "1C6",
+          "1C6X1"
+        ]
       },
       "notes": "USSF enlisted AFSC"
     },
@@ -20,11 +34,25 @@
       "title": "Space Systems Operations",
       "branch": "USSF",
       "equivalents": {
-        "Army": ["25S"],
-        "Navy": ["K10A", "K36A"],
-        "Marine Corps": ["2651"],
-        "Air Force": ["1C6", "1C6X1"],
-        "Space Force": ["5S", "1C6", "1C6X1"]
+        "Army": [
+          "25S"
+        ],
+        "Navy": [
+          "K10A",
+          "K36A"
+        ],
+        "Marine Corps": [
+          "2651"
+        ],
+        "Air Force": [
+          "1C6",
+          "1C6X1"
+        ],
+        "Space Force": [
+          "5S",
+          "1C6",
+          "1C6X1"
+        ]
       },
       "notes": "USSF enlisted AFSC"
     },
@@ -33,11 +61,23 @@
       "title": "All-Source Intelligence",
       "branch": "USSF",
       "equivalents": {
-        "Army": ["35F"],
-        "Navy": ["K36A"],
-        "Marine Corps": ["0231"],
-        "Air Force": ["1N0", "1N0X1"],
-        "Space Force": ["1N0", "1N0X1"]
+        "Army": [
+          "35F"
+        ],
+        "Navy": [
+          "K36A"
+        ],
+        "Marine Corps": [
+          "0231"
+        ],
+        "Air Force": [
+          "1N0",
+          "1N0X1"
+        ],
+        "Space Force": [
+          "1N0",
+          "1N0X1"
+        ]
       },
       "notes": "USSF enlisted AFSC"
     },
@@ -46,11 +86,24 @@
       "title": "Space Systems Operations",
       "branch": "USSF",
       "equivalents": {
-        "Army": ["25S"],
-        "Navy": ["K10A", "K36A"],
-        "Marine Corps": ["2651"],
-        "Air Force": ["1C6X1"],
-        "Space Force": ["5S", "5S0", "1C6X1"]
+        "Army": [
+          "25S"
+        ],
+        "Navy": [
+          "K10A",
+          "K36A"
+        ],
+        "Marine Corps": [
+          "2651"
+        ],
+        "Air Force": [
+          "1C6X1"
+        ],
+        "Space Force": [
+          "5S",
+          "5S0",
+          "1C6X1"
+        ]
       },
       "notes": "USSF enlisted AFSC"
     },
@@ -59,11 +112,22 @@
       "title": "All-Source Intelligence",
       "branch": "USSF",
       "equivalents": {
-        "Army": ["35F"],
-        "Navy": ["K36A"],
-        "Marine Corps": ["0231"],
-        "Air Force": ["1N0X1"],
-        "Space Force": ["5I0", "1N0X1"]
+        "Army": [
+          "35F"
+        ],
+        "Navy": [
+          "K36A"
+        ],
+        "Marine Corps": [
+          "0231"
+        ],
+        "Air Force": [
+          "1N0X1"
+        ],
+        "Space Force": [
+          "5I0",
+          "1N0X1"
+        ]
       },
       "notes": "USSF enlisted AFSC"
     },
@@ -72,7 +136,9 @@
       "title": "Infantry Weapons Officer (Gunner)",
       "branch": "USMC",
       "equivalents": {
-        "Army": ["131A"],
+        "Army": [
+          "131A"
+        ],
         "Navy": null,
         "Air Force": null,
         "Space Force": null,
@@ -85,9 +151,15 @@
       "title": "Senior All-Source Intelligence Analysis Officer",
       "branch": "USMC",
       "equivalents": {
-        "Army": ["350F"],
-        "Navy": ["1830"],
-        "Air Force": ["14F"],
+        "Army": [
+          "350F"
+        ],
+        "Navy": [
+          "1830"
+        ],
+        "Air Force": [
+          "14F"
+        ],
         "Space Force": null,
         "Coast Guard": null
       },
@@ -98,9 +170,15 @@
       "title": "Basic Communications Officer",
       "branch": "USMC",
       "equivalents": {
-        "Army": ["255A"],
-        "Navy": ["161X"],
-        "Air Force": ["33S"],
+        "Army": [
+          "255A"
+        ],
+        "Navy": [
+          "161X"
+        ],
+        "Air Force": [
+          "33S"
+        ],
         "Space Force": null,
         "Coast Guard": null
       },
@@ -111,9 +189,15 @@
       "title": "Counterintelligence/Human Intelligence Officer",
       "branch": "USMC",
       "equivalents": {
-        "Army": ["351M"],
-        "Navy": ["1830"],
-        "Air Force": ["14F"],
+        "Army": [
+          "351M"
+        ],
+        "Navy": [
+          "1830"
+        ],
+        "Air Force": [
+          "14F"
+        ],
         "Space Force": null,
         "Coast Guard": null
       },
@@ -124,10 +208,16 @@
       "title": "Geographic Intelligence Officer",
       "branch": "USMC",
       "equivalents": {
-        "Army": ["350G"],
+        "Army": [
+          "350G"
+        ],
         "Navy": null,
-        "Air Force": ["1N1"],
-        "Space Force": ["1N1"],
+        "Air Force": [
+          "1N1"
+        ],
+        "Space Force": [
+          "1N1"
+        ],
         "Coast Guard": null
       },
       "notes": "USMC Warrant Officer MOS — GEOINT; Army 350G Geospatial Intelligence Technician is direct WO equivalent"
@@ -137,9 +227,15 @@
       "title": "Personnel Officer",
       "branch": "USMC",
       "equivalents": {
-        "Army": ["420A"],
-        "Navy": ["163X"],
-        "Air Force": ["38F"],
+        "Army": [
+          "420A"
+        ],
+        "Navy": [
+          "163X"
+        ],
+        "Air Force": [
+          "38F"
+        ],
         "Space Force": null,
         "Coast Guard": null
       },
@@ -150,7 +246,9 @@
       "title": "Engineering Assistant Officer",
       "branch": "USMC",
       "equivalents": {
-        "Army": ["120A"],
+        "Army": [
+          "120A"
+        ],
         "Navy": null,
         "Air Force": null,
         "Space Force": null,
@@ -163,9 +261,16 @@
       "title": "Basic Logistics Officer",
       "branch": "USMC",
       "equivalents": {
-        "Army": ["920A", "920B"],
-        "Navy": ["310X"],
-        "Air Force": ["21R"],
+        "Army": [
+          "920A",
+          "920B"
+        ],
+        "Navy": [
+          "310X"
+        ],
+        "Air Force": [
+          "21R"
+        ],
         "Space Force": null,
         "Coast Guard": null
       },
@@ -176,13 +281,213 @@
       "title": "Motor Transport Officer",
       "branch": "USMC",
       "equivalents": {
-        "Army": ["882A"],
+        "Army": [
+          "882A"
+        ],
         "Navy": null,
         "Air Force": null,
         "Space Force": null,
         "Coast Guard": null
       },
       "notes": "USMC Warrant Officer MOS — Motor Transport; Army 882A Military Surface Deployment/Distribution Technician is closest WO cross-branch equivalent"
+    },
+    {
+      "code": "BOSN",
+      "title": "Boatswain",
+      "branch": "Coast Guard",
+      "equivalents": {
+        "Army": [
+          "640A"
+        ],
+        "Navy": [
+          "711X"
+        ],
+        "Air Force": [],
+        "Space Force": [],
+        "Marine Corps": [
+          "0301"
+        ]
+      },
+      "notes": "Coast Guard warrant equivalency map"
+    },
+    {
+      "code": "ELC",
+      "title": "Electronics Technician (Warrant)",
+      "branch": "Coast Guard",
+      "equivalents": {
+        "Army": [
+          "948B"
+        ],
+        "Navy": [
+          "726X"
+        ],
+        "Air Force": [
+          "2A0X1"
+        ],
+        "Space Force": [],
+        "Marine Corps": [
+          "2805"
+        ]
+      },
+      "notes": "Coast Guard warrant equivalency map"
+    },
+    {
+      "code": "ENG",
+      "title": "Engineering Officer (Warrant)",
+      "branch": "Coast Guard",
+      "equivalents": {
+        "Army": [
+          "120A"
+        ],
+        "Navy": [
+          "721X"
+        ],
+        "Air Force": [],
+        "Space Force": [],
+        "Marine Corps": [
+          "1361"
+        ]
+      },
+      "notes": "Coast Guard warrant equivalency map"
+    },
+    {
+      "code": "AVN",
+      "title": "Aviation Engineering Officer (Warrant)",
+      "branch": "Coast Guard",
+      "equivalents": {
+        "Army": [
+          "151A"
+        ],
+        "Navy": [
+          "752X"
+        ],
+        "Air Force": [
+          "2A5X1"
+        ],
+        "Space Force": [],
+        "Marine Corps": []
+      },
+      "notes": "Coast Guard warrant equivalency map"
+    },
+    {
+      "code": "711X",
+      "title": "Boatswain (Surface)",
+      "branch": "Navy",
+      "equivalents": {
+        "Army": [
+          "640A"
+        ],
+        "Marine Corps": [
+          "0301"
+        ],
+        "Air Force": [],
+        "Space Force": [],
+        "Coast Guard": [
+          "BOSN"
+        ]
+      },
+      "notes": "Navy warrant equivalency map"
+    },
+    {
+      "code": "728X",
+      "title": "Aviation Electronics Technician",
+      "branch": "Navy",
+      "equivalents": {
+        "Army": [
+          "151A"
+        ],
+        "Marine Corps": [
+          "6316"
+        ],
+        "Air Force": [
+          "2A0X1"
+        ],
+        "Space Force": [],
+        "Coast Guard": [
+          "AVT"
+        ]
+      },
+      "notes": "Navy warrant equivalency map"
+    },
+    {
+      "code": "731X",
+      "title": "Cryptologic Technician (Surface)",
+      "branch": "Navy",
+      "equivalents": {
+        "Army": [
+          "352N"
+        ],
+        "Marine Corps": [
+          "2621"
+        ],
+        "Air Force": [
+          "1N2X1"
+        ],
+        "Space Force": [
+          "1N2"
+        ],
+        "Coast Guard": []
+      },
+      "notes": "Navy warrant equivalency map"
+    },
+    {
+      "code": "754X",
+      "title": "Aviation Maintenance Technician (Structures)",
+      "branch": "Navy",
+      "equivalents": {
+        "Army": [
+          "151A"
+        ],
+        "Marine Corps": [
+          "6216"
+        ],
+        "Air Force": [
+          "2A7X1"
+        ],
+        "Space Force": [],
+        "Coast Guard": [
+          "AVN"
+        ]
+      },
+      "notes": "Navy warrant equivalency map"
+    },
+    {
+      "code": "180A",
+      "title": "Special Forces Warrant Officer",
+      "branch": "Army",
+      "equivalents": {
+        "Marine Corps": [
+          "0370"
+        ],
+        "Navy": [
+          "715X"
+        ],
+        "Air Force": [],
+        "Space Force": [],
+        "Coast Guard": []
+      },
+      "notes": "Army warrant equivalency map"
+    },
+    {
+      "code": "420A",
+      "title": "Human Resources Technician",
+      "branch": "Army",
+      "equivalents": {
+        "Marine Corps": [
+          "0170"
+        ],
+        "Navy": [
+          "741X"
+        ],
+        "Air Force": [
+          "38F"
+        ],
+        "Space Force": [],
+        "Coast Guard": [
+          "PERS"
+        ]
+      },
+      "notes": "Army warrant equivalency map"
     }
   ]
 }

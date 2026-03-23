@@ -1,0 +1,226 @@
+{
+  "5S": {
+    "exposureCategory": "Space / Missile / Satellite Ops",
+    "exposureSubcategories": [
+      "Space / Missile / Satellite Ops"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USSF enlisted AFSC"
+  },
+  "5S0": {
+    "exposureCategory": "Space / Missile / Satellite Ops",
+    "exposureSubcategories": [
+      "Space / Missile / Satellite Ops"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USSF enlisted AFSC"
+  },
+  "5I0": {
+    "exposureCategory": "Intelligence / Cyber / Communications / IT",
+    "exposureSubcategories": [
+      "Intelligence / Cyber / Communications / IT"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USSF enlisted AFSC"
+  },
+  "1C6": {
+    "exposureCategory": "Space / Missile / Satellite Ops",
+    "exposureSubcategories": [
+      "Space / Missile / Satellite Ops"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USSF enlisted AFSC"
+  },
+  "1C6X1": {
+    "exposureCategory": "Space / Missile / Satellite Ops",
+    "exposureSubcategories": [
+      "Space / Missile / Satellite Ops"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USSF enlisted AFSC"
+  },
+  "1N0": {
+    "exposureCategory": "Intelligence / Cyber / Communications / IT",
+    "exposureSubcategories": [
+      "Intelligence / Cyber / Communications / IT"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USSF enlisted AFSC"
+  },
+  "1N0X1": {
+    "exposureCategory": "Intelligence / Cyber / Communications / IT",
+    "exposureSubcategories": [
+      "Intelligence / Cyber / Communications / IT"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USSF enlisted AFSC"
+  },
+  "1N1": {
+    "exposureCategory": "Intelligence / Cyber / Communications / IT",
+    "exposureSubcategories": [
+      "Intelligence / Cyber / Communications / IT"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USSF enlisted AFSC"
+  },
+  "1N1X1": {
+    "exposureCategory": "Intelligence / Cyber / Communications / IT",
+    "exposureSubcategories": [
+      "Intelligence / Cyber / Communications / IT"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USSF enlisted AFSC"
+  },
+  "1N2": {
+    "exposureCategory": "Intelligence / Cyber / Communications / IT",
+    "exposureSubcategories": [
+      "Intelligence / Cyber / Communications / IT"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USSF enlisted AFSC"
+  },
+  "1N2X1": {
+    "exposureCategory": "Intelligence / Cyber / Communications / IT",
+    "exposureSubcategories": [
+      "Intelligence / Cyber / Communications / IT"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USSF enlisted AFSC"
+  },
+  "1N8X1": {
+    "exposureCategory": "Intelligence / Cyber / Communications / IT",
+    "exposureSubcategories": [
+      "Intelligence / Cyber / Communications / IT"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USSF enlisted AFSC"
+  },
+  "13SXA": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "USSF Officer specialty"
+  },
+  "17DXA": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "USSF Officer specialty"
+  },
+  "61DXA": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "USSF Officer specialty"
+  },
+  "62EXA": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "USSF Officer specialty"
+  }
+}

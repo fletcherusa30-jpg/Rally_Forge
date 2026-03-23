@@ -1,1913 +1,2769 @@
-﻿{
-    "generated":  "2026-03-15T20:57:34.2586346-06:00",
-    "dbq":  [
-
-            ],
-    "mos":  {
-                "Coast Guard":  [
-                                    {
-                                        "code":  "AMT",
-                                        "title":  "Avionics Maintenance Technician"
-                                    },
-                                    {
-                                        "code":  "AET",
-                                        "title":  "Aviation Electronics Technician"
-                                    },
-                                    {
-                                        "code":  "AST",
-                                        "title":  "Aviation Survival Technician"
-                                    },
-                                    {
-                                        "code":  "BM",
-                                        "title":  "Boatswains Mate"
-                                    },
-                                    {
-                                        "code":  "DC",
-                                        "title":  "Damage Controlman"
-                                    },
-                                    {
-                                        "code":  "DV",
-                                        "title":  "Diver"
-                                    },
-                                    {
-                                        "code":  "EM",
-                                        "title":  "Electricians Mate"
-                                    },
-                                    {
-                                        "code":  "ET",
-                                        "title":  "Electronics Technician"
-                                    },
-                                    {
-                                        "code":  "FS",
-                                        "title":  "Food Service Specialist"
-                                    },
-                                    {
-                                        "code":  "GM",
-                                        "title":  "Gunners Mate"
-                                    },
-                                    {
-                                        "code":  "HS",
-                                        "title":  "Health Services Technician"
-                                    },
-                                    {
-                                        "code":  "IS",
-                                        "title":  "Intelligence Specialist"
-                                    },
-                                    {
-                                        "code":  "IT",
-                                        "title":  "Information Systems Technician"
-                                    },
-                                    {
-                                        "code":  "ME",
-                                        "title":  "Maritime Enforcement Specialist"
-                                    },
-                                    {
-                                        "code":  "MK",
-                                        "title":  "Machinery Technician"
-                                    },
-                                    {
-                                        "code":  "MST",
-                                        "title":  "Marine Science Technician"
-                                    },
-                                    {
-                                        "code":  "MU",
-                                        "title":  "Musician"
-                                    },
-                                    {
-                                        "code":  "OS",
-                                        "title":  "Operations Specialist"
-                                    },
-                                    {
-                                        "code":  "PA",
-                                        "title":  "Public Affairs Specialist"
-                                    },
-                                    {
-                                        "code":  "SK",
-                                        "title":  "Storekeeper"
-                                    },
-                                    {
-                                        "code":  "YN",
-                                        "title":  "Yeoman"
-                                    }
-                                ],
-                "Space Force":  [
-                                    {
-                                        "code":  "5S",
-                                        "title":  "Space Systems Operations"
-                                    },
-                                    {
-                                        "code":  "5S0",
-                                        "title":  "Space Systems Operations"
-                                    },
-                                    {
-                                        "code":  "5I0",
-                                        "title":  "All-Source Intelligence"
-                                    },
-                                    {
-                                        "code":  "1C6",
-                                        "title":  "Space Systems Operations"
-                                    },
-                                    {
-                                        "code":  "1C6X1",
-                                        "title":  "Space Systems Operations"
-                                    },
-                                    {
-                                        "code":  "1N0",
-                                        "title":  "All-Source Intelligence"
-                                    },
-                                    {
-                                        "code":  "1N0X1",
-                                        "title":  "All-Source Intelligence"
-                                    },
-                                    {
-                                        "code":  "1N1",
-                                        "title":  "Geospatial Intelligence"
-                                    },
-                                    {
-                                        "code":  "1N1X1",
-                                        "title":  "Geospatial Intelligence"
-                                    },
-                                    {
-                                        "code":  "1N2",
-                                        "title":  "Signals Intelligence"
-                                    },
-                                    {
-                                        "code":  "1N2X1",
-                                        "title":  "Signals Intelligence"
-                                    },
-                                    {
-                                        "code":  "1N8X1",
-                                        "title":  "Targeting Analysis"
-                                    }
-                                ],
-                "Air Force":  [
-                                  {
-                                      "code":  "1A0X1",
-                                      "title":  "In-Flight Refueling"
-                                  },
-                                  {
-                                      "code":  "1A1X1",
-                                      "title":  "Flight Engineer"
-                                  },
-                                  {
-                                      "code":  "1A2X1",
-                                      "title":  "Aircraft Loadmaster"
-                                  },
-                                  {
-                                      "code":  "1A3X1",
-                                      "title":  "Airborne Mission Systems"
-                                  },
-                                  {
-                                      "code":  "1A6X1",
-                                      "title":  "Flight Attendant"
-                                  },
-                                  {
-                                      "code":  "1A8X1",
-                                      "title":  "Airborne Cryptologic Language Analyst"
-                                  },
-                                  {
-                                      "code":  "1A8X2",
-                                      "title":  "Airborne ISR Operator"
-                                  },
-                                  {
-                                      "code":  "1B4X1",
-                                      "title":  "Cyber Warfare Operations"
-                                  },
-                                  {
-                                      "code":  "1C0X2",
-                                      "title":  "Aviation Resource Management"
-                                  },
-                                  {
-                                      "code":  "1C1X1",
-                                      "title":  "Air Traffic Control"
-                                  },
-                                  {
-                                      "code":  "1C2X1",
-                                      "title":  "Combat Control"
-                                  },
-                                  {
-                                      "code":  "1C3X1",
-                                      "title":  "Command Post"
-                                  },
-                                  {
-                                      "code":  "1C4X1",
-                                      "title":  "Tactical Air Control Party"
-                                  },
-                                  {
-                                      "code":  "1N0X1",
-                                      "title":  "Intelligence Analyst"
-                                  },
-                                  {
-                                      "code":  "1N1X1",
-                                      "title":  "Geospatial Intelligence"
-                                  },
-                                  {
-                                      "code":  "1N2X1",
-                                      "title":  "Signals Intelligence"
-                                  },
-                                  {
-                                      "code":  "1N3X1",
-                                      "title":  "Cryptologic Language Analyst"
-                                  },
-                                  {
-                                      "code":  "1N4X1",
-                                      "title":  "Fusion Analyst"
-                                  },
-                                  {
-                                      "code":  "1P0X1",
-                                      "title":  "Aircrew Flight Equipment"
-                                  },
-                                  {
-                                      "code":  "1S0X1",
-                                      "title":  "Safety"
-                                  },
-                                  {
-                                      "code":  "1T0X1",
-                                      "title":  "SERE Specialist"
-                                  },
-                                  {
-                                      "code":  "1U0X1",
-                                      "title":  "RPA Sensor Operator"
-                                  },
-                                  {
-                                      "code":  "2A0X1",
-                                      "title":  "Avionics Test Station"
-                                  },
-                                  {
-                                      "code":  "2A3X3",
-                                      "title":  "Tactical Aircraft Maintenance"
-                                  },
-                                  {
-                                      "code":  "2A5X1",
-                                      "title":  "Aerospace Maintenance"
-                                  },
-                                  {
-                                      "code":  "2A6X1",
-                                      "title":  "Aerospace Propulsion"
-                                  },
-                                  {
-                                      "code":  "2A7X1",
-                                      "title":  "Aircraft Metals Technology"
-                                  },
-                                  {
-                                      "code":  "2F0X1",
-                                      "title":  "Fuels"
-                                  },
-                                  {
-                                      "code":  "2G0X1",
-                                      "title":  "Logistics Plans"
-                                  },
-                                  {
-                                      "code":  "2M0X1",
-                                      "title":  "Missile \u0026 Space Systems Maintenance"
-                                  },
-                                  {
-                                      "code":  "2P0X1",
-                                      "title":  "Precision Measurement Equipment"
-                                  },
-                                  {
-                                      "code":  "2R0X1",
-                                      "title":  "Maintenance Management Analysis"
-                                  },
-                                  {
-                                      "code":  "2S0X1",
-                                      "title":  "Supply Management"
-                                  },
-                                  {
-                                      "code":  "2T0X1",
-                                      "title":  "Traffic Management"
-                                  },
-                                  {
-                                      "code":  "2T1X1",
-                                      "title":  "Vehicle Operations"
-                                  },
-                                  {
-                                      "code":  "2T2X1",
-                                      "title":  "Air Transportation"
-                                  },
-                                  {
-                                      "code":  "2W0X1",
-                                      "title":  "Munitions Systems"
-                                  },
-                                  {
-                                      "code":  "2W1X1",
-                                      "title":  "Aircraft Armament Systems"
-                                  },
-                                  {
-                                      "code":  "2W2X1",
-                                      "title":  "Nuclear Weapons"
-                                  },
-                                  {
-                                      "code":  "3D0X1",
-                                      "title":  "Knowledge Operations"
-                                  },
-                                  {
-                                      "code":  "3D1X2",
-                                      "title":  "Cyber Transport"
-                                  },
-                                  {
-                                      "code":  "3D1X3",
-                                      "title":  "RF Transmission"
-                                  },
-                                  {
-                                      "code":  "3E0X1",
-                                      "title":  "Electrical Systems"
-                                  },
-                                  {
-                                      "code":  "3E1X1",
-                                      "title":  "HVAC"
-                                  },
-                                  {
-                                      "code":  "3E2X1",
-                                      "title":  "Pavements \u0026 Construction"
-                                  },
-                                  {
-                                      "code":  "3E3X1",
-                                      "title":  "Structural"
-                                  },
-                                  {
-                                      "code":  "3E4X1",
-                                      "title":  "Water \u0026 Fuel Systems"
-                                  },
-                                  {
-                                      "code":  "3E5X1",
-                                      "title":  "Engineering"
-                                  },
-                                  {
-                                      "code":  "3F0X1",
-                                      "title":  "Personnel"
-                                  },
-                                  {
-                                      "code":  "3F1X1",
-                                      "title":  "Services"
-                                  },
-                                  {
-                                      "code":  "3F2X1",
-                                      "title":  "Education \u0026 Training"
-                                  },
-                                  {
-                                      "code":  "3F3X1",
-                                      "title":  "Manpower"
-                                  },
-                                  {
-                                      "code":  "3G0X1",
-                                      "title":  "Equal Opportunity"
-                                  },
-                                  {
-                                      "code":  "3N0X2",
-                                      "title":  "Broadcast Journalism"
-                                  },
-                                  {
-                                      "code":  "3N1X1",
-                                      "title":  "Public Affairs"
-                                  },
-                                  {
-                                      "code":  "3P0X1",
-                                      "title":  "Security Forces"
-                                  },
-                                  {
-                                      "code":  "4A0X1",
-                                      "title":  "Health Services Management"
-                                  },
-                                  {
-                                      "code":  "4A1X1",
-                                      "title":  "Medical Materiel"
-                                  },
-                                  {
-                                      "code":  "4B0X1",
-                                      "title":  "Bioenvironmental Engineering"
-                                  },
-                                  {
-                                      "code":  "4C0X1",
-                                      "title":  "Mental Health Service"
-                                  },
-                                  {
-                                      "code":  "4D0X1",
-                                      "title":  "Diet Therapy"
-                                  },
-                                  {
-                                      "code":  "4E0X1",
-                                      "title":  "Public Health"
-                                  },
-                                  {
-                                      "code":  "4H0X1",
-                                      "title":  "Cardiopulmonary Laboratory"
-                                  },
-                                  {
-                                      "code":  "4J0X2",
-                                      "title":  "Physical Medicine"
-                                  },
-                                  {
-                                      "code":  "4M0X1",
-                                      "title":  "Aerospace \u0026 Operational Physiology"
-                                  },
-                                  {
-                                      "code":  "4N0X1",
-                                      "title":  "Aerospace Medical Service"
-                                  },
-                                  {
-                                      "code":  "4N1X1",
-                                      "title":  "Surgical Service"
-                                  },
-                                  {
-                                      "code":  "4P0X1",
-                                      "title":  "Pharmacy"
-                                  },
-                                  {
-                                      "code":  "4R0X1",
-                                      "title":  "Diagnostic Imaging"
-                                  },
-                                  {
-                                      "code":  "4T0X1",
-                                      "title":  "Medical Laboratory"
-                                  },
-                                  {
-                                      "code":  "4V0X1",
-                                      "title":  "Optometry"
-                                  },
-                                  {
-                                      "code":  "4Y0X1",
-                                      "title":  "Dental Assistant"
-                                  },
-                                  {
-                                      "code":  "5J0X1",
-                                      "title":  "Paralegal"
-                                  },
-                                  {
-                                      "code":  "5R0X1",
-                                      "title":  "Chaplain Assistant"
-                                  },
-                                  {
-                                      "code":  "6C0X1",
-                                      "title":  "Contracting"
-                                  },
-                                  {
-                                      "code":  "6F0X1",
-                                      "title":  "Financial Management"
-                                  },
-                                  {
-                                      "code":  "7S0X1",
-                                      "title":  "Special Investigations"
-                                  },
-                                  {
-                                      "code":  "9S100",
-                                      "title":  "Scientific Applications Specialist"
-                                  },
-                                  {
-                                      "code":  "9T100",
-                                      "title":  "Officer Trainee"
-                                  },
-                                  {
-                                      "code":  "9T200",
-                                      "title":  "Pre-Commissioning"
-                                  }
-                              ],
-                "USPHS":  [
-                              {
-                                  "code":  "MED",
-                                  "title":  "Medical Officer"
-                              },
-                              {
-                                  "code":  "DEN",
-                                  "title":  "Dental Officer"
-                              },
-                              {
-                                  "code":  "NUR",
-                                  "title":  "Nurse Officer"
-                              },
-                              {
-                                  "code":  "ENG",
-                                  "title":  "Engineer Officer"
-                              },
-                              {
-                                  "code":  "ENV",
-                                  "title":  "Environmental Health Officer"
-                              },
-                              {
-                                  "code":  "HLS",
-                                  "title":  "Health Services Officer"
-                              },
-                              {
-                                  "code":  "PHM",
-                                  "title":  "Pharmacist Officer"
-                              },
-                              {
-                                  "code":  "SCI",
-                                  "title":  "Scientist Officer"
-                              },
-                              {
-                                  "code":  "VET",
-                                  "title":  "Veterinary Officer"
-                              },
-                              {
-                                  "code":  "SPC",
-                                  "title":  "Specialist Officer"
-                              }
-                          ],
-                "Army":  [
-                             {
-                                 "code":  "11B",
-                                 "title":  "Infantryman"
-                             },
-                             {
-                                 "code":  "11C",
-                                 "title":  "Indirect Fire Infantryman"
-                             },
-                             {
-                                 "code":  "12B",
-                                 "title":  "Combat Engineer"
-                             },
-                             {
-                                 "code":  "12C",
-                                 "title":  "Bridge Crewmember"
-                             },
-                             {
-                                 "code":  "12D",
-                                 "title":  "Diver"
-                             },
-                             {
-                                 "code":  "12K",
-                                 "title":  "Plumber"
-                             },
-                             {
-                                 "code":  "12M",
-                                 "title":  "Firefighter"
-                             },
-                             {
-                                 "code":  "12N",
-                                 "title":  "Horizontal Construction Engineer"
-                             },
-                             {
-                                 "code":  "12P",
-                                 "title":  "Prime Power Specialist"
-                             },
-                             {
-                                 "code":  "12Q",
-                                 "title":  "Power Line Distribution Specialist"
-                             },
-                             {
-                                 "code":  "12R",
-                                 "title":  "Interior Electrician"
-                             },
-                             {
-                                 "code":  "12T",
-                                 "title":  "Technical Engineer"
-                             },
-                             {
-                                 "code":  "12V",
-                                 "title":  "Concrete and Asphalt Operator"
-                             },
-                             {
-                                 "code":  "12W",
-                                 "title":  "Carpentry and Masonry Specialist"
-                             },
-                             {
-                                 "code":  "12Y",
-                                 "title":  "Geospatial Engineer"
-                             },
-                             {
-                                 "code":  "13B",
-                                 "title":  "Cannon Crewmember"
-                             },
-                             {
-                                 "code":  "13F",
-                                 "title":  "Fire Support Specialist"
-                             },
-                             {
-                                 "code":  "13J",
-                                 "title":  "Fire Control Specialist"
-                             },
-                             {
-                                 "code":  "13M",
-                                 "title":  "MLRS Crewmember"
-                             },
-                             {
-                                 "code":  "13R",
-                                 "title":  "Field Artillery Radar Operator"
-                             },
-                             {
-                                 "code":  "13Z",
-                                 "title":  "Field Artillery Senior Sergeant"
-                             },
-                             {
-                                 "code":  "14E",
-                                 "title":  "Patriot Fire Control Operator"
-                             },
-                             {
-                                 "code":  "14G",
-                                 "title":  "Air Defense Battle Management"
-                             },
-                             {
-                                 "code":  "14H",
-                                 "title":  "Air Defense Enhanced Operator"
-                             },
-                             {
-                                 "code":  "14P",
-                                 "title":  "Air and Missile Defense Crewmember"
-                             },
-                             {
-                                 "code":  "14S",
-                                 "title":  "Avenger Crewmember"
-                             },
-                             {
-                                 "code":  "15B",
-                                 "title":  "Aircraft Powerplant Repairer"
-                             },
-                             {
-                                 "code":  "15D",
-                                 "title":  "Aircraft Powertrain Repairer"
-                             },
-                             {
-                                 "code":  "15F",
-                                 "title":  "Aircraft Electrician"
-                             },
-                             {
-                                 "code":  "15G",
-                                 "title":  "Aircraft Structural Repairer"
-                             },
-                             {
-                                 "code":  "15H",
-                                 "title":  "Aircraft Pneudraulics Repairer"
-                             },
-                             {
-                                 "code":  "15N",
-                                 "title":  "Avionic Mechanic"
-                             },
-                             {
-                                 "code":  "15P",
-                                 "title":  "Aviation Operations Specialist"
-                             },
-                             {
-                                 "code":  "15Q",
-                                 "title":  "Air Traffic Control Operator"
-                             },
-                             {
-                                 "code":  "15T",
-                                 "title":  "UH-60 Repairer"
-                             },
-                             {
-                                 "code":  "15U",
-                                 "title":  "CH-47 Repairer"
-                             },
-                             {
-                                 "code":  "15Y",
-                                 "title":  "AH-64 Repairer"
-                             },
-                             {
-                                 "code":  "17C",
-                                 "title":  "Cyber Operations Specialist"
-                             },
-                             {
-                                 "code":  "17E",
-                                 "title":  "Electronic Warfare Specialist"
-                             },
-                             {
-                                 "code":  "18B",
-                                 "title":  "Special Forces Weapons Sergeant"
-                             },
-                             {
-                                 "code":  "18C",
-                                 "title":  "Special Forces Engineer Sergeant"
-                             },
-                             {
-                                 "code":  "18D",
-                                 "title":  "Special Forces Medical Sergeant"
-                             },
-                             {
-                                 "code":  "18E",
-                                 "title":  "Special Forces Communications Sergeant"
-                             },
-                             {
-                                 "code":  "18F",
-                                 "title":  "Special Forces Intelligence Sergeant"
-                             },
-                             {
-                                 "code":  "18Z",
-                                 "title":  "Special Forces Senior Sergeant"
-                             },
-                             {
-                                 "code":  "19D",
-                                 "title":  "Cavalry Scout"
-                             },
-                             {
-                                 "code":  "19K",
-                                 "title":  "M1 Armor Crewman"
-                             },
-                             {
-                                 "code":  "25B",
-                                 "title":  "Information Technology Specialist"
-                             },
-                             {
-                                 "code":  "25C",
-                                 "title":  "Radio Operator Maintainer"
-                             },
-                             {
-                                 "code":  "25L",
-                                 "title":  "Cable Systems Installer"
-                             },
-                             {
-                                 "code":  "25N",
-                                 "title":  "Nodal Network Systems Operator"
-                             },
-                             {
-                                 "code":  "25Q",
-                                 "title":  "Multichannel Transmission Operator"
-                             },
-                             {
-                                 "code":  "25S",
-                                 "title":  "Satellite Communications Operator"
-                             },
-                             {
-                                 "code":  "25U",
-                                 "title":  "Signal Support Specialist"
-                             },
-                             {
-                                 "code":  "25V",
-                                 "title":  "Combat Documentation Specialist"
-                             },
-                             {
-                                 "code":  "27D",
-                                 "title":  "Paralegal Specialist"
-                             },
-                             {
-                                 "code":  "31B",
-                                 "title":  "Military Police"
-                             },
-                             {
-                                 "code":  "31D",
-                                 "title":  "CID Special Agent"
-                             },
-                             {
-                                 "code":  "35F",
-                                 "title":  "Intelligence Analyst"
-                             },
-                             {
-                                 "code":  "35G",
-                                 "title":  "Geospatial Intelligence Analyst"
-                             },
-                             {
-                                 "code":  "35L",
-                                 "title":  "Counterintelligence Agent"
-                             },
-                             {
-                                 "code":  "35M",
-                                 "title":  "Human Intelligence Collector"
-                             },
-                             {
-                                 "code":  "35N",
-                                 "title":  "Signals Intelligence Analyst"
-                             },
-                             {
-                                 "code":  "35P",
-                                 "title":  "Cryptologic Linguist"
-                             },
-                             {
-                                 "code":  "35S",
-                                 "title":  "Signals Collector Analyst"
-                             },
-                             {
-                                 "code":  "36B",
-                                 "title":  "Financial Management Technician"
-                             },
-                             {
-                                 "code":  "37F",
-                                 "title":  "Psychological Operations Specialist"
-                             },
-                             {
-                                 "code":  "38B",
-                                 "title":  "Civil Affairs Specialist"
-                             },
-                             {
-                                 "code":  "42A",
-                                 "title":  "Human Resources Specialist"
-                             },
-                             {
-                                 "code":  "42R",
-                                 "title":  "Army Band"
-                             },
-                             {
-                                 "code":  "42S",
-                                 "title":  "Special Band Musician"
-                             },
-                             {
-                                 "code":  "44E",
-                                 "title":  "Machinist"
-                             },
-                             {
-                                 "code":  "44H",
-                                 "title":  "Metal Worker"
-                             },
-                             {
-                                 "code":  "45B",
-                                 "title":  "Small Arms Repairer"
-                             },
-                             {
-                                 "code":  "45G",
-                                 "title":  "Fire Control Repairer"
-                             },
-                             {
-                                 "code":  "46S",
-                                 "title":  "Public Affairs Mass Communications"
-                             },
-                             {
-                                 "code":  "51C",
-                                 "title":  "Contracting NCO"
-                             },
-                             {
-                                 "code":  "56M",
-                                 "title":  "Religious Affairs Specialist"
-                             },
-                             {
-                                 "code":  "68A",
-                                 "title":  "Biomedical Equipment Specialist"
-                             },
-                             {
-                                 "code":  "68C",
-                                 "title":  "Practical Nursing Specialist"
-                             },
-                             {
-                                 "code":  "68D",
-                                 "title":  "Operating Room Specialist"
-                             },
-                             {
-                                 "code":  "68E",
-                                 "title":  "Dental Specialist"
-                             },
-                             {
-                                 "code":  "68F",
-                                 "title":  "Physical Therapy Specialist"
-                             },
-                             {
-                                 "code":  "68G",
-                                 "title":  "Patient Administration Specialist"
-                             },
-                             {
-                                 "code":  "68H",
-                                 "title":  "Optical Laboratory Specialist"
-                             },
-                             {
-                                 "code":  "68J",
-                                 "title":  "Medical Logistics Specialist"
-                             },
-                             {
-                                 "code":  "68K",
-                                 "title":  "Medical Laboratory Specialist"
-                             },
-                             {
-                                 "code":  "68M",
-                                 "title":  "Nutrition Care Specialist"
-                             },
-                             {
-                                 "code":  "68N",
-                                 "title":  "Cardiovascular Specialist"
-                             },
-                             {
-                                 "code":  "68P",
-                                 "title":  "Radiology Specialist"
-                             },
-                             {
-                                 "code":  "68Q",
-                                 "title":  "Pharmacy Specialist"
-                             },
-                             {
-                                 "code":  "68R",
-                                 "title":  "Veterinary Food Inspection Specialist"
-                             },
-                             {
-                                 "code":  "68S",
-                                 "title":  "Preventive Medicine Specialist"
-                             },
-                             {
-                                 "code":  "68T",
-                                 "title":  "Animal Care Specialist"
-                             },
-                             {
-                                 "code":  "68U",
-                                 "title":  "ENT Specialist"
-                             },
-                             {
-                                 "code":  "68V",
-                                 "title":  "Respiratory Specialist"
-                             },
-                             {
-                                 "code":  "68W",
-                                 "title":  "Combat Medic Specialist"
-                             },
-                             {
-                                 "code":  "68X",
-                                 "title":  "Behavioral Health Specialist"
-                             },
-                             {
-                                 "code":  "68Y",
-                                 "title":  "Eye Specialist"
-                             },
-                             {
-                                 "code":  "74D",
-                                 "title":  "CBRN Specialist"
-                             },
-                             {
-                                 "code":  "79R",
-                                 "title":  "Recruiter"
-                             },
-                             {
-                                 "code":  "79S",
-                                 "title":  "Career Counselor"
-                             },
-                             {
-                                 "code":  "88H",
-                                 "title":  "Cargo Specialist"
-                             },
-                             {
-                                 "code":  "88K",
-                                 "title":  "Watercraft Operator"
-                             },
-                             {
-                                 "code":  "88L",
-                                 "title":  "Watercraft Engineer"
-                             },
-                             {
-                                 "code":  "88M",
-                                 "title":  "Motor Transport Operator"
-                             },
-                             {
-                                 "code":  "88N",
-                                 "title":  "Transportation Management Coordinator"
-                             },
-                             {
-                                 "code":  "88P",
-                                 "title":  "Railway Equipment Repairer"
-                             },
-                             {
-                                 "code":  "88T",
-                                 "title":  "Railway Section Repairer"
-                             },
-                             {
-                                 "code":  "89A",
-                                 "title":  "Ammunition Stock Control"
-                             },
-                             {
-                                 "code":  "89B",
-                                 "title":  "Ammunition Specialist"
-                             },
-                             {
-                                 "code":  "91B",
-                                 "title":  "Wheeled Vehicle Mechanic"
-                             },
-                             {
-                                 "code":  "91C",
-                                 "title":  "Utilities Equipment Repairer"
-                             },
-                             {
-                                 "code":  "91D",
-                                 "title":  "Power Generation Equipment Repairer"
-                             },
-                             {
-                                 "code":  "91E",
-                                 "title":  "Allied Trade Specialist"
-                             },
-                             {
-                                 "code":  "91F",
-                                 "title":  "Small Arms Repairer"
-                             },
-                             {
-                                 "code":  "91G",
-                                 "title":  "Fire Control Repairer"
-                             },
-                             {
-                                 "code":  "91H",
-                                 "title":  "Track Vehicle Repairer"
-                             },
-                             {
-                                 "code":  "91J",
-                                 "title":  "Quartermaster and Chemical Equipment Repairer"
-                             },
-                             {
-                                 "code":  "91L",
-                                 "title":  "Construction Equipment Repairer"
-                             },
-                             {
-                                 "code":  "91M",
-                                 "title":  "Bradley Fighting Vehicle Maintainer"
-                             },
-                             {
-                                 "code":  "91P",
-                                 "title":  "Artillery Mechanic"
-                             },
-                             {
-                                 "code":  "91S",
-                                 "title":  "Stryker Systems Maintainer"
-                             },
-                             {
-                                 "code":  "92A",
-                                 "title":  "Automated Logistical Specialist"
-                             },
-                             {
-                                 "code":  "92F",
-                                 "title":  "Petroleum Supply Specialist"
-                             },
-                             {
-                                 "code":  "92G",
-                                 "title":  "Culinary Specialist"
-                             },
-                             {
-                                 "code":  "92L",
-                                 "title":  "Petroleum Laboratory Specialist"
-                             },
-                             {
-                                 "code":  "92M",
-                                 "title":  "Mortuary Affairs Specialist"
-                             },
-                             {
-                                 "code":  "92R",
-                                 "title":  "Parachute Rigger"
-                             },
-                             {
-                                 "code":  "92S",
-                                 "title":  "Shower and Laundry Specialist"
-                             },
-                             {
-                                 "code":  "92W",
-                                 "title":  "Water Treatment Specialist"
-                             },
-                             {
-                                 "code":  "92Y",
-                                 "title":  "Unit Supply Specialist"
-                             }
-                         ],
-                "NOAA":  [
-                             {
-                                 "code":  "OPS",
-                                 "title":  "Operations Officer"
-                             },
-                             {
-                                 "code":  "NAV",
-                                 "title":  "Navigation Officer"
-                             },
-                             {
-                                 "code":  "MET",
-                                 "title":  "Meteorology Officer"
-                             },
-                             {
-                                 "code":  "OCE",
-                                 "title":  "Oceanography Officer"
-                             },
-                             {
-                                 "code":  "ENG",
-                                 "title":  "Engineering Officer"
-                             },
-                             {
-                                 "code":  "MRE",
-                                 "title":  "Marine Engineering Officer"
-                             },
-                             {
-                                 "code":  "AVO",
-                                 "title":  "Aviation Officer"
-                             },
-                             {
-                                 "code":  "RDO",
-                                 "title":  "Remote Sensing Officer"
-                             },
-                             {
-                                 "code":  "FIS",
-                                 "title":  "Fisheries Science Officer"
-                             },
-                             {
-                                 "code":  "HYS",
-                                 "title":  "Hydrographic Science Officer"
-                             },
-                             {
-                                 "code":  "CHT",
-                                 "title":  "Charting and Survey Officer"
-                             },
-                             {
-                                 "code":  "ENV",
-                                 "title":  "Environmental Science Officer"
-                             },
-                             {
-                                 "code":  "ITM",
-                                 "title":  "Information Technology Management Officer"
-                             },
-                             {
-                                 "code":  "ADM",
-                                 "title":  "Administrative Officer"
-                             }
-                         ],
-                "Marine Corps":  [
-                                     {
-                                         "code":  "0311",
-                                         "title":  "Rifleman"
-                                     },
-                                     {
-                                         "code":  "0331",
-                                         "title":  "Machine Gunner"
-                                     },
-                                     {
-                                         "code":  "0341",
-                                         "title":  "Mortarman"
-                                     },
-                                     {
-                                         "code":  "0351",
-                                         "title":  "Infantry Assault Marine"
-                                     },
-                                     {
-                                         "code":  "0352",
-                                         "title":  "Anti-Tank Missile Gunner"
-                                     },
-                                     {
-                                         "code":  "0411",
-                                         "title":  "Maintenance Management Specialist"
-                                     },
-                                     {
-                                         "code":  "0451",
-                                         "title":  "Combat Photographer"
-                                     },
-                                     {
-                                         "code":  "0481",
-                                         "title":  "Landing Support Specialist"
-                                     },
-                                     {
-                                         "code":  "0621",
-                                         "title":  "Field Radio Operator"
-                                     },
-                                     {
-                                         "code":  "0627",
-                                         "title":  "Unit Level Circuit Switcher"
-                                     },
-                                     {
-                                         "code":  "0631",
-                                         "title":  "Network Administrator"
-                                     },
-                                     {
-                                         "code":  "0651",
-                                         "title":  "Cyber Network Operator"
-                                     },
-                                     {
-                                         "code":  "0811",
-                                         "title":  "Field Artillery Cannoneer"
-                                     },
-                                     {
-                                         "code":  "0842",
-                                         "title":  "Field Artillery Radar Operator"
-                                     },
-                                     {
-                                         "code":  "0844",
-                                         "title":  "Field Artillery Fire Control Man"
-                                     },
-                                     {
-                                         "code":  "0847",
-                                         "title":  "Artillery Meteorological Man"
-                                     },
-                                     {
-                                         "code":  "1141",
-                                         "title":  "Electrician"
-                                     },
-                                     {
-                                         "code":  "1161",
-                                         "title":  "Refrigeration Mechanic"
-                                     },
-                                     {
-                                         "code":  "1171",
-                                         "title":  "Water Support Technician"
-                                     },
-                                     {
-                                         "code":  "1316",
-                                         "title":  "Metal Worker"
-                                     },
-                                     {
-                                         "code":  "1341",
-                                         "title":  "Engineer Equipment Mechanic"
-                                     },
-                                     {
-                                         "code":  "1345",
-                                         "title":  "Engineer Equipment Operator"
-                                     },
-                                     {
-                                         "code":  "1833",
-                                         "title":  "Assault Amphibious Vehicle Crewman"
-                                     },
-                                     {
-                                         "code":  "2111",
-                                         "title":  "Small Arms Repairer/Technician"
-                                     },
-                                     {
-                                         "code":  "2131",
-                                         "title":  "Towed Artillery Systems Technician"
-                                     },
-                                     {
-                                         "code":  "2141",
-                                         "title":  "Tank Mechanic"
-                                     },
-                                     {
-                                         "code":  "2147",
-                                         "title":  "Light Armored Vehicle Mechanic"
-                                     },
-                                     {
-                                         "code":  "2311",
-                                         "title":  "Ammunition Technician"
-                                     },
-                                     {
-                                         "code":  "2621",
-                                         "title":  "Special Communications Signals Analyst"
-                                     },
-                                     {
-                                         "code":  "2631",
-                                         "title":  "Electronic Intelligence Intercept Operator"
-                                     },
-                                     {
-                                         "code":  "2831",
-                                         "title":  "Ground Electronics Transmission Systems Maintainer"
-                                     },
-                                     {
-                                         "code":  "3043",
-                                         "title":  "Supply Administration and Operations Specialist"
-                                     },
-                                     {
-                                         "code":  "3051",
-                                         "title":  "Warehouse Clerk"
-                                     },
-                                     {
-                                         "code":  "3112",
-                                         "title":  "Traffic Management Specialist"
-                                     },
-                                     {
-                                         "code":  "3381",
-                                         "title":  "Food Service Specialist"
-                                     },
-                                     {
-                                         "code":  "3432",
-                                         "title":  "Finance Technician"
-                                     },
-                                     {
-                                         "code":  "3531",
-                                         "title":  "Motor Vehicle Operator"
-                                     },
-                                     {
-                                         "code":  "3537",
-                                         "title":  "Motor Transport Operations Chief"
-                                     },
-                                     {
-                                         "code":  "4133",
-                                         "title":  "Marine Corps Community Services Specialist"
-                                     },
-                                     {
-                                         "code":  "4421",
-                                         "title":  "Legal Services Specialist"
-                                     },
-                                     {
-                                         "code":  "4591",
-                                         "title":  "Combat Lithographer"
-                                     },
-                                     {
-                                         "code":  "4821",
-                                         "title":  "Career Planner"
-                                     },
-                                     {
-                                         "code":  "5831",
-                                         "title":  "Military Police"
-                                     },
-                                     {
-                                         "code":  "5832",
-                                         "title":  "Criminal Investigator"
-                                     },
-                                     {
-                                         "code":  "5952",
-                                         "title":  "Air Traffic Control Radar Technician"
-                                     },
-                                     {
-                                         "code":  "6046",
-                                         "title":  "Aviation Maintenance Data Specialist"
-                                     },
-                                     {
-                                         "code":  "6112",
-                                         "title":  "Helicopter Mechanic (CH-53)"
-                                     },
-                                     {
-                                         "code":  "6152",
-                                         "title":  "Helicopter Mechanic (AH-1/UH-1)"
-                                     },
-                                     {
-                                         "code":  "6174",
-                                         "title":  "Helicopter Crew Chief (CH-53)"
-                                     },
-                                     {
-                                         "code":  "6216",
-                                         "title":  "Fixed-Wing Aircraft Mechanic (F/A-18)"
-                                     },
-                                     {
-                                         "code":  "6256",
-                                         "title":  "Fixed-Wing Aircraft Safety Equipment Mechanic"
-                                     },
-                                     {
-                                         "code":  "6286",
-                                         "title":  "Fixed-Wing Aircraft Safety Equipment Mechanic (F/A-18)"
-                                     },
-                                     {
-                                         "code":  "6316",
-                                         "title":  "Aircraft Communications/Navigation Systems Technician"
-                                     },
-                                     {
-                                         "code":  "6326",
-                                         "title":  "Aircraft Communications/Navigation Systems Technician (F/A-18)"
-                                     },
-                                     {
-                                         "code":  "6531",
-                                         "title":  "Aviation Ordnance Technician"
-                                     },
-                                     {
-                                         "code":  "7041",
-                                         "title":  "Aviation Operations Specialist"
-                                     },
-                                     {
-                                         "code":  "7314",
-                                         "title":  "Unmanned Aerial Vehicle Operator"
-                                     },
-                                     {
-                                         "code":  "8411",
-                                         "title":  "Recruiter"
-                                     },
-                                     {
-                                         "code":  "0160",
-                                         "title":  "Postal Officer (Warrant)"
-                                     },
-                                     {
-                                         "code":  "0170",
-                                         "title":  "Personnel Officer (Warrant)"
-                                     },
-                                     {
-                                         "code":  "0201",
-                                         "title":  "Basic Intelligence Officer (Warrant)"
-                                     },
-                                     {
-                                         "code":  "0205",
-                                         "title":  "Senior All-Source Intelligence Analysis Officer (Warrant)"
-                                     },
-                                     {
-                                         "code":  "0210",
-                                         "title":  "Counterintelligence/Human Intelligence Officer (Warrant)"
-                                     },
-                                     {
-                                         "code":  "0220",
-                                         "title":  "Surveillance Sensor Officer (Warrant)"
-                                     },
-                                     {
-                                         "code":  "0260",
-                                         "title":  "Geographic Intelligence Officer (Warrant)"
-                                     },
-                                     {
-                                         "code":  "0301",
-                                         "title":  "Basic Infantry Officer (Warrant)"
-                                     },
-                                     {
-                                         "code":  "0306",
-                                         "title":  "Infantry Weapons Officer — Gunner (Warrant)"
-                                     },
-                                     {
-                                         "code":  "0401",
-                                         "title":  "Basic Logistics Officer (Warrant)"
-                                     },
-                                     {
-                                         "code":  "0430",
-                                         "title":  "Mobility Officer (Warrant)"
-                                     },
-                                     {
-                                         "code":  "0501",
-                                         "title":  "MAGTF Plans Officer (Warrant)"
-                                     },
-                                     {
-                                         "code":  "0601",
-                                         "title":  "Basic Communications Officer (Warrant)"
-                                     },
-                                     {
-                                         "code":  "0610",
-                                         "title":  "Telephone Systems Officer (Warrant)"
-                                     },
-                                     {
-                                         "code":  "1361",
-                                         "title":  "Engineering Assistant Officer (Warrant)"
-                                     },
-                                     {
-                                         "code":  "2805",
-                                         "title":  "Electronics Maintenance Officer (Warrant)"
-                                     },
-                                     {
-                                         "code":  "3510",
-                                         "title":  "Motor Transport Officer (Warrant)"
-                                     },
-                                     {
-                                         "code":  "4130",
-                                         "title":  "Marine Corps Community Services Officer (Warrant)"
-                                     }
-                                 ],
-                "Navy":  [
-                             {
-                                 "code":  "AB",
-                                 "title":  "Aviation Boatswains Mate"
-                             },
-                             {
-                                 "code":  "AC",
-                                 "title":  "Air Traffic Controller"
-                             },
-                             {
-                                 "code":  "AD",
-                                 "title":  "Aviation Machinists Mate"
-                             },
-                             {
-                                 "code":  "AE",
-                                 "title":  "Aviation Electricians Mate"
-                             },
-                             {
-                                 "code":  "AG",
-                                 "title":  "Aerographers Mate"
-                             },
-                             {
-                                 "code":  "AO",
-                                 "title":  "Aviation Ordnanceman"
-                             },
-                             {
-                                 "code":  "AS",
-                                 "title":  "Aviation Support Equipment Technician"
-                             },
-                             {
-                                 "code":  "AT",
-                                 "title":  "Aviation Electronics Technician"
-                             },
-                             {
-                                 "code":  "AW",
-                                 "title":  "Naval Aircrewman"
-                             },
-                             {
-                                 "code":  "AZ",
-                                 "title":  "Aviation Maintenance Administrationman"
-                             },
-                             {
-                                 "code":  "BM",
-                                 "title":  "Boatswains Mate"
-                             },
-                             {
-                                 "code":  "CS",
-                                 "title":  "Culinary Specialist"
-                             },
-                             {
-                                 "code":  "CTI",
-                                 "title":  "Cryptologic Technician Interpretive"
-                             },
-                             {
-                                 "code":  "CTM",
-                                 "title":  "Cryptologic Technician Maintenance"
-                             },
-                             {
-                                 "code":  "CTN",
-                                 "title":  "Cryptologic Technician Networks"
-                             },
-                             {
-                                 "code":  "CTR",
-                                 "title":  "Cryptologic Technician Collection"
-                             },
-                             {
-                                 "code":  "CTT",
-                                 "title":  "Cryptologic Technician Technical"
-                             },
-                             {
-                                 "code":  "DC",
-                                 "title":  "Damage Controlman"
-                             },
-                             {
-                                 "code":  "EA",
-                                 "title":  "Engineering Aide"
-                             },
-                             {
-                                 "code":  "EM",
-                                 "title":  "Electricians Mate"
-                             },
-                             {
-                                 "code":  "EN",
-                                 "title":  "Engineman"
-                             },
-                             {
-                                 "code":  "EO",
-                                 "title":  "Equipment Operator"
-                             },
-                             {
-                                 "code":  "ET",
-                                 "title":  "Electronics Technician"
-                             },
-                             {
-                                 "code":  "FC",
-                                 "title":  "Fire Controlman"
-                             },
-                             {
-                                 "code":  "GM",
-                                 "title":  "Gunners Mate"
-                             },
-                             {
-                                 "code":  "HM",
-                                 "title":  "Hospital Corpsman"
-                             },
-                             {
-                                 "code":  "HT",
-                                 "title":  "Hull Maintenance Technician"
-                             },
-                             {
-                                 "code":  "IC",
-                                 "title":  "Interior Communications Electrician"
-                             },
-                             {
-                                 "code":  "IS",
-                                 "title":  "Intelligence Specialist"
-                             },
-                             {
-                                 "code":  "IT",
-                                 "title":  "Information Systems Technician"
-                             },
-                             {
-                                 "code":  "LN",
-                                 "title":  "Legalman"
-                             },
-                             {
-                                 "code":  "LS",
-                                 "title":  "Logistics Specialist"
-                             },
-                             {
-                                 "code":  "MA",
-                                 "title":  "Master-at-Arms"
-                             },
-                             {
-                                 "code":  "MC",
-                                 "title":  "Mass Communication Specialist"
-                             },
-                             {
-                                 "code":  "MM",
-                                 "title":  "Machinists Mate"
-                             },
-                             {
-                                 "code":  "MN",
-                                 "title":  "Mineman"
-                             },
-                             {
-                                 "code":  "MR",
-                                 "title":  "Machinery Repairman"
-                             },
-                             {
-                                 "code":  "MT",
-                                 "title":  "Missile Technician"
-                             },
-                             {
-                                 "code":  "MU",
-                                 "title":  "Musician"
-                             },
-                             {
-                                 "code":  "NC",
-                                 "title":  "Navy Counselor"
-                             },
-                             {
-                                 "code":  "ND",
-                                 "title":  "Navy Diver"
-                             },
-                             {
-                                 "code":  "OS",
-                                 "title":  "Operations Specialist"
-                             },
-                             {
-                                 "code":  "PR",
-                                 "title":  "Aircrew Survival Equipmentman"
-                             },
-                             {
-                                 "code":  "PS",
-                                 "title":  "Personnel Specialist"
-                             },
-                             {
-                                 "code":  "QM",
-                                 "title":  "Quartermaster"
-                             },
-                             {
-                                 "code":  "RP",
-                                 "title":  "Religious Program Specialist"
-                             },
-                             {
-                                 "code":  "SB",
-                                 "title":  "Special Warfare Boat Operator"
-                             },
-                             {
-                                 "code":  "SH",
-                                 "title":  "Ship Serviceman"
-                             },
-                             {
-                                 "code":  "SO",
-                                 "title":  "Special Warfare Operator"
-                             },
-                             {
-                                 "code":  "STG",
-                                 "title":  "Sonar Technician Surface"
-                             },
-                             {
-                                 "code":  "STS",
-                                 "title":  "Sonar Technician Submarine"
-                             },
-                             {
-                                 "code":  "SW",
-                                 "title":  "Steelworker"
-                             },
-                             {
-                                 "code":  "TM",
-                                 "title":  "Torpedoman Mate"
-                             },
-                             {
-                                 "code":  "UT",
-                                 "title":  "Utilitiesman"
-                             },
-                             {
-                                 "code":  "YN",
-                                 "title":  "Yeoman"
-                             }
-                         ]
+{
+    "generated": "2026-03-23T00:20:54.787Z",
+    "dbq": [],
+    "mos": {
+        "Coast Guard": [
+            {
+                "code": "AMT",
+                "title": "Avionics Maintenance Technician"
             },
-    "exposures":  {
-                      "value":  [
-                                    {
-                                        "exposures":  [
-                                                          "Burn pits",
-                                                          "Airborne hazards (dust, sand, PM2.5)",
-                                                          "Blast overpressure (IEDs, breaching, artillery)",
-                                                          "Lead (weapons, indoor ranges)",
-                                                          "Noise (weapons, vehicles, aircraft)",
-                                                          "Solvents and CLP",
-                                                          "Depleted uranium (armor crews)",
-                                                          "JP-8 (aviation proximity)",
-                                                          "Firefighting foam (AFFF)"
-                                                      ],
-                                        "family":  "Combat Arms",
-                                        "examples":  [
-                                                         "11B",
-                                                         "0311",
-                                                         "19K",
-                                                         "13B",
-                                                         "19D",
-                                                         "18X",
-                                                         "SO",
-                                                         "SB",
-                                                         "1C4X1"
-                                                     ]
-                                    },
-                                    {
-                                        "exposures":  [
-                                                          "JP-8 / jet fuel",
-                                                          "Hydraulic fluid (Skydrol)",
-                                                          "Solvents and degreasers",
-                                                          "Noise (rotary and fixed-wing)",
-                                                          "Radiation (radar, comms)",
-                                                          "Burn pits (deployed flight lines)",
-                                                          "Composite materials dust",
-                                                          "Firefighting foam (AFFF)"
-                                                      ],
-                                        "family":  "Aviation",
-                                        "examples":  [
-                                                         "15T",
-                                                         "6174",
-                                                         "AT",
-                                                         "AE",
-                                                         "AD",
-                                                         "AMT",
-                                                         "AET",
-                                                         "2A5X1",
-                                                         "1A2X1"
-                                                     ]
-                                    },
-                                    {
-                                        "exposures":  [
-                                                          "Asbestos",
-                                                          "Silica dust",
-                                                          "Burn pits",
-                                                          "Demolition explosives",
-                                                          "Heavy metals",
-                                                          "Solvents",
-                                                          "Fuel and lubricants",
-                                                          "Treated lumber chemicals",
-                                                          "Noise (heavy equipment)"
-                                                      ],
-                                        "family":  "Engineering / Construction",
-                                        "examples":  [
-                                                         "12B",
-                                                         "1371",
-                                                         "EO",
-                                                         "BU",
-                                                         "CE",
-                                                         "UT",
-                                                         "3E5X1"
-                                                     ]
-                                    },
-                                    {
-                                        "exposures":  [
-                                                          "Solvents and degreasers",
-                                                          "Fuel and lubricants",
-                                                          "Asbestos (legacy platforms)",
-                                                          "Lead",
-                                                          "Heavy metals",
-                                                          "Noise",
-                                                          "Burn pits (deployed motor pools)",
-                                                          "Battery acid",
-                                                          "Welding fumes"
-                                                      ],
-                                        "family":  "Maintenance / Mechanical / Ordnance",
-                                        "examples":  [
-                                                         "91B",
-                                                         "1341",
-                                                         "MM",
-                                                         "MK",
-                                                         "EN",
-                                                         "EM",
-                                                         "2T3X1",
-                                                         "2A6X1"
-                                                     ]
-                                    },
-                                    {
-                                        "exposures":  [
-                                                          "Bloodborne pathogens",
-                                                          "Radiation (X-ray, CT)",
-                                                          "Anesthetic gases",
-                                                          "Chemical disinfectants",
-                                                          "Burn pits (deployed medical units)",
-                                                          "Noise (MEDEVAC, field hospitals)"
-                                                      ],
-                                        "family":  "Medical / Dental",
-                                        "examples":  [
-                                                         "68W",
-                                                         "HM",
-                                                         "4N0X1",
-                                                         "HS",
-                                                         "68C",
-                                                         "4A0X1"
-                                                     ]
-                                    },
-                                    {
-                                        "exposures":  [
-                                                          "Radiation (comms/radar sites)",
-                                                          "Burn pits (if deployed)",
-                                                          "Noise (tactical comms shelters)",
-                                                          "Solvents (if co-located with maintenance)"
-                                                      ],
-                                        "family":  "Intelligence / Cyber / Communications / IT",
-                                        "examples":  [
-                                                         "35F",
-                                                         "5I0",
-                                                         "1N0",
-                                                         "1N0X1",
-                                                         "1N1",
-                                                         "1N1X1",
-                                                         "1N2",
-                                                         "1N2X1",
-                                                         "IS",
-                                                         "IT",
-                                                         "CTN",
-                                                         "25B",
-                                                         "3D0X2"
-                                                     ]
-                                    },
-                                    {
-                                        "exposures":  [
-                                                          "Burn pits (if deployed)",
-                                                          "Warehouse dust",
-                                                          "Mold (older facilities)",
-                                                          "Noise (transport hubs)"
-                                                      ],
-                                        "family":  "Logistics / Supply / Admin / Finance / HR",
-                                        "examples":  [
-                                                         "92Y",
-                                                         "3043",
-                                                         "LS",
-                                                         "SK",
-                                                         "YN",
-                                                         "3S0X1"
-                                                     ]
-                                    },
-                                    {
-                                        "exposures":  [
-                                                          "Fuel and lubricants",
-                                                          "Solvents and cleaners",
-                                                          "Asbestos (legacy ships)",
-                                                          "Lead paint",
-                                                          "Noise (engines, weapons)",
-                                                          "Cold weather exposure",
-                                                          "Saltwater corrosion chemicals"
-                                                      ],
-                                        "family":  "Maritime / Deck / Boatswain / Coast Guard Ops",
-                                        "examples":  [
-                                                         "BM",
-                                                         "MK",
-                                                         "ME",
-                                                         "OS",
-                                                         "QM",
-                                                         "GM",
-                                                         "DC"
-                                                     ]
-                                    },
-                                    {
-                                        "exposures":  [
-                                                          "AFFF (PFAS)",
-                                                          "Smoke inhalation",
-                                                          "Burn pits (deployed airfields)",
-                                                          "Solvents",
-                                                          "Fuel",
-                                                          "Noise"
-                                                      ],
-                                        "family":  "Firefighting / Crash Rescue / Damage Control",
-                                        "examples":  [
-                                                         "ARFF",
-                                                         "DC",
-                                                         "3E7X1",
-                                                         "ABH"
-                                                     ]
-                                    },
-                                    {
-                                        "exposures":  [
-                                                          "Ionizing radiation",
-                                                          "Heavy metals",
-                                                          "Solvents",
-                                                          "Noise",
-                                                          "Asbestos (older subs/ships)"
-                                                      ],
-                                        "family":  "Nuclear / Submarine / Reactor / Radiation Tech",
-                                        "examples":  [
-                                                         "MMN",
-                                                         "EMN",
-                                                         "ETN",
-                                                         "6C0X1"
-                                                     ]
-                                    },
-                                    {
-                                        "exposures":  [
-                                                          "Lead (weapons ranges)",
-                                                          "Noise",
-                                                          "Burn pits (if deployed)",
-                                                          "Blast overpressure (breaching)",
-                                                          "Chemical agents (OC spray training)"
-                                                      ],
-                                        "family":  "Security Forces / MPs / Law Enforcement",
-                                        "examples":  [
-                                                         "31B",
-                                                         "5811",
-                                                         "MA",
-                                                         "3P0X1"
-                                                     ]
-                                    },
-                                    {
-                                        "exposures":  [
-                                                          "Chemical agents (training)",
-                                                          "Decontamination chemicals",
-                                                          "Radiation sources",
-                                                          "Burn pits (if deployed)"
-                                                      ],
-                                        "family":  "Chemical / Biological / Radiological (CBRN)",
-                                        "examples":  [
-                                                         "74D",
-                                                         "5711",
-                                                         "3E9X1"
-                                                     ]
-                                    },
-                                    {
-                                        "exposures":  [
-                                                          "Radiation (radar, satellite comms)",
-                                                          "Noise (launch facilities)",
-                                                          "Solvents (if co-located with maintenance)"
-                                                      ],
-                                        "family":  "Space / Missile / Satellite Ops",
-                                        "examples":  [
-                                                         "5S",
-                                                         "5S0",
-                                                         "1C6",
-                                                         "1C6X1",
-                                                         "13S",
-                                                         "3D1X3"
-                                                     ]
-                                    },
-                                    {
-                                        "exposures":  [
-                                                          "Cleaning chemicals",
-                                                          "Mold",
-                                                          "Burn pits (field kitchens)"
-                                                      ],
-                                        "family":  "Food Service / Culinary",
-                                        "examples":  [
-                                                         "92G",
-                                                         "CS",
-                                                         "FS",
-                                                         "4D0X1"
-                                                     ]
-                                    },
-                                    {
-                                        "exposures":  [
-                                                          "Noise (long-term hearing exposure)"
-                                                      ],
-                                        "family":  "Bands / Musicians",
-                                        "examples":  [
-                                                         "42R",
-                                                         "MU",
-                                                         "3N1X1"
-                                                     ]
-                                    }
-                                ],
-                      "Count":  15
-                  },
-    "cfr":  [
-
-            ]
+            {
+                "code": "AET",
+                "title": "Aviation Electronics Technician"
+            },
+            {
+                "code": "AST",
+                "title": "Aviation Survival Technician"
+            },
+            {
+                "code": "BM",
+                "title": "Boatswains Mate"
+            },
+            {
+                "code": "DC",
+                "title": "Damage Controlman"
+            },
+            {
+                "code": "DV",
+                "title": "Diver"
+            },
+            {
+                "code": "EM",
+                "title": "Electricians Mate"
+            },
+            {
+                "code": "ET",
+                "title": "Electronics Technician"
+            },
+            {
+                "code": "FS",
+                "title": "Food Service Specialist"
+            },
+            {
+                "code": "GM",
+                "title": "Gunners Mate"
+            },
+            {
+                "code": "HS",
+                "title": "Health Services Technician"
+            },
+            {
+                "code": "IS",
+                "title": "Intelligence Specialist"
+            },
+            {
+                "code": "IT",
+                "title": "Information Systems Technician"
+            },
+            {
+                "code": "ME",
+                "title": "Maritime Enforcement Specialist"
+            },
+            {
+                "code": "MK",
+                "title": "Machinery Technician"
+            },
+            {
+                "code": "MST",
+                "title": "Marine Science Technician"
+            },
+            {
+                "code": "MU",
+                "title": "Musician"
+            },
+            {
+                "code": "OS",
+                "title": "Operations Specialist"
+            },
+            {
+                "code": "PA",
+                "title": "Public Affairs Specialist"
+            },
+            {
+                "code": "SK",
+                "title": "Storekeeper"
+            },
+            {
+                "code": "YN",
+                "title": "Yeoman"
+            },
+            {
+                "code": "BOSN",
+                "title": "Boatswain"
+            },
+            {
+                "code": "WEPS",
+                "title": "Weapons Specialist"
+            },
+            {
+                "code": "ELC",
+                "title": "Electronics Technician (Warrant)"
+            },
+            {
+                "code": "MACH",
+                "title": "Machinery Warrant Officer"
+            },
+            {
+                "code": "PERS",
+                "title": "Personnel Administration"
+            },
+            {
+                "code": "INV",
+                "title": "Investigations Officer"
+            },
+            {
+                "code": "MLES",
+                "title": "Law Enforcement Specialist"
+            },
+            {
+                "code": "MSSD",
+                "title": "Maritime Security Specialist"
+            },
+            {
+                "code": "MSSE",
+                "title": "Marine Safety Specialist Engineering"
+            },
+            {
+                "code": "AVCG",
+                "title": "Aviation Commander"
+            },
+            {
+                "code": "CGENG",
+                "title": "Engineer Officer"
+            },
+            {
+                "code": "CGOPS",
+                "title": "Operations Ashore"
+            },
+            {
+                "code": "CGINT",
+                "title": "Coast Guard Intelligence Officer"
+            },
+            {
+                "code": "CGLAW",
+                "title": "Maritime Law Enforcement Officer"
+            },
+            {
+                "code": "CGNAV",
+                "title": "Navigation Officer"
+            },
+            {
+                "code": "CGSUP",
+                "title": "Supply Officer"
+            },
+            {
+                "code": "CGCIV",
+                "title": "Civil Engineering Officer"
+            },
+            {
+                "code": "CGMED",
+                "title": "Health Services Officer"
+            },
+            {
+                "code": "CGLEG",
+                "title": "Legal Officer"
+            },
+            {
+                "code": "MSSR",
+                "title": "Marine Safety Specialist Response"
+            },
+            {
+                "code": "MSST",
+                "title": "Marine Safety Specialist Training"
+            },
+            {
+                "code": "MAT",
+                "title": "Materials Officer"
+            },
+            {
+                "code": "MLEI",
+                "title": "Law Enforcement Intelligence"
+            },
+            {
+                "code": "ENG",
+                "title": "Engineering Officer (Warrant)"
+            },
+            {
+                "code": "NAV",
+                "title": "Navigation Systems Technician"
+            },
+            {
+                "code": "AVN",
+                "title": "Aviation Engineering Officer (Warrant)"
+            },
+            {
+                "code": "AVT",
+                "title": "Aviation Technician (Warrant)"
+            },
+            {
+                "code": "FIN",
+                "title": "Finance & Supply"
+            }
+        ],
+        "Space Force": [
+            {
+                "code": "5S",
+                "title": "Space Systems Operations"
+            },
+            {
+                "code": "5S0",
+                "title": "Space Systems Operations"
+            },
+            {
+                "code": "5I0",
+                "title": "All-Source Intelligence"
+            },
+            {
+                "code": "1C6",
+                "title": "Space Systems Operations"
+            },
+            {
+                "code": "1C6X1",
+                "title": "Space Systems Operations"
+            },
+            {
+                "code": "1N0",
+                "title": "All-Source Intelligence"
+            },
+            {
+                "code": "1N0X1",
+                "title": "All-Source Intelligence"
+            },
+            {
+                "code": "1N1",
+                "title": "Geospatial Intelligence"
+            },
+            {
+                "code": "1N1X1",
+                "title": "Geospatial Intelligence"
+            },
+            {
+                "code": "1N2",
+                "title": "Signals Intelligence"
+            },
+            {
+                "code": "1N2X1",
+                "title": "Signals Intelligence"
+            },
+            {
+                "code": "1N8X1",
+                "title": "Targeting Analysis"
+            },
+            {
+                "code": "13SXA",
+                "title": "Space Operations Officer"
+            },
+            {
+                "code": "17DXA",
+                "title": "Cyber Operations Officer"
+            },
+            {
+                "code": "61DXA",
+                "title": "Space Systems Acquisitions Officer"
+            },
+            {
+                "code": "62EXA",
+                "title": "Space Systems Engineer"
+            }
+        ],
+        "Air Force": [
+            {
+                "code": "1A0X1",
+                "title": "In-Flight Refueling"
+            },
+            {
+                "code": "1A1X1",
+                "title": "Flight Engineer"
+            },
+            {
+                "code": "1A2X1",
+                "title": "Aircraft Loadmaster"
+            },
+            {
+                "code": "1A3X1",
+                "title": "Airborne Mission Systems"
+            },
+            {
+                "code": "1A6X1",
+                "title": "Flight Attendant"
+            },
+            {
+                "code": "1A8X1",
+                "title": "Airborne Cryptologic Language Analyst"
+            },
+            {
+                "code": "1A8X2",
+                "title": "Airborne ISR Operator"
+            },
+            {
+                "code": "1B4X1",
+                "title": "Cyber Warfare Operations"
+            },
+            {
+                "code": "1C0X2",
+                "title": "Aviation Resource Management"
+            },
+            {
+                "code": "1C1X1",
+                "title": "Air Traffic Control"
+            },
+            {
+                "code": "1C2X1",
+                "title": "Combat Control"
+            },
+            {
+                "code": "1C3X1",
+                "title": "Command Post"
+            },
+            {
+                "code": "1C4X1",
+                "title": "Tactical Air Control Party"
+            },
+            {
+                "code": "1N0X1",
+                "title": "Intelligence Analyst"
+            },
+            {
+                "code": "1N1X1",
+                "title": "Geospatial Intelligence"
+            },
+            {
+                "code": "1N2X1",
+                "title": "Signals Intelligence"
+            },
+            {
+                "code": "1N3X1",
+                "title": "Cryptologic Language Analyst"
+            },
+            {
+                "code": "1N4X1",
+                "title": "Fusion Analyst"
+            },
+            {
+                "code": "1P0X1",
+                "title": "Aircrew Flight Equipment"
+            },
+            {
+                "code": "1S0X1",
+                "title": "Safety"
+            },
+            {
+                "code": "1T0X1",
+                "title": "SERE Specialist"
+            },
+            {
+                "code": "1U0X1",
+                "title": "RPA Sensor Operator"
+            },
+            {
+                "code": "2A0X1",
+                "title": "Avionics Test Station"
+            },
+            {
+                "code": "2A3X3",
+                "title": "Tactical Aircraft Maintenance"
+            },
+            {
+                "code": "2A5X1",
+                "title": "Aerospace Maintenance"
+            },
+            {
+                "code": "2A6X1",
+                "title": "Aerospace Propulsion"
+            },
+            {
+                "code": "2A7X1",
+                "title": "Aircraft Metals Technology"
+            },
+            {
+                "code": "2F0X1",
+                "title": "Fuels"
+            },
+            {
+                "code": "2G0X1",
+                "title": "Logistics Plans"
+            },
+            {
+                "code": "2M0X1",
+                "title": "Missile & Space Systems Maintenance"
+            },
+            {
+                "code": "2P0X1",
+                "title": "Precision Measurement Equipment"
+            },
+            {
+                "code": "2R0X1",
+                "title": "Maintenance Management Analysis"
+            },
+            {
+                "code": "2S0X1",
+                "title": "Supply Management"
+            },
+            {
+                "code": "2T0X1",
+                "title": "Traffic Management"
+            },
+            {
+                "code": "2T1X1",
+                "title": "Vehicle Operations"
+            },
+            {
+                "code": "2T2X1",
+                "title": "Air Transportation"
+            },
+            {
+                "code": "2W0X1",
+                "title": "Munitions Systems"
+            },
+            {
+                "code": "2W1X1",
+                "title": "Aircraft Armament Systems"
+            },
+            {
+                "code": "2W2X1",
+                "title": "Nuclear Weapons"
+            },
+            {
+                "code": "3D0X1",
+                "title": "Knowledge Operations"
+            },
+            {
+                "code": "3D1X2",
+                "title": "Cyber Transport"
+            },
+            {
+                "code": "3D1X3",
+                "title": "RF Transmission"
+            },
+            {
+                "code": "3E0X1",
+                "title": "Electrical Systems"
+            },
+            {
+                "code": "3E1X1",
+                "title": "HVAC"
+            },
+            {
+                "code": "3E2X1",
+                "title": "Pavements & Construction"
+            },
+            {
+                "code": "3E3X1",
+                "title": "Structural"
+            },
+            {
+                "code": "3E4X1",
+                "title": "Water & Fuel Systems"
+            },
+            {
+                "code": "3E5X1",
+                "title": "Engineering"
+            },
+            {
+                "code": "3F0X1",
+                "title": "Personnel"
+            },
+            {
+                "code": "3F1X1",
+                "title": "Services"
+            },
+            {
+                "code": "3F2X1",
+                "title": "Education & Training"
+            },
+            {
+                "code": "3F3X1",
+                "title": "Manpower"
+            },
+            {
+                "code": "3G0X1",
+                "title": "Equal Opportunity"
+            },
+            {
+                "code": "3N0X2",
+                "title": "Broadcast Journalism"
+            },
+            {
+                "code": "3N1X1",
+                "title": "Public Affairs"
+            },
+            {
+                "code": "3P0X1",
+                "title": "Security Forces"
+            },
+            {
+                "code": "4A0X1",
+                "title": "Health Services Management"
+            },
+            {
+                "code": "4A1X1",
+                "title": "Medical Materiel"
+            },
+            {
+                "code": "4B0X1",
+                "title": "Bioenvironmental Engineering"
+            },
+            {
+                "code": "4C0X1",
+                "title": "Mental Health Service"
+            },
+            {
+                "code": "4D0X1",
+                "title": "Diet Therapy"
+            },
+            {
+                "code": "4E0X1",
+                "title": "Public Health"
+            },
+            {
+                "code": "4H0X1",
+                "title": "Cardiopulmonary Laboratory"
+            },
+            {
+                "code": "4J0X2",
+                "title": "Physical Medicine"
+            },
+            {
+                "code": "4M0X1",
+                "title": "Aerospace & Operational Physiology"
+            },
+            {
+                "code": "4N0X1",
+                "title": "Aerospace Medical Service"
+            },
+            {
+                "code": "4N1X1",
+                "title": "Surgical Service"
+            },
+            {
+                "code": "4P0X1",
+                "title": "Pharmacy"
+            },
+            {
+                "code": "4R0X1",
+                "title": "Diagnostic Imaging"
+            },
+            {
+                "code": "4T0X1",
+                "title": "Medical Laboratory"
+            },
+            {
+                "code": "4V0X1",
+                "title": "Optometry"
+            },
+            {
+                "code": "4Y0X1",
+                "title": "Dental Assistant"
+            },
+            {
+                "code": "5J0X1",
+                "title": "Paralegal"
+            },
+            {
+                "code": "5R0X1",
+                "title": "Chaplain Assistant"
+            },
+            {
+                "code": "6C0X1",
+                "title": "Contracting"
+            },
+            {
+                "code": "6F0X1",
+                "title": "Financial Management"
+            },
+            {
+                "code": "7S0X1",
+                "title": "Special Investigations"
+            },
+            {
+                "code": "9S100",
+                "title": "Scientific Applications Specialist"
+            },
+            {
+                "code": "9T100",
+                "title": "Officer Trainee"
+            },
+            {
+                "code": "9T200",
+                "title": "Pre-Commissioning"
+            },
+            {
+                "code": "11BX",
+                "title": "Bomber Pilot"
+            },
+            {
+                "code": "11FX",
+                "title": "Fighter Pilot"
+            },
+            {
+                "code": "11HX",
+                "title": "Helicopter Pilot"
+            },
+            {
+                "code": "11SX",
+                "title": "Special Operations Pilot"
+            },
+            {
+                "code": "12BX",
+                "title": "Bomber Navigator"
+            },
+            {
+                "code": "12SX",
+                "title": "Special Operations Combat Systems Officer"
+            },
+            {
+                "code": "13BX",
+                "title": "Air Battle Manager"
+            },
+            {
+                "code": "13DX",
+                "title": "Nuclear and Missile Operations"
+            },
+            {
+                "code": "13NX",
+                "title": "Nuclear and Missile Operations"
+            },
+            {
+                "code": "13SX",
+                "title": "Space Operations Officer"
+            },
+            {
+                "code": "14NX",
+                "title": "Intelligence Officer"
+            },
+            {
+                "code": "15WX",
+                "title": "Weather Officer"
+            },
+            {
+                "code": "16GX",
+                "title": "Air Force Operations Staff Officer"
+            },
+            {
+                "code": "17DX",
+                "title": "Cyberspace Operations Officer"
+            },
+            {
+                "code": "21AX",
+                "title": "Aircraft Maintenance Officer"
+            },
+            {
+                "code": "21MX",
+                "title": "Munitions and Missile Maintenance Officer"
+            },
+            {
+                "code": "31PX",
+                "title": "Security Forces Officer"
+            },
+            {
+                "code": "32EX",
+                "title": "Civil Engineer Officer"
+            },
+            {
+                "code": "33SX",
+                "title": "Communications Officer"
+            },
+            {
+                "code": "34MX",
+                "title": "Services Officer"
+            },
+            {
+                "code": "35PX",
+                "title": "Public Affairs Officer"
+            },
+            {
+                "code": "38FX",
+                "title": "Force Support Officer"
+            },
+            {
+                "code": "43HX",
+                "title": "Biomedical Laboratory Officer"
+            },
+            {
+                "code": "44MX",
+                "title": "Flight Surgeon"
+            },
+            {
+                "code": "46MX",
+                "title": "Nurse Officer"
+            },
+            {
+                "code": "51JX",
+                "title": "Judge Advocate"
+            },
+            {
+                "code": "61AX",
+                "title": "Operations Research Analyst"
+            },
+            {
+                "code": "62EX",
+                "title": "Developmental Engineer"
+            },
+            {
+                "code": "63AX",
+                "title": "Acquisition Manager"
+            },
+            {
+                "code": "64PX",
+                "title": "Contracting Officer"
+            },
+            {
+                "code": "65FX",
+                "title": "Financial Management Officer"
+            }
+        ],
+        "USPHS": [
+            {
+                "code": "MED",
+                "title": "Medical Officer"
+            },
+            {
+                "code": "DEN",
+                "title": "Dental Officer"
+            },
+            {
+                "code": "NUR",
+                "title": "Nurse Officer"
+            },
+            {
+                "code": "ENG",
+                "title": "Engineer Officer"
+            },
+            {
+                "code": "ENV",
+                "title": "Environmental Health Officer"
+            },
+            {
+                "code": "HLS",
+                "title": "Health Services Officer"
+            },
+            {
+                "code": "PHM",
+                "title": "Pharmacist Officer"
+            },
+            {
+                "code": "SCI",
+                "title": "Scientist Officer"
+            },
+            {
+                "code": "VET",
+                "title": "Veterinary Officer"
+            },
+            {
+                "code": "SPC",
+                "title": "Specialist Officer"
+            }
+        ],
+        "Army": [
+            {
+                "code": "11B",
+                "title": "Infantryman"
+            },
+            {
+                "code": "11C",
+                "title": "Indirect Fire Infantryman"
+            },
+            {
+                "code": "12B",
+                "title": "Combat Engineer"
+            },
+            {
+                "code": "12C",
+                "title": "Bridge Crewmember"
+            },
+            {
+                "code": "12D",
+                "title": "Diver"
+            },
+            {
+                "code": "12K",
+                "title": "Plumber"
+            },
+            {
+                "code": "12M",
+                "title": "Firefighter"
+            },
+            {
+                "code": "12N",
+                "title": "Horizontal Construction Engineer"
+            },
+            {
+                "code": "12P",
+                "title": "Prime Power Specialist"
+            },
+            {
+                "code": "12Q",
+                "title": "Power Line Distribution Specialist"
+            },
+            {
+                "code": "12R",
+                "title": "Interior Electrician"
+            },
+            {
+                "code": "12T",
+                "title": "Technical Engineer"
+            },
+            {
+                "code": "12V",
+                "title": "Concrete and Asphalt Operator"
+            },
+            {
+                "code": "12W",
+                "title": "Carpentry and Masonry Specialist"
+            },
+            {
+                "code": "12Y",
+                "title": "Geospatial Engineer"
+            },
+            {
+                "code": "13B",
+                "title": "Cannon Crewmember"
+            },
+            {
+                "code": "13F",
+                "title": "Fire Support Specialist"
+            },
+            {
+                "code": "13J",
+                "title": "Fire Control Specialist"
+            },
+            {
+                "code": "13M",
+                "title": "MLRS Crewmember"
+            },
+            {
+                "code": "13R",
+                "title": "Field Artillery Radar Operator"
+            },
+            {
+                "code": "13Z",
+                "title": "Field Artillery Senior Sergeant"
+            },
+            {
+                "code": "14E",
+                "title": "Patriot Fire Control Operator"
+            },
+            {
+                "code": "14G",
+                "title": "Air Defense Battle Management"
+            },
+            {
+                "code": "14H",
+                "title": "Air Defense Enhanced Operator"
+            },
+            {
+                "code": "14P",
+                "title": "Air and Missile Defense Crewmember"
+            },
+            {
+                "code": "14S",
+                "title": "Avenger Crewmember"
+            },
+            {
+                "code": "15B",
+                "title": "Aircraft Powerplant Repairer"
+            },
+            {
+                "code": "15D",
+                "title": "Aircraft Powertrain Repairer"
+            },
+            {
+                "code": "15F",
+                "title": "Aircraft Electrician"
+            },
+            {
+                "code": "15G",
+                "title": "Aircraft Structural Repairer"
+            },
+            {
+                "code": "15H",
+                "title": "Aircraft Pneudraulics Repairer"
+            },
+            {
+                "code": "15N",
+                "title": "Avionic Mechanic"
+            },
+            {
+                "code": "15P",
+                "title": "Aviation Operations Specialist"
+            },
+            {
+                "code": "15Q",
+                "title": "Air Traffic Control Operator"
+            },
+            {
+                "code": "15T",
+                "title": "UH-60 Repairer"
+            },
+            {
+                "code": "15U",
+                "title": "CH-47 Repairer"
+            },
+            {
+                "code": "15Y",
+                "title": "AH-64 Repairer"
+            },
+            {
+                "code": "17C",
+                "title": "Cyber Operations Specialist"
+            },
+            {
+                "code": "17E",
+                "title": "Electronic Warfare Specialist"
+            },
+            {
+                "code": "18B",
+                "title": "Special Forces Weapons Sergeant"
+            },
+            {
+                "code": "18C",
+                "title": "Special Forces Engineer Sergeant"
+            },
+            {
+                "code": "18D",
+                "title": "Special Forces Medical Sergeant"
+            },
+            {
+                "code": "18E",
+                "title": "Special Forces Communications Sergeant"
+            },
+            {
+                "code": "18F",
+                "title": "Special Forces Intelligence Sergeant"
+            },
+            {
+                "code": "18Z",
+                "title": "Special Forces Senior Sergeant"
+            },
+            {
+                "code": "19D",
+                "title": "Cavalry Scout"
+            },
+            {
+                "code": "19K",
+                "title": "M1 Armor Crewman"
+            },
+            {
+                "code": "25B",
+                "title": "Information Technology Specialist"
+            },
+            {
+                "code": "25C",
+                "title": "Radio Operator Maintainer"
+            },
+            {
+                "code": "25L",
+                "title": "Cable Systems Installer"
+            },
+            {
+                "code": "25N",
+                "title": "Nodal Network Systems Operator"
+            },
+            {
+                "code": "25Q",
+                "title": "Multichannel Transmission Operator"
+            },
+            {
+                "code": "25S",
+                "title": "Satellite Communications Operator"
+            },
+            {
+                "code": "25U",
+                "title": "Signal Support Specialist"
+            },
+            {
+                "code": "25V",
+                "title": "Combat Documentation Specialist"
+            },
+            {
+                "code": "27D",
+                "title": "Paralegal Specialist"
+            },
+            {
+                "code": "31B",
+                "title": "Military Police"
+            },
+            {
+                "code": "31D",
+                "title": "CID Special Agent"
+            },
+            {
+                "code": "35F",
+                "title": "Intelligence Analyst"
+            },
+            {
+                "code": "35G",
+                "title": "Geospatial Intelligence Analyst"
+            },
+            {
+                "code": "35L",
+                "title": "Counterintelligence Agent"
+            },
+            {
+                "code": "35M",
+                "title": "Human Intelligence Collector"
+            },
+            {
+                "code": "35N",
+                "title": "Signals Intelligence Analyst"
+            },
+            {
+                "code": "35P",
+                "title": "Cryptologic Linguist"
+            },
+            {
+                "code": "35S",
+                "title": "Signals Collector Analyst"
+            },
+            {
+                "code": "36B",
+                "title": "Financial Management Technician"
+            },
+            {
+                "code": "37F",
+                "title": "Psychological Operations Specialist"
+            },
+            {
+                "code": "38B",
+                "title": "Civil Affairs Specialist"
+            },
+            {
+                "code": "42A",
+                "title": "Human Resources Specialist"
+            },
+            {
+                "code": "42R",
+                "title": "Army Band"
+            },
+            {
+                "code": "42S",
+                "title": "Special Band Musician"
+            },
+            {
+                "code": "44E",
+                "title": "Machinist"
+            },
+            {
+                "code": "44H",
+                "title": "Metal Worker"
+            },
+            {
+                "code": "45B",
+                "title": "Small Arms Repairer"
+            },
+            {
+                "code": "45G",
+                "title": "Fire Control Repairer"
+            },
+            {
+                "code": "46S",
+                "title": "Public Affairs Mass Communications"
+            },
+            {
+                "code": "51C",
+                "title": "Contracting NCO"
+            },
+            {
+                "code": "56M",
+                "title": "Religious Affairs Specialist"
+            },
+            {
+                "code": "68A",
+                "title": "Biomedical Equipment Specialist"
+            },
+            {
+                "code": "68C",
+                "title": "Practical Nursing Specialist"
+            },
+            {
+                "code": "68D",
+                "title": "Operating Room Specialist"
+            },
+            {
+                "code": "68E",
+                "title": "Dental Specialist"
+            },
+            {
+                "code": "68F",
+                "title": "Physical Therapy Specialist"
+            },
+            {
+                "code": "68G",
+                "title": "Patient Administration Specialist"
+            },
+            {
+                "code": "68H",
+                "title": "Optical Laboratory Specialist"
+            },
+            {
+                "code": "68J",
+                "title": "Medical Logistics Specialist"
+            },
+            {
+                "code": "68K",
+                "title": "Medical Laboratory Specialist"
+            },
+            {
+                "code": "68M",
+                "title": "Nutrition Care Specialist"
+            },
+            {
+                "code": "68N",
+                "title": "Cardiovascular Specialist"
+            },
+            {
+                "code": "68P",
+                "title": "Radiology Specialist"
+            },
+            {
+                "code": "68Q",
+                "title": "Pharmacy Specialist"
+            },
+            {
+                "code": "68R",
+                "title": "Veterinary Food Inspection Specialist"
+            },
+            {
+                "code": "68S",
+                "title": "Preventive Medicine Specialist"
+            },
+            {
+                "code": "68T",
+                "title": "Animal Care Specialist"
+            },
+            {
+                "code": "68U",
+                "title": "ENT Specialist"
+            },
+            {
+                "code": "68V",
+                "title": "Respiratory Specialist"
+            },
+            {
+                "code": "68W",
+                "title": "Combat Medic Specialist"
+            },
+            {
+                "code": "68X",
+                "title": "Behavioral Health Specialist"
+            },
+            {
+                "code": "68Y",
+                "title": "Eye Specialist"
+            },
+            {
+                "code": "74D",
+                "title": "CBRN Specialist"
+            },
+            {
+                "code": "79R",
+                "title": "Recruiter"
+            },
+            {
+                "code": "79S",
+                "title": "Career Counselor"
+            },
+            {
+                "code": "88H",
+                "title": "Cargo Specialist"
+            },
+            {
+                "code": "88K",
+                "title": "Watercraft Operator"
+            },
+            {
+                "code": "88L",
+                "title": "Watercraft Engineer"
+            },
+            {
+                "code": "88M",
+                "title": "Motor Transport Operator"
+            },
+            {
+                "code": "88N",
+                "title": "Transportation Management Coordinator"
+            },
+            {
+                "code": "88P",
+                "title": "Railway Equipment Repairer"
+            },
+            {
+                "code": "88T",
+                "title": "Railway Section Repairer"
+            },
+            {
+                "code": "89A",
+                "title": "Ammunition Stock Control"
+            },
+            {
+                "code": "89B",
+                "title": "Ammunition Specialist"
+            },
+            {
+                "code": "91B",
+                "title": "Wheeled Vehicle Mechanic"
+            },
+            {
+                "code": "91C",
+                "title": "Utilities Equipment Repairer"
+            },
+            {
+                "code": "91D",
+                "title": "Power Generation Equipment Repairer"
+            },
+            {
+                "code": "91E",
+                "title": "Allied Trade Specialist"
+            },
+            {
+                "code": "91F",
+                "title": "Small Arms Repairer"
+            },
+            {
+                "code": "91G",
+                "title": "Fire Control Repairer"
+            },
+            {
+                "code": "91H",
+                "title": "Track Vehicle Repairer"
+            },
+            {
+                "code": "91J",
+                "title": "Quartermaster and Chemical Equipment Repairer"
+            },
+            {
+                "code": "91L",
+                "title": "Construction Equipment Repairer"
+            },
+            {
+                "code": "91M",
+                "title": "Bradley Fighting Vehicle Maintainer"
+            },
+            {
+                "code": "91P",
+                "title": "Artillery Mechanic"
+            },
+            {
+                "code": "91S",
+                "title": "Stryker Systems Maintainer"
+            },
+            {
+                "code": "92A",
+                "title": "Automated Logistical Specialist"
+            },
+            {
+                "code": "92F",
+                "title": "Petroleum Supply Specialist"
+            },
+            {
+                "code": "92G",
+                "title": "Culinary Specialist"
+            },
+            {
+                "code": "92L",
+                "title": "Petroleum Laboratory Specialist"
+            },
+            {
+                "code": "92M",
+                "title": "Mortuary Affairs Specialist"
+            },
+            {
+                "code": "92R",
+                "title": "Parachute Rigger"
+            },
+            {
+                "code": "92S",
+                "title": "Shower and Laundry Specialist"
+            },
+            {
+                "code": "92W",
+                "title": "Water Treatment Specialist"
+            },
+            {
+                "code": "92Y",
+                "title": "Unit Supply Specialist"
+            },
+            {
+                "code": "131A",
+                "title": "Field Artillery Technician"
+            },
+            {
+                "code": "140A",
+                "title": "Command and Control Systems Technician"
+            },
+            {
+                "code": "150A",
+                "title": "Aviation Maintenance Technician"
+            },
+            {
+                "code": "150U",
+                "title": "Unmanned Aircraft Systems Operations Technician"
+            },
+            {
+                "code": "153A",
+                "title": "Rotary Wing Aviator"
+            },
+            {
+                "code": "153M",
+                "title": "Rotary Wing Aviator (MH-47)"
+            },
+            {
+                "code": "155A",
+                "title": "Fixed Wing Aviator"
+            },
+            {
+                "code": "170A",
+                "title": "Cyber Operations Technician"
+            },
+            {
+                "code": "255A",
+                "title": "Information Services Technician"
+            },
+            {
+                "code": "255N",
+                "title": "Network Management Technician"
+            },
+            {
+                "code": "255Z",
+                "title": "Senior Network Operations Technician"
+            },
+            {
+                "code": "270A",
+                "title": "Legal Administrator"
+            },
+            {
+                "code": "350F",
+                "title": "All-Source Intelligence Technician"
+            },
+            {
+                "code": "350G",
+                "title": "Imagery Intelligence Technician"
+            },
+            {
+                "code": "351L",
+                "title": "Counterintelligence Technician"
+            },
+            {
+                "code": "352N",
+                "title": "Signals Intelligence Analyst Technician"
+            },
+            {
+                "code": "353T",
+                "title": "IEW Equipment Technician"
+            },
+            {
+                "code": "890A",
+                "title": "Ammunition Warrant Officer"
+            },
+            {
+                "code": "913A",
+                "title": "Armament Systems Maintenance Warrant Officer"
+            },
+            {
+                "code": "915A",
+                "title": "Automotive Maintenance Warrant Officer"
+            },
+            {
+                "code": "919A",
+                "title": "Engineer Equipment Maintenance Warrant Officer"
+            },
+            {
+                "code": "920A",
+                "title": "Property Accounting Technician"
+            },
+            {
+                "code": "920B",
+                "title": "Supply Systems Technician"
+            },
+            {
+                "code": "948B",
+                "title": "Electronic Systems Maintenance Warrant Officer"
+            },
+            {
+                "code": "948D",
+                "title": "Electronic Missile Systems Maintenance Warrant Officer"
+            },
+            {
+                "code": "11A",
+                "title": "Infantry Officer"
+            },
+            {
+                "code": "12A",
+                "title": "Engineer Officer"
+            },
+            {
+                "code": "13A",
+                "title": "Field Artillery Officer"
+            },
+            {
+                "code": "14A",
+                "title": "Air Defense Artillery Officer"
+            },
+            {
+                "code": "15A2",
+                "title": "Aviation General Officer"
+            },
+            {
+                "code": "17A",
+                "title": "Cyber Operations Officer"
+            },
+            {
+                "code": "18A2",
+                "title": "Special Forces Officer"
+            },
+            {
+                "code": "19A",
+                "title": "Armor Officer"
+            },
+            {
+                "code": "25A2",
+                "title": "Signal Officer"
+            },
+            {
+                "code": "26A",
+                "title": "Network Systems Engineering"
+            },
+            {
+                "code": "26B",
+                "title": "Information Systems Management"
+            },
+            {
+                "code": "27A",
+                "title": "Judge Advocate"
+            },
+            {
+                "code": "30A",
+                "title": "Information Operations Officer"
+            },
+            {
+                "code": "31A2",
+                "title": "Military Police Officer"
+            },
+            {
+                "code": "35A2",
+                "title": "Military Intelligence Officer"
+            },
+            {
+                "code": "36A2",
+                "title": "Financial Management Officer"
+            },
+            {
+                "code": "38A2",
+                "title": "Civil Affairs Officer"
+            },
+            {
+                "code": "42B2",
+                "title": "Human Resources Officer"
+            },
+            {
+                "code": "46A2",
+                "title": "Public Affairs Officer"
+            },
+            {
+                "code": "56A",
+                "title": "Chaplain"
+            },
+            {
+                "code": "60A",
+                "title": "Operational Medicine"
+            },
+            {
+                "code": "61A",
+                "title": "Medical Specialist Officer"
+            },
+            {
+                "code": "64A",
+                "title": "Veterinary Officer"
+            },
+            {
+                "code": "65A",
+                "title": "Occupational Therapy Officer"
+            },
+            {
+                "code": "66H",
+                "title": "Psychiatric Nurse"
+            },
+            {
+                "code": "67J",
+                "title": "Aeromedical Evacuation Officer"
+            },
+            {
+                "code": "70A",
+                "title": "Health Services Administration"
+            },
+            {
+                "code": "72A",
+                "title": "Telecommunications Systems Engineer"
+            },
+            {
+                "code": "74A2",
+                "title": "Chemical Officer"
+            },
+            {
+                "code": "88A2",
+                "title": "Transportation Officer"
+            },
+            {
+                "code": "89E",
+                "title": "Explosive Ordnance Disposal Officer"
+            },
+            {
+                "code": "91A2",
+                "title": "Maintenance Officer"
+            },
+            {
+                "code": "92A2",
+                "title": "Quartermaster Officer"
+            },
+            {
+                "code": "120A",
+                "title": "Construction Engineering Technician"
+            },
+            {
+                "code": "125D",
+                "title": "Geospatial Engineering Technician"
+            },
+            {
+                "code": "140K",
+                "title": "Air and Missile Defense Tactician/Technician"
+            },
+            {
+                "code": "140L",
+                "title": "Air and Missile Defense Systems Integrator"
+            },
+            {
+                "code": "151A",
+                "title": "Aviation Maintenance Technician (Aircraft)"
+            },
+            {
+                "code": "152C",
+                "title": "OH-6 Pilot"
+            },
+            {
+                "code": "152D",
+                "title": "AH-64D Pilot"
+            },
+            {
+                "code": "152F",
+                "title": "AH-64E Pilot"
+            },
+            {
+                "code": "152G",
+                "title": "Army Warrant Officer Specialty 152G"
+            },
+            {
+                "code": "152H",
+                "title": "Army Warrant Officer Specialty 152H"
+            },
+            {
+                "code": "154C",
+                "title": "CH-47 Pilot"
+            },
+            {
+                "code": "170B",
+                "title": "Army Warrant Officer Specialty 170B"
+            },
+            {
+                "code": "255S",
+                "title": "Cyberspace Defense Technician"
+            },
+            {
+                "code": "351M",
+                "title": "Human Intelligence Technician"
+            },
+            {
+                "code": "352S",
+                "title": "Signals Collector/Analyst Technician"
+            },
+            {
+                "code": "914A",
+                "title": "Army Warrant Officer Specialty 914A"
+            },
+            {
+                "code": "921A",
+                "title": "Aerial Delivery & Materiel Officer"
+            },
+            {
+                "code": "922A",
+                "title": "Army Warrant Officer Specialty 922A"
+            },
+            {
+                "code": "948E",
+                "title": "Army Warrant Officer Specialty 948E"
+            },
+            {
+                "code": "152B",
+                "title": "OH-58D Scout Pilot"
+            },
+            {
+                "code": "153D",
+                "title": "UH-60 Pilot"
+            },
+            {
+                "code": "153E",
+                "title": "MH-60 Pilot"
+            },
+            {
+                "code": "153L",
+                "title": "UH-72 Pilot"
+            },
+            {
+                "code": "180A",
+                "title": "Special Forces Warrant Officer"
+            },
+            {
+                "code": "290A",
+                "title": "Electronic Warfare Technician"
+            },
+            {
+                "code": "420A",
+                "title": "Human Resources Technician"
+            },
+            {
+                "code": "640A",
+                "title": "Marine Deck Officer"
+            },
+            {
+                "code": "641A",
+                "title": "Marine Engineering Officer"
+            },
+            {
+                "code": "880A",
+                "title": "Marine Operations Technician"
+            }
+        ],
+        "NOAA": [
+            {
+                "code": "OPS",
+                "title": "Operations Officer"
+            },
+            {
+                "code": "NAV",
+                "title": "Navigation Officer"
+            },
+            {
+                "code": "MET",
+                "title": "Meteorology Officer"
+            },
+            {
+                "code": "OCE",
+                "title": "Oceanography Officer"
+            },
+            {
+                "code": "ENG",
+                "title": "Engineering Officer"
+            },
+            {
+                "code": "MRE",
+                "title": "Marine Engineering Officer"
+            },
+            {
+                "code": "AVO",
+                "title": "Aviation Officer"
+            },
+            {
+                "code": "RDO",
+                "title": "Remote Sensing Officer"
+            },
+            {
+                "code": "FIS",
+                "title": "Fisheries Science Officer"
+            },
+            {
+                "code": "HYS",
+                "title": "Hydrographic Science Officer"
+            },
+            {
+                "code": "CHT",
+                "title": "Charting and Survey Officer"
+            },
+            {
+                "code": "ENV",
+                "title": "Environmental Science Officer"
+            },
+            {
+                "code": "ITM",
+                "title": "Information Technology Management Officer"
+            },
+            {
+                "code": "ADM",
+                "title": "Administrative Officer"
+            }
+        ],
+        "Marine Corps": [
+            {
+                "code": "0311",
+                "title": "Rifleman"
+            },
+            {
+                "code": "0331",
+                "title": "Machine Gunner"
+            },
+            {
+                "code": "0341",
+                "title": "Mortarman"
+            },
+            {
+                "code": "0351",
+                "title": "Infantry Assault Marine"
+            },
+            {
+                "code": "0352",
+                "title": "Anti-Tank Missile Gunner"
+            },
+            {
+                "code": "0411",
+                "title": "Maintenance Management Specialist"
+            },
+            {
+                "code": "0451",
+                "title": "Combat Photographer"
+            },
+            {
+                "code": "0481",
+                "title": "Landing Support Specialist"
+            },
+            {
+                "code": "0621",
+                "title": "Field Radio Operator"
+            },
+            {
+                "code": "0627",
+                "title": "Unit Level Circuit Switcher"
+            },
+            {
+                "code": "0631",
+                "title": "Network Administrator"
+            },
+            {
+                "code": "0651",
+                "title": "Cyber Network Operator"
+            },
+            {
+                "code": "0811",
+                "title": "Field Artillery Cannoneer"
+            },
+            {
+                "code": "0842",
+                "title": "Field Artillery Radar Operator"
+            },
+            {
+                "code": "0844",
+                "title": "Field Artillery Fire Control Man"
+            },
+            {
+                "code": "0847",
+                "title": "Artillery Meteorological Man"
+            },
+            {
+                "code": "1141",
+                "title": "Electrician"
+            },
+            {
+                "code": "1161",
+                "title": "Refrigeration Mechanic"
+            },
+            {
+                "code": "1171",
+                "title": "Water Support Technician"
+            },
+            {
+                "code": "1316",
+                "title": "Metal Worker"
+            },
+            {
+                "code": "1341",
+                "title": "Engineer Equipment Mechanic"
+            },
+            {
+                "code": "1345",
+                "title": "Engineer Equipment Operator"
+            },
+            {
+                "code": "1833",
+                "title": "Assault Amphibious Vehicle Crewman"
+            },
+            {
+                "code": "2111",
+                "title": "Small Arms Repairer/Technician"
+            },
+            {
+                "code": "2131",
+                "title": "Towed Artillery Systems Technician"
+            },
+            {
+                "code": "2141",
+                "title": "Tank Mechanic"
+            },
+            {
+                "code": "2147",
+                "title": "Light Armored Vehicle Mechanic"
+            },
+            {
+                "code": "2311",
+                "title": "Ammunition Technician"
+            },
+            {
+                "code": "2621",
+                "title": "Special Communications Signals Analyst"
+            },
+            {
+                "code": "2631",
+                "title": "Electronic Intelligence Intercept Operator"
+            },
+            {
+                "code": "2831",
+                "title": "Ground Electronics Transmission Systems Maintainer"
+            },
+            {
+                "code": "3043",
+                "title": "Supply Administration and Operations Specialist"
+            },
+            {
+                "code": "3051",
+                "title": "Warehouse Clerk"
+            },
+            {
+                "code": "3112",
+                "title": "Traffic Management Specialist"
+            },
+            {
+                "code": "3381",
+                "title": "Food Service Specialist"
+            },
+            {
+                "code": "3432",
+                "title": "Finance Technician"
+            },
+            {
+                "code": "3531",
+                "title": "Motor Vehicle Operator"
+            },
+            {
+                "code": "3537",
+                "title": "Motor Transport Operations Chief"
+            },
+            {
+                "code": "4133",
+                "title": "Marine Corps Community Services Specialist"
+            },
+            {
+                "code": "4421",
+                "title": "Legal Services Specialist"
+            },
+            {
+                "code": "4591",
+                "title": "Combat Lithographer"
+            },
+            {
+                "code": "4821",
+                "title": "Career Planner"
+            },
+            {
+                "code": "5831",
+                "title": "Military Police"
+            },
+            {
+                "code": "5832",
+                "title": "Criminal Investigator"
+            },
+            {
+                "code": "5952",
+                "title": "Air Traffic Control Radar Technician"
+            },
+            {
+                "code": "6046",
+                "title": "Aviation Maintenance Data Specialist"
+            },
+            {
+                "code": "6112",
+                "title": "Helicopter Mechanic (CH-53)"
+            },
+            {
+                "code": "6152",
+                "title": "Helicopter Mechanic (AH-1/UH-1)"
+            },
+            {
+                "code": "6174",
+                "title": "Helicopter Crew Chief (CH-53)"
+            },
+            {
+                "code": "6216",
+                "title": "Fixed-Wing Aircraft Mechanic (F/A-18)"
+            },
+            {
+                "code": "6256",
+                "title": "Fixed-Wing Aircraft Safety Equipment Mechanic"
+            },
+            {
+                "code": "6286",
+                "title": "Fixed-Wing Aircraft Safety Equipment Mechanic (F/A-18)"
+            },
+            {
+                "code": "6316",
+                "title": "Aircraft Communications/Navigation Systems Technician"
+            },
+            {
+                "code": "6326",
+                "title": "Aircraft Communications/Navigation Systems Technician (F/A-18)"
+            },
+            {
+                "code": "6531",
+                "title": "Aviation Ordnance Technician"
+            },
+            {
+                "code": "7041",
+                "title": "Aviation Operations Specialist"
+            },
+            {
+                "code": "7314",
+                "title": "Unmanned Aerial Vehicle Operator"
+            },
+            {
+                "code": "8411",
+                "title": "Recruiter"
+            },
+            {
+                "code": "0102",
+                "title": "Marine Officer Candidate"
+            },
+            {
+                "code": "0202",
+                "title": "Intelligence Officer"
+            },
+            {
+                "code": "0302",
+                "title": "Infantry Officer"
+            },
+            {
+                "code": "0402",
+                "title": "Logistics Officer"
+            },
+            {
+                "code": "0602",
+                "title": "Communications Officer"
+            },
+            {
+                "code": "0802",
+                "title": "Artillery Officer"
+            },
+            {
+                "code": "1302",
+                "title": "Engineer Officer (Combat)"
+            },
+            {
+                "code": "1802",
+                "title": "Tank Officer"
+            },
+            {
+                "code": "2502",
+                "title": "Operational Communications Officer"
+            },
+            {
+                "code": "3002",
+                "title": "Supply Administration Officer"
+            },
+            {
+                "code": "3102",
+                "title": "Purchasing Officer"
+            },
+            {
+                "code": "3502",
+                "title": "Motor Transport Officer"
+            },
+            {
+                "code": "4402",
+                "title": "Legal Services Officer"
+            },
+            {
+                "code": "5803",
+                "title": "Military Police Officer"
+            },
+            {
+                "code": "6002",
+                "title": "Aircraft Maintenance Officer"
+            },
+            {
+                "code": "7202",
+                "title": "Air Traffic Control Officer"
+            },
+            {
+                "code": "7315",
+                "title": "AV-8B Pilot"
+            },
+            {
+                "code": "0160",
+                "title": "Postal Officer"
+            },
+            {
+                "code": "0170",
+                "title": "Personnel Officer"
+            },
+            {
+                "code": "0201",
+                "title": "Basic Intelligence Officer"
+            },
+            {
+                "code": "0205",
+                "title": "Senior All-Source Intelligence Analysis Officer"
+            },
+            {
+                "code": "0210",
+                "title": "Counterintelligence/Human Intelligence Officer"
+            },
+            {
+                "code": "0220",
+                "title": "Surveillance Sensor Officer"
+            },
+            {
+                "code": "0260",
+                "title": "Geographic Intelligence Officer"
+            },
+            {
+                "code": "0301",
+                "title": "Basic Infantry Officer"
+            },
+            {
+                "code": "0306",
+                "title": "Infantry Weapons Officer"
+            },
+            {
+                "code": "0401",
+                "title": "Basic Logistics Officer"
+            },
+            {
+                "code": "0430",
+                "title": "Mobility Officer"
+            },
+            {
+                "code": "0501",
+                "title": "MAGTF Plans Officer"
+            },
+            {
+                "code": "0601",
+                "title": "Basic Communications Officer"
+            },
+            {
+                "code": "0610",
+                "title": "Telephone Systems Officer"
+            },
+            {
+                "code": "1316",
+                "title": "Metal Worker Officer"
+            },
+            {
+                "code": "1361",
+                "title": "Engineering Assistant Officer"
+            },
+            {
+                "code": "2805",
+                "title": "Electronics Maintenance Officer"
+            },
+            {
+                "code": "3510",
+                "title": "Motor Transport Officer"
+            },
+            {
+                "code": "4130",
+                "title": "Marine Corps Community Services Officer"
+            }
+        ],
+        "Navy": [
+            {
+                "code": "AB",
+                "title": "Aviation Boatswains Mate"
+            },
+            {
+                "code": "AC",
+                "title": "Air Traffic Controller"
+            },
+            {
+                "code": "AD",
+                "title": "Aviation Machinists Mate"
+            },
+            {
+                "code": "AE",
+                "title": "Aviation Electricians Mate"
+            },
+            {
+                "code": "AG",
+                "title": "Aerographers Mate"
+            },
+            {
+                "code": "AO",
+                "title": "Aviation Ordnanceman"
+            },
+            {
+                "code": "AS",
+                "title": "Aviation Support Equipment Technician"
+            },
+            {
+                "code": "AT",
+                "title": "Aviation Electronics Technician"
+            },
+            {
+                "code": "AW",
+                "title": "Naval Aircrewman"
+            },
+            {
+                "code": "AZ",
+                "title": "Aviation Maintenance Administrationman"
+            },
+            {
+                "code": "BM",
+                "title": "Boatswains Mate"
+            },
+            {
+                "code": "CS",
+                "title": "Culinary Specialist"
+            },
+            {
+                "code": "CTI",
+                "title": "Cryptologic Technician Interpretive"
+            },
+            {
+                "code": "CTM",
+                "title": "Cryptologic Technician Maintenance"
+            },
+            {
+                "code": "CTN",
+                "title": "Cryptologic Technician Networks"
+            },
+            {
+                "code": "CTR",
+                "title": "Cryptologic Technician Collection"
+            },
+            {
+                "code": "CTT",
+                "title": "Cryptologic Technician Technical"
+            },
+            {
+                "code": "DC",
+                "title": "Damage Controlman"
+            },
+            {
+                "code": "EA",
+                "title": "Engineering Aide"
+            },
+            {
+                "code": "EM",
+                "title": "Electricians Mate"
+            },
+            {
+                "code": "EN",
+                "title": "Engineman"
+            },
+            {
+                "code": "EO",
+                "title": "Equipment Operator"
+            },
+            {
+                "code": "ET",
+                "title": "Electronics Technician"
+            },
+            {
+                "code": "FC",
+                "title": "Fire Controlman"
+            },
+            {
+                "code": "GM",
+                "title": "Gunners Mate"
+            },
+            {
+                "code": "HM",
+                "title": "Hospital Corpsman"
+            },
+            {
+                "code": "HT",
+                "title": "Hull Maintenance Technician"
+            },
+            {
+                "code": "IC",
+                "title": "Interior Communications Electrician"
+            },
+            {
+                "code": "IS",
+                "title": "Intelligence Specialist"
+            },
+            {
+                "code": "IT",
+                "title": "Information Systems Technician"
+            },
+            {
+                "code": "LN",
+                "title": "Legalman"
+            },
+            {
+                "code": "LS",
+                "title": "Logistics Specialist"
+            },
+            {
+                "code": "MA",
+                "title": "Master-at-Arms"
+            },
+            {
+                "code": "MC",
+                "title": "Mass Communication Specialist"
+            },
+            {
+                "code": "MM",
+                "title": "Machinists Mate"
+            },
+            {
+                "code": "MN",
+                "title": "Mineman"
+            },
+            {
+                "code": "MR",
+                "title": "Machinery Repairman"
+            },
+            {
+                "code": "MT",
+                "title": "Missile Technician"
+            },
+            {
+                "code": "MU",
+                "title": "Musician"
+            },
+            {
+                "code": "NC",
+                "title": "Navy Counselor"
+            },
+            {
+                "code": "ND",
+                "title": "Navy Diver"
+            },
+            {
+                "code": "OS",
+                "title": "Operations Specialist"
+            },
+            {
+                "code": "PR",
+                "title": "Aircrew Survival Equipmentman"
+            },
+            {
+                "code": "PS",
+                "title": "Personnel Specialist"
+            },
+            {
+                "code": "QM",
+                "title": "Quartermaster"
+            },
+            {
+                "code": "RP",
+                "title": "Religious Program Specialist"
+            },
+            {
+                "code": "SB",
+                "title": "Special Warfare Boat Operator"
+            },
+            {
+                "code": "SH",
+                "title": "Ship Serviceman"
+            },
+            {
+                "code": "SO",
+                "title": "Special Warfare Operator"
+            },
+            {
+                "code": "STG",
+                "title": "Sonar Technician Surface"
+            },
+            {
+                "code": "STS",
+                "title": "Sonar Technician Submarine"
+            },
+            {
+                "code": "SW",
+                "title": "Steelworker"
+            },
+            {
+                "code": "TM",
+                "title": "Torpedoman Mate"
+            },
+            {
+                "code": "UT",
+                "title": "Utilitiesman"
+            },
+            {
+                "code": "YN",
+                "title": "Yeoman"
+            },
+            {
+                "code": "711X",
+                "title": "Boatswain (Surface)"
+            },
+            {
+                "code": "712X",
+                "title": "Operations Technician"
+            },
+            {
+                "code": "721X",
+                "title": "Engineering Technician (Surface)"
+            },
+            {
+                "code": "731X",
+                "title": "Cryptologic Technician (Surface)"
+            },
+            {
+                "code": "733X",
+                "title": "Information Systems Technician"
+            },
+            {
+                "code": "741X",
+                "title": "Ship's Clerk (Admin)"
+            },
+            {
+                "code": "748X",
+                "title": "Diving Warrant Officer"
+            },
+            {
+                "code": "749X",
+                "title": "Explosive Ordnance Disposal Warrant Officer"
+            },
+            {
+                "code": "751X",
+                "title": "Supply Corps Warrant Officer"
+            },
+            {
+                "code": "752X",
+                "title": "Aviation Maintenance Technician (General)"
+            },
+            {
+                "code": "781X",
+                "title": "Supply Corps Warrant Officer"
+            },
+            {
+                "code": "783X",
+                "title": "Personnel Administration Warrant Officer"
+            },
+            {
+                "code": "1110",
+                "title": "Surface Warfare Officer"
+            },
+            {
+                "code": "1120",
+                "title": "Submarine Warfare Officer"
+            },
+            {
+                "code": "1130",
+                "title": "Special Warfare Officer (SEAL)"
+            },
+            {
+                "code": "1140",
+                "title": "Special Operations Officer (EOD)"
+            },
+            {
+                "code": "1310",
+                "title": "Naval Aviator"
+            },
+            {
+                "code": "1320",
+                "title": "Naval Flight Officer"
+            },
+            {
+                "code": "1510",
+                "title": "Intelligence Officer"
+            },
+            {
+                "code": "1610",
+                "title": "Information Warfare Officer"
+            },
+            {
+                "code": "1710",
+                "title": "Cyber Warfare Engineer"
+            },
+            {
+                "code": "1810",
+                "title": "Oceanography Officer"
+            },
+            {
+                "code": "2100",
+                "title": "Nuclear Power Officer"
+            },
+            {
+                "code": "2200",
+                "title": "Information Professional"
+            },
+            {
+                "code": "2300",
+                "title": "Meteorology / Oceanography Officer"
+            },
+            {
+                "code": "2500",
+                "title": "Judge Advocate General Corps"
+            },
+            {
+                "code": "2900",
+                "title": "Supply Corps Officer"
+            },
+            {
+                "code": "3100",
+                "title": "Civil Engineer Corps"
+            },
+            {
+                "code": "4100",
+                "title": "Medical Corps"
+            },
+            {
+                "code": "4200",
+                "title": "Dental Corps"
+            },
+            {
+                "code": "4500",
+                "title": "Medical Service Corps"
+            },
+            {
+                "code": "4600",
+                "title": "Nurse Corps"
+            },
+            {
+                "code": "713X",
+                "title": "Ship's Clerk"
+            },
+            {
+                "code": "715X",
+                "title": "Special Warfare Combatant-Craft Crewman (SWCC)"
+            },
+            {
+                "code": "717X",
+                "title": "Boatswain (Submarine)"
+            },
+            {
+                "code": "718X",
+                "title": "Diving Officer"
+            },
+            {
+                "code": "722X",
+                "title": "Engineering Technician (Submarine)"
+            },
+            {
+                "code": "723X",
+                "title": "Repair Technician"
+            },
+            {
+                "code": "724X",
+                "title": "Ordnance Technician"
+            },
+            {
+                "code": "726X",
+                "title": "Electronics Technician (Surface)"
+            },
+            {
+                "code": "727X",
+                "title": "Electronics Technician (Submarine)"
+            },
+            {
+                "code": "728X",
+                "title": "Aviation Electronics Technician"
+            },
+            {
+                "code": "729X",
+                "title": "Aviation Ordnance Technician"
+            },
+            {
+                "code": "732X",
+                "title": "Cryptologic Technician (Submarine)"
+            },
+            {
+                "code": "734X",
+                "title": "Intelligence Technician"
+            },
+            {
+                "code": "753X",
+                "title": "Aviation Maintenance Technician (Avionics)"
+            },
+            {
+                "code": "754X",
+                "title": "Aviation Maintenance Technician (Structures)"
+            }
+        ]
+    },
+    "exposures": {
+        "value": [
+            {
+                "exposures": [
+                    "Burn pits",
+                    "Airborne hazards (dust, sand, PM2.5)",
+                    "Blast overpressure (IEDs, breaching, artillery)",
+                    "Lead (weapons, indoor ranges)",
+                    "Noise (weapons, vehicles, aircraft)",
+                    "Solvents and CLP",
+                    "Depleted uranium (armor crews)",
+                    "JP-8 (aviation proximity)",
+                    "Firefighting foam (AFFF)"
+                ],
+                "family": "Combat Arms",
+                "examples": [
+                    "11B",
+                    "0311",
+                    "19K",
+                    "13B",
+                    "19D",
+                    "18X",
+                    "SO",
+                    "SB",
+                    "1C4X1"
+                ]
+            },
+            {
+                "exposures": [
+                    "JP-8 / jet fuel",
+                    "Hydraulic fluid (Skydrol)",
+                    "Solvents and degreasers",
+                    "Noise (rotary and fixed-wing)",
+                    "Radiation (radar, comms)",
+                    "Burn pits (deployed flight lines)",
+                    "Composite materials dust",
+                    "Firefighting foam (AFFF)"
+                ],
+                "family": "Aviation",
+                "examples": [
+                    "15T",
+                    "6174",
+                    "AT",
+                    "AE",
+                    "AD",
+                    "AMT",
+                    "AET",
+                    "2A5X1",
+                    "1A2X1"
+                ]
+            },
+            {
+                "exposures": [
+                    "Asbestos",
+                    "Silica dust",
+                    "Burn pits",
+                    "Demolition explosives",
+                    "Heavy metals",
+                    "Solvents",
+                    "Fuel and lubricants",
+                    "Treated lumber chemicals",
+                    "Noise (heavy equipment)"
+                ],
+                "family": "Engineering / Construction",
+                "examples": [
+                    "12B",
+                    "1371",
+                    "EO",
+                    "BU",
+                    "CE",
+                    "UT",
+                    "3E5X1"
+                ]
+            },
+            {
+                "exposures": [
+                    "Solvents and degreasers",
+                    "Fuel and lubricants",
+                    "Asbestos (legacy platforms)",
+                    "Lead",
+                    "Heavy metals",
+                    "Noise",
+                    "Burn pits (deployed motor pools)",
+                    "Battery acid",
+                    "Welding fumes"
+                ],
+                "family": "Maintenance / Mechanical / Ordnance",
+                "examples": [
+                    "91B",
+                    "1341",
+                    "MM",
+                    "MK",
+                    "EN",
+                    "EM",
+                    "2T3X1",
+                    "2A6X1"
+                ]
+            },
+            {
+                "exposures": [
+                    "Bloodborne pathogens",
+                    "Radiation (X-ray, CT)",
+                    "Anesthetic gases",
+                    "Chemical disinfectants",
+                    "Burn pits (deployed medical units)",
+                    "Noise (MEDEVAC, field hospitals)"
+                ],
+                "family": "Medical / Dental",
+                "examples": [
+                    "68W",
+                    "HM",
+                    "4N0X1",
+                    "HS",
+                    "68C",
+                    "4A0X1"
+                ]
+            },
+            {
+                "exposures": [
+                    "Radiation (comms/radar sites)",
+                    "Burn pits (if deployed)",
+                    "Noise (tactical comms shelters)",
+                    "Solvents (if co-located with maintenance)"
+                ],
+                "family": "Intelligence / Cyber / Communications / IT",
+                "examples": [
+                    "35F",
+                    "5I0",
+                    "1N0",
+                    "1N0X1",
+                    "1N1",
+                    "1N1X1",
+                    "1N2",
+                    "1N2X1",
+                    "IS",
+                    "IT",
+                    "CTN",
+                    "25B",
+                    "3D0X2"
+                ]
+            },
+            {
+                "exposures": [
+                    "Burn pits (if deployed)",
+                    "Warehouse dust",
+                    "Mold (older facilities)",
+                    "Noise (transport hubs)"
+                ],
+                "family": "Logistics / Supply / Admin / Finance / HR",
+                "examples": [
+                    "92Y",
+                    "3043",
+                    "LS",
+                    "SK",
+                    "YN",
+                    "3S0X1"
+                ]
+            },
+            {
+                "exposures": [
+                    "Fuel and lubricants",
+                    "Solvents and cleaners",
+                    "Asbestos (legacy ships)",
+                    "Lead paint",
+                    "Noise (engines, weapons)",
+                    "Cold weather exposure",
+                    "Saltwater corrosion chemicals"
+                ],
+                "family": "Maritime / Deck / Boatswain / Coast Guard Ops",
+                "examples": [
+                    "BM",
+                    "MK",
+                    "ME",
+                    "OS",
+                    "QM",
+                    "GM",
+                    "DC"
+                ]
+            },
+            {
+                "exposures": [
+                    "AFFF (PFAS)",
+                    "Smoke inhalation",
+                    "Burn pits (deployed airfields)",
+                    "Solvents",
+                    "Fuel",
+                    "Noise"
+                ],
+                "family": "Firefighting / Crash Rescue / Damage Control",
+                "examples": [
+                    "ARFF",
+                    "DC",
+                    "3E7X1",
+                    "ABH"
+                ]
+            },
+            {
+                "exposures": [
+                    "Ionizing radiation",
+                    "Heavy metals",
+                    "Solvents",
+                    "Noise",
+                    "Asbestos (older subs/ships)"
+                ],
+                "family": "Nuclear / Submarine / Reactor / Radiation Tech",
+                "examples": [
+                    "MMN",
+                    "EMN",
+                    "ETN",
+                    "6C0X1"
+                ]
+            },
+            {
+                "exposures": [
+                    "Lead (weapons ranges)",
+                    "Noise",
+                    "Burn pits (if deployed)",
+                    "Blast overpressure (breaching)",
+                    "Chemical agents (OC spray training)"
+                ],
+                "family": "Security Forces / MPs / Law Enforcement",
+                "examples": [
+                    "31B",
+                    "5811",
+                    "MA",
+                    "3P0X1"
+                ]
+            },
+            {
+                "exposures": [
+                    "Chemical agents (training)",
+                    "Decontamination chemicals",
+                    "Radiation sources",
+                    "Burn pits (if deployed)"
+                ],
+                "family": "Chemical / Biological / Radiological (CBRN)",
+                "examples": [
+                    "74D",
+                    "5711",
+                    "3E9X1"
+                ]
+            },
+            {
+                "exposures": [
+                    "Radiation (radar, satellite comms)",
+                    "Noise (launch facilities)",
+                    "Solvents (if co-located with maintenance)"
+                ],
+                "family": "Space / Missile / Satellite Ops",
+                "examples": [
+                    "5S",
+                    "5S0",
+                    "1C6",
+                    "1C6X1",
+                    "13S",
+                    "3D1X3"
+                ]
+            },
+            {
+                "exposures": [
+                    "Cleaning chemicals",
+                    "Mold",
+                    "Burn pits (field kitchens)"
+                ],
+                "family": "Food Service / Culinary",
+                "examples": [
+                    "92G",
+                    "CS",
+                    "FS",
+                    "4D0X1"
+                ]
+            },
+            {
+                "exposures": [
+                    "Noise (long-term hearing exposure)"
+                ],
+                "family": "Bands / Musicians",
+                "examples": [
+                    "42R",
+                    "MU",
+                    "3N1X1"
+                ]
+            }
+        ],
+        "Count": 15
+    },
+    "cfr": []
 }

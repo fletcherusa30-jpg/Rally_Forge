@@ -1,0 +1,688 @@
+{
+  "AMT": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USCG Enlisted specialty"
+  },
+  "AET": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USCG Enlisted specialty"
+  },
+  "AST": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USCG Enlisted specialty"
+  },
+  "BM": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USCG Enlisted specialty"
+  },
+  "DC": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USCG Enlisted specialty"
+  },
+  "DV": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USCG Enlisted specialty"
+  },
+  "EM": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USCG Enlisted specialty"
+  },
+  "ET": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USCG Enlisted specialty"
+  },
+  "FS": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USCG Enlisted specialty"
+  },
+  "GM": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USCG Enlisted specialty"
+  },
+  "HS": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USCG Enlisted specialty"
+  },
+  "IS": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USCG Enlisted specialty"
+  },
+  "IT": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USCG Enlisted specialty"
+  },
+  "ME": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USCG Enlisted specialty"
+  },
+  "MK": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USCG Enlisted specialty"
+  },
+  "MST": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USCG Enlisted specialty"
+  },
+  "MU": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USCG Enlisted specialty"
+  },
+  "OS": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USCG Enlisted specialty"
+  },
+  "PA": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USCG Enlisted specialty"
+  },
+  "SK": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USCG Enlisted specialty"
+  },
+  "YN": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USCG Enlisted specialty"
+  },
+  "BOSN": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Coast Guard Warrant Officer Specialty"
+  },
+  "WEPS": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Coast Guard Warrant Officer Specialty"
+  },
+  "ELC": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Coast Guard Warrant Officer Specialty"
+  },
+  "MACH": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USCG Warrant Officer specialty"
+  },
+  "PERS": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Coast Guard Warrant Officer Specialty"
+  },
+  "INV": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Coast Guard Warrant Officer Specialty"
+  },
+  "MLES": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Coast Guard Warrant Officer Specialty"
+  },
+  "MSSD": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Coast Guard Warrant Officer Specialty"
+  },
+  "MSSE": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Coast Guard Warrant Officer Specialty"
+  },
+  "AVCG": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "USCG Officer specialty"
+  },
+  "CGENG": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "USCG Officer specialty"
+  },
+  "CGOPS": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "USCG Officer specialty"
+  },
+  "CGINT": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "USCG Officer specialty"
+  },
+  "CGLAW": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "USCG Officer specialty"
+  },
+  "CGNAV": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "USCG Officer specialty"
+  },
+  "CGSUP": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "USCG Officer specialty"
+  },
+  "CGCIV": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "USCG Officer specialty"
+  },
+  "CGMED": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "USCG Officer specialty"
+  },
+  "CGLEG": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "USCG Officer specialty"
+  },
+  "MSSR": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Coast Guard Warrant Officer Specialty"
+  },
+  "MSST": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Coast Guard Warrant Officer Specialty"
+  },
+  "MAT": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Coast Guard Warrant Officer Specialty"
+  },
+  "MLEI": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Coast Guard Warrant Officer Specialty"
+  },
+  "ENG": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Coast Guard Warrant Officer Specialty"
+  },
+  "NAV": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Coast Guard Warrant Officer Specialty"
+  },
+  "AVN": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Coast Guard Warrant Officer Specialty"
+  },
+  "AVT": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Coast Guard Warrant Officer Specialty"
+  },
+  "FIN": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Coast Guard Warrant Officer Specialty"
+  }
+}

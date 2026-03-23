@@ -1,0 +1,3068 @@
+{
+  "11B": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "11C": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "12B": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "12C": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "12D": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "12K": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "12M": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "12N": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "12P": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "12Q": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "12R": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "12T": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "12V": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "12W": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "12Y": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "13B": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "13F": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "13J": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "13M": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "13R": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "13Z": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "14E": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "14G": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "14H": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "14P": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "14S": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "15B": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "15D": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "15F": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "15G": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "15H": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "15N": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "15P": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "15Q": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "15T": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "15U": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "15Y": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "17C": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "17E": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "18B": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "18C": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "18D": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "18E": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "18F": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "18Z": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "19D": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "19K": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "25B": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "25C": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "25L": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "25N": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "25Q": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "25S": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "25U": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "25V": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "27D": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "31B": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "31D": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "35F": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "35G": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "35L": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "35M": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "35N": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "35P": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "35S": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "36B": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "37F": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "38B": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "42A": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "42R": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "42S": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "44E": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "44H": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "45B": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "45G": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "46S": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "51C": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "56M": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "68A": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "68C": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "68D": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "68E": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "68F": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "68G": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "68H": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "68J": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "68K": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "68M": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "68N": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "68P": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "68Q": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "68R": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "68S": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "68T": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "68U": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "68V": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "68W": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "68X": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "68Y": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "74D": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "79R": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "79S": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "88H": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "88K": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "88L": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "88M": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "88N": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "88P": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "88T": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "89A": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "89B": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "91B": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "91C": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "91D": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "91E": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "91F": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "91G": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "91H": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "91J": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "91L": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "91M": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "91P": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "91S": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "92A": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "92F": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "92G": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "92L": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "92M": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "92R": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "92S": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "92W": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "92Y": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Enlisted specialty"
+  },
+  "131A": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  },
+  "140A": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  },
+  "150A": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  },
+  "150U": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  },
+  "153A": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  },
+  "153M": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer specialty"
+  },
+  "155A": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer specialty"
+  },
+  "170A": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  },
+  "255A": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  },
+  "255N": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  },
+  "255Z": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer specialty"
+  },
+  "270A": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  },
+  "350F": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  },
+  "350G": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  },
+  "351L": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  },
+  "352N": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  },
+  "353T": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer specialty"
+  },
+  "890A": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer specialty"
+  },
+  "913A": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer specialty"
+  },
+  "915A": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer specialty"
+  },
+  "919A": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer specialty"
+  },
+  "920A": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer specialty"
+  },
+  "920B": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer specialty"
+  },
+  "948B": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer specialty"
+  },
+  "948D": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer specialty"
+  },
+  "11A": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "Army Officer specialty"
+  },
+  "12A": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "Army Officer specialty"
+  },
+  "13A": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "Army Officer specialty"
+  },
+  "14A": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "Army Officer specialty"
+  },
+  "15A2": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "Army Officer specialty"
+  },
+  "17A": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "Army Officer specialty"
+  },
+  "18A2": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "Army Officer specialty"
+  },
+  "19A": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "Army Officer specialty"
+  },
+  "25A2": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "Army Officer specialty"
+  },
+  "26A": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "Army Officer specialty"
+  },
+  "26B": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "Army Officer specialty"
+  },
+  "27A": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "Army Officer specialty"
+  },
+  "30A": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "Army Officer specialty"
+  },
+  "31A2": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "Army Officer specialty"
+  },
+  "35A2": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "Army Officer specialty"
+  },
+  "36A2": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "Army Officer specialty"
+  },
+  "38A2": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "Army Officer specialty"
+  },
+  "42B2": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "Army Officer specialty"
+  },
+  "46A2": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "Army Officer specialty"
+  },
+  "56A": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "Army Officer specialty"
+  },
+  "60A": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "Army Officer specialty"
+  },
+  "61A": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "Army Officer specialty"
+  },
+  "64A": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "Army Officer specialty"
+  },
+  "65A": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "Army Officer specialty"
+  },
+  "66H": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "Army Officer specialty"
+  },
+  "67J": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "Army Officer specialty"
+  },
+  "70A": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "Army Officer specialty"
+  },
+  "72A": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "Army Officer specialty"
+  },
+  "74A2": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "Army Officer specialty"
+  },
+  "88A2": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "Army Officer specialty"
+  },
+  "89E": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "Army Officer specialty"
+  },
+  "91A2": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "Army Officer specialty"
+  },
+  "92A2": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "Army Officer specialty"
+  },
+  "120A": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  },
+  "125D": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  },
+  "140K": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  },
+  "140L": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  },
+  "151A": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  },
+  "152C": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  },
+  "152D": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  },
+  "152F": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  },
+  "152G": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer specialty"
+  },
+  "152H": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer specialty"
+  },
+  "154C": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  },
+  "170B": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer specialty"
+  },
+  "255S": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  },
+  "351M": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  },
+  "352S": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  },
+  "914A": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer specialty"
+  },
+  "921A": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer specialty"
+  },
+  "922A": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer specialty"
+  },
+  "948E": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer specialty"
+  },
+  "152B": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  },
+  "153D": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  },
+  "153E": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  },
+  "153L": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  },
+  "180A": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  },
+  "290A": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  },
+  "420A": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  },
+  "640A": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  },
+  "641A": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  },
+  "880A": {
+    "exposureCategory": "Technical / Operational",
+    "exposureSubcategories": [
+      "Technical / Operational"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Army Warrant Officer MOS"
+  }
+}

@@ -1,1050 +1,1240 @@
 {
-    "mos": [
-        {
-            "code": "11B",
-            "title": "Infantryman",
-            "type": "enlisted"
-        },
-        {
-            "code": "11C",
-            "title": "Indirect Fire Infantryman",
-            "type": "enlisted"
-        },
-        {
-            "code": "12B",
-            "title": "Combat Engineer",
-            "type": "enlisted"
-        },
-        {
-            "code": "12C",
-            "title": "Bridge Crewmember",
-            "type": "enlisted"
-        },
-        {
-            "code": "12D",
-            "title": "Diver",
-            "type": "enlisted"
-        },
-        {
-            "code": "12K",
-            "title": "Plumber",
-            "type": "enlisted"
-        },
-        {
-            "code": "12M",
-            "title": "Firefighter",
-            "type": "enlisted"
-        },
-        {
-            "code": "12N",
-            "title": "Horizontal Construction Engineer",
-            "type": "enlisted"
-        },
-        {
-            "code": "12P",
-            "title": "Prime Power Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "12Q",
-            "title": "Power Line Distribution Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "12R",
-            "title": "Interior Electrician",
-            "type": "enlisted"
-        },
-        {
-            "code": "12T",
-            "title": "Technical Engineer",
-            "type": "enlisted"
-        },
-        {
-            "code": "12V",
-            "title": "Concrete and Asphalt Operator",
-            "type": "enlisted"
-        },
-        {
-            "code": "12W",
-            "title": "Carpentry and Masonry Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "12Y",
-            "title": "Geospatial Engineer",
-            "type": "enlisted"
-        },
-        {
-            "code": "13B",
-            "title": "Cannon Crewmember",
-            "type": "enlisted"
-        },
-        {
-            "code": "13F",
-            "title": "Fire Support Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "13J",
-            "title": "Fire Control Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "13M",
-            "title": "MLRS Crewmember",
-            "type": "enlisted"
-        },
-        {
-            "code": "13R",
-            "title": "Field Artillery Radar Operator",
-            "type": "enlisted"
-        },
-        {
-            "code": "13Z",
-            "title": "Field Artillery Senior Sergeant",
-            "type": "enlisted"
-        },
-        {
-            "code": "14E",
-            "title": "Patriot Fire Control Operator",
-            "type": "enlisted"
-        },
-        {
-            "code": "14G",
-            "title": "Air Defense Battle Management",
-            "type": "enlisted"
-        },
-        {
-            "code": "14H",
-            "title": "Air Defense Enhanced Operator",
-            "type": "enlisted"
-        },
-        {
-            "code": "14P",
-            "title": "Air and Missile Defense Crewmember",
-            "type": "enlisted"
-        },
-        {
-            "code": "14S",
-            "title": "Avenger Crewmember",
-            "type": "enlisted"
-        },
-        {
-            "code": "15B",
-            "title": "Aircraft Powerplant Repairer",
-            "type": "enlisted"
-        },
-        {
-            "code": "15D",
-            "title": "Aircraft Powertrain Repairer",
-            "type": "enlisted"
-        },
-        {
-            "code": "15F",
-            "title": "Aircraft Electrician",
-            "type": "enlisted"
-        },
-        {
-            "code": "15G",
-            "title": "Aircraft Structural Repairer",
-            "type": "enlisted"
-        },
-        {
-            "code": "15H",
-            "title": "Aircraft Pneudraulics Repairer",
-            "type": "enlisted"
-        },
-        {
-            "code": "15N",
-            "title": "Avionic Mechanic",
-            "type": "enlisted"
-        },
-        {
-            "code": "15P",
-            "title": "Aviation Operations Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "15Q",
-            "title": "Air Traffic Control Operator",
-            "type": "enlisted"
-        },
-        {
-            "code": "15T",
-            "title": "UH-60 Repairer",
-            "type": "enlisted"
-        },
-        {
-            "code": "15U",
-            "title": "CH-47 Repairer",
-            "type": "enlisted"
-        },
-        {
-            "code": "15Y",
-            "title": "AH-64 Repairer",
-            "type": "enlisted"
-        },
-        {
-            "code": "17C",
-            "title": "Cyber Operations Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "17E",
-            "title": "Electronic Warfare Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "18B",
-            "title": "Special Forces Weapons Sergeant",
-            "type": "enlisted"
-        },
-        {
-            "code": "18C",
-            "title": "Special Forces Engineer Sergeant",
-            "type": "enlisted"
-        },
-        {
-            "code": "18D",
-            "title": "Special Forces Medical Sergeant",
-            "type": "enlisted"
-        },
-        {
-            "code": "18E",
-            "title": "Special Forces Communications Sergeant",
-            "type": "enlisted"
-        },
-        {
-            "code": "18F",
-            "title": "Special Forces Intelligence Sergeant",
-            "type": "enlisted"
-        },
-        {
-            "code": "18Z",
-            "title": "Special Forces Senior Sergeant",
-            "type": "enlisted"
-        },
-        {
-            "code": "19D",
-            "title": "Cavalry Scout",
-            "type": "enlisted"
-        },
-        {
-            "code": "19K",
-            "title": "M1 Armor Crewman",
-            "type": "enlisted"
-        },
-        {
-            "code": "25B",
-            "title": "Information Technology Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "25C",
-            "title": "Radio Operator Maintainer",
-            "type": "enlisted"
-        },
-        {
-            "code": "25L",
-            "title": "Cable Systems Installer",
-            "type": "enlisted"
-        },
-        {
-            "code": "25N",
-            "title": "Nodal Network Systems Operator",
-            "type": "enlisted"
-        },
-        {
-            "code": "25Q",
-            "title": "Multichannel Transmission Operator",
-            "type": "enlisted"
-        },
-        {
-            "code": "25S",
-            "title": "Satellite Communications Operator",
-            "type": "enlisted"
-        },
-        {
-            "code": "25U",
-            "title": "Signal Support Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "25V",
-            "title": "Combat Documentation Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "27D",
-            "title": "Paralegal Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "31B",
-            "title": "Military Police",
-            "type": "enlisted"
-        },
-        {
-            "code": "31D",
-            "title": "CID Special Agent",
-            "type": "enlisted"
-        },
-        {
-            "code": "35F",
-            "title": "Intelligence Analyst",
-            "type": "enlisted"
-        },
-        {
-            "code": "35G",
-            "title": "Geospatial Intelligence Analyst",
-            "type": "enlisted"
-        },
-        {
-            "code": "35L",
-            "title": "Counterintelligence Agent",
-            "type": "enlisted"
-        },
-        {
-            "code": "35M",
-            "title": "Human Intelligence Collector",
-            "type": "enlisted"
-        },
-        {
-            "code": "35N",
-            "title": "Signals Intelligence Analyst",
-            "type": "enlisted"
-        },
-        {
-            "code": "35P",
-            "title": "Cryptologic Linguist",
-            "type": "enlisted"
-        },
-        {
-            "code": "35S",
-            "title": "Signals Collector Analyst",
-            "type": "enlisted"
-        },
-        {
-            "code": "36B",
-            "title": "Financial Management Technician",
-            "type": "enlisted"
-        },
-        {
-            "code": "37F",
-            "title": "Psychological Operations Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "38B",
-            "title": "Civil Affairs Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "42A",
-            "title": "Human Resources Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "42R",
-            "title": "Army Band",
-            "type": "enlisted"
-        },
-        {
-            "code": "42S",
-            "title": "Special Band Musician",
-            "type": "enlisted"
-        },
-        {
-            "code": "44E",
-            "title": "Machinist",
-            "type": "enlisted"
-        },
-        {
-            "code": "44H",
-            "title": "Metal Worker",
-            "type": "enlisted"
-        },
-        {
-            "code": "45B",
-            "title": "Small Arms Repairer",
-            "type": "enlisted"
-        },
-        {
-            "code": "45G",
-            "title": "Fire Control Repairer",
-            "type": "enlisted"
-        },
-        {
-            "code": "46S",
-            "title": "Public Affairs Mass Communications",
-            "type": "enlisted"
-        },
-        {
-            "code": "51C",
-            "title": "Contracting NCO",
-            "type": "enlisted"
-        },
-        {
-            "code": "56M",
-            "title": "Religious Affairs Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "68A",
-            "title": "Biomedical Equipment Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "68C",
-            "title": "Practical Nursing Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "68D",
-            "title": "Operating Room Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "68E",
-            "title": "Dental Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "68F",
-            "title": "Physical Therapy Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "68G",
-            "title": "Patient Administration Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "68H",
-            "title": "Optical Laboratory Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "68J",
-            "title": "Medical Logistics Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "68K",
-            "title": "Medical Laboratory Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "68M",
-            "title": "Nutrition Care Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "68N",
-            "title": "Cardiovascular Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "68P",
-            "title": "Radiology Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "68Q",
-            "title": "Pharmacy Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "68R",
-            "title": "Veterinary Food Inspection Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "68S",
-            "title": "Preventive Medicine Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "68T",
-            "title": "Animal Care Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "68U",
-            "title": "ENT Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "68V",
-            "title": "Respiratory Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "68W",
-            "title": "Combat Medic Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "68X",
-            "title": "Behavioral Health Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "68Y",
-            "title": "Eye Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "74D",
-            "title": "CBRN Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "79R",
-            "title": "Recruiter",
-            "type": "enlisted"
-        },
-        {
-            "code": "79S",
-            "title": "Career Counselor",
-            "type": "enlisted"
-        },
-        {
-            "code": "88H",
-            "title": "Cargo Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "88K",
-            "title": "Watercraft Operator",
-            "type": "enlisted"
-        },
-        {
-            "code": "88L",
-            "title": "Watercraft Engineer",
-            "type": "enlisted"
-        },
-        {
-            "code": "88M",
-            "title": "Motor Transport Operator",
-            "type": "enlisted"
-        },
-        {
-            "code": "88N",
-            "title": "Transportation Management Coordinator",
-            "type": "enlisted"
-        },
-        {
-            "code": "88P",
-            "title": "Railway Equipment Repairer",
-            "type": "enlisted"
-        },
-        {
-            "code": "88T",
-            "title": "Railway Section Repairer",
-            "type": "enlisted"
-        },
-        {
-            "code": "89A",
-            "title": "Ammunition Stock Control",
-            "type": "enlisted"
-        },
-        {
-            "code": "89B",
-            "title": "Ammunition Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "91B",
-            "title": "Wheeled Vehicle Mechanic",
-            "type": "enlisted"
-        },
-        {
-            "code": "91C",
-            "title": "Utilities Equipment Repairer",
-            "type": "enlisted"
-        },
-        {
-            "code": "91D",
-            "title": "Power Generation Equipment Repairer",
-            "type": "enlisted"
-        },
-        {
-            "code": "91E",
-            "title": "Allied Trade Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "91F",
-            "title": "Small Arms Repairer",
-            "type": "enlisted"
-        },
-        {
-            "code": "91G",
-            "title": "Fire Control Repairer",
-            "type": "enlisted"
-        },
-        {
-            "code": "91H",
-            "title": "Track Vehicle Repairer",
-            "type": "enlisted"
-        },
-        {
-            "code": "91J",
-            "title": "Quartermaster and Chemical Equipment Repairer",
-            "type": "enlisted"
-        },
-        {
-            "code": "91L",
-            "title": "Construction Equipment Repairer",
-            "type": "enlisted"
-        },
-        {
-            "code": "91M",
-            "title": "Bradley Fighting Vehicle Maintainer",
-            "type": "enlisted"
-        },
-        {
-            "code": "91P",
-            "title": "Artillery Mechanic",
-            "type": "enlisted"
-        },
-        {
-            "code": "91S",
-            "title": "Stryker Systems Maintainer",
-            "type": "enlisted"
-        },
-        {
-            "code": "92A",
-            "title": "Automated Logistical Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "92F",
-            "title": "Petroleum Supply Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "92G",
-            "title": "Culinary Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "92L",
-            "title": "Petroleum Laboratory Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "92M",
-            "title": "Mortuary Affairs Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "92R",
-            "title": "Parachute Rigger",
-            "type": "enlisted"
-        },
-        {
-            "code": "92S",
-            "title": "Shower and Laundry Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "92W",
-            "title": "Water Treatment Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "92Y",
-            "title": "Unit Supply Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "131A",
-            "title": "Field Artillery Targeting Technician",
-            "type": "warrant"
-        },
-        {
-            "code": "140A",
-            "title": "Command and Control Systems Integrator",
-            "type": "warrant"
-        },
-        {
-            "code": "150A",
-            "title": "Air Traffic and Airspace Management Technician",
-            "type": "warrant"
-        },
-        {
-            "code": "150U",
-            "title": "Unmanned Aircraft Systems Operations Technician",
-            "type": "warrant"
-        },
-        {
-            "code": "153A",
-            "title": "Rotary Wing Aviator",
-            "type": "warrant"
-        },
-        {
-            "code": "153M",
-            "title": "Rotary Wing Aviator (MH-47)",
-            "type": "warrant"
-        },
-        {
-            "code": "155A",
-            "title": "Fixed Wing Aviator",
-            "type": "warrant"
-        },
-        {
-            "code": "170A",
-            "title": "Cyber Operations Technician",
-            "type": "warrant"
-        },
-        {
-            "code": "255A",
-            "title": "Information Services Technician",
-            "type": "warrant"
-        },
-        {
-            "code": "255N",
-            "title": "Network Management Technician",
-            "type": "warrant"
-        },
-        {
-            "code": "255Z",
-            "title": "Senior Network Operations Technician",
-            "type": "warrant"
-        },
-        {
-            "code": "270A",
-            "title": "Legal Administrator",
-            "type": "warrant"
-        },
-        {
-            "code": "350F",
-            "title": "All Source Intelligence Technician",
-            "type": "warrant"
-        },
-        {
-            "code": "350G",
-            "title": "Imagery Intelligence Technician",
-            "type": "warrant"
-        },
-        {
-            "code": "351L",
-            "title": "Counterintelligence Technician",
-            "type": "warrant"
-        },
-        {
-            "code": "352N",
-            "title": "Signal Intelligence Analysis Technician",
-            "type": "warrant"
-        },
-        {
-            "code": "353T",
-            "title": "IEW Equipment Technician",
-            "type": "warrant"
-        },
-        {
-            "code": "890A",
-            "title": "Ammunition Warrant Officer",
-            "type": "warrant"
-        },
-        {
-            "code": "913A",
-            "title": "Armament Systems Maintenance Warrant Officer",
-            "type": "warrant"
-        },
-        {
-            "code": "915A",
-            "title": "Automotive Maintenance Warrant Officer",
-            "type": "warrant"
-        },
-        {
-            "code": "919A",
-            "title": "Engineer Equipment Maintenance Warrant Officer",
-            "type": "warrant"
-        },
-        {
-            "code": "920A",
-            "title": "Property Accounting Technician",
-            "type": "warrant"
-        },
-        {
-            "code": "920B",
-            "title": "Supply Systems Technician",
-            "type": "warrant"
-        },
-        {
-            "code": "948B",
-            "title": "Electronic Systems Maintenance Warrant Officer",
-            "type": "warrant"
-        },
-        {
-            "code": "948D",
-            "title": "Electronic Missile Systems Maintenance Warrant Officer",
-            "type": "warrant"
-        },
-        {
-            "code": "11A",
-            "title": "Infantry Officer",
-            "type": "officer"
-        },
-        {
-            "code": "12A",
-            "title": "Engineer Officer",
-            "type": "officer"
-        },
-        {
-            "code": "13A",
-            "title": "Field Artillery Officer",
-            "type": "officer"
-        },
-        {
-            "code": "14A",
-            "title": "Air Defense Artillery Officer",
-            "type": "officer"
-        },
-        {
-            "code": "15A2",
-            "title": "Aviation General Officer",
-            "type": "officer"
-        },
-        {
-            "code": "17A",
-            "title": "Cyber Operations Officer",
-            "type": "officer"
-        },
-        {
-            "code": "18A2",
-            "title": "Special Forces Officer",
-            "type": "officer"
-        },
-        {
-            "code": "19A",
-            "title": "Armor Officer",
-            "type": "officer"
-        },
-        {
-            "code": "25A2",
-            "title": "Signal Officer",
-            "type": "officer"
-        },
-        {
-            "code": "26A",
-            "title": "Network Systems Engineering",
-            "type": "officer"
-        },
-        {
-            "code": "26B",
-            "title": "Information Systems Management",
-            "type": "officer"
-        },
-        {
-            "code": "27A",
-            "title": "Judge Advocate",
-            "type": "officer"
-        },
-        {
-            "code": "30A",
-            "title": "Information Operations Officer",
-            "type": "officer"
-        },
-        {
-            "code": "31A2",
-            "title": "Military Police Officer",
-            "type": "officer"
-        },
-        {
-            "code": "35A2",
-            "title": "Military Intelligence Officer",
-            "type": "officer"
-        },
-        {
-            "code": "36A2",
-            "title": "Financial Management Officer",
-            "type": "officer"
-        },
-        {
-            "code": "38A2",
-            "title": "Civil Affairs Officer",
-            "type": "officer"
-        },
-        {
-            "code": "42B2",
-            "title": "Human Resources Officer",
-            "type": "officer"
-        },
-        {
-            "code": "46A2",
-            "title": "Public Affairs Officer",
-            "type": "officer"
-        },
-        {
-            "code": "56A",
-            "title": "Chaplain",
-            "type": "officer"
-        },
-        {
-            "code": "60A",
-            "title": "Operational Medicine",
-            "type": "officer"
-        },
-        {
-            "code": "61A",
-            "title": "Medical Specialist Officer",
-            "type": "officer"
-        },
-        {
-            "code": "64A",
-            "title": "Veterinary Officer",
-            "type": "officer"
-        },
-        {
-            "code": "65A",
-            "title": "Occupational Therapy Officer",
-            "type": "officer"
-        },
-        {
-            "code": "66H",
-            "title": "Psychiatric Nurse",
-            "type": "officer"
-        },
-        {
-            "code": "67J",
-            "title": "Aeromedical Evacuation Officer",
-            "type": "officer"
-        },
-        {
-            "code": "70A",
-            "title": "Health Services Administration",
-            "type": "officer"
-        },
-        {
-            "code": "72A",
-            "title": "Telecommunications Systems Engineer",
-            "type": "officer"
-        },
-        {
-            "code": "74A2",
-            "title": "Chemical Officer",
-            "type": "officer"
-        },
-        {
-            "code": "88A2",
-            "title": "Transportation Officer",
-            "type": "officer"
-        },
-        {
-            "code": "89E",
-            "title": "Explosive Ordnance Disposal Officer",
-            "type": "officer"
-        },
-        {
-            "code": "91A2",
-            "title": "Maintenance Officer",
-            "type": "officer"
-        },
-        {
-            "code": "92A2",
-            "title": "Quartermaster Officer",
-            "type": "officer"
-        },
-        {
-            "code": "120A",
-            "title": "Army Warrant Officer Specialty 120A",
-            "type": "warrant"
-        },
-        {
-            "code": "125D",
-            "title": "Army Warrant Officer Specialty 125D",
-            "type": "warrant"
-        },
-        {
-            "code": "140K",
-            "title": "Army Warrant Officer Specialty 140K",
-            "type": "warrant"
-        },
-        {
-            "code": "140L",
-            "title": "Army Warrant Officer Specialty 140L",
-            "type": "warrant"
-        },
-        {
-            "code": "151A",
-            "title": "Army Warrant Officer Specialty 151A",
-            "type": "warrant"
-        },
-        {
-            "code": "152C",
-            "title": "Army Warrant Officer Specialty 152C",
-            "type": "warrant"
-        },
-        {
-            "code": "152D",
-            "title": "Army Warrant Officer Specialty 152D",
-            "type": "warrant"
-        },
-        {
-            "code": "152F",
-            "title": "Army Warrant Officer Specialty 152F",
-            "type": "warrant"
-        },
-        {
-            "code": "152G",
-            "title": "Army Warrant Officer Specialty 152G",
-            "type": "warrant"
-        },
-        {
-            "code": "152H",
-            "title": "Army Warrant Officer Specialty 152H",
-            "type": "warrant"
-        },
-        {
-            "code": "154C",
-            "title": "Army Warrant Officer Specialty 154C",
-            "type": "warrant"
-        },
-        {
-            "code": "170B",
-            "title": "Army Warrant Officer Specialty 170B",
-            "type": "warrant"
-        },
-        {
-            "code": "255S",
-            "title": "Army Warrant Officer Specialty 255S",
-            "type": "warrant"
-        },
-        {
-            "code": "351M",
-            "title": "Army Warrant Officer Specialty 351M",
-            "type": "warrant"
-        },
-        {
-            "code": "352S",
-            "title": "Army Warrant Officer Specialty 352S",
-            "type": "warrant"
-        },
-        {
-            "code": "914A",
-            "title": "Army Warrant Officer Specialty 914A",
-            "type": "warrant"
-        },
-        {
-            "code": "921A",
-            "title": "Aerial Delivery & Materiel Officer",
-            "type": "warrant"
-        },
-        {
-            "code": "922A",
-            "title": "Army Warrant Officer Specialty 922A",
-            "type": "warrant"
-        },
-        {
-            "code": "948E",
-            "title": "Army Warrant Officer Specialty 948E",
-            "type": "warrant"
-        }
-    ],
-    "branch": "Army"
+  "mos": [
+    {
+      "code": "11B",
+      "title": "Infantryman",
+      "type": "enlisted"
+    },
+    {
+      "code": "11C",
+      "title": "Indirect Fire Infantryman",
+      "type": "enlisted"
+    },
+    {
+      "code": "12B",
+      "title": "Combat Engineer",
+      "type": "enlisted"
+    },
+    {
+      "code": "12C",
+      "title": "Bridge Crewmember",
+      "type": "enlisted"
+    },
+    {
+      "code": "12D",
+      "title": "Diver",
+      "type": "enlisted"
+    },
+    {
+      "code": "12K",
+      "title": "Plumber",
+      "type": "enlisted"
+    },
+    {
+      "code": "12M",
+      "title": "Firefighter",
+      "type": "enlisted"
+    },
+    {
+      "code": "12N",
+      "title": "Horizontal Construction Engineer",
+      "type": "enlisted"
+    },
+    {
+      "code": "12P",
+      "title": "Prime Power Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "12Q",
+      "title": "Power Line Distribution Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "12R",
+      "title": "Interior Electrician",
+      "type": "enlisted"
+    },
+    {
+      "code": "12T",
+      "title": "Technical Engineer",
+      "type": "enlisted"
+    },
+    {
+      "code": "12V",
+      "title": "Concrete and Asphalt Operator",
+      "type": "enlisted"
+    },
+    {
+      "code": "12W",
+      "title": "Carpentry and Masonry Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "12Y",
+      "title": "Geospatial Engineer",
+      "type": "enlisted"
+    },
+    {
+      "code": "13B",
+      "title": "Cannon Crewmember",
+      "type": "enlisted"
+    },
+    {
+      "code": "13F",
+      "title": "Fire Support Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "13J",
+      "title": "Fire Control Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "13M",
+      "title": "MLRS Crewmember",
+      "type": "enlisted"
+    },
+    {
+      "code": "13R",
+      "title": "Field Artillery Radar Operator",
+      "type": "enlisted"
+    },
+    {
+      "code": "13Z",
+      "title": "Field Artillery Senior Sergeant",
+      "type": "enlisted"
+    },
+    {
+      "code": "14E",
+      "title": "Patriot Fire Control Operator",
+      "type": "enlisted"
+    },
+    {
+      "code": "14G",
+      "title": "Air Defense Battle Management",
+      "type": "enlisted"
+    },
+    {
+      "code": "14H",
+      "title": "Air Defense Enhanced Operator",
+      "type": "enlisted"
+    },
+    {
+      "code": "14P",
+      "title": "Air and Missile Defense Crewmember",
+      "type": "enlisted"
+    },
+    {
+      "code": "14S",
+      "title": "Avenger Crewmember",
+      "type": "enlisted"
+    },
+    {
+      "code": "15B",
+      "title": "Aircraft Powerplant Repairer",
+      "type": "enlisted"
+    },
+    {
+      "code": "15D",
+      "title": "Aircraft Powertrain Repairer",
+      "type": "enlisted"
+    },
+    {
+      "code": "15F",
+      "title": "Aircraft Electrician",
+      "type": "enlisted"
+    },
+    {
+      "code": "15G",
+      "title": "Aircraft Structural Repairer",
+      "type": "enlisted"
+    },
+    {
+      "code": "15H",
+      "title": "Aircraft Pneudraulics Repairer",
+      "type": "enlisted"
+    },
+    {
+      "code": "15N",
+      "title": "Avionic Mechanic",
+      "type": "enlisted"
+    },
+    {
+      "code": "15P",
+      "title": "Aviation Operations Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "15Q",
+      "title": "Air Traffic Control Operator",
+      "type": "enlisted"
+    },
+    {
+      "code": "15T",
+      "title": "UH-60 Repairer",
+      "type": "enlisted"
+    },
+    {
+      "code": "15U",
+      "title": "CH-47 Repairer",
+      "type": "enlisted"
+    },
+    {
+      "code": "15Y",
+      "title": "AH-64 Repairer",
+      "type": "enlisted"
+    },
+    {
+      "code": "17C",
+      "title": "Cyber Operations Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "17E",
+      "title": "Electronic Warfare Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "18B",
+      "title": "Special Forces Weapons Sergeant",
+      "type": "enlisted"
+    },
+    {
+      "code": "18C",
+      "title": "Special Forces Engineer Sergeant",
+      "type": "enlisted"
+    },
+    {
+      "code": "18D",
+      "title": "Special Forces Medical Sergeant",
+      "type": "enlisted"
+    },
+    {
+      "code": "18E",
+      "title": "Special Forces Communications Sergeant",
+      "type": "enlisted"
+    },
+    {
+      "code": "18F",
+      "title": "Special Forces Intelligence Sergeant",
+      "type": "enlisted"
+    },
+    {
+      "code": "18Z",
+      "title": "Special Forces Senior Sergeant",
+      "type": "enlisted"
+    },
+    {
+      "code": "19D",
+      "title": "Cavalry Scout",
+      "type": "enlisted"
+    },
+    {
+      "code": "19K",
+      "title": "M1 Armor Crewman",
+      "type": "enlisted"
+    },
+    {
+      "code": "25B",
+      "title": "Information Technology Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "25C",
+      "title": "Radio Operator Maintainer",
+      "type": "enlisted"
+    },
+    {
+      "code": "25L",
+      "title": "Cable Systems Installer",
+      "type": "enlisted"
+    },
+    {
+      "code": "25N",
+      "title": "Nodal Network Systems Operator",
+      "type": "enlisted"
+    },
+    {
+      "code": "25Q",
+      "title": "Multichannel Transmission Operator",
+      "type": "enlisted"
+    },
+    {
+      "code": "25S",
+      "title": "Satellite Communications Operator",
+      "type": "enlisted"
+    },
+    {
+      "code": "25U",
+      "title": "Signal Support Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "25V",
+      "title": "Combat Documentation Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "27D",
+      "title": "Paralegal Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "31B",
+      "title": "Military Police",
+      "type": "enlisted"
+    },
+    {
+      "code": "31D",
+      "title": "CID Special Agent",
+      "type": "enlisted"
+    },
+    {
+      "code": "35F",
+      "title": "Intelligence Analyst",
+      "type": "enlisted"
+    },
+    {
+      "code": "35G",
+      "title": "Geospatial Intelligence Analyst",
+      "type": "enlisted"
+    },
+    {
+      "code": "35L",
+      "title": "Counterintelligence Agent",
+      "type": "enlisted"
+    },
+    {
+      "code": "35M",
+      "title": "Human Intelligence Collector",
+      "type": "enlisted"
+    },
+    {
+      "code": "35N",
+      "title": "Signals Intelligence Analyst",
+      "type": "enlisted"
+    },
+    {
+      "code": "35P",
+      "title": "Cryptologic Linguist",
+      "type": "enlisted"
+    },
+    {
+      "code": "35S",
+      "title": "Signals Collector Analyst",
+      "type": "enlisted"
+    },
+    {
+      "code": "36B",
+      "title": "Financial Management Technician",
+      "type": "enlisted"
+    },
+    {
+      "code": "37F",
+      "title": "Psychological Operations Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "38B",
+      "title": "Civil Affairs Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "42A",
+      "title": "Human Resources Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "42R",
+      "title": "Army Band",
+      "type": "enlisted"
+    },
+    {
+      "code": "42S",
+      "title": "Special Band Musician",
+      "type": "enlisted"
+    },
+    {
+      "code": "44E",
+      "title": "Machinist",
+      "type": "enlisted"
+    },
+    {
+      "code": "44H",
+      "title": "Metal Worker",
+      "type": "enlisted"
+    },
+    {
+      "code": "45B",
+      "title": "Small Arms Repairer",
+      "type": "enlisted"
+    },
+    {
+      "code": "45G",
+      "title": "Fire Control Repairer",
+      "type": "enlisted"
+    },
+    {
+      "code": "46S",
+      "title": "Public Affairs Mass Communications",
+      "type": "enlisted"
+    },
+    {
+      "code": "51C",
+      "title": "Contracting NCO",
+      "type": "enlisted"
+    },
+    {
+      "code": "56M",
+      "title": "Religious Affairs Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "68A",
+      "title": "Biomedical Equipment Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "68C",
+      "title": "Practical Nursing Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "68D",
+      "title": "Operating Room Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "68E",
+      "title": "Dental Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "68F",
+      "title": "Physical Therapy Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "68G",
+      "title": "Patient Administration Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "68H",
+      "title": "Optical Laboratory Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "68J",
+      "title": "Medical Logistics Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "68K",
+      "title": "Medical Laboratory Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "68M",
+      "title": "Nutrition Care Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "68N",
+      "title": "Cardiovascular Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "68P",
+      "title": "Radiology Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "68Q",
+      "title": "Pharmacy Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "68R",
+      "title": "Veterinary Food Inspection Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "68S",
+      "title": "Preventive Medicine Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "68T",
+      "title": "Animal Care Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "68U",
+      "title": "ENT Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "68V",
+      "title": "Respiratory Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "68W",
+      "title": "Combat Medic Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "68X",
+      "title": "Behavioral Health Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "68Y",
+      "title": "Eye Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "74D",
+      "title": "CBRN Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "79R",
+      "title": "Recruiter",
+      "type": "enlisted"
+    },
+    {
+      "code": "79S",
+      "title": "Career Counselor",
+      "type": "enlisted"
+    },
+    {
+      "code": "88H",
+      "title": "Cargo Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "88K",
+      "title": "Watercraft Operator",
+      "type": "enlisted"
+    },
+    {
+      "code": "88L",
+      "title": "Watercraft Engineer",
+      "type": "enlisted"
+    },
+    {
+      "code": "88M",
+      "title": "Motor Transport Operator",
+      "type": "enlisted"
+    },
+    {
+      "code": "88N",
+      "title": "Transportation Management Coordinator",
+      "type": "enlisted"
+    },
+    {
+      "code": "88P",
+      "title": "Railway Equipment Repairer",
+      "type": "enlisted"
+    },
+    {
+      "code": "88T",
+      "title": "Railway Section Repairer",
+      "type": "enlisted"
+    },
+    {
+      "code": "89A",
+      "title": "Ammunition Stock Control",
+      "type": "enlisted"
+    },
+    {
+      "code": "89B",
+      "title": "Ammunition Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "91B",
+      "title": "Wheeled Vehicle Mechanic",
+      "type": "enlisted"
+    },
+    {
+      "code": "91C",
+      "title": "Utilities Equipment Repairer",
+      "type": "enlisted"
+    },
+    {
+      "code": "91D",
+      "title": "Power Generation Equipment Repairer",
+      "type": "enlisted"
+    },
+    {
+      "code": "91E",
+      "title": "Allied Trade Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "91F",
+      "title": "Small Arms Repairer",
+      "type": "enlisted"
+    },
+    {
+      "code": "91G",
+      "title": "Fire Control Repairer",
+      "type": "enlisted"
+    },
+    {
+      "code": "91H",
+      "title": "Track Vehicle Repairer",
+      "type": "enlisted"
+    },
+    {
+      "code": "91J",
+      "title": "Quartermaster and Chemical Equipment Repairer",
+      "type": "enlisted"
+    },
+    {
+      "code": "91L",
+      "title": "Construction Equipment Repairer",
+      "type": "enlisted"
+    },
+    {
+      "code": "91M",
+      "title": "Bradley Fighting Vehicle Maintainer",
+      "type": "enlisted"
+    },
+    {
+      "code": "91P",
+      "title": "Artillery Mechanic",
+      "type": "enlisted"
+    },
+    {
+      "code": "91S",
+      "title": "Stryker Systems Maintainer",
+      "type": "enlisted"
+    },
+    {
+      "code": "92A",
+      "title": "Automated Logistical Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "92F",
+      "title": "Petroleum Supply Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "92G",
+      "title": "Culinary Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "92L",
+      "title": "Petroleum Laboratory Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "92M",
+      "title": "Mortuary Affairs Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "92R",
+      "title": "Parachute Rigger",
+      "type": "enlisted"
+    },
+    {
+      "code": "92S",
+      "title": "Shower and Laundry Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "92W",
+      "title": "Water Treatment Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "92Y",
+      "title": "Unit Supply Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "131A",
+      "title": "Field Artillery Technician",
+      "type": "warrant",
+      "description": "Army warrant field artillery technical specialty.",
+      "branch": "Army",
+      "feederMOS": "13-series",
+      "notes": "Army Warrant Officer MOS"
+    },
+    {
+      "code": "140A",
+      "title": "Command and Control Systems Technician",
+      "type": "warrant",
+      "description": "Army warrant command and control systems technical specialty.",
+      "branch": "Army",
+      "feederMOS": "14-series",
+      "notes": "Army Warrant Officer MOS"
+    },
+    {
+      "code": "150A",
+      "title": "Aviation Maintenance Technician",
+      "type": "warrant",
+      "description": "Army warrant aviation maintenance technical specialty.",
+      "branch": "Army",
+      "feederMOS": "15-series",
+      "notes": "Army Warrant Officer MOS"
+    },
+    {
+      "code": "150U",
+      "title": "Unmanned Aircraft Systems Operations Technician",
+      "type": "warrant",
+      "description": "Army warrant UAS operations technical specialty.",
+      "branch": "Army",
+      "feederMOS": "15W",
+      "notes": "Army Warrant Officer MOS"
+    },
+    {
+      "code": "153A",
+      "title": "Rotary Wing Aviator",
+      "type": "warrant",
+      "description": "Army warrant rotary-wing aviation specialty.",
+      "branch": "Army",
+      "feederMOS": null,
+      "notes": "Army Warrant Officer MOS"
+    },
+    {
+      "code": "153M",
+      "title": "Rotary Wing Aviator (MH-47)",
+      "type": "warrant"
+    },
+    {
+      "code": "155A",
+      "title": "Fixed Wing Aviator",
+      "type": "warrant"
+    },
+    {
+      "code": "170A",
+      "title": "Cyber Operations Technician",
+      "type": "warrant",
+      "description": "Army warrant cyber operations technical specialty.",
+      "branch": "Army",
+      "feederMOS": "17C",
+      "notes": "Army Warrant Officer MOS"
+    },
+    {
+      "code": "255A",
+      "title": "Information Services Technician",
+      "type": "warrant",
+      "description": "Army warrant information services technical specialty.",
+      "branch": "Army",
+      "feederMOS": "25-series",
+      "notes": "Army Warrant Officer MOS"
+    },
+    {
+      "code": "255N",
+      "title": "Network Management Technician",
+      "type": "warrant",
+      "description": "Army warrant network management technical specialty.",
+      "branch": "Army",
+      "feederMOS": "25-series",
+      "notes": "Army Warrant Officer MOS"
+    },
+    {
+      "code": "255Z",
+      "title": "Senior Network Operations Technician",
+      "type": "warrant"
+    },
+    {
+      "code": "270A",
+      "title": "Legal Administrator",
+      "type": "warrant",
+      "description": "Army warrant legal administration specialty.",
+      "branch": "Army",
+      "feederMOS": "27D",
+      "notes": "Army Warrant Officer MOS"
+    },
+    {
+      "code": "350F",
+      "title": "All-Source Intelligence Technician",
+      "type": "warrant",
+      "description": "Army warrant all-source intelligence technical specialty.",
+      "branch": "Army",
+      "feederMOS": "35F",
+      "notes": "Army Warrant Officer MOS"
+    },
+    {
+      "code": "350G",
+      "title": "Imagery Intelligence Technician",
+      "type": "warrant",
+      "description": "Army warrant geospatial imagery intelligence specialty.",
+      "branch": "Army",
+      "feederMOS": "35G",
+      "notes": "Army Warrant Officer MOS"
+    },
+    {
+      "code": "351L",
+      "title": "Counterintelligence Technician",
+      "type": "warrant",
+      "description": "Army warrant counterintelligence technical specialty.",
+      "branch": "Army",
+      "feederMOS": "35L",
+      "notes": "Army Warrant Officer MOS"
+    },
+    {
+      "code": "352N",
+      "title": "Signals Intelligence Analyst Technician",
+      "type": "warrant",
+      "description": "Army warrant SIGINT analysis technical specialty.",
+      "branch": "Army",
+      "feederMOS": "35N",
+      "notes": "Army Warrant Officer MOS"
+    },
+    {
+      "code": "353T",
+      "title": "IEW Equipment Technician",
+      "type": "warrant"
+    },
+    {
+      "code": "890A",
+      "title": "Ammunition Warrant Officer",
+      "type": "warrant"
+    },
+    {
+      "code": "913A",
+      "title": "Armament Systems Maintenance Warrant Officer",
+      "type": "warrant"
+    },
+    {
+      "code": "915A",
+      "title": "Automotive Maintenance Warrant Officer",
+      "type": "warrant"
+    },
+    {
+      "code": "919A",
+      "title": "Engineer Equipment Maintenance Warrant Officer",
+      "type": "warrant"
+    },
+    {
+      "code": "920A",
+      "title": "Property Accounting Technician",
+      "type": "warrant"
+    },
+    {
+      "code": "920B",
+      "title": "Supply Systems Technician",
+      "type": "warrant"
+    },
+    {
+      "code": "948B",
+      "title": "Electronic Systems Maintenance Warrant Officer",
+      "type": "warrant"
+    },
+    {
+      "code": "948D",
+      "title": "Electronic Missile Systems Maintenance Warrant Officer",
+      "type": "warrant"
+    },
+    {
+      "code": "11A",
+      "title": "Infantry Officer",
+      "type": "officer"
+    },
+    {
+      "code": "12A",
+      "title": "Engineer Officer",
+      "type": "officer"
+    },
+    {
+      "code": "13A",
+      "title": "Field Artillery Officer",
+      "type": "officer"
+    },
+    {
+      "code": "14A",
+      "title": "Air Defense Artillery Officer",
+      "type": "officer"
+    },
+    {
+      "code": "15A2",
+      "title": "Aviation General Officer",
+      "type": "officer"
+    },
+    {
+      "code": "17A",
+      "title": "Cyber Operations Officer",
+      "type": "officer"
+    },
+    {
+      "code": "18A2",
+      "title": "Special Forces Officer",
+      "type": "officer"
+    },
+    {
+      "code": "19A",
+      "title": "Armor Officer",
+      "type": "officer"
+    },
+    {
+      "code": "25A2",
+      "title": "Signal Officer",
+      "type": "officer"
+    },
+    {
+      "code": "26A",
+      "title": "Network Systems Engineering",
+      "type": "officer"
+    },
+    {
+      "code": "26B",
+      "title": "Information Systems Management",
+      "type": "officer"
+    },
+    {
+      "code": "27A",
+      "title": "Judge Advocate",
+      "type": "officer"
+    },
+    {
+      "code": "30A",
+      "title": "Information Operations Officer",
+      "type": "officer"
+    },
+    {
+      "code": "31A2",
+      "title": "Military Police Officer",
+      "type": "officer"
+    },
+    {
+      "code": "35A2",
+      "title": "Military Intelligence Officer",
+      "type": "officer"
+    },
+    {
+      "code": "36A2",
+      "title": "Financial Management Officer",
+      "type": "officer"
+    },
+    {
+      "code": "38A2",
+      "title": "Civil Affairs Officer",
+      "type": "officer"
+    },
+    {
+      "code": "42B2",
+      "title": "Human Resources Officer",
+      "type": "officer"
+    },
+    {
+      "code": "46A2",
+      "title": "Public Affairs Officer",
+      "type": "officer"
+    },
+    {
+      "code": "56A",
+      "title": "Chaplain",
+      "type": "officer"
+    },
+    {
+      "code": "60A",
+      "title": "Operational Medicine",
+      "type": "officer"
+    },
+    {
+      "code": "61A",
+      "title": "Medical Specialist Officer",
+      "type": "officer"
+    },
+    {
+      "code": "64A",
+      "title": "Veterinary Officer",
+      "type": "officer"
+    },
+    {
+      "code": "65A",
+      "title": "Occupational Therapy Officer",
+      "type": "officer"
+    },
+    {
+      "code": "66H",
+      "title": "Psychiatric Nurse",
+      "type": "officer"
+    },
+    {
+      "code": "67J",
+      "title": "Aeromedical Evacuation Officer",
+      "type": "officer"
+    },
+    {
+      "code": "70A",
+      "title": "Health Services Administration",
+      "type": "officer"
+    },
+    {
+      "code": "72A",
+      "title": "Telecommunications Systems Engineer",
+      "type": "officer"
+    },
+    {
+      "code": "74A2",
+      "title": "Chemical Officer",
+      "type": "officer"
+    },
+    {
+      "code": "88A2",
+      "title": "Transportation Officer",
+      "type": "officer"
+    },
+    {
+      "code": "89E",
+      "title": "Explosive Ordnance Disposal Officer",
+      "type": "officer"
+    },
+    {
+      "code": "91A2",
+      "title": "Maintenance Officer",
+      "type": "officer"
+    },
+    {
+      "code": "92A2",
+      "title": "Quartermaster Officer",
+      "type": "officer"
+    },
+    {
+      "code": "120A",
+      "title": "Construction Engineering Technician",
+      "type": "warrant",
+      "description": "Army warrant construction engineering technical specialty.",
+      "branch": "Army",
+      "feederMOS": "12-series",
+      "notes": "Army Warrant Officer MOS"
+    },
+    {
+      "code": "125D",
+      "title": "Geospatial Engineering Technician",
+      "type": "warrant",
+      "description": "Army warrant geospatial engineering technical specialty.",
+      "branch": "Army",
+      "feederMOS": "12Y",
+      "notes": "Army Warrant Officer MOS"
+    },
+    {
+      "code": "140K",
+      "title": "Air and Missile Defense Tactician/Technician",
+      "type": "warrant",
+      "description": "Army warrant air and missile defense tactical-technical specialty.",
+      "branch": "Army",
+      "feederMOS": "14-series",
+      "notes": "Army Warrant Officer MOS"
+    },
+    {
+      "code": "140L",
+      "title": "Air and Missile Defense Systems Integrator",
+      "type": "warrant",
+      "description": "Army warrant integrated air and missile defense systems specialty.",
+      "branch": "Army",
+      "feederMOS": "14-series",
+      "notes": "Army Warrant Officer MOS"
+    },
+    {
+      "code": "151A",
+      "title": "Aviation Maintenance Technician (Aircraft)",
+      "type": "warrant",
+      "description": "Army warrant aircraft maintenance technical specialty.",
+      "branch": "Army",
+      "feederMOS": "15-series",
+      "notes": "Army Warrant Officer MOS"
+    },
+    {
+      "code": "152C",
+      "title": "OH-6 Pilot",
+      "type": "warrant",
+      "description": "Army warrant rotary-wing pilot specialty.",
+      "branch": "Army",
+      "feederMOS": null,
+      "notes": "Army Warrant Officer MOS"
+    },
+    {
+      "code": "152D",
+      "title": "AH-64D Pilot",
+      "type": "warrant",
+      "description": "Army warrant attack helicopter pilot specialty.",
+      "branch": "Army",
+      "feederMOS": null,
+      "notes": "Army Warrant Officer MOS"
+    },
+    {
+      "code": "152F",
+      "title": "AH-64E Pilot",
+      "type": "warrant",
+      "description": "Army warrant advanced attack helicopter pilot specialty.",
+      "branch": "Army",
+      "feederMOS": null,
+      "notes": "Army Warrant Officer MOS"
+    },
+    {
+      "code": "152G",
+      "title": "Army Warrant Officer Specialty 152G",
+      "type": "warrant"
+    },
+    {
+      "code": "152H",
+      "title": "Army Warrant Officer Specialty 152H",
+      "type": "warrant"
+    },
+    {
+      "code": "154C",
+      "title": "CH-47 Pilot",
+      "type": "warrant",
+      "description": "Army warrant heavy-lift helicopter pilot specialty.",
+      "branch": "Army",
+      "feederMOS": null,
+      "notes": "Army Warrant Officer MOS"
+    },
+    {
+      "code": "170B",
+      "title": "Army Warrant Officer Specialty 170B",
+      "type": "warrant"
+    },
+    {
+      "code": "255S",
+      "title": "Cyberspace Defense Technician",
+      "type": "warrant",
+      "description": "Army warrant cyberspace defense technical specialty.",
+      "branch": "Army",
+      "feederMOS": "17C/25D",
+      "notes": "Army Warrant Officer MOS"
+    },
+    {
+      "code": "351M",
+      "title": "Human Intelligence Technician",
+      "type": "warrant",
+      "description": "Army warrant HUMINT technical specialty.",
+      "branch": "Army",
+      "feederMOS": "35M",
+      "notes": "Army Warrant Officer MOS"
+    },
+    {
+      "code": "352S",
+      "title": "Signals Collector/Analyst Technician",
+      "type": "warrant",
+      "description": "Army warrant SIGINT collection and analysis specialty.",
+      "branch": "Army",
+      "feederMOS": "35S",
+      "notes": "Army Warrant Officer MOS"
+    },
+    {
+      "code": "914A",
+      "title": "Army Warrant Officer Specialty 914A",
+      "type": "warrant"
+    },
+    {
+      "code": "921A",
+      "title": "Aerial Delivery & Materiel Officer",
+      "type": "warrant"
+    },
+    {
+      "code": "922A",
+      "title": "Army Warrant Officer Specialty 922A",
+      "type": "warrant"
+    },
+    {
+      "code": "948E",
+      "title": "Army Warrant Officer Specialty 948E",
+      "type": "warrant"
+    },
+    {
+      "code": "152B",
+      "title": "OH-58D Scout Pilot",
+      "description": "Army warrant scout helicopter pilot specialty.",
+      "type": "warrant",
+      "branch": "Army",
+      "feederMOS": null,
+      "notes": "Army Warrant Officer MOS"
+    },
+    {
+      "code": "153D",
+      "title": "UH-60 Pilot",
+      "description": "Army warrant utility helicopter pilot specialty.",
+      "type": "warrant",
+      "branch": "Army",
+      "feederMOS": null,
+      "notes": "Army Warrant Officer MOS"
+    },
+    {
+      "code": "153E",
+      "title": "MH-60 Pilot",
+      "description": "Army warrant special mission helicopter pilot specialty.",
+      "type": "warrant",
+      "branch": "Army",
+      "feederMOS": null,
+      "notes": "Army Warrant Officer MOS"
+    },
+    {
+      "code": "153L",
+      "title": "UH-72 Pilot",
+      "description": "Army warrant light utility helicopter pilot specialty.",
+      "type": "warrant",
+      "branch": "Army",
+      "feederMOS": null,
+      "notes": "Army Warrant Officer MOS"
+    },
+    {
+      "code": "180A",
+      "title": "Special Forces Warrant Officer",
+      "description": "Army warrant special forces technical specialty.",
+      "type": "warrant",
+      "branch": "Army",
+      "feederMOS": "18-series",
+      "notes": "Army Warrant Officer MOS"
+    },
+    {
+      "code": "290A",
+      "title": "Electronic Warfare Technician",
+      "description": "Army warrant electronic warfare technical specialty.",
+      "type": "warrant",
+      "branch": "Army",
+      "feederMOS": "17E",
+      "notes": "Army Warrant Officer MOS"
+    },
+    {
+      "code": "420A",
+      "title": "Human Resources Technician",
+      "description": "Army warrant human resources technical specialty.",
+      "type": "warrant",
+      "branch": "Army",
+      "feederMOS": "42A",
+      "notes": "Army Warrant Officer MOS"
+    },
+    {
+      "code": "640A",
+      "title": "Marine Deck Officer",
+      "description": "Army warrant watercraft deck operations specialty.",
+      "type": "warrant",
+      "branch": "Army",
+      "feederMOS": "88K/88L",
+      "notes": "Army Warrant Officer MOS"
+    },
+    {
+      "code": "641A",
+      "title": "Marine Engineering Officer",
+      "description": "Army warrant watercraft engineering specialty.",
+      "type": "warrant",
+      "branch": "Army",
+      "feederMOS": "88L",
+      "notes": "Army Warrant Officer MOS"
+    },
+    {
+      "code": "880A",
+      "title": "Marine Operations Technician",
+      "description": "Army warrant marine operations technical specialty.",
+      "type": "warrant",
+      "branch": "Army",
+      "feederMOS": "88-series",
+      "notes": "Army Warrant Officer MOS"
+    }
+  ],
+  "branch": "Army"
 }

@@ -1,0 +1,1304 @@
+{
+  "1141": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "1161": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "1171": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "1302": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "USMC Officer specialty"
+  },
+  "1316": {
+    "exposureCategory": "Engineering / Construction / Utilities",
+    "exposureSubcategories": [
+      "Engineering / Construction / Utilities"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Marine Corps Warrant Officer MOS — warrant variant; enlisted MOS 1316 also exists"
+  },
+  "1341": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "1345": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "1361": {
+    "exposureCategory": "Engineering / Construction / Utilities",
+    "exposureSubcategories": [
+      "Engineering / Construction / Utilities"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Marine Corps Warrant Officer MOS"
+  },
+  "1802": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "USMC Officer specialty"
+  },
+  "1833": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "2111": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "2131": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "2141": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "2147": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "2311": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "2502": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "USMC Officer specialty"
+  },
+  "2621": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "2631": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "2805": {
+    "exposureCategory": "Electronics / Electrical / Avionics",
+    "exposureSubcategories": [
+      "Electronics / Electrical / Avionics"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Marine Corps Warrant Officer MOS"
+  },
+  "2831": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "3002": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "USMC Officer specialty"
+  },
+  "3043": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "3051": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "3102": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "USMC Officer specialty"
+  },
+  "3112": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "3381": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "3432": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "3502": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "USMC Officer specialty"
+  },
+  "3510": {
+    "exposureCategory": "Logistics / Supply / Transportation",
+    "exposureSubcategories": [
+      "Logistics / Supply / Transportation"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Marine Corps Warrant Officer MOS"
+  },
+  "3531": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "3537": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "4130": {
+    "exposureCategory": "Administrative / Personnel / Legal",
+    "exposureSubcategories": [
+      "Administrative / Personnel / Legal"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Marine Corps Warrant Officer MOS"
+  },
+  "4133": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "4402": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "USMC Officer specialty"
+  },
+  "4421": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "4591": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "4821": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "5803": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "USMC Officer specialty"
+  },
+  "5831": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "5832": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "5952": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "6002": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "USMC Officer specialty"
+  },
+  "6046": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "6112": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "6152": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "6174": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "6216": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "6256": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "6286": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "6316": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "6326": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "6531": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "7041": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "7202": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "USMC Officer specialty"
+  },
+  "7314": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "7315": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "USMC Officer specialty"
+  },
+  "8411": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "0311": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "0331": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "0341": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "0351": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "0352": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "0411": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "0451": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "0481": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "0621": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "0627": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "0631": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "0651": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "0811": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "0842": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "0844": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "0847": {
+    "exposureCategory": "General Military Operations",
+    "exposureSubcategories": [
+      "General Military Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "USMC Enlisted specialty"
+  },
+  "0102": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "USMC Officer specialty"
+  },
+  "0202": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "USMC Officer specialty"
+  },
+  "0302": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "USMC Officer specialty"
+  },
+  "0402": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "USMC Officer specialty"
+  },
+  "0602": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "USMC Officer specialty"
+  },
+  "0802": {
+    "exposureCategory": "Leadership / Staff",
+    "exposureSubcategories": [
+      "Leadership / Staff"
+    ],
+    "typicalHazards": [
+      "operational-stress"
+    ],
+    "operationalEnvironment": [
+      "staff",
+      "operational-planning"
+    ],
+    "notes": "USMC Officer specialty"
+  },
+  "0160": {
+    "exposureCategory": "Administrative / Personnel / Legal",
+    "exposureSubcategories": [
+      "Administrative / Personnel / Legal"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Marine Corps Warrant Officer MOS"
+  },
+  "0170": {
+    "exposureCategory": "Administrative / Personnel / Legal",
+    "exposureSubcategories": [
+      "Administrative / Personnel / Legal"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Marine Corps Warrant Officer MOS"
+  },
+  "0201": {
+    "exposureCategory": "Intelligence / Cyber / Communications / IT",
+    "exposureSubcategories": [
+      "Intelligence / Cyber / Communications / IT"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Marine Corps Warrant Officer MOS"
+  },
+  "0205": {
+    "exposureCategory": "Intelligence / Cyber / Communications / IT",
+    "exposureSubcategories": [
+      "Intelligence / Cyber / Communications / IT"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Marine Corps Warrant Officer MOS"
+  },
+  "0210": {
+    "exposureCategory": "Intelligence / Cyber / Communications / IT",
+    "exposureSubcategories": [
+      "Intelligence / Cyber / Communications / IT"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Marine Corps Warrant Officer MOS"
+  },
+  "0220": {
+    "exposureCategory": "Intelligence / Cyber / Communications / IT",
+    "exposureSubcategories": [
+      "Intelligence / Cyber / Communications / IT"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Marine Corps Warrant Officer MOS"
+  },
+  "0260": {
+    "exposureCategory": "Intelligence / Cyber / Communications / IT",
+    "exposureSubcategories": [
+      "Intelligence / Cyber / Communications / IT"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Marine Corps Warrant Officer MOS"
+  },
+  "0301": {
+    "exposureCategory": "Combat Arms / Infantry / Special Operations",
+    "exposureSubcategories": [
+      "Combat Arms / Infantry / Special Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Marine Corps Warrant Officer MOS"
+  },
+  "0306": {
+    "exposureCategory": "Combat Arms / Infantry / Special Operations",
+    "exposureSubcategories": [
+      "Combat Arms / Infantry / Special Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Marine Corps Warrant Officer MOS — Iconic USMC Gunner designation"
+  },
+  "0401": {
+    "exposureCategory": "Logistics / Supply / Transportation",
+    "exposureSubcategories": [
+      "Logistics / Supply / Transportation"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Marine Corps Warrant Officer MOS"
+  },
+  "0430": {
+    "exposureCategory": "Logistics / Supply / Transportation",
+    "exposureSubcategories": [
+      "Logistics / Supply / Transportation"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Marine Corps Warrant Officer MOS — legacy designation"
+  },
+  "0501": {
+    "exposureCategory": "Command / Staff / Operations",
+    "exposureSubcategories": [
+      "Command / Staff / Operations"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Marine Corps Warrant Officer MOS"
+  },
+  "0601": {
+    "exposureCategory": "Intelligence / Cyber / Communications / IT",
+    "exposureSubcategories": [
+      "Intelligence / Cyber / Communications / IT"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Marine Corps Warrant Officer MOS"
+  },
+  "0610": {
+    "exposureCategory": "Intelligence / Cyber / Communications / IT",
+    "exposureSubcategories": [
+      "Intelligence / Cyber / Communications / IT"
+    ],
+    "typicalHazards": [
+      "noise"
+    ],
+    "operationalEnvironment": [
+      "field",
+      "industrial"
+    ],
+    "notes": "Marine Corps Warrant Officer MOS"
+  }
+}

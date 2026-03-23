@@ -1,210 +1,378 @@
 {
-    "mos": [
-        {
-            "code": "AMT",
-            "title": "Avionics Maintenance Technician",
-            "type": "enlisted"
-        },
-        {
-            "code": "AET",
-            "title": "Aviation Electronics Technician",
-            "type": "enlisted"
-        },
-        {
-            "code": "AST",
-            "title": "Aviation Survival Technician",
-            "type": "enlisted"
-        },
-        {
-            "code": "BM",
-            "title": "Boatswains Mate",
-            "type": "enlisted"
-        },
-        {
-            "code": "DC",
-            "title": "Damage Controlman",
-            "type": "enlisted"
-        },
-        {
-            "code": "DV",
-            "title": "Diver",
-            "type": "enlisted"
-        },
-        {
-            "code": "EM",
-            "title": "Electricians Mate",
-            "type": "enlisted"
-        },
-        {
-            "code": "ET",
-            "title": "Electronics Technician",
-            "type": "enlisted"
-        },
-        {
-            "code": "FS",
-            "title": "Food Service Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "GM",
-            "title": "Gunners Mate",
-            "type": "enlisted"
-        },
-        {
-            "code": "HS",
-            "title": "Health Services Technician",
-            "type": "enlisted"
-        },
-        {
-            "code": "IS",
-            "title": "Intelligence Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "IT",
-            "title": "Information Systems Technician",
-            "type": "enlisted"
-        },
-        {
-            "code": "ME",
-            "title": "Maritime Enforcement Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "MK",
-            "title": "Machinery Technician",
-            "type": "enlisted"
-        },
-        {
-            "code": "MST",
-            "title": "Marine Science Technician",
-            "type": "enlisted"
-        },
-        {
-            "code": "MU",
-            "title": "Musician",
-            "type": "enlisted"
-        },
-        {
-            "code": "OS",
-            "title": "Operations Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "PA",
-            "title": "Public Affairs Specialist",
-            "type": "enlisted"
-        },
-        {
-            "code": "SK",
-            "title": "Storekeeper",
-            "type": "enlisted"
-        },
-        {
-            "code": "YN",
-            "title": "Yeoman",
-            "type": "enlisted"
-        },
-        {
-            "code": "BOSN",
-            "title": "Boatswain Warrant Officer",
-            "type": "warrant"
-        },
-        {
-            "code": "WEPS",
-            "title": "Weapons Warrant Officer",
-            "type": "warrant"
-        },
-        {
-            "code": "ELC",
-            "title": "Electronics Warrant Officer",
-            "type": "warrant"
-        },
-        {
-            "code": "MACH",
-            "title": "Machinery Warrant Officer",
-            "type": "warrant"
-        },
-        {
-            "code": "PERS",
-            "title": "Personnel Administration Warrant Officer",
-            "type": "warrant"
-        },
-        {
-            "code": "F&S",
-            "title": "Finance and Supply Warrant Officer",
-            "type": "warrant"
-        },
-        {
-            "code": "INV",
-            "title": "Investigator Warrant Officer",
-            "type": "warrant"
-        },
-        {
-            "code": "MLES",
-            "title": "Marine Safety Specialist Warrant Officer",
-            "type": "warrant"
-        },
-        {
-            "code": "MSSD",
-            "title": "Marine Safety Deck Warrant Officer",
-            "type": "warrant"
-        },
-        {
-            "code": "MSSE",
-            "title": "Marine Safety Engineering Warrant Officer",
-            "type": "warrant"
-        },
-        {
-            "code": "AVCG",
-            "title": "Aviation Commander",
-            "type": "officer"
-        },
-        {
-            "code": "CG-ENG",
-            "title": "Engineer Officer",
-            "type": "officer"
-        },
-        {
-            "code": "CG-OPS",
-            "title": "Operations Ashore",
-            "type": "officer"
-        },
-        {
-            "code": "CG-INT",
-            "title": "Coast Guard Intelligence Officer",
-            "type": "officer"
-        },
-        {
-            "code": "CG-LAW",
-            "title": "Maritime Law Enforcement Officer",
-            "type": "officer"
-        },
-        {
-            "code": "CG-NAV",
-            "title": "Navigation Officer",
-            "type": "officer"
-        },
-        {
-            "code": "CG-SUP",
-            "title": "Supply Officer",
-            "type": "officer"
-        },
-        {
-            "code": "CG-CIV",
-            "title": "Civil Engineering Officer",
-            "type": "officer"
-        },
-        {
-            "code": "CG-MED",
-            "title": "Health Services Officer",
-            "type": "officer"
-        },
-        {
-            "code": "CG-LEG",
-            "title": "Legal Officer",
-            "type": "officer"
-        }
-    ],
-    "branch": "Coast Guard"
+  "mos": [
+    {
+      "code": "AMT",
+      "title": "Avionics Maintenance Technician",
+      "type": "enlisted"
+    },
+    {
+      "code": "AET",
+      "title": "Aviation Electronics Technician",
+      "type": "enlisted"
+    },
+    {
+      "code": "AST",
+      "title": "Aviation Survival Technician",
+      "type": "enlisted"
+    },
+    {
+      "code": "BM",
+      "title": "Boatswains Mate",
+      "type": "enlisted"
+    },
+    {
+      "code": "DC",
+      "title": "Damage Controlman",
+      "type": "enlisted"
+    },
+    {
+      "code": "DV",
+      "title": "Diver",
+      "type": "enlisted"
+    },
+    {
+      "code": "EM",
+      "title": "Electricians Mate",
+      "type": "enlisted"
+    },
+    {
+      "code": "ET",
+      "title": "Electronics Technician",
+      "type": "enlisted"
+    },
+    {
+      "code": "FS",
+      "title": "Food Service Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "GM",
+      "title": "Gunners Mate",
+      "type": "enlisted"
+    },
+    {
+      "code": "HS",
+      "title": "Health Services Technician",
+      "type": "enlisted"
+    },
+    {
+      "code": "IS",
+      "title": "Intelligence Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "IT",
+      "title": "Information Systems Technician",
+      "type": "enlisted"
+    },
+    {
+      "code": "ME",
+      "title": "Maritime Enforcement Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "MK",
+      "title": "Machinery Technician",
+      "type": "enlisted"
+    },
+    {
+      "code": "MST",
+      "title": "Marine Science Technician",
+      "type": "enlisted"
+    },
+    {
+      "code": "MU",
+      "title": "Musician",
+      "type": "enlisted"
+    },
+    {
+      "code": "OS",
+      "title": "Operations Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "PA",
+      "title": "Public Affairs Specialist",
+      "type": "enlisted"
+    },
+    {
+      "code": "SK",
+      "title": "Storekeeper",
+      "type": "enlisted"
+    },
+    {
+      "code": "YN",
+      "title": "Yeoman",
+      "type": "enlisted"
+    },
+    {
+      "code": "BOSN",
+      "title": "Boatswain",
+      "type": "warrant",
+      "description": "Coast Guard afloat operations and deck seamanship technical warrant specialty.",
+      "rankCategory": "Warrant Officer",
+      "branch": "Coast Guard",
+      "feederRatings": [
+        "BM"
+      ],
+      "notes": "Coast Guard Warrant Officer Specialty"
+    },
+    {
+      "code": "WEPS",
+      "title": "Weapons Specialist",
+      "type": "warrant",
+      "description": "Coast Guard weapons systems and armament technical warrant specialty.",
+      "rankCategory": "Warrant Officer",
+      "branch": "Coast Guard",
+      "feederRatings": [
+        "GM"
+      ],
+      "notes": "Coast Guard Warrant Officer Specialty"
+    },
+    {
+      "code": "ELC",
+      "title": "Electronics Technician (Warrant)",
+      "type": "warrant",
+      "description": "Coast Guard electronics systems technical warrant specialty.",
+      "rankCategory": "Warrant Officer",
+      "branch": "Coast Guard",
+      "feederRatings": [
+        "ET"
+      ],
+      "notes": "Coast Guard Warrant Officer Specialty"
+    },
+    {
+      "code": "MACH",
+      "title": "Machinery Warrant Officer",
+      "type": "warrant"
+    },
+    {
+      "code": "PERS",
+      "title": "Personnel Administration",
+      "type": "warrant",
+      "description": "Coast Guard personnel administration and readiness warrant specialty.",
+      "rankCategory": "Warrant Officer",
+      "branch": "Coast Guard",
+      "feederRatings": [
+        "YN",
+        "PS"
+      ],
+      "notes": "Coast Guard Warrant Officer Specialty"
+    },
+    {
+      "code": "INV",
+      "title": "Investigations Officer",
+      "type": "warrant",
+      "description": "Coast Guard investigative and enforcement support warrant specialty.",
+      "rankCategory": "Warrant Officer",
+      "branch": "Coast Guard",
+      "feederRatings": [
+        "ME",
+        "IS"
+      ],
+      "notes": "Coast Guard Warrant Officer Specialty"
+    },
+    {
+      "code": "MLES",
+      "title": "Law Enforcement Specialist",
+      "type": "warrant",
+      "description": "Coast Guard maritime law enforcement operations and policy warrant specialty.",
+      "rankCategory": "Warrant Officer",
+      "branch": "Coast Guard",
+      "feederRatings": [
+        "ME"
+      ],
+      "notes": "Coast Guard Warrant Officer Specialty"
+    },
+    {
+      "code": "MSSD",
+      "title": "Maritime Security Specialist",
+      "type": "warrant",
+      "description": "Coast Guard maritime security and protection operations technical warrant specialty.",
+      "rankCategory": "Warrant Officer",
+      "branch": "Coast Guard",
+      "feederRatings": [
+        "ME"
+      ],
+      "notes": "Coast Guard Warrant Officer Specialty"
+    },
+    {
+      "code": "MSSE",
+      "title": "Marine Safety Specialist Engineering",
+      "type": "warrant",
+      "description": "Coast Guard marine safety engineering inspection and compliance warrant specialty.",
+      "rankCategory": "Warrant Officer",
+      "branch": "Coast Guard",
+      "feederRatings": [
+        "MST",
+        "MK"
+      ],
+      "notes": "Coast Guard Warrant Officer Specialty"
+    },
+    {
+      "code": "AVCG",
+      "title": "Aviation Commander",
+      "type": "officer"
+    },
+    {
+      "code": "CG-ENG",
+      "title": "Engineer Officer",
+      "type": "officer"
+    },
+    {
+      "code": "CG-OPS",
+      "title": "Operations Ashore",
+      "type": "officer"
+    },
+    {
+      "code": "CG-INT",
+      "title": "Coast Guard Intelligence Officer",
+      "type": "officer"
+    },
+    {
+      "code": "CG-LAW",
+      "title": "Maritime Law Enforcement Officer",
+      "type": "officer"
+    },
+    {
+      "code": "CG-NAV",
+      "title": "Navigation Officer",
+      "type": "officer"
+    },
+    {
+      "code": "CG-SUP",
+      "title": "Supply Officer",
+      "type": "officer"
+    },
+    {
+      "code": "CG-CIV",
+      "title": "Civil Engineering Officer",
+      "type": "officer"
+    },
+    {
+      "code": "CG-MED",
+      "title": "Health Services Officer",
+      "type": "officer"
+    },
+    {
+      "code": "CG-LEG",
+      "title": "Legal Officer",
+      "type": "officer"
+    },
+    {
+      "code": "MSSR",
+      "title": "Marine Safety Specialist Response",
+      "type": "warrant",
+      "description": "Coast Guard marine safety response and incident operations warrant specialty.",
+      "rankCategory": "Warrant Officer",
+      "branch": "Coast Guard",
+      "feederRatings": [
+        "MST"
+      ],
+      "notes": "Coast Guard Warrant Officer Specialty"
+    },
+    {
+      "code": "MSST",
+      "title": "Marine Safety Specialist Training",
+      "type": "warrant",
+      "description": "Coast Guard marine safety training and standards development warrant specialty.",
+      "rankCategory": "Warrant Officer",
+      "branch": "Coast Guard",
+      "feederRatings": [
+        "MST"
+      ],
+      "notes": "Coast Guard Warrant Officer Specialty"
+    },
+    {
+      "code": "MAT",
+      "title": "Materials Officer",
+      "type": "warrant",
+      "description": "Coast Guard materials management and supply sustainment warrant specialty.",
+      "rankCategory": "Warrant Officer",
+      "branch": "Coast Guard",
+      "feederRatings": [
+        "SK"
+      ],
+      "notes": "Coast Guard Warrant Officer Specialty"
+    },
+    {
+      "code": "MLEI",
+      "title": "Law Enforcement Intelligence",
+      "type": "warrant",
+      "description": "Coast Guard law enforcement intelligence integration warrant specialty.",
+      "rankCategory": "Warrant Officer",
+      "branch": "Coast Guard",
+      "feederRatings": [
+        "IS",
+        "ME"
+      ],
+      "notes": "Coast Guard Warrant Officer Specialty"
+    },
+    {
+      "code": "ENG",
+      "title": "Engineering Officer (Warrant)",
+      "type": "warrant",
+      "description": "Coast Guard engineering systems and propulsion management warrant specialty.",
+      "rankCategory": "Warrant Officer",
+      "branch": "Coast Guard",
+      "feederRatings": [
+        "MK",
+        "EM"
+      ],
+      "notes": "Coast Guard Warrant Officer Specialty"
+    },
+    {
+      "code": "NAV",
+      "title": "Navigation Systems Technician",
+      "type": "warrant",
+      "description": "Coast Guard navigation systems and bridge operations warrant specialty.",
+      "rankCategory": "Warrant Officer",
+      "branch": "Coast Guard",
+      "feederRatings": [
+        "OS",
+        "BM"
+      ],
+      "notes": "Coast Guard Warrant Officer Specialty"
+    },
+    {
+      "code": "AVN",
+      "title": "Aviation Engineering Officer (Warrant)",
+      "type": "warrant",
+      "description": "Coast Guard aviation engineering support and maintenance warrant specialty.",
+      "rankCategory": "Warrant Officer",
+      "branch": "Coast Guard",
+      "feederRatings": [
+        "AMT",
+        "AET"
+      ],
+      "notes": "Coast Guard Warrant Officer Specialty"
+    },
+    {
+      "code": "AVT",
+      "title": "Aviation Technician (Warrant)",
+      "type": "warrant",
+      "description": "Coast Guard aviation technical maintenance warrant specialty.",
+      "rankCategory": "Warrant Officer",
+      "branch": "Coast Guard",
+      "feederRatings": [
+        "AMT",
+        "AET",
+        "AST"
+      ],
+      "notes": "Coast Guard Warrant Officer Specialty"
+    },
+    {
+      "code": "FIN",
+      "title": "Finance & Supply",
+      "type": "warrant",
+      "description": "Coast Guard finance and supply management warrant specialty.",
+      "rankCategory": "Warrant Officer",
+      "branch": "Coast Guard",
+      "feederRatings": [
+        "SK"
+      ],
+      "notes": "Coast Guard Warrant Officer Specialty"
+    }
+  ],
+  "branch": "Coast Guard"
 }

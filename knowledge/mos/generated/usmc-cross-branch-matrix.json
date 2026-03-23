@@ -1,0 +1,696 @@
+{
+  "1141": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "1161": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "1171": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "1302": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "1316": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "1341": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "1345": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "1361": {
+    "Army": [
+      "120A"
+    ],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "1802": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "1833": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "2111": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "2131": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "2141": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "2147": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "2311": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "2502": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "2621": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "2631": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "2805": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "2831": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "3002": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "3043": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "3051": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "3102": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "3112": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "3381": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "3432": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "3502": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "3510": {
+    "Army": [
+      "882A"
+    ],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "3531": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "3537": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "4130": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "4133": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "4402": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "4421": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "4591": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "4821": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "5803": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "5831": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "5832": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "5952": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "6002": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "6046": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "6112": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "6152": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "6174": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "6216": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "6256": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "6286": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "6316": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "6326": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "6531": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "7041": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "7202": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "7314": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "7315": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "8411": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0311": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0331": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0341": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0351": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0352": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0411": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0451": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0481": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0621": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0627": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0631": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0651": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0811": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0842": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0844": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0847": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0102": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0202": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0302": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0402": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0602": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0802": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0160": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0170": {
+    "Army": [
+      "420A"
+    ],
+    "Navy": [
+      "163X"
+    ],
+    "AirForce": [
+      "38F"
+    ],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0201": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0205": {
+    "Army": [
+      "350F"
+    ],
+    "Navy": [
+      "1830"
+    ],
+    "AirForce": [
+      "14F"
+    ],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0210": {
+    "Army": [
+      "351M"
+    ],
+    "Navy": [
+      "1830"
+    ],
+    "AirForce": [
+      "14F"
+    ],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0220": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0260": {
+    "Army": [
+      "350G"
+    ],
+    "Navy": [],
+    "AirForce": [
+      "1N1"
+    ],
+    "SpaceForce": [
+      "1N1"
+    ],
+    "CoastGuard": []
+  },
+  "0301": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0306": {
+    "Army": [
+      "131A"
+    ],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0401": {
+    "Army": [
+      "920A",
+      "920B"
+    ],
+    "Navy": [
+      "310X"
+    ],
+    "AirForce": [
+      "21R"
+    ],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0430": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0501": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0601": {
+    "Army": [
+      "255A"
+    ],
+    "Navy": [
+      "161X"
+    ],
+    "AirForce": [
+      "33S"
+    ],
+    "SpaceForce": [],
+    "CoastGuard": []
+  },
+  "0610": {
+    "Army": [],
+    "Navy": [],
+    "AirForce": [],
+    "SpaceForce": [],
+    "CoastGuard": []
+  }
+}

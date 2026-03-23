@@ -1,0 +1,4267 @@
+{
+  "Army": {
+    "MOS": {
+      "11B": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "11C": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "12B": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "12C": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "12D": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "12K": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "12M": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "12N": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "12P": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "12Q": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "12R": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "12T": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "12V": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "12W": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "12Y": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "13B": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "13F": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "13J": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "13M": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "13R": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "13Z": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "14E": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "14G": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "14H": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "14P": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "14S": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "15B": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "15D": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "15F": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "15G": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "15H": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "15N": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "15P": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "15Q": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "15T": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "15U": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "15Y": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "17C": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "17E": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "18B": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "18C": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "18D": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "18E": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "18F": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "18Z": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "19D": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "19K": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "25B": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "25C": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "25L": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "25N": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "25Q": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "25S": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "25U": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "25V": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "27D": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "31B": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "31D": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "35F": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "35G": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "35L": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "35M": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "35N": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "35P": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "35S": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "36B": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "37F": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "38B": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "42A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "42R": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "42S": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "44E": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "44H": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "45B": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "45G": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "46S": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "51C": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "56M": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "68A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "68C": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "68D": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "68E": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "68F": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "68G": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "68H": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "68J": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "68K": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "68M": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "68N": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "68P": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "68Q": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "68R": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "68S": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "68T": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "68U": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "68V": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "68W": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "68X": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "68Y": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "74D": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "79R": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "79S": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "88H": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "88K": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "88L": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "88M": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "88N": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "88P": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "88T": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "89A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "89B": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "91B": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "91C": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "91D": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "91E": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "91F": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "91G": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "91H": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "91J": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "91L": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "91M": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "91P": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "91S": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "92A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "92F": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "92G": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "92L": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "92M": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "92R": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "92S": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "92W": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "92Y": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "131A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "140A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "150A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "150U": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "153A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "153M": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "155A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "170A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "255A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "255N": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "255Z": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "270A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "350F": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "350G": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "351L": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "352N": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "353T": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "890A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "913A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "915A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "919A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "920A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "920B": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "948B": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "948D": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "11A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "12A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "13A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "14A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "15A2": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "17A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "18A2": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "19A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "25A2": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "26A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "26B": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "27A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "30A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "31A2": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "35A2": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "36A2": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "38A2": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "42B2": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "46A2": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "56A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "60A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "61A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "64A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "65A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "66H": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "67J": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "70A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "72A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "74A2": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "88A2": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "89E": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "91A2": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "92A2": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "120A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "125D": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "140K": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "140L": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "151A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "152C": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "152D": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "152F": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "152G": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "152H": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "154C": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "170B": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "255S": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "351M": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "352S": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "914A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "921A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "922A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "948E": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "152B": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "153D": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "153E": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "153L": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "180A": {
+        "USMC": [
+          "0370"
+        ],
+        "Navy": [
+          "715X"
+        ],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "290A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "420A": {
+        "USMC": [
+          "0170"
+        ],
+        "Navy": [
+          "741X"
+        ],
+        "AirForce": [
+          "38F"
+        ],
+        "SpaceForce": [],
+        "CoastGuard": [
+          "PERS"
+        ]
+      },
+      "640A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "641A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "880A": {
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      }
+    }
+  },
+  "USMC": {
+    "MOS": {
+      "1141": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1161": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1171": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1302": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1316": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1341": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1345": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1361": {
+        "Army": [
+          "120A"
+        ],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1802": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1833": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "2111": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "2131": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "2141": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "2147": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "2311": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "2502": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "2621": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "2631": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "2805": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "2831": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "3002": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "3043": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "3051": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "3102": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "3112": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "3381": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "3432": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "3502": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "3510": {
+        "Army": [
+          "882A"
+        ],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "3531": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "3537": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "4130": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "4133": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "4402": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "4421": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "4591": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "4821": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "5803": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "5831": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "5832": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "5952": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "6002": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "6046": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "6112": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "6152": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "6174": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "6216": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "6256": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "6286": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "6316": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "6326": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "6531": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "7041": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "7202": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "7314": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "7315": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "8411": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0311": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0331": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0341": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0351": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0352": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0411": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0451": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0481": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0621": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0627": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0631": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0651": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0811": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0842": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0844": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0847": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0102": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0202": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0302": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0402": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0602": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0802": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0160": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0170": {
+        "Army": [
+          "420A"
+        ],
+        "Navy": [
+          "163X"
+        ],
+        "AirForce": [
+          "38F"
+        ],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0201": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0205": {
+        "Army": [
+          "350F"
+        ],
+        "Navy": [
+          "1830"
+        ],
+        "AirForce": [
+          "14F"
+        ],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0210": {
+        "Army": [
+          "351M"
+        ],
+        "Navy": [
+          "1830"
+        ],
+        "AirForce": [
+          "14F"
+        ],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0220": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0260": {
+        "Army": [
+          "350G"
+        ],
+        "Navy": [],
+        "AirForce": [
+          "1N1"
+        ],
+        "SpaceForce": [
+          "1N1"
+        ],
+        "CoastGuard": []
+      },
+      "0301": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0306": {
+        "Army": [
+          "131A"
+        ],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0401": {
+        "Army": [
+          "920A",
+          "920B"
+        ],
+        "Navy": [
+          "310X"
+        ],
+        "AirForce": [
+          "21R"
+        ],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0430": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0501": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0601": {
+        "Army": [
+          "255A"
+        ],
+        "Navy": [
+          "161X"
+        ],
+        "AirForce": [
+          "33S"
+        ],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "0610": {
+        "Army": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      }
+    }
+  },
+  "Navy": {
+    "MOS": {
+      "1110": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1120": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1130": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1140": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1310": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1320": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1510": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1610": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1710": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1810": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "2100": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "2200": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "2300": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "2500": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "2900": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "3100": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "4100": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "4200": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "4500": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "4600": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "AB": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "AC": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "AD": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "AE": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "AG": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "AO": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "AS": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "AT": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "AW": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "AZ": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "BM": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "CS": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "CTI": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "CTM": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "CTN": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "CTR": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "CTT": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "DC": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "EA": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "EM": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "EN": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "EO": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "ET": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "FC": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "GM": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "HM": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "HT": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "IC": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "IS": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "IT": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "LN": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "LS": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "MA": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "MC": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "MM": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "MN": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "MR": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "MT": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "MU": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "NC": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "ND": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "OS": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "PR": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "PS": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "QM": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "RP": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "SB": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "SH": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "SO": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "STG": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "STS": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "SW": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "TM": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "UT": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "YN": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "711X": {
+        "Army": [
+          "640A"
+        ],
+        "USMC": [
+          "0301"
+        ],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": [
+          "BOSN"
+        ]
+      },
+      "712X": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "721X": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "731X": {
+        "Army": [
+          "352N"
+        ],
+        "USMC": [
+          "2621"
+        ],
+        "AirForce": [
+          "1N2X1"
+        ],
+        "SpaceForce": [
+          "1N2"
+        ],
+        "CoastGuard": []
+      },
+      "733X": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "741X": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "748X": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "749X": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "751X": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "752X": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "781X": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "783X": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "713X": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "715X": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "717X": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "718X": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "722X": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "723X": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "724X": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "726X": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "727X": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "728X": {
+        "Army": [
+          "151A"
+        ],
+        "USMC": [
+          "6316"
+        ],
+        "AirForce": [
+          "2A0X1"
+        ],
+        "SpaceForce": [],
+        "CoastGuard": [
+          "AVT"
+        ]
+      },
+      "729X": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "732X": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "734X": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "753X": {
+        "Army": [],
+        "USMC": [],
+        "AirForce": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "754X": {
+        "Army": [
+          "151A"
+        ],
+        "USMC": [
+          "6216"
+        ],
+        "AirForce": [
+          "2A7X1"
+        ],
+        "SpaceForce": [],
+        "CoastGuard": [
+          "AVN"
+        ]
+      }
+    }
+  },
+  "AirForce": {
+    "MOS": {
+      "1A0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1A1X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1A2X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1A3X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1A6X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1A8X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1A8X2": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1B4X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1C0X2": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1C1X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1C2X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1C3X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1C4X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1N0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1N1X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1N2X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1N3X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1N4X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1P0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1S0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1T0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "1U0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "2A0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "2A3X3": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "2A5X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "2A6X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "2A7X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "2F0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "2G0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "2M0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "2P0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "2R0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "2S0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "2T0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "2T1X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "2T2X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "2W0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "2W1X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "2W2X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "3D0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "3D1X2": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "3D1X3": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "3E0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "3E1X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "3E2X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "3E3X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "3E4X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "3E5X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "3F0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "3F1X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "3F2X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "3F3X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "3G0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "3N0X2": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "3N1X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "3P0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "4A0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "4A1X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "4B0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "4C0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "4D0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "4E0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "4H0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "4J0X2": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "4M0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "4N0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "4N1X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "4P0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "4R0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "4T0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "4V0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "4Y0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "5J0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "5R0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "6C0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "6F0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "7S0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "9S100": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "9T100": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "9T200": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "11BX": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "11FX": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "11HX": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "11SX": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "12BX": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "12SX": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "13BX": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "13DX": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "13NX": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "13SX": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "14NX": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "15WX": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "16GX": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "17DX": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "21AX": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "21MX": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "31PX": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "32EX": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "33SX": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "34MX": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "35PX": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "38FX": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "43HX": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "44MX": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "46MX": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "51JX": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "61AX": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "62EX": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "63AX": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "64PX": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      },
+      "65FX": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "SpaceForce": [],
+        "CoastGuard": []
+      }
+    }
+  },
+  "SpaceForce": {
+    "MOS": {
+      "5S": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "CoastGuard": []
+      },
+      "5S0": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "CoastGuard": []
+      },
+      "5I0": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "CoastGuard": []
+      },
+      "1C6": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "CoastGuard": []
+      },
+      "1C6X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "CoastGuard": []
+      },
+      "1N0": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "CoastGuard": []
+      },
+      "1N0X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "CoastGuard": []
+      },
+      "1N1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "CoastGuard": []
+      },
+      "1N1X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "CoastGuard": []
+      },
+      "1N2": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "CoastGuard": []
+      },
+      "1N2X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "CoastGuard": []
+      },
+      "1N8X1": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "CoastGuard": []
+      },
+      "13SXA": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "CoastGuard": []
+      },
+      "17DXA": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "CoastGuard": []
+      },
+      "61DXA": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "CoastGuard": []
+      },
+      "62EXA": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "CoastGuard": []
+      }
+    }
+  },
+  "CoastGuard": {
+    "MOS": {
+      "AMT": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "AET": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "AST": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "BM": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "DC": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "DV": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "EM": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "ET": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "FS": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "GM": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "HS": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "IS": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "IT": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "ME": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "MK": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "MST": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "MU": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "OS": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "PA": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "SK": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "YN": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "BOSN": {
+        "Army": [
+          "640A"
+        ],
+        "USMC": [
+          "0301"
+        ],
+        "Navy": [
+          "711X"
+        ],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "WEPS": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "ELC": {
+        "Army": [
+          "948B"
+        ],
+        "USMC": [
+          "2805"
+        ],
+        "Navy": [
+          "726X"
+        ],
+        "AirForce": [
+          "2A0X1"
+        ],
+        "SpaceForce": []
+      },
+      "MACH": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "PERS": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "INV": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "MLES": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "MSSD": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "MSSE": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "AVCG": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "CGENG": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "CGOPS": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "CGINT": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "CGLAW": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "CGNAV": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "CGSUP": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "CGCIV": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "CGMED": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "CGLEG": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "MSSR": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "MSST": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "MAT": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "MLEI": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "ENG": {
+        "Army": [
+          "120A"
+        ],
+        "USMC": [
+          "1361"
+        ],
+        "Navy": [
+          "721X"
+        ],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "NAV": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "AVN": {
+        "Army": [
+          "151A"
+        ],
+        "USMC": [],
+        "Navy": [
+          "752X"
+        ],
+        "AirForce": [
+          "2A5X1"
+        ],
+        "SpaceForce": []
+      },
+      "AVT": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      },
+      "FIN": {
+        "Army": [],
+        "USMC": [],
+        "Navy": [],
+        "AirForce": [],
+        "SpaceForce": []
+      }
+    }
+  }
+}
