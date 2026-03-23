@@ -349,13 +349,87 @@ function exposureMatrix(entries) {
   return out;
 }
 
-writeJsonAbs(path.join(outDir, 'army-exposure-matrix.json'), exposureMatrix(catalogs.Army));
-writeJsonAbs(path.join(outDir, 'usmc-exposure-matrix.json'), exposureMatrix(catalogs.USMC));
-writeJsonAbs(path.join(outDir, 'navy-exposure-matrix.json'), exposureMatrix(catalogs.Navy));
-writeJsonAbs(path.join(outDir, 'usaf-exposure-matrix.json'), exposureMatrix(catalogs.USAF));
-writeJsonAbs(path.join(outDir, 'ussf-exposure-matrix.json'), exposureMatrix(catalogs.USSF));
-writeJsonAbs(path.join(outDir, 'uscg-exposure-matrix.json'), exposureMatrix(catalogs.USCG));
-writeJsonAbs(path.join(outDir, 'usmc-exposure-matrix.json'), exposureMatrix(catalogs.USMC));
+const exposureByBranch = {
+  Army: exposureMatrix(catalogs.Army),
+  USMC: exposureMatrix(catalogs.USMC),
+  Navy: exposureMatrix(catalogs.Navy),
+  USAF: exposureMatrix(catalogs.USAF),
+  USSF: exposureMatrix(catalogs.USSF),
+  USCG: exposureMatrix(catalogs.USCG),
+};
+
+writeJsonAbs(path.join(outDir, 'army-exposure-matrix.json'), exposureByBranch.Army);
+writeJsonAbs(path.join(outDir, 'usmc-exposure-matrix.json'), exposureByBranch.USMC);
+writeJsonAbs(path.join(outDir, 'navy-exposure-matrix.json'), exposureByBranch.Navy);
+writeJsonAbs(path.join(outDir, 'usaf-exposure-matrix.json'), exposureByBranch.USAF);
+writeJsonAbs(path.join(outDir, 'ussf-exposure-matrix.json'), exposureByBranch.USSF);
+writeJsonAbs(path.join(outDir, 'uscg-exposure-matrix.json'), exposureByBranch.USCG);
+
+function toMasterBranch(branch) {
+  if (branch === 'USAF') return 'AirForce';
+  if (branch === 'USSF') return 'SpaceForce';
+  if (branch === 'USCG') return 'CoastGuard';
+  return branch;
+}
+
+function crossTemplate() {
+  return {
+    Army: [],
+    USMC: [],
+    Navy: [],
+    AirForce: [],
+    SpaceForce: [],
+    CoastGuard: [],
+  };
+}
+
+function toArray(value) {
+  if (Array.isArray(value)) return value;
+  if (value === null || value === undefined || value === '') return [];
+  return [value];
+}
+
+const master = [];
+for (const [branchKey, entries] of Object.entries(catalogs)) {
+  const matrixBranch = toMasterBranch(branchKey);
+  const matrixRows = dodMatrix?.[matrixBranch]?.MOS || {};
+  const exposureRows = exposureByBranch[branchKey] || {};
+
+  for (const entry of entries) {
+    const row = matrixRows[entry.code] || {};
+    const crossBranchEquivalents = crossTemplate();
+    for (const key of Object.keys(crossBranchEquivalents)) {
+      crossBranchEquivalents[key] = ensureArray(row[key]);
+    }
+
+    master.push({
+      code: entry.code,
+      title: normalizeTitle(entry.title),
+      description: String(entry.description || '').trim(),
+      branch: matrixBranch,
+      rankCategory: entry.rankCategory,
+      feederCodes: [...new Set([
+        ...ensureArray(entry.feederCodes),
+        ...ensureArray(entry.feederRatings),
+        ...toArray(entry.feederMOS),
+      ].map((value) => String(value || '').trim()).filter(Boolean))],
+      crossBranchEquivalents,
+      exposure: exposureRows[entry.code] || exposureTemplate(entry),
+      notes: String(entry.notes || '').trim(),
+    });
+  }
+}
+
+// Distinct by branch + code + rankCategory to preserve same codes across branches/types.
+const dedupedMaster = [];
+const seenMaster = new Set();
+for (const item of master) {
+  const key = `${item.branch}::${item.code}::${item.rankCategory}`;
+  if (seenMaster.has(key)) continue;
+  seenMaster.add(key);
+  dedupedMaster.push(item);
+}
+writeJsonAbs(path.join(outDir, 'dod-mos-master.json'), dedupedMaster);
 
 const analyzerPath = path.join(root, 'knowledge', 'analyzer', 'analyzer-index.json');
 const analyzer = JSON.parse(fs.readFileSync(analyzerPath, 'utf8').replace(/^\uFEFF/, ''));
@@ -372,4 +446,4 @@ analyzer.mos = {
 };
 fs.writeFileSync(analyzerPath, JSON.stringify(analyzer, null, 4) + '\n', 'utf8');
 
-console.log('Generated branch files, matrices, exposure matrices, and analyzer index update.');
+console.log('Generated branch files, matrices, dod master registry, exposure matrices, and analyzer index update.');
