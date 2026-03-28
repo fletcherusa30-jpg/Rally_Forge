@@ -1,6 +1,17 @@
 node_modules
 _legacy/
 
+# Test output artifacts
+test_output.txt
+test_results.txt
+
+# Tesseract OCR training data (download during setup)
+*.traineddata
+
+# Temporary diagnostics reports
+DIAGNOSTICS_REPORT.md
+*DIAGNOSTICS*.md
+
 # Copilot/local diagnostics and manifests
 .rf-diagnostics/
 .rf_diagnostics/
