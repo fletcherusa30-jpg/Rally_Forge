@@ -1,69 +1,105 @@
 # Tab 02 Snapshot: Military Service
 
+## Architecture Note
+**Redesigned 2026-04-03.** This tab was fully rebuilt as a single-page authoritative review surface replacing the legacy multi-card, multi-tab layout. The former Card A / Card B / Card C / Card D structure is retired.
+
 ## Primary Function
-This tab records structured military service history and supports DD-214 upload/extraction to prefill service data. It builds the core service context used by STR, treatment, analyzer, and summary pages.
+Authoritative review and management of all military service periods for the active claim. Supports DD-214 scanner ingestion, inspector-driven period editing, and AI-consumable service summary export. Provides the canonical service context consumed by STR, Current Treatment, Analyzer, and Case Summary tabs.
 
 ## What This Tab Asks For
-- Upload path:
-  - DD-214 PDF upload
-  - User review of extracted values before apply
-- Manual service intake:
+- DD-214 PDF upload (scanner path — preserved from prior design)
+- Service period fields via inline inspector only (no standalone form):
   - Branch of Service
-  - Service Type
+  - Service Type (Active / Reserve / Guard)
   - Start Date / End Date
-  - Rank/Rate
-  - Discharge Type
-  - MOS / Rate / AFSC (including additional MOS)
-  - Service Era
+  - Rank / Rate
+  - Discharge Type / Character of Service
+  - MOS / Rate / AFSC (including additional MOS codes)
+  - Service Era (auto-derived)
   - Deployment Location(s)
-  - Combat Veteran toggle
-  - Radiation operation selections
+  - Combat Veteran flag
+  - Awards and Decorations (comma-delimited)
+  - Radiation operation associations
+  - Source metadata (manual / dd214-extracted)
 
 ## Layout and Design Snapshot
 ```text
-Page Header
-  [Eyebrow: Service History] [Title: Military Service] [Badge: Service record intake]
+Context Bar (sticky, z-index: 25)
+  [Veteran Name]  [Step: 02 · Development / Military Service]
+  [Status chips: Synced | Issues | Unsaved]
+  [Sync Draft button]  [Next → button]
 
-Carry Forward Card (from Profile)
+Military Service Summary Canvas
+  [Total Periods] [Earliest Start] [Latest End]
+  [Status: Eligible / Needs Review / Ineligible]
+  [Confidence Score: 0–100]
 
-Card A: Upload DD-214
-  - Upload button + status/error
-  - Extracted summary panel with confidence
-  - Multi-panel readout:
-    Service Profile
-    Discharge and Separation
-    Combat and Benefits
-    Hazard and Deployment Pay
-    Installation Exposure Indicators (conditional)
-    Badges and Awards (conditional)
-    Extended Service Data (conditional)
-    Transfer and Assignment (conditional)
-  - Apply to Form button
+Service Periods Table (read-only master list)
+  Columns: Branch | Component | Date Range | Character of Service | Deployments | Awards | Validation
+  Row click → opens Inspector Panel
+  Validation column: Valid | Review | Blocking
 
-Card B: Military Service Information
-  - Manual form grid (service fields)
-  - Add/update record controls
+Inspector Panel (appears on row selection)
+  [Collapsible] Service Details
+    Branch, Component, Start/End, Rank, Discharge
+  [Collapsible] Conflict and Deployment
+    Combat Veteran toggle, Deployment locations
+    Radiation operations
+  [Collapsible] Awards and Decorations
+    Awards list
+  [Collapsible] Entered Record Metadata
+    Source, extraction status
+  [Save changes] [Cancel] [Clear selection]
 
-Card C: Analyzer
-  - Exposure suggestions and related context controls
+Scanner Findings Panel
+  DD-214 upload button + upload status / error
+  Per-issue list (click issue → highlights related table row)
+  Scanner confidence score
+  Scan metadata (file name, timestamp, queue job id)
 
-Card D: Service Records (aggregate list)
-  - Existing entries with edit/delete
-  - Save records action
+Machine Artifact Channel (background only)
+  militaryServiceSummary JSON object is persisted to workspace aiArtifacts
+  and is intentionally hidden from the reviewer UI surface.
+  Human-facing presentation is the DD214 Structured Summary panel.
+
+Audit Log (last 40 entries, internal)
+  Events: select-period, save-inspector, cancel-inspector,
+          scan-success, scan-error, scan-cancel, persist
 ```
 
 ## Information Produced for Later Tabs
-- Service periods, branch, MOS, deployment context
-- Likely exposure signals and presumptive location hints
-- DD-214 structured extraction fields (including separation and service metadata)
+- Canonical `servicePeriods[]` array (branch, component, dates, MOS, deployments, awards, discharge type)
+- `militaryServiceSummary` JSON (AI-consumable structured object)
+- Exposure signals and presumptive deployment locations
+- Eligibility status and confidence score (Eligible / Needs Review / Ineligible)
+- Scanner issues list with severity and blocking flags
+
+## Key Behavioral Contracts
+- `STORAGE_KEY = 'militaryServiceRecords'` — localStorage key for record persistence
+- `AUTO_DD214_RECORD_ID = 'dd214-auto-record'` — stable ID for DD-214-extracted record
+- `normalizeRecord(record, index)` — maps raw records to stable period objects; generates `derivedId` from branch + startDate + endDate as fallback when `record.id` is absent
+- `makeScannerIssues(servicePeriods, recognizedLocations)` — deterministic issue engine; produces typed issues (missing-service-periods, missing-dates, conflicting-dates, missing-branch, unsupported-deployment, award-verification)
+- `computeServiceOverview(periods, scannerIssues)` — derives summary stats and eligibility result
+- `fromInspectorDraft(record, draft, recognizedLocations)` — applies inspector edits back to raw record shape including source field
+- `toInspectorDraft(period)` — converts normalized period to inspector form state
+- `hasBlockingIssue(scannerIssues)` — gates the Next CTA; blocking issues disable navigation
+- `Next` CTA routes to `/development/service-treatment-records`
 
 ## UX and Review Notes
-- Strong dual-path flow: users can scan DD-214 or enter manually.
-- Extraction review panel is detailed and now includes high-value fields (DOB, station at separation, accrued leave, SPD/RE meanings).
-- Installation exposure indicator surface adds meaningful claim-development context.
-- Good review point: ensure operator understands extracted values remain advisory until explicitly applied.
+- Single-page design eliminates form/list separation; all editing is inspector-driven, row-selection-gated.
+- Status chips (Synced, Issues, Unsaved) give real-time workspace feedback without blocking progress.
+- Scanner panel is always visible; upload is preserved from prior design; per-issue clickable rows drive period focus.
+- AI summary artifacts are persisted in the background (`aiArtifacts.militaryServiceSummary`) and not rendered as raw JSON in the reviewer UI.
+- All record changes go through dual persistence: localStorage + `updateWorkspace` context call.
+- Audit log tracks all user actions deterministically (last 40 entries).
 
-## Suggested Additional Improvements
-- Add per-field extraction confidence badges in the DD-214 view.
-- Add one-click "compare extracted vs current form" diff modal.
-- Add inline glossary links for SPD/RE and separation authority terms.
+## Source Files
+- `app/frontend-modern/src/tabs/military-service/MilitaryServiceTab.jsx` — primary component (~980 lines)
+- `app/frontend-modern/src/pages/MilitaryServicePage.jsx` — route wrapper (simplified; renders `<MilitaryServiceTab />`)
+- `app/frontend-modern/src/tabs/military-service/normalization.js` — shared normalization utilities (unchanged)
+- `app/frontend-modern/src/tabs/military-service/schema.js` — BRANCH_VALUES, DISCHARGE_TYPE_VALUES, SERVICE_TYPE_VALUES
+- `app/frontend-modern/src/tabs/military-service/extraction.js` — DD-214 panel extraction helpers
+- `app/frontend-modern/src/styles.css` — military-review-* CSS classes added
+
+## Last Updated
+- 2026-04-03 — Full single-page redesign replacing legacy multi-card layout

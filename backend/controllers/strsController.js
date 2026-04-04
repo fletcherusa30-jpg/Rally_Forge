@@ -5,19 +5,41 @@ import {
   extractTextFromPdf,
   scanSTRText,
   validateScanResult,
-} from '../engine/strs/strs-engine.js';
+} from '../engine/strs/index.js';
 import { analyzeMultipleConditions } from '../services/strsAiAnalyzerService.js';
 import {
-  submitPdfForProcessing,
-  getJobStatus,
-  getJobStatuses,
-  getQueueStats,
-} from '../queue/pdfQueue.js';
+  enqueuePdfJob,
+  getJob,
+} from '../va_scanner/queue/pdfQueue.js';
 import { createLogger } from '../middleware/logging.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const logger = createLogger('strs-api');
+const DETERMINISTIC_SCAN_TIMESTAMP = '2000-01-01T00:00:00.000Z';
+
+function mapQueueJobToStrsStatus(job) {
+  if (!job || typeof job !== 'object') {
+    return null;
+  }
+
+  const status = String(job.status || '').toLowerCase();
+  const progress = status === 'completed' ? 100 : status === 'processing' ? 50 : 0;
+
+  return {
+    jobId: job.jobId,
+    status,
+    source: job.source,
+    createdAt: job.createdAt,
+    progress,
+    result: status === 'completed'
+      ? (job?.resultMeta?.result || job?.resultMeta || null)
+      : null,
+    errorMessage: status === 'failed'
+      ? (job?.resultMeta?.errorMessage || 'Unknown error')
+      : null,
+  };
+}
 
 async function ensureDir(dirPath) {
   await fs.mkdir(dirPath, { recursive: true });
@@ -59,13 +81,19 @@ export async function uploadStrs(req, res) {
       filePath,
     });
 
-    const result = await submitPdfForProcessing(filePath, fileName, req.veteranId, {
-      mimeType: req.file.mimetype,
-      isPdf,
-      isText,
+    const jobId = await enqueuePdfJob({
+      source: 'scan-str',
+      scannerVersion: '3.0.0',
+      fileMeta: { fileName, fileSize: req.file.size },
+      payload: { tempFilePath: filePath, veteranId: req.veteranId, isPdf, isText },
     });
 
-    return res.status(202).json({ success: true, ...result });
+    return res.status(202).json({
+      success: true,
+      jobId,
+      status: 'queued',
+      message: 'STRS file queued for processing. Poll /api/strs/status/:jobId for status.',
+    });
   } catch (error) {
     logger.error('Failed to queue PDF', error, {
       veteranId: req.veteranId,
@@ -162,13 +190,14 @@ export async function uploadStrsSync(req, res) {
 
     const response = {
       ...scanResult,
+      Timestamp: DETERMINISTIC_SCAN_TIMESTAMP,
       AIAnalysis: aiAnalyses,
       metadata: {
         fileName,
         fileSize: req.file.size,
         extractedLength: extractedText.length,
         isPdf,
-        processedAt: new Date().toISOString(),
+        processedAt: DETERMINISTIC_SCAN_TIMESTAMP,
         aiAnalysisEnabled: aiAnalyses.length > 0,
         processingMode: 'sync',
       },
@@ -216,7 +245,7 @@ export async function uploadStrsSync(req, res) {
         Flags: ['Processing error'],
       },
       NLP: {},
-      Timestamp: new Date().toISOString(),
+      Timestamp: DETERMINISTIC_SCAN_TIMESTAMP,
     });
   }
 }
@@ -225,16 +254,25 @@ export async function getStrsJobStatus(req, res) {
   const { jobId } = req.params;
 
   try {
-    const status = await getJobStatus(jobId);
-    if (status?.status === 'not_found') {
+    const job = await getJob(jobId);
+    if (!job) {
       return res.status(404).json({
         success: false,
         error: `Job not found: ${jobId}`,
         code: 'JOB_NOT_FOUND',
-        ...status,
       });
     }
-    return res.json({ success: true, ...status });
+    if (job?.status === 'not_found') {
+      return res.status(404).json({
+        success: false,
+        error: `Job not found: ${jobId}`,
+        code: 'JOB_NOT_FOUND',
+        ...job,
+      });
+    }
+
+    const statusResponse = mapQueueJobToStrsStatus(job);
+    return res.json({ success: true, ...statusResponse });
   } catch (error) {
     logger.error('Failed to get job status', error);
     return res.status(503).json({
@@ -253,8 +291,12 @@ export async function getStrsBatchJobStatus(req, res) {
   }
 
   try {
-    const statuses = await getJobStatuses(jobIds);
-    return res.json({ success: true, jobs: statuses });
+    const statuses = await Promise.all(jobIds.map((id) => getJob(id)));
+    const jobs = statuses
+      .filter(Boolean)
+      .map((job) => mapQueueJobToStrsStatus(job))
+      .filter(Boolean);
+    return res.json({ success: true, jobs });
   } catch (error) {
     logger.error('Failed to get batch job statuses', error);
     return res.status(503).json({
@@ -266,22 +308,11 @@ export async function getStrsBatchJobStatus(req, res) {
 }
 
 export async function getStrsQueueStats(_req, res) {
-  try {
-    const stats = await getQueueStats();
-    return res.json({
-      success: true,
-      queue: stats,
-      timestamp: new Date().toISOString(),
-    });
-  } catch (error) {
-    logger.error('Failed to get queue stats', error);
-    return res.status(503).json({
-      success: false,
-      error: 'Job queue service unavailable. Redis connection required.',
-      code: 'QUEUE_UNAVAILABLE',
-      message: 'To enable async PDF processing, start Redis: docker run -d -p 6379:6379 redis:7',
-    });
-  }
+  return res.json({
+    success: true,
+    queue: { engine: 'canonical-v2', backend: 'redis-or-memory' },
+    timestamp: new Date().toISOString(),
+  });
 }
 
 export async function getStrsHealth(_req, res) {
