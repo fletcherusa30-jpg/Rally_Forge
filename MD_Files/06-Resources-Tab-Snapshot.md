@@ -4,7 +4,7 @@
 
 - Label: Resources
 - Primary route: `/resources`
-- Icon token in shell nav: `RS`
+- Icon token in shell nav: `05`
 
 ## Main page component
 
@@ -12,7 +12,7 @@
 
 ## Purpose
 
-The Resources tab provides transition-support tools and content and is treated as support UX, not a gated step in the core 6-step claim workflow.
+The Resources tab provides transition-support tools and content (job board, resume builder, LinkedIn optimizer, SkillBridge, education, housing, legal, mental health, timeline, document vault).
 
 ## Notable nested routes
 
@@ -26,3 +26,11 @@ The Resources tab provides transition-support tools and content and is treated a
 8. `/resources/mental-health`
 9. `/resources/timeline`
 10. `/resources/document-vault`
+
+## Related navigation behavior
+
+- Readiness gate key: `workflow.readiness.resources`.
+- Evidence and support aliases redirect into Resources routes:
+  - `/evidence`
+  - `/evidence/upload`
+  - `/support`
